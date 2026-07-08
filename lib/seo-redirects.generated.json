@@ -128,5 +128,10 @@
     "source": "/tub-removal/",
     "destination": "/tub-to-shower-conversion/",
     "permanent": true
+  },
+  {
+    "source": "/handicap-accessible-bathroom-chandler/",
+    "destination": "/handicap-accessible-bathroom/",
+    "permanent": true
   }
 ]

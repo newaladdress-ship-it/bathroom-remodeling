@@ -77,7 +77,7 @@ export default function Chandler85286Page() {
                 <Phone className="w-5 h-5" />
                 Call Now for a Free Estimate
               </a>
-              <a href="/contact" className="bg-secondary text-foreground border border-border px-8 py-4 rounded-xl hover:bg-secondary/80 transition shadow-sm font-bold text-lg w-full sm:w-auto">
+              <a href="/contact/" className="bg-secondary text-foreground border border-border px-8 py-4 rounded-xl hover:bg-secondary/80 transition shadow-sm font-bold text-lg w-full sm:w-auto">
                 Request a Design Consultation
               </a>
             </div>
@@ -143,7 +143,7 @@ export default function Chandler85286Page() {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   Our most sought-after service in the 85286 area. We completely remove your old, bulky bathtub and the surrounding dated tile. In its place, we construct a stunning, oversized walk-in shower. We can build curbless (zero-entry) floors for seamless accessibility, integrate custom recessed shower niches for your shampoos and soaps, and install heavy-duty frameless glass doors that make the entire room feel twice as large. We manage all the necessary plumbing reroutes to move the drain from the tub location to the center of your new shower pan.
                 </p>
-                <Link href="/tub-to-shower-conversion" className="text-primary font-medium hover:underline mb-4 block">
+                <Link href="/tub-to-shower-conversion/" className="text-primary font-medium hover:underline mb-4 block">
                   See Our Conversion Process →
                 </Link>
               </div>
@@ -154,7 +154,7 @@ export default function Chandler85286Page() {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   For homeowners looking to completely gut and reimagine their master bathroom, we offer full-scale structural remodeling. This includes tearing out awkward dropped soffits to raise the ceiling height, moving non-load-bearing walls to expand the footprint, and installing dual floating vanities with under-cabinet LED lighting. We handle all complex electrical wiring for heated floors, smart mirrors, and high-CFM exhaust fans to ensure your new master suite is as functional as it is breathtaking.
                 </p>
-                <Link href="/master-bathroom-remodel" className="text-primary font-medium hover:underline mb-4 block">
+                <Link href="/master-bathroom-remodel/" className="text-primary font-medium hover:underline mb-4 block">
                   Explore Master Bathrooms →
                 </Link>
               </div>
@@ -283,7 +283,7 @@ export default function Chandler85286Page() {
               <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone bg-white text-primary px-10 py-5 rounded-xl hover:bg-gray-100 transition shadow-2xl font-bold text-xl w-full sm:w-auto">
                 Call {siteConfig.phone} Today
               </a>
-              <a href="/contact" className="border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white/10 transition font-bold text-xl w-full sm:w-auto">
+              <a href="/contact/" className="border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white/10 transition font-bold text-xl w-full sm:w-auto">
                 Submit an Online Inquiry
               </a>
             </div>

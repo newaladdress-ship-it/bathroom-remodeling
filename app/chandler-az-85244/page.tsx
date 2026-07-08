@@ -83,7 +83,7 @@ export default function Chandler85244Page() {
                 <Phone className="w-5 h-5" />
                 Call for a Custom Estimate
               </a>
-              <a href="/contact" className="bg-secondary text-foreground border border-border px-8 py-4 rounded-xl hover:bg-secondary/80 transition shadow-sm font-bold text-lg w-full sm:w-auto">
+              <a href="/contact/" className="bg-secondary text-foreground border border-border px-8 py-4 rounded-xl hover:bg-secondary/80 transition shadow-sm font-bold text-lg w-full sm:w-auto">
                 Request an On-Site Consultation
               </a>
             </div>
@@ -170,7 +170,7 @@ export default function Chandler85244Page() {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   We strip old bathrooms completely down to the bare studs and concrete slab. This full-exposure approach lets us inspect every inch of framing, identify historic water damage, assess the plumbing, and start with a completely clean, correctly prepared substrate. We then install Schluter-Kerdi waterproofing membranes across every wall and floor surface before any tile is set. The result is a bathroom built to the highest modern standards, inside an older home with original character and charm.
                 </p>
-                <Link href="/bathroom-remodeling" className="text-primary font-medium hover:underline block mb-4">
+                <Link href="/bathroom-remodeling/" className="text-primary font-medium hover:underline block mb-4">
                   See Our Full Bathroom Remodeling Process →
                 </Link>
                 <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone inline-block bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition">
@@ -184,7 +184,7 @@ export default function Chandler85244Page() {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   Many older homes near downtown Chandler were built with high-threshold bathtubs that present a serious tripping and falling hazard for aging homeowners. We specialize in converting these outdated, dangerous tub-shower combos into fully accessible, curbless walk-in showers. We incorporate built-in teak benches, stainless steel grab bars strategically positioned at the correct ADA heights, and slip-resistant porcelain floor tiles with a coefficient of friction that exceeds safety standards. Your new shower becomes both a safety feature and a design statement.
                 </p>
-                <Link href="/tub-to-shower-conversion" className="text-primary font-medium hover:underline block mb-4">
+                <Link href="/tub-to-shower-conversion/" className="text-primary font-medium hover:underline block mb-4">
                   Explore Walk-In Shower Options →
                 </Link>
                 <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone inline-block bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition">
@@ -206,7 +206,7 @@ export default function Chandler85244Page() {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   Older bathroom vanities were typically built-in, bulky furniture pieces with small, round sinks and outdated chrome hardware. We replace these with sleek, modern floating vanity bases, which make the room feel more open and make cleaning the floor dramatically easier. We install deeply under-mounted rectangular sinks, seamless quartz countertops without any grout lines to scrub, and frameless mirrors that are wired directly to the electrical for integrated LED lighting. Modern hardware in matte black or brushed nickel ties the entire space together.
                 </p>
-                <Link href="/cabinet-countertop-installation" className="text-primary font-medium hover:underline block">
+                <Link href="/cabinet-countertop-installation/" className="text-primary font-medium hover:underline block">
                   View Vanity & Countertop Options →
                 </Link>
               </div>
@@ -308,11 +308,11 @@ export default function Chandler85244Page() {
           <div className="container mx-auto px-4 text-center">
             <h3 className="text-xl font-semibold mb-6 text-foreground">Related Services & Nearby Areas</h3>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/bathroom-remodeling" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">Bathroom Remodeling</Link>
-              <Link href="/shower-remodeling" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">Custom Shower Builds</Link>
-              <Link href="/bathtub-remodeling" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">Bathtub Upgrades</Link>
-              <Link href="/chandler-az-85225" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">85225 Service Area</Link>
-              <Link href="/chandler-az-85286" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">85286 Service Area</Link>
+              <Link href="/bathroom-remodeling/" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">Bathroom Remodeling</Link>
+              <Link href="/shower-remodeling/" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">Custom Shower Builds</Link>
+              <Link href="/bathtub-remodeling/" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">Bathtub Upgrades</Link>
+              <Link href="/chandler-az-85225/" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">85225 Service Area</Link>
+              <Link href="/chandler-az-85286/" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">85286 Service Area</Link>
             </div>
           </div>
         </section>
@@ -330,7 +330,7 @@ export default function Chandler85244Page() {
               <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone bg-white text-primary px-10 py-5 rounded-xl hover:bg-gray-100 transition shadow-2xl font-bold text-xl w-full sm:w-auto">
                 Call {siteConfig.phone} Today
               </a>
-              <a href="/contact" className="border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white/10 transition font-bold text-xl w-full sm:w-auto">
+              <a href="/contact/" className="border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white/10 transition font-bold text-xl w-full sm:w-auto">
                 Submit an Online Inquiry
               </a>
             </div>

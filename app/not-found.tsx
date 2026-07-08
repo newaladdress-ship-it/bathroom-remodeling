@@ -20,12 +20,12 @@ export default function NotFound() {
               Go to Home
             </Button>
           </Link>
-          <Link href="/bathroom-remodeling">
+          <Link href="/bathroom-remodeling/">
             <Button size="lg" variant="outline">
               View Services
             </Button>
           </Link>
-          <Link href="/contact">
+          <Link href="/contact/">
             <Button size="lg" variant="outline">
               Contact Us
             </Button>

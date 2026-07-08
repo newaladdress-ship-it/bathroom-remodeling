@@ -11,7 +11,7 @@ const navLinkClass =
   "text-base font-semibold text-foreground hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full focus-visible:outline-2 focus-visible:outline-offset-2 rounded px-2 py-1";
 
 const ctaClass =
-  "inline-flex items-center justify-center rounded-full bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-2 text-base font-semibold transition-colors";
+  "inline-flex items-center justify-center rounded-full bg-accent hover:bg-accent/90 text-accent-foreground px-4 py-2 xl:px-6 text-sm xl:text-base font-semibold transition-colors whitespace-nowrap";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -63,7 +63,7 @@ export function Header() {
               </div>
             </Link>
 
-            <nav className="hidden lg:flex items-center gap-6" aria-label="Main navigation">
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-6" aria-label="Main navigation">
               {siteConfig.navigation.map((item) => (
                 <Link key={item.name} href={item.href} className={navLinkClass}>
                   {item.name}
@@ -71,7 +71,7 @@ export function Header() {
               ))}
             </nav>
 
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-4 xl:gap-6">
               <a
                 href={siteConfig.googleBusinessLink}
                 target="_blank"

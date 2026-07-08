@@ -23,10 +23,8 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {title: {
-    absolute: "Scottsdale Bath Remodel | Chandler AZ Bathroom Remodeling"
-  },description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore scottsdale bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
-  openGraph: {title: "Scottsdale Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore scottsdale bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
+export const metadata: Metadata = {title: "Scottsdale Bath Remodel | Licensed Pro | ARZ",description: "Top-rated bathroom remodeling in Scottsdale, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
+  openGraph: {title: "Scottsdale Bath Remodel | Licensed Pro | ARZ",description: "Top-rated bathroom remodeling in Scottsdale, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
     url: `${siteConfig.url}/bathroom-remodeling-scottsdale-az/`,
     type: "website",
   },

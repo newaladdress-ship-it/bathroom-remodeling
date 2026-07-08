@@ -86,7 +86,7 @@ export default function Chandler85246Page() {
                 <Phone className="w-5 h-5" />
                 Call for Priority Scheduling
               </a>
-              <a href="/contact" className="bg-secondary text-foreground border border-border px-8 py-4 rounded-xl hover:bg-secondary/80 transition shadow-sm font-bold text-lg w-full sm:w-auto">
+              <a href="/contact/" className="bg-secondary text-foreground border border-border px-8 py-4 rounded-xl hover:bg-secondary/80 transition shadow-sm font-bold text-lg w-full sm:w-auto">
                 Request a Free Consultation
               </a>
             </div>
@@ -169,7 +169,7 @@ export default function Chandler85246Page() {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   Whether you are converting a bathtub into a new shower or tearing out an old acrylic prefab enclosure, we build fully custom, fully waterproofed walk-in showers using real tile. We offer an enormous range of options, from minimalist concrete-look porcelain slabs in a seamless 24x48 format, to intricate herringbone mosaic accent walls. Every shower we build includes redundant waterproofing membranes, properly sloped drain pans, and frameless glass enclosures installed by our in-house glazing team.
                 </p>
-                <Link href="/shower-remodeling" className="text-primary font-medium hover:underline block mb-4">
+                <Link href="/shower-remodeling/" className="text-primary font-medium hover:underline block mb-4">
                   See Our Custom Shower Gallery →
                 </Link>
                 <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone inline-block bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition">
@@ -183,7 +183,7 @@ export default function Chandler85246Page() {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   A shower pan that feels spongy underfoot or shows signs of cracking is an active structural emergency. We treat these with high priority. After complete demolition, we hand-pour a properly sloped mortar shower pan, apply a fully bonded waterproofing membrane across its entire surface, and perform a flood test before any tile is ever installed. This ensures zero water escapes through the floor before the tile even goes on. We then tile over the top with premium anti-slip porcelain for a beautiful, permanent solution.
                 </p>
-                <Link href="/bathroom-remodeling" className="text-primary font-medium hover:underline block mb-4">
+                <Link href="/bathroom-remodeling/" className="text-primary font-medium hover:underline block mb-4">
                   Learn About Our Remodeling Process →
                 </Link>
                 <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone inline-block bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition">
@@ -197,7 +197,7 @@ export default function Chandler85246Page() {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   Older bathrooms waste enormous amounts of visual and functional space with clunky vanity cabinets and cluttered counter surfaces. We tear out outdated, ground-mounted vanities and install sleek, wall-mounted floating units that make the room feel considerably more spacious. We add recessed medicine cabinets with mirrored doors and integrated LED lighting on dimmers, built-in wall niches for toiletry storage between the studs, and seamless quartz countertops that require zero sealing and clean with a simple wipe.
                 </p>
-                <Link href="/cabinet-countertop-installation" className="text-primary font-medium hover:underline block">
+                <Link href="/cabinet-countertop-installation/" className="text-primary font-medium hover:underline block">
                   Explore Vanity & Countertop Options →
                 </Link>
               </div>
@@ -307,11 +307,11 @@ export default function Chandler85246Page() {
           <div className="container mx-auto px-4 text-center">
             <h3 className="text-xl font-semibold mb-6 text-foreground">Related Services & Nearby Areas</h3>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/bathroom-remodeling" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">Bathroom Remodeling</Link>
-              <Link href="/shower-remodeling" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">Custom Shower Builds</Link>
-              <Link href="/bathtub-remodeling" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">Bathtub Upgrades</Link>
-              <Link href="/chandler-az-85224" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">85224 Service Area</Link>
-              <Link href="/chandler-az-85226" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">85226 Service Area</Link>
+              <Link href="/bathroom-remodeling/" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">Bathroom Remodeling</Link>
+              <Link href="/shower-remodeling/" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">Custom Shower Builds</Link>
+              <Link href="/bathtub-remodeling/" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">Bathtub Upgrades</Link>
+              <Link href="/chandler-az-85224/" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">85224 Service Area</Link>
+              <Link href="/chandler-az-85226/" className="px-6 py-3 border border-border rounded-lg hover:border-primary transition text-foreground bg-background">85226 Service Area</Link>
             </div>
           </div>
         </section>
@@ -329,7 +329,7 @@ export default function Chandler85246Page() {
               <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone bg-white text-primary px-10 py-5 rounded-xl hover:bg-gray-100 transition shadow-2xl font-bold text-xl w-full sm:w-auto">
                 Call {siteConfig.phone} Today
               </a>
-              <a href="/contact" className="border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white/10 transition font-bold text-xl w-full sm:w-auto">
+              <a href="/contact/" className="border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white/10 transition font-bold text-xl w-full sm:w-auto">
                 Submit an Online Inquiry
               </a>
             </div>

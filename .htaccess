@@ -31,6 +31,7 @@ RedirectMatch 301 ^/walk-in-showers/?$ https://arzhomeremodeling.com/shower-remo
 RedirectMatch 301 ^/shower-replacement/?$ https://arzhomeremodeling.com/shower-remodeling/
 RedirectMatch 301 ^/shower-bathtub-upgrade/?$ https://arzhomeremodeling.com/shower-remodeling/
 RedirectMatch 301 ^/tub-removal/?$ https://arzhomeremodeling.com/tub-to-shower-conversion/
+RedirectMatch 301 ^/handicap-accessible-bathroom-chandler/?$ https://arzhomeremodeling.com/handicap-accessible-bathroom/
 # --- END REDIRECTS ---
 
 # Enable Rewrite Engine
@@ -38,19 +39,13 @@ RedirectMatch 301 ^/tub-removal/?$ https://arzhomeremodeling.com/tub-to-shower-c
   RewriteEngine On
   RewriteBase /
   
-  # Redirect HTTP to HTTPS
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-  
-  # Enforce non-www to https://arzhomeremodeling.com
-  RewriteCond %{HTTP_HOST} ^www\.arzhomeremodeling\.com [NC]
-  RewriteRule ^(.*)$ https://arzhomeremodeling.com/$1 [L,R=301]
-  
   # Redirect old Schluter-KERDI blog slug to the correct optimized URL (Bing Webmaster fix)
   RewriteRule ^blog/why-we-use-schluter-kerdi-waterproofing-chandler/?$ /blog/schluter-kerdi-vs-redgard-arizona/ [L,R=301]
   
   # Force trailing slash on all page URLs (SEO canonicalization)
+  # Only redirect if it's not a file and not a directory, and lacks a trailing slash
   RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !^/api/
   RewriteCond %{REQUEST_URI} !\.php$
   RewriteCond %{REQUEST_URI} !\.txt$
@@ -58,6 +53,11 @@ RedirectMatch 301 ^/tub-removal/?$ https://arzhomeremodeling.com/tub-to-shower-c
   RewriteCond %{REQUEST_URI} !\.html$
   RewriteCond %{REQUEST_URI} !(.*)/$
   RewriteRule ^(.*)$ https://arzhomeremodeling.com/$1/ [L,R=301]
+  
+  # Consolidate HTTP to HTTPS & Enforce non-www (for URLs that already end in slash or are files)
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^(.*)$ https://arzhomeremodeling.com/$1 [L,R=301]
   
   # Ensure index.html is served for directories
   RewriteCond %{REQUEST_FILENAME} -d

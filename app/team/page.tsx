@@ -90,7 +90,7 @@ export default function TeamPage() {
 
                     <div className="flex gap-3 pt-4">
                       <Button asChild>
-                        <Link href="/team/alex-rivers">View Full Profile</Link>
+                        <Link href="/team/alex-rivers/">View Full Profile</Link>
                       </Button>
                       <Button variant="outline" asChild>
                         <a href={`tel:${siteConfig.phoneClean}`}>Call Alex</a>

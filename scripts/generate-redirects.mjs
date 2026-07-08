@@ -41,6 +41,7 @@ const SERVICE_HUBS = {
   "/shower-replacement/": "/shower-remodeling/",
   "/shower-bathtub-upgrade/": "/shower-remodeling/",
   "/tub-removal/": "/tub-to-shower-conversion/",
+  "/handicap-accessible-bathroom-chandler/": "/handicap-accessible-bathroom/",
 };
 
 function chandlerRedirect(slug) {
