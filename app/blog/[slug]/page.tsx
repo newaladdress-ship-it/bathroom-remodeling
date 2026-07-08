@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site-config"
 import { Calendar, Clock, ArrowLeft, User, ArrowRight, Share2, Facebook, Twitter, Linkedin, List } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import "@/app/prose.css"
-import { BlogArticleJsonLd, BreadcrumbSchema } from "@/components/seo/json-ld"
+import { BlogArticleJsonLd, BreadcrumbSchema, FAQSchema } from "@/components/seo/json-ld"
 import { parseMarkdown, extractHeadings } from "@/lib/blog-utils"
 import type { BlogPost } from "@/lib/types"
 import { createSeoDescription, createSeoTitle } from "@/lib/seo-metadata-standards"
@@ -99,6 +99,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           { name: post.title, url: `${siteConfig.url}/blog/${post.slug}/` }
         ]}
       />
+      {post.faqs && post.faqs.length > 0 && (
+        <FAQSchema faqs={post.faqs} />
+      )}
       <Header />
       
       <main className="min-h-screen bg-background">

@@ -16,6 +16,7 @@ export interface BlogPost {
   publishedAt: string | null;
   createdAt: string;
   updatedAt: string;
+  faqs?: { question: string; answer: string }[];
 }
 
 export interface Category {

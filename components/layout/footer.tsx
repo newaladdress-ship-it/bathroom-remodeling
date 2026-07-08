@@ -195,9 +195,15 @@ export function Footer() {
                 <li className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-primary mt-0.5 shrink-0" aria-hidden="true" />
                   <div className="text-background/80 text-sm">
-                    <p>Mon-Fri: {siteConfig.hours.weekdays}</p>
-                    <p>Sat: {siteConfig.hours.saturday}</p>
-                    <p>Sun: {siteConfig.hours.sunday}</p>
+                    {siteConfig.hours.weekdays.includes("24/7") ? (
+                      <p>Open 24/7 (24 Hours / 7 Days)</p>
+                    ) : (
+                      <>
+                        <p>Mon-Fri: {siteConfig.hours.weekdays}</p>
+                        <p>Sat: {siteConfig.hours.saturday}</p>
+                        <p>Sun: {siteConfig.hours.sunday}</p>
+                      </>
+                    )}
                   </div>
                 </li>
               </ul>

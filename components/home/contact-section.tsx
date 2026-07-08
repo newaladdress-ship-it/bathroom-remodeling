@@ -72,8 +72,14 @@ export default function ContactSection() {
               Serving Chandler, Gilbert, Mesa, Tempe, Phoenix, and surrounding East Valley communities.
             </p>
             <div className="text-sm font-semibold text-foreground space-y-1 mb-6">
-              <div>Mon-Fri: {siteConfig.hours.weekdays}</div>
-              <div>Sat: {siteConfig.hours.saturday}</div>
+              {siteConfig.hours.weekdays.includes("24/7") ? (
+                <div>Open 24/7 (24 Hours / 7 Days)</div>
+              ) : (
+                <>
+                  <div>Mon-Fri: {siteConfig.hours.weekdays}</div>
+                  <div>Sat: {siteConfig.hours.saturday}</div>
+                </>
+              )}
             </div>
             <div className="mt-auto pt-4 border-t border-border w-full flex items-center justify-center gap-2 text-xs font-semibold text-primary">
               <ShieldCheck className="w-4 h-4 text-accent" />

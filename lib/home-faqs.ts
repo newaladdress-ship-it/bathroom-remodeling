@@ -27,6 +27,31 @@ export const homeFaqs: HomeFaq[] = [
     answer:
       "We provide a written 2-year warranty on all our remodeling work. This covers tile adhesion, epoxy grout joints, Schluter waterproofing, shower valves, and vanity mounts. If any component of our installation fails within two years, our crew repairs it at no cost to you.",
   },
+  {
+    question: "How much does a bathroom remodel cost in Chandler, AZ?",
+    answer:
+      "Cost depends on the scope of work, your layout, and the materials you choose - every bathroom is different, so a fair number can't be given without knowing the project. Call us at <a href=\"tel:+15205693339\">(520) 569-3339</a> and we'll walk through your project with you and give you a clear, honest starting range on the spot, followed by a free itemized written estimate before any work begins.",
+  },
+  {
+    question: "Are you a licensed bathroom remodeling contractor?",
+    answer:
+      "Yes. ARZ Home Remodeling holds an active Arizona ROC license (ROC338304), is fully insured, and is a NARI member.",
+  },
+  {
+    question: "Do you offer financing?",
+    answer:
+      "Yes, on qualifying projects over $5,000, with monthly payments up to 60 months on approved credit.",
+  },
+  {
+    question: "How long does a bathroom remodel take?",
+    answer:
+      "Guest baths: 2-3 weeks. Tub-to-shower conversions: 3-5 days after demo. Master baths with layout changes: 4-6 weeks.",
+  },
+  {
+    question: "Which areas do you serve?",
+    answer:
+      "Chandler, Gilbert, Mesa, Tempe, Queen Creek, Apache Junction, and the surrounding East Valley.",
+  },
 ];
 
 /** Strip HTML for FAQPage schema */

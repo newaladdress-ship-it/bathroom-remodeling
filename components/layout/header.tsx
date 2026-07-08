@@ -87,6 +87,15 @@ export function Header() {
               </a>
             </div>
 
+            {/* Mobile Sticky Call Button (Top) */}
+            <a
+              href={`tel:${siteConfig.phoneClean}`}
+              className="lg:hidden flex items-center justify-center bg-emerald-600 hover:bg-emerald-500 text-white rounded-full p-2 h-10 w-10 shadow-[0_2px_8px_rgba(16,185,129,0.3)] active:scale-[0.95] transition-all ml-auto mr-2"
+              aria-label={`Call local expert at ${siteConfig.phone}`}
+            >
+              <Phone className="w-5 h-5 fill-current animate-pulse" aria-hidden="true" />
+            </a>
+
             <details className="lg:hidden group relative">
               <summary className="list-none cursor-pointer p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg [&::-webkit-details-marker]:hidden">
                 <span className="sr-only">Open menu</span>

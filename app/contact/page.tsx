@@ -113,9 +113,15 @@ export default function ContactPage() {
                   <Clock className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-serif font-semibold text-foreground mb-2">Hours</h3>
-                <p className="text-muted-foreground text-sm">
-                  Mon-Fri: {siteConfig.hours.weekdays}<br />
-                  Sat: {siteConfig.hours.saturday}
+                <p className="text-muted-foreground text-sm font-semibold">
+                  {siteConfig.hours.weekdays.includes("24/7") ? (
+                    <span>Open 24/7<br />(24 Hours / 7 Days)</span>
+                  ) : (
+                    <>
+                      Mon-Fri: {siteConfig.hours.weekdays}<br />
+                      Sat: {siteConfig.hours.saturday}
+                    </>
+                  )}
                 </p>
               </div>
             </div>

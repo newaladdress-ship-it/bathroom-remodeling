@@ -912,6 +912,257 @@ Are you ready to select the perfect fixtures and transform your bathroom? Visit 
 `
 };
 
+export const post_26 = {
+  "title": "How Much Does a Bathroom Remodel Cost in Gilbert, AZ? (2026 Price Guide)",
+  "slug": "bathroom-remodel-cost-gilbert-az",
+  "excerpt": "Real 2026 bathroom remodel prices for Gilbert, AZ homeowners — guest baths, tub-to-shower conversions, and full master baths.",
+  "category": "Costs & Budget",
+  "tags": [
+    "bathroom remodel cost Gilbert AZ",
+    "bathroom renovation cost Gilbert AZ",
+    "tub to shower conversion cost Gilbert",
+    "how much does a bathroom remodel cost in Gilbert"
+  ],
+  "featuredImage": "/images/services/chandler-bathroom-remodel.jpg",
+  "metaTitle": "Bathroom Remodel Cost in Gilbert, AZ (2026 Price Guide)",
+  "metaDescription": "Real 2026 bathroom remodel prices for Gilbert, AZ homeowners — guest baths, tub-to-shower conversions, and full master baths. Call (520) 569-3339.",
+  "author": "Alex Rivers",
+  "status": "published",
+  "publishedAt": "2026-07-08T10:00:00Z",
+  "createdAt": "2026-07-08T10:00:00Z",
+  "updatedAt": "2026-07-08T10:00:00Z",
+  "content": `
+If you've searched "bathroom remodel cost Gilbert AZ" and landed on a page that wants your email before it'll show you a single number, this isn't that page. Below are real price ranges, broken out by project type, based on what bathroom remodels actually run across Gilbert and the East Valley right now in 2026.
+
+These are ranges, not a quote — every bathroom is different, and the only way to get an exact number is a look at your actual space. But you shouldn't have to guess in the dark before you're willing to pick up the phone, so here's the honest breakdown first.
+
+## Why Gilbert Pricing Isn't Quite a National Average
+
+A lot of the "average bathroom remodel cost" figures floating around online come from national surveys that don't account for a few things specific to Gilbert (85233, 85234, 85295, 85296, 85297, 85298):
+
+- **Hard water.** Gilbert's municipal water carries enough mineral content that standard grout and builder-grade fixtures stain and fail years earlier than they would in a milder climate. That pushes homeowners toward epoxy grout and better hardware — a little more upfront, but it avoids a second remodel a few years later.
+- **HOA communities.** A large share of Gilbert is master-planned — Val Vista Lakes, Morrison Ranch, Seville, Power Ranch, Circle G Ranches, Cooley Station — and each has its own rules on contractor work hours, dumpster placement, and parking. That doesn't change your remodel cost directly, but it does affect scheduling, and a contractor unfamiliar with the HOA already will lose time figuring it out on your dime.
+- **Permits.** Structural, electrical, or plumbing changes go through Gilbert's Development Services department at 90 E. Civic Center Drive (480-503-6700). Cosmetic swaps — a new vanity, new floor tile in the same footprint — typically don't need one.
+
+## Gilbert Bathroom Remodel Costs by Project Type
+
+**Guest bath / hall bath remodel: $7,000–$15,000**
+New vanity, tub or shower surround, tile floor, lighting, and fixtures. This is the most common project for Gilbert homes built from the 1990s through the 2000s with dated fiberglass or laminate finishes. Construction typically runs 2–3 weeks.
+
+**Tub-to-shower conversion: $8,500–$16,000**
+Removing an unused tub and replacing it with a custom-tiled walk-in shower — a properly sloped pan and a frameless or semi-frameless glass enclosure. This is consistently the single most-requested project across the East Valley, Gilbert included, since most households only regularly use one tub in the entire house, if that. Usually 3–5 days once demo starts.
+
+**Walk-in / curbless shower only: $9,000–$17,000**
+A step up from a standard conversion when you want a true zero-threshold entry — popular both for a cleaner modern look and for aging-in-place planning. It requires recessing the floor to keep the pan level with the surrounding floor, which is why it runs a bit higher than a standard conversion.
+
+**Full master bath remodel: $18,000–$40,000+**
+Full layout reconfiguration, double vanity, quartz counters, a larger shower, new lighting, and complete waterproofing and tile throughout. Gilbert's newer master-planned homes tend to have larger primary bathrooms than older East Valley stock, which is part of why this range runs a bit higher here. Typically 4–6 weeks when layout changes are involved.
+
+## What Actually Moves Your Price Up or Down
+
+Within any of the categories above, a handful of choices swing the final number the most:
+
+- **Tile choice.** Standard porcelain vs. large-format porcelain vs. natural stone shifts material cost meaningfully before labor is even factored in.
+- **Plumbing moves.** Keeping the shower, toilet, and vanity in their existing spots keeps cost down. Relocating a drain line or valve means opening the wall and usually means a permit.
+- **Layout changes.** Removing or shifting a wall to enlarge a shower or add space is a structural change, not a cosmetic one — it costs more, but it's often the difference between a bathroom that finally works for your household and one that still doesn't.
+- **Glass.** Framed glass is the least expensive option; frameless custom-cut glass costs more but is what most homeowners picture when they think "modern shower."
+- **Vanity and countertop material.** Laminate, quartz, and natural stone all sit at noticeably different price points.
+
+## Why Some Online Quotes Look Cheaper
+
+If you've gotten a "flat" quote from a national one-day bath company that's noticeably lower than the ranges above, it's worth understanding what's actually being quoted. That model typically installs a prefabricated acrylic shower panel — a hollow plastic shell fitted over your existing wall — rather than a custom-built, fully waterproofed tile shower.
+
+That approach can genuinely be faster, and for some homeowners speed is the priority. But it's a different product, not a cheaper version of the same one. A hollow acrylic panel doesn't handle moisture the way a properly waterproofed tile wall assembly does, and in a hot, dry climate like Gilbert's, condensation trapped behind an imperfectly sealed panel is a common source of the "mystery" mold and soft-wall problems homeowners run into a few years later.
+
+Every shower we build uses a [Schluter-Kerdi waterproofing membrane](/shower-remodeling/) behind the tile — the same standard used in commercial installations — backed by an industry-leading 5-year warranty on the waterproofing system itself, on top of our standard workmanship warranty.
+
+## What's Actually Included in a Free Estimate
+
+A written estimate from ARZ isn't a ballpark verbal number — it's a line-item breakdown covering demo, plumbing, waterproofing, tile and labor, fixtures, and permit costs where applicable, so you know exactly what you're paying for before anything is signed. We measure your space, walk through your material and layout preferences on-site, and confirm what (if anything) requires a permit, before we ever write a number down. There's no charge for the visit and no obligation to move forward.
+
+## Guest Bath or Master Bath First?
+
+If you're weighing two bathrooms against a single budget, a good rule of thumb: prioritize whichever one is actually failing — cracked tile, a tub you never use, a vanity with water damage underneath — over whichever one simply looks dated. A guest bath that's structurally fine but cosmetically tired can usually wait; a bathroom with a leaking valve or a tub-to-shower conversion you've wanted for years tends to pay off sooner, both in daily use and in avoiding a bigger repair down the line.
+
+## Financing Is Available
+
+Most full remodels over $5,000 qualify for financing, with terms explained upfront during your estimate visit — no surprise fees, and you can pay off early without penalty if your lender allows it.
+
+## Getting an Exact Number for Your Gilbert Bathroom
+
+Every range above depends on the specifics of your bathroom — current layout, finish choices, and whether anything structural needs to move. The fastest way to get a firm, written, line-item number is a short phone call to schedule a free in-home consultation for your [Gilbert bathroom remodel](/bathroom-remodeling-gilbert-az/). No pressure, no obligation — just a real number for your actual project.
+
+**Call [(520) 569-3339](tel:+15205693339) to schedule your free Gilbert bathroom estimate.** We answer calls and return voicemails within 2 hours.
+
+## Frequently Asked Questions
+
+**How much does a bathroom remodel cost in Gilbert, AZ?**
+Most Gilbert bathroom remodels fall between $7,000 for a guest bath refresh and $40,000+ for a full master bath overhaul, depending on scope, layout changes, and finish selections. A tub-to-shower conversion — the most common single project — typically runs $8,500 to $16,000.
+
+**Do I need a permit for my Gilbert bathroom remodel?**
+Only if you're moving plumbing, walls, or electrical. Swapping a vanity or retiling within the same footprint usually doesn't require one. When a permit is needed, we handle the filing and inspection scheduling with Gilbert Development Services directly.
+
+**How long does a bathroom remodel take in Gilbert?**
+Guest baths typically take 2–3 weeks of active construction. Tub-to-shower conversions run 3–5 days after demo. Full master bath remodels with layout changes typically take 4–6 weeks.
+
+**Can I remodel just the shower without redoing the whole bathroom?**
+Yes — shower-only replacements and [tub-to-shower conversions](/walk-in-showers/) are some of our most common projects, and they don't require gutting the rest of the room.
+
+**Do you offer financing?**
+Yes, on qualifying projects over $5,000, subject to lender approval, with terms explained before you commit.
+
+---
+
+*ARZ Home Remodeling is a licensed Arizona contractor (ROC338304), based in Chandler and serving Gilbert, Chandler, Mesa, Tempe, Queen Creek, and Apache Junction since 2010. Every project comes with a written, fixed-price estimate and a workmanship warranty.*
+  `,
+  "faqs": [
+    {
+      "question": "How much does a bathroom remodel cost in Gilbert, AZ?",
+      "answer": "Most Gilbert bathroom remodels fall between $7,000 for a guest bath refresh and $40,000+ for a full master bath overhaul, depending on scope, layout changes, and finish selections. A tub-to-shower conversion — the most common single project — typically runs $8,500 to $16,000."
+    },
+    {
+      "question": "Do I need a permit for my Gilbert bathroom remodel?",
+      "answer": "Only if you're moving plumbing, walls, or electrical. Swapping a vanity or retiling within the same footprint usually doesn't require one. When a permit is needed, we handle the filing and inspection scheduling with Gilbert Development Services directly."
+    },
+    {
+      "question": "How long does a bathroom remodel take in Gilbert?",
+      "answer": "Guest baths typically take 2–3 weeks of active construction. Tub-to-shower conversions run 3–5 days after demo. Full master bath remodels with layout changes typically take 4–6 weeks."
+    },
+    {
+      "question": "Can I remodel just the shower without redoing the whole bathroom?",
+      "answer": "Yes — shower-only replacements and tub-to-shower conversions are some of our most common projects, and they don't require gutting the rest of the room."
+    },
+    {
+      "question": "Do you offer financing?",
+      "answer": "Yes, on qualifying projects over $5,000, subject to lender approval, with terms explained before you commit."
+    }
+  ]
+};
+
+export const post_27 = {
+  "title": "7 Warning Signs of Hidden Water Damage Behind Your Shower Walls",
+  "slug": "signs-hidden-water-damage-behind-shower",
+  "excerpt": "Cracked grout, a musty smell, or a soft floor near your shower? These are signs of hidden water damage. Free inspection — call (520) 569-3339.",
+  "category": "Technical",
+  "tags": [
+    "signs of water damage behind shower wall",
+    "shower leaking behind tile",
+    "mold behind bathroom wall",
+    "soft floor around shower Arizona",
+    "hidden shower leak"
+  ],
+  "featuredImage": "/images/services/shower-remodeling.jpg",
+  "metaTitle": "7 Signs of Hidden Shower Water Damage | ARZ Remodeling",
+  "metaDescription": "Cracked grout, a musty smell, or a soft floor near your shower? These are signs of hidden water damage. Free inspection — call (520) 569-3339.",
+  "author": "Alex Rivers",
+  "status": "published",
+  "publishedAt": "2026-07-08T10:00:00Z",
+  "createdAt": "2026-07-08T10:00:00Z",
+  "updatedAt": "2026-07-08T10:00:00Z",
+  "content": `
+Most bathroom water damage doesn't announce itself. By the time you can see it — a stain, a soft spot, a smell that won't go away — it's usually been building behind the wall for months, sometimes years. Grout and caulk are the only thing standing between everyday shower use and the framing, drywall, and subfloor underneath, and once that barrier fails, water finds the path of least resistance and just keeps going.
+
+Here are seven signs worth taking seriously, especially in an East Valley home, where hard water and desert heat make the materials underneath fail faster than they would somewhere milder.
+
+## 1. Grout Lines That Keep Cracking
+
+A little grout wear over a decade is normal. Grout that's visibly crumbling, that keeps cracking in the same spot, or that you've had to re-grout more than once in the last few years is telling you something: water is getting behind the tile, and it's stressing the substrate underneath every time the house shifts slightly with temperature.
+
+## 2. A Soft or Bouncy Floor Near the Shower or Tub
+
+Press your foot near the base of the shower or tub. If the floor gives even slightly, or feels different than the rest of the bathroom floor, water has likely already reached the subfloor. This is one of the more serious signs on this list — subfloor damage spreads, and it's a much bigger repair the longer it sits.
+
+## 3. A Musty Smell That Returns No Matter How Much You Clean
+
+Cleaning the visible surfaces doesn't touch what's happening inside the wall. If the smell comes back within a day or two of cleaning, the moisture source is behind the tile, not on top of it.
+
+## 4. Staining or Discoloration on the Other Side of the Wall
+
+Check the wall or ceiling on the opposite side of the shower — a hallway, a closet, or the room next door. Water travels, and a stain showing up somewhere that seems unrelated to the bathroom is often the clearest sign of an active leak.
+
+## 5. Peeling Paint or Bubbling Drywall
+
+If the wall backing the shower is painted drywall rather than tile, peeling paint or a slightly bubbled, uneven texture is usually moisture pushing through from the other side.
+
+## 6. Tile That Feels Loose or Sounds Hollow
+
+Tap a few tiles around the shower. A solid, consistent sound means the tile is still well-bonded. A hollow or different-sounding tap means it's debonded from the wall behind it — almost always because water got underneath it.
+
+## 7. Water Stains on the Ceiling Below
+
+If your bathroom is upstairs, check the ceiling directly underneath it — a first-floor room, a garage ceiling. A stain there means water has already made it all the way through the floor assembly.
+
+## Why This Shows Up More in Arizona Bathrooms
+
+Two things make this more common here than in milder climates. First, the daily swing from 115°F outside to a conditioned 72°F inside puts real stress on tile, grout, and caulk — these materials expand and contract more here than they would without that daily extreme. Second, East Valley hard water accelerates grout breakdown, so a joint that might last 15 years elsewhere can fail in 6 to 8 years here without epoxy grout.
+
+There's also a newer cause showing up more often: hollow, prefabricated acrylic shower panels installed as part of a "one-day" remodel. If the seams and edges of that kind of panel aren't sealed perfectly — and over time, with repeated heat cycling, they often aren't — condensation gets trapped behind a completely non-breathable plastic wall with nowhere to go. Because the surface is one solid piece, there's no early warning sign like cracking grout; often nothing seems wrong until the smell shows up.
+
+## What Happens If You Ignore These Signs
+
+The honest answer: it gets more expensive, not less. Trapped moisture behind a wall eventually leads to mold growth, and once mold is established in wall cavities or subfloor, remediation gets added on top of the repair. Framing that stays wet long enough will rot, which can turn a bathroom repair into a structural one. None of this improves by waiting, and none of it is a DIY weekend fix once it's past the surface.
+
+## The Actual Fix: Waterproofing, Not a Patch
+
+Re-caulking a leaking joint treats the symptom, not the cause, and it usually buys a few months at best once there's already damage underneath. A proper fix means opening the wall, addressing whatever's already been affected, and rebuilding with a real waterproofing membrane — not just tile glued to bare drywall.
+
+Every [shower we build](/shower-remodeling/) uses a Schluter-Kerdi waterproofing membrane behind the tile, the same standard used in commercial installations, backed by a 5-year warranty on the waterproofing itself. It's the difference between a shower that's waterproof and one that's just water-resistant until, one day, it isn't.
+
+## What a Professional Inspection Actually Checks
+
+An inspection isn't guesswork — we check moisture levels behind the tile and in the surrounding wall with a moisture meter, look for soft spots across the entire floor and wall assembly (not just where you noticed the problem), and, where needed, use a thermal camera to spot temperature differences that indicate trapped moisture before we ever open a wall. That tells us — and you — whether you're looking at a contained repair or something more extensive, before any demo starts.
+
+## If You're Seeing Any of These Signs, Don't Wait
+
+A small water damage problem today is a subfloor and framing problem in a year. If even one of these seven signs sounds familiar, it's worth a free in-home inspection before deciding whether you're looking at a contained repair or a full remodel.
+
+**Call [(520) 569-3339](tel:+15205693339) for a free inspection.** We answer calls and return voicemails within 2 hours, and we serve [Chandler](/bathroom-remodeling-chandler-az/), [Gilbert](/bathroom-remodeling-gilbert-az/), [Mesa](/bathroom-remodeling-mesa-az/), [Tempe](/bathroom-remodeling-tempe-az/), [Queen Creek](/bathroom-remodeling-queen-creek-az/), and [Apache Junction](/bathroom-remodeling-apache-junction-az/).
+
+## Frequently Asked Questions
+
+**Is a musty smell in my bathroom always mold?**
+Not always, but a persistent musty smell that returns after cleaning is one of the more reliable signs of trapped moisture, and that frequently does mean mold growth inside the wall or subfloor. An inspection is the only way to know for sure without opening the wall yourself.
+
+**Can I just re-caulk instead of doing a full remodel?**
+If you catch it early — before the substrate underneath is affected — re-caulking or replacing a section of grout can genuinely solve the problem. Once you're seeing soft flooring, staining, or a smell that won't go away, the damage has usually already reached the wall or floor structure, and caulk alone won't fix that.
+
+**How much does it cost to fix hidden water damage behind a shower?**
+It depends entirely on how far the damage has spread, which is impossible to know without opening the wall or subfloor and taking a look. A contained repair caught early can be a fraction of a full remodel; damage that's reached the subfloor or framing costs more because that structural work has to happen before any new tile goes in. This is one case where an in-home look is genuinely the only way to give you an honest number.
+
+**Do you offer free inspections?**
+Yes, across Chandler, Gilbert, Mesa, Tempe, Queen Creek, and Apache Junction.
+
+**What's the difference between a repair and a full remodel?**
+A repair addresses the damaged area only — opening the wall where the leak is, fixing what's underneath, and rebuilding that section. A full remodel replaces everything, which sometimes ends up being the more practical option if the shower is older and multiple areas show wear. We'll tell you honestly which one your bathroom actually needs.
+
+---
+
+*ARZ Home Remodeling is a licensed Arizona contractor (ROC338304), specializing in bathroom remodeling and shower waterproofing since 2010. We serve Chandler, Gilbert, Mesa, Tempe, Queen Creek, and Apache Junction.*
+  `,
+  "faqs": [
+    {
+      "question": "Is a musty smell in my bathroom always mold?",
+      "answer": "Not always, but a persistent musty smell that returns after cleaning is one of the more reliable signs of trapped moisture, and that frequently does mean mold growth inside the wall or subfloor. An inspection is the only way to know for sure without opening the wall yourself."
+    },
+    {
+      "question": "Can I just re-caulk instead of doing a full remodel?",
+      "answer": "If you catch it early — before the substrate underneath is affected — re-caulking or replacing a section of grout can genuinely solve the problem. Once you're seeing soft flooring, staining, or a smell that won't go away, the damage has usually already reached the wall or floor structure, and caulk alone won't fix that."
+    },
+    {
+      "question": "How much does it cost to fix hidden water damage behind a shower?",
+      "answer": "It depends entirely on how far the damage has spread, which is impossible to know without opening the wall or subfloor and taking a look. A contained repair caught early can be a fraction of a full remodel; damage that's reached the subfloor or framing costs more because that structural work has to happen before any new tile goes in. This is one case where an in-home look is genuinely the only way to give you an honest number."
+    },
+    {
+      "question": "Do you offer free inspections?",
+      "answer": "Yes, across Chandler, Gilbert, Mesa, Tempe, Queen Creek, and Apache Junction."
+    },
+    {
+      "question": "What's the difference between a repair and a full remodel?",
+      "answer": "A repair addresses the damaged area only — opening the wall where the leak is, fixing what's underneath, and rebuilding that section. A full remodel replaces everything, which sometimes ends up being the more practical option if the shower is older and multiple areas show wear. We'll tell you honestly which one your bathroom actually needs."
+    }
+  ]
+};
+
 // Backward compatibility aliases
 export const defaultBlogPost = post_1;
 export const secondBlogPost = post_2;

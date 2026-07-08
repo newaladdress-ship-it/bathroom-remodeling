@@ -15,12 +15,11 @@ export default function InteractiveMap({
   height = 400, 
   title = "ARZ Home Remodeling Location" 
 }: InteractiveMapProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleLoadMap = () => {
     setIsLoading(true);
-    // Add a tiny artificial delay to show a beautiful loader state
     setTimeout(() => {
       setIsLoaded(true);
       setIsLoading(false);
@@ -30,8 +29,8 @@ export default function InteractiveMap({
   if (isLoaded) {
     return (
       <div 
-        className="relative overflow-hidden rounded-xl border border-border shadow-md bg-muted transition-all duration-300"
-        style={{ height: `${height}px` }}
+        className={`relative overflow-hidden rounded-xl border border-border shadow-md bg-muted transition-all duration-300 ${height ? "" : "h-full min-h-[450px]"}`}
+        style={height ? { height: `${height}px` } : undefined}
       >
         <iframe
           src={src}
@@ -50,16 +49,16 @@ export default function InteractiveMap({
 
   return (
     <div 
-      className="relative rounded-xl overflow-hidden border border-border shadow-md bg-slate-900 group select-none flex flex-col justify-between p-6 transition-all duration-500 hover:border-primary/50"
-      style={{ height: `${height}px` }}
+      className={`relative rounded-xl overflow-hidden border border-border shadow-md bg-slate-50 group select-none flex flex-col justify-between p-6 transition-all duration-500 hover:border-primary/50 ${height ? "" : "h-full min-h-[450px]"}`}
+      style={height ? { height: `${height}px` } : undefined}
     >
       {/* Decorative Grid Pattern mimicking a map vector */}
       <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       
       {/* Stylized Topographic Map Background Circles */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-white/5 rounded-full pointer-events-none scale-75" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-white/5 rounded-full pointer-events-none scale-75" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-white/5 rounded-full pointer-events-none scale-75" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-primary/5 rounded-full pointer-events-none scale-75" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-primary/5 rounded-full pointer-events-none scale-75" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-primary/5 rounded-full pointer-events-none scale-75" />
       
       {/* Red Pulse Map Pin at Center */}
       <div className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-10">
@@ -72,21 +71,21 @@ export default function InteractiveMap({
 
       {/* Top Credentials Row */}
       <div className="relative z-10 flex items-center justify-between w-full">
-        <div className="inline-flex items-center gap-1.5 bg-background/80 backdrop-blur-sm border border-border px-3 py-1 rounded-full text-xs font-bold shadow-sm">
+        <div className="inline-flex items-center gap-1.5 bg-background/90 backdrop-blur-sm border border-border px-3 py-1 rounded-full text-xs font-bold shadow-sm">
           <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
           <span className="text-foreground">4.9 · 1,258 Google Reviews</span>
         </div>
-        <div className="bg-red-500/10 border border-red-500/30 text-red-400 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
+        <div className="bg-red-500/10 border border-red-500/30 text-red-500 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
           ROC#338304
         </div>
       </div>
 
       {/* Bottom Center interactive panel */}
       <div className="relative z-10 flex flex-col items-center text-center mt-auto w-full">
-        <h3 className="text-white font-serif text-lg font-bold mb-1 tracking-wide">
+        <h3 className="text-foreground font-serif text-lg font-bold mb-1 tracking-wide">
           ARZ Home Remodeling
         </h3>
-        <p className="text-slate-400 text-xs mb-4 max-w-xs leading-relaxed">
+        <p className="text-muted-foreground text-xs mb-4 max-w-xs leading-relaxed">
           6710 W Chicago St, Chandler, AZ 85226
         </p>
 

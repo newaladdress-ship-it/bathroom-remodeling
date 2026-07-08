@@ -15,42 +15,35 @@ export default function AboutPreview() {
   return (
     <section className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="relative">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              <Image
-                src="/images/optimized/bathroom-remodeling-licensed-crew.avif"
-                alt="ARZ Home Remodeling licensed contractor crew performing bathroom remodel in Chandler AZ"
-                fill
-                className="object-cover"
-                quality={75}
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-
-            </div>
-            <div className="absolute -bottom-10 left-4 right-4 lg:-bottom-12 lg:left-8 lg:right-8">
-              <div className="grid grid-cols-4 gap-2 lg:gap-4 bg-card border border-border rounded-xl p-4 lg:p-6 shadow-xl">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="text-center">
-                    <span className="block font-serif text-xl lg:text-2xl font-bold text-primary">
-                      {stat.value}
-                    </span>
-                    <span className="text-xs lg:text-sm text-muted-foreground">{stat.label}</span>
-                  </div>
-                ))}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div>
+            <div className="relative">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/optimized/bathroom-remodeling-licensed-crew.avif"
+                  alt="ARZ Home Remodeling licensed contractor crew performing bathroom remodel in Chandler AZ"
+                  fill
+                  className="object-cover"
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="absolute -bottom-10 left-4 right-4 lg:-bottom-12 lg:left-8 lg:right-8">
+                <div className="grid grid-cols-4 gap-2 lg:gap-4 bg-card border border-border rounded-xl p-4 lg:p-6 shadow-xl">
+                  {stats.map((stat) => (
+                    <div key={stat.label} className="text-center">
+                      <span className="block font-serif text-xl lg:text-2xl font-bold text-primary">
+                        {stat.value}
+                      </span>
+                      <span className="text-xs lg:text-sm text-muted-foreground">{stat.label}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="pt-12 lg:pt-0">
-            <span className="text-primary text-sm font-medium tracking-wider uppercase">About Us</span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-6 text-foreground text-balance">
-              Chandler Bathroom Remodelers Since {siteConfig.foundedYear ?? 2010}
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Since 2010, ARZ Home Remodeling has delivered custom bathroom upgrades in Chandler and the East Valley. We are a licensed local contractor crew (ROC #338304), not a franchise or handyman list. Our team handles every phase: permits on Buffalo St, slab saw-cutting, Schluter-KERDI waterproofing, and custom tile setting. We build curbless showers, tub-to-shower conversions, and double vanities. Our installers work daily near Hamilton High School, Ocotillo, Fulton Ranch, and Sun Lakes. We manage all HOA rules and city inspections, guaranteeing high workmanship with a fixed-price contract.
-            </p>
-            <div className="mb-8 p-4 rounded-xl bg-accent/5 border border-accent/20 flex items-start gap-3">
+            
+            {/* Wholesale Sourcing Partners Card - Repositioned to Left Column */}
+            <div className="mt-16 lg:mt-20 p-4 rounded-xl bg-accent/5 border border-accent/20 flex items-start gap-3">
               <span className="text-accent text-xl mt-0.5">💎</span>
               <div>
                 <h3 className="text-sm font-bold text-foreground mb-1">Wholesale Sourcing Partners</h3>
@@ -59,6 +52,16 @@ export default function AboutPreview() {
                 </p>
               </div>
             </div>
+          </div>
+
+          <div className="pt-12 lg:pt-0">
+            <span className="text-primary text-sm font-medium tracking-wider uppercase">About Us</span>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-6 text-foreground">
+              Chandler Bathroom Remodelers Since {siteConfig.foundedYear ?? 2010}
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Since 2010, ARZ Home Remodeling has delivered custom bathroom upgrades in Chandler and the East Valley. As a licensed local contractor (ROC #338304), our in-house crew handles everything from permits and Schluter-KERDI waterproofing to custom tile setting. We manage all HOA rules and city inspections, guaranteeing high workmanship with a fixed-price contract.
+            </p>
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground group">
               <Link href="/about/">
                 Learn More About Us

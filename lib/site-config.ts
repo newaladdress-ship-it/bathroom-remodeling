@@ -30,9 +30,9 @@ export const siteConfig = {
   },
   zipCodes: ["85224", "85225", "85226", "85244", "85246", "85248", "85249", "85286"],
   hours: {
-    weekdays: "8:00 AM - 6:00 PM",
-    saturday: "9:00 AM - 4:00 PM",
-    sunday: "Closed",
+    weekdays: "24/7 Hours per Week",
+    saturday: "24/7 Hours per Week",
+    sunday: "24/7 Hours per Week",
   },
   social: {
     facebook: "https://www.facebook.com/arzhomeremodeling",

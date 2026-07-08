@@ -4,30 +4,30 @@ const steps = [
   {
     number: "01",
     icon: Phone,
-    title: "Free Consultation",
+    title: "Free Consultation (No sales pitch)",
     description:
-      "We meet at your home, take measurements, and talk through layout, tile, and budget.",
+      "We meet at your home, take measurements, and talk layout. We discuss budget honestly and outline potential constraints upfront, without high-pressure sales tactics.",
   },
   {
     number: "02",
     icon: Ruler,
-    title: "Design & Written Estimate",
+    title: "Fixed-Price Quote (No hidden fees)",
     description:
-      "You get material choices and a line-item price. Permits are flagged if your scope needs them.",
+      "You get a detailed, line-item scope and a fixed-price contract. We specify every tile, vanity, and permit fee so your price is locked, with zero surprise upcharges.",
   },
   {
     number: "03",
     icon: HardHat,
-    title: "Construction",
+    title: "Conscious Construction (No delay or mess)",
     description:
-      "Licensed trades as needed. Waterproofing, tile, vanities, and glass installed to plan.",
+      "We work consecutive business days during HOA-approved hours. Our crew protects your home with heavy floor runners and zipped plastic dust-containment barriers.",
   },
   {
     number: "04",
     icon: Sparkles,
-    title: "Final Walkthrough",
+    title: "Certified Completion (No loose ends)",
     description:
-      "We fix punch-list items and leave the bath clean before we close the job.",
+      "We inspect every tile joint and plumbing connection with you, clean the workspace thoroughly, and back your new bathroom with a written 2-year workmanship warranty.",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function ProcessSection() {
             How a Chandler Bathroom Remodel Works
           </h2>
           <p className="text-background/70 text-lg leading-relaxed">
-            From first call to final walkthrough, here is what to expect when you work with our crew.
+            We eliminate the stress of bathroom remodeling with strict schedules, floor protection, and absolute price transparency.
           </p>
         </div>
 
