@@ -9,8 +9,8 @@ export async function submitSitemapToIndexNow(): Promise<boolean> {
     console.log("[IndexNow] Starting sitemap submission...");
     const sitemapModule = await import("@/app/sitemap");
     const sitemap = sitemapModule.default;
-    const sitemapEntries = sitemap();
-    const urls = sitemapEntries.map(entry => entry.url);
+    const sitemapEntries = await sitemap();
+    const urls = sitemapEntries.map((entry: any) => entry.url);
     
     // Batch in groups of 100
     let success = true;

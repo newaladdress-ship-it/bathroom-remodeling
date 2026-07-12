@@ -203,7 +203,7 @@ function BlogEditorContent() {
                 <Label htmlFor="category">Category</Label>
                 <Select
                   value={post.category}
-                  onValueChange={(value) => setPost({ ...post, category: value })}
+                  onValueChange={(value: string) => setPost({ ...post, category: value })}
                 >
                   <SelectTrigger>
                     <SelectValue placeholder="Select category" />

@@ -26,7 +26,8 @@ import {
   post_24,
   post_25,
   post_26,
-  post_27
+  post_27,
+  post_28
 } from "@/lib/seed-blog";
 import { submitToIndexNow } from "@/lib/indexnow";
 
@@ -73,7 +74,8 @@ const basePosts: BlogPost[] = [
   post_24,
   post_25,
   post_26,
-  post_27
+  post_27,
+  post_28
 ].map((post, index) => {
   const override = blogOverrides[post.slug];
   return {
@@ -85,7 +87,7 @@ const basePosts: BlogPost[] = [
     featuredImage: post.featuredImage,
     category: post.category,
     author: post.author,
-    status: post.status,
+    status: post.status as "draft" | "published",
     metaTitle: override ? override.title : (post.metaTitle || post.title),
     metaDescription: override ? override.description : (post.metaDescription || post.excerpt),
     keywords: post.tags || [],

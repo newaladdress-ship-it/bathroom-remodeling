@@ -84,10 +84,9 @@ export default function AccessibleBathroomPage() {
       <main>
         <ServiceHero
           title="Handicap Accessible Bathroom Remodels in Chandler, AZ"
-          subtitle="Create a safe, beautiful bathroom designed for accessibility and aging-in-place. ADA-compliant renovations with modern design and professional installation."
-          ctaText="Get Free ADA Assessment"
-          imageSrc="/images/projects/handicap-accessible-shower.avif"
-          imageAlt="ADA-compliant curbless bathroom shower with grab bars"
+          subtitle="Handicap Accessible Bathroom Remodeling"
+          description="Create a safe, beautiful bathroom designed for accessibility and aging-in-place. ADA-compliant renovations with modern design and professional installation."
+          image="/images/projects/handicap-accessible-shower.avif"
         />
 
         <section className="py-16 md:py-24 bg-background">
@@ -209,8 +208,6 @@ export default function AccessibleBathroomPage() {
         <ServiceCTA
           title="Ready for an Accessible Bathroom?"
           description="Get a free in-home ADA assessment and written estimate. No obligation. Our team specializes in creating beautiful, safe bathrooms for all abilities."
-          buttonText="Schedule Free Assessment"
-          buttonHref="#contact"
         />
 
         <ContactSection />
@@ -218,10 +215,9 @@ export default function AccessibleBathroomPage() {
       <Footer />
 
       <ServiceSchema
-        name="Handicap Accessible Bathroom Remodeling"
-        description="ADA-compliant bathroom remodels with curbless showers, grab bars, and accessible design in Chandler, AZ"
-        areaServed="Chandler"
-        url={`${siteConfig.url}/handicap-accessible-bathroom/`}
+        serviceName="Handicap Accessible Bathroom Remodeling"
+        serviceDescription="ADA-compliant bathroom remodels with curbless showers, grab bars, and accessible design in Chandler, AZ"
+        serviceUrl={`${siteConfig.url}/handicap-accessible-bathroom/`}
       />
 
       <BreadcrumbSchema
