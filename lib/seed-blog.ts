@@ -1455,6 +1455,205 @@ A full-service remodel includes structural demolition, rough-in plumbing and ele
   ]
 };
 
+export const post_29 = {
+  "title": "7 Bathroom Remodeling Mistakes Tempe Homeowners Make (and How to Avoid Them)",
+  "slug": "bathroom-remodeling-mistakes-tempe-az",
+  "excerpt": "Avoid costly bathroom remodel mistakes in Tempe, AZ. See the 7 issues we catch most often — and how a licensed ROC338304 crew prevents them.",
+  "category": "Bathroom Remodeling",
+  "tags": [
+    "bathroom remodeling mistakes Tempe AZ",
+    "common bathroom renovation mistakes",
+    "bathroom remodel mistakes to avoid",
+    "Tempe bathroom contractor",
+    "bathroom waterproofing mistakes Arizona",
+    "walk-in shower installation mistakes",
+    "bathroom permit mistakes Tempe",
+    "DIY bathroom remodel risks",
+    "licensed bathroom contractor Tempe"
+  ],
+  "featuredImage": "/images/services/chandler-bathroom-remodel.jpg",
+  "metaTitle": "7 Bathroom Remodel Mistakes Tempe Homeowners Make | ARZ",
+  "metaDescription": "Avoid costly bathroom remodel mistakes in Tempe, AZ. See the 7 issues we catch most often — and how a licensed ROC338304 crew prevents them.",
+  "author": "Alex Rivers",
+  "status": "published",
+  "publishedAt": "2026-07-13T08:00:00Z",
+  "createdAt": "2026-07-13T08:00:00Z",
+  "updatedAt": "2026-07-13T08:00:00Z",
+  "content": `
+# 7 Bathroom Remodeling Mistakes Tempe Homeowners Make (and How to Avoid Them)
+
+A [bathroom remodel in Tempe](/bathroom-remodeling-tempe-az/) is one of the most disruptive — and most expensive — projects most homeowners take on, which is exactly why getting it right the first time matters so much. Whether you're updating a guest bath near ASU, renovating a master suite in South Tempe, or finally replacing a builder-grade shower in a Warner Ranch home, the difference between a remodel that holds up for twenty years and one that needs redoing in three usually comes down to a handful of decisions made before demo day even starts — not the finishes you pick. After years of working on bathrooms across Tempe, from Downtown Tempe to Shalimar, we've seen the same seven mistakes come up again and again. Here's how to avoid each one.
+
+## 1. Skipping Real Waterproofing Behind the Tile
+
+Tile looks waterproof. It isn't. Water works its way through grout lines and tile edges regardless of how carefully the tile itself is installed, and what actually stops that moisture from reaching your subfloor and wall framing is the waterproofing membrane underneath — not the tile. Tempe's municipal water carries a heavy mineral load, and that hard water accelerates grout breakdown faster than it would in a milder climate, which means a shortcut here shows up sooner rather than later, usually as soft drywall, a musty smell, or tile that starts popping loose within a couple of years. We build every shower with [Schluter-Kerdi waterproofing](/blog/schluter-kerdi-vs-redgard-arizona/) membrane systems rather than a standard cement-board-and-surface-membrane approach, because it creates one continuous, fully sealed barrier at every seam, corner, and niche — exactly the spots that budget tile jobs and one-day acrylic installs tend to skip. If a contractor can't clearly explain what waterproofing system they use and why, that's worth asking before you sign anything.
+
+## 2. Hiring Based on Price Alone
+
+The lowest bid on a bathroom remodel is almost never the lowest total cost once you factor in what happens when something goes wrong. A large share of the "remodel gone wrong" stories we hear about across the East Valley trace back to an unlicensed or underinsured crew that cut corners, disappeared mid-project, or left work that failed inspection outright. Before comparing dollar figures, verify the ROC (Registrar of Contractors) license number directly on the Arizona ROC website, confirm the contractor carries active insurance, and ask specifically what workmanship warranty is included in writing. We back every project with a two-year workmanship warranty for exactly this reason: if something isn't right after we leave, it's still our responsibility to fix, not an unexpected bill for you.
+
+## 3. Underestimating Tempe's Permit Requirements
+
+Cosmetic updates — new tile, a new vanity, fresh paint, a new showerhead — generally don't require a permit in Tempe. Moving plumbing lines, relocating electrical circuits, or altering a structural wall does, and skipping that step creates real downstream problems: a failed inspection when you eventually sell the home, or an insurance claim that gets denied because the damage traces back to unpermitted work. A licensed Tempe contractor pulls the permit, schedules the City of Tempe inspection, and builds that timeline into your project plan from the very start — it's not something you should have to ask about or chase down yourself.
+
+## 4. Not Budgeting a Realistic Timeline
+
+A guest bathroom remodel in Tempe typically takes two to three weeks of active construction. A full master bathroom renovation — the kind common in South Tempe or Warner Ranch — usually runs closer to four to six weeks once you account for custom tile selection, glass fabrication, and cabinetry lead times. Homeowners who mentally plan around a long-weekend timeline end up frustrated by the end of week one, which leads to rushed decisions just to "get it done." Ask for a firm, written timeline as part of your proposal before demo starts, not a verbal ballpark you're given over the phone.
+
+## 5. DIY-ing Plumbing or Electrical to Save Money
+
+Swapping out a vanity or repainting is reasonable DIY territory for most homeowners. Rerouting a drain line, relocating a shower valve, or adding a new electrical circuit for a heated floor or exhaust fan is a different category of risk entirely. Done wrong, it can mean a leak developing inside a wall cavity you won't see failing until there's already structural or mold damage, or an electrical hazard in a room that's, by definition, wet. These are also precisely the changes that require a permit and inspection — steps a DIY change almost always skips, which becomes its own problem later.
+
+## 6. Skipping a Fixed, Written Estimate
+
+Verbal ballpark numbers have a way of turning into change orders once the walls actually open up and the unexpected shows up — old galvanized plumbing, water damage hiding behind the old tub surround, wiring that doesn't meet current code. A fixed-price written estimate, based on an actual in-home evaluation rather than a phone quote, is what keeps a project on budget from day one. It's also the most honest way to compare two contractors, since you're comparing identical, clearly defined scope instead of two different guesses dressed up as quotes.
+
+## 7. Ignoring Ventilation in Windowless Bathrooms
+
+A lot of older Tempe homes, especially smaller guest bathrooms near ASU and in the Downtown Tempe area, have no window at all, which puts the entire burden of moisture control on the exhaust fan. An undersized fan — or one vented into the attic instead of straight outside — traps humidity against the same tile and grout you just paid to have replaced, and mold shows up within a year or two of an otherwise beautiful remodel. Sizing the fan correctly for the room's square footage and venting it fully outside is a small line item on a proposal that prevents a much larger, much uglier problem down the road.
+
+## Frequently Asked Questions
+
+**How do I verify a Tempe bathroom contractor is properly licensed?**
+Arizona contractors are required to hold an active ROC (Registrar of Contractors) license. You can look up any license number directly on the Arizona ROC website to confirm it's active and check for any complaints on file. ARZ Home Remodeling operates under ROC #338304.
+
+**Do I need a permit for a bathroom remodel in Tempe, AZ?**
+Cosmetic updates like new tile, a new vanity, or fresh paint generally don't require a permit. Moving plumbing lines, relocating electrical, or making structural changes does require a permit through the City of Tempe.
+
+**How long does a bathroom remodel take in Tempe?**
+A standard guest bathroom remodel typically takes two to three weeks of active construction. Larger master bathroom renovations run four to six weeks depending on scope and material lead times.
+
+**What's the single biggest mistake homeowners make in a bathroom remodel?**
+Skipping proper waterproofing behind the tile. It's invisible once the project looks finished, which is exactly why it's the easiest corner for a lower-cost contractor to cut — and the most expensive one to fix later, once the damage is already behind the wall.
+
+## Get It Right the First Time
+
+A bathroom remodel that holds up for decades comes down to the decisions made before work ever starts — verifying the license, getting a written estimate, and using a real waterproofing system instead of a shortcut. ARZ Home Remodeling has served Tempe and the East Valley since 2010 under ROC #338304, backed by a two-year workmanship warranty on every project. Call (520) 569-3339 for a free in-home estimate, or see our full [Tempe bathroom remodeling services](/bathroom-remodeling-tempe-az/).
+`,
+  "faqs": [
+    {
+      "question": "How do I verify a Tempe bathroom contractor is properly licensed?",
+      "answer": "Arizona contractors are required to hold an active ROC (Registrar of Contractors) license. You can look up any license number directly on the Arizona ROC website to confirm it's active and check for any complaints on file. ARZ Home Remodeling operates under ROC #338304."
+    },
+    {
+      "question": "Do I need a permit for a bathroom remodel in Tempe, AZ?",
+      "answer": "Cosmetic updates like new tile, a new vanity, or fresh paint generally don't require a permit. Moving plumbing lines, relocating electrical, or making structural changes does require a permit through the City of Tempe."
+    },
+    {
+      "question": "How long does a bathroom remodel take in Tempe?",
+      "answer": "A standard guest bathroom remodel typically takes two to three weeks of active construction. Larger master bathroom renovations run four to six weeks depending on scope and material lead times."
+    },
+    {
+      "question": "What's the single biggest mistake homeowners make in a bathroom remodel?",
+      "answer": "Skipping proper waterproofing behind the tile. It's invisible once the project looks finished, which is exactly why it's the easiest corner for a lower-cost contractor to cut — and the most expensive one to fix later, once the damage is already behind the wall."
+    }
+  ]
+};
+
+export const post_30 = {
+  "title": "Walk-In Tub vs. Walk-In Shower: Which Fits Your Tempe Bathroom?",
+  "slug": "walk-in-tub-vs-walk-in-shower-tempe-az",
+  "excerpt": "Deciding between a walk-in tub and walk-in shower in Tempe? Compare safety, upkeep, and resale value before you remodel. ROC338304.",
+  "category": "Bathroom Remodeling",
+  "tags": [
+    "walk-in tub vs walk-in shower Tempe AZ",
+    "walk-in shower Tempe AZ",
+    "walk-in tub Tempe AZ",
+    "curbless shower vs walk-in tub",
+    "accessible bathroom remodel Tempe",
+    "aging in place bathroom Tempe",
+    "ADA bathroom Tempe AZ",
+    "senior bathroom safety Arizona",
+    "bathroom accessibility remodel"
+  ],
+  "featuredImage": "/images/projects/handicap-accessible-shower.webp",
+  "metaTitle": "Walk-In Tub vs. Walk-In Shower: Tempe, AZ Guide | ARZ",
+  "metaDescription": "Deciding between a walk-in tub and walk-in shower in Tempe? Compare safety, upkeep, and resale value before you remodel. ROC338304.",
+  "author": "Alex Rivers",
+  "status": "published",
+  "publishedAt": "2026-07-13T08:00:00Z",
+  "createdAt": "2026-07-13T08:00:00Z",
+  "updatedAt": "2026-07-13T08:00:00Z",
+  "content": `
+# Walk-In Tub vs. Walk-In Shower: Which Fits Your Tempe Bathroom?
+
+Whether you're planning ahead for aging in place, researching a safer bathroom for a parent, or simply choosing a style for your next remodel, walk-in tubs and walk-in showers solve the same core problem — a fall-safe, low-threshold entry — in very different ways. Homeowners across Tempe, from Warner Ranch to South Tempe, ask us which option is "better" almost every week, and the honest answer has less to do with preference and more to do with daily habits: who's using the bathroom, how independently they move, and whether resale value factors into the decision at all. Here's how the two actually compare, feature by feature.
+
+## What Is a Walk-In Tub?
+
+A walk-in tub is a self-contained bathing unit with a low step-over threshold — usually just a few inches — and a watertight door that seals shut once you're inside. Most models include a built-in seat at a comfortable seated height, and many offer therapeutic add-ons like hydrotherapy jets or a rapid-drain system. Because the door has to seal before the tub can safely fill with water, there's a wait to fill it and a wait to drain it before you can exit — typically several minutes each way. For someone who values a full soak and doesn't mind that wait as part of the routine, this is a real advantage a shower simply can't offer. For someone who wants to get in and out quickly and independently, it's worth weighing against the alternative below.
+
+## What Is a Walk-In Shower?
+
+A walk-in shower — sometimes called a curbless or zero-threshold shower — removes the entry barrier entirely instead of sealing it shut. There's no door to wait on and no basin to fill; you step directly in and out, any time, without assistance. A well-built one includes a built-in bench or fold-down seat, grab bars anchored into solid blocking behind the tile (not just screwed into drywall), a handheld showerhead on a sliding bar, and slip-resistant flooring throughout. Because it's fully open, a walk-in shower also tends to read as a normal, updated bathroom to anyone walking into the room, rather than a medical fixture — which matters both for daily comfort and for how the space is perceived if you ever sell the home. The tradeoff is that it typically needs a slightly larger footprint than the tub it's replacing, to leave comfortable room to move and turn.
+
+## How They Compare
+
+| | Walk-In Tub | Walk-In Shower |
+|---|---|---|
+| Entry | Low step-over, sealed door | Zero-threshold, no door at all |
+| Wait time | Fill and drain wait before entry/exit | None — step in and out anytime |
+| Best for | Soaking, hydrotherapy, seated bathing | Quick, fully independent access |
+| Resale perception | Can read as a medical fixture to buyers | Reads as a standard modern upgrade |
+| Upkeep in hard water | Door seal and jets need regular descaling | Simpler drain line, less to maintain |
+| Footprint | Usually fits the existing tub alcove | Often needs slightly more room to move |
+
+Neither option is objectively "better" — they're built to solve different priorities, and the table above usually makes the right choice fairly obvious once you're honest about which column matters most in your household.
+
+## What Tempe's Hard Water Means for Either Option
+
+Tempe's municipal water carries enough mineral content that anything with moving mechanical parts — a tub's door seal, its jets, or its fill valve — will need more frequent descaling and seal maintenance here than it would in a softer-water region. A walk-in shower has fewer of those components to maintain, but its long-term durability still comes down entirely to what's behind the tile, not the tile itself. We build every walk-in shower with [Schluter-Kerdi waterproofing membrane systems](/blog/schluter-kerdi-vs-redgard-arizona/) specifically because Tempe's hard water is harder on standard waterproofing approaches over time — the same reason we use it on every shower remodel we build, tub conversion or not.
+
+## Safety Features Worth Adding Either Way
+
+Regardless of which option you choose, a few additions make either one meaningfully safer without changing the core decision. Grab bars anchored into solid blocking behind the tile — not just toggle-bolted into drywall — hold real weight in an emergency. Slip-resistant tile or a textured shower pan reduces the risk that matters most: a fall on a wet surface. A handheld showerhead on an adjustable slide bar makes bathing easier from a seated position in either a tub or a shower. If ADA-level accessibility is a priority beyond what's covered here, our guide to [ADA bathroom requirements in Arizona](/blog/ada-bathroom-requirements-arizona/) covers clearance widths, bar height standards, and code specifics in more depth.
+
+## Which One Should You Choose?
+
+**Choose a walk-in tub if:** you or the primary user genuinely want to soak rather than just rinse off, hydrotherapy or a seated bath is a meaningful part of the daily routine, and a several-minute fill-and-drain wait isn't a dealbreaker.
+
+**Choose a walk-in shower if:** quick, fully independent access matters most, you want a look that reads as a normal modern bathroom rather than an accessibility fixture, or you're remodeling with one eye on resale value alongside safety.
+
+For a lot of Tempe households, especially where more than one person uses the bathroom or the home might sell in the next several years, the walk-in shower ends up being the more flexible long-term choice. But for someone who specifically wants the seated soak and doesn't mind the wait, a well-installed walk-in tub is a legitimate, safe option too.
+
+## Frequently Asked Questions
+
+**Is a walk-in tub or walk-in shower safer for seniors?**
+Both are significant safety improvements over a standard tub with a high step-over edge. A walk-in shower removes the step-over hazard entirely with zero wait time, which matters most if mobility is likely to change over time. A walk-in tub adds a secure, seated soak, with the tradeoff of a fill-and-drain wait before entry and exit.
+
+**Does a walk-in tub hurt home resale value?**
+It can, depending on the buyer pool. Some buyers see a walk-in tub and mentally price in the cost of removing it, since it reads as a medical accommodation rather than a style upgrade. A walk-in shower generally reads as a standard bathroom improvement and tends to appeal to a wider range of future buyers.
+
+**Can I convert my existing tub into a walk-in shower?**
+Yes — this is one of the most common remodels we do in Tempe. It involves removing the old tub, waterproofing the new footprint from scratch, and building a custom curbless shower in its place.
+
+**How long does it take to install a walk-in shower in Tempe?**
+A standard tub-to-walk-in-shower conversion typically takes two to three weeks of active construction, depending on tile selection and glass fabrication lead times.
+
+## Get a Second Opinion Before You Decide
+
+Both options genuinely solve real problems — the right one depends on how the bathroom actually gets used day to day, not on which one looks nicer in a photo. ARZ Home Remodeling has installed both across Tempe since 2010 under ROC #338304, backed by a two-year workmanship warranty on every project. Call (520) 569-3339 for a free in-home consultation, or see our full [Tempe bathroom remodeling services](/bathroom-remodeling-tempe-az/).
+`,
+  "faqs": [
+    {
+      "question": "Is a walk-in tub or walk-in shower safer for seniors?",
+      "answer": "Both are significant safety improvements over a standard tub with a high step-over edge. A walk-in shower removes the step-over hazard entirely with zero wait time, which matters most if mobility is likely to change over time. A walk-in tub adds a secure, seated soak, with the tradeoff of a fill-and-drain wait before entry and exit."
+    },
+    {
+      "question": "Does a walk-in tub hurt home resale value?",
+      "answer": "It can, depending on the buyer pool. Some buyers see a walk-in tub and mentally price in the cost of removing it, since it reads as a medical accommodation rather than a style upgrade. A walk-in shower generally reads as a standard bathroom improvement and tends to appeal to a wider range of future buyers."
+    },
+    {
+      "question": "Can I convert my existing tub into a walk-in shower?",
+      "answer": "Yes — this is one of the most common remodels we do in Tempe. It involves removing the old tub, waterproofing the new footprint from scratch, and building a custom curbless shower in its place."
+    },
+    {
+      "question": "How long does it take to install a walk-in shower in Tempe?",
+      "answer": "A standard tub-to-walk-in-shower conversion typically takes two to three weeks of active construction, depending on tile selection and glass fabrication lead times."
+    }
+  ]
+};
+
 // Backward compatibility aliases
 export const defaultBlogPost = post_1;
 export const secondBlogPost = post_2;

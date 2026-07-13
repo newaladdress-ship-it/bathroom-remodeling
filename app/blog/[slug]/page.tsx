@@ -39,8 +39,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
   }
 
-  const title = createSeoTitle(post.metaTitle || post.title)
-  const description = createSeoDescription(post.metaDescription || post.title)
+  const title = post.metaTitle || createSeoTitle(post.title)
+  const description = post.metaDescription || createSeoDescription(post.title)
 
   return {
     title: {
