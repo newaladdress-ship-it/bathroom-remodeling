@@ -67,7 +67,33 @@ export function createSeoTitle(subject: string): string {
   return title;
 }
 
-export function createSeoDescription(subject: string): string {
+export function createSeoDescription(subject: string, customDesc?: string): string {
+  if (customDesc) {
+    let description = customDesc.trim();
+    
+    // Pad if too short
+    if (description.length < SEO_DESCRIPTION_MIN) {
+      const suffix = " Licensed contractors, free estimates, and clear pricing.";
+      if (description.length + suffix.length <= SEO_DESCRIPTION_MAX) {
+        description = `${description}${suffix}`;
+      } else {
+        const shorterSuffix = " Licensed contractors.";
+        if (description.length + shorterSuffix.length <= SEO_DESCRIPTION_MAX) {
+          description = `${description}${shorterSuffix}`;
+        }
+      }
+    }
+    
+    // Truncate if too long
+    if (description.length > SEO_DESCRIPTION_MAX) {
+      description = description.slice(0, SEO_DESCRIPTION_MAX - 4).trim() + "...";
+    }
+    
+    if (description.length >= SEO_DESCRIPTION_MIN && description.length <= SEO_DESCRIPTION_MAX) {
+      return description;
+    }
+  }
+
   const fittedSubject = fitSeoSubject(subject).toLowerCase();
   let description = `Bathroom remodeling service in Chandler, AZ by ARZ. Explore ${fittedSubject}, custom showers, tile, vanities, clear pricing, and free estimates.`;
 

@@ -199,21 +199,21 @@ export default function ChandlerBathroomRemodelingPage() {
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               At ARZ Home Remodeling, we specialize in providing comprehensive design-build remodeling solutions tailored to the needs of Chandler homeowners. From luxury master bathroom overhauls featuring freestanding tubs and curbless entry walk-in showers to space-optimizing guest bathroom updates and expert <Link href='/tub-to-shower-conversion/' className='text-primary hover:underline font-medium'>tub-to-shower conversions</Link>, our in-house crew manages every phase. As an Arizona Registrar of Contractors (ROC) licensed, bonded, and insured team (ROC #338304), we proudly serve communities across the East Valley, including ZIP codes <span className="text-primary font-semibold">85224, 85225, 85226, and 85249</span>.
             </p>
-            <h3 className="font-serif text-2xl font-semibold mt-8 mb-3 text-foreground">
+            <h2 className="font-serif text-2xl font-semibold mt-8 mb-3 text-foreground">
               Navigating Chandler Building Codes and Permitting
-            </h3>
+            </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Navigating structural modifications, drainage relocations, or electrical circuit expansion requires strict compliance with local building codes. In Chandler, major bathroom renovations require building permit filing and official inspections through the **Chandler Development Services Department** (located at the municipal complex on Arizona Avenue in Downtown Chandler). Our team manages the entire permitting pipeline, drafting and submitting all floor plans, framing details, and plumbing layout designs. We handle structural wall removals, coordinate inspections for wet-area rough-ins, and ensure that every outlet, exhaust fan, and mixing valve meets current safety guidelines.
             </p>
             
-            <h3 className="font-serif text-2xl font-semibold mt-8 mb-3 text-foreground">
+            <h2 className="font-serif text-2xl font-semibold mt-8 mb-3 text-foreground">
               Combating Chandler's Hard Water
-            </h3>
+            </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               East Valley municipal water is notorious for its exceptionally high mineral content, frequently measuring between 18 to 22 grains of hardness (well over 300 mg/L of dissolved calcium and magnesium). This high-mineral supply leaves heavy white scale buildup on traditional porous natural stone and standard cement grout, leading to discoloration, cracking, and water penetration. To combat this, we install vapor-tight **Schluter-KERDI waterproofing systems** on all shower substrates. We use large-format, non-porous porcelain tile (with water absorption ratings below 0.5% per ASTM C373) and upgrade all joints to 100% solid **epoxy resin grout** that repels minerals, resists staining, and remains easy to clean.
             </p>
 
-            <div className="my-8 overflow-hidden rounded-xl border border-border shadow-sm">
+            <div className="my-8 overflow-x-auto rounded-xl border border-border shadow-sm">
               <table className="w-full text-left text-sm">
                 <thead className="bg-secondary text-foreground font-semibold">
                   <tr>

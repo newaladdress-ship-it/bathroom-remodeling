@@ -16,7 +16,8 @@ import {
   LogOut,
   Home,
   FolderOpen,
-  BarChart3
+  BarChart3,
+  Globe
 } from "lucide-react"
 
 const navItems = [
@@ -27,6 +28,7 @@ const navItems = [
   { href: "/admin/categories", label: "Categories", icon: FolderOpen },
   { href: "/admin/gallery", label: "Gallery", icon: Image },
   { href: "/admin/testimonials", label: "Testimonials", icon: MessageSquare },
+  { href: "/admin/seo", label: "SEO Manager", icon: Globe },
   { href: "/admin/settings", label: "Settings", icon: Settings },
 ]
 

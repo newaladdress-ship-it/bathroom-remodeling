@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const sharp = require('sharp');
 
 const outDir = path.join(__dirname, '../out');
 
@@ -66,36 +67,33 @@ aside {
 }
 `;
 
-function processFile(filePath) {
+async function processFile(filePath) {
   let content = fs.readFileSync(filePath, 'utf8');
   let cleanedContent = content;
 
-  // 0. Inline local stylesheets if under threshold, otherwise defer them to improve FCP/LCP
-  const linkRegex = /<link\s+[^>]*href=["']([^"']+)["'][^>]*rel=["']stylesheet["'][^>]*\/?>|<link\s+[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*\/?>/gi;
-  const MAX_INLINE_CSS_SIZE = 15360; // 15 KB threshold
-  let hasDeferredCss = false;
-  
-  cleanedContent = cleanedContent.replace(linkRegex, (match, href1, href2) => {
-    // Return original match without deferring, let Next.js handle its own CSS optimization
-    // Next.js automatically chunks CSS and prevents render blocking properly
-    return match;
-  });
+  const relPath = path.relative(outDir, filePath).replace(/\\/g, '/');
 
-  // Remove preloads for inlined stylesheets, adjust for deferred
-  const preloadRegex = /<link\s+[^>]*rel=["']preload["'][^>]*as=["']style["'][^>]*href=["']([^"']+)["'][^>]*\/?>|<link\s+[^>]*href=["']([^"']+)["'][^>]*rel=["']preload["'][^>]*as=["']style["'][^>]*\/?>|<link\s+[^>]*as=["']style["'][^>]*rel=["']preload["'][^>]*href=["']([^"']+)["'][^>]*\/?>/gi;
-  cleanedContent = cleanedContent.replace(preloadRegex, (match, href1, href2, href3) => {
-    // Return original match, do not strip Next.js CSS preloads
-    return match;
-  });
+  // Skip admin pages from standard search compliance rules
+  const isAdmin = relPath.startsWith('admin') || relPath.includes('admin/');
 
-  // Inject critical styles block if large stylesheet was deferred
-  if (hasDeferredCss) {
-    const headEndIdx = cleanedContent.indexOf('</head>');
-    if (headEndIdx !== -1) {
-      cleanedContent = 
-        cleanedContent.substring(0, headEndIdx) + 
-        `\n<style data-critical="true">${CRITICAL_CSS}</style>\n` + 
-        cleanedContent.substring(headEndIdx);
+  // 1. Automated Canonical Tag Insertion (Except for 404.html)
+  if (relPath !== '404.html' && !isAdmin) {
+    let urlPath = relPath.replace(/index\.html$/, '');
+    if (!urlPath.startsWith('/')) urlPath = '/' + urlPath;
+    if (!urlPath.endsWith('/')) urlPath = urlPath + '/';
+    if (urlPath === '//') urlPath = '/';
+    const canonicalUrl = `https://arzhomeremodeling.com${urlPath}`;
+
+    const canonicalRegex = /<link\s+rel=["']canonical["']\s+href=["'](.*?)["'][^>]*\/?>/i;
+    if (canonicalRegex.test(cleanedContent)) {
+      cleanedContent = cleanedContent.replace(canonicalRegex, `<link rel="canonical" href="${canonicalUrl}">`);
+    } else {
+      const headEndIdx = cleanedContent.indexOf('</head>');
+      if (headEndIdx !== -1) {
+        cleanedContent = cleanedContent.substring(0, headEndIdx) + 
+                         `\n<link rel="canonical" href="${canonicalUrl}">\n` + 
+                         cleanedContent.substring(headEndIdx);
+      }
     }
   }
 
@@ -107,20 +105,17 @@ function processFile(filePath) {
       const srcMatch = tag.match(/src=["']([^"']+)["']/i);
       if (srcMatch) {
         const src = srcMatch[1];
-        // Only preload if it's not already preloaded in some other way
         if (!cleanedContent.includes(`href="${src}"`) || !cleanedContent.includes('rel="preload"')) {
-          console.log(`Injecting image preload for LCP resource: ${src} in ${path.relative(outDir, filePath)}`);
+          console.log(`Injecting image preload for LCP resource: ${src} in ${relPath}`);
           const headEndIdx = cleanedContent.indexOf('</head>');
           if (headEndIdx !== -1) {
             let preloadTag = `<link rel="preload" as="image" href="${src}" fetchpriority="high">`;
             if (src === '/images/hero/luxury-shower-remodel-chandler.avif') {
-              const fs = require('fs');
-              const path = require('path');
               let base64MobileHero = "";
               try {
-                const filePath = path.join(__dirname, '../public/images/hero/luxury-shower-remodel-chandler-640.avif');
-                if (fs.existsSync(filePath)) {
-                  base64MobileHero = `data:image/avif;base64,${fs.readFileSync(filePath).toString('base64')}`;
+                const mobileHeroPath = path.join(__dirname, '../public/images/hero/luxury-shower-remodel-chandler-640.avif');
+                if (fs.existsSync(mobileHeroPath)) {
+                  base64MobileHero = `data:image/avif;base64,${fs.readFileSync(mobileHeroPath).toString('base64')}`;
                 }
               } catch (e) {
                 console.error("Failed to read image in post-build-seo:", e.message);
@@ -138,33 +133,81 @@ function processFile(filePath) {
     });
   }
 
-  // 1. Find and hoist all JSON-LD scripts if any exist
+  // 2. Native Lazy Loading & Explicit Dimensions injection
+  const imgTagRegex = /<img\b([^>]*?)>/gi;
+  const imgMatches = [];
+  let imgMatch;
+  while ((imgMatch = imgTagRegex.exec(cleanedContent)) !== null) {
+    imgMatches.push({ fullTag: imgMatch[0], attrs: imgMatch[1] });
+  }
+
+  for (const item of imgMatches) {
+    const { fullTag, attrs } = item;
+    let newAttrs = attrs;
+
+    // Check if it's LCP or eager
+    const isEager = attrs.includes('loading="eager"') || 
+                    attrs.includes('fetchPriority="high"') || 
+                    attrs.includes('fetchpriority="high"') ||
+                    attrs.includes('web-logo-image');
+
+    // A. Native Lazy Loading
+    if (!isEager && !attrs.includes('loading="lazy"')) {
+      newAttrs += ' loading="lazy"';
+    }
+
+    // B. Dimensions injection using Sharp
+    const hasWidth = /width=["']\d+["']/i.test(attrs) || /width=\{(\d+)\}/i.test(attrs);
+    const hasHeight = /height=["']\d+["']/i.test(attrs) || /height=\{(\d+)\}/i.test(attrs);
+
+    if ((!hasWidth || !hasHeight) && !attrs.includes('object-cover') && !attrs.includes('favicon')) {
+      const srcMatch = attrs.match(/src=["']([^"']+)["']/i);
+      if (srcMatch) {
+        const src = srcMatch[1];
+        if (src.startsWith('/') && !src.startsWith('//')) {
+          const localImgPath = path.join(__dirname, '../public', src.split('?')[0]);
+          if (fs.existsSync(localImgPath)) {
+            try {
+              const metadata = await sharp(localImgPath).metadata();
+              if (metadata.width && metadata.height) {
+                if (!hasWidth) newAttrs += ` width="${metadata.width}"`;
+                if (!hasHeight) newAttrs += ` height="${metadata.height}"`;
+              }
+            } catch (err) {
+              console.warn(`[Warning] Could not fetch dimensions for local image ${localImgPath}: ${err.message}`);
+            }
+          }
+        }
+      }
+    }
+
+    // Replace the tag
+    cleanedContent = cleanedContent.replace(fullTag, `<img${newAttrs}>`);
+  }
+
+  // 3. Find and hoist all JSON-LD scripts if any exist
   const schemaRegex = /<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi;
   const schemas = [];
-  let match;
+  let smatch;
   
-  while ((match = schemaRegex.exec(content)) !== null) {
-    schemas.push(match[0]);
+  while ((smatch = schemaRegex.exec(content)) !== null) {
+    schemas.push(smatch[0]);
   }
   
   if (schemas.length > 0) {
-    // Remove all JSON-LD scripts from their original locations
     cleanedContent = cleanedContent.replace(schemaRegex, '');
   }
   
-  // 2. Remove any empty nested head tags like <head></head> or <head/> that might have been rendered by React
   cleanedContent = cleanedContent.replace(/<head\s*>\s*<\/head\s*>/gi, '');
   cleanedContent = cleanedContent.replace(/<head\s*\/>/gi, '');
 
-  // 3. Optimize HTML Title (Enforce under 60 characters)
+  // 4. Optimize HTML Title (Enforce under 60 characters)
   let finalTitle = "";
   let finalDesc = "";
 
   const titleRegex = /<title>([\s\S]*?)<\/title>/gi;
   cleanedContent = cleanedContent.replace(titleRegex, (match, titleText) => {
     let text = titleText.trim();
-    
-    // Replace the long default suffix with a shorter, elegant branding suffix to save 15+ characters
     if (text.includes(' - ARZ - ARZ Home Remodeling')) {
       text = text.replace(' - ARZ - ARZ Home Remodeling', ' - ARZ');
     } else if (text.includes(' - ARZ Home Remodeling')) {
@@ -173,12 +216,10 @@ function processFile(filePath) {
       text = text.replace(' | ARZ Home Remodeling', ' - ARZ');
     }
     
-    // Clean double-phrasing errors or redundancy
     text = text.replace(/Upgrades &amp; Upgrades/gi, 'Upgrades');
     text = text.replace(/Walk-in Showers &amp; Walk-In Showers/gi, 'Walk-In Showers');
     text = text.replace(/Bathroom Remodeling Timeline Chandler AZ\s+-/gi, 'Bathroom Remodel Timeline Chandler -');
     
-    // Truncate elegantly if still too long (>= 60 chars of plain text)
     let plainText = text.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
     if (plainText.length >= 60) {
       text = text.replace(/\s*-\s*Professional Services?/gi, '');
@@ -186,14 +227,11 @@ function processFile(filePath) {
       text = text.replace(/\s*-\s*Modern Upgrades/gi, '');
       text = text.replace(/\s*-\s*Custom Builders?/gi, '');
       text = text.replace(/\s*-\s*Quality Craftsmanship/gi, '');
-      text = text.replace(/\s*-\s*ARZ/g, ''); // strip branding if it makes it too long
-      
-      // Recalculate plain text length
+      text = text.replace(/\s*-\s*ARZ/g, '');
       plainText = text.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
     }
     
     if (plainText.length >= 60) {
-      // Decode, truncate, re-encode to ensure it fits under 60 characters
       let temp = text.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
       temp = temp.substring(0, 56) + '...';
       text = temp.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -203,18 +241,14 @@ function processFile(filePath) {
     return `<title>${text}</title>`;
   });
 
-  // 4. Optimize Meta Description (Enforce between 120 and 158 characters)
+  // 5. Optimize Meta Description (Enforce between 120 and 158 characters)
   const descRegex = /(<meta\s+name=["']description["']\s+content=["'])([\s\S]*?)(["'])/gi;
   cleanedContent = cleanedContent.replace(descRegex, (match, prefix, descText, suffix) => {
     let text = descText.trim();
-    
-    // If it's too short, pad it elegantly
     if (text.length < 120) {
       const padding = " Licensed, bonded, and insured bathroom remodelers. Call for a free estimate today!";
       text = (text + padding).substring(0, 155);
     }
-    
-    // If it's too long, truncate it
     if (text.length > 158) {
       const sub = text.substring(0, 155);
       const lastSpace = sub.lastIndexOf(' ');
@@ -224,41 +258,29 @@ function processFile(filePath) {
         text = sub + '...';
       }
     }
-    
-    // Double check that it meets the min-length of 120 after truncation
     if (text.length < 120) {
       text = descText.trim().substring(0, 155) + '...';
     }
-    
     finalDesc = text;
     return `${prefix}${text}${suffix}`;
   });
 
-  // 4b. Sync OG & Twitter Title Meta Tags
+  // Sync OG & Twitter tags
   if (finalTitle) {
     const ogTitleRegex = /(<meta\s+(?:property|name)=["']og:title["']\s+content=["'])([\s\S]*?)(["'])/gi;
-    cleanedContent = cleanedContent.replace(ogTitleRegex, (match, prefix, content, suffix) => {
-      return `${prefix}${finalTitle}${suffix}`;
-    });
+    cleanedContent = cleanedContent.replace(ogTitleRegex, (match, prefix, content, suffix) => `${prefix}${finalTitle}${suffix}`);
     const twitterTitleRegex = /(<meta\s+(?:property|name)=["']twitter:title["']\s+content=["'])([\s\S]*?)(["'])/gi;
-    cleanedContent = cleanedContent.replace(twitterTitleRegex, (match, prefix, content, suffix) => {
-      return `${prefix}${finalTitle}${suffix}`;
-    });
+    cleanedContent = cleanedContent.replace(twitterTitleRegex, (match, prefix, content, suffix) => `${prefix}${finalTitle}${suffix}`);
   }
 
-  // 4c. Sync OG & Twitter Description Meta Tags
   if (finalDesc) {
     const ogDescRegex = /(<meta\s+(?:property|name)=["']og:description["']\s+content=["'])([\s\S]*?)(["'])/gi;
-    cleanedContent = cleanedContent.replace(ogDescRegex, (match, prefix, content, suffix) => {
-      return `${prefix}${finalDesc}${suffix}`;
-    });
+    cleanedContent = cleanedContent.replace(ogDescRegex, (match, prefix, content, suffix) => `${prefix}${finalDesc}${suffix}`);
     const twitterDescRegex = /(<meta\s+(?:property|name)=["']twitter:description["']\s+content=["'])([\s\S]*?)(["'])/gi;
-    cleanedContent = cleanedContent.replace(twitterDescRegex, (match, prefix, content, suffix) => {
-      return `${prefix}${finalDesc}${suffix}`;
-    });
+    cleanedContent = cleanedContent.replace(twitterDescRegex, (match, prefix, content, suffix) => `${prefix}${finalDesc}${suffix}`);
   }
   
-  // 5. Inject hoisted schemas if they exist, placing them right before </head>
+  // 6. Inject hoisted schemas
   if (schemas.length > 0) {
     const headEndIdx = cleanedContent.indexOf('</head>');
     if (headEndIdx !== -1) {
@@ -268,26 +290,104 @@ function processFile(filePath) {
         cleanedContent.substring(0, headEndIdx) + 
         schemaBlock + 
         cleanedContent.substring(headEndIdx);
-      console.log(`Successfully hoisted ${uniqueSchemas.length} schema(s) and optimized metadata for: ${path.relative(outDir, filePath)}`);
-    } else {
-      console.warn(`[Warning] </head> tag not found in ${filePath}, saving optimized metadata only`);
     }
-  } else {
-    console.log(`Successfully optimized metadata for: ${path.relative(outDir, filePath)}`);
   }
+
+  // 7. HTML Minification: strip comments safely
+  cleanedContent = cleanedContent.replace(/<!--[\s\S]*?-->/g, (comment) => {
+    if (comment.includes('[if') || comment.includes('Google Tag Manager')) return comment;
+    return '';
+  });
 
   fs.writeFileSync(filePath, cleanedContent, 'utf8');
 }
 
-console.log('--- Running Post-Build SEO Schema Hoisting ---');
-const htmlFiles = getHtmlFiles(outDir);
-console.log(`Found ${htmlFiles.length} HTML files to process.`);
+function generateSitemap(htmlFiles) {
+  console.log('--- Generating Sitemap.xml ---');
+  const urls = [];
+  htmlFiles.forEach(file => {
+    const relPath = path.relative(outDir, file).replace(/\\/g, '/');
+    if (relPath.startsWith('admin') || relPath.includes('admin/') || relPath.includes('404')) {
+      return;
+    }
+    
+    // Read file content to check for noindex and redirects
+    const content = fs.readFileSync(file, 'utf8');
+    const isNoIndex = /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(content);
+    const isRedirect = content.includes('This page has moved.') || content.includes('window.location.replace');
+    if (isNoIndex || isRedirect) {
+      return;
+    }
+    
+    let urlPath = relPath.replace(/index\.html$/, '');
+    if (!urlPath.startsWith('/')) urlPath = '/' + urlPath;
+    if (!urlPath.endsWith('/')) urlPath = urlPath + '/';
+    if (urlPath === '//') urlPath = '/';
+    
+    const absoluteUrl = `https://arzhomeremodeling.com${urlPath}`;
+    const stats = fs.statSync(file);
+    const lastmod = stats.mtime.toISOString().split('T')[0];
+    
+    let priority = '0.70';
+    if (urlPath === '/') priority = '1.00';
+    else if (urlPath.includes('/bathroom-remodeling-chandler-az/')) priority = '0.90';
+    else if (urlPath.includes('/bathroom-remodeling-gilbert-az/')) priority = '0.90';
+    else if (urlPath.includes('/bathroom-remodeling-mesa-az/')) priority = '0.90';
+    else if (urlPath.includes('/bathroom-remodeling-tempe-az/')) priority = '0.90';
+    else if (urlPath.includes('/blog/')) priority = '0.80';
+    
+    urls.push(`  <url>
+    <loc>${absoluteUrl}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${urlPath === '/' || urlPath.includes('/blog') ? 'weekly' : 'monthly'}</changefreq>
+    <priority>${priority}</priority>
+  </url>`);
+  });
+  
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.join('\n')}
+</urlset>`;
+  
+  fs.writeFileSync(path.join(outDir, 'sitemap.xml'), sitemapXml, 'utf8');
+  console.log(`Generated sitemap.xml with ${urls.length} URLs.`);
+}
 
-htmlFiles.forEach(file => {
-  try {
-    processFile(file);
-  } catch (err) {
-    console.error(`Error processing file ${file}:`, err);
+function generateRobotsTxt() {
+  console.log('--- Generating robots.txt ---');
+  const robotsText = `User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /*?
+Disallow: /*.json$
+
+Sitemap: https://arzhomeremodeling.com/sitemap.xml
+Host: https://arzhomeremodeling.com`;
+
+  fs.writeFileSync(path.join(outDir, 'robots.txt'), robotsText, 'utf8');
+  console.log('Generated robots.txt successfully.');
+}
+
+(async () => {
+  console.log('--- Running Post-Build SEO Schema Hoisting & Enhancements ---');
+  const htmlFiles = getHtmlFiles(outDir);
+  console.log(`Found ${htmlFiles.length} HTML files to process.`);
+
+  for (const file of htmlFiles) {
+    try {
+      await processFile(file);
+    } catch (err) {
+      console.error(`Error processing file ${file}:`, err);
+    }
   }
-});
-console.log('--- Post-Build SEO Schema Hoisting Completed ---');
+  
+  generateSitemap(htmlFiles);
+  generateRobotsTxt();
+  
+  console.log('--- Post-Build SEO Schema Hoisting & Enhancements Completed ---');
+})();

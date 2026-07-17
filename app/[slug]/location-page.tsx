@@ -44,7 +44,10 @@ export async function generateLocationMetadata({
     ? `ZIP ${location.zipData.zip} Bath Remodel`
     : `${displayName} Bath Remodel`;
   const defaultTitle = createSeoTitle(defaultSubject);
-  const defaultDescription = createSeoDescription(defaultSubject);
+  const defaultDescription = createSeoDescription(
+    defaultSubject,
+    location.neighborhood ? location.neighborhood.description : location.zipData.description
+  );
 
   const title = override ? override.title : defaultTitle;
   const description = override ? override.description : defaultDescription;

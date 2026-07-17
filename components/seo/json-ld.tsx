@@ -13,13 +13,6 @@ export function LocalBusinessSchema({ type = "HomeAndConstructionBusiness" }: Lo
     description: siteConfig.description,
     image: `${siteConfig.url}/images/new-images-logo.jpg`,
     "@id": `${siteConfig.url}/#organization`,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: siteConfig.googleRating.toString(),
-      reviewCount: siteConfig.googleReviewsCount.toString(),
-      bestRating: "5",
-      worstRating: "1"
-    },
     founder: {
       "@type": "Person",
       name: siteConfig.owner,
@@ -702,6 +695,42 @@ export function VideoSchema({ videos }: VideoSchemaProps) {
         }
       }
     }))
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+interface ProductSchemaProps {
+  name: string;
+  description: string;
+  image?: string;
+  priceRange?: string;
+  url?: string;
+}
+
+export function ProductSchema({ name, description, image, priceRange = "Contact for Estimate", url }: ProductSchemaProps) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": name,
+    "description": description,
+    "image": image || `${siteConfig.url}/images/web-logo-image.avif`,
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "priceRange": priceRange,
+      "url": url || siteConfig.url,
+      "seller": {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": `${siteConfig.url}/#organization`,
+        "name": "ARZ Home Remodeling"
+      }
+    }
   };
 
   return (

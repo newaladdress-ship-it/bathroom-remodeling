@@ -62,7 +62,7 @@ export default function ContactPage() {
                 Speak to a Project Supervisor in Chandler, AZ
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                Ready to get started? Give us a call - we typically answer immediately or return voicemails within 2 hours. We&apos;ll schedule a free in-home visit to measure your space, discuss your vision, and give you a written quote with no obligation.
+                Ready to get started? If you are looking for highly recommended <strong>licensed bathroom contractors near me</strong> to deliver an <strong>affordable bathroom remodel near me</strong>, give us a call. We typically answer immediately or return voicemails within 2 hours. We&apos;ll schedule a free in-home visit to measure your space, discuss your design vision, and provide a written estimate with no obligation.
               </p>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-serif font-semibold text-foreground mb-2">Phone</h3>
+                <h2 className="font-serif font-semibold text-foreground text-lg mb-2">Phone</h2>
                 <a 
                   href={`tel:${siteConfig.phoneClean}`} 
                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -89,7 +89,7 @@ export default function ContactPage() {
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-serif font-semibold text-foreground mb-2">Speak to a Supervisor</h3>
+                <h2 className="font-serif font-semibold text-foreground text-lg mb-2">Speak to a Supervisor</h2>
                 <a 
                   href={`tel:${siteConfig.phoneClean}`} 
                   className="text-muted-foreground hover:text-primary transition-colors block text-sm leading-snug font-semibold"
@@ -102,7 +102,7 @@ export default function ContactPage() {
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-serif font-semibold text-foreground mb-2">Location</h3>
+                <h2 className="font-serif font-semibold text-foreground text-lg mb-2">Location</h2>
                 <p className="text-muted-foreground">
                   {siteConfig.address.city}, {siteConfig.address.state}
                 </p>
@@ -112,7 +112,7 @@ export default function ContactPage() {
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-serif font-semibold text-foreground mb-2">Hours</h3>
+                <h2 className="font-serif font-semibold text-foreground text-lg mb-2">Hours</h2>
                 <p className="text-muted-foreground text-sm font-semibold">
                   {siteConfig.hours.weekdays.includes("24/7") ? (
                     <span>Open 24/7<br />(24 Hours / 7 Days)</span>

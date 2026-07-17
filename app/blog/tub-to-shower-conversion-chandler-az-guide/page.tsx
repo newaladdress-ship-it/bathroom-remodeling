@@ -157,7 +157,7 @@ export default function StandaloneBlogPost() {
                     <div className="bg-card border border-border/50 rounded-2xl p-6 shadow-sm">
                       <div className="flex items-center gap-2 mb-4 pb-4 border-b border-border/50">
                         <List className="h-4 w-4 text-primary" />
-                        <h3 className="font-serif font-bold text-foreground">In this article</h3>
+                        <h2 className="font-serif font-bold text-foreground text-lg">In this article</h2>
                       </div>
                       <nav className="space-y-1">
                         {headings.map((heading) => (

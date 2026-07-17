@@ -2,9 +2,12 @@ import { marked } from 'marked';
 
 export async function parseMarkdown(markdown: string) {
   // Convert markdown to HTML
-  const html = await marked.parse(markdown);
+  let html = await marked.parse(markdown);
   // Demote any H1 headings inside the post content to H2 to ensure there is only one H1 per page
-  return html.replace(/<h1([\s>])/gi, '<h2$1').replace(/<\/h1>/gi, '</h2>');
+  html = html.replace(/<h1([\s>])/gi, '<h2$1').replace(/<\/h1>/gi, '</h2>');
+  // Wrap tables in responsive overflow-x container
+  html = html.replace(/<table([\s>])/gi, '<div class="overflow-x-auto my-6 border border-border rounded-xl"><table$1').replace(/<\/table>/gi, '</table></div>');
+  return html;
 }
 
 export function extractHeadings(markdown: string) {

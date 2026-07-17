@@ -29,6 +29,37 @@ function BlogEditorContent() {
   const [loading, setLoading] = useState(!isNew)
   const [saving, setSaving] = useState(false)
   const [categories, setCategories] = useState<Category[]>([])
+  const [uploading, setUploading] = useState(false)
+
+  async function handleFileUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    if (!file) return
+
+    setUploading(true)
+    const body = new FormData()
+    body.append("file", file)
+
+    try {
+      const res = await fetch("/api/upload", {
+        method: "POST",
+        body,
+      })
+      const data = await res.json()
+      if (data.webpUrl) {
+        setPost((prev) => ({
+          ...prev,
+          featuredImage: data.webpUrl,
+        }))
+      } else if (data.error) {
+        alert("Upload failed: " + data.error)
+      }
+    } catch (err) {
+      console.error(err)
+      alert("An error occurred during file upload.")
+    } finally {
+      setUploading(false)
+    }
+  }
   const [post, setPost] = useState<Partial<BlogPost>>({
     title: "",
     slug: "",
@@ -240,12 +271,31 @@ function BlogEditorContent() {
               
               <div className="space-y-2">
                 <Label htmlFor="featuredImage">Featured Image URL</Label>
-                <Input
-                  id="featuredImage"
-                  value={post.featuredImage}
-                  onChange={(e) => setPost({ ...post, featuredImage: e.target.value })}
-                  placeholder="https://..."
-                />
+                <div className="flex gap-2">
+                  <Input
+                    id="featuredImage"
+                    value={post.featuredImage}
+                    onChange={(e) => setPost({ ...post, featuredImage: e.target.value })}
+                    placeholder="https://..."
+                    className="flex-1"
+                  />
+                  <div className="relative">
+                    <Input
+                      type="file"
+                      accept="image/*"
+                      onChange={handleFileUpload}
+                      className="sr-only"
+                      id="file-featuredImage"
+                      disabled={uploading}
+                    />
+                    <Label
+                      htmlFor="file-featuredImage"
+                      className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-input hover:bg-accent hover:text-accent-foreground h-11 px-4 py-2 cursor-pointer whitespace-nowrap"
+                    >
+                      {uploading ? "Uploading..." : "Upload File"}
+                    </Label>
+                  </div>
+                </div>
               </div>
               
               <div className="space-y-2">

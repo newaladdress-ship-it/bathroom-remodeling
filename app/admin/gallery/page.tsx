@@ -42,6 +42,38 @@ export default function AdminGalleryPage() {
     featured: false,
   })
 
+  const [uploading, setUploading] = useState<string | null>(null)
+
+  async function handleFileUpload(e: React.ChangeEvent<HTMLInputElement>, field: "imageUrl" | "beforeImage" | "afterImage") {
+    const file = e.target.files?.[0]
+    if (!file) return
+
+    setUploading(field)
+    const body = new FormData()
+    body.append("file", file)
+
+    try {
+      const res = await fetch("/api/upload", {
+        method: "POST",
+        body,
+      })
+      const data = await res.json()
+      if (data.webpUrl) {
+        setFormData((prev) => ({
+          ...prev,
+          [field]: data.webpUrl,
+        }))
+      } else if (data.error) {
+        alert("Upload failed: " + data.error)
+      }
+    } catch (err) {
+      console.error(err)
+      alert("An error occurred during file upload.")
+    } finally {
+      setUploading(null)
+    }
+  }
+
   useEffect(() => {
     fetchItems()
   }, [])
@@ -170,30 +202,87 @@ export default function AdminGalleryPage() {
 
                 <div className="space-y-2">
                   <Label htmlFor="imageUrl">Main Image URL</Label>
-                  <Input
-                    id="imageUrl"
-                    value={formData.imageUrl}
-                    onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
-                    placeholder="https://..."
-                  />
+                  <div className="flex gap-2">
+                    <Input
+                      id="imageUrl"
+                      value={formData.imageUrl}
+                      onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
+                      placeholder="https://..."
+                      className="flex-1"
+                    />
+                    <div className="relative">
+                      <Input
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => handleFileUpload(e, "imageUrl")}
+                        className="sr-only"
+                        id="file-imageUrl"
+                        disabled={uploading !== null}
+                      />
+                      <Label
+                        htmlFor="file-imageUrl"
+                        className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-input hover:bg-accent hover:text-accent-foreground h-11 px-4 py-2 cursor-pointer whitespace-nowrap"
+                      >
+                        {uploading === "imageUrl" ? "Uploading..." : "Upload File"}
+                      </Label>
+                    </div>
+                  </div>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="beforeImage">Before Image URL (optional)</Label>
-                  <Input
-                    id="beforeImage"
-                    value={formData.beforeImage}
-                    onChange={(e) => setFormData({ ...formData, beforeImage: e.target.value })}
-                    placeholder="https://..."
-                  />
+                  <div className="flex gap-2">
+                    <Input
+                      id="beforeImage"
+                      value={formData.beforeImage}
+                      onChange={(e) => setFormData({ ...formData, beforeImage: e.target.value })}
+                      placeholder="https://..."
+                      className="flex-1"
+                    />
+                    <div className="relative">
+                      <Input
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => handleFileUpload(e, "beforeImage")}
+                        className="sr-only"
+                        id="file-beforeImage"
+                        disabled={uploading !== null}
+                      />
+                      <Label
+                        htmlFor="file-beforeImage"
+                        className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-input hover:bg-accent hover:text-accent-foreground h-11 px-4 py-2 cursor-pointer whitespace-nowrap"
+                      >
+                        {uploading === "beforeImage" ? "Uploading..." : "Upload File"}
+                      </Label>
+                    </div>
+                  </div>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="afterImage">After Image URL (optional)</Label>
-                  <Input
-                    id="afterImage"
-                    value={formData.afterImage}
-                    onChange={(e) => setFormData({ ...formData, afterImage: e.target.value })}
-                    placeholder="https://..."
-                  />
+                  <div className="flex gap-2">
+                    <Input
+                      id="afterImage"
+                      value={formData.afterImage}
+                      onChange={(e) => setFormData({ ...formData, afterImage: e.target.value })}
+                      placeholder="https://..."
+                      className="flex-1"
+                    />
+                    <div className="relative">
+                      <Input
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => handleFileUpload(e, "afterImage")}
+                        className="sr-only"
+                        id="file-afterImage"
+                        disabled={uploading !== null}
+                      />
+                      <Label
+                        htmlFor="file-afterImage"
+                        className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-input hover:bg-accent hover:text-accent-foreground h-11 px-4 py-2 cursor-pointer whitespace-nowrap"
+                      >
+                        {uploading === "afterImage" ? "Uploading..." : "Upload File"}
+                      </Label>
+                    </div>
+                  </div>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="description">Description</Label>
