@@ -240,6 +240,47 @@ export default function MesaPage() {
             </p>
           </div>
         </section>
+        {/* MESA DESIGN & HOA GUIDES */}
+        <section className="py-16 lg:py-24 bg-background border-t border-border">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
+              Mesa Bathroom Remodeling & Design Resources
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Planning a remodel in Mesa requires navigating both design styles and local regulations. Read our expert guides to prepare for your project:
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-6 bg-secondary rounded-2xl border border-border">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Mesa Bathroom Design Trends
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  From Las Sendas' custom golf-course estates to Eastmark's newest master-planned developments, explore how styles differ and what's trending.
+                </p>
+                <Link
+                  href="/blog/bathroom-design-trends-mesa-az/"
+                  className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline"
+                >
+                  Read Trends Guide <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              <div className="p-6 bg-secondary rounded-2xl border border-border">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  HOA Remodeling Rules in Mesa
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  Navigating architectural reviews and guidelines for master-planned communities like Eastmark and Las Sendas before your remodel.
+                </p>
+                <Link
+                  href="/blog/hoa-bathroom-remodeling-mesa-az/"
+                  className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline"
+                >
+                  Read HOA Guide <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* SERVICES */}
         <section className="py-16 lg:py-24 bg-secondary">

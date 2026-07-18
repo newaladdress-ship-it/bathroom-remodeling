@@ -11,6 +11,7 @@ import {  ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema } from "@/com
 import AreaBenefits from "@/components/area-benefits";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {title: "Bathroom Remodelers in Queen Creek | Custom Showers | ARZ",description: "Upgrade your bathroom in Queen Creek, AZ with our licensed crew. Custom showers, double vanities, and premium tiling. Get a free project estimate today!",
   openGraph: {title: "Queen Creek Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore queen creek bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
@@ -113,6 +114,48 @@ export default function QueenCreekPage() {
             <p className="text-muted-foreground text-lg leading-relaxed">
               If your Queen Creek bathroom renovation involves moving load-bearing partition walls, plumbing relocations, or new electrical circuits, we coordinate the complete permitting process with the <strong>Town of Queen Creek Community Development Department</strong> (located at 22358 S Ellsworth Rd). We manage all planning, blueprint submissions, and municipal building inspections directly for code-compliant security.
             </p>
+          </div>
+        </section>
+
+        {/* QUEEN CREEK DESIGN & FAMILY GUIDES */}
+        <section className="py-16 lg:py-24 bg-background border-t border-border">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
+              Queen Creek Bathroom Remodeling & Design Resources
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Planning a remodel in Queen Creek requires navigating both design styles and local regulations. Read our expert guides to prepare for your project:
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-6 bg-secondary rounded-2xl border border-border">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Family-Friendly Bathroom Design
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  Designing a bathroom that holds up to daily family life in Queen Creek. Explore durable materials, smart storage, and kid-friendly layout ideas.
+                </p>
+                <Link
+                  href="/blog/family-friendly-bathroom-design-queen-creek/"
+                  className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline"
+                >
+                  Read Family Guide <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              <div className="p-6 bg-secondary rounded-2xl border border-border">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Upgrading Builder-Grade Bathrooms
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  Even new Queen Creek homes often have generic builder-grade bathrooms. Learn what upgrades are worth doing first and why.
+                </p>
+                <Link
+                  href="/blog/new-construction-bathroom-upgrades-queen-creek/"
+                  className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline"
+                >
+                  Read Upgrades Guide <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 

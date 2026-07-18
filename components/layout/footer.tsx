@@ -168,6 +168,44 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            <h4 className="font-serif text-sm font-semibold mt-6 mb-3 text-background uppercase tracking-wider">Mesa Design Guides</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/blog/bathroom-design-trends-mesa-az/"
+                  className="text-background/80 hover:text-primary transition-colors text-sm no-underline"
+                >
+                  Mesa Bathroom Design Trends
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog/hoa-bathroom-remodeling-mesa-az/"
+                  className="text-background/80 hover:text-primary transition-colors text-sm no-underline"
+                >
+                  Mesa HOA Bathroom Remodeling Rules
+                </Link>
+              </li>
+            </ul>
+            <h4 className="font-serif text-sm font-semibold mt-6 mb-3 text-background uppercase tracking-wider">Queen Creek Design Guides</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/blog/family-friendly-bathroom-design-queen-creek/"
+                  className="text-background/80 hover:text-primary transition-colors text-sm no-underline"
+                >
+                  Family-Friendly Bathroom Design
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog/new-construction-bathroom-upgrades-queen-creek/"
+                  className="text-background/80 hover:text-primary transition-colors text-sm no-underline"
+                >
+                  Upgrading Builder-Grade Bathrooms
+                </Link>
+              </li>
+            </ul>
           </nav>
 
           {/* Contact Column */}
