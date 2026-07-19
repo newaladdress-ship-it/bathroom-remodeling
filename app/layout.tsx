@@ -1,6 +1,13 @@
 import type { Metadata, Viewport } from 'next'
+import { Inter } from 'next/font/google'
 import { siteConfig } from '@/lib/site-config'
 import './globals.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
 import { StickyCallButton } from '@/components/layout/sticky-call-button'
 import { LocalBusinessSchema, OrganizationSchema } from '@/components/seo/json-ld'
@@ -69,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <head>
         {/* GOOGLE TAG MANAGER / GA4 CODE INJECTION (START OF HEAD) */}
         {/* 
@@ -93,10 +100,7 @@ export default function RootLayout({
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
 
 
-        {/* Google Fonts Preconnect and Stylesheet for Inter Font */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        {/* Google Fonts are optimized and self-hosted via next/font/google */}
 
         {/* High-Performance Deferred Third-Party Script Loader */}
         <script

@@ -1,5 +1,3 @@
-"use client";
-
 import UspBar from "@/components/home/usp-bar";
 import PainPoints from "@/components/home/pain-points";
 import ComparisonBenefits from "@/components/home/comparison-benefits";

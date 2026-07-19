@@ -293,6 +293,18 @@ async function processFile(filePath) {
     }
   }
 
+  // Inject critical CSS to prevent FOUC and accelerate FCP/LCP
+  if (!cleanedContent.includes('data-critical="true"')) {
+    const headStartIdx = cleanedContent.indexOf('<head>');
+    if (headStartIdx !== -1) {
+      const styleBlock = `\n<style data-critical="true">\n${CRITICAL_CSS}\n</style>\n`;
+      cleanedContent = 
+        cleanedContent.substring(0, headStartIdx + 6) + 
+        styleBlock + 
+        cleanedContent.substring(headStartIdx + 6);
+    }
+  }
+
   // 7. HTML Minification: strip comments safely
   cleanedContent = cleanedContent.replace(/<!--[\s\S]*?-->/g, (comment) => {
     if (comment.includes('[if') || comment.includes('Google Tag Manager')) return comment;
@@ -359,7 +371,6 @@ function generateRobotsTxt() {
 Allow: /
 Disallow: /admin/
 Disallow: /api/
-Disallow: /_next/
 Disallow: /private/
 Disallow: /cgi-bin/
 Disallow: /wp-admin/
