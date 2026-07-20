@@ -26,17 +26,17 @@ export const serviceContent: Record<string, ServiceContentData> = {
     benefits: [
       {
         title: "Luxury Master Suite Conversions",
-        description: "Expand your master bathroom footprint to accommodate freestanding soaking tubs, custom walk-in tile showers, and dedicated linen storage.",
+        description: "Expand your master bathroom footprint in Chandler homes to accommodate freestanding soaking tubs, custom walk-in tile showers, and dedicated linen storage.",
         icon: "Sparkles",
       },
       {
         title: "Custom Double Vanity Upgrades",
-        description: "Install premium double vanities with quartz countertops, undermount sinks, and built-in electrical outlets for clean styling.",
+        description: "Install premium double vanities with quartz countertops, undermount sinks, and built-in electrical outlets for clean styling in your East Valley home.",
         icon: "Zap",
       },
       {
         title: "Zero-Threshold Curbless Showers",
-        description: "Redesign your bathing area with safe, zero-step entries, custom linear drains, and frameless glass enclosures.",
+        description: "Redesign your bathing area with safe, zero-step entries, custom linear drains, and frameless glass enclosures designed for AZ lifestyles.",
         icon: "TrendingUp",
       },
       {
@@ -69,12 +69,12 @@ export const serviceContent: Record<string, ServiceContentData> = {
       {
         question: "How long does a full bathroom remodel take in Chandler?",
         answer:
-          "A complete master bath remodel or custom walk-in shower conversion typically takes 4 to 6 weeks. We provide a detailed design-build timeline and a locked-in fixed-price contract for your Chandler home, handling everything from demo to custom cabinetry.",
+          "A complete master bath remodel or custom walk-in shower conversion typically takes 4 to 6 weeks. We provide a detailed design-build timeline and a locked-in fixed-price contract for your Chandler home, handling everything from demo to custom cabinetry. Contact Mike Hernandez and our team at (520) 569-3339 to get started.",
       },
       {
         question: "What's included in your bathroom remodeling services in Chandler?",
         answer:
-          "From custom double vanity installations to complete walk-in shower tile setting, we handle all plumbing, structural framing, and Schluter-KERDI waterproofing under our single ROC license (ROC338304).",
+          "From custom double vanity installations to complete walk-in shower tile setting, we handle all plumbing, structural framing, and Schluter-KERDI waterproofing under our single ROC license (ROC338304). We manage all City of Chandler building permits and inspections for complete compliance.",
       },
       {
         question: "Do you handle permits and inspections for bathroom remodeling?",
@@ -84,12 +84,12 @@ export const serviceContent: Record<string, ServiceContentData> = {
       {
         question: "What is the typical bathroom remodel chandler az cost?",
         answer:
-          "Bathroom remodeling costs vary based on design layout, footprint expansions, and material selections. Standard guest bathroom refreshes represent a standard scope, while custom master suite transformations with tiled walk-in showers represent a customized scope. We offer free on-site consultations to prepare detailed, line-item written estimates.",
+          "Bathroom remodeling costs vary based on design layout, footprint expansions, and material selections. Standard guest bathroom refreshes represent a standard scope, while custom master suite transformations with tiled walk-in showers represent a customized scope. We offer free on-site consultations to prepare detailed, line-item written estimates. Call us at (520) 569-3339 to schedule.",
       },
       {
         question: "Why should Chandler homeowners choose your design-build services?",
         answer:
-          "We specialize exclusively in durable bathroom renovations. We do not use sub-contracted crews; our in-house tile specialists secure every wet area with Schluter-KERDI waterproofing systems, set large-format tile with epoxy grout to resist local hard water, and install custom double vanities under fixed-price contracts.",
+          "We specialize exclusively in durable bathroom renovations under ROC #338304. We do not use sub-contracted crews; our in-house tile specialists secure every wet area with Schluter-KERDI waterproofing systems, set large-format tile with epoxy grout to resist local hard water, and install custom double vanities under fixed-price contracts.",
       },
     ],
   },
@@ -98,22 +98,22 @@ export const serviceContent: Record<string, ServiceContentData> = {
     benefits: [
       {
         title: "Spa-Like Shower Experience",
-        description: "Transform your daily routine with rainfall showerheads, body jets, and luxurious fixtures.",
+        description: "Transform your daily routine with rainfall showerheads, body jets, and luxurious fixtures designed for Chandler homes.",
         icon: "Droplets",
       },
       {
-        title: "Waterproof Durability",
-        description: "Proper waterproofing membranes and sealed construction prevent leaks and mold for decades.",
+        title: "Vapor-Tight Waterproofing",
+        description: "Schluter-KERDI membrane systems prevent leaks, mold, and framing wood rot for decades under a 5-year workmanship warranty.",
         icon: "Shield",
       },
       {
-        title: "Improved Drainage & Functionality",
-        description: "Modern drain systems with proper slopes ensure water flows efficiently without pooling.",
+        title: "Improved Drainage & Flow",
+        description: "Modern linear drain systems with proper slope configurations ensure water flows efficiently without pooling.",
         icon: "Wind",
       },
       {
-        title: "Frameless Glass Aesthetics",
-        description: "Elegant frameless glass enclosures create a clean, modern look that opens up your bathroom visually.",
+        title: "Hydrophobic Glass Enclosures",
+        description: "Tempered frameless glass with nano-coatings that repel hard water minerals and prevent calcium spots.",
         icon: "Sparkles",
       },
     ],
@@ -123,68 +123,49 @@ export const serviceContent: Record<string, ServiceContentData> = {
         solution: "Complete waterproofing system with sealed membranes, proper slope, and modern grout systems.",
       },
       {
-        problem: "Cracked tiles and failing caulk creating maintenance nightmares",
-        solution: "High-quality porcelain or natural stone tiles with professional installation and premium sealants.",
+        problem: "Cracked tiles and failing caulk from hard water and foundation settling",
+        solution: "High-quality dense porcelain tile with flexible latex thinset and stain-resistant epoxy grout.",
       },
       {
-        problem: "Mold and mildew growth from inadequate ventilation",
-        solution: "Upgraded ventilation systems and moisture-resistant materials that prevent fungal growth.",
+        problem: "Mold and mildew growth in porous cement grout",
+        solution: "Upgrading to non-porous epoxy grout that prevents mold spores from taking root.",
       },
       {
-        problem: "Poor water pressure or irregular drainage",
-        solution: "Modern plumbing updates with optimized pipe sizing and professional drainage design.",
-      },
-      {
-        problem: "Outdated finishes that clash with new bathroom style",
-        solution: "Contemporary fixture upgrades and tile designs that complement modern bathroom aesthetics.",
+        problem: "Sudden temperature drops or plumbing pressure swings",
+        solution: "Upgrading to new pressure-balancing mixing valves that maintain steady temperatures and prevent scalding.",
       },
     ],
     tips: [
       "Waterproofing is Critical: Invest in full waterproofing systems with membrane underlayment, not just tile and grout.",
       "Choose Textured Tile for Safety: Anti-slip tile reduces accidents and provides better grip in wet shower environments.",
       "Plan for Niche Storage: Built-in shower niches eliminate clutter and provide functional storage without taking space.",
-      "Select Low-Maintenance Fixtures: Stainless steel and coated finishes resist water spots and require minimal cleaning effort.",
+      "Select Low-Maintenance Fixtures: Brushed nickel and brass finishes naturally hide hard water spots better than chrome.",
     ],
     faqs: [
       {
         question: "What's the difference between walk-in and enclosure showers?",
         answer:
-          "Walk-in showers have an open design with no door, while enclosure showers use glass to contain water. If you're looking for accessible shower remodeling in Chandler, a walk-in design is often the best choice for safety and style.",
+          "Walk-in showers have an open design with no door, while enclosure showers use glass to contain water. If you're looking for accessible shower remodeling in Chandler, a walk-in design is often the best choice for safety and style. Call Mike Hernandez at (520) 569-3339 for a free design consultation.",
       },
       {
         question: "How long does a shower remodel near me typically take?",
         answer:
-          "A standard shower renovation near me usually takes 2-3 weeks. As a top shower remodeling company in Chandler, we ensure the project stays on schedule while maintaining high quality standards.",
+          "A standard shower renovation near me usually takes 2-3 weeks. As a top shower remodeling company in Chandler operating under ROC #338304, we ensure the project stays on schedule while maintaining high quality standards and providing a fixed-price guarantee.",
       },
       {
         question: "What's the best tile shower installation in Chandler?",
         answer:
-          "Porcelain tile is ideal for a tile shower installation in Chandler-it's non-porous and resists mold. We specialize in custom tile work that handles Arizona's hard water better than standard builder-grade materials.",
+          "Porcelain tile is ideal for a tile shower installation in Chandler—it's non-porous and resists mold. We set tiles using flexible latex thinset and solid epoxy grout that repels East Valley's 18+ grains of hard water mineral scale.",
       },
       {
-        question: "Can you provide shower remodeling services in Chandler without a full gut?",
+        question: "Do you pull permits for shower remodeling in Chandler?",
         answer:
-          "Yes! Our shower remodeling services in Chandler include fixture upgrades, glass replacement, and tile repair. We can transform your space with a focused shower remodeling plan that fits your budget.",
+          "Yes! We handle all plumbing, structural, and electrical permit filings with the City of Chandler Development Services Department and coordinate inspections to ensure your shower meets local building codes.",
       },
       {
-        question: "How do you prevent leaks during a shower remodeling in Chandler?",
+        question: "How do you prevent leaks in custom tiled showers?",
         answer:
-          "We use complete waterproofing membranes and proper substrate preparation. Our Chandler shower remodeling experts ensure every seam is sealed, providing peace of mind for years to come.",
-      },
-      {
-        question: "What's the cost difference between frameless glass and a shower enclosure?",
-        answer:
-          "Frameless glass enclosures vary based on size and glass thickness, while traditional framed enclosures represent a standard option. Frameless glass offers superior aesthetics and easier cleaning, making it a popular choice for modern Chandler homes.",
-      },
-      {
-        question: "How do I handle hard water stains on my new shower tile?",
-        answer:
-          "We recommend using a squeegee daily and wiping down glass after each shower. For stubborn stains on porcelain tile, a vinegar solution or commercial hard water remover works well. Prevention is easier than cleanup, as proper ventilation and regular maintenance keep showers looking new for years.",
-      },
-      {
-        question: "Do I need a permit for shower remodeling in Chandler?",
-        answer:
-          "Most significant shower remodels in Chandler require a permit through the Chandler Development Services. Permits ensure proper waterproofing, drainage, and code compliance. We handle all permitting and inspections as part of our shower remodeling process, with no hidden surprises.",
+          "We use a complete Schluter-KERDI waterproofing membrane system behind every tile surround. This creates a continuous, vapor-tight barrier that protects your framing wood from moisture, backed by our 5-year workmanship warranty.",
       },
     ],
   },
@@ -240,7 +221,7 @@ export const serviceContent: Record<string, ServiceContentData> = {
       {
         question: "What is the average small bathroom remodel cost in Chandler?",
         answer:
-          "The average small bathroom remodel cost in Chandler is customized to your project scope, covering options from a cosmetic upgrade (new floating vanity, plumbing fixtures, floor tiling) to a complete layout reconfiguration. We provide a written, fixed-price quote after our in-home consultation.",
+          "The average small bathroom remodel cost in Chandler is customized to your project scope, covering options from a cosmetic upgrade (new floating vanity, plumbing fixtures, floor tiling) to a complete layout reconfiguration. We provide a written, fixed-price quote under ROC #338304 after our in-home consultation. Call Mike Hernandez at (520) 569-3339.",
       },
       {
         question: "What is the minimum size bathroom you can remodel?",
@@ -279,36 +260,32 @@ export const serviceContent: Record<string, ServiceContentData> = {
       },
       {
         title: "Premium Porcelain",
-        description: "Access to dense porcelain, glass, and specialty stone tiles for any washroom aesthetic.",
+        description: "Access to dense porcelain (less than 0.5% water absorption) that resists Chandler's hard water scale.",
         icon: "Sparkles",
       },
       {
         title: "Resin Grout Durability",
-        description: "Stain resistant, non porous epoxy grout joints protect tiles and maintain beauty.",
+        description: "Stain resistant, non porous epoxy grout joints protect tiles and maintain beauty without sealing.",
         icon: "Clock",
       },
     ],
     issues: [
       {
         problem: "Water Seeping Behind Tile Walls",
-        solution: "We install vapor tight Schluter Kerdi waterproofing barriers behind every tile surround.",
+        solution: "We install vapor tight Schluter-KERDI waterproofing barriers behind every tile surround.",
       },
       {
-        problem: "Chipped and Cracked Tile Grout",
-        solution: "We set tiles using polymer modified mortar containing flexible latex additives.",
+        problem: "Chipped and Cracked Tile Grout from Foundation Shift",
+        solution: "We set tiles using polymer-modified mortar and anti-fracture membranes that absorb local clay soil shifts.",
       },
       {
-        problem: "Uneven Tile Edges or Lippage",
-        solution: "We use advanced physical tile leveling clips to align edges perfectly during setting.",
-      },
-      {
-        problem: "Stained and Discolored Grout Joints",
-        solution: "We install resin based, non porous epoxy grout that repels hard water minerals.",
+        problem: "White Calcium Scale Building Up on Grout Lines",
+        solution: "We install non-porous epoxy grout that prevents minerals from binding to the joints.",
       },
     ],
     tips: [
       "Select Dense Porcelain: Non porous porcelain is highly waterproof and resists staining much better than ceramic.",
-      "Install Vapor Proof Membranes: Schluter Kerdi membranes protect framing studs from steam and moisture rot.",
+      "Install Vapor Proof Membranes: Schluter-KERDI membranes protect framing studs from steam and moisture rot.",
       "Choose Epoxy Grout: Non porous epoxy grout resists mold, is easy to clean, and never needs mineral sealing.",
       "Seal Natural Stone Tiles: Porous stone like marble and travertine must be sealed before and after grouting to prevent spots.",
     ],
@@ -316,17 +293,17 @@ export const serviceContent: Record<string, ServiceContentData> = {
       {
         question: "What is the difference between porcelain and ceramic tile?",
         answer:
-          "Porcelain tile is made from highly refined clay fired at much higher temperatures than ceramic tile. This makes porcelain extremely dense, highly durable, and almost completely waterproof, making it the perfect choice for high moisture shower walls and bathroom floors.",
+          "Porcelain tile is made from highly refined clay fired at much higher temperatures than ceramic tile. This makes porcelain extremely dense, highly durable, and almost completely waterproof (absorbing less than 0.5% moisture), making it the perfect choice for high moisture shower walls and bathroom floors exposed to Chandler's hard water.",
       },
       {
         question: "How long does it take to install a new tiled shower surround?",
         answer:
-          "A standard tiled shower surround installation typically takes five to seven days of active construction. This timeframe includes removing your old tile down to the wall studs, building cement boards, applying waterproof Kerdi membranes, setting tiles, and grouting.",
+          "A standard tiled shower surround installation typically takes five to seven days of active construction. This timeframe includes removing your old tile down to the wall studs, building cement boards, applying waterproof KERDI membranes, setting tiles, and grouting.",
       },
       {
         question: "Why should I choose epoxy grout instead of standard cement grout?",
         answer:
-          "Standard cement grout is highly porous and easily absorbs moisture, mold spores, and minerals from Chandler hard water. Epoxy grout is made from durable resins, making it completely non porous. It resists mold growth, prevents staining, and never needs to be sealed.",
+          "Standard cement grout is highly porous and easily absorbs moisture, mold spores, and minerals from Chandler hard water. Epoxy grout is made from durable resins, making it completely non porous. It resists mold growth, prevents staining, and never needs to be sealed. Call Mike Hernandez at (520) 569-3339 to get an epoxy grout quote.",
       },
       {
         question: "Can you repair cracked tiles without replacing everything?",
@@ -334,9 +311,9 @@ export const serviceContent: Record<string, ServiceContentData> = {
           "Yes, we can carefully remove and replace individual damaged tiles. However, if grout crumbling is widespread, we recommend checking the subfloor substrate underneath to ensure there is no hidden moisture rot.",
       },
       {
-        question: "What are the most popular tile patterns today?",
+        question: "What are the most popular tile patterns today in Chandler?",
         answer:
-          "Subway tile patterns remain popular for classical looks, but herringbone, large format formats, and geometric designs are highly requested. We help you choose patterns that complement your overall design.",
+          "Large-format porcelain tiles are highly popular in Chandler because they minimize grout lines, reducing hard water cleaning effort. Herringbone and vertical stacked patterns are also highly requested for custom feature walls.",
       },
     ],
   },
@@ -367,7 +344,7 @@ export const serviceContent: Record<string, ServiceContentData> = {
     issues: [
       {
         problem: "Water Swollen Vanity Frames",
-        solution: "We install custom solid wood cabinets with high performance water resistant sealers.",
+        solution: "We install custom solid wood cabinets (marine-grade plywood) with high performance water resistant sealers.",
       },
       {
         problem: "Awkward Under Sink Layouts",
@@ -386,13 +363,13 @@ export const serviceContent: Record<string, ServiceContentData> = {
       "Select Non Porous Quartz Tops: Quartz resists hard water stains and never needs annual resealing.",
       "Anchor Base to Stud Walls: Heavy stone tops require vanities to be fastened securely into wood studs.",
       "Use Cedar Shims to Level: Ensure the cabinet box is perfectly level so drawers never stick or bind.",
-      "Seal Under Mount Sinks Fully: Mount steel bracket support clips to guarantee sinks never sag or leak.",
+      "Use Heavy-Duty Undermount Brackets: Mount steel bracket support clips to guarantee sinks never sag or leak.",
     ],
     faqs: [
       {
         question: "Can you convert a single sink bathroom vanity into a double sink vanity?",
         answer:
-          "Yes, we can convert a single sink vanity into a double vanity if the space is at least sixty inches wide. The process involves opening the drywall behind the vanity to split the single cold and hot water lines and running two separate waste pipes to support the double sinks.",
+          "Yes, we can convert a single sink vanity into a double vanity if the space is at least sixty inches wide. The process involves opening the drywall behind the vanity to split the single cold and hot water lines and running two separate waste pipes to support the double sinks. Call Mike Hernandez at (520) 569-3339 for an estimate.",
       },
       {
         question: "How long does it take to install a new bathroom vanity?",
@@ -400,14 +377,14 @@ export const serviceContent: Record<string, ServiceContentData> = {
           "A standard bathroom vanity installation typically takes two to three days of active construction. This timeframe includes careful demolition of your old cabinet, adjusting water and drain lines, leveling the new solid wood cabinet, mounting the stone countertop, and installing the faucets.",
       },
       {
-        question: "Do you offer custom vanity heights for taller homeowners?",
+        question: "Do you offer custom vanity heights for Chandler homeowners?",
         answer:
           "Yes, we install both standard thirty two inch vanities and modern thirty six inch comfort height vanities. Comfort height vanities are identical to kitchen cabinet heights and reduce the need to bend over while washing, making them highly popular for master bathrooms.",
       },
       {
         question: "How do you protect natural stone tops from hard water scaling?",
         answer:
-          "We treat all granite and marble vanity tops with deep penetrating oil based impregnator sealers. This repels minerals and hard water drops, preventing white calcium scaling from binding to the stone surface.",
+          "We treat all granite and marble vanity tops with deep penetrating oil based impregnator sealers. For ultimate defense against Chandler's hard water minerals, we recommend choosing non-porous quartz countertops.",
       },
       {
         question: "Do you install double sink vanities in small bathrooms?",
@@ -483,7 +460,7 @@ export const serviceContent: Record<string, ServiceContentData> = {
       {
         question: "Do you pull permits for bathtub remodeling in Chandler?",
         answer:
-          "Yes, we coordinate all paperwork and pull required building permits from the City of Chandler Development Services Department. We handle the entire inspection process, including plumbing and electrical reviews, to ensure your bathtub installation meets local safety codes.",
+          "Yes, we coordinate all paperwork and pull required building permits from the City of Chandler Development Services Department. We handle the entire inspection process under ROC #338304, including plumbing and electrical reviews, to ensure your bathtub installation meets local safety codes.",
       },
       {
         question: "How is a freestanding tub installed?",
@@ -519,7 +496,7 @@ export const serviceContent: Record<string, ServiceContentData> = {
     issues: [
       {
         problem: "Sudden Water Temperature Swings",
-        solution: "We replace old valves with pressure balancing valves to maintain safe, steady temperatures.",
+        solution: "We replace old valves with pressure balancing mixing valves to maintain safe, steady temperatures.",
       },
       {
         problem: "Soft or Leaking Shower Pans",
@@ -537,14 +514,14 @@ export const serviceContent: Record<string, ServiceContentData> = {
     tips: [
       "Choose Eco-Friendly Low-Flow Fixtures: Modern low flow showerheads deliver excellent coverage while reducing utility bills.",
       "Pressure Balancing Valves Provide Safety: These valves prevent scalding by maintaining preset temperatures, protecting young children and seniors.",
-      "Match Fixtures to Your Home's Design: Choose finishes that complement your home's style like brushed or matte solid brass options.",
+      "Match Fixtures to Your Home's Design: Choose finishes that complement your home's style like brushed nickel or brass which hide water spots.",
       "Install Quality Solid Metal Trim: Proper metal trim rings create clean transitions and leak proof seals between fixtures and walls.",
     ],
     faqs: [
       {
         question: "Can you replace a shower valve without tearing down the wall?",
         answer:
-          "Yes, in many cases we can replace a shower valve cartridge or valve body through a small access panel behind the shower wall. If no access panel exists, we can carefully cut a neat opening in the drywall of the adjoining room to replace the valve without disturbing your beautiful shower tile.",
+          "Yes, in many cases we can replace a shower valve cartridge or valve body through a small access panel behind the shower wall. If no access panel exists, we can carefully cut a neat opening in the adjoining room to replace the valve without disturbing your beautiful shower tile. Contact Mike Hernandez at (520) 569-3339.",
       },
       {
         question: "What are the signs that a shower pan needs to be replaced?",
@@ -598,8 +575,8 @@ export const serviceContent: Record<string, ServiceContentData> = {
         solution: "Safe tub removal and installation of curbless or low profile walk in showers with easy access.",
       },
       {
-        problem: "Accessibility issues for seniors or those with limited mobility",
-        solution: "Integration of ADA compliant grab bars, built in shower benches, slip resistant floors, and handheld fixtures.",
+        problem: "Clogged drains and slow plumbing flow",
+        solution: "We expand the plumbing drain line from 1.5 inches to 2 inches to comply with local plumbing code.",
       },
     ],
     tips: [
@@ -612,12 +589,12 @@ export const serviceContent: Record<string, ServiceContentData> = {
       {
         question: "How long does it take to convert a tub to a walk in shower?",
         answer:
-          "A tub to shower conversion takes between 3 and 5 days of active work. Day 1 is demolition of the old tub. Day 2 is plumbing valve updates and drain line expansion from 1.5 inches to 2 inches. Day 3 is waterproofing and laying the shower pan. Day 4 is tile setting and grouting. Day 5 is mounting the shower doors and final walkthrough."
+          "A tub to shower conversion takes between 3 and 5 days of active work. Day 1 is demolition of the old tub. Day 2 is plumbing valve updates and drain line expansion from 1.5 inches to 2 inches. Day 3 is waterproofing and laying the shower pan. Day 4 is tile setting and grouting. Day 5 is mounting the shower doors and final walkthrough. Call Mike Hernandez at (520) 569-3339 to book your conversion.",
       },
       {
-        question: "Why is a 2 inch drain line required for a shower?",
+        question: "Why is a 2 inch drain line required for a shower in Chandler?",
         answer:
-          "Building codes require a 2 inch drain line for walk in showers, whereas bathtubs only require a 1.5 inch drain. A shower pan holds less water than a tub, so water must drain faster to prevent flooding. Our plumbers upgrade this line during the demolition phase to ensure compliance with the International Plumbing Code."
+          "Uniform plumbing codes require a 2 inch drain line for walk in showers, whereas bathtubs only require a 1.5 inch drain. A shower pan holds less water than a tub, so water must drain faster to prevent flooding. Our plumbers cut the concrete slab and upgrade this line during demolition to ensure compliance with the Arizona Plumbing Code."
       }
     ],
   },
@@ -648,7 +625,7 @@ export const serviceContent: Record<string, ServiceContentData> = {
     issues: [
       {
         problem: "Water Splashing Out",
-        solution: "We calculate the exact floor slope and place linear drains strategically to contain water completely.",
+        solution: "We calculate the exact floor slope (1/4 inch per foot) and place linear drains strategically to contain water completely.",
       },
       {
         problem: "Standing Water and Mold",
@@ -688,12 +665,12 @@ export const serviceContent: Record<string, ServiceContentData> = {
       {
         question: "Do you install stud anchored grab bars for safety?",
         answer:
-          "Yes, we anchor every grab bar straight into heavy wood wall studs behind your shower walls. This ensures the bars can easily support adult body weight, providing essential safety for family members of all ages.",
+          "Yes, we anchor every grab bar straight into heavy wood wall studs behind your shower walls. This ensures the bars can easily support adult body weight, providing essential safety for family members of all ages, especially in retirement areas like Sun Lakes.",
       },
       {
         question: "How long does a walk-in shower installation take in Chandler?",
         answer:
-          "A standard walk-in shower installation typically takes seven to ten days of active construction. This includes demolition of your old enclosure, custom pan forming, multi layer waterproofing, tile setting, and final glass installation.",
+          "A standard walk-in shower installation typically takes seven to ten days of active construction under ROC #338304. This includes demolition of your old enclosure, custom pan forming, multi layer waterproofing, tile setting, and final glass installation. Call Mike Hernandez at (520) 569-3339 to book.",
       },
     ],
   },
@@ -753,7 +730,7 @@ export const serviceContent: Record<string, ServiceContentData> = {
       {
         question: "How long does it take to install new vanities and countertops?",
         answer:
-          "A standard bathroom cabinet and countertop installation typically takes five to seven days of active construction. This timeframe includes removing your old vanity, preparing the plumbing lines, anchoring the new cabinets, setting the fabricated stone, and installing the sink drains.",
+          "A standard bathroom cabinet and countertop installation typically takes five to seven days of active construction. This timeframe includes removing your old vanity, preparing the plumbing lines, anchoring the new cabinets, setting the fabricated stone, and installing the sink drains. Call Mike Hernandez at (520) 569-3339.",
       },
       {
         question: "Do you offer cabinet refacing or only full replacement?",
@@ -816,7 +793,7 @@ export const serviceContent: Record<string, ServiceContentData> = {
     ],
     tips: [
       "Select Dense Porcelain: Non porous porcelain is highly waterproof and resists staining much better than ceramic.",
-      "Install Anti Fracture Membranes: Schluter Ditra membranes absorb subfloor concrete movement to prevent tile cracks.",
+      "Install Anti Fracture Membranes: Schluter-Ditra membranes absorb subfloor concrete movement to prevent tile cracks.",
       "Choose Epoxy Grout Joints: Epoxy grout resists mold, is easy to clean, and never needs mineral sealer.",
       "Verify Slip Resistance Rating: Check that your floor tiles have high textured friction ratings to prevent falls.",
     ],
@@ -824,17 +801,17 @@ export const serviceContent: Record<string, ServiceContentData> = {
       {
         question: "What is the best flooring material for a wet bathroom floor?",
         answer:
-          "Textured porcelain tile is the highest performing flooring material for bathrooms. Porcelain is extremely dense, absorb less than 0.5 percent moisture, resists mold naturally, and will not warp like wood laminates when exposed to steam or water splashes.",
+          "Textured porcelain tile is the highest performing flooring material for bathrooms. Porcelain is extremely dense, absorbs less than 0.5 percent moisture, resists mold naturally, and will not warp like wood laminates when exposed to steam or water splashes.",
       },
       {
         question: "How long does it take to install new bathroom floor tile?",
         answer:
-          "A standard bathroom floor tile installation typically takes three to five days of active construction. This timeframe includes removing your old flooring, leveling the concrete slab, installing crack isolation membranes, setting the tile, and applying the epoxy grout.",
+          "A standard bathroom floor tile installation typically takes three to five days of active construction under ROC #338304. This timeframe includes removing your old flooring, leveling the concrete slab, installing crack isolation membranes, setting the tile, and applying the epoxy grout. Call Mike Hernandez at (520) 569-3339.",
       },
       {
         question: "Why do my bathroom floor tile grout lines crack and crumble?",
         answer:
-          "Grout lines crumble when the subfloor beneath the tile bends or flexes under foot traffic. Crumbly grout is a sign that the original contractor failed to install a solid cement backer board or did not secure the plywood subfloor properly before tiling.",
+          "Grout lines crumble when the subfloor beneath the tile bends or flexes under foot traffic. In Arizona slab homes, it is often due to clay soil shifting under the concrete slab. We install Schluter-Ditra anti-fracture membranes to isolate the tile from slab cracks.",
       },
       {
         question: "Does bathroom flooring installation require foundation repairs?",
@@ -848,7 +825,6 @@ export const serviceContent: Record<string, ServiceContentData> = {
       },
     ],
   },
-
   "bathroom-lighting-installation": {
     benefits: [
       {
