@@ -51,7 +51,7 @@ export default function SEOFooter() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl font-serif font-semibold mb-6 text-foreground/80">Local Bathroom Services in Chandler, AZ</h2>
           <p className="text-sm text-muted-foreground leading-relaxed mb-8">
-            As your premier <strong>bathroom remodeling contractor chandler</strong>, we specialize in high-quality 
+            As your premier choice for <strong>bathroom remodeling in chandler, AZ</strong>, we specialize in high-quality 
             renovations tailored to your needs. From <strong>bathroom remodel chandler az</strong> to specialized 
             <strong>shower remodeling services chandler</strong>, our team provides exceptional craftsmanship. 
             Whether you are searching for <strong>bath remodel near me</strong> or need a 

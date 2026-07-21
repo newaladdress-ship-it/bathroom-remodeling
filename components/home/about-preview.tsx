@@ -21,7 +21,7 @@ export default function AboutPreview() {
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image
                   src="/images/optimized/bathroom-remodeling-licensed-crew.avif"
-                  alt="ARZ Home Remodeling licensed contractor crew performing bathroom remodel in Chandler AZ"
+                  alt="ARZ Home Remodeling licensed contractor crew performing professional bathroom remodeling in chandler, AZ"
                   fill
                   className="object-cover"
                   quality={75}
@@ -60,7 +60,7 @@ export default function AboutPreview() {
               Chandler Bathroom Remodelers Since {siteConfig.foundedYear ?? 2010}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Since 2010, ARZ Home Remodeling has delivered custom bathroom upgrades in Chandler and the East Valley. As a licensed local contractor (ROC #338304), our in-house crew handles everything from permits and Schluter-KERDI waterproofing to custom tile setting. We manage all HOA rules and city inspections, guaranteeing high workmanship with a fixed-price contract.
+              Since 2010, ARZ Home Remodeling has delivered custom <strong>bathroom remodeling in chandler, AZ</strong>. As a licensed local contractor (ROC #338304), our in-house crew handles everything from permits and Schluter-KERDI waterproofing to custom tile setting. We manage all HOA rules and city inspections, guaranteeing high workmanship with a fixed-price contract.
             </p>
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground group">
               <Link href="/about/">

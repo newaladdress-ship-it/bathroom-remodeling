@@ -12,11 +12,17 @@ import BelowFoldLoader from "@/components/home/below-fold-loader";
 import BlogPreview from "@/components/home/blog-preview";
 
 export const metadata: Metadata = {
-  title: "Chandler AZ Bathroom Remodeling Contractor | ROC338304",
-  description: "ARZ is Chandler's licensed bathroom remodeling contractor (ROC338304). Walk-in showers, tub conversions & tile. Free estimate: (520) 569-3339.",
+  title: "Bathroom Remodeling in Chandler, AZ | Licensed Contractor ROC338304",
+  description: "For premier bathroom remodeling in chandler, AZ, trust ARZ. Licensed contractor (ROC338304) for custom showers, tub conversions, & tile. Free estimate!",
+  keywords: [
+    "bathroom remodeling in chandler, AZ",
+    "bathroom remodeling chandler",
+    "bathroom remodel chandler az",
+    "bathroom remodeling contractor chandler"
+  ],
   openGraph: {
-    title: "Chandler AZ Bathroom Remodeling Contractor | ROC338304",
-    description: "ARZ is Chandler's licensed bathroom remodeling contractor (ROC338304). Walk-in showers, tub conversions & tile. Free estimate: (520) 569-3339.",
+    title: "Bathroom Remodeling in Chandler, AZ | Licensed Contractor ROC338304",
+    description: "For premier bathroom remodeling in chandler, AZ, trust ARZ. Licensed contractor (ROC338304) for custom showers, tub conversions, & tile. Free estimate!",
     type: "website",
     url: `${siteConfig.url}/`,
     images: [

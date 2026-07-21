@@ -24,8 +24,18 @@ import {
 import { Button } from "@/components/ui/button";
 import LocalTrust from "@/components/home/local-trust";
 
-export const metadata: Metadata = {title: "Bathroom Remodeling Chandler AZ | Licensed Pros - ARZ",description: "Upgrade your bathroom in Chandler, AZ with our licensed crew. Custom showers, double vanities, and premium tiling. Get a free project estimate today!",
-  openGraph: {title: "Bathroom Remodeling Chandler AZ | Free Estimate",description: "Expert bathroom remodeling in Chandler, AZ. Walk-in showers, tub-to-shower conversions & custom tile. Licensed ROC338304. Call (520) 569-3339 for a free quote.",
+export const metadata: Metadata = {
+  title: "Bathroom Remodeling in Chandler, AZ | Licensed Pros - ARZ",
+  description: "Need expert bathroom remodeling in chandler, AZ? Our licensed crew (ROC338304) builds custom walk-in showers & tub-to-shower conversions. Free estimate!",
+  keywords: [
+    "bathroom remodeling in chandler, AZ",
+    "bathroom remodeling chandler",
+    "bathroom remodel chandler az",
+    "bathroom remodeling contractor chandler"
+  ],
+  openGraph: {
+    title: "Bathroom Remodeling in Chandler, AZ | Free Estimate",
+    description: "Expert bathroom remodeling in Chandler, AZ. Walk-in showers, tub-to-shower conversions & custom tile. Licensed ROC338304. Call (520) 569-3339 for a free quote.",
     url: `${siteConfig.url}/bathroom-remodeling-chandler-az/`,
     type: "website",
     images: [
@@ -38,7 +48,9 @@ export const metadata: Metadata = {title: "Bathroom Remodeling Chandler AZ | Lic
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Bathroom Remodeling Chandler AZ | Free Estimate",description: "Expert bathroom remodeling in Chandler, AZ. Walk-in showers, tub-to-shower conversions & custom tile. Licensed ROC338304. Call (520) 569-3339 for a free quote.",
+    card: "summary_large_image",
+    title: "Bathroom Remodeling in Chandler, AZ | Free Estimate",
+    description: "Expert bathroom remodeling in Chandler, AZ. Walk-in showers, tub-to-shower conversions & custom tile. Licensed ROC338304. Call (520) 569-3339 for a free quote.",
     images: [`${siteConfig.url}/images/bathroom-remodeling-chandler.jpg`],
   },
   alternates: {

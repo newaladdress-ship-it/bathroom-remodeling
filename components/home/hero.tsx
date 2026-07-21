@@ -22,7 +22,7 @@ export default function Hero() {
           <source srcSet="/images/hero/luxury-shower-remodel-chandler-828.avif" media="(max-width: 828px)" type="image/avif" />
           <img
             src="/images/hero/luxury-shower-remodel-chandler.avif"
-            alt="Custom walk-in shower and tile bathroom remodel in Chandler AZ by ARZ Home Remodeling"
+            alt="Professional bathroom remodeling in chandler, AZ - custom walk-in shower by ARZ Home Remodeling"
             className="absolute inset-0 w-full h-full object-cover"
             fetchPriority="high"
             decoding="sync"
@@ -43,12 +43,12 @@ export default function Hero() {
 
           {/* Title */}
           <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4 tracking-tight hero-title">
-            Chandler&apos;s Local Bathroom Remodeling Experts Built for Arizona&apos;s Hard Water
+            Bathroom Remodeling in Chandler, AZ - Licensed Experts
           </h1>
 
           {/* Subhead / Main Copy */}
           <p className="text-sm md:text-base lg:text-lg text-white/90 mb-6 leading-relaxed font-light max-w-4xl hero-description">
-            Yellowed tub surround. Grout stains from Chandler&apos;s hard water. A vanity that&apos;s been dated since the 90s. If your bathroom is working against you every morning, we fix it - with fixed pricing, a licensed crew, and a 2-year warranty.
+            Looking for premier <strong>bathroom remodeling in chandler, AZ</strong>? If your bathroom is outdated with hard water grout stains and dated vanities, we fix it - with fixed pricing, a licensed crew (ROC #338304), and a 2-year workmanship warranty.
           </p>
 
           {/* Action Buttons */}
