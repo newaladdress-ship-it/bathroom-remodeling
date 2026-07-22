@@ -337,8 +337,7 @@ function generateSitemap(htmlFiles) {
     if (urlPath === '//') urlPath = '/';
     
     const absoluteUrl = `https://arzhomeremodeling.com${urlPath}`;
-    const stats = fs.statSync(file);
-    const lastmod = stats.mtime.toISOString().split('T')[0];
+    const lastmod = new Date().toISOString().split('T')[0];
     
     let priority = '0.70';
     if (urlPath === '/') priority = '1.00';

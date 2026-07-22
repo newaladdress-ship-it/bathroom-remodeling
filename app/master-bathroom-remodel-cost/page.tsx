@@ -282,7 +282,7 @@ export default function MasterBathroomRemodelCostPage() {
                 <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
               </Link>
               <Link
-                href="/bathroom-remodel-cost-chandler/"
+                href="/bathroom-remodeling-cost-chandler-az/"
                 className="bg-background border border-border rounded-xl p-5 hover:border-primary transition-colors group flex items-center justify-between no-underline"
               >
                 <span className="font-semibold text-foreground group-hover:text-primary text-sm">

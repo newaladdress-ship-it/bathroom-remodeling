@@ -275,7 +275,7 @@ export default function StandaloneBlogPost() {
                     </div>
 
                     <p>
-                      If you are budgeting for a broader renovation, you can also view our <Link href="/bathroom-remodel-cost-chandler/">bathroom remodel cost Chandler</Link> guide for additional layout and design factors.
+                      If you are budgeting for a broader renovation, you can also view our <Link href="/bathroom-remodeling-cost-chandler-az/">bathroom remodel cost Chandler</Link> guide for additional layout and design factors.
                     </p>
 
                     <blockquote>

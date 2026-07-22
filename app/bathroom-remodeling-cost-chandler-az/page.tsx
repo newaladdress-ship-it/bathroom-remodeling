@@ -12,13 +12,17 @@ import { bathroomServices, getRelatedServices } from "@/lib/bathroom-services";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Info } from "lucide-react";
 
-export const metadata: Metadata = {title: "Bath Remodel Costs Chandler AZ | Pricing Guide | ARZ",description: "Compare average bathroom remodel costs in Chandler, AZ. Breakdown of guest bath updates, walk-in shower installs, and custom master suite pricing.",
-  openGraph: {title: "Bath Remodel Cost Chandler | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bath remodel cost chandler, custom showers, tile, vanities, clear pricing, and free estimates.",
-    url: `${siteConfig.url}/bathroom-remodel-cost-chandler/`,
+export const metadata: Metadata = {
+  title: "Bath Remodel Costs Chandler AZ | Pricing Guide | ARZ",
+  description: "Compare average bathroom remodel costs in Chandler, AZ. Breakdown of guest bath updates, walk-in shower installs, and custom master suite pricing.",
+  openGraph: {
+    title: "Bath Remodel Cost Chandler | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bath remodel cost chandler, custom showers, tile, vanities, clear pricing, and free estimates.",
+    url: `${siteConfig.url}/bathroom-remodeling-cost-chandler-az/`,
     type: "website",
   },
   alternates: {
-    canonical: `${siteConfig.url}/bathroom-remodel-cost-chandler/`,
+    canonical: `${siteConfig.url}/bathroom-remodeling-cost-chandler-az/`,
   },
 };
 
@@ -143,17 +147,20 @@ const costFactors = [
   },
 ];
 
-const otherServices = getRelatedServices("/bathroom-remodel-cost-chandler/");
+const otherServices = getRelatedServices("/bathroom-remodeling-cost-chandler-az/");
 
 export default function CostPage() {
   return (
     <>
-      
-      <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodel Cost Chandler", url: "https://arzhomeremodeling.com/bathroom-remodel-cost-chandler/" } ]} />
-<ServiceSchema
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://arzhomeremodeling.com/" },
+        { name: "Services", url: "https://arzhomeremodeling.com/services/" },
+        { name: "Bathroom Remodeling Cost Chandler", url: "https://arzhomeremodeling.com/bathroom-remodeling-cost-chandler-az/" }
+      ]} />
+      <ServiceSchema
         serviceName="Bathroom Remodeling Cost Guide - Chandler, AZ"
         serviceDescription="Comprehensive bathroom remodeling cost guide for Chandler, AZ homeowners. Transparent pricing for guest bath updates, full remodels, tub-to-shower conversions, and master bathroom renovations."
-        serviceUrl={`${siteConfig.url}/bathroom-remodel-cost-chandler/`}
+        serviceUrl={`${siteConfig.url}/bathroom-remodeling-cost-chandler-az/`}
       />
       <FAQSchema faqs={faqs} />
       <Header />
@@ -166,7 +173,7 @@ export default function CostPage() {
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
             { name: "Bathroom Remodeling Chandler AZ", url: `${siteConfig.url}/bathroom-remodeling-chandler-az/` },
-            { name: "Cost Guide", url: `${siteConfig.url}/bathroom-remodel-cost-chandler/` },
+            { name: "Cost Guide", url: `${siteConfig.url}/bathroom-remodeling-cost-chandler-az/` },
           ]}
         />
 
@@ -175,7 +182,7 @@ export default function CostPage() {
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
               The most common question we get from Chandler homeowners is:{" "}
-              <em>"What will this actually cost?"</em> The answer depends on your project type, material grade, and whether
+              <em>\"What will this actually cost?\"</em> The answer depends on your project type, material grade, and whether
               any plumbing is being relocated. This guide breaks down every tier with real line-item estimates so you can plan
               accurately. To see an extensive neighborhood breakdown, read our comprehensive [2025 Chandler bathroom remodel cost guide](/blog/bathroom-remodel-cost-chandler-az-2025/). Whether you're looking for <strong>cheap bathroom remodeling in Chandler AZ</strong> that doesn't sacrifice quality, 
               or a high-end master suite renovation, we provide options for every budget.
@@ -357,4 +364,3 @@ export default function CostPage() {
     </>
   );
 }
-

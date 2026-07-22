@@ -133,5 +133,10 @@
     "source": "/handicap-accessible-bathroom-chandler/",
     "destination": "/handicap-accessible-bathroom/",
     "permanent": true
+  },
+  {
+    "source": "/bathroom-remodel-cost-chandler/",
+    "destination": "/bathroom-remodeling-cost-chandler-az/",
+    "permanent": true
   }
 ]

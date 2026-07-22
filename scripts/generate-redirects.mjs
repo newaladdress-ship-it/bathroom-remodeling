@@ -42,6 +42,7 @@ const SERVICE_HUBS = {
   "/shower-bathtub-upgrade/": "/shower-remodeling/",
   "/tub-removal/": "/tub-to-shower-conversion/",
   "/handicap-accessible-bathroom-chandler/": "/handicap-accessible-bathroom/",
+  "/bathroom-remodel-cost-chandler/": "/bathroom-remodeling-cost-chandler-az/",
 };
 
 function chandlerRedirect(slug) {

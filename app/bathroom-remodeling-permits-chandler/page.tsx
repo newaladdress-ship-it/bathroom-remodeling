@@ -201,7 +201,7 @@ export default function PermitsPage() {
             </h2>
             <div className="grid sm:grid-cols-3 gap-4">
               <Link
-                href="/bathroom-remodel-cost-chandler/"
+                href="/bathroom-remodeling-cost-chandler-az/"
                 className="bg-background border border-border rounded-xl p-5 hover:border-primary transition-colors group flex items-center justify-between no-underline"
               >
                 <span className="font-semibold text-foreground group-hover:text-primary text-sm">

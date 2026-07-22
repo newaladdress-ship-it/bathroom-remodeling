@@ -291,7 +291,7 @@ export default function ChandlerBathroomRemodelingPage() {
             </p>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              From top-tier walk-in showers to precise custom tile work, we deliver results that blend long-term durability with modern aesthetics. We offer transparent, itemized scopes of work to ensure you get exceptional value for your investment. If you have been searching for a reliable local bathroom contractor, our dedicated team is here to help. You can also view our <Link href='/bathroom-remodel-cost-chandler/' className='text-primary hover:underline font-medium'>detailed pricing guide</Link> for current 2026 rates and local bathroom remodeling costs.
+              From top-tier walk-in showers to precise custom tile work, we deliver results that blend long-term durability with modern aesthetics. We offer transparent, itemized scopes of work to ensure you get exceptional value for your investment. If you have been searching for a reliable local bathroom contractor, our dedicated team is here to help. You can also view our <Link href='/bathroom-remodeling-cost-chandler-az/' className='text-primary hover:underline font-medium'>detailed pricing guide</Link> for current 2026 rates and local bathroom remodeling costs.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               We understand that every project is unique. Our team of expert remodelers is skilled in handling everything from simple cosmetic updates to complex structural changes, ensuring your project is completed on time and meets your expectations.
@@ -434,7 +434,7 @@ export default function ChandlerBathroomRemodelingPage() {
               ))}
             </div>
             <div className="text-center">
-              <Link href="/bathroom-remodel-cost-chandler/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
+              <Link href="/bathroom-remodeling-cost-chandler-az/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
                 View our full Chandler cost guide <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

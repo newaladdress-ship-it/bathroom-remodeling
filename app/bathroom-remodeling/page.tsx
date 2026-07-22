@@ -281,7 +281,7 @@ export default function BathroomRemodelingPage() {
               <div className="mt-10 pt-8 border-t border-border/50 text-center">
                 <p className="text-muted-foreground text-sm">
                   Want a detailed itemized breakdown of bathroom costs in your neighborhood? View our complete{" "}
-                  <Link href="/bathroom-remodel-cost-chandler/" className="text-primary hover:underline font-medium">
+                  <Link href="/bathroom-remodeling-cost-chandler-az/" className="text-primary hover:underline font-medium">
                     Chandler Bathroom Remodeling Cost Guide
                   </Link>.
                 </p>

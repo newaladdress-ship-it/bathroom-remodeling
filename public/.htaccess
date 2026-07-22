@@ -32,6 +32,7 @@ RedirectMatch 301 ^/shower-replacement/?$ https://arzhomeremodeling.com/shower-r
 RedirectMatch 301 ^/shower-bathtub-upgrade/?$ https://arzhomeremodeling.com/shower-remodeling/
 RedirectMatch 301 ^/tub-removal/?$ https://arzhomeremodeling.com/tub-to-shower-conversion/
 RedirectMatch 301 ^/handicap-accessible-bathroom-chandler/?$ https://arzhomeremodeling.com/handicap-accessible-bathroom/
+RedirectMatch 301 ^/bathroom-remodel-cost-chandler/?$ https://arzhomeremodeling.com/bathroom-remodeling-cost-chandler-az/
 # --- END REDIRECTS ---
 
 # Enable Rewrite Engine

@@ -24,6 +24,7 @@ export const SERVICE_CANONICAL_HUBS: Record<string, string> = {
   "/shower-bathtub-upgrade/": "/shower-remodeling/",
   "/tub-removal/": "/tub-to-shower-conversion/",
   "/handicap-accessible-bathroom-chandler/": "/handicap-accessible-bathroom/",
+  "/bathroom-remodel-cost-chandler/": "/bathroom-remodeling-cost-chandler-az/",
 };
 
 export function absoluteUrl(path: string): string {

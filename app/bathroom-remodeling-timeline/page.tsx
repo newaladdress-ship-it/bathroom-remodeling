@@ -119,7 +119,7 @@ export default function TimelinePage() {
           image="/images/services/bathroom-flooring-chandler.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
-            { name: "Bathroom Remodeling Costs", url: `${siteConfig.url}/bathroom-remodel-cost-chandler/` },
+            { name: "Bathroom Remodeling Costs", url: `${siteConfig.url}/bathroom-remodeling-cost-chandler-az/` },
             { name: "Timeline Guide", url: `${siteConfig.url}/bathroom-remodeling-timeline/` },
           ]}
         />
@@ -199,7 +199,7 @@ export default function TimelinePage() {
             </h2>
             <div className="grid sm:grid-cols-3 gap-4">
               <Link
-                href="/bathroom-remodel-cost-chandler/"
+                href="/bathroom-remodeling-cost-chandler-az/"
                 className="bg-background border border-border rounded-xl p-5 hover:border-primary transition-colors group flex items-center justify-between no-underline"
               >
                 <span className="font-semibold text-foreground group-hover:text-primary text-sm">
