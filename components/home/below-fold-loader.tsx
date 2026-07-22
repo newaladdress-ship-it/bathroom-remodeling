@@ -1,6 +1,5 @@
 import UspBar from "@/components/home/usp-bar";
 import PainPoints from "@/components/home/pain-points";
-import ComparisonBenefits from "@/components/home/comparison-benefits";
 import AboutPreview from "@/components/home/about-preview";
 import ServicesGrid from "@/components/home/services-grid";
 import LocalTrust from "@/components/home/local-trust";
@@ -16,7 +15,6 @@ export default function BelowFoldLoader() {
     <>
       <UspBar />
       <PainPoints />
-      <ComparisonBenefits />
       <AboutPreview />
       <ServicesGrid />
       <LocalTrust cityName="Chandler" />
