@@ -11,7 +11,7 @@ export function Footer() {
             <p className="text-slate-300">Professional home remodeling and renovation services across Arizona.</p>
             <p className="mt-4 text-slate-300 text-sm">
               {/* Verified Arizona Registrar of Contractors license number */}
-              ROC Licensed | License #ROC338304 - <a href="https://roc.az.gov" target="_blank" rel="noopener" className="hover:text-white transition-colors underline">Licensed by the Arizona Registrar of Contractors</a>
+               professional | License # - <a href="https://roc.az.gov" target="_blank" rel="noopener" className="hover:text-white transition-colors underline">professional by the Arizona Registrar of Contractors</a>
             </p>
           </div>
 

@@ -37,7 +37,7 @@ export const bathroomRemodelingAreas: Record<string, AreaData> = {
         "Ocotillo is famous for its gorgeous lakes, upscale golf courses, and premium properties. Homeowners in this beautiful Chandler community deserve bathrooms that match this level of luxury. We build premium, custom master bathrooms that combine gorgeous design with practical engineering.\n\nOne of the biggest challenges in Ocotillo is Chandler's extremely hard water, which often exceeds eighteen grains of mineral hardness per gallon. This hard water quickly ruins standard fixtures and leaves thick white calcium scale on shower doors and dark tile. To combat this, we use premium non-porous porcelain tiles and high-performance epoxy grout that resists mineral staining. We also apply specialized hydrophobic glass coatings to keep your frameless glass enclosures looking crystal clear.\n\nWhether you live near the Ocotillo Golf Club or the Fulton Ranch Towne Center, our team brings local expertise to your doorstep. We are fully familiar with the strict Homeowner Association guidelines in the area. We manage all required documentation and coordinate directly with local inspectors to ensure your project is completed with zero hassle. From double vanity upgrades to custom walk-in shower conversions, we deliver outstanding results.",
     },
     localTrustSignals: [
-      "Licensed Arizona contractor - ROC338304 certified",
+      "professional Arizona contractor -  certified",
       "Two year workmanship warranty on every Ocotillo project",
       "Expert hard water mitigation with epoxy grout and nano-coated glass",
       "Fully compliant with Ocotillo Homeowner Association guidelines",
@@ -97,7 +97,7 @@ export const bathroomRemodelingAreas: Record<string, AreaData> = {
         "Sun Lakes is one of the premier active adult communities in the East Valley. Homeowners here value comfort, safety, and independence. Our bathroom remodeling services are designed to help you enjoy your home for years to come. We specialize in converting old, high-sided bathtubs into safe, beautiful walk-in showers.\n\nSafety is our top priority. We install custom walk-in showers with zero-barrier thresholds, making it easy to step in and out. We also install secure backing inside your walls to support heavy-duty grab bars that hold up to five hundred pounds. We use premium slip-resistant floor tiles that meet or exceed standard safety guidelines, ensuring a stable surface even when wet. Our team also installs comfort-height toilets and accessible vanities that reduce the need for bending.\n\nWe understand that home renovations can be disruptive. That is why our local crews work efficiently to complete your project on time. We serve all neighborhoods in Sun Lakes, including Oakwood, Ironwood, and Cottonwood Country Clubs. We handle all required municipal permits from the local building division. From simple safety updates to full bathroom transformations, we provide fixed written quotes with zero hidden costs.",
     },
     localTrustSignals: [
-      "Licensed Arizona contractor - ROC338304 certified",
+      "professional Arizona contractor -  certified",
       "Specializing in ADA-compliant active adult renovations",
       "Slip-resistant flooring with high DCOF safety ratings",
       "Two year workmanship warranty on every Sun Lakes project",
@@ -157,7 +157,7 @@ export const bathroomRemodelingAreas: Record<string, AreaData> = {
         "Downtown Chandler is a vibrant hub featuring a beautiful mix of historic bungalows, Craftsman cottages, and modern urban townhomes. Renovation in this area requires a high level of skill. Older homes often have outdated plumbing, unlevel floors, and historic character that must be respected.\n\nOur team specializes in upgrading historic bathrooms while preserving their vintage charm. During demolition, we carefully inspect the older wood framing and replace any rotted studs. We level sagging floors using structural sister joists before laying down new tile. We also upgrade old galvanized steel pipes to high-density modern PEX plumbing. This ensures your home has excellent water pressure and is fully protected against leaks.\n\nWhether you live near the Crowne Plaza San Marcos Resort or Chandler High School, we bring expert craftsmanship to your project. We work closely with the City of Chandler building division to secure all required permits and pass local inspections. We design smart, space-saving layouts using floating vanities and pocket doors to maximize tight floor plans. From classic subway tile to modern minimalist designs, we deliver high-quality renovations with a fixed-price guarantee.",
     },
     localTrustSignals: [
-      "Licensed Arizona contractor - ROC338304 certified",
+      "professional Arizona contractor -  certified",
       "Experienced with historic Chandler building codes and inspections",
       "Structural framing reinforcement and subfloor leveling expertise",
       "Two year workmanship warranty on every downtown project",
@@ -217,7 +217,7 @@ export const bathroomRemodelingAreas: Record<string, AreaData> = {
         "Fulton Ranch is one of Chandler's most prestigious master-planned communities, known for its beautiful lakes, executive homes, and premium standards. Homeowners in Fulton Ranch expect top-tier quality and flawless execution. We specialize in building custom, high-end master bathrooms that reflect this exceptional standard.\n\nWe incorporate luxury features designed for modern living. We install spacious double vanities with premium quartz countertops and solid wood cabinetry. We build large, curbless walk-in showers with frameless heavy glass doors and dual shower heads. We use the advanced Schluter-Kerdi waterproofing system to ensure a lifetime of leak-free performance. To protect your investment against Chandler's high-mineral hard water, we use premium epoxy grout and apply hydrophobic nano-coatings to your glass shower doors.\n\nOur team is highly experienced in working within Fulton Ranch. We coordinate seamlessly with your local Homeowner Association to ensure all materials and designs meet neighborhood guidelines. We provide a dedicated project manager to keep your renovation on schedule and communicate with you every step of the way. From initial design to the final inspection, we deliver an outstanding experience and a beautiful new bathroom.",
     },
     localTrustSignals: [
-      "Licensed Arizona contractor - ROC338304 certified",
+      "professional Arizona contractor -  certified",
       "Specializing in luxury master suite renovations and custom tile",
       "Two year workmanship warranty on all Fulton Ranch projects",
       "Fully compliant with Fulton Ranch Homeowner Association standards",
@@ -277,7 +277,7 @@ export const bathroomRemodelingAreas: Record<string, AreaData> = {
         "Cooper Commons is a wonderful, family-oriented neighborhood in south Chandler. Busy families need bathrooms that are highly functional, easy to clean, and built to withstand heavy daily use. We specialize in designing and building beautiful bathrooms that keep up with your family's active lifestyle.\n\nWe focus on smart features that make morning routines easier. We can install spacious double sink vanities to reduce conflicts during busy school mornings. We upgrade old builder-grade cabinets with durable plywood construction and soft-close drawers that will not slam. We select high-quality porcelain tiles and stain-resistant urethane grout that are easy to scrub. To prevent mold and mildew in busy family bathrooms, we install high-performance quiet exhaust fans rated under one point zero sones.\n\nWhether you live near Basha High School or Tumbleweed Park, our local crews bring professional service to your home. We work quickly to minimize disruption to your family's routine. We keep a clean workspace and clear all debris daily. We offer flexible financing options to help you plan your project, and we stand behind our work with a two year warranty.",
     },
     localTrustSignals: [
-      "Licensed Arizona contractor - ROC338304 certified",
+      "professional Arizona contractor -  certified",
       "Specializing in family-friendly and durable bathroom designs",
       "Two year workmanship warranty on every Cooper Commons project",
       "Highly rated by local Cooper Commons families",
@@ -334,10 +334,10 @@ export const bathroomRemodelingAreas: Record<string, AreaData> = {
     introSection: {
       title: "Value-Rich and Energy-Efficient Bathroom Remodeling for Fox Crossing",
       description:
-        "Fox Crossing is a quiet, well-established community located in west Chandler, very close to major local employers like the Intel Ocotillo campus. Homes in this desirable community feature great layouts but are often ready for a modern style and utility upgrade. We help local homeowners add beauty, water efficiency, and lasting value to their properties.\n\nWe specialize in high-value, efficient bathroom upgrades. We install modern, water-saving EPA WaterSense certified toilets and low-flow shower heads that help reduce your monthly utility bills without sacrificing water pressure. We build clean, modern walk-in showers using premium acrylic wall surrounds or custom tile work. We replace old laminate countertops with gorgeous, durable quartz or granite. All electrical updates include energy-efficient LED lighting and code-compliant GFCI outlets for maximum safety.\n\nOur local crews are fully licensed, insured, and bonded. We respect your home, keeping dust contained during construction and disposing of all old materials properly. We handle all required municipal permits from the City of Chandler building division. We stand behind every project with a two year workmanship warranty and a fixed-price guarantee, giving you complete peace of mind.",
+        "Fox Crossing is a quiet, well-established community located in west Chandler, very close to major local employers like the Intel Ocotillo campus. Homes in this desirable community feature great layouts but are often ready for a modern style and utility upgrade. We help local homeowners add beauty, water efficiency, and lasting value to their properties.\n\nWe specialize in high-value, efficient bathroom upgrades. We install modern, water-saving EPA WaterSense certified toilets and low-flow shower heads that help reduce your monthly utility bills without sacrificing water pressure. We build clean, modern walk-in showers using premium acrylic wall surrounds or custom tile work. We replace old laminate countertops with gorgeous, durable quartz or granite. All electrical updates include energy-efficient LED lighting and code-compliant GFCI outlets for maximum safety.\n\nOur local crews are fully professional, insured, and bonded. We respect your home, keeping dust contained during construction and disposing of all old materials properly. We handle all required municipal permits from the City of Chandler building division. We stand behind every project with a two year workmanship warranty and a fixed-price guarantee, giving you complete peace of mind.",
     },
     localTrustSignals: [
-      "Licensed Arizona contractor - ROC338304 certified",
+      "professional Arizona contractor -  certified",
       "Expert hard water solutions and water-saving fixture upgrades",
       "Two year workmanship warranty on all Fox Crossing projects",
       "Located near Intel campus in west Chandler",
@@ -397,7 +397,7 @@ export const bathroomRemodelingAreas: Record<string, AreaData> = {
         "Chandler Heights features unique acreage lots, horse properties, and custom estates. Upgrading these properties requires a remodeling contractor with expertise in custom plumbing configurations, structural updates, and hard water mitigation. We specialize in converting old garden tubs into modern curbless walk-in showers, installing solid wood double vanities with quartz tops, and complete space modernizations.\n\nWe utilize Schluter-KERDI waterproofing systems to protect your home's structure and epoxy grouts to repel the region's mineral-heavy hard water scale. Whether you need city or Maricopa County permits, we handle all drawings, submittals, and inspections on your behalf, guaranteeing a stress-free renovation process.",
     },
     localTrustSignals: [
-      "Licensed Arizona contractor - ROC338304 certified",
+      "professional Arizona contractor -  certified",
       "Comprehensive two-year workmanship warranty on every project",
       "Expert permit management for Maricopa County & City of Chandler",
       "Advanced hard water defenses with epoxy grout and nano-coated glass",
@@ -457,7 +457,7 @@ export const bathroomRemodelingAreas: Record<string, AreaData> = {
         "Andersen Springs features unique lakeside custom estates, greenbelts, and mature properties. Upgrading these properties requires a remodeling contractor with expertise in custom plumbing configurations, structural updates, and hard water mitigation. We specialize in converting old garden tubs into modern curbless walk-in showers, installing solid wood double vanities with quartz tops, and complete space modernizations.\n\nWe utilize Schluter-KERDI waterproofing systems to protect your home's structure and epoxy grouts to repel the region's mineral-heavy hard water scale. We handle all drawings, permit submittals, and safety inspections directly through the City of Chandler building division, guaranteeing a stress-free renovation process.",
     },
     localTrustSignals: [
-      "Licensed Arizona contractor - ROC338304 certified",
+      "professional Arizona contractor -  certified",
       "Comprehensive two-year workmanship warranty on every project",
       "Expert permit management for the City of Chandler building division",
       "Advanced hard water defenses with epoxy grout and nano-coated glass",
@@ -517,7 +517,7 @@ export const bathroomRemodelingAreas: Record<string, AreaData> = {
         "Layton Lakes is a modern master-planned community featuring gorgeous parks, streams, and single-family properties. Upgrading these properties requires a remodeling contractor with expertise in contemporary layouts, HOA design-build coordination, and hard water mitigation. We specialize in converting old tub-shower inserts into modern walk-in tile showers, installing floating double vanities with quartz tops, and open-concept reconfigurations.\n\nWe utilize Schluter-KERDI waterproofing systems to protect your home's framing and epoxy grouts to repel the region's mineral-heavy hard water scale. We handle all drawings, permit submittals, and safety inspections directly through the City of Chandler or the Town of Gilbert, guaranteeing a stress-free renovation process.",
     },
     localTrustSignals: [
-      "Licensed Arizona contractor - ROC338304 certified",
+      "professional Arizona contractor -  certified",
       "Comprehensive two-year workmanship warranty on every project",
       "Expert permit management for Chandler & Gilbert building divisions",
       "Advanced hard water defenses with epoxy grout and nano-coated glass",
@@ -577,7 +577,7 @@ export const bathroomRemodelingAreas: Record<string, AreaData> = {
         "The Islands features unique lakeside custom estates, greenbelts, and mature properties. Upgrading these properties requires a remodeling contractor with expertise in custom plumbing configurations, structural updates, and hard water mitigation. We specialize in converting old garden tubs into modern curbless walk-in showers, installing solid wood double vanities with quartz tops, and complete space modernizations.\n\nWe utilize Schluter-KERDI waterproofing systems to protect your home's structure and epoxy grouts to repel the region's mineral-heavy hard water scale. We handle all drawings, permit submittals, and safety inspections directly through the City of Chandler building division, guaranteeing a stress-free renovation process.",
     },
     localTrustSignals: [
-      "Licensed Arizona contractor - ROC338304 certified",
+      "professional Arizona contractor -  certified",
       "Comprehensive two-year workmanship warranty on every project",
       "Expert permit management for the City of Chandler building division",
       "Advanced hard water defenses with epoxy grout and nano-coated glass",
@@ -637,7 +637,7 @@ export const bathroomRemodelingAreas: Record<string, AreaData> = {
         "Pecos Ranch features unique lakeside custom estates, greenbelts, and mature properties. Upgrading these properties requires a remodeling contractor with expertise in custom plumbing configurations, structural updates, and hard water mitigation. We specialize in converting old garden tubs into modern curbless walk-in showers, installing solid wood double vanities with quartz tops, and complete space modernizations.\n\nWe utilize Schluter-KERDI waterproofing systems to protect your home's structure and epoxy grouts to repel the region's mineral-heavy hard water scale. We handle all drawings, permit submittals, and safety inspections directly through the City of Chandler building division, guaranteeing a stress-free renovation process.",
     },
     localTrustSignals: [
-      "Licensed Arizona contractor - ROC338304 certified",
+      "professional Arizona contractor -  certified",
       "Comprehensive two-year workmanship warranty on every project",
       "Expert permit management for the City of Chandler building division",
       "Advanced hard water defenses with epoxy grout and nano-coated glass",

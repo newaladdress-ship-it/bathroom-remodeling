@@ -13,8 +13,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Droplets, Clock } from "lucide-react";
 
-export const metadata: Metadata = {title: "Bath Remodel Apache Junction | Licensed Pro | ARZ",description: "Top-rated bathroom remodeling in Apache Junction, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
-  openGraph: {title: "Bathroom Remodeling Apache Junction AZ | ARZ",description: "Licensed bathroom remodeling in Apache Junction, AZ. Custom showers, tub conversions & tile. Schluter waterproofing system. Free estimate: (520) 569-3339.",
+export const metadata: Metadata = {title: "Bath Remodel Apache Junction | professional Pro | ARZ",description: "Top-rated bathroom remodeling in Apache Junction, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
+  openGraph: {title: "Bathroom Remodeling Apache Junction AZ | ARZ",description: "expert bathroom remodeling in Apache Junction, AZ. Custom showers, tub conversions & tile. Schluter waterproofing system. Free estimate: (520) 569-3339.",
     url: `${siteConfig.url}/bathroom-remodeling-apache-junction-az/`,
     type: "website",
   },
@@ -48,7 +48,7 @@ export default function ApacheJunctionPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Apache Junction Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-apache-junction-az/" } ]} />
 <ServiceSchema
         serviceName="Bathroom Remodeling in Apache Junction, Arizona"
-        serviceDescription="Licensed bathroom remodeling contractor serving Apache Junction, AZ. Custom walk-in showers, master bath upgrades, and tub-to-shower conversions for local families."
+        serviceDescription="expert bathroom remodeling contractor serving Apache Junction, AZ. Custom walk-in showers, master bath upgrades, and tub-to-shower conversions for local families."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-apache-junction-az/`}
       />
       <FAQSchema faqs={apacheJunctionFaqs} />
@@ -132,7 +132,7 @@ export default function ApacheJunctionPage() {
             "Modern Tub-to-Shower Conversions",
             "Hard Water Defense Grout Systems",
             "Slip-Resistant Flooring (DCOF >= 0.42)",
-            "Licensed AZ Contractor Support",
+            "professional AZ Contractor Support",
             "Fixed Pricing: No Hidden Fees"
           ]} 
           cityName="Apache Junction" 

@@ -86,7 +86,7 @@ export default function ADAPage() {
             <div className="flex flex-wrap justify-center gap-8 md:gap-12 text-primary font-medium">
                <div className="flex items-center gap-2">
                  <Shield className="w-5 h-5" />
-                 <span>ROC Licensed #338304</span>
+                 <span> professional #338304</span>
                </div>
                <div className="flex items-center gap-2">
                  <CheckCircle className="w-5 h-5" />

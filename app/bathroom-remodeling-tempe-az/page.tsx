@@ -22,13 +22,13 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {title: "Bathroom Remodeling Tempe | Licensed Contractor | ARZ",description: "Top-rated bathroom remodeling in Tempe, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
-  openGraph: {title: "Bathroom Remodeling Tempe AZ | ARZ Home Remodeling",description: "Trusted bathroom remodeling in Tempe, AZ. Tub-to-shower conversions, walk-in showers & custom tile. Licensed & insured. Free estimate: (520) 569-3339.",
+export const metadata: Metadata = {title: "Bathroom Remodeling Tempe | professional contractor | ARZ",description: "Top-rated bathroom remodeling in Tempe, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
+  openGraph: {title: "Bathroom Remodeling Tempe AZ | ARZ Home Remodeling",description: "Trusted bathroom remodeling in Tempe, AZ. Tub-to-shower conversions, walk-in showers & custom tile. fully insured. Free estimate: (520) 569-3339.",
     url: `${siteConfig.url}/bathroom-remodeling-tempe-az/`,
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",title: "Bathroom Remodeling Tempe AZ | ARZ Home Remodeling",description: "Trusted bathroom remodeling in Tempe, AZ. Tub-to-shower conversions, walk-in showers & custom tile. Licensed & insured. Free estimate: (520) 569-3339.",
+    card: "summary_large_image",title: "Bathroom Remodeling Tempe AZ | ARZ Home Remodeling",description: "Trusted bathroom remodeling in Tempe, AZ. Tub-to-shower conversions, walk-in showers & custom tile. fully insured. Free estimate: (520) 569-3339.",
     images: [`${siteConfig.url}/images/bathroom-remodeling-tempe.jpg`],
   },
   alternates: {
@@ -58,9 +58,9 @@ const tempeFaqs = [
       "Yes. We specialize in shower-only replacements and tub-to-shower conversions. This is a popular way for Tempe homeowners to modernize their space without the cost of a full gut remodel."
   },
   {
-    question: "Are you licensed to do bathroom remodeling in Tempe?",
+    question: "Are you professional to do bathroom remodeling in Tempe?",
     answer:
-      "Yes. We are a licensed Arizona contractor, fully insured, operating under license Licensed Contractor - ROC #338304. We provide a two year workmanship warranty on every project. We are experienced with Tempe's specific building codes and requirements."
+      "Yes. We are a professional Arizona contractor, fully insured, operating under license professional contractor - . We provide a two year workmanship warranty on every project. We are experienced with Tempe's specific building codes and requirements."
   },
   {
     question: "Do you serve neighborhoods near ASU and Downtown Tempe?",
@@ -96,12 +96,12 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "AZ Licensed & Insured",
+    title: "AZ fully insured",
     body: "Every project fully covered. We carry all required Arizona contractor licensing.",
   },
   {
     icon: Star,
-    title: "2-Year Workmanship Warranty",
+    title: "workmanship warranty",
     body: "We stand behind our work. If it fails within two years, we fix it at no cost to you.",
   },
   {
@@ -171,7 +171,7 @@ export default function TempePage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Tempe Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-tempe-az/" } ]} />
 <ServiceSchema
         serviceName="Bathroom Remodeling in Tempe, Arizona"
-        serviceDescription="Licensed bathroom remodeling contractor serving Tempe, AZ. Custom shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving South Tempe, Warner Ranch, and all university-area neighborhoods."
+        serviceDescription="expert bathroom remodeling contractor serving Tempe, AZ. Custom shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving South Tempe, Warner Ranch, and all university-area neighborhoods."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-tempe-az/`}
       />
       <FAQSchema faqs={tempeFaqs} />
@@ -184,9 +184,9 @@ export default function TempePage() {
       <main>
         {/* HERO */}
         <ServiceHero
-          title="Licensed Bathroom Remodeling in Tempe, AZ"
+          title="expert bathroom remodeling in Tempe, AZ"
           subtitle="Modern Transformations & Expert Local Contractors"
-          description="Elevate your Tempe home with professional remodeling services tailored to your lifestyle. From custom walk-in showers near ASU to master suite renovations in South Tempe: we deliver high-end results with ROC Licensed expertise and fixed-price guarantees."
+          description="Elevate your Tempe home with professional remodeling services tailored to your lifestyle. From custom walk-in showers near ASU to master suite renovations in South Tempe: we deliver high-end results with  professional expertise and fixed-price guarantees."
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -201,7 +201,7 @@ export default function TempePage() {
               Tempe homeowners value both style and functionality. Whether you live in a classic home in South Tempe or a modern space near Downtown, your bathroom should be a reflection of your lifestyle. If you have been searching for a professional team to update your space, our experts provide the high-end craftsmanship you need.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we specialize in high-quality bathroom remodeling in Tempe, AZ: from custom walk-in showers in Warner Ranch to full master bath transformations near ASU, as well as focused updates for university rentals. We are a licensed Arizona contractor, serving homeowners across the <span className="text-primary font-semibold">85281, 85282, 85283, and 85284</span> ZIP codes.
+              At ARZ Home Remodeling, we specialize in high-quality bathroom remodeling in Tempe, AZ: from custom walk-in showers in Warner Ranch to full master bath transformations near ASU, as well as focused updates for university rentals. We are a professional Arizona contractor, serving homeowners across the <span className="text-primary font-semibold">85281, 85282, 85283, and 85284</span> ZIP codes.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Our comprehensive services cover everything from full luxury layouts to custom safety additions, ensuring structural integrity and precise finishes on every single project.

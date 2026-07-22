@@ -44,7 +44,7 @@ const permitFaqs = [
   {
     question: "Can I pull the bathroom permits myself as the homeowner?",
     answer:
-      "Yes, Chandler allows an 'owner-builder' to pull permits. However, you assume full legal liability for construction codes and must be present for inspections. Working with a licensed contractor (ROC338304) who pulls the permits guarantees that the work is completed to code and protects your home's insurance eligibility."
+      "Yes, Chandler allows an 'owner-builder' to pull permits. However, you assume full legal liability for construction codes and must be present for inspections. Working with a professional contractor () who pulls the permits guarantees that the work is completed to code and protects your home's insurance eligibility."
   },
 ];
 
@@ -118,7 +118,7 @@ export default function PermitsPage() {
             <div className="flex items-start gap-3 bg-secondary border border-border rounded-xl p-5 mt-6">
               <FileText className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
               <p className="text-sm text-muted-foreground">
-                As a licensed contractor (<strong className="text-foreground">ROC338304</strong>), ARZ Home Remodeling handles the entire permit process. We prepare the design drawings, submit documentation to the City of Chandler, and host inspectors at your home. Call us at <a href="tel:+15205693339" className="text-primary hover:underline font-medium">(520) 569-3339</a> to discuss your plans.
+                As a professional contractor (<strong className="text-foreground"></strong>), ARZ Home Remodeling handles the entire permit process. We prepare the design drawings, submit documentation to the City of Chandler, and host inspectors at your home. Call us at <a href="tel:+15205693339" className="text-primary hover:underline font-medium">(520) 569-3339</a> to discuss your plans.
               </p>
             </div>
           </div>

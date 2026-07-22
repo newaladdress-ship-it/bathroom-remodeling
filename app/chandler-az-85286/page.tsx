@@ -7,7 +7,7 @@ import { Phone, ShieldCheck, ArrowRight, Droplets, Wrench, Bath, Home, MapPin, C
 
 export const metadata: Metadata = {
   title: "Chandler 85286 Bathroom Remodeling | Get a Free Quote",
-  description: "South Chandler's licensed bathroom remodeling team. We convert unused garden tubs into luxury walk-in showers. ROC #338304. Call for a free estimate.",
+  description: "South Chandler's expert bathroom remodeling team. We convert unused garden tubs into luxury walk-in showers. . Call for a free estimate.",
   alternates: {
     canonical: `${siteConfig.url}/chandler-az-85286/`,
   },
@@ -69,7 +69,7 @@ export default function Chandler85286Page() {
               South Chandler's Premier Bathroom Remodeling Experts
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Tired of looking at that massive, unused garden tub from the early 2000s? We help homeowners in South Chandler completely modernize their master bathrooms with curbless showers, premium slab finishes, and zero-headache project management. From the initial demolition to the final coat of hydrophobic sealant, our licensed teams handle everything in-house.
+              Tired of looking at that massive, unused garden tub from the early 2000s? We help homeowners in South Chandler completely modernize their master bathrooms with curbless showers, premium slab finishes, and zero-headache project management. From the initial demolition to the final coat of hydrophobic sealant, our professional teams handle everything in-house.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -83,7 +83,7 @@ export default function Chandler85286Page() {
             </div>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground font-medium">
-              <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> Licensed General Contractor (ROC #338304)</div>
+              <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> general contractor ()</div>
               <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> Strict Dust Mitigation</div>
             </div>
           </div>
@@ -258,7 +258,7 @@ export default function Chandler85286Page() {
 
               <div className="bg-secondary/40 p-8 rounded-xl border border-border">
                 <h3 className="font-semibold text-xl text-foreground mb-3">Can you fix a shower that was built incorrectly by another contractor?</h3>
-                <p className="text-muted-foreground leading-relaxed">Yes, unfortunately, a large portion of our business involves "rescue operations." Many un-licensed contractors or DIY enthusiasts fail to properly waterproof the shower pan, leading to severe leaks, black mold, and rotting subfloors within just a few years. We can come in, completely demolish the failed shower, remediate the structural damage, and rebuild the shower using the proper Schluter-Kerdi waterproofing systems so it lasts for decades.</p>
+                <p className="text-muted-foreground leading-relaxed">Yes, unfortunately, a large portion of our business involves "rescue operations." Many un-professional contractors or DIY enthusiasts fail to properly waterproof the shower pan, leading to severe leaks, black mold, and rotting subfloors within just a few years. We can come in, completely demolish the failed shower, remediate the structural damage, and rebuild the shower using the proper Schluter-Kerdi waterproofing systems so it lasts for decades.</p>
               </div>
             </div>
             
@@ -277,7 +277,7 @@ export default function Chandler85286Page() {
               Ready to Transform Your South Chandler Home?
             </h2>
             <p className="text-xl mb-10 opacity-90 leading-relaxed">
-              Don't leave your most important spaces to chance. Partner with a licensed, highly experienced local contractor who guarantees flawless execution, strict dust mitigation, and transparent pricing. Let's build the bathroom you've always wanted.
+              Don't leave your most important spaces to chance. Partner with a professional, highly experienced local contractor who guarantees flawless execution, strict dust mitigation, and transparent pricing. Let's build the bathroom you've always wanted.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone bg-white text-primary px-10 py-5 rounded-xl hover:bg-gray-100 transition shadow-2xl font-bold text-xl w-full sm:w-auto">

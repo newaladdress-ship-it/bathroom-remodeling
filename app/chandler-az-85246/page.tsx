@@ -7,7 +7,7 @@ import { Phone, ShieldCheck, ArrowRight, Droplets, Wrench, Bath, Clock, CheckCir
 
 export const metadata: Metadata = {
   title: "Chandler 85246 Bathroom Remodeling | Call Today",
-  description: "Central Chandler licensed bathroom remodelers. We stop shower leaks, build waterproof custom showers, and guarantee on-time, fixed-price project completion.",
+  description: "Central Chandler expert bathroom remodelers. We stop shower leaks, build waterproof custom showers, and guarantee on-time, fixed-price project completion.",
   alternates: {
     canonical: `${siteConfig.url}/chandler-az-85246/`,
   },
@@ -45,7 +45,7 @@ export default function Chandler85246Page() {
             "name": "What is a curbless shower, and can any bathroom have one?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A curbless or zero-entry shower removes the step-over curb at the shower entrance. It requires lowering the subfloor drain or slightly raising the bathroom floor level, which our licensed crews perform regularly. Most bathrooms can accommodate a curbless conversion."
+              "text": "A curbless or zero-entry shower removes the step-over curb at the shower entrance. It requires lowering the subfloor drain or slightly raising the bathroom floor level, which our professional crews perform regularly. Most bathrooms can accommodate a curbless conversion."
             }
           }
         ]
@@ -79,7 +79,7 @@ export default function Chandler85246Page() {
               Expert Bathroom Remodeling for Central Chandler Homeowners
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              A failing shower pan, crumbling grout, or a bathroom that simply hasn't been touched since the 1990s is a real problem that needs a real solution. We are licensed general contractors who specialize in completely rebuilding bathrooms from the ground up, with a relentless focus on watertight construction, project efficiency, and permanent results you can actually live with.
+              A failing shower pan, crumbling grout, or a bathroom that simply hasn't been touched since the 1990s is a real problem that needs a real solution. We are general contractors who specialize in completely rebuilding bathrooms from the ground up, with a relentless focus on watertight construction, project efficiency, and permanent results you can actually live with.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone call-to-action bg-primary text-white px-8 py-4 rounded-xl hover:bg-primary/90 transition shadow-lg font-bold text-lg w-full sm:w-auto flex items-center justify-center gap-2">
@@ -91,7 +91,7 @@ export default function Chandler85246Page() {
               </a>
             </div>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground font-medium">
-              <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> Licensed General Contractor (ROC #338304)</div>
+              <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> general contractor ()</div>
               <div className="flex items-center gap-2"><Droplets className="w-5 h-5 text-primary" /> Advanced Waterproofing Systems</div>
               <div className="flex items-center gap-2"><Clock className="w-5 h-5 text-primary" /> On-Time Project Completion</div>
             </div>
@@ -126,7 +126,7 @@ export default function Chandler85246Page() {
               <div className="bg-background p-8 rounded-2xl shadow-sm border border-border">
                 <h3 className="font-semibold text-2xl mb-4 text-foreground border-b border-border pb-4">Why Turnkey Efficiency Matters in Chandler:</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Hiring a separate plumber, a separate tile setter, and a separate electrician for a single bathroom remodel is a recipe for miscommunication, scheduling conflicts, and wildly unpredictable final costs. As a licensed General Contractor, we directly employ or tightly manage every single trade involved in your project, from rough plumbing to final glass installation.
+                  Hiring a separate plumber, a separate tile setter, and a separate electrician for a single bathroom remodel is a recipe for miscommunication, scheduling conflicts, and wildly unpredictable final costs. As a general contractor, we directly employ or tightly manage every single trade involved in your project, from rough plumbing to final glass installation.
                 </p>
                 <ul className="space-y-5">
                   <li className="flex gap-4 items-start">
@@ -234,7 +234,7 @@ export default function Chandler85246Page() {
                 {
                   num: 3,
                   title: "Controlled Demolition & Moisture Remediation",
-                  body: "Our crews arrive and immediately set up professional dust containment barriers throughout the adjacent living areas. We methodically remove all existing tile, backer board, and fixtures. Every surface exposed during demolition is carefully inspected for moisture intrusion and mold. Any compromised framing is replaced. Any biological growth is treated by licensed remediation professionals before we proceed. You receive a direct update with photos at the conclusion of every demolition day."
+                  body: "Our crews arrive and immediately set up professional dust containment barriers throughout the adjacent living areas. We methodically remove all existing tile, backer board, and fixtures. Every surface exposed during demolition is carefully inspected for moisture intrusion and mold. Any compromised framing is replaced. Any biological growth is treated by professional remediation professionals before we proceed. You receive a direct update with photos at the conclusion of every demolition day."
                 },
                 {
                   num: 4,
@@ -281,7 +281,7 @@ export default function Chandler85246Page() {
                 },
                 {
                   q: "Do I need to be home while the remodel is underway?",
-                  a: "You do not need to be home every single day. We are fully licensed and insured, and our crews work under a dedicated project manager who oversees all activity on site. Many of our clients provide us with a key or garage access code. We send you a daily photo update at the end of each work day so you can see precisely what was accomplished, and your project manager is always available by phone for questions or decisions that arise."
+                  a: "You do not need to be home every single day. We are fully fully insured, and our crews work under a dedicated project manager who oversees all activity on site. Many of our clients provide us with a key or garage access code. We send you a daily photo update at the end of each work day so you can see precisely what was accomplished, and your project manager is always available by phone for questions or decisions that arise."
                 },
                 {
                   q: "What happens if something gets damaged during construction?",
@@ -323,7 +323,7 @@ export default function Chandler85246Page() {
               Stop the Leak. Build Your Dream Bathroom.
             </h2>
             <p className="text-xl mb-10 opacity-90 leading-relaxed">
-              Whether it's an emergency shower failure or a long overdue bathroom upgrade, our licensed and experienced team is ready to deliver a permanent, beautiful result for your central Chandler home. Call today and get a transparent, fixed-price estimate.
+              Whether it's an emergency shower failure or a long overdue bathroom upgrade, our professional and experienced team is ready to deliver a permanent, beautiful result for your central Chandler home. Call today and get a transparent, fixed-price estimate.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone bg-white text-primary px-10 py-5 rounded-xl hover:bg-gray-100 transition shadow-2xl font-bold text-xl w-full sm:w-auto">

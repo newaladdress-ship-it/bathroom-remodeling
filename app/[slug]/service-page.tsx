@@ -1204,12 +1204,12 @@ const serviceContent: Record<string, ServiceDetail> = {
     ctas: {
       midTitle: "Ready for a luxury master bath?",
       midDescription: "Get a custom design plan and estimate today.",
-      finalTitle: "Licensed master bathroom remodelers in Chandler.",
+      finalTitle: "professional master bathroom remodelers in Chandler.",
       finalDescription: "Call now for a free in-home consultation."
     },
     seo: {
       title: "Master Bathroom Remodeling Services Chandler AZ - Premium Design",
-      description: "Top-rated master bathroom remodeling in Chandler, AZ. Custom design, luxury showers, and premium finishes by licensed contractors."
+      description: "Top-rated master bathroom remodeling in Chandler, AZ. Custom design, luxury showers, and premium finishes by professional contractors."
     }
   },
   "tub-to-shower-conversion": {

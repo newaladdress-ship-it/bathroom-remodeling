@@ -191,7 +191,7 @@ const tips = [
   "Plan your lighting carefully - task lighting at the vanity is essential for grooming.",
   "Don't skimp on storage - adequate cabinets and shelving keep your bathroom organized and clutter-free.",
   "Select timeless finishes over trendy ones for a look that will remain stylish for years.",
-  "Hire licensed contractors who specialize in bathroom remodeling to ensure quality work and proper permits.",
+  "Hire professional contractors who specialize in bathroom remodeling to ensure quality work and proper permits.",
 ];
 
 const serviceFaqs = [

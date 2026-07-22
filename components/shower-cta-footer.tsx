@@ -57,7 +57,7 @@ export default function ShowerCTAFooter() {
 
         <p className="text-center text-sm text-muted-foreground">
           <strong>Local Expertise, Fair Pricing, Zero Surprises</strong><br/>
-          ROC Licensed #338304 · 15+ years serving the East Valley · 500+ bathrooms completed · 2-year workmanship warranty
+           professional #338304 · 15+ years serving the East Valley · many bathrooms completed · workmanship warranty
         </p>
       </div>
     </section>

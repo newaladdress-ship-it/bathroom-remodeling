@@ -1,22 +1,18 @@
 export const siteConfig = {
   name: "ARZ Home Remodeling",
-  owner: "Alex Rivers",
-  tagline: "Licensed Bathroom Remodeling in Chandler, AZ",
-  description: "Licensed bathroom remodeling in Chandler, Arizona. Walk-in showers, tub-to-shower conversions, tile, vanities, and master bath remodels. ROC338304. Free estimates.",
-  foundedYear: 2024,
-  // Displayed visually only. Intentionally NOT emitted in AggregateRating
-  // schema to avoid a fake-review manual action. Replace with verified GBP
-  // numbers once a real Google Business Profile exists.
-  googleReviewsCount: 1258,
-  googleRating: 4.9,
-  warranty: "2-Year Workmanship Warranty",
+  owner: "",
+  tagline: "Bathroom Remodeling in Chandler, AZ",
+  description: "Bathroom remodeling in Chandler, Arizona. Walk-in showers, tub-to-shower conversions, tile, vanities, and master bath remodels. Free estimates.",
+  foundedYear: null,
+  googleReviewsCount: 0,
+  googleRating: 0,
+  warranty: "Workmanship Warranty",
   url: "https://arzhomeremodeling.com",
   googleBusinessLink: "https://www.google.com/maps/search/?api=1&query=ARZ+Home+Remodeling+Chandler+AZ",
   phone: "(520) 569-3339",
   phoneClean: "+15205693339",
   email: "estimates@arzhomeremodeling.com",
-  // Verified Arizona Registrar of Contractors license number
-  license: "ROC338304 - Arizona Licensed Contractor",
+  license: "",
   address: {
     street: "6710 W Chicago St",
     city: "Chandler",
@@ -39,8 +35,8 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/arzhomeremodeling/",
     youtube: "https://youtube.com/arzhomeremodeling",
     linkedin: "https://www.linkedin.com/company/arz-home-remodeling/",
-    twitter: "", // Add if available
-    pinterest: "", // Add if available
+    twitter: "",
+    pinterest: "",
   },
   navigation: [
     { name: "Home", href: "/" },
@@ -64,6 +60,6 @@ export const siteConfig = {
     "The Islands",
     "Pecos Ranch",
   ],
-  umamiWebsiteId: "", // Add your Umami website ID here (e.g. "9a38f712-...") to enable tracking
-  umamiShareUrl: "", // Add your Umami public share URL here to display the dashboard in your admin panel
+  umamiWebsiteId: "",
+  umamiShareUrl: "",
 };

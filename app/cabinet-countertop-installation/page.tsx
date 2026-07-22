@@ -15,7 +15,7 @@ import { siteConfig } from "@/lib/site-config";
 import {  ServiceSchema, FAQSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
 
-export const metadata: Metadata = {title: "Vanity Cabinets & Countertops Chandler AZ | Install | ARZ",description: "Upgrade your bathroom with custom cabinets and quartz, granite, or marble countertops in Chandler, AZ. ROC licensed installation. Get a free estimate!",
+export const metadata: Metadata = {title: "Vanity Cabinets & Countertops Chandler AZ | Install | ARZ",description: "Upgrade your bathroom with custom cabinets and quartz, granite, or marble countertops in Chandler, AZ.  professional installation. Get a free estimate!",
   openGraph: {title: "Vanity Cabinet Installs | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore vanity cabinet installs, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/cabinet-countertop-installation/`,
     type: "website",

@@ -36,7 +36,7 @@ export default function ServiceAreas() {
               Chandler, Ocotillo, Fulton Ranch, Sun Lakes & the East Valley
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Our office is located at <strong>6710 W Chicago St, Chandler, AZ 85226</strong>, near the intersection of Chicago St and Kyrene Rd. If you are looking for a licensed contractor near you, our crews are active in your neighborhood.
+              Our office is located at <strong>6710 W Chicago St, Chandler, AZ 85226</strong>, near the intersection of Chicago St and Kyrene Rd. If you are looking for a professional contractor near you, our crews are active in your neighborhood.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               We complete projects throughout the city, serving homes near <strong>Hamilton High School</strong>, <strong>Basha High School</strong>, and <strong>Perry High School</strong>. Whether you reside near <strong>Chandler-Gilbert Community College</strong>, shop at the <strong>Chandler Fashion Center</strong>, or live along main corridors like <strong>Arizona Avenue</strong>, <strong>Alma School Road</strong>, <strong>Ray Road</strong>, <strong>McQueen Road</strong>, or <strong>Val Vista Drive</strong>, our trucks are nearby.

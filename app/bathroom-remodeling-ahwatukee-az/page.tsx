@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {title: "Licensed Bath Renovations Ahwatukee | Custom Tile | ARZ",description: "Beautiful bathroom renovations in Ahwatukee, AZ. High-quality curbless showers, tile installation, and vanity updates. Schedule a free quote today!",
+export const metadata: Metadata = {title: "professional Bath Renovations Ahwatukee | Custom Tile | ARZ",description: "Beautiful bathroom renovations in Ahwatukee, AZ. High-quality curbless showers, tile installation, and vanity updates. Schedule a free quote today!",
   openGraph: {title: "Ahwatukee Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore ahwatukee bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/bathroom-remodeling-ahwatukee-az/`,
     type: "website",
@@ -67,9 +67,9 @@ const ahwatukeeFaqs = [
       "Yes. We specialize in partial remodels, including shower-only replacements and tub-to-shower conversions, which are very popular among Ahwatukee homeowners looking for a modern upgrade."
   },
   {
-    question: "Are you licensed to do bathroom remodeling in Arizona?",
+    question: "Are you professional to do bathroom remodeling in Arizona?",
     answer:
-      "Yes. We are a licensed Arizona contractor operating under license Licensed Contractor - ROC #338304. We carry full insurance and provide a two year workmanship warranty on every project. We are familiar with the specific building standards in Ahwatukee."
+      "Yes. We are a professional Arizona contractor operating under license professional contractor - . We carry full insurance and provide a two year workmanship warranty on every project. We are familiar with the specific building standards in Ahwatukee."
   },
   {
     question: "Do you serve neighborhoods throughout Ahwatukee Foothills?",
@@ -105,12 +105,12 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "AZ Licensed & Insured",
+    title: "AZ fully insured",
     body: "Every project fully covered. We carry all required Arizona contractor licensing.",
   },
   {
     icon: Star,
-    title: "2-Year Workmanship Warranty",
+    title: "workmanship warranty",
     body: "We stand behind our craftsmanship. If it fails within two years, we fix it at no charge.",
   },
   {
@@ -180,7 +180,7 @@ export default function AhwatukeePage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Ahwatukee Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-ahwatukee-az/" } ]} />
 <ServiceSchema
         serviceName="Bathroom Remodeling in Ahwatukee, Arizona"
-        serviceDescription="Licensed bathroom remodeling contractor serving Ahwatukee, AZ. Custom shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving The Foothills, Club West, and Lakewood."
+        serviceDescription="expert bathroom remodeling contractor serving Ahwatukee, AZ. Custom shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving The Foothills, Club West, and Lakewood."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-ahwatukee-az/`}
       />
       <FAQSchema faqs={ahwatukeeFaqs} />
@@ -195,7 +195,7 @@ export default function AhwatukeePage() {
         <ServiceHero
           title="Ahwatukee’s Top-Rated Bathroom Remodeling Contractor"
           subtitle="Hire the Best Local Remodelers in Ahwatukee - Free Estimates"
-          description="Bringing our 5-star bathroom remodeling services to homeowners in Ahwatukee, AZ. Licensed AZ contractors specializing in high-quality renovations, custom shower installs, and full bathroom transformations."
+          description="Bringing our 5-star bathroom remodeling services to homeowners in Ahwatukee, AZ. professional AZ contractors specializing in high-quality renovations, custom shower installs, and full bathroom transformations."
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -214,7 +214,7 @@ export default function AhwatukeePage() {
               At ARZ Home Remodeling, we specialize in{" "}
               <strong className="text-foreground">bathroom remodeling in Ahwatukee, AZ</strong>: from custom 
               walk-in showers in Club West to full master bath transformations in The Foothills. We are a 
-              licensed Arizona contractor, serving homeowners across{" "}
+              professional Arizona contractor, serving homeowners across{" "}
               <span className="text-primary font-semibold">85044, 85045, and 85048</span>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -415,7 +415,7 @@ export default function AhwatukeePage() {
             "Premium Tile & Stone Installation",
             "Luxury Walk-in Shower Enclosures",
             "Full Bathroom Design & Permitting",
-            "Limited 2-Year Workmanship Warranty"
+            "Limited workmanship warranty"
           ]} 
           cityName="Ahwatukee" 
         />

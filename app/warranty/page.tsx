@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/footer"
 import { siteConfig } from "@/lib/site-config"
 import { Shield, CheckCircle, AlertTriangle, HelpCircle } from "lucide-react"
 
-export const metadata: Metadata = {title: "5-Year Bathroom Remodeling Warranty | ARZ Chandler AZ",description: "Rest easy with ARZ Home Remodeling's comprehensive 5-Year Workmanship Warranty on custom tiled showers and bathroom renovations in Chandler, AZ.",
+export const metadata: Metadata = {title: "5-Year Bathroom Remodeling Warranty | ARZ Chandler AZ",description: "Rest easy with ARZ Home Remodeling's comprehensive Workmanship Warranty on custom tiled showers and bathroom renovations in Chandler, AZ.",
   openGraph: {title: "Workmanship Warranty | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore workmanship warranty, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/warranty/`,
     type: "website",
@@ -45,7 +45,7 @@ export default function WarrantyPage() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary-foreground text-xs font-semibold uppercase tracking-wider mb-6">
-                <Shield className="w-4 h-4 text-accent" /> 5-Year Workmanship Warranty
+                <Shield className="w-4 h-4 text-accent" /> Workmanship Warranty
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight">
                 Our Guarantee of Craftsmanship

@@ -23,8 +23,8 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {title: "Scottsdale Bath Remodel | Licensed Pro | ARZ",description: "Top-rated bathroom remodeling in Scottsdale, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
-  openGraph: {title: "Scottsdale Bath Remodel | Licensed Pro | ARZ",description: "Top-rated bathroom remodeling in Scottsdale, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
+export const metadata: Metadata = {title: "Scottsdale Bath Remodel | professional Pro | ARZ",description: "Top-rated bathroom remodeling in Scottsdale, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
+  openGraph: {title: "Scottsdale Bath Remodel | professional Pro | ARZ",description: "Top-rated bathroom remodeling in Scottsdale, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
     url: `${siteConfig.url}/bathroom-remodeling-scottsdale-az/`,
     type: "website",
   },
@@ -58,7 +58,7 @@ export default function ScottsdalePage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Scottsdale Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-scottsdale-az/" } ]} />
 <ServiceSchema
         serviceName="Luxury Bathroom Remodeling in Scottsdale, Arizona"
-        serviceDescription="Licensed bathroom contractor specializing in high-end renovations in Scottsdale, AZ. Custom showers, luxury master baths, and premium stone installation."
+        serviceDescription="expert bathroom contractor specializing in high-end renovations in Scottsdale, AZ. Custom showers, luxury master baths, and premium stone installation."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-scottsdale-az/`}
       />
       <FAQSchema faqs={scottsdaleFaqs} />
@@ -90,7 +90,7 @@ export default function ScottsdalePage() {
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               We specialize in <strong>luxury bathroom remodeling in Scottsdale, AZ</strong>, focusing on premium materials 
-              like Carrara marble, custom cabinetry, and state-of-the-art shower systems. As a licensed Arizona 
+              like Carrara marble, custom cabinetry, and state-of-the-art shower systems. As a professional Arizona 
               contractor, we serve communities across <strong>85250, 85251, 85255, 85258, and 85260</strong>.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -135,7 +135,7 @@ export default function ScottsdalePage() {
             "Spa-Inspired Walk-in Showers",
             "Freestanding Soaking Tubs",
             "High-End Vanity & Cabinetry",
-            "Licensed & Insured Execution"
+            "fully insured Execution"
           ]} 
           cityName="Scottsdale" 
         />

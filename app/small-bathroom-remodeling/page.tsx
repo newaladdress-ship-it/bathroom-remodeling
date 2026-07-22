@@ -60,7 +60,7 @@ export default function SmallBathroomRemodelingPage() {
         <ServiceHero
           title="Affordable Small Bathroom Remodel Cost Chandler AZ"
           subtitle="Professional Small Bathroom Remodeling Services in Chandler AZ"
-          description="Get a professional small bathroom remodel in Chandler AZ. Our licensed small bathroom remodeling contractors deliver space-saving designs and professional bathroom renovation services."
+          description="Get a professional small bathroom remodel in Chandler AZ. Our professional small bathroom remodeling contractors deliver space-saving designs and professional bathroom renovation services."
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Small Bathroom Remodeling", url: `${siteConfig.url}/small-bathroom-remodeling` }]}
         />

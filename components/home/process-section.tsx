@@ -4,30 +4,30 @@ const steps = [
   {
     number: "01",
     icon: Phone,
-    title: "Free Consultation (No sales pitch)",
+    title: "Free Consultation",
     description:
-      "We meet at your home, take measurements, and talk layout. We discuss budget honestly and outline potential constraints upfront, without high-pressure sales tactics.",
+      "Discuss your bathroom remodel ideas with our team. We'll evaluate your existing bathroom, answer your questions over the phone, and recommend the best remodeling options for your home. A quick call helps avoid the confusion that often comes with text messages.",
   },
   {
     number: "02",
     icon: Ruler,
-    title: "Fixed-Price Quote (No hidden fees)",
+    title: "Custom Bathroom Design",
     description:
-      "You get a detailed, line-item scope and a fixed-price contract. We specify every tile, vanity, and permit fee so your price is locked, with zero surprise upcharges.",
+      "Choose the perfect layout, walk-in shower, vanity, tile, and finishes for your bathroom renovation. We'll help create a design that fits your style, space, and budget.",
   },
   {
     number: "03",
     icon: HardHat,
-    title: "Conscious Construction (No delay or mess)",
+    title: "Professional Bathroom Remodeling",
     description:
-      "We work consecutive business days during HOA-approved hours. Our crew protects your home with heavy floor runners and zipped plastic dust-containment barriers.",
+      "From tub-to-shower conversions to complete bathroom remodeling, every detail is completed with quality workmanship and attention to detail for a smooth remodeling experience.",
   },
   {
     number: "04",
     icon: Sparkles,
-    title: "Certified Completion (No loose ends)",
+    title: "Final Walkthrough",
     description:
-      "We inspect every tile joint and plumbing connection with you, clean the workspace thoroughly, and back your new bathroom with a written 2-year workmanship warranty.",
+      "We review the completed bathroom with you to ensure everything meets your expectations, leaving you with a beautiful, functional space you'll enjoy for years to come.",
   },
 ];
 
@@ -38,10 +38,10 @@ export default function ProcessSection() {
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
           <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Process</span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-6 text-background text-balance">
-            How a Chandler Bathroom Remodel Works
+            Our Remodeling Process
           </h2>
-          <p className="text-background/70 text-lg leading-relaxed">
-            We eliminate the stress of bathroom remodeling with strict schedules, floor protection, and absolute price transparency.
+          <p className="text-background/70 text-lg leading-relaxed font-semibold">
+            From consultation to completion, we make bathroom remodeling in Chandler, AZ simple, organized, and tailored to your home.
           </p>
         </div>
 

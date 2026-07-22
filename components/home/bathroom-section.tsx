@@ -29,7 +29,7 @@ export default function BathroomSection() {
             </div>
             <div className="absolute -bottom-6 -right-6 bg-card border border-border rounded-xl p-6 shadow-xl">
               <div className="text-center">
-                <span className="block font-serif text-4xl font-bold text-primary">500+</span>
+                <span className="block font-serif text-4xl font-bold text-primary">many</span>
                 <span className="text-sm text-muted-foreground">Bathrooms Completed</span>
               </div>
             </div>

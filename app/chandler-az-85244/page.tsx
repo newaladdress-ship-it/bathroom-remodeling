@@ -7,7 +7,7 @@ import { Phone, ShieldCheck, ArrowRight, Droplets, Wrench, Bath, MapPin, CheckCi
 
 export const metadata: Metadata = {
   title: "85244 Chandler Bathroom Remodeling | Historic Homes",
-  description: "Older home bathroom specialists near downtown Chandler. We fix subfloors, replace aging pipes, and rebuild custom showers from the studs. ROC #338304.",
+  description: "Older home bathroom specialists near downtown Chandler. We fix subfloors, replace aging pipes, and rebuild custom showers from the studs. .",
   alternates: {
     canonical: `${siteConfig.url}/chandler-az-85244/`,
   },
@@ -27,7 +27,7 @@ export default function Chandler85244Page() {
           "@type": "PostalCode",
           "postalCode": "85244"
         },
-        "description": "Licensed contractors specializing in updating aging bathrooms and historic plumbing in the Chandler 85244 area.",
+        "description": "professional contractors specializing in updating aging bathrooms and historic plumbing in the Chandler 85244 area.",
       },
       {
         "@type": "FAQPage",
@@ -76,7 +76,7 @@ export default function Chandler85244Page() {
               Restoring & Modernizing Bathrooms in Older Chandler Properties
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Older homes near the downtown Chandler district require contractors who genuinely understand structural complexity. We are licensed professionals experienced in diagnosing failing plumbing, leveling shifted concrete slabs, treating hidden mold, and building stunning, watertight custom showers that stand the test of time.
+              Older homes near the downtown Chandler district require contractors who genuinely understand structural complexity. We are professional professionals experienced in diagnosing failing plumbing, leveling shifted concrete slabs, treating hidden mold, and building stunning, watertight custom showers that stand the test of time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone call-to-action bg-primary text-white px-8 py-4 rounded-xl hover:bg-primary/90 transition shadow-lg font-bold text-lg w-full sm:w-auto flex items-center justify-center gap-2">
@@ -88,7 +88,7 @@ export default function Chandler85244Page() {
               </a>
             </div>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground font-medium">
-              <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> Licensed General Contractor (ROC #338304)</div>
+              <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> general contractor ()</div>
               <div className="flex items-center gap-2"><Wrench className="w-5 h-5 text-primary" /> Structural & Plumbing Experts</div>
               <div className="flex items-center gap-2"><MapPin className="w-5 h-5 text-primary" /> Downtown Chandler District</div>
             </div>
@@ -278,7 +278,7 @@ export default function Chandler85244Page() {
                 },
                 {
                   q: "Do I have to handle the city permits myself?",
-                  a: "Absolutely not. Remodeling an older home almost always requires permits, particularly when we are moving drain locations, upgrading electrical panels, or making structural changes to framing. As licensed General Contractors under ROC #338304, we draft and submit all plans directly to the City of Chandler Building Division and coordinate all on-site inspections from start to finish."
+                  a: "Absolutely not. Remodeling an older home almost always requires permits, particularly when we are moving drain locations, upgrading electrical panels, or making structural changes to framing. As general contractors under , we draft and submit all plans directly to the City of Chandler Building Division and coordinate all on-site inspections from start to finish."
                 },
                 {
                   q: "My bathroom floor seems very uneven. Can you still install large-format tile?",
@@ -324,7 +324,7 @@ export default function Chandler85244Page() {
               Your Older Home Deserves the Right Contractor
             </h2>
             <p className="text-xl mb-10 opacity-90 leading-relaxed">
-              Don't trust your older property to a crew that lacks the experience to deal with aging plumbing, shifted slabs, and historic construction. Our licensed team has the expertise to handle the complexity and deliver a stunning, lasting result.
+              Don't trust your older property to a crew that lacks the experience to deal with aging plumbing, shifted slabs, and historic construction. Our professional team has the expertise to handle the complexity and deliver a stunning, lasting result.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone bg-white text-primary px-10 py-5 rounded-xl hover:bg-gray-100 transition shadow-2xl font-bold text-xl w-full sm:w-auto">

@@ -227,7 +227,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-background/10 rounded-full blur-2xl" />
                     <h3 className="font-serif font-bold text-xl mb-3 relative z-10">Chandler&apos;s #1 Remodeler</h3>
                     <p className="text-sm text-primary-foreground/90 mb-6 relative z-10">
-                      Licensed experts serving Chandler, Ocotillo, and all East Valley communities.
+                      professional experts serving Chandler, Ocotillo, and all East Valley communities.
                     </p>
                     <Button asChild variant="secondary" className="w-full bg-background text-primary hover:bg-background/90 relative z-10">
                       <a href={`tel:${siteConfig.phoneClean}`}>Call Now: {siteConfig.phone}</a>

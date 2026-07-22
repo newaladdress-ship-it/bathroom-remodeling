@@ -27,14 +27,14 @@ export const metadata: Metadata = {
   description: "Professional home, kitchen, and bathroom remodeling in Andersen Springs, AZ. Get your custom renovation with a 2-year warranty. Call today!",
   openGraph: {
     title: "Home & Bath Remodeling Andersen Springs AZ | ARZ",
-    description: "Licensed home, kitchen, and bathroom remodeling services in Andersen Springs, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
+    description: "professional home, kitchen, and bathroom remodeling services in Andersen Springs, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
     url: `${siteConfig.url}/bathroom-remodeling-andersen-springs/`,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Home & Bath Remodeling Andersen Springs AZ | ARZ",
-    description: "Licensed home, kitchen, and bathroom remodeling services in Andersen Springs, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
+    description: "professional home, kitchen, and bathroom remodeling services in Andersen Springs, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
     images: [`${siteConfig.url}/images/services/chandler-bathroom-remodel.jpg`],
   },
   alternates: {
@@ -66,7 +66,7 @@ const faqData = [
   {
     question: "What is your warranty policy for custom home renovations?",
     answer:
-      "We stand behind all of our construction work with a comprehensive 2-year workmanship warranty. If any structural, plumbing, or installation issue arises due to our craftsmanship within two years of completing your project, our team will return and repair it at absolutely no cost to you."
+      "We stand behind all of our construction work with a comprehensive workmanship warranty. If any structural, plumbing, or installation issue arises due to our craftsmanship within two years of completing your project, our team will return and repair it at absolutely no cost to you."
   },
 ];
 
@@ -97,12 +97,12 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "ROC Licensed & Bonded",
-    body: "Fully licensed by the state of Arizona (ROC338304) and fully insured for your ultimate safety and peace of mind.",
+    title: " bonded",
+    body: "Fully professional by the state of Arizona () and fully insured for your ultimate safety and peace of mind.",
   },
   {
     icon: Star,
-    title: "2-Year Workmanship Warranty",
+    title: "workmanship warranty",
     body: "We stand firmly behind our work. If any installation issues occur within two years, we resolve them completely free.",
   },
   {
@@ -137,7 +137,7 @@ export default function AndersenSpringsPage() {
       ]} />
       <ServiceSchema
         serviceName="Home & Bathroom Remodeling in Andersen Springs, AZ"
-        serviceDescription="Licensed general remodeling contractor serving Andersen Springs, Chandler, AZ. Custom walk-in showers, open-concept kitchens, custom cabinets, and full home remodeling."
+        serviceDescription="professional general remodeling contractor serving Andersen Springs, Chandler, AZ. Custom walk-in showers, open-concept kitchens, custom cabinets, and full home remodeling."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-andersen-springs/`}
       />
       <FAQSchema faqs={faqData} />
@@ -171,7 +171,7 @@ export default function AndersenSpringsPage() {
               Located in the heart of south-central Chandler, Andersen Springs is a highly sought-after, established master-planned community. Famous for its beautiful community lakes, tree-lined walking trails, and convenient access to local shopping, dining, and top schools, this neighborhood contains some of the most desirable properties in the East Valley. However, because most of these residences were built during the late 1980s and 1990s, their interiors are frequently showing their age. Outdated design trends like low furred-down ceilings, closed-in kitchens with fluorescent light boxes, carpeted master bathrooms, and builder-grade cultured marble vanities prevent these homes from reaching their full potential.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At <Link href="/" className="text-primary hover:underline font-medium">ARZ Home Remodeling</Link>, we specialize in breathing new life into older Andersen Springs properties. Whether you are looking to replace an old master bath garden tub with a gorgeous, zero-barrier walk-in shower, remove load-bearing walls to merge your kitchen and family room into an open-concept entertainment hub, or install luxury vinyl plank flooring throughout your entire home, we provide the expert design and ROC licensed construction you need. We use only premium materials like <Link href="/blog/schluter-kerdi-vs-redgard-arizona/" className="text-primary hover:underline font-medium">Schluter-KERDI waterproofing systems</Link> and stain-resistant epoxy grouts to ensure that your new kitchen, bath, or full home update is built to last.
+              At <Link href="/" className="text-primary hover:underline font-medium">ARZ Home Remodeling</Link>, we specialize in breathing new life into older Andersen Springs properties. Whether you are looking to replace an old master bath garden tub with a gorgeous, zero-barrier walk-in shower, remove load-bearing walls to merge your kitchen and family room into an open-concept entertainment hub, or install luxury vinyl plank flooring throughout your entire home, we provide the expert design and  professional construction you need. We use only premium materials like <Link href="/blog/schluter-kerdi-vs-redgard-arizona/" className="text-primary hover:underline font-medium">Schluter-KERDI waterproofing systems</Link> and stain-resistant epoxy grouts to ensure that your new kitchen, bath, or full home update is built to last.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">

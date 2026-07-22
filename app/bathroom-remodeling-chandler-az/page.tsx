@@ -25,8 +25,8 @@ import { Button } from "@/components/ui/button";
 import LocalTrust from "@/components/home/local-trust";
 
 export const metadata: Metadata = {
-  title: "Bathroom Remodeling in Chandler, AZ | Licensed Pros - ARZ",
-  description: "Need expert bathroom remodeling in chandler, AZ? Our licensed crew (ROC338304) builds custom walk-in showers & tub-to-shower conversions. Free estimate!",
+  title: "Bathroom Remodeling in Chandler, AZ | professional contractors - ARZ",
+  description: "Need expert bathroom remodeling in chandler, AZ? Our professional crew () builds custom walk-in showers & tub-to-shower conversions. Free estimate!",
   keywords: [
     "bathroom remodeling in chandler, AZ",
     "bathroom remodeling chandler",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Bathroom Remodeling in Chandler, AZ | Free Estimate",
-    description: "Expert bathroom remodeling in Chandler, AZ. Walk-in showers, tub-to-shower conversions & custom tile. Licensed ROC338304. Call (520) 569-3339 for a free quote.",
+    description: "Expert bathroom remodeling in Chandler, AZ. Walk-in showers, tub-to-shower conversions & custom tile. General Contractor. Call (520) 569-3339 for a free quote.",
     url: `${siteConfig.url}/bathroom-remodeling-chandler-az/`,
     type: "website",
     images: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Bathroom Remodeling in Chandler, AZ | Free Estimate",
-    description: "Expert bathroom remodeling in Chandler, AZ. Walk-in showers, tub-to-shower conversions & custom tile. Licensed ROC338304. Call (520) 569-3339 for a free quote.",
+    description: "Expert bathroom remodeling in Chandler, AZ. Walk-in showers, tub-to-shower conversions & custom tile. General Contractor. Call (520) 569-3339 for a free quote.",
     images: [`${siteConfig.url}/images/bathroom-remodeling-chandler.jpg`],
   },
   alternates: {
@@ -103,12 +103,12 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "AZ Licensed & Insured",
+    title: "AZ fully insured",
     body: "Every project fully covered. We carry all required Arizona contractor licensing.",
   },
   {
     icon: Star,
-    title: "2-Year Workmanship Warranty",
+    title: "workmanship warranty",
     body: "We stand behind every tile and seam. If it fails within two years, we fix it at no charge.",
   },
   {
@@ -179,7 +179,7 @@ export default function ChandlerBathroomRemodelingPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Chandler Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-chandler-az/" } ]} />
 <ServiceSchema
         serviceName="Bathroom Remodeling in Chandler, Arizona"
-        serviceDescription="Licensed bathroom remodeling contractor serving Chandler, AZ. Walk-in shower installation, tub-to-shower conversions, master bath renovations, vanity replacement, and complete bathroom remodels. Serving Dobson Ranch, Sun Lakes, Ocotillo, Fulton Ranch, and all of Chandler."
+        serviceDescription="expert bathroom remodeling contractor serving Chandler, AZ. Walk-in shower installation, tub-to-shower conversions, master bath renovations, vanity replacement, and complete bathroom remodels. Serving Dobson Ranch, Sun Lakes, Ocotillo, Fulton Ranch, and all of Chandler."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-chandler-az/`}
       />
       <FAQSchema faqs={chandlerFaqs} />
@@ -194,7 +194,7 @@ export default function ChandlerBathroomRemodelingPage() {
         <ServiceHero
           title="Bathroom Remodeling Chandler AZ"
           subtitle="Chandler’s Top-Rated Bathroom Remodeling Contractor"
-          description="From tub-to-shower conversions in Dobson Ranch to full master bath transformations in Ocotillo: ARZ Home Remodeling is the professional choice for Chandler homeowners. Licensed AZ contractor, 2-year warranty, fixed pricing."
+          description="From tub-to-shower conversions in Dobson Ranch to full master bath transformations in Ocotillo: ARZ Home Remodeling is the professional choice for Chandler homeowners. professional AZ contractor, 2-year warranty, fixed pricing."
           image="/images/hero/luxury-shower-remodel-chandler.webp"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -209,7 +209,7 @@ export default function ChandlerBathroomRemodelingPage() {
               Your bathroom is one of the most frequently used spaces in your home, serving as the start and end to your daily routine. However, many Chandler properties built between the 1980s and early 2000s feature outdated, cramped layouts and builder-grade fixtures that fail to meet modern standards of luxury or utility. Yellowing fiberglass tub surrounds, water-damaged particle board vanities, and mildewed tile grout are common issues that detract from both your daily comfort and your home’s resale value. Upgrading your space with professional **bathroom remodeling in Chandler, AZ** is a high-return investment that transforms outdated spaces into modern, functional retreats.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we specialize in providing comprehensive design-build remodeling solutions tailored to the needs of Chandler homeowners. From luxury master bathroom overhauls featuring freestanding tubs and curbless entry walk-in showers to space-optimizing guest bathroom updates and expert <Link href='/tub-to-shower-conversion/' className='text-primary hover:underline font-medium'>tub-to-shower conversions</Link>, our in-house crew manages every phase. As an Arizona Registrar of Contractors (ROC) licensed, bonded, and insured team (ROC #338304), we proudly serve communities across the East Valley, including ZIP codes <span className="text-primary font-semibold">85224, 85225, 85226, and 85249</span>.
+              At ARZ Home Remodeling, we specialize in providing comprehensive design-build remodeling solutions tailored to the needs of Chandler homeowners. From luxury master bathroom overhauls featuring freestanding tubs and curbless entry walk-in showers to space-optimizing guest bathroom updates and expert <Link href='/tub-to-shower-conversion/' className='text-primary hover:underline font-medium'>tub-to-shower conversions</Link>, our in-house crew manages every phase. As an Arizona Registrar of Contractors () bonded and insured team (), we proudly serve communities across the East Valley, including ZIP codes <span className="text-primary font-semibold">85224, 85225, 85226, and 85249</span>.
             </p>
             <h2 className="font-serif text-2xl font-semibold mt-8 mb-3 text-foreground">
               Navigating Chandler Building Codes and Permitting
@@ -259,7 +259,7 @@ export default function ChandlerBathroomRemodelingPage() {
                 &ldquo;When remodeling a bathroom in Chandler, you aren't just updating fixtures; you are designing a system to withstand some of the hardest water in the nation. We strictly specify epoxy grout and non-porous porcelain to ensure your investment stays pristine without hours of scrubbing.&rdquo;
               </p>
               <cite className="not-italic text-sm font-semibold text-primary block">
-                Mike Hernandez, Lead Contractor at ARZ Home Remodeling
+                our team, Lead Contractor at ARZ Home Remodeling
               </cite>
             </div>
 

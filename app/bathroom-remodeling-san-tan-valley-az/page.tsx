@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {title: "San Tan Valley Bathroom Remodeling | Free Estimates | ARZ",description: "Looking for a licensed bath remodeler in San Tan Valley, AZ? ARZ specializes in custom tile showers, layouts, & fixtures. Call for your free consultation!",
+export const metadata: Metadata = {title: "San Tan Valley Bathroom Remodeling | Free Estimates | ARZ",description: "Looking for a professional bath remodeler in San Tan Valley, AZ? ARZ specializes in custom tile showers, layouts, & fixtures. Call for your free consultation!",
   openGraph: {title: "San Tan Valley Bath | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore san tan valley bath, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/bathroom-remodeling-san-tan-valley-az/`,
     type: "website",
@@ -91,13 +91,13 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "AZ Licensed ROC338304",
-    body: "Fully licensed residential contracting firm, verified with the Arizona Registrar of Contractors.",
+    title: "AZ General Contractor",
+    body: "Fully professional residential contracting firm, verified with the Arizona Registrar of Contractors.",
   },
   {
     icon: Star,
     title: "2-Year Written Warranty",
-    body: "We stand behind every joint, valve, and tile seam with a full 2-year workmanship warranty.",
+    body: "We stand behind every joint, valve, and tile seam with a full workmanship warranty.",
   },
   {
     icon: MapPin,
@@ -149,7 +149,7 @@ const process = [
   { step: "02", title: "In-Home Assessment", body: "We evaluate your current plumbing, take precise measurements, and review catalogs." },
   { step: "03", title: "Detailed Fixed Proposal", body: "You get a transparent, fully itemized quote outlining all labor, materials, and permits." },
   { step: "04", title: "Zoning & Permitting", body: "We pull all necessary permits through Pinal County and City of Florence offices." },
-  { step: "05", title: "Execution & Clean Build", body: "Our clean, licensed crew completes all demolition, waterproofing, plumbing, and tiling." },
+  { step: "05", title: "Execution & Clean Build", body: "Our clean, professional crew completes all demolition, waterproofing, plumbing, and tiling." },
   { step: "06", title: "Milestone Walkthrough", body: "You inspect every square inch with our supervisor. 100% satisfaction guarantee." },
 ];
 
@@ -164,7 +164,7 @@ export default function SanTanValleyPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling San Tan Valley Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-san-tan-valley-az/" } ]} />
       <ServiceSchema
         serviceName="Bathroom Remodeling in San Tan Valley, Arizona"
-        serviceDescription="Licensed bathroom remodeling contractor serving San Tan Valley, AZ. High-end master suite overhauls, zero-threshold tile walk-in showers, and tub-to-shower conversions in Encanterra and Johnson Ranch."
+        serviceDescription="expert bathroom remodeling contractor serving San Tan Valley, AZ. High-end master suite overhauls, zero-threshold tile walk-in showers, and tub-to-shower conversions in Encanterra and Johnson Ranch."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-san-tan-valley-az/`}
       />
       <FAQSchema faqs={sanTanValleyFaqs} />
@@ -177,7 +177,7 @@ export default function SanTanValleyPage() {
       <main>
         {/* HERO */}
         <ServiceHero
-          title="Licensed Bathroom Remodeling in San Tan Valley, AZ"
+          title="expert bathroom remodeling in San Tan Valley, AZ"
           subtitle="Custom Tiled Showers & Luxury Master Suite Transformations"
           description="Elegantly transform your bathroom into a beautiful, functional retreat. Specializing in high-end curbless walk-in showers, tub-to-shower conversions, and premium master suite bathroom renovations in Encanterra, Johnson Ranch, and across San Tan Valley."
           image="/images/services/chandler-bathroom-remodel.jpg"
@@ -194,7 +194,7 @@ export default function SanTanValleyPage() {
               San Tan Valley homes feature spacious, modern floor plans that deserve matching custom interiors. Whether you own a beautiful resort property in the gated **Encanterra** community or a spacious family home in **Johnson Ranch**, a custom bathroom remodel is one of the most reliable ways to improve comfort, safety, and home equity. If you are seeking an expert **bathroom remodel san tan valley**, a trusted **bathroom remodeling san tan valley**, or a premium **bath remodeler in san tan valley**, ARZ Home Remodeling is at your service.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we specialize in high-end **bathroom remodeling in San Tan Valley, AZ**: delivering custom walk-in tiled showers, zero-threshold safety entryways, and premium master bathroom transformations across **85140 and 85143**. We are a residential contracting firm licensed under **ROC #ROC338304**, ensuring expert craftsmanship, code-compliant plumbing, and fixed-price contracts.
+              At ARZ Home Remodeling, we specialize in high-end **bathroom remodeling in San Tan Valley, AZ**: delivering custom walk-in tiled showers, zero-threshold safety entryways, and premium master bathroom transformations across **85140 and 85143**. We are a residential contracting firm professional under ****, ensuring expert craftsmanship, code-compliant plumbing, and fixed-price contracts.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               **Resort-Style Upgrades in Encanterra:** Resort homes require a high degree of luxury and clean finishing. We specialize in retrofitting master baths with premium zero-threshold linear drain showers, custom wood double vanities with natural stone countertops, freestanding soaking tubs, and custom smart ambient LED backlit mirrors. We ensure complete HOA compliance regarding contractor registration, gate codes, and dumpster placements.

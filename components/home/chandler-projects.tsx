@@ -14,42 +14,42 @@ const projects: ProjectCaseStudy[] = [
   {
     location: "Ocotillo, Chandler",
     projectType: "Tub-to-Shower Conversion",
-    problem: "Outdated garden tub was unused and taking up valuable floor space in a tight master bathroom layout.",
-    fix: "Removed the tub, recessed the floor joists to install a flat base, reset the drain, and completed a frameless walk-in shower with custom porcelain tile and premium waterproofing.",
-    result: "Homeowner reclaimed 12 sq ft of floor space and gained a safer, highly functional, and beautiful daily walk-in shower.",
+    problem: "Many homeowners in Ocotillo have oversized bathtubs that take up valuable space and no longer fit their daily lifestyle. These outdated layouts can make bathrooms feel cramped and less functional.",
+    fix: "We design custom tub-to-shower conversions with walk-in showers, modern tile, glass enclosures, and space-saving layouts tailored to your bathroom and your renovation goals.",
+    result: "A brighter, more accessible bathroom that improves daily comfort, maximizes available space, and adds long-term value to your Chandler home.",
     image: "/images/tub-to-shower-1.webp",
   },
   {
     location: "Fulton Ranch, Chandler",
-    projectType: "Luxury Master Bathroom Remodel",
-    problem: "Outdated 1995 double vanity and leaking gold fixtures with severe municipal hard water scale buildup.",
-    fix: "Installed modern double vanities made of premium wood, high-density quartz countertops, and a custom tile shower utilizing epoxy grout defense.",
-    result: "Created a modern desert-spa retreat that resists hard water mineral deposits and dramatically simplified daily cleanup.",
+    projectType: "Luxury Bathroom Remodel",
+    problem: "Older bathrooms often feature outdated vanities, worn tile, inefficient layouts, and finishes that no longer match today's modern design preferences.",
+    fix: "Our bathroom remodeling services include custom vanities, premium tile installation, quartz countertops, modern lighting, and personalized layouts designed for your home.",
+    result: "A stylish, functional bathroom with improved storage, modern finishes, and a design that complements your lifestyle while enhancing your home's value.",
     image: "/images/bathroom-showcase.webp",
   },
   {
     location: "Sun Lakes, Chandler",
-    projectType: "Handicap Accessible Shower",
-    problem: "A high 16-inch step-in bathtub wall created a major slip hazard and barrier for an elderly senior aging in place.",
-    fix: "Converted the tub into a zero-threshold, barrier-free curbless roll-in shower. Installed solid structural backing, certified grab bars, and non-slip mosaic tile flooring.",
-    result: "Homeowner achieved total bathing independence and peace of mind under complete ADA-compliance guidelines.",
+    projectType: "Accessible Shower Remodeling",
+    problem: "Traditional bathtubs and high shower thresholds can become difficult to use safely, especially for homeowners seeking greater comfort and accessibility.",
+    fix: "We create accessible bathroom solutions with curbless showers, slip-resistant flooring, grab bar installation, wider entryways, and layouts designed for everyday convenience.",
+    result: "A safer, more comfortable bathroom that supports independent living while maintaining a clean, modern appearance and lasting functionality.",
     image: "/images/bathroom-remodel-1.webp",
   },
 ];
 
 export default function ChandlerProjects() {
   return (
-    <section className="py-20 lg:py-32 bg-background border-t border-border" aria-label="Real Chandler Projects">
+    <section className="py-20 lg:py-32 bg-background border-t border-border" aria-label="Popular Bathroom Remodeling Services in Chandler">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
           <span className="text-primary text-sm font-semibold tracking-wider uppercase bg-primary/5 px-4 py-1.5 rounded-full">
             Local Proof
           </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-6 text-foreground text-balance">
-            Real Chandler Projects & Case Studies
+            Popular Bathroom Remodeling Services in Chandler
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            See how ARZ Home Remodeling resolves actual bathroom layouts and plumbing challenges for our neighbors in local Chandler master-planned communities.
+            See how our bathroom remodeling services resolve common layout and design challenges for homeowners in Chandler's local communities.
           </p>
         </div>
 

@@ -27,14 +27,14 @@ export const metadata: Metadata = {
   description: "Professional home, kitchen, and bathroom remodeling in Layton Lakes, AZ. Get your custom renovation with a 2-year warranty. Call today!",
   openGraph: {
     title: "Home & Bath Remodeling Layton Lakes AZ | ARZ",
-    description: "Licensed home, kitchen, and bathroom remodeling services in Layton Lakes, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
+    description: "professional home, kitchen, and bathroom remodeling services in Layton Lakes, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
     url: `${siteConfig.url}/bathroom-remodeling-layton-lakes/`,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Home & Bath Remodeling Layton Lakes AZ | ARZ",
-    description: "Licensed home, kitchen, and bathroom remodeling services in Layton Lakes, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
+    description: "professional home, kitchen, and bathroom remodeling services in Layton Lakes, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
     images: [`${siteConfig.url}/images/services/chandler-bathroom-remodel.jpg`],
   },
   alternates: {
@@ -66,7 +66,7 @@ const faqData = [
   {
     question: "What is your warranty policy for custom home renovations?",
     answer:
-      "We stand behind all of our construction work with a comprehensive 2-year workmanship warranty. If any structural, plumbing, or installation issue arises due to our craftsmanship within two years of completing your project, our team will return and repair it at absolutely no cost to you."
+      "We stand behind all of our construction work with a comprehensive workmanship warranty. If any structural, plumbing, or installation issue arises due to our craftsmanship within two years of completing your project, our team will return and repair it at absolutely no cost to you."
   },
 ];
 
@@ -97,12 +97,12 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "ROC Licensed & Bonded",
-    body: "Fully licensed by the state of Arizona (ROC338304) and fully insured for your ultimate safety and peace of mind.",
+    title: " bonded",
+    body: "Fully professional by the state of Arizona () and fully insured for your ultimate safety and peace of mind.",
   },
   {
     icon: Star,
-    title: "2-Year Workmanship Warranty",
+    title: "workmanship warranty",
     body: "We stand firmly behind our work. If any installation issues occur within two years, we resolve them completely free.",
   },
   {
@@ -137,7 +137,7 @@ export default function LaytonLakesPage() {
       ]} />
       <ServiceSchema
         serviceName="Home & Bathroom Remodeling in Layton Lakes, AZ"
-        serviceDescription="Licensed general remodeling contractor serving Layton Lakes, Chandler, AZ. Custom walk-in showers, open-concept kitchens, custom cabinets, and full home remodeling."
+        serviceDescription="professional general remodeling contractor serving Layton Lakes, Chandler, AZ. Custom walk-in showers, open-concept kitchens, custom cabinets, and full home remodeling."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-layton-lakes/`}
       />
       <FAQSchema faqs={faqData} />
@@ -171,7 +171,7 @@ export default function LaytonLakesPage() {
               Layton Lakes is one of the premier master-planned communities in the East Valley, featuring gorgeous community lakes, streams, walking paths, and parks that span the borders of southeast Chandler and southwest Gilbert. Built from the mid-2000s onward, these properties boast modern floor plans and excellent structural integrity. However, many homes still feature standard builder-grade finishes, dark cabinetry, and basic bathroom layouts. As styles shift toward bright, open-concept designs and custom features, upgrading your home's interior is a highly effective way to match your living space with the upscale feel of the neighborhood.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At <Link href="/" className="text-primary hover:underline font-medium">ARZ Home Remodeling</Link>, we specialize in converting standard developer layouts into premium, custom spaces. Whether you want to replace an old master bath tub-and-shower combo with a massive walk-in tiled shower, install custom double vanities with quartz tops, or open up kitchen walls to construct a massive culinary island, we deliver ROC licensed craftsmanship. We use advanced materials like <Link href="/blog/schluter-kerdi-vs-redgard-arizona/" className="text-primary hover:underline font-medium">Schluter-KERDI waterproofing systems</Link> and stain-resistant epoxy grouts to ensure that your new kitchen, bath, or full home update is built to last.
+              At <Link href="/" className="text-primary hover:underline font-medium">ARZ Home Remodeling</Link>, we specialize in converting standard developer layouts into premium, custom spaces. Whether you want to replace an old master bath tub-and-shower combo with a massive walk-in tiled shower, install custom double vanities with quartz tops, or open up kitchen walls to construct a massive culinary island, we deliver  professional craftsmanship. We use advanced materials like <Link href="/blog/schluter-kerdi-vs-redgard-arizona/" className="text-primary hover:underline font-medium">Schluter-KERDI waterproofing systems</Link> and stain-resistant epoxy grouts to ensure that your new kitchen, bath, or full home update is built to last.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">

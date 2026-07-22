@@ -51,7 +51,7 @@ export function Footer() {
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-background hover:text-accent transition-colors no-underline"
                 aria-label={`View our ${siteConfig.googleRating} star rating with ${siteConfig.googleReviewsCount} Google Reviews`}
               >
-                <span className="text-accent">★★★★★</span>
+                <span className="text-accent"></span>
                 <span>{siteConfig.googleRating} · {siteConfig.googleReviewsCount} Google Reviews</span>
               </a>
             </div>
@@ -59,7 +59,7 @@ export function Footer() {
               <p className="font-semibold text-background text-base">ARZ Home Remodeling</p>
               <p>6710 W Chicago St, Chandler, AZ 85226</p>
               <p>Phone: <a href={`tel:${siteConfig.phoneClean}`} className="text-background/80 hover:text-primary transition-colors no-underline">{siteConfig.phone}</a></p>
-              <p className="text-xs pt-1 text-background/60">ROC Licensed | License #ROC338304 | Arizona Registrar of Contractors</p>
+              <p className="text-xs pt-1 text-background/60"> professional | License # | Arizona Registrar of Contractors</p>
             </div>
 
             <ul className="flex gap-3" role="list" aria-label="Social media links">
@@ -294,81 +294,16 @@ export function Footer() {
         </div>
       </div>
 
-      {/* NARI, NKBA, ROC Trust Badges Strip */}
-      <div className="border-t border-background/10 bg-background/5">
-        <div className="container mx-auto px-4 lg:px-8 py-8">
-          <div className="flex flex-wrap items-center justify-center lg:justify-between gap-8 text-center">
-            <div className="text-sm font-medium text-background/60">
-              Verified Professional Affiliations & Credentials:
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
-              <a 
-                href="https://www.nari.org/Find-a-Remodeler?query=ARZ+Home+Remodeling" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center gap-2 grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300 no-underline"
-              >
-                <span className="font-serif font-extrabold text-background text-lg tracking-wider">NARI</span>
-                <span className="text-[10px] text-background/60 leading-none block border-l border-background/20 pl-2 text-left uppercase">Member<br/>National Assoc.<br/>Remodeling Industry</span>
-              </a>
-              <a 
-                href="https://nkba.org/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center gap-2 grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300 no-underline"
-              >
-                <span className="font-serif font-extrabold text-background text-lg tracking-wider">NKBA</span>
-                <span className="text-[10px] text-background/60 leading-none block border-l border-background/20 pl-2 text-left uppercase">Member<br/>National Kitchen<br/>& Bath Assoc.</span>
-              </a>
-              <a 
-                href="https://roc.az.gov/directory?search=338304" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center gap-2 grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300 no-underline"
-              >
-                <span className="font-serif font-bold text-accent text-lg">ROC338304</span>
-                <span className="text-[10px] text-background/60 leading-none block border-l border-background/20 pl-2 text-left uppercase">Arizona Licensed<br/>Bonded & Insured<br/>Contractor</span>
-              </a>
-              <a 
-                href={siteConfig.googleBusinessLink} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center gap-2 grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300 no-underline"
-              >
-                <span className="font-serif font-extrabold text-accent text-lg">★★★★★</span>
-                <span className="text-[10px] text-background/60 leading-none block border-l border-background/20 pl-2 text-left uppercase">Google Verified<br/>{siteConfig.googleRating} Star Rating<br/>{siteConfig.googleReviewsCount}+ Local Reviews</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Local SEO Description Strip */}
-      <div className="border-t border-background/10 bg-background/5 text-background/60 text-[11px] py-8">
-        <div className="container mx-auto px-4 lg:px-8 max-w-6xl text-left">
-          <p className="leading-relaxed mb-4">
-            If you are searching for the <strong>best bathroom remodelers near me</strong> or looking for highly recommended <strong>bathroom remodel companies near me</strong>, ARZ Home Remodeling is your trusted regional partner. We are proud to be recognized among the premier <strong>bath remodeling contractors near me</strong> and <strong>licensed bathroom contractors near me</strong>, delivering elite craftsmanship with our team of expert <strong>bathroom designers near me</strong> and <strong>bathroom renovators near me</strong>. Whether you want to <strong>remodel bathroom near me</strong>, execute a <strong>full bathroom remodel near me</strong>, or are seeking specialized <strong>small bathroom contractors near me</strong> for a customized <strong>small bathroom remodel near me</strong>, our ROC-licensed team handles everything from planning to final inspection.
-          </p>
-          <p className="leading-relaxed">
-            We are also the top choice for specialized bathroom solutions, serving as one of the leading <strong>shower renovation companies</strong> in the East Valley. We design custom walk-in tile showers, handle complex <strong>shower to tub conversions near me</strong>, and perform seamless <strong>tub to shower conversion companies near me</strong> upgrades that resist hard water mineral staining. As a local business, we offer transparent pricing, flexible financing options, and fixed quotes to ensure your home renovations are both beautiful and highly affordable.
-          </p>
-        </div>
-      </div>
+
+
 
       {/* Bottom Bar */}
       <div className="border-t border-background/10">
         <div className="container mx-auto px-4 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-background/70 text-sm">
-              © 2026 {siteConfig.name}. All rights reserved. (cPanel Active - Run 3) | Designed & Developed by{" "}
-              <a
-                href="https://www.imrandigitals.online/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-background/70 hover:text-background transition-colors underline"
-              >
-                Imran Digitals
-              </a>
+              © 2026 {siteConfig.name}. All rights reserved.
             </p>
             <nav aria-label="Legal links" className="flex items-center gap-6">
               <Link href="/privacy-policy/" className="text-background/70 hover:text-background transition-colors text-sm no-underline">

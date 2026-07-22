@@ -33,9 +33,9 @@ export const homeFaqs: HomeFaq[] = [
       "Cost depends on the scope of work, your layout, and the materials you choose - every bathroom is different, so a fair number can't be given without knowing the project. Call us at <a href=\"tel:+15205693339\">(520) 569-3339</a> and we'll walk through your project with you and give you a clear, honest starting range on the spot, followed by a free itemized written estimate before any work begins.",
   },
   {
-    question: "Are you a licensed bathroom remodeling contractor?",
+    question: "Are you a expert bathroom remodeling contractor?",
     answer:
-      "Yes. ARZ Home Remodeling holds an active Arizona ROC license (ROC338304), is fully insured, and is a NARI member.",
+      "Yes. ARZ Home Remodeling holds an active Arizona  license (), is fully insured, and is a NARI member.",
   },
   {
     question: "Do you offer financing?",

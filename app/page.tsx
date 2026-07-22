@@ -12,8 +12,8 @@ import BelowFoldLoader from "@/components/home/below-fold-loader";
 import BlogPreview from "@/components/home/blog-preview";
 
 export const metadata: Metadata = {
-  title: "Bathroom Remodeling in Chandler, AZ | Licensed Contractor ROC338304",
-  description: "For premier bathroom remodeling in chandler, AZ, trust ARZ. Licensed contractor (ROC338304) for custom showers, tub conversions, & tile. Free estimate!",
+  title: "Bathroom Remodeling in Chandler, AZ | Custom Showers & Tile",
+  description: "Upgrade your home with custom showers, premium tile, modern vanities, tub conversions, and complete bathroom renovations in Chandler.",
   keywords: [
     "bathroom remodeling in chandler, AZ",
     "bathroom remodeling chandler",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     "bathroom remodeling contractor chandler"
   ],
   openGraph: {
-    title: "Bathroom Remodeling in Chandler, AZ | Licensed Contractor ROC338304",
-    description: "For premier bathroom remodeling in chandler, AZ, trust ARZ. Licensed contractor (ROC338304) for custom showers, tub conversions, & tile. Free estimate!",
+    title: "Bathroom Remodeling in Chandler, AZ | Custom Showers & Tile",
+    description: "Upgrade your home with custom showers, premium tile, modern vanities, tub conversions, and complete bathroom renovations in Chandler.",
     type: "website",
     url: `${siteConfig.url}/`,
     images: [

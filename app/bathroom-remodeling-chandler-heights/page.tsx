@@ -27,14 +27,14 @@ export const metadata: Metadata = {
   description: "Professional home, kitchen, and bathroom remodeling in Chandler Heights, AZ. Get your custom renovation with a 2-year warranty. Call today!",
   openGraph: {
     title: "Home & Bath Remodeling Chandler Heights AZ | ARZ",
-    description: "Licensed home, kitchen, and bathroom remodeling services in Chandler Heights, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
+    description: "professional home, kitchen, and bathroom remodeling services in Chandler Heights, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
     url: `${siteConfig.url}/bathroom-remodeling-chandler-heights/`,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Home & Bath Remodeling Chandler Heights AZ | ARZ",
-    description: "Licensed home, kitchen, and bathroom remodeling services in Chandler Heights, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
+    description: "professional home, kitchen, and bathroom remodeling services in Chandler Heights, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
     images: [`${siteConfig.url}/images/services/chandler-bathroom-remodel.jpg`],
   },
   alternates: {
@@ -66,7 +66,7 @@ const faqData = [
   {
     question: "What type of warranty do you offer on your remodeling work?",
     answer:
-      "We provide a comprehensive 2-year workmanship warranty on all our remodeling projects. If any installation or structural issue arises due to our craftsmanship within two years of project completion, our team will return and resolve it at no cost to you. We stand behind our work to ensure your complete peace of mind."
+      "We provide a comprehensive workmanship warranty on all our remodeling projects. If any installation or structural issue arises due to our craftsmanship within two years of project completion, our team will return and resolve it at no cost to you. We stand behind our work to ensure your complete peace of mind."
   },
 ];
 
@@ -97,12 +97,12 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "ROC Licensed & Bonded",
-    body: "Fully licensed by the state of Arizona (ROC338304) and fully insured for your ultimate safety and peace of mind.",
+    title: " bonded",
+    body: "Fully professional by the state of Arizona () and fully insured for your ultimate safety and peace of mind.",
   },
   {
     icon: Star,
-    title: "2-Year Workmanship Warranty",
+    title: "workmanship warranty",
     body: "We stand firmly behind our work. If any installation issues occur within two years, we resolve them completely free.",
   },
   {
@@ -137,7 +137,7 @@ export default function ChandlerHeightsPage() {
       ]} />
       <ServiceSchema
         serviceName="Home & Bathroom Remodeling in Chandler Heights, AZ"
-        serviceDescription="Licensed general remodeling contractor serving Chandler Heights, AZ. Walk-in shower installation, open-concept kitchen renovations, custom cabinets, and full home remodeling."
+        serviceDescription="professional general remodeling contractor serving Chandler Heights, AZ. Walk-in shower installation, open-concept kitchen renovations, custom cabinets, and full home remodeling."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-chandler-heights/`}
       />
       <FAQSchema faqs={faqData} />
@@ -171,7 +171,7 @@ export default function ChandlerHeightsPage() {
               Nestled in the scenic southern foothills of the East Valley, Chandler Heights is a unique community defined by its spacious estate lots, historic citrus groves, custom ranches, and newer residential pockets. While many of the properties in this area offer beautiful views and generous square footage, the interior layouts are often outdated. Closed-off kitchens, cramped master bathrooms, obsolete lighting fixtures, and standard builder-grade finishes can make these gorgeous homes feel dark and disjointed.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At <Link href="/" className="text-primary hover:underline font-medium">ARZ Home Remodeling</Link>, we specialize in transforming older properties into modern, highly functional masterpieces. Whether you want to convert an old master bath garden tub into a beautiful walk-in tiled shower, open up a load-bearing wall to create a massive gourmet kitchen, or replace worn carpeting with durable luxury vinyl plank flooring throughout your entire home, we bring years of licensed Arizona experience to your door. We combine local design sensibilities with premium materials like <Link href="/blog/schluter-kerdi-vs-redgard-arizona/" className="text-primary hover:underline font-medium">Schluter-KERDI waterproofing</Link> and stain-resistant epoxy grouts to construct spaces that are as durable as they are stunning.
+              At <Link href="/" className="text-primary hover:underline font-medium">ARZ Home Remodeling</Link>, we specialize in transforming older properties into modern, highly functional masterpieces. Whether you want to convert an old master bath garden tub into a beautiful walk-in tiled shower, open up a load-bearing wall to create a massive gourmet kitchen, or replace worn carpeting with durable luxury vinyl plank flooring throughout your entire home, we bring years of professional Arizona experience to your door. We combine local design sensibilities with premium materials like <Link href="/blog/schluter-kerdi-vs-redgard-arizona/" className="text-primary hover:underline font-medium">Schluter-KERDI waterproofing</Link> and stain-resistant epoxy grouts to construct spaces that are as durable as they are stunning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">

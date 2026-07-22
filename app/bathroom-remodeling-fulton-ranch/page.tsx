@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {title: "Fulton Ranch Bathroom Remodeling | Free Estimates | ARZ",description: "Looking for a licensed bath remodeler in Fulton Ranch, Chandler? ARZ specializes in custom tile showers, layouts, & fixtures. Call for your free Call!",
+export const metadata: Metadata = {title: "Fulton Ranch Bathroom Remodeling | Free Estimates | ARZ",description: "Looking for a professional bath remodeler in Fulton Ranch, Chandler? ARZ specializes in custom tile showers, layouts, & fixtures. Call for your free Call!",
   openGraph: {title: "Fulton Ranch Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore fulton ranch bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/bathroom-remodeling-fulton-ranch/`,
     type: "website",
@@ -50,7 +50,7 @@ const fultonRanchFaqs = [
   {
     question: "What is your workmanship warranty for Fulton Ranch remodels?",
     answer:
-      "We offer a 2-year workmanship warranty on all our remodeling services. We stand behind our installation of tile, waterproof membranes, plumbing extensions, and electrical routing. If any issues arise, we resolve them at no cost."
+      "We offer a workmanship warranty on all our remodeling services. We stand behind our installation of tile, waterproof membranes, plumbing extensions, and electrical routing. If any issues arise, we resolve them at no cost."
   },
   {
     question: "Can you convert my garden tub into a walk-in shower?",
@@ -58,9 +58,9 @@ const fultonRanchFaqs = [
       "Yes. Replacing unused garden tubs with spacious walk-in showers is our most requested service. We design custom curbless entries, frameless glass enclosures, built-in shampoo niches, and integrated seating."
   },
   {
-    question: "Are you licensed to perform plumbing and electrical work in Arizona?",
+    question: "Are you professional to perform plumbing and electrical work in Arizona?",
     answer:
-      "Yes, we are fully licensed by the Arizona Registrar of Contractors under license number ROC338304. We handle all city permits and inspections for plumbing relocation, layout expansions, and electrical upgrades."
+      "Yes, we are fully professional by the Arizona Registrar of Contractors under license number . We handle all city permits and inspections for plumbing relocation, layout expansions, and electrical upgrades."
   },
 ];
 
@@ -91,7 +91,7 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "ROC Licensed (ROC338304)",
+    title: " professional ()",
     body: "Rest assured that all work is completed under active Arizona contractor registration and full insurance.",
   },
   {
@@ -131,7 +131,7 @@ export default function FultonRanchPage() {
       ]} />
       <ServiceSchema
         serviceName="Bathroom Remodeling in Fulton Ranch, Chandler"
-        serviceDescription="Licensed bathroom contractor specializing in master bathroom remodeling, walk-in showers, and custom tile installation in Fulton Ranch, Chandler, AZ."
+        serviceDescription="expert bathroom contractor specializing in master bathroom remodeling, walk-in showers, and custom tile installation in Fulton Ranch, Chandler, AZ."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-fulton-ranch/`}
       />
       <FAQSchema faqs={fultonRanchFaqs} />
@@ -146,7 +146,7 @@ export default function FultonRanchPage() {
         <ServiceHero
           title="Custom Bathroom Remodeling in Fulton Ranch, Chandler"
           subtitle="Luxury Master Renovations & Walk-In Showers"
-          description="Upgrade your Fulton Ranch property with the East Valley's premier custom builder. Specializing in high-end tile, curbless walk-in showers, and master suite layouts, we offer fixed written quotes and ROC Licensed peace of mind."
+          description="Upgrade your Fulton Ranch property with the East Valley's premier custom builder. Specializing in high-end tile, curbless walk-in showers, and master suite layouts, we offer fixed written quotes and  professional peace of mind."
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },

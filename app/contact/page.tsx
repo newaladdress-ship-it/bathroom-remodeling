@@ -29,8 +29,8 @@ const contactFaqs = [
     answer: "Project costs vary based on the scope of work and materials selected. We provide transparent, itemized estimates after visiting your home to ensure you have a clear understanding of the investment required for your dream bathroom."
   },
   {
-    question: "Are your bathroom remodeling services licensed and insured?",
-    answer: "Yes, ARZ Home Remodeling is fully licensed (Licensed Contractor - ROC #338304), bonded, and insured. We have over 15 years of experience serving Chandler and the East Valley, ensuring every project meets the highest standards of safety and quality."
+    question: "Are your bathroom remodeling services fully insured?",
+    answer: "Yes, ARZ Home Remodeling is fully professional, bonded, and insured. We have extensive experience serving Chandler and the East Valley, ensuring every project meets the highest standards of safety and quality."
   },
   {
     question: "Do you offer financing for bathroom remodeling projects?",
@@ -62,7 +62,7 @@ export default function ContactPage() {
                 Speak to a Project Supervisor in Chandler, AZ
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                Ready to get started? If you are looking for highly recommended <strong>licensed bathroom contractors near me</strong> to deliver an <strong>affordable bathroom remodel near me</strong>, give us a call. We typically answer immediately or return voicemails within 2 hours. We&apos;ll schedule a free in-home visit to measure your space, discuss your design vision, and provide a written estimate with no obligation.
+                Ready to get started? If you are looking for highly recommended <strong>expert bathroom contractors near me</strong> to deliver an <strong>affordable bathroom remodel near me</strong>, give us a call. We typically answer immediately or return voicemails within 2 hours. We&apos;ll schedule a free in-home visit to measure your space, discuss your design vision, and provide a written estimate with no obligation.
               </p>
             </div>
           </div>
@@ -132,24 +132,7 @@ export default function ContactPage() {
         <ContactSection />
 
 
-        {/* Trust & Credentials */}
-        <section className="py-16 bg-foreground text-background">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              {[
-                { label: "Licensed & Bonded", value: "✓" },
-                { label: siteConfig.license, value: "✓" },
-                { label: "15+ Years", value: "Experienced" },
-                { label: "500+ Projects", value: "Completed" }
-              ].map((item, index) => (
-                <div key={index}>
-                  <p className="text-2xl font-bold text-primary mb-2">{item.value}</p>
-                  <p className="text-sm text-background/80">{item.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
 
         {/* Google Maps Section */}
         <section className="py-20 md:py-28">

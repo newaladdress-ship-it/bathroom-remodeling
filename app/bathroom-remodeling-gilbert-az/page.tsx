@@ -22,13 +22,13 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {title: "Licensed Bath Renovations Gilbert | Custom Tile | ARZ",description: "Beautiful bathroom renovations in Gilbert, AZ. High-quality curbless showers, tile installation, and vanity updates. Schedule a free quote today!",
-  openGraph: {title: "Bathroom Remodeling Gilbert AZ | Free Estimate",description: "Quality bathroom remodeling in Gilbert, AZ. Walk-in showers, tile work & full bath renovations. Licensed ROC338304 & 2-year warranty. Call (520) 569-3339.",
+export const metadata: Metadata = {title: "professional Bath Renovations Gilbert | Custom Tile | ARZ",description: "Beautiful bathroom renovations in Gilbert, AZ. High-quality curbless showers, tile installation, and vanity updates. Schedule a free quote today!",
+  openGraph: {title: "Bathroom Remodeling Gilbert AZ | Free Estimate",description: "Quality bathroom remodeling in Gilbert, AZ. Walk-in showers, tile work & full bath renovations. General Contractor & 2-year warranty. Call (520) 569-3339.",
     url: `${siteConfig.url}/bathroom-remodeling-gilbert-az/`,
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",title: "Bathroom Remodeling Gilbert AZ | Free Estimate",description: "Quality bathroom remodeling in Gilbert, AZ. Walk-in showers, tile work & full bath renovations. Licensed ROC338304 & 2-year warranty. Call (520) 569-3339.",
+    card: "summary_large_image",title: "Bathroom Remodeling Gilbert AZ | Free Estimate",description: "Quality bathroom remodeling in Gilbert, AZ. Walk-in showers, tile work & full bath renovations. General Contractor & 2-year warranty. Call (520) 569-3339.",
     images: [`${siteConfig.url}/images/bathroom-remodeling-gilbert.jpg`],
   },
   alternates: {
@@ -76,12 +76,12 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "AZ Licensed & Insured",
+    title: "AZ fully insured",
     body: "Every project fully covered. We carry all required Arizona contractor licensing.",
   },
   {
     icon: Star,
-    title: "2-Year Workmanship Warranty",
+    title: "workmanship warranty",
     body: "We stand behind every tile and seam. If it fails within two years, we fix it at no charge.",
   },
   {
@@ -151,7 +151,7 @@ export default function GilbertPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Gilbert Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-gilbert-az/" } ]} />
 <ServiceSchema
         serviceName="Bathroom Remodeling in Gilbert, Arizona"
-        serviceDescription="Licensed bathroom remodeling contractor serving Gilbert, AZ. Walk-in shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving Morrison Ranch, Power Ranch, Val Vista Lakes, and all of Gilbert."
+        serviceDescription="expert bathroom remodeling contractor serving Gilbert, AZ. Walk-in shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving Morrison Ranch, Power Ranch, Val Vista Lakes, and all of Gilbert."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-gilbert-az/`}
       />
       <FAQSchema faqs={gilbertFaqs} />
@@ -164,9 +164,9 @@ export default function GilbertPage() {
       <main>
         {/* HERO */}
         <ServiceHero
-          title="Licensed Bathroom Remodeling in Gilbert, AZ"
+          title="expert bathroom remodeling in Gilbert, AZ"
           subtitle="Luxury Transformations & Quality Craftsmanship"
-          description="Transform your Gilbert home with the East Valley's trusted remodeling experts. From custom walk-in showers in Power Ranch to master suite renovations in Morrison Ranch: we deliver stunning results with a fixed-price guarantee and ROC Licensed peace of mind."
+          description="Transform your Gilbert home with the East Valley's trusted remodeling experts. From custom walk-in showers in Power Ranch to master suite renovations in Morrison Ranch: we deliver stunning results with a fixed-price guarantee and  professional peace of mind."
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -181,7 +181,7 @@ export default function GilbertPage() {
               Your bathroom is a sanctuary where you begin and end your day, yet many Gilbert homes built during the rapid expansions of the 1990s and early 2000s are showing significant wear. Builder-grade acrylic surrounds yellow and crack, structural subfloors leak from age, and massive garden tubs sit unused, consuming valuable footprint. Furthermore, Gilbert's mineral-rich water supply accelerates white calcium scale buildup, clogging fixtures and staining porous stone. If you are planning to update your space, our specialized team delivers durable, high-density craftsmanship designed for Arizona's unique environment.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we specialize in delivering comprehensive, custom bathroom remodeling in Gilbert, AZ. From zero-threshold, curbless walk-in showers in Power Ranch to high-end master suite makeovers in Morrison Ranch and Val Vista Lakes, we handle the entire project under a single, fixed-price contract. We are actively licensed with the Arizona Registrar of Contractors (ROC #338304), providing services across communities in the <span className="text-primary font-semibold">85233, 85234, 85295, 85296, 85297, and 85298</span> ZIP codes.
+              At ARZ Home Remodeling, we specialize in delivering comprehensive, custom bathroom remodeling in Gilbert, AZ. From zero-threshold, curbless walk-in showers in Power Ranch to high-end master suite makeovers in Morrison Ranch and Val Vista Lakes, we handle the entire project under a single, fixed-price contract. We are actively professional with the Arizona Registrar of Contractors (), providing services across communities in the <span className="text-primary font-semibold">85233, 85234, 85295, 85296, 85297, and 85298</span> ZIP codes.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Building codes and municipal oversight are critical for safety and home resale value. In the Town of Gilbert, shifting plumbing fixtures, removing load-bearing partitions, or adding dedicated electrical circuits requires formal permit submittals and code inspections. We handle all design planning and permit filings directly with the **Town of Gilbert Development Services Department** (located at the civic center complex on Civic Center Drive). We ensure that every wall modification, drain line slope, and ASSE 1016 anti-scald valve replacement complies with local residential code guidelines.

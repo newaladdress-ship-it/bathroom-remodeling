@@ -27,14 +27,14 @@ export const metadata: Metadata = {
   description: "Professional home, kitchen, and bathroom remodeling in Pecos Ranch, AZ. Get your custom renovation with a 2-year warranty. Call today!",
   openGraph: {
     title: "Home & Bath Remodeling Pecos Ranch AZ | ARZ",
-    description: "Licensed home, kitchen, and bathroom remodeling services in Pecos Ranch, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
+    description: "professional home, kitchen, and bathroom remodeling services in Pecos Ranch, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
     url: `${siteConfig.url}/bathroom-remodeling-pecos-ranch/`,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Home & Bath Remodeling Pecos Ranch AZ | ARZ",
-    description: "Licensed home, kitchen, and bathroom remodeling services in Pecos Ranch, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
+    description: "professional home, kitchen, and bathroom remodeling services in Pecos Ranch, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
     images: [`${siteConfig.url}/images/services/chandler-bathroom-remodel.jpg`],
   },
   alternates: {
@@ -66,7 +66,7 @@ const faqData = [
   {
     question: "What is your warranty policy for custom home renovations?",
     answer:
-      "We stand behind all of our construction work with a comprehensive 2-year workmanship warranty. If any structural, plumbing, or installation issue arises due to our craftsmanship within two years of completing your project, our team will return and repair it at absolutely no cost to you."
+      "We stand behind all of our construction work with a comprehensive workmanship warranty. If any structural, plumbing, or installation issue arises due to our craftsmanship within two years of completing your project, our team will return and repair it at absolutely no cost to you."
   },
 ];
 
@@ -97,12 +97,12 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "ROC Licensed & Bonded",
-    body: "Fully licensed by the state of Arizona (ROC338304) and fully insured for your ultimate safety and peace of mind.",
+    title: " bonded",
+    body: "Fully professional by the state of Arizona () and fully insured for your ultimate safety and peace of mind.",
   },
   {
     icon: Star,
-    title: "2-Year Workmanship Warranty",
+    title: "workmanship warranty",
     body: "We stand firmly behind our work. If any installation issues occur within two years, we resolve them completely free.",
   },
   {
@@ -137,7 +137,7 @@ export default function PecosRanchPage() {
       ]} />
       <ServiceSchema
         serviceName="Home & Bathroom Remodeling in Pecos Ranch, AZ"
-        serviceDescription="Licensed general remodeling contractor serving Pecos Ranch, Chandler, AZ. Custom walk-in showers, open-concept kitchens, custom cabinets, and full home remodeling."
+        serviceDescription="professional general remodeling contractor serving Pecos Ranch, Chandler, AZ. Custom walk-in showers, open-concept kitchens, custom cabinets, and full home remodeling."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-pecos-ranch/`}
       />
       <FAQSchema faqs={faqData} />
@@ -171,7 +171,7 @@ export default function PecosRanchPage() {
               Pecos Ranch is an established, highly desirable master-planned community in central-west Chandler. Famous for its scenic community lakes, greenbelts, tennis courts, and neighborhood park, this community features some of the most sought-after properties in the East Valley. Located near the intersection of Dobson Road and Pecos Road, it offers immediate access to the Price Corridor, the Loop 202 Freeway, and the Intel Ocotillo Campus. However, because a significant portion of these residences were built during the late 1980s and 1990s, their interiors are frequently showing their age. Closed-off kitchens, cramped master bathrooms, obsolete lighting fixtures, and standard builder-grade finishes make these otherwise premium homes feel dark and dated.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At <Link href="/" className="text-primary hover:underline font-medium">ARZ Home Remodeling</Link>, we specialize in transforming older master-planned properties into modern, highly functional masterpieces. Whether you want to convert an old master bath garden tub into a beautiful walk-in tiled shower, open up a load-bearing wall to create a massive gourmet kitchen, or replace worn carpeting with durable luxury vinyl plank flooring throughout your entire home, we bring years of licensed Arizona experience to your door. We combine local design sensibilities with premium materials like <Link href="/blog/schluter-kerdi-vs-redgard-arizona/" className="text-primary hover:underline font-medium">Schluter-KERDI waterproofing</Link> and stain-resistant epoxy grouts to construct spaces that are as durable as they are stunning.
+              At <Link href="/" className="text-primary hover:underline font-medium">ARZ Home Remodeling</Link>, we specialize in transforming older master-planned properties into modern, highly functional masterpieces. Whether you want to convert an old master bath garden tub into a beautiful walk-in tiled shower, open up a load-bearing wall to create a massive gourmet kitchen, or replace worn carpeting with durable luxury vinyl plank flooring throughout your entire home, we bring years of professional Arizona experience to your door. We combine local design sensibilities with premium materials like <Link href="/blog/schluter-kerdi-vs-redgard-arizona/" className="text-primary hover:underline font-medium">Schluter-KERDI waterproofing</Link> and stain-resistant epoxy grouts to construct spaces that are as durable as they are stunning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">

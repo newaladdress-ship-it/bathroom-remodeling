@@ -22,13 +22,13 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {title: "Mesa Bathroom Remodeling | Free Estimates | ARZ",description: "Looking for a licensed bath remodeler in Mesa, AZ? ARZ specializes in custom tile showers, layouts, & fixtures. Call for your free consultation!",
-  openGraph: {title: "Bathroom Remodeling Mesa AZ | Licensed Contractor",description: "Professional bathroom remodeling in Mesa, AZ. Custom showers, vanities & tile. Fixed pricing, 2-year warranty. Call ARZ today: (520) 569-3339. Free estimate.",
+export const metadata: Metadata = {title: "Mesa Bathroom Remodeling | Free Estimates | ARZ",description: "Looking for a professional bath remodeler in Mesa, AZ? ARZ specializes in custom tile showers, layouts, & fixtures. Call for your free consultation!",
+  openGraph: {title: "Bathroom Remodeling Mesa AZ | professional contractor",description: "Professional bathroom remodeling in Mesa, AZ. Custom showers, vanities & tile. Fixed pricing, 2-year warranty. Call ARZ today: (520) 569-3339. Free estimate.",
     url: `${siteConfig.url}/bathroom-remodeling-mesa-az/`,
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",title: "Bathroom Remodeling Mesa AZ | Licensed Contractor",description: "Professional bathroom remodeling in Mesa, AZ. Custom showers, vanities & tile. Fixed pricing, 2-year warranty. Call ARZ today: (520) 569-3339. Free estimate.",
+    card: "summary_large_image",title: "Bathroom Remodeling Mesa AZ | professional contractor",description: "Professional bathroom remodeling in Mesa, AZ. Custom showers, vanities & tile. Fixed pricing, 2-year warranty. Call ARZ today: (520) 569-3339. Free estimate.",
     images: [`${siteConfig.url}/images/bathroom-remodeling-mesa.jpg`],
   },
   alternates: {
@@ -76,12 +76,12 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "AZ Licensed & Insured",
+    title: "AZ fully insured",
     body: "Every project fully covered. We carry all required Arizona contractor licensing.",
   },
   {
     icon: Star,
-    title: "2-Year Workmanship Warranty",
+    title: "workmanship warranty",
     body: "We stand behind every tile and seam. If it fails within two years, we fix it at no charge.",
   },
   {
@@ -151,7 +151,7 @@ export default function MesaPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Mesa Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-mesa-az/" } ]} />
 <ServiceSchema
         serviceName="Bathroom Remodeling in Mesa, Arizona"
-        serviceDescription="Licensed bathroom remodeling contractor serving Mesa, AZ. Custom shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving Dobson Ranch, Las Sendas, Eastmark, and all of Mesa."
+        serviceDescription="expert bathroom remodeling contractor serving Mesa, AZ. Custom shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving Dobson Ranch, Las Sendas, Eastmark, and all of Mesa."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-mesa-az/`}
       />
       <FAQSchema faqs={mesaFaqs} />
@@ -164,9 +164,9 @@ export default function MesaPage() {
       <main>
         {/* HERO */}
         <ServiceHero
-          title="Licensed Bathroom Remodeling in Mesa, AZ"
+          title="expert bathroom remodeling in Mesa, AZ"
           subtitle="Expert Transformations & Custom Shower Designs"
-          description="Build the bathroom you've always wanted with Mesa's trusted remodeling team. From custom walk-in showers in Las Sendas to master suite renovations in Eastmark: we deliver high-end results with ROC Licensed expertise and fixed-price guarantees."
+          description="Build the bathroom you've always wanted with Mesa's trusted remodeling team. From custom walk-in showers in Las Sendas to master suite renovations in Eastmark: we deliver high-end results with  professional expertise and fixed-price guarantees."
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -181,7 +181,7 @@ export default function MesaPage() {
               Your bathroom is a primary living space that directly influences your daily comfort and your home’s value. In Mesa, AZ, homes built from the mid-20th century to the early 2000s are often ready for significant updates. Outdated layout designs, leaky fiberglass enclosures, and plumbing systems damaged by heavy hard water scale are common problems. Expanding a shower enclosure, upgrading a vanity layout, or executing a modern tub-to-shower conversion are key updates that improve utility. If you are searching for custom **bathroom remodeling in Mesa, AZ**, our local design-build team is here to deliver high-density, leak-proof craftsmanship.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we provide end-to-end design and construction services tailored to the unique architectural profiles of Mesa neighborhoods. Whether you want to modernize a hall bathroom in Dobson Ranch, convert a garden tub to a walk-in shower in Las Sendas, or design a luxury master suite retreat in Eastmark, we handle the entire project. We hold active contracting license ROC #338304 and serve homeowners across ZIP codes **85201, 85202, 85203, 85204, 85205, 85206, 85207, 85208, 85212, and 85213**.
+              At ARZ Home Remodeling, we provide end-to-end design and construction services tailored to the unique architectural profiles of Mesa neighborhoods. Whether you want to modernize a hall bathroom in Dobson Ranch, convert a garden tub to a walk-in shower in Las Sendas, or design a luxury master suite retreat in Eastmark, we handle the entire project. We hold active contracting license  and serve homeowners across ZIP codes **85201, 85202, 85203, 85204, 85205, 85206, 85207, 85208, 85212, and 85213**.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Relocating plumbing lines, expanding shower framing, or running new electrical circuits in Mesa requires strict code compliance. The **City of Mesa Building Safety Division** (located at 55 N Center Street) requires formal building permits and field inspections for these structural and mechanical changes. Our team handles the entire permit administration process, drafting code-compliant plans, coordinating inspections for in-wall rough-ins, and ensuring that all PEX supply lines, ASSE-certified anti-scald valves, and GFCI circuits meet current residential safety standards.

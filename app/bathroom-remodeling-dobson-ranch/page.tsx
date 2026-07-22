@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {title: "Licensed Bath Renovations Dobson Ranch | Custom Tile | ARZ",description: "Beautiful bathroom renovations in Dobson Ranch, Mesa. High-quality curbless showers, tile installation, and vanity updates. Schedule a free quote today!",
+export const metadata: Metadata = {title: "professional Bath Renovations Dobson Ranch | Custom Tile | ARZ",description: "Beautiful bathroom renovations in Dobson Ranch, Mesa. High-quality curbless showers, tile installation, and vanity updates. Schedule a free quote today!",
   openGraph: {title: "Dobson Ranch Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore dobson ranch bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/bathroom-remodeling-dobson-ranch/`,
     type: "website",
@@ -91,12 +91,12 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "Licensed AZ Contractor",
-    body: "Fully licensed by the state of Arizona (ROC338304), carrying full liability and workers' comp.",
+    title: "professional AZ Contractor",
+    body: "Fully professional by the state of Arizona (), carrying full liability and workers' comp.",
   },
   {
     icon: Star,
-    title: "2-Year Workmanship Warranty",
+    title: "workmanship warranty",
     body: "We stand behind all tile and grout installations. If it fails within two years, we fix it at no cost.",
   },
   {
@@ -131,7 +131,7 @@ export default function DobsonRanchPage() {
       ]} />
       <ServiceSchema
         serviceName="Bathroom Remodeling in Dobson Ranch, Mesa"
-        serviceDescription="Licensed bathroom contractor specializing in layout renovations, small bathroom solutions, and custom walk-in showers in Dobson Ranch, Mesa/Chandler AZ."
+        serviceDescription="expert bathroom contractor specializing in layout renovations, small bathroom solutions, and custom walk-in showers in Dobson Ranch, Mesa/Chandler AZ."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-dobson-ranch/`}
       />
       <FAQSchema faqs={dobsonRanchFaqs} />
@@ -146,7 +146,7 @@ export default function DobsonRanchPage() {
         <ServiceHero
           title="Custom Bathroom Remodeling in Dobson Ranch, AZ"
           subtitle="Modern Transformations for Older Layouts"
-          description="Upgrade your Dobson Ranch home with the East Valley's trusted remodeling experts. From small guest bath optimizations to complete master suite expansions, we deliver elite tile and plumbing work with ROC Licensed peace of mind."
+          description="Upgrade your Dobson Ranch home with the East Valley's trusted remodeling experts. From small guest bath optimizations to complete master suite expansions, we deliver elite tile and plumbing work with  professional peace of mind."
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },

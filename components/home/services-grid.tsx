@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, ShowerHead, Bath, LayoutGrid, Sparkles, Accessibility, Layers } from "lucide-react";
+import { ArrowUpRight, ShowerHead, Bath, LayoutGrid, Sparkles, Accessibility, ArrowRightLeft, ArrowUpDown, Lightbulb, Droplets, Users } from "lucide-react";
 
 const services = [
   {
@@ -14,50 +14,106 @@ const services = [
   {
     name: "Tub to Shower Conversion",
     href: "/tub-to-shower-conversion/",
-    description: "We demolish garden tubs, expand drain lines to code, and build a custom walk-in shower. ASSE 1016 scald-prevention valves included.",
-    icon: Bath,
+    description: "Convert your unused bathtub into a spacious, modern walk-in shower with expanded drain lines and scald-prevention valves.",
+    icon: ArrowRightLeft,
     image: "/images/services/tub-to-shower-conversion.jpg",
     alt: "Tub to shower conversion with open walk-in design in Chandler AZ",
   },
   {
+    name: "Bathtub Remodeling",
+    href: "/bathtub-remodeling/",
+    description: "Upgrade your bathroom with custom bathtub remodeling in Chandler, AZ. Soaking tubs, freestanding tub installations, & custom surrounds.",
+    icon: Bath,
+    image: "/images/services/bathtub-remodeling.jpg",
+    alt: "Freestanding bathtub remodel with modern fixtures in a luxury bathroom",
+  },
+  {
     name: "Master Bathroom Remodel",
     href: "/master-bathroom-remodel/",
-    description: "Full primary suite renovations — double vanities, custom quartz countertops, freestanding soaking tubs, and detailed lighting under one ROC license.",
+    description: "Full primary suite renovations — double vanities, custom quartz countertops, freestanding soaking tubs, and detailed lighting.",
     icon: Sparkles,
     image: "/images/services/master-bathroom-remodel.jpg",
     alt: "Luxury master bathroom remodel with double vanity and soaking tub",
   },
   {
-    name: "Bathroom Tile Installation",
-    href: "/bathroom-tile-installation/",
-    description: "Non-porous porcelain tile (ASTM C373) on floors and shower walls with solid epoxy grout (ANSI A118.3) to repel hard water minerals.",
-    icon: LayoutGrid,
-    image: "/images/services/bathroom-tile-installation.jpg",
-    alt: "Professional bathroom tile installation with large format porcelain tiles",
-  },
-  {
-    name: "Vanity & Countertop Installation",
-    href: "/bathroom-vanity-installation/",
-    description: "Custom vanities built from marine plywood with quartz or granite countertops, undermount sinks, and matte black or brass plumbing fixtures.",
-    icon: Layers,
-    image: "/images/services/vanity-countertop-installation.jpg",
-    alt: "Double vanity installation with quartz countertop in a Chandler bathroom",
-  },
-  {
-    name: "Small & Guest Bathroom Remodel",
+    name: "Small Bathroom Remodeling",
     href: "/small-bathroom-remodeling/",
-    description: "We maximize tight powder rooms with space-saving floating vanities, comfort-height toilets, and custom tiling to enhance light and value.",
-    icon: Bath,
+    description: "Maximize small bathroom space with floating vanities, comfort-height toilets, and smart tiling that makes rooms feel larger.",
+    icon: LayoutGrid,
     image: "/images/services/small-bathroom-remodel.jpg",
-    alt: "Small guest bathroom remodel with modern fixtures and bright tiling",
+    alt: "Small bathroom remodel with space-saving floating vanity and modern tile",
+  },
+  {
+    name: "Guest Bathroom Remodeling",
+    href: "/guest-bathroom-remodeling/",
+    description: "High-impact updates for secondary bathrooms, powder rooms, and guest suites — fresh tile, new vanity, modern fixtures.",
+    icon: Users,
+    image: "/images/services/guest-bathroom-remodeling.jpg",
+    alt: "Remodeled guest bathroom with fresh tile, new vanity, and modern fixtures",
+  },
+  {
+    name: "Luxury Bathroom Remodeling",
+    href: "/luxury-bathroom-remodeling/",
+    description: "Premium master bath transformations with high-end finishes, heated floors, spa showers, and designer tile.",
+    icon: Sparkles,
+    image: "/images/services/luxury-bathroom-remodeling.jpg",
+    alt: "Luxury bathroom remodel with spa shower, freestanding tub, and designer tile",
+  },
+  {
+    name: "ADA Bathroom Remodeling",
+    href: "/ada-bathroom-remodeling/",
+    description: "Safe, ADA-compliant updates with curbless showers, structural grab bar backing, and slip-resistant mosaic tile.",
+    icon: Accessibility,
+    image: "/images/services/ada-bathroom-remodeling.jpg",
+    alt: "ADA accessible bathroom with grab bars, curbless shower, and safety features",
   },
   {
     name: "Handicap Accessible Bathroom",
     href: "/handicap-accessible-bathroom/",
-    description: "ADA-compliant updates with curbless showers, structural grab bar backing, and slip-resistant mosaic tile rated COF 0.60+ for senior safety.",
+    description: "ADA-compliant updates with curbless showers, structural grab bar backing, and slip-resistant mosaic tile.",
     icon: Accessibility,
     image: "/images/services/handicap-accessible-bathroom.jpg",
     alt: "Handicap accessible bathroom with grab bars and curbless shower entry",
+  },
+  {
+    name: "Bathroom Flooring Installation",
+    href: "/bathroom-flooring-installation/",
+    description: "Professional bathroom flooring with durable, water-resistant porcelain or luxury vinyl plank — properly leveled and waterproofed.",
+    icon: ArrowUpDown,
+    image: "/images/services/bathroom-flooring-installation.jpg",
+    alt: "Bathroom flooring installation with large format porcelain tiles in modern bathroom",
+  },
+  {
+    name: "Bathroom Lighting Installation",
+    href: "/bathroom-lighting-installation/",
+    description: "Modern bathroom lighting design and installation for enhanced ambiance — vanity bars, recessed cans, and dimmer controls.",
+    icon: Lightbulb,
+    image: "/images/services/bathroom-lighting-installation.jpg",
+    alt: "Modern bathroom lighting installation with LED vanity lights and recessed cans",
+  },
+  {
+    name: "Bathroom Tile Installation",
+    href: "/bathroom-tile-installation/",
+    description: "Non-porous porcelain tile on floors and shower walls with solid epoxy grout to repel hard water minerals.",
+    icon: Droplets,
+    image: "/images/services/bathroom-tile-installation.jpg",
+    alt: "Professional bathroom tile installation with large format porcelain tiles",
+  },
+  {
+    name: "Bathroom Vanity Installation",
+    href: "/bathroom-vanity-installation/",
+    description: "Expert vanity installation with marine plywood boxes, quartz countertops, undermount sinks, and modern fixtures.",
+    icon: Sparkles,
+    image: "/images/services/vanity-countertop-installation.jpg",
+    alt: "Double vanity installation with quartz countertop in a Chandler bathroom",
+  },
+  {
+    name: "Cabinet & Countertop Installation",
+    href: "/cabinet-countertop-installation/",
+    description: "Custom cabinet and countertop installation with granite, quartz, and marble options — built to last in Arizona's climate.",
+    icon: LayoutGrid,
+    image: "/images/services/cabinet-countertop-installation.jpg",
+    alt: "Custom bathroom cabinet and quartz countertop installation in Chandler AZ",
   },
 ];
 
@@ -68,10 +124,10 @@ export default function ServicesGrid() {
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
           <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Services</span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-6 text-foreground text-balance">
-            What Does Bathroom Remodeling Include?
+            Our Bathroom Remodeling Services
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Licensed <strong>bathroom remodeling in Chandler AZ</strong> covers showers, conversions, tile, vanities, lighting, and full room updates. Pick a service below or call for a whole-bath plan.
+            We provide professional bathroom design and remodeling services. Pick a service below or call for a whole-bath plan.
           </p>
         </div>
 
@@ -115,10 +171,10 @@ export default function ServicesGrid() {
 
         <div className="text-center mt-12">
           <Link
-            href="/services/"
+            href="/contact/"
             className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground rounded-full font-semibold hover:bg-accent/90 transition-colors"
           >
-            See All Services
+            Get a Free Estimate
             <ArrowUpRight className="w-5 h-5" />
           </Link>
         </div>

@@ -42,7 +42,7 @@ const headings = [
 
 export default function StandaloneBlogPost() {
   const publishedDateStr = "June 7, 2026";
-  const author = "Alex Rivers";
+  const author = "ARZ Home Remodeling";
   const readTime = 10;
   const category = "Bathroom Remodeling";
 
@@ -178,7 +178,7 @@ export default function StandaloneBlogPost() {
                     <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-background/10 rounded-full blur-2xl" />
                     <h3 className="font-serif font-bold text-xl mb-3 relative z-10">Chandler&apos;s #1 Remodeler</h3>
                     <p className="text-sm text-primary-foreground/90 mb-6 relative z-10">
-                      Licensed experts serving Chandler, Ocotillo, and all East Valley communities.
+                      professional experts serving Chandler, Ocotillo, and all East Valley communities.
                     </p>
                     <Button asChild variant="secondary" className="w-full bg-background text-primary hover:bg-background/90 relative z-10">
                       <a href={`tel:${siteConfig.phoneClean}`}>Call Now: {siteConfig.phone}</a>
@@ -280,7 +280,7 @@ export default function StandaloneBlogPost() {
 
                     <blockquote>
                       <p>
-                        <strong>Need a quick estimate for your Chandler home?</strong> Contact Mike Hernandez and our team of expert local remodelers today at <strong>(520) 569-3339</strong> to schedule your free, detailed in-home estimate.
+                        <strong>Need a quick estimate for your Chandler home?</strong> Contact our team and our team of expert local remodelers today at <strong>(520) 569-3339</strong> to schedule your free, detailed in-home estimate.
                       </p>
                     </blockquote>
 
@@ -334,7 +334,7 @@ export default function StandaloneBlogPost() {
                       <li className="flex items-start gap-3">
                         <span className="inline-flex items-center justify-center w-5 h-5 border-2 border-primary rounded text-primary font-bold text-xs shrink-0 mt-1">✓</span>
                         <div>
-                          <strong>Active Arizona ROC License:</strong> Ensure the contractor holds an active license with the Arizona Registrar of Contractors. Unlicensed handymen cannot legally perform plumbing modifications or pull city permits. ARZ Home Remodeling is licensed under <strong>ROC #ROC338304</strong>. You can verify any contractor at the <a href="https://roc.az.gov" target="_blank" rel="noopener noreferrer">Arizona ROC Website</a>.
+                          <strong>Active Arizona  License:</strong> Ensure the contractor holds an active license with the Arizona Registrar of Contractors. Unlicensed handymen cannot legally perform plumbing modifications or pull city permits. ARZ Home Remodeling is professional under <strong></strong>. You can verify any contractor at the <a href="https://roc.az.gov" target="_blank" rel="noopener noreferrer">Arizona  Website</a>.
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
@@ -405,7 +405,7 @@ export default function StandaloneBlogPost() {
                       Are you ready to replace your outdated tub with a beautiful, modern walk-in shower? At ARZ Home Remodeling, we specialize in high-end bathroom conversions, custom tiling, and layout transformations across Chandler, Ocotillo, Fulton Ranch, and Sun Lakes.
                     </p>
                     <p>
-                      Contact Mike Hernandez and our team of expert local remodelers today at <strong>(520) 569-3339</strong> to discuss your ideas and schedule your free, itemized project estimate.
+                      Contact our team and our team of expert local remodelers today at <strong>(520) 569-3339</strong> to discuss your ideas and schedule your free, itemized project estimate.
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-4 mt-8">

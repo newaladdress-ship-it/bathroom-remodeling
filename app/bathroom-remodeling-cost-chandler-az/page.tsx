@@ -55,7 +55,7 @@ const faqs = [
   {
     question: "Do you offer financing for bathroom remodels in Chandler?",
     answer:
-      "Yes. We offer financing options and custom monthly payment plans for qualified homeowners. This helps keep your bathroom upgrades affordable while ensuring the job is done by licensed professionals. Contact us today to discuss financing options.",
+      "Yes. We offer financing options and custom monthly payment plans for qualified homeowners. This helps keep your bathroom upgrades affordable while ensuring the job is done by professional professionals. Contact us today to discuss financing options.",
   },
 ];
 

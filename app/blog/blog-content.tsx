@@ -267,7 +267,7 @@ export default function BlogContent({ initialPosts = [], initialCategories = [] 
                 <span className="text-xs font-bold uppercase tracking-[0.3em] mb-4 block opacity-80">Start Your Project</span>
                 <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">Planning a Bathroom Remodel?</h2>
                 <p className="text-lg opacity-90 mb-10 max-w-xl mx-auto">
-                  Explore our design guides, check our costs, or contact our licensed crew in Chandler, AZ to discuss your custom project.
+                  Explore our design guides, check our costs, or contact our professional crew in Chandler, AZ to discuss your custom project.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Button

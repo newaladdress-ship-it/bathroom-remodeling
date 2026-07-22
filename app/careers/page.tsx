@@ -3,12 +3,15 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Briefcase, MapPin, Clock, DollarSign } from "lucide-react";
-import Link from "next/link";
 import { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = {title: "Careers in Bathroom Remodeling | Join ARZ in Chandler AZ",description: "Join our growing crew in Chandler, AZ. We are hiring experienced bathroom remodelers, tile setting experts, and project managers. Apply today!",
-  openGraph: {title: "Remodeling Careers | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore remodeling careers, custom showers, tile, vanities, clear pricing, and free estimates.",
+export const metadata: Metadata = {
+  title: "Careers in Bathroom Remodeling | Join ARZ in Chandler AZ",
+  description: "Join our growing crew in Chandler, AZ. We are hiring experienced bathroom remodelers, tile setting experts, and project managers. Apply today!",
+  openGraph: {
+    title: "Remodeling Careers | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore remodeling careers, custom showers, tile, vanities, and free estimates.",
     url: `${siteConfig.url}/careers/`,
     type: "website",
     images: [
@@ -21,7 +24,8 @@ export const metadata: Metadata = {title: "Careers in Bathroom Remodeling | Join
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Remodeling Careers | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore remodeling careers, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Remodeling Careers | Chandler AZ Bathroom Remodeling",
     images: [`${siteConfig.url}/images/hero-bathroom.jpg`],
   },
   alternates: {
@@ -35,11 +39,11 @@ const jobs = [
     location: "Chandler, AZ",
     type: "Full-time",
     salary: "$50,000 - $70,000/year",
-    description: "Experienced bathroom remodeler needed for residential projects in Chandler and surrounding areas. Must have 3+ years experience in tile work, plumbing, and general remodeling.",
+    description: "Experienced bathroom remodeler needed for residential projects in Chandler and surrounding areas. Must have a solid background in tile work, plumbing, and general remodeling.",
     requirements: [
-      "3+ years bathroom remodeling experience",
+      "Solid background in bathroom remodeling",
       "Knowledge of tile installation and waterproofing",
-      "Valid driver's license",
+      "Valid driver's ID",
       "Own tools preferred",
       "Excellent customer service skills",
     ],
@@ -51,9 +55,9 @@ const jobs = [
     salary: "$45,000 - $65,000/year",
     description: "Skilled tile installer needed for bathroom and shower projects. Must be detail-oriented with excellent craftsmanship and ability to work independently.",
     requirements: [
-      "2+ years tile installation experience",
+      "Solid background in tile installation",
       "Experience with bathroom tile and waterproofing",
-      "Ability to read blueprints",
+      "Ability to read layout blueprints",
       "Reliable transportation",
       "Team player with strong work ethic",
     ],
@@ -63,9 +67,13 @@ const jobs = [
 export default function CareersPage() {
   return (
     <>
-      
-      <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Careers", url: "https://arzhomeremodeling.com/careers/" } ]} />
-<Header />
+      <BreadcrumbSchema 
+        items={[ 
+          { name: "Home", url: `${siteConfig.url}/` }, 
+          { name: "Careers", url: `${siteConfig.url}/careers/` } 
+        ]} 
+      />
+      <Header />
       <main className="pt-24 md:pt-28 lg:pt-32">
         <section className="py-20 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8">
@@ -119,8 +127,8 @@ export default function CareersPage() {
                   </div>
 
                   <Button asChild className="bg-primary hover:bg-primary/90">
-                  <a href={`tel:${siteConfig.phoneClean}`}>Apply Now</a>
-                </Button>
+                    <a href={`tel:${siteConfig.phoneClean}`}>Apply Now</a>
+                  </Button>
                 </div>
               ))}
             </div>
@@ -131,4 +139,3 @@ export default function CareersPage() {
     </>
   );
 }
-

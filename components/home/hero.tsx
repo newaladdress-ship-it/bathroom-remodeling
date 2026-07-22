@@ -34,21 +34,14 @@ export default function Hero() {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-2 pb-4 lg:pt-4 lg:pb-6 flex justify-center hero-container">
         <div className="max-w-5xl mx-auto text-center text-white flex flex-col items-center hero-content">
-          {/* Trust Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-4 text-white text-xs md:text-sm font-semibold tracking-wide uppercase hero-badges">
-            <span className="bg-accent text-accent-foreground px-3.5 py-1.5 rounded-full shadow-sm badge-gold">✓ Licensed ROC #338304</span>
-            <span className="bg-white/15 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10 badge-glass">✓ Bonded & Insured</span>
-            <span className="bg-white/15 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10 badge-glass">✓ Free In-Home Estimate</span>
-          </div>
-
           {/* Title */}
           <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4 tracking-tight hero-title">
-            Bathroom Remodeling in Chandler, AZ - Licensed Experts
+            Bathroom Remodeling in Chandler, AZ
           </h1>
 
           {/* Subhead / Main Copy */}
           <p className="text-sm md:text-base lg:text-lg text-white/90 mb-6 leading-relaxed font-light max-w-4xl hero-description">
-            Looking for premier <strong>bathroom remodeling in chandler, AZ</strong>? If your bathroom is outdated with hard water grout stains and dated vanities, we fix it - with fixed pricing, a licensed crew (ROC #338304), and a 2-year workmanship warranty.
+            Your bathroom should be comfortable, functional, and built to fit your lifestyle. We provide custom bathroom remodeling in Chandler, AZ, including walk-in showers, tile installation, vanity upgrades, tub-to-shower conversions, and complete bathroom renovations. Let us help you create a space you'll enjoy for years to come with a free, no-obligation estimate.
           </p>
 
           {/* Action Buttons */}

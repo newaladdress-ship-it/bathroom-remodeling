@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {title: "Bathroom Remodelers in Maricopa | Custom Showers | ARZ",description: "Upgrade your bathroom in Maricopa, AZ with our licensed crew. Custom showers, double vanities, and premium tiling. Get a free project estimate today!",
+export const metadata: Metadata = {title: "Bathroom Remodelers in Maricopa | Custom Showers | ARZ",description: "Upgrade your bathroom in Maricopa, AZ with our professional crew. Custom showers, double vanities, and premium tiling. Get a free project estimate today!",
   openGraph: {title: "Maricopa Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore maricopa bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/bathroom-remodeling-maricopa-az/`,
     type: "website",
@@ -91,13 +91,13 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "AZ Licensed ROC338304",
-    body: "Fully licensed residential contracting firm, verified with the Arizona Registrar of Contractors.",
+    title: "AZ General Contractor",
+    body: "Fully professional residential contracting firm, verified with the Arizona Registrar of Contractors.",
   },
   {
     icon: Star,
     title: "2-Year Written Warranty",
-    body: "We stand behind every joint, valve, and tile seam with a full 2-year workmanship warranty.",
+    body: "We stand behind every joint, valve, and tile seam with a full workmanship warranty.",
   },
   {
     icon: MapPin,
@@ -149,7 +149,7 @@ const process = [
   { step: "02", title: "In-Home Assessment", body: "We evaluate your current plumbing, take precise measurements, and review catalogs." },
   { step: "03", title: "Detailed Fixed Proposal", body: "You get a transparent, fully itemized quote outlining all labor, materials, and permits." },
   { step: "04", title: "Zoning & Permitting", body: "We pull all necessary permits through Pinal County and City of Maricopa offices." },
-  { step: "05", title: "Execution & Clean Build", body: "Our clean, licensed crew completes all demolition, waterproofing, plumbing, and tiling." },
+  { step: "05", title: "Execution & Clean Build", body: "Our clean, professional crew completes all demolition, waterproofing, plumbing, and tiling." },
   { step: "06", title: "Milestone Walkthrough", body: "You inspect every square inch with our supervisor. 100% satisfaction guarantee." },
 ];
 
@@ -164,7 +164,7 @@ export default function MaricopaPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Maricopa Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-maricopa-az/" } ]} />
       <ServiceSchema
         serviceName="Bathroom Remodeling in Maricopa, Arizona"
-        serviceDescription="Licensed bathroom remodeling contractor serving Maricopa, AZ. Specialized curbless tile walk-in showers, active-adult safety tub conversions, and complete bathroom renovations in Province and Rancho El Dorado."
+        serviceDescription="expert bathroom remodeling contractor serving Maricopa, AZ. Specialized curbless tile walk-in showers, active-adult safety tub conversions, and complete bathroom renovations in Province and Rancho El Dorado."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-maricopa-az/`}
       />
       <FAQSchema faqs={maricopaFaqs} />
@@ -177,7 +177,7 @@ export default function MaricopaPage() {
       <main>
         {/* HERO */}
         <ServiceHero
-          title="Licensed Bathroom Remodeling in Maricopa, AZ"
+          title="expert bathroom remodeling in Maricopa, AZ"
           subtitle="Zero-Threshold Curbless Showers & Full Renovations"
           description="Transform your bathroom into a safe, luxurious, and functional retreat. Specializing in curbless walk-in showers, tub-to-shower conversions, and premium master bathroom renovations tailored for active adults in Province, Rancho El Dorado, and across Maricopa."
           image="/images/services/chandler-bathroom-remodel.jpg"
@@ -191,10 +191,10 @@ export default function MaricopaPage() {
         <section className="py-16 lg:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Maricopa homeowners deserve custom bathrooms built to stand the test of time. Whether you live in a beautiful active adult community like **Province** or a spacious family estate in **Rancho El Dorado**, upgrading your bathroom is one of the most reliable ways to improve daily comfort, enhance accessibility, and boost home resale value. If you've been looking for an expert **bathroom remodel maricopa**, a trusted **bathroom remodeling maricopa**, or a licensed **bath remodeler in maricopa**, our team is ready to serve.
+              Maricopa homeowners deserve custom bathrooms built to stand the test of time. Whether you live in a beautiful active adult community like **Province** or a spacious family estate in **Rancho El Dorado**, upgrading your bathroom is one of the most reliable ways to improve daily comfort, enhance accessibility, and boost home resale value. If you've been looking for an expert **bathroom remodel maricopa**, a trusted **bathroom remodeling maricopa**, or a professional **bath remodeler in maricopa**, our team is ready to serve.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we are proud to offer premium **bathroom remodeling in Maricopa, AZ**. We specialize in senior-friendly **zero-threshold walk-in showers**, custom tub conversions, and high-end master bathroom transformations across **85138 and 85139**. We are fully licensed under **ROC #ROC338304**, ensuring your home receives professional-grade craftsmanship, absolute integrity, and fixed-price contracts.
+              At ARZ Home Remodeling, we are proud to offer premium **bathroom remodeling in Maricopa, AZ**. We specialize in senior-friendly **zero-threshold walk-in showers**, custom tub conversions, and high-end master bathroom transformations across **85138 and 85139**. We are fully professional under ****, ensuring your home receives professional-grade craftsmanship, absolute integrity, and fixed-price contracts.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               **Specialized Active-Adult Community Integrations (Province):** Active adult homes require unique safety designs. We specialize in retrofitting guest and master baths with ADA-compliant curbless showers. By lowering the concrete slab or structural subfloor, we install zero-threshold entries that eliminate the trip hazard. We integrate concealed support blocking behind the walls to anchor heavy-duty safety grab bars, built-in tiled shower benches, and high-pressure hand showers.

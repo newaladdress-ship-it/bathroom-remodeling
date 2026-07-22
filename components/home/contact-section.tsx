@@ -15,7 +15,7 @@ export default function ContactSection() {
             Ready to Start Your Project?
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Get in touch with our licensed team to schedule your free in-home consultation. We&apos;ll discuss your vision, answer your questions, and provide a detailed estimate with no obligation.
+            Get in touch with our professional team to schedule your free in-home consultation. We&apos;ll discuss your vision, answer your questions, and provide a detailed estimate with no obligation.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function ContactSection() {
             </div>
             <div className="mt-auto pt-4 border-t border-border w-full flex items-center justify-center gap-2 text-xs font-semibold text-primary">
               <ShieldCheck className="w-4 h-4 text-accent" />
-              <span>ROC Licensed #338304 · Bonded & Insured</span>
+              <span> professional #338304 · Bonded & Insured</span>
             </div>
           </div>
         </div>

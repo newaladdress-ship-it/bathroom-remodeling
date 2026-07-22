@@ -5,7 +5,7 @@ export const SEO_DESCRIPTION_MAX = 155;
 
 const TITLE_SUFFIX = "Chandler AZ Bathroom Remodeling";
 const FALLBACK_DESCRIPTION =
-  "Bathroom remodeling service in Chandler, AZ by ARZ. Explore custom showers, tile, vanities, clear pricing, licensed crews, and free estimates.";
+  "Bathroom remodeling service in Chandler, AZ by ARZ. Explore custom showers, tile, vanities, clear pricing, professional crews, and free estimates.";
 
 function cleanSubject(subject: string): string {
   return subject
@@ -61,7 +61,7 @@ export function createSeoTitle(subject: string): string {
   }
 
   if (title.length < SEO_TITLE_MIN || title.length > SEO_TITLE_MAX) {
-    return `Licensed Bath Remodelers | ${TITLE_SUFFIX}`;
+    return `expert bath remodelers | ${TITLE_SUFFIX}`;
   }
 
   return title;
@@ -73,11 +73,11 @@ export function createSeoDescription(subject: string, customDesc?: string): stri
     
     // Pad if too short
     if (description.length < SEO_DESCRIPTION_MIN) {
-      const suffix = " Licensed contractors, free estimates, and clear pricing.";
+      const suffix = " professional contractors, free estimates, and clear pricing.";
       if (description.length + suffix.length <= SEO_DESCRIPTION_MAX) {
         description = `${description}${suffix}`;
       } else {
-        const shorterSuffix = " Licensed contractors.";
+        const shorterSuffix = " professional contractors.";
         if (description.length + shorterSuffix.length <= SEO_DESCRIPTION_MAX) {
           description = `${description}${shorterSuffix}`;
         }

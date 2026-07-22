@@ -195,7 +195,7 @@ export default function AccessibleBathroomPage() {
               <div className="space-y-3">
                 <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold">4</div>
                 <h3 className="font-semibold">Expert Installation</h3>
-                <p className="text-sm text-muted-foreground">Licensed contractors install grab bars, fixtures, and features to exact ADA specifications.</p>
+                <p className="text-sm text-muted-foreground">professional contractors install grab bars, fixtures, and features to exact ADA specifications.</p>
               </div>
             </div>
           </div>

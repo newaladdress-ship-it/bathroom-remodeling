@@ -22,13 +22,13 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {title: "Bath Remodel Gold Canyon | Licensed Pro | ARZ",description: "Top-rated bathroom remodeling in Gold Canyon, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
-  openGraph: {title: "Gold Canyon Bath Remodel | Licensed Pro | ARZ",description: "Top-rated bathroom remodeling in Gold Canyon, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
+export const metadata: Metadata = {title: "Bath Remodel Gold Canyon | professional Pro | ARZ",description: "Top-rated bathroom remodeling in Gold Canyon, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
+  openGraph: {title: "Gold Canyon Bath Remodel | professional Pro | ARZ",description: "Top-rated bathroom remodeling in Gold Canyon, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
     url: `${siteConfig.url}/bathroom-remodeling-gold-canyon-az/`,
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",title: "Gold Canyon Bath Remodel | Licensed Pro | ARZ",description: "Top-rated bathroom remodeling in Gold Canyon, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
+    card: "summary_large_image",title: "Gold Canyon Bath Remodel | professional Pro | ARZ",description: "Top-rated bathroom remodeling in Gold Canyon, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
     images: [`${siteConfig.url}/images/bathroom-remodeling-gold-canyon.jpg`],
   },
   alternates: {
@@ -91,13 +91,13 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "AZ Licensed ROC338304",
-    body: "Fully licensed residential contracting firm, verified with the Arizona Registrar of Contractors.",
+    title: "AZ General Contractor",
+    body: "Fully professional residential contracting firm, verified with the Arizona Registrar of Contractors.",
   },
   {
     icon: Star,
     title: "2-Year Written Warranty",
-    body: "We stand behind every joint, valve, and tile seam with a full 2-year workmanship warranty.",
+    body: "We stand behind every joint, valve, and tile seam with a full workmanship warranty.",
   },
   {
     icon: MapPin,
@@ -149,7 +149,7 @@ const process = [
   { step: "02", title: "In-Home Assessment", body: "We evaluate your current plumbing, take precise measurements, and review catalogs." },
   { step: "03", title: "Detailed Fixed Proposal", body: "You get a transparent, fully itemized quote outlining all labor, materials, and permits." },
   { step: "04", title: "Zoning & Permitting", body: "We pull all necessary permits through Pinal County and City of Florence offices." },
-  { step: "05", title: "Execution & Clean Build", body: "Our clean, licensed crew completes all demolition, waterproofing, plumbing, and tiling." },
+  { step: "05", title: "Execution & Clean Build", body: "Our clean, professional crew completes all demolition, waterproofing, plumbing, and tiling." },
   { step: "06", title: "Milestone Walkthrough", body: "You inspect every square inch with our supervisor. 100% satisfaction guarantee." },
 ];
 
@@ -164,7 +164,7 @@ export default function GoldCanyonPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Gold Canyon Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-gold-canyon-az/" } ]} />
       <ServiceSchema
         serviceName="Bathroom Remodeling in Gold Canyon, Arizona"
-        serviceDescription="Licensed bathroom remodeling contractor serving Gold Canyon, AZ. Specializing in luxury master suite renovations, zero-threshold tiled walk-in showers, and custom tile installations in Superstition Mountain and Mountainbrook Village."
+        serviceDescription="expert bathroom remodeling contractor serving Gold Canyon, AZ. Specializing in luxury master suite renovations, zero-threshold tiled walk-in showers, and custom tile installations in Superstition Mountain and Mountainbrook Village."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-gold-canyon-az/`}
       />
       <FAQSchema faqs={goldCanyonFaqs} />
@@ -194,7 +194,7 @@ export default function GoldCanyonPage() {
               Gold Canyon properties offer spectacular scenery that demands a matching interior aesthetic. Whether you own a luxurious custom home in the gated **Superstition Mountain Golf & Country Club** or a comfortable golf course estate in **Mountainbrook Village**, a professional bathroom transformation is one of the highest-converting home improvements you can invest in. If you are seeking an expert **bathroom remodel gold canyon**, a reliable **bathroom remodeling gold canyon**, or a premium **bath remodeler in gold canyon**, ARZ Home Remodeling is at your service.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we specialize in high-end **bathroom remodeling in Gold Canyon, AZ**, delivering custom tiled curbless showers, quartz vanity setups, and luxury master bath renovations in zip code **85118**. We operate under license **ROC #ROC338304**, utilizing Pinal County building code standards, advanced Schluter moisture waterproofing backing systems, and non-porous resin epoxy grouts.
+              At ARZ Home Remodeling, we specialize in high-end **bathroom remodeling in Gold Canyon, AZ**, delivering custom tiled curbless showers, quartz vanity setups, and luxury master bath renovations in zip code **85118**. We operate under license ****, utilizing Pinal County building code standards, advanced Schluter moisture waterproofing backing systems, and non-porous resin epoxy grouts.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               **Custom Septic & Specialized Drainage Inspections:** Homes in the scenic Gold Canyon foothills often feature private septic tanks or custom gravity drainage lines. Altering your plumbing footprint - such as moving a toilet drain or replacing an alcove tub with a zero-threshold custom sloped shower bed - requires precise venting knowledge to ensure perfect code compliance. We audit the drainage stack before tiling to prevent backup or slow drain issues, ensuring years of worry-free operation.

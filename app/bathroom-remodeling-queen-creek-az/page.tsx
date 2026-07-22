@@ -13,7 +13,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-export const metadata: Metadata = {title: "Bathroom Remodelers in Queen Creek | Custom Showers | ARZ",description: "Upgrade your bathroom in Queen Creek, AZ with our licensed crew. Custom showers, double vanities, and premium tiling. Get a free project estimate today!",
+export const metadata: Metadata = {title: "Bathroom Remodelers in Queen Creek | Custom Showers | ARZ",description: "Upgrade your bathroom in Queen Creek, AZ with our professional crew. Custom showers, double vanities, and premium tiling. Get a free project estimate today!",
   openGraph: {title: "Queen Creek Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore queen creek bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/bathroom-remodeling-queen-creek-az/`,
     type: "website",
@@ -48,7 +48,7 @@ export default function QueenCreekPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Queen Creek Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-queen-creek-az/" } ]} />
 <ServiceSchema
         serviceName="Bathroom Remodeling in Queen Creek, Arizona"
-        serviceDescription="Licensed bathroom remodeling contractor serving Queen Creek, AZ. Custom showers, master bath renovations, and tub-to-shower conversions for local families."
+        serviceDescription="expert bathroom remodeling contractor serving Queen Creek, AZ. Custom showers, master bath renovations, and tub-to-shower conversions for local families."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-queen-creek-az/`}
       />
       <FAQSchema faqs={queenCreekFaqs} />
@@ -165,7 +165,7 @@ export default function QueenCreekPage() {
             "Modern Tub-to-Shower Conversions",
             "Family-Friendly Bathroom Design",
             "Durable Tile & Grout Systems",
-            "Licensed AZ Contractor Support",
+            "professional AZ Contractor Support",
             "Fixed Pricing: No Hidden Fees"
           ]} 
           cityName="Queen Creek" 

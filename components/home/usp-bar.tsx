@@ -2,8 +2,8 @@ import { Star, ShieldCheck, Award, FileText } from "lucide-react";
 
 export default function UspBar() {
   const items = [
-    { label: "15+ Years Experience", icon: Award },
-    { label: "Licensed & Insured", icon: ShieldCheck },
+    { label: "Extensive Experience", icon: Award },
+    { label: "Fully Insured", icon: ShieldCheck },
     { label: "Quality Craftsmanship", icon: Star },
     { label: "Free Estimates", icon: FileText },
   ];

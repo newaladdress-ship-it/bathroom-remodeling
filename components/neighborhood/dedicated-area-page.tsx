@@ -24,7 +24,7 @@ export function getDedicatedAreaMetadata(areaSlug: string, path: string) {
 
   return {
     title: `${areaData.areaName} Bathroom Remodeling | Chandler AZ`,
-    description: `Licensed bathroom remodelers in ${areaData.areaName}, Chandler AZ. Custom showers & full renovations. Free estimate: ${siteConfig.phone}.`,
+    description: `expert bathroom remodelers in ${areaData.areaName}, Chandler AZ. Custom showers & full renovations. Free estimate: ${siteConfig.phone}.`,
     canonical: `${siteConfig.url}${path}`,
   };
 }
@@ -149,7 +149,7 @@ export default function DedicatedAreaPage({ areaSlug, path }: DedicatedAreaPageP
         <ContactSection />
         <ServiceCTA
           title={`Schedule Your ${areaData.areaName} Bathroom Consultation`}
-          description="Free in-home visit, written estimate, and clear timeline. Licensed ROC338304."
+          description="Free in-home visit, written estimate, and clear timeline. General Contractor."
         />
       </main>
       <Footer />

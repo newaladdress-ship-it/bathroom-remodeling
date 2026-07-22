@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {title: "ADU & Casita Construction Chandler AZ | Guest Houses",description: "Licensed ADU & casita guest house construction in Chandler, AZ. Design-build services, custom suites, utility hookups, & zoning code compliance. Call Call!",
+export const metadata: Metadata = {title: "ADU & Casita Construction Chandler AZ | Guest Houses",description: "professional ADU & casita guest house construction in Chandler, AZ. Design-build services, custom suites, utility hookups, & zoning code compliance. Call Call!",
   openGraph: {title: "ADU Bathroom Planning | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore adu bathroom planning, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/adu-casita-construction-chandler/`,
     type: "website",
@@ -91,8 +91,8 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "Licensed ROC338304 Contractor",
-    body: "Fully licensed for residential additions and structural construction, verified with the Arizona ROC.",
+    title: "General Contractor Contractor",
+    body: "Fully professional for residential additions and structural construction, verified with the Arizona .",
   },
   {
     icon: Star,
@@ -154,7 +154,7 @@ export default function AduPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "ADU & Casita Construction", url: "https://arzhomeremodeling.com/adu-casita-construction-chandler/" } ]} />
       <ServiceSchema
         serviceName="ADU & Casita Construction in Chandler, Arizona"
-        serviceDescription="Licensed residential contractor specializing in premium ADU and casita guest house construction in Chandler, AZ. Turnkey design-build detached guest suites, mother-in-law houses, and pool suites."
+        serviceDescription="residential contractor specializing in premium ADU and casita guest house construction in Chandler, AZ. Turnkey design-build detached guest suites, mother-in-law houses, and pool suites."
         serviceUrl={`${siteConfig.url}/adu-casita-construction-chandler/`}
       />
       <FAQSchema faqs={aduFaqs} />
@@ -181,10 +181,10 @@ export default function AduPage() {
         <section className="py-16 lg:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Accessory Dwelling Units (ADUs) and detached guest casitas are transforming the Arizona residential market. Whether you require private multi-generational housing for aging parents, an independent guest suite, or a premium detached home office in master-planned developments like **Fulton Ranch** or custom acreage in **Ocotillo**, constructing a casita delivers unbeatable daily functionality and substantial long-term appraisal value. If you've been looking for an expert **adu builder chandler**, a trusted **casita contractor chandler**, or a licensed **guest house builder in chandler az**, ARZ Home Remodeling is your premier local partner.
+              Accessory Dwelling Units (ADUs) and detached guest casitas are transforming the Arizona residential market. Whether you require private multi-generational housing for aging parents, an independent guest suite, or a premium detached home office in master-planned developments like **Fulton Ranch** or custom acreage in **Ocotillo**, constructing a casita delivers unbeatable daily functionality and substantial long-term appraisal value. If you've been looking for an expert **adu builder chandler**, a trusted **casita contractor chandler**, or a professional **guest house builder in chandler az**, ARZ Home Remodeling is your premier local partner.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we specialize in high-end, turnkey **ADU & casita construction in Chandler, AZ**. We are a residential contracting firm licensed under **ROC #ROC338304**, managing every stage from initial site surveying and structural engineering to county/city zoning approvals, concrete foundation pouring, custom utilities layout, framing, and luxury interior tiling.
+              At ARZ Home Remodeling, we specialize in high-end, turnkey **ADU & casita construction in Chandler, AZ**. We are a residential contracting firm professional under ****, managing every stage from initial site surveying and structural engineering to county/city zoning approvals, concrete foundation pouring, custom utilities layout, framing, and luxury interior tiling.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               **Zoning Compliance & Plot Scoping:** Chandler zoning code requires strict compliance regarding accessory dwelling footprints. Detached casitas must be situated in the rear yard, maintaining designated side and rear setbacks (typically 3 to 5 feet depending on utility easements). Additionally, the guest house must match the architectural style, stucco finish, paint color, and clay tile roof pitch of your primary residence. We handle the complete engineering review and community ARC clearances to ensure a smooth, worry-free process.

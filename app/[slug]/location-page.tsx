@@ -280,7 +280,7 @@ export async function LocationPageContent({
             <div className="grid sm:grid-cols-3 gap-6">
               <div className="bg-secondary p-6 rounded-xl border border-border text-center">
                 <ShieldCheck className="w-8 h-8 text-primary mx-auto mb-4" />
-                <h3 className="font-semibold text-foreground mb-2">Licensed Contractor - ROC #338304</h3>
+                <h3 className="font-semibold text-foreground mb-2">professional contractor - </h3>
                 <p className="text-muted-foreground text-xs leading-relaxed">Fully bonded and insured for complete residential renovations in Arizona.</p>
               </div>
               <div className="bg-secondary p-6 rounded-xl border border-border text-center">

@@ -13,18 +13,6 @@ export function LocalBusinessSchema({ type = "HomeAndConstructionBusiness" }: Lo
     description: siteConfig.description,
     image: `${siteConfig.url}/images/new-images-logo.jpg`,
     "@id": `${siteConfig.url}/#organization`,
-    founder: {
-      "@type": "Person",
-      name: siteConfig.owner,
-      jobTitle: "Founder & Owner",
-      url: siteConfig.url,
-      credentials: {
-        "@type": "EducationalOccupationalCredential",
-        name: "Arizona Registrar of Contractors License",
-        identifier: "ROC338304"
-      }
-    },
-    license: "ROC338304",
     knowsAbout: [
       "Bathroom Remodeling",
       "Shower Remodeling",
@@ -498,11 +486,11 @@ interface PersonSchemaProps {
 
 export function PersonSchema({
   name = siteConfig.owner,
-  jobTitle = "Founder & Owner, Licensed Contractor",
+  jobTitle = "Founder & Owner, professional contractor",
   affiliation = "ARZ Home Remodeling",
   url = siteConfig.url,
   credentials = "Arizona Registrar of Contractors License",
-  licenseNumber = "ROC338304",
+  licenseNumber = "",
 }: PersonSchemaProps) {
   const schema = {
     "@context": "https://schema.org",

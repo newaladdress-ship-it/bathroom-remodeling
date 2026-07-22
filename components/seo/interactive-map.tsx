@@ -76,7 +76,7 @@ export default function InteractiveMap({
           <span className="text-foreground">4.9 · 1,258 Google Reviews</span>
         </div>
         <div className="bg-red-500/10 border border-red-500/30 text-red-500 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
-          ROC#338304
+          
         </div>
       </div>
 

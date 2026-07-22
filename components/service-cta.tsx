@@ -53,11 +53,11 @@ export default function ServiceCTA({
           <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-4 text-primary-foreground/80 text-sm font-medium">
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/40" />
-              ROC Licensed #338304
+               professional #338304
             </div>
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/40" />
-              5-Year Workmanship Warranty
+              Workmanship Warranty
             </div>
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/40" />

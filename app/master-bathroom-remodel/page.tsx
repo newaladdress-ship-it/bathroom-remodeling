@@ -83,7 +83,7 @@ export default function MasterBathPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Master Bathroom Remodel", url: "https://arzhomeremodeling.com/master-bathroom-remodel/" } ]} />
 <ServiceSchema
         serviceName="Master Bathroom Remodel in Chandler, Arizona"
-        serviceDescription="Full-scope master bathroom renovations in Chandler, AZ. Shower enclosures, vanity replacement, tile flooring, plumbing and lighting upgrades managed by one licensed Arizona contractor."
+        serviceDescription="Full-scope master bathroom renovations in Chandler, AZ. Shower enclosures, vanity replacement, tile flooring, plumbing and lighting upgrades managed by one professional Arizona contractor."
         serviceUrl={`${siteConfig.url}/master-bathroom-remodel`}
       />
       <FAQSchema faqs={faqs} />
@@ -95,7 +95,7 @@ export default function MasterBathPage() {
       <Header />
       <main>
         <ServiceHero
-          title="Licensed Master Bathroom Remodeling in Chandler, AZ"
+          title="professional Master Bathroom Remodeling in Chandler, AZ"
           subtitle="Luxury Transformations Managed by One Local Team"
           description="Elevate your master suite with a luxury renovation tailored to your style. We handle everything: from custom walk-in showers and double vanities to premium tile and lighting. Enjoy a stress-free transformation with a fixed-price guarantee."
           image="/images/projects/modern-double-vanity-chandler.webp"

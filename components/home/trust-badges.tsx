@@ -1,10 +1,10 @@
 import { Star, Shield, Award, Clock } from "lucide-react";
 
 const trustBadges = [
-  { icon: Star, label: "5-Star Rated" },
-  { icon: Shield, label: "Licensed & Insured" },
-  { icon: Award, label: "15+ Years Experience" },
-  { icon: Clock, label: "On-Time Guarantee" },
+  { icon: Star, label: "Premium Designs" },
+  { icon: Shield, label: "Fully Insured" },
+  { icon: Award, label: "Extensive Experience" },
+  { icon: Clock, label: "Dedicated Service" },
 ];
 
 export default function TrustBadges() {
