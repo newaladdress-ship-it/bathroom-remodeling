@@ -35,11 +35,11 @@ export default function ServiceFAQ({
   const faqsToRender = customFaqs ?? faqs;
 
   return (
-    <section className="py-20 lg:py-32 bg-background">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="py-12 lg:py-16 bg-muted/30">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-foreground">
+          <div className="text-center mb-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 text-foreground">
               {title}
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

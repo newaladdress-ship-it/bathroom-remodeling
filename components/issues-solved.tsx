@@ -27,7 +27,7 @@ export default function IssuesSolved({
   const issuesToRender = customIssues ?? issues;
 
   return (
-    <section className="py-20 lg:py-32 bg-muted/30">
+    <section className="py-12 lg:py-16 bg-muted/30">
       <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="max-w-4xl mx-auto text-center animate-in fade-in slide-in-from-bottom-4 duration-700">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-foreground">
@@ -38,18 +38,14 @@ export default function IssuesSolved({
               {subtitle}
             </p>
           )}
-          <p className="text-muted-foreground text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
-            {description}
-          </p>
+          {description && (
+            <p className="text-muted-foreground text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+              {description}
+            </p>
+          )}
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {issuesToRender.map((issue, index) => {
-              const label = typeof issue === "string" 
-                ? issue 
-                : issue.title 
-                ? `${issue.title} - ${issue.description}` 
-                : `${issue.problem} - ${issue.solution}`;
-
               return (
                 <div
                   key={index}
@@ -57,9 +53,21 @@ export default function IssuesSolved({
                   style={{ animationDelay: `${index * 50}ms`, animationFillMode: 'both' }}
                 >
                   <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
-                  <span className="text-foreground text-sm leading-relaxed">
-                    {label}
-                  </span>
+                  <div className="text-sm leading-relaxed">
+                    {typeof issue === "string" ? (
+                      <span className="text-foreground">{issue}</span>
+                    ) : issue.title ? (
+                      <>
+                        <h3 className="font-semibold text-foreground mb-1 text-base">{issue.title}</h3>
+                        <p className="text-muted-foreground text-sm">{issue.description}</p>
+                      </>
+                    ) : (
+                      <>
+                        <h3 className="font-semibold text-foreground mb-1 text-base">{issue.problem}</h3>
+                        <p className="text-muted-foreground text-sm">{issue.solution}</p>
+                      </>
+                    )}
+                  </div>
                 </div>
               );
             })}

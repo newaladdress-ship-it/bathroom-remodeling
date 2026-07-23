@@ -20,8 +20,12 @@ import { bathroomServices, getRelatedServices } from "@/lib/bathroom-services";
 import Link from "next/link";
 
 
-export const metadata: Metadata = {title: "Tub-to-Shower Conversions Chandler AZ | Walk-In Showers",description: "Convert your unused tub into a spacious curbless walk-in shower in Chandler, AZ. Low-profile entry, custom tile work, and fast installs. Free quote!",
-  openGraph: {title: "Tub To Shower Conversion | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore tub to shower conversion, custom showers, tile, vanities, clear pricing, and free estimates.",
+export const metadata: Metadata = {
+  title: "Tub to Shower Conversion Chandler AZ | Free Estimate",
+  description: "Upgrade your bathroom with a tub to shower conversion in Chandler, AZ. Custom tile, frameless glass, and waterproof systems. Get a free estimate!",
+  openGraph: {
+    title: "Tub to Shower Conversion Chandler AZ | Free Estimate",
+    description: "Upgrade your bathroom with a tub to shower conversion in Chandler, AZ. Custom tile, frameless glass, and waterproof systems. Get a free estimate!",
     url: `${siteConfig.url}/tub-to-shower-conversion/`,
     type: "website",
     images: [
@@ -34,7 +38,9 @@ export const metadata: Metadata = {title: "Tub-to-Shower Conversions Chandler AZ
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Tub To Shower Conversion | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore tub to shower conversion, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Tub to Shower Conversion Chandler AZ | Free Estimate",
+    description: "Upgrade your bathroom with a tub to shower conversion in Chandler, AZ. Custom tile, frameless glass, and waterproof systems. Get a free estimate!",
     images: [`${siteConfig.url}/images/og-shower.png`],
   },
   alternates: {
@@ -71,9 +77,9 @@ export default function TubToShowerConversionPage() {
       <Header />
       <main>
         <ServiceHero
-          title="Seamless Tub-to-Shower Conversions"
-          subtitle="Convert Unused Tubs Into Modern, High-Performance Walk-In Showers"
-          description="Maximize your bathroom's footprint by swapping your high-threshold bathtub for a spacious, leak-proof walk-in shower. Our certified team handles the entire conversion, including framing upgrades, high-capacity drain plumbing, and vapor-tight Schluter-KERDI waterproofing, backed by a clear fixed-price contract."
+          title="Walk-In Shower Conversions for Chandler Homes"
+          subtitle="Replace Your Bathtub With a Spacious Walk-In Shower"
+          description="Upgrade your bathroom by replacing an outdated bathtub with a modern walk-in shower designed for comfort, accessibility, and everyday convenience. ARZ Home Remodeling creates durable shower systems featuring premium tile, custom glass enclosures, advanced waterproofing, and professionally planned layouts that improve both functionality and style throughout Chandler and nearby East Valley communities."
           image="/images/services/bathroom-tile-remodel-az.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -82,89 +88,145 @@ export default function TubToShowerConversionPage() {
         />
 
         <ServiceProcess
-          title="Tub Conversion Process"
+          title="From Bathtub to Modern Shower Space"
           subtitle="Our Process"
-          description="A detailed conversion workflow that transforms your unused, high-threshold bathtub into a safe, spacious walk-in shower."
+          description="Every project follows a carefully planned installation process that prioritizes safety, durability, and long-term performance. From removing the existing bathtub to completing the final finishing details, our team manages every phase with precision and attention to quality."
           steps={[
             {
               number: "01",
               icon: "PhoneCall",
-              title: "Initial Consultation & Layout",
-              description: "We inspect your existing garden or alcove tub, measure the footprint, evaluate the drain alignment, and design the new walk-in shower configuration.",
+              title: "Design Consultation & Space Planning",
+              description: "We begin by evaluating your existing bathroom layout, discussing your goals, and identifying the best approach for improving functionality. Measurements, plumbing locations, storage options, and design preferences are reviewed before work begins.",
             },
             {
               number: "02",
               icon: "Ruler",
-              title: "Bathtub Removal & Demolition",
-              description: "We carefully remove the heavy bathtub unit, extract the old surround materials down to the studs, check for mold or wood rot, and prepare the subfloor.",
+              title: "Bathtub Removal & Site Preparation",
+              description: "Our team safely removes the existing bathtub, wall surrounds, and outdated materials while inspecting the framing and subfloor for any issues that should be addressed before construction continues.",
             },
             {
               number: "03",
               icon: "Hammer",
-              title: "Drain & Plumbing Conversion",
-              description: "We expand your drain piping from a standard 1.5-inch tub drain to a high-capacity 2-inch shower drain to handle modern rainfall showerheads safely.",
+              title: "Plumbing & Drainage Improvements",
+              description: "If required, plumbing components are updated to support the new shower layout. This may include relocating supply lines, modifying drain connections, and preparing the area for modern fixtures and improved water flow.",
             },
             {
               number: "04",
               icon: "ShowerHead",
-              title: "Waterproofing & Shower Build",
-              description: "We install a pre-sloped shower pan, lay down vapor-tight Schluter waterproofing, build custom tile niches, and install your selected fixtures.",
+              title: "Waterproofing & Installation",
+              description: "Before any finish materials are installed, the shower area receives a professional waterproofing system designed to help protect surrounding walls and flooring from moisture intrusion. Tile, fixtures, storage niches, and other selected features are then installed with careful attention to detail.",
             },
             {
               number: "05",
+              icon: "ClipboardCheck",
+              title: "Quality Inspection & Finishing Touches",
+              description: "Before the final enclosure is installed, we carefully inspect tile alignment, grout consistency, fixture placement, drainage performance, and waterproofing details. Any necessary adjustments are completed to ensure the finished shower is ready for everyday use and built to our workmanship standards.",
+            },
+            {
+              number: "06",
               icon: "ShieldCheck",
-              title: "Glass Enclosure & Walkthrough",
-              description: "We set custom frameless glass enclosures, apply mold-resistant silicone sealant, test water flow, and review the final conversion with you.",
+              title: "Glass Installation & Final Inspection",
+              description: "The project concludes with the installation of the selected glass enclosure, hardware adjustments, functionality checks, and a final walkthrough to ensure every detail meets expectations.",
             },
           ]}
         />
 
         <IssuesSolved
-          title="Issues We Solve with Tub to Shower Conversion"
-          subtitle="Common Problems Fixed"
-          description="We address the most common conversion challenges Chandler homeowners face."
-          issues={serviceData.issues}
+          title="Creating Safer and More Functional Bathrooms"
+          subtitle="Problems We Help Homeowners Solve"
+          description="Many older bathrooms no longer meet the needs of today's homeowners. We help improve accessibility, comfort, and everyday usability through thoughtfully planned bathroom upgrades."
+          issues={[
+            {
+              title: "Difficult Bathtub Access",
+              description: "High tub walls can become challenging for children, older adults, and anyone with limited mobility. Replacing the existing bathing area with an easier-entry design creates a more comfortable and accessible daily routine.",
+            },
+            {
+              title: "Outdated Bathroom Layouts",
+              description: "Older bathrooms often include oversized bathtubs that take up valuable floor space without matching the homeowner's current lifestyle. A redesigned shower area creates a more open and practical layout.",
+            },
+            {
+              title: "Aging Plumbing Components",
+              description: "Older drain assemblies, valves, and plumbing connections may no longer perform efficiently. During the renovation process, we inspect and update these components whenever improvements are needed.",
+            },
+            {
+              title: "Moisture & Surface Deterioration",
+              description: "Years of daily use can lead to worn finishes, damaged grout, loose tile, or moisture-related concerns. Our renovation process replaces aging materials with modern systems designed for improved durability and easier maintenance.",
+            },
+          ]}
         />
 
         <Benefits
-          title="Benefits of Tub to Shower Conversion"
-          subtitle="Why Convert Your Tub"
-          benefits={serviceData.benefits}
+          title="Advantages of Replacing an Outdated Bathtub"
+          subtitle="Why Homeowners Make the Switch"
+          description="Updating an older bathing area can improve everyday comfort, increase usability, and give your bathroom a cleaner, more modern appearance. Homeowners throughout Chandler often choose this upgrade to better match their current lifestyle and future needs."
+          benefits={[
+            {
+              icon: "ShieldCheck",
+              title: "Improved Accessibility",
+              description: "A low-entry shower provides easier access than a traditional bathtub, making daily routines more comfortable for children, older adults, and anyone with limited mobility. Optional seating and support features can further improve safety.",
+            },
+            {
+              icon: "Ruler",
+              title: "Better Use of Bathroom Space",
+              description: "Removing a bulky bathtub creates a more open layout that can make even smaller bathrooms feel larger. The additional space also provides greater flexibility for storage, fixtures, and design features.",
+            },
+            {
+              icon: "Sparkles",
+              title: "More Convenient Daily Routine",
+              description: "A modern shower offers a quicker and more practical bathing experience for busy households. Improved layouts and updated fixtures make everyday use more efficient while reducing maintenance.",
+            },
+            {
+              icon: "Home",
+              title: "Contemporary Style",
+              description: "Updated tile, premium fixtures, coordinated finishes, and custom glass features can dramatically improve the appearance of your bathroom while complementing the rest of your home's design.",
+            },
+          ]}
         />
         <LocalTrust cityName="Chandler" />
 
-        <section className="py-16 bg-background">
+        <section className="py-12 lg:py-16 bg-background">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
             <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
-              Leading Tub to Shower Conversion Experts in Arizona
+              Bathroom Upgrade Specialists Serving Chandler & the East Valley
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              When searching for a tub-to-shower conversion specialist, you want an experienced team that understands both the aesthetic and structural requirements of Arizona homes. We specialize in custom shower conversions across Chandler, Queen Creek, and the surrounding East Valley. To see design possibilities for your layout, read our guide on [tub-to-shower conversion ideas for Chandler](/blog/tub-to-shower-conversion-ideas-chandler/) homes.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Homeowners across Chandler, Gilbert, Queen Creek, Mesa, and nearby East Valley communities trust ARZ Home Remodeling for professionally planned bathroom improvements that combine functionality with lasting quality. Every project is customized to match the home&apos;s layout, design preferences, and long-term goals.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              If you&apos;re looking for inspiration before starting your project, explore our <Link href="/blog/tub-to-shower-conversion-ideas-chandler/" className="text-primary underline font-medium hover:text-primary/80 transition-colors">Tub-to-Shower Conversion Ideas for Chandler</Link> guide to discover popular layouts, material options, accessibility features, and design trends.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Our conversion services are designed to maximize your bathroom's footprint, providing a more open and modern feel while significantly improving accessibility. As leading <Link href="/" className="font-semibold underline hover:text-primary transition-colors">bathroom renovation contractors in Chandler</Link>, we guarantee a flawless finish on every project.
+              Our team focuses on creating practical, attractive bathing spaces using durable materials, professional installation techniques, and carefully planned layouts that maximize comfort and everyday usability.
             </p>
-            <div className="mt-12 p-8 bg-primary/5 rounded-3xl border border-primary/20 text-center">
-              <p className="text-foreground font-medium mb-4">
-                We offer competitive 0% financing options on qualifying projects: 
-                <Link href="/financing/" className="text-primary hover:underline ml-1">
-                  see our bathroom remodeling financing options
-                </Link>.
+            <div className="mt-10 p-8 bg-primary/5 rounded-3xl border border-primary/20 text-center">
+              <p className="text-foreground font-medium">
+                We also offer flexible financing options for qualifying remodeling projects. Learn more by visiting our <Link href="/financing/" className="text-primary underline font-semibold hover:text-primary/80 transition-colors">Bathroom Remodeling Financing</Link> page.
               </p>
             </div>
           </div>
         </section>
 
         <Tips
-          title="Tub to Shower Conversion Tips"
-          subtitle="Planning Your Conversion"
-          description="Expert advice for planning and maintaining your new walk-in shower after conversion."
-          tips={serviceData.tips}
-        />
-
-        <ServiceCTA 
-          title="Call Now for Your Free No-Obligation Conversion Quote!" 
-          description="Ready for a tub-to-shower swap? Click to call our Chandler experts now and save space in your bathroom." 
+          title="Helpful Tips Before You Begin"
+          subtitle="Planning Your Bathroom Upgrade"
+          tips={[
+            {
+              title: "Think About Long-Term Needs",
+              description: "Consider how your bathroom will serve your household over the next 10–20 years, especially if accessibility or aging in place may become important.",
+            },
+            {
+              title: "Select Durable Materials",
+              description: "Choosing quality tile, glass, fixtures, and grout helps improve longevity while reducing future maintenance requirements.",
+            },
+            {
+              title: "Include Practical Storage",
+              description: "Built-in shelving, recessed niches, and integrated seating help keep shower essentials organized without sacrificing space.",
+            },
+            {
+              title: "Invest in Professional Moisture Protection",
+              description: "Proper waterproofing behind finished surfaces is one of the most important factors in creating a durable bathroom that performs well for years.",
+            },
+          ]}
         />
 
         <SubServices 

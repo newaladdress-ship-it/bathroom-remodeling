@@ -6,10 +6,10 @@ interface ServiceFAQProps {
 
 export default function ServiceFAQ({ faqs }: ServiceFAQProps) {
   return (
-    <section className="py-20 lg:py-32 bg-secondary">
+    <section className="py-12 lg:py-16 bg-muted/30">
       <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-16 lg:mb-20">
+          <div className="text-center mb-10">
             <span className="text-primary text-sm font-medium tracking-wider uppercase">
               FAQ
             </span>

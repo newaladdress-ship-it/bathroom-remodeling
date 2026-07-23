@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   Ruler,
   Sparkles,
+  ClipboardCheck,
   type LucideIcon,
 } from "lucide-react";
 
@@ -59,6 +60,7 @@ const iconMap: Record<string, LucideIcon> = {
   ShieldCheck,
   Ruler,
   Sparkles,
+  ClipboardCheck,
 };
 
 function resolveIcon(icon?: LucideIcon | string): LucideIcon {
@@ -74,9 +76,12 @@ export default function ServiceProcess({
   steps: customSteps,
 }: ServiceProcessProps) {
   const stepsToRender = customSteps ?? steps;
+  const gridCols = stepsToRender.length === 4 
+    ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4" 
+    : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3";
 
   return (
-    <section className="py-20 lg:py-32 bg-background">
+    <section className="py-12 lg:py-16 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -93,7 +98,7 @@ export default function ServiceProcess({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className={`grid ${gridCols} gap-8`}>
             {stepsToRender.map((step, index) => {
               const Icon = resolveIcon(step.icon);
               return (
