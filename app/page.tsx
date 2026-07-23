@@ -13,7 +13,7 @@ import BlogPreview from "@/components/home/blog-preview";
 
 export const metadata: Metadata = {
   title: "Bathroom Remodeling in Chandler, AZ | Custom Showers & Tile",
-  description: "Upgrade your home with custom showers, premium tile, modern vanities, tub conversions, and complete bathroom renovations in Chandler.",
+  description: "Upgrade your bathroom with custom remodeling, shower renovations, tile installation, and vanity solutions in Chandler, AZ. Call now for a free consultation.",
   keywords: [
     "bathroom remodeling in chandler, AZ",
     "bathroom remodeling chandler",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Bathroom Remodeling in Chandler, AZ | Custom Showers & Tile",
-    description: "Upgrade your home with custom showers, premium tile, modern vanities, tub conversions, and complete bathroom renovations in Chandler.",
+    description: "Upgrade your bathroom with custom remodeling, shower renovations, tile installation, and vanity solutions in Chandler, AZ. Call now for a free consultation.",
     type: "website",
     url: `${siteConfig.url}/`,
     images: [
@@ -57,7 +57,6 @@ export default function HomePage() {
       <main id="main-content" role="main">
         <Hero />
         <BelowFoldLoader />
-        <BlogPreview />
       </main>
       <Footer />
     </>

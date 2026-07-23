@@ -3,54 +3,54 @@ export type HomeFaq = { question: string; answer: string };
 /** Homepage + FAQ schema (plain text for JSON-LD; HTML for UI) */
 export const homeFaqs: HomeFaq[] = [
   {
-    question: "Do I need a building permit to remodel my bathroom in Chandler?",
+    question: "How much does bathroom remodeling cost in Chandler, AZ?",
     answer:
-      "Yes, the City of Chandler requires a permit for layout changes, plumbing moves, and new electrical work. Cosmetic swaps like replacing vanities or flooring in the same position do not. We file all drawings and manage inspections with the Development Services Department on Buffalo Street for you.",
+      "Bathroom remodeling costs depend on the size of your bathroom, the materials you choose, and whether you're planning a simple update or a complete bathroom renovation. We provide free consultations to discuss your goals and budget.",
   },
   {
-    question: "How does Chandler's hard water affect custom tile and grout?",
+    question: "How long does a bathroom remodel usually take?",
     answer:
-      "Chandler water averages 18 to 22 grains of hardness. This mineral scale sticks to porous cement grout, causing staining and leaks. We install dense porcelain tile and solid epoxy resin grout. Epoxy grout is non-porous and repels scale, keeping your shower clean and waterproof.",
+      "Project timelines vary depending on the scope of work. Smaller bathroom updates may take less time, while complete bathroom remodeling projects typically require additional planning, design, and installation.",
   },
   {
-    question: "How do you protect shower glass from hard water scale?",
+    question: "Can I convert my bathtub into a walk-in shower?",
     answer:
-      "Hard water leaves cloudy white mineral scale on standard glass doors. We install low-iron tempered glass doors treated with a factory-applied hydrophobic nano-coating. This coating repels water droplets, preventing scale from bonding to the surface. It reduces cleaning time and keeps glass clear.",
+      "Yes. Tub-to-shower conversions are one of our most requested bathroom remodeling services. A walk-in shower can improve accessibility, maximize space, and give your bathroom a more modern appearance.",
   },
   {
-    question: "Can you convert a tub to a walk-in shower on a concrete slab?",
+    question: "Do I need a permit for bathroom remodeling in Chandler?",
     answer:
-      "Yes. We saw-cut and trench the concrete slab to relocate the drain trap. Under code rules, we expand the waste line from 1.5 inches to 2 inches to handle modern shower heads. We then place a vapor-tight Schluter pan and lay slip-resistant tile.",
+      "Permit requirements depend on the type of remodeling work being completed. Projects involving structural, plumbing, or electrical changes may require permits. We'll explain what may be needed during your consultation.",
   },
   {
-    question: "What is your project workmanship warranty?",
+    question: "What bathroom remodeling services do you offer?",
     answer:
-      "We provide a written 2-year warranty on all our remodeling work. This covers tile adhesion, epoxy grout joints, Schluter waterproofing, shower valves, and vanity mounts. If any component of our installation fails within two years, our crew repairs it at no cost to you.",
+      "We provide complete bathroom remodeling, custom showers, walk-in showers, tub-to-shower conversions, bathroom tile installation, vanity upgrades, flooring, lighting, and full bathroom renovations.",
   },
   {
-    question: "How much does a bathroom remodel cost in Chandler, AZ?",
+    question: "Can you help with bathroom design and material selection?",
     answer:
-      "Cost depends on the scope of work, your layout, and the materials you choose - every bathroom is different, so a fair number can't be given without knowing the project. Call us at <a href=\"tel:+15205693339\">(520) 569-3339</a> and we'll walk through your project with you and give you a clear, honest starting range on the spot, followed by a free itemized written estimate before any work begins.",
+      "Absolutely. We help homeowners choose layouts, tile, vanities, fixtures, lighting, and finishes that match their style, space, and budget.",
   },
   {
-    question: "Are you a expert bathroom remodeling contractor?",
+    question: "What materials work best for Arizona bathrooms?",
     answer:
-      "Yes. ARZ Home Remodeling holds an active Arizona  license (), is fully insured, and is a NARI member.",
+      "Many homeowners choose porcelain tile, quartz countertops, moisture-resistant materials, and durable fixtures that perform well in Arizona's climate while remaining easy to maintain.",
   },
   {
-    question: "Do you offer financing?",
+    question: "Will bathroom remodeling increase my home's value?",
     answer:
-      "Yes, on qualifying projects over $5,000, with monthly payments up to 60 months on approved credit.",
-  },
-  {
-    question: "How long does a bathroom remodel take?",
-    answer:
-      "Guest baths: 2-3 weeks. Tub-to-shower conversions: 3-5 days after demo. Master baths with layout changes: 4-6 weeks.",
+      "A professionally designed bathroom remodel can improve everyday comfort while enhancing your home's appeal and resale value, especially when using quality materials and modern designs.",
   },
   {
     question: "Which areas do you serve?",
     answer:
-      "Chandler, Gilbert, Mesa, Tempe, Queen Creek, Apache Junction, and the surrounding East Valley.",
+      "We proudly serve Chandler, AZ, along with nearby communities throughout the East Valley, helping homeowners create beautiful and functional bathrooms.",
+  },
+  {
+    question: "How do I get started with my bathroom remodel?",
+    answer:
+      "The first step is scheduling a free consultation. We'll discuss your remodeling goals, evaluate your existing bathroom, answer your questions, and recommend the best options for your home.",
   },
 ];
 

@@ -1,5 +1,4 @@
 import UspBar from "@/components/home/usp-bar";
-import PainPoints from "@/components/home/pain-points";
 import AboutPreview from "@/components/home/about-preview";
 import ServicesGrid from "@/components/home/services-grid";
 import LocalTrust from "@/components/home/local-trust";
@@ -8,13 +7,13 @@ import ProcessSection from "@/components/home/process-section";
 import WhyChooseUs from "@/components/home/why-choose-us";
 import FAQ from "@/components/home/faq";
 import ServiceAreas from "@/components/home/service-areas";
+import BlogPreview from "@/components/home/blog-preview";
 import ContactSection from "@/components/home/contact-section";
 
 export default function BelowFoldLoader() {
   return (
     <>
       <UspBar />
-      <PainPoints />
       <AboutPreview />
       <ServicesGrid />
       <LocalTrust cityName="Chandler" />
@@ -23,6 +22,7 @@ export default function BelowFoldLoader() {
       <WhyChooseUs />
       <FAQ />
       <ServiceAreas />
+      <BlogPreview />
       <ContactSection />
     </>
   );

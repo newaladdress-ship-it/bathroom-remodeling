@@ -14,7 +14,7 @@ export default function ServiceCTA({
 }: ServiceCTAProps) {
   return (
     <section className="py-20 lg:py-32 bg-primary">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="max-w-4xl mx-auto text-center animate-in fade-in slide-in-from-bottom-4 duration-700">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-primary-foreground">
             {title}
@@ -51,10 +51,6 @@ export default function ServiceCTA({
           </div>
           
           <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-4 text-primary-foreground/80 text-sm font-medium">
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/40" />
-               professional #338304
-            </div>
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/40" />
               Workmanship Warranty

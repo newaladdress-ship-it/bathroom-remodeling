@@ -85,10 +85,6 @@ export default function ADAPage() {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="flex flex-wrap justify-center gap-8 md:gap-12 text-primary font-medium">
                <div className="flex items-center gap-2">
-                 <Shield className="w-5 h-5" />
-                 <span> professional #338304</span>
-               </div>
-               <div className="flex items-center gap-2">
                  <CheckCircle className="w-5 h-5" />
                  <span>ADA Compliant Designs</span>
                </div>

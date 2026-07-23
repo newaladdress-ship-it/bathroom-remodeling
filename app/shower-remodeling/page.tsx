@@ -24,8 +24,12 @@ import ChandlerShowerMaterials from "@/components/chandler-shower-materials";
 import ShowerGallery from "@/components/shower-gallery";
 
 
-export const metadata: Metadata = {title: "Custom Shower Remodeling Chandler AZ | Walk-In Tile | ARZ",description: "Ditch your old tub for a custom tiled walk-in shower in Chandler, AZ. Waterproof Schluter-Kerdi systems, frameless glass, and custom benches. Call now!",
-  openGraph: {title: "Shower Remodeling | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower remodeling, custom showers, tile, vanities, clear pricing, and free estimates.",
+export const metadata: Metadata = {
+  title: "Custom Shower Remodeling Chandler AZ | Tile & Glass",
+  description: "Transform your Chandler, AZ bathroom with a custom shower remodel featuring tile, frameless glass, and waterproof systems. Call now!",
+  openGraph: {
+    title: "Custom Shower Remodeling Chandler AZ | Tile & Glass",
+    description: "Transform your Chandler, AZ bathroom with a custom shower remodel featuring tile, frameless glass, and waterproof systems. Call now!",
     url: `${siteConfig.url}/shower-remodeling/`,
     type: "website",
     images: [
@@ -38,7 +42,9 @@ export const metadata: Metadata = {title: "Custom Shower Remodeling Chandler AZ 
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Shower Remodeling | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower remodeling, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Custom Shower Remodeling Chandler AZ | Tile & Glass",
+    description: "Transform your Chandler, AZ bathroom with a custom shower remodel featuring tile, frameless glass, and waterproof systems. Call now!",
     images: [`${siteConfig.url}/images/og-shower.png`],
   },
   alternates: {
@@ -46,7 +52,28 @@ export const metadata: Metadata = {title: "Custom Shower Remodeling Chandler AZ 
   },
 };
 
-const faqs = serviceContent["shower-remodeling"].faqs;
+const faqs = [
+  {
+    question: "What is included in a shower remodeling project?",
+    answer: "A shower project may include design planning, preparation, waterproofing, tile work, fixtures, glass installation, and final finishing.",
+  },
+  {
+    question: "How much does a shower remodel cost?",
+    answer: "Pricing depends on factors such as bathroom size, materials, layout changes, plumbing requirements, and design selections.",
+  },
+  {
+    question: "How long does a shower renovation usually take?",
+    answer: "Project timelines vary depending on scope, materials, and customization requirements.",
+  },
+  {
+    question: "Do you handle plumbing changes?",
+    answer: "Yes, projects requiring plumbing adjustments can include fixture relocation and related updates.",
+  },
+  {
+    question: "How do you help prevent shower leaks?",
+    answer: "Proper preparation, waterproofing systems, quality installation, and suitable materials all play important roles.",
+  },
+];
 
 const otherServices = getRelatedServices("/shower-remodeling/");
 
@@ -71,9 +98,9 @@ export default function ShowerRemodelingPage() {
       <Header />
       <main>
         <ServiceHero
-          title="Custom Shower Systems Engineered to Last"
-          subtitle="Vapor-Tight Schluter-KERDI Waterproofing & Custom Glass Enclosures"
-          description="Upgrade your daily routine with a premium tile or curbless walk-in shower. Our certified master installers secure every system with advanced waterproofing, custom-fit frameless glass, and stain-resistant epoxy grouting. We guarantee a fixed price and lifetime protection against leaks and moisture damage."
+          title="Shower Remodeling in Chandler, AZ"
+          subtitle="Modern Design • Precision Craftsmanship • Lifetime Waterproof Protection"
+          description="Upgrade your bathroom with a professionally designed shower system built around your space, style, and daily needs. ARZ Home Remodeling combines advanced moisture protection, detailed tile craftsmanship, custom glass solutions, and durable finishes to create showers that look beautiful and perform reliably for years. From modern upgrades to complete bathroom transformations, our team delivers a seamless remodeling experience with clear pricing and expert installation. Call now!"
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[
             { name: "Home", url: `${siteConfig.url}/` },
@@ -85,30 +112,27 @@ export default function ShowerRemodelingPage() {
 
         {/* REGIONAL SHOWER SERVICES COVERS */}
         <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
+          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground text-center">
-              East Valley Shower Remodeling & Installation Services
+              East Valley Shower Renovation & Design Services
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              When searching for a top-tier shower remodeler in the Phoenix East Valley, homeowners choose ARZ Home Remodeling. If you are budgeting for a new installation, check our [walk-in shower cost Chandler](/blog/walk-in-shower-cost-chandler-az/) guide. As a premier bathroom contractor, we deliver complete peace of mind, covering everything from structural framing to final sealant.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              Homeowners throughout Chandler and the surrounding East Valley trust ARZ Home Remodeling for thoughtfully planned bathroom improvements. We help transform outdated bathing areas into functional, modern spaces with carefully selected materials, improved layouts, and professional craftsmanship. From initial planning and preparation to final finishing details, our team manages each phase of the project with attention to quality and durability.
             </p>
-            <div className="grid md:grid-cols-3 gap-6 mt-8 text-left">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              If you are comparing upgrade options, explore our <Link href="/blog/walk-in-shower-cost-chandler-az/" className="text-primary hover:underline font-semibold">walk-in shower cost Chandler</Link> guide to understand common factors that influence project pricing, materials, and design choices.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 mt-8 text-left">
               <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-semibold text-foreground mb-3">Chandler Shower Solutions</h3>
+                <h3 className="font-semibold text-foreground mb-3 text-lg">Chandler Bathroom Shower Upgrades</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  We are the top choice for custom shower installations in Chandler, AZ. From custom walk-in tile designs to professional acrylic shower pans, our team handles plumbing reconfigurations, waterproofing, and finish trim with expert care.
+                  Every bathroom has unique requirements, which is why we create solutions based on your home&apos;s layout, style preferences, and everyday needs. Our team handles complete shower transformations including surface preparation, layout adjustments, drainage considerations, wall systems, and finishing work. Whether you prefer a modern tiled appearance, a low-maintenance design, or a more open bathroom layout, we focus on creating a finished space that combines comfort, functionality, and long-term performance.
                 </p>
               </div>
               <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-semibold text-foreground mb-3">Mesa Shower Remodeling</h3>
+                <h3 className="font-semibold text-foreground mb-3 text-lg">Serving Mesa, Gilbert & Tempe Homeowners</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Looking for an expert shower installer in Mesa, AZ? We provide high-end shower remodeling services and custom layouts. Whether you are budgeting for standard updates or a full luxury curbless bath upgrade, we use waterproof substrates to guarantee leak-proof results.
-                </p>
-              </div>
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-semibold text-foreground mb-3">Gilbert & Tempe Coverages</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  We serve all of Gilbert as a trusted shower contractor. Homeowners seek us out for custom glass enclosures, tile benches, and niches. We also provide professional shower installations and design coordination in Tempe, AZ.
+                  ARZ Home Remodeling provides professional bathroom improvement services throughout Mesa, Gilbert, and Tempe. Homeowners choose our team for detailed planning, quality workmanship, and personalized designs that improve both the appearance and usability of their bathrooms. Our projects include updated shower layouts, upgraded surfaces, custom storage features, and modern finishing options designed around each homeowner&apos;s goals.
                 </p>
               </div>
             </div>
@@ -120,55 +144,89 @@ export default function ShowerRemodelingPage() {
         <ShowerCostSection />
 
         <ServiceProcess
-          title="Shower Remodel Process"
+          title="A Detailed Approach to Your Shower Upgrade"
           subtitle="Our Process"
-          description="A specialized, step-by-step approach to custom-building a beautiful, leak-proof shower in your Chandler home."
+          description="Every bathroom improvement project requires careful planning, proper preparation, and skilled installation. Our process focuses on creating a durable, functional, and visually appealing bathing space while keeping homeowners informed from start to finish."
           steps={[
             {
               number: "01",
               icon: "PhoneCall",
-              title: "Consultation & Shower Design",
-              description: "We review your shower goals, measure your existing footprint, and plan custom tile layouts, curb styles, and niche placements.",
+              title: "Consultation & Design Planning",
+              description: "We begin by understanding your goals, reviewing your existing bathroom layout, and discussing design preferences. Our team evaluates available space, material options, storage needs, and functionality requirements to create a plan that fits your home.",
             },
             {
               number: "02",
               icon: "Ruler",
-              title: "Substrate & Plumbing Prep",
-              description: "We demount the old enclosure, update or relocate valves and drain lines, install pressure-balanced fixtures, and run pre-tests.",
+              title: "Preparation & System Installation",
+              description: "Before new materials are installed, we carefully prepare the existing area, address necessary plumbing adjustments, and inspect the foundation of the project. Proper preparation helps ensure the finished space performs well for years.",
             },
             {
               number: "03",
               icon: "ShieldCheck",
-              title: "Schluter Waterproofing",
-              description: "We install a vapor-tight Schluter-KERDI waterproofing membrane on all shower walls and the floor pan to guarantee a 100% leak-proof backing.",
+              title: "Advanced Waterproofing Protection",
+              description: "Moisture protection is one of the most important parts of any shower project. We install professional waterproofing systems, including Schluter®-KERDI solutions when appropriate, to help protect walls and flooring from water intrusion.",
             },
             {
               number: "04",
               icon: "ShowerHead",
-              title: "Tile Setting & Fixture Install",
-              description: "Our tile specialists lay your ceramic or porcelain tiles, build integrated niches/benches, and secure premium fixtures.",
+              title: "Tile, Fixtures & Finishing Details",
+              description: "Our installers complete detailed tile work, fixture placement, storage features, and finishing touches that bring the design together. Every element is installed with attention to alignment, durability, and appearance.",
             },
             {
               number: "05",
               icon: "Sparkles",
-              title: "Glass Enclosure & Walkthrough",
-              description: "We install custom-cut frameless glass panels, mount premium hardware, run drainage flow checks, and complete the final walkthrough.",
+              title: "Glass Installation & Final Walkthrough",
+              description: "The final stage includes installing the selected glass enclosure, checking functionality, reviewing finishing details, and walking through the completed project with the homeowner.",
             },
           ]}
         />
 
         <IssuesSolved
-          title="Issues We Solve with Custom Showers"
-          subtitle="Common Problems Fixed"
-          description="We address the most common bathing area challenges Chandler homeowners face."
-          issues={showerData.issues}
+          title="Common Shower Problems We Help Solve"
+          subtitle="Solutions for Outdated and Damaged Bathrooms"
+          description="Older bathrooms often develop issues that affect appearance, comfort, and maintenance. Our remodeling solutions focus on improving performance while creating a more enjoyable daily experience."
+          issues={[
+            {
+              title: "Water Damage Concerns",
+              description: "Old shower areas with failing surfaces or worn seals can allow moisture to reach surrounding materials. We improve protection with proper waterproofing methods, updated surfaces, and careful installation practices.",
+            },
+            {
+              title: "Damaged Tile and Aging Finishes",
+              description: "Cracked tile, outdated designs, and worn grout can make a bathroom look neglected. We replace aging materials with durable options designed for easier cleaning and long-term use.",
+            },
+            {
+              title: "Difficult Maintenance",
+              description: "Traditional grout and older shower materials may require frequent upkeep. Modern tile options, improved grout selections, and updated layouts can help reduce maintenance requirements.",
+            },
+            {
+              title: "Outdated Fixtures & Poor Functionality",
+              description: "Older valves, fixtures, and layouts may affect comfort and usability. We can update components to create a more convenient and enjoyable bathing experience.",
+            },
+          ]}
         />
 
         <Benefits
-          title="Benefits of Upgrading Your Shower"
-          subtitle="Why It Matters"
-          description="Discover how professional updates transform your daily routine and add value to your home. Whether you need a simple upgrade or a complete shower renovation near me, we provide expert results."
-          benefits={showerData.benefits}
+          title="Benefits of Updating Your Shower"
+          subtitle="Why Homeowners Upgrade Their Bathrooms"
+          description="A professionally planned bathroom improvement can enhance daily comfort, improve functionality, and add long-term value to your home."
+          benefits={[
+            {
+              title: "A More Comfortable Daily Experience",
+              description: "Modern features such as improved layouts, upgraded fixtures, built-in storage, and seating options allow homeowners to create a space designed around their lifestyle.",
+            },
+            {
+              title: "Better Moisture Protection",
+              description: "Professional waterproofing methods help reduce the risk of moisture-related problems and support a stronger, longer-lasting installation.",
+            },
+            {
+              title: "Improved Layout & Accessibility",
+              description: "Features such as wider entries, seating areas, and thoughtful placement of fixtures can make the bathroom easier and more comfortable to use.",
+            },
+            {
+              title: "Easier Cleaning & Maintenance",
+              description: "Updated surfaces, quality materials, and modern glass options can help homeowners spend less time maintaining their bathroom.",
+            },
+          ]}
         />
 
         <ShowerGallery />
@@ -178,91 +236,108 @@ export default function ShowerRemodelingPage() {
         <LocalTrust cityName="Chandler" />
 
         <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground text-center">
-              Specialized Shower Remodeling Services in Chandler
+          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
+            <h2 className="font-serif text-3xl font-semibold mb-8 text-foreground text-center">
+              Professional Shower Services Available
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 text-left">
               <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-semibold text-foreground mb-2">Tile Shower Installation Chandler</h3>
+                <h3 className="font-semibold text-foreground mb-2 text-lg">Tile Shower Upgrades</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  We specialize in custom <strong>tile shower installation services chandler</strong> homeowners trust, using moisture-proof substrates and high-grade porcelain 
-                  that stands up to Chandler's heavy mineral water without staining or failing.
+                  Our tile-focused bathroom improvements include detailed surface preparation, quality materials, and carefully installed finishes designed for Chandler homes.
                 </p>
               </div>
               <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-semibold text-foreground mb-2">Accessible Shower Remodeling Chandler</h3>
+                <h3 className="font-semibold text-foreground mb-2 text-lg">Accessible Bathroom Improvements</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Safety is paramount. Our <strong>accessible shower remodeling in Chandler</strong> includes curbless entries, built-in benches, 
-                  and ADA-compliant grab bars for a barrier-free bathing experience that doesn't compromise on luxury.
+                  We create safer bathroom layouts with options such as easier-entry designs, seating solutions, and accessibility-focused features.
                 </p>
               </div>
-            </div>
-            <div className="mt-12 p-8 bg-primary/5 rounded-3xl border border-primary/20 text-center">
-              <p className="text-foreground font-medium mb-4">
-                We offer competitive 0% financing options on qualifying projects - 
-                <Link href="/financing/" className="text-primary hover:underline ml-1">
-                  see our bathroom remodeling financing options
-                </Link>.
-              </p>
             </div>
           </div>
         </section>
 
         <Tips
           title="Expert Maintenance Tips"
-          subtitle="Professional Insights"
-          description="Smart strategies to make the most of your newly upgraded bathing space."
-          tips={showerData.tips}
-        />
-
-        <ServiceCTA 
-          title="Call Now for Your Free No-Obligation Shower Quote!" 
-          description="Need a new shower? Click to call our Chandler team today for a same-week consultation and fixed pricing." 
-        />
-
-        <SubServices 
-          title="Explore Other Bathroom Services"
-          subtitle="More Solutions"
-          description="We offer a full range of renovation services beyond just showers."
-          services={otherServices.map(s => s.name)}
+          subtitle="Keep Your Updated Bathroom Looking Great"
+          description="Smart strategies to maintain the beauty and durability of your newly upgraded shower space."
+          tips={[
+            {
+              title: "Tip 1: Maintain Waterproofing Protection",
+              description: "Quality waterproofing is essential behind every successful shower installation.",
+            },
+            {
+              title: "Tip 2: Choose Durable Surfaces",
+              description: "Porcelain tile and properly selected materials help create easier-to-maintain bathrooms.",
+            },
+            {
+              title: "Tip 3: Add Functional Storage",
+              description: "Built-in niches provide convenient storage while keeping the design organized.",
+            },
+            {
+              title: "Tip 4: Select Practical Fixtures",
+              description: "Finishes that handle everyday use well can help maintain the appearance of your bathroom.",
+            },
+          ]}
         />
 
         <ServiceFAQ faqs={faqs} />
 
-        {/* INTERNAL LINKING - Step 6 of SEO strategy */}
+        {/* MORE BATHROOM SOLUTIONS */}
         <section className="py-12 bg-secondary">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-2xl font-semibold text-center mb-6 text-foreground">
-              Related Bathroom Remodeling Services in Chandler
+          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wide block text-center mb-1">More Bathroom Solutions</span>
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-center mb-8 text-foreground">
+              Explore Our Other Remodeling Services
             </h2>
-            <div className="grid sm:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-3 gap-6">
               <Link
                 href="/tub-to-shower-conversion/"
-                className="bg-background border border-border rounded-xl p-5 hover:border-primary transition-colors group"
+                className="bg-background border border-border rounded-2xl p-6 hover:border-primary transition-all shadow-sm flex flex-col justify-between group"
               >
-                <p className="font-semibold text-foreground group-hover:text-primary text-sm">
-                  Tub-to-Shower Conversion
-                </p>
-                <p className="text-muted-foreground text-xs mt-1">Convert unused garden tubs to walk-in showers</p>
+                <div>
+                  <h3 className="font-semibold text-foreground group-hover:text-primary text-base mb-2">
+                    Tub to Shower Conversion
+                  </h3>
+                  <p className="text-muted-foreground text-xs leading-relaxed mb-4">
+                    Convert an unused bathtub area into a more practical and comfortable bathing space with updated layouts and modern features.
+                  </p>
+                </div>
+                <span className="text-xs font-bold text-primary group-hover:underline mt-auto inline-flex items-center gap-1">
+                  Explore Tub to Shower Conversion →
+                </span>
               </Link>
               <Link
-                href="/master-bathroom-remodel/"
-                className="bg-background border border-border rounded-xl p-5 hover:border-primary transition-colors group"
+                href="/ada-bathroom-remodeling/"
+                className="bg-background border border-border rounded-2xl p-6 hover:border-primary transition-all shadow-sm flex flex-col justify-between group"
               >
-                <p className="font-semibold text-foreground group-hover:text-primary text-sm">
-                  Master Bathroom Remodel
-                </p>
-                <p className="text-muted-foreground text-xs mt-1">Luxury master bath renovations</p>
+                <div>
+                  <h3 className="font-semibold text-foreground group-hover:text-primary text-base mb-2">
+                    Handicap Accessible Bathroom
+                  </h3>
+                  <p className="text-muted-foreground text-xs leading-relaxed mb-4">
+                    Create a safer bathroom environment with accessibility-focused improvements, comfortable layouts, and practical design features.
+                  </p>
+                </div>
+                <span className="text-xs font-bold text-primary group-hover:underline mt-auto inline-flex items-center gap-1">
+                  Explore Handicap Accessible Bathroom →
+                </span>
               </Link>
               <Link
                 href="/bathroom-tile-installation/"
-                className="bg-background border border-border rounded-xl p-5 hover:border-primary transition-colors group"
+                className="bg-background border border-border rounded-2xl p-6 hover:border-primary transition-all shadow-sm flex flex-col justify-between group"
               >
-                <p className="font-semibold text-foreground group-hover:text-primary text-sm">
-                  Bathroom Tile Installation
-                </p>
-                <p className="text-muted-foreground text-xs mt-1">Expert tile installation and replacement</p>
+                <div>
+                  <h3 className="font-semibold text-foreground group-hover:text-primary text-base mb-2">
+                    Bathroom Tile Installation
+                  </h3>
+                  <p className="text-muted-foreground text-xs leading-relaxed mb-4">
+                    Upgrade your bathroom surfaces with professionally installed tile options designed for durability, appearance, and easy maintenance.
+                  </p>
+                </div>
+                <span className="text-xs font-bold text-primary group-hover:underline mt-auto inline-flex items-center gap-1">
+                  Explore Bathroom Tile Installation →
+                </span>
               </Link>
             </div>
           </div>

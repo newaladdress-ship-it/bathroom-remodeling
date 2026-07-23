@@ -8,11 +8,11 @@ import { Award, Users, Clock, Shield, CheckCircle2, ArrowRight, Phone, Pencil, H
 import { BreadcrumbSchema, FAQSchema } from "@/components/seo/json-ld";
 
 export const metadata: Metadata = {
-  title: "About ARZ Home Remodeling | Professional Chandler Contractors",
-  description: "Locally operated bathroom remodeling company serving Chandler, AZ. Meet our professional crew and explore custom shower and bath renovations.",
+  title: "About ARZ Home Remodeling | Chandler Bathroom Remodelers",
+  description: "Learn about ARZ Home Remodeling and how we help Chandler homeowners transform their bathrooms. Call today for a free consultation and start planning your project.",
   openGraph: {
-    title: "About ARZ Remodelers | Chandler AZ Bathroom Remodeling",
-    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore our custom showers, tile, vanities, and complete bath renovations.",
+    title: "About ARZ Home Remodeling | Chandler Bathroom Remodelers",
+    description: "Learn about ARZ Home Remodeling and how we help Chandler homeowners transform their bathrooms. Call today for a free consultation and start planning your project.",
     url: `${siteConfig.url}/about/`,
     type: "website",
     images: [
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About ARZ Remodelers | Chandler AZ Bathroom Remodeling",
-    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore our custom showers, tile, vanities, and complete bath renovations.",
+    title: "About ARZ Home Remodeling | Chandler Bathroom Remodelers",
+    description: "Learn about ARZ Home Remodeling and how we help Chandler homeowners transform their bathrooms. Call today for a free consultation and start planning your project.",
     images: [`${siteConfig.url}/images/hero-bathroom.jpg`],
   },
   alternates: {
@@ -38,23 +38,23 @@ export const metadata: Metadata = {
 const values = [
   {
     icon: Award,
-    title: "Quality Craftsmanship",
-    description: "Every project reflects our commitment to excellence and attention to detail."
+    title: "Local Chandler Focus",
+    description: "We proudly help homeowners throughout Chandler by providing personalized bathroom remodeling solutions designed around local homes, modern styles, and practical everyday living."
   },
   {
     icon: Users,
-    title: "Customer-Focused",
-    description: "Your vision is our priority. We listen, collaborate, and deliver results that exceed expectations."
+    title: "Design That Fits Your Home",
+    description: "Every bathroom is different. We help you choose layouts, finishes, tile, lighting, vanities, and storage solutions that reflect your style while improving comfort and functionality."
   },
   {
     icon: Clock,
-    title: "On-Time Delivery",
-    description: "We respect your time with efficient project management and reliable scheduling."
+    title: "Quality Materials",
+    description: "We carefully select durable materials and finishes designed to perform well in busy bathrooms while creating a clean, timeless appearance that lasts."
   },
   {
     icon: Shield,
-    title: "Fully Insured",
-    description: "Full protection and peace of mind with comprehensive liability insurance and strict safety standards."
+    title: "Customer-First Experience",
+    description: "From your initial consultation to project completion, we believe clear communication, honest recommendations, and attention to detail create a remodeling experience homeowners can trust."
   },
 ];
 
@@ -87,7 +87,7 @@ export default function AboutPage() {
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="pt-24 md:pt-28 lg:pt-32 pb-16 md:pb-20 bg-secondary">
-          <div className="container mx-auto px-4 mt-4">
+          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12 mt-4">
             <div className="max-w-3xl mx-auto text-center">
               <span className="text-sm font-medium tracking-widest text-primary uppercase">
                 Our Story
@@ -104,7 +104,7 @@ export default function AboutPage() {
 
         {/* Story Section */}
         <section className="py-20 md:py-28">
-          <div className="container mx-auto px-4">
+          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative">
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-md border border-border">
@@ -122,17 +122,14 @@ export default function AboutPage() {
               </div>
               
               <div>
-                <span className="text-sm font-medium tracking-widest text-primary uppercase">
+                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground text-balance">
                   Why We Started ARZ Home Remodeling
-                </span>
-                <h2 className="mt-4 text-3xl md:text-4xl font-serif font-semibold text-foreground text-balance">
-                  Local Expertise in Every Tile
                 </h2>
                 <p className="mt-6 text-muted-foreground leading-relaxed">
-                  We started ARZ Home Remodeling to solve a specific problem in Chandler: homeowners were tired of unreliable contractors who used cheap materials and vanished halfway through a job. We saw a need for a trusted, local bathroom remodeling contractor who communicates clearly, shows up on time, and builds bathrooms that stand the test of time. 
+                  Every homeowner deserves a bathroom that feels comfortable, functional, and built around their lifestyle. ARZ Home Remodeling was created to help Chandler homeowners transform outdated bathrooms into modern spaces with thoughtful design, quality materials, and attention to every detail.
                 </p>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Unlike companies that rely on high-pressure sales tactics and cut corners on waterproofing, we decided to do things differently. We built our entire business model on complete transparency, uncompromising craftsmanship, and a genuine commitment to our neighbors. We only use premium materials designed to withstand Arizona's unique climate, ensuring your new bathroom is not only beautiful but built to last.
+                  We believe remodeling should be simple, transparent, and centered on your goals. Whether you're planning a custom shower, bathroom tile installation, vanity replacement, or a complete bathroom renovation, we focus on solutions that fit your home, budget, and everyday needs. From your first consultation to the final walkthrough, our priority is helping you make confident decisions while creating a bathroom you'll enjoy for years to come.
                 </p>
 
                 <ul className="mt-6 space-y-3">
@@ -150,7 +147,7 @@ export default function AboutPage() {
 
         {/* Values Section */}
         <section className="py-20 md:py-28 bg-secondary">
-          <div className="container mx-auto px-4">
+          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
             <div className="max-w-2xl mx-auto text-center mb-16">
               <span className="text-sm font-medium tracking-widest text-primary uppercase">
                 What Drives Us
@@ -180,7 +177,7 @@ export default function AboutPage() {
 
         {/* Our Process Section */}
         <section className="py-20 md:py-28">
-          <div className="container mx-auto px-4">
+          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
             <div className="max-w-2xl mx-auto text-center mb-16">
               <span className="text-sm font-medium tracking-widest text-primary uppercase">
                 Our Process
@@ -234,7 +231,7 @@ export default function AboutPage() {
 
         {/* CTA Section */}
         <section className="py-20 md:py-28 bg-secondary/30">
-          <div className="container mx-auto px-4">
+          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground text-balance">
                 Ready to Start Your Remodeling Project?

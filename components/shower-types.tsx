@@ -15,45 +15,45 @@ const showerTypes: ShowerType[] = [
   {
     title: "Walk-In Tile Showers",
     description:
-      "Custom porcelain or natural stone tile showers with a low curb or curbless entry. We handle waterproofing, niche installation, bench framing, and frameless glass. Most popular upgrade in Chandler homes replacing old fiberglass surrounds.",
+      "A tiled shower design provides a highly customizable option for homeowners replacing outdated fiberglass surrounds or improving an existing bathroom layout. We install durable tile surfaces with carefully planned features such as built-in niches, seating areas, and coordinated finishes. Each project includes proper preparation, moisture protection, and detailed installation techniques to help create a reliable and attractive bathing area.",
     priceRange: "Mid-Range Scope",
   },
   {
     title: "Frameless Glass Shower Enclosures",
     description:
-      "Frameless glass panels cut to your exact opening, leaving no aluminum channels collecting soap scum. Works on new tile installs and retrofits. Clear, low-iron, or frosted glass options. Most homeowners in Fulton Ranch and Ocotillo request frameless for a clean, modern look.",
+      "Frameless glass creates a clean, open appearance while allowing surrounding tile work and bathroom features to stand out. Panels are measured and fitted to match the specific dimensions of your space, creating a modern finish without bulky framing. Available options include clear, low-iron, and privacy glass styles to match different design preferences.",
     priceRange: "Standard to Custom Upgrade",
   },
   {
-    title: "Curbless / Zero-Threshold Showers",
+    title: "Curbless / Zero-Threshold Designs",
     description:
-      "A curbless shower in Chandler eliminates the step-over lip, which is ideal for aging in place, ADA compliance, or just a cleaner look. We slope the pan floor to a linear or center drain and install slip-resistant tile (COF 0.60+). Common in Sun Lakes and near Chandler Regional Medical Center.",
+      "A zero-threshold layout removes the traditional raised entry, creating a smoother transition between the bathroom floor and bathing area. This style is popular among homeowners who want improved accessibility, a minimalist appearance, or a more spacious feel. Proper slope planning, drainage placement, and surface selection are essential parts of creating a functional design.",
     priceRange: "Luxury Custom Scope",
   },
   {
     title: "Tub-to-Shower Conversion",
     description:
-      "Remove an unused garden tub, reset the drain, waterproof the floor pan and walls with Schluter-Kerdi, and build a full walk-in shower in the same footprint. Our most-requested project in older Chandler ranch homes.",
+      "Many homeowners replace unused bathtubs with more practical shower layouts that better fit their lifestyle. A conversion project typically involves removing the existing tub area, adjusting plumbing connections, preparing surfaces, and installing a complete upgraded bathing system in the available footprint. This option is especially popular in older Chandler homes where homeowners want better functionality without expanding the bathroom.",
     priceRange: "Mid-Range Scope",
   },
   {
     title: "Shower Tile Replacement",
     description:
-      "Cracked grout, failing caulk, or stained builder-grade tile? We demo the old tile down to the substrate, inspect for moisture damage, re-waterproof if needed, and install new porcelain. Chandler's hard water destroys standard grout fast, so we recommend epoxy grout on all shower walls.",
+      "Damaged grout, outdated tile, and worn surfaces can make a bathroom feel aged. Our tile replacement process includes removing existing materials, evaluating the underlying structure, preparing the surface, and installing new finishes selected for durability and easy maintenance. We help homeowners choose materials and grout options that provide a cleaner appearance and longer-lasting results.",
     priceRange: "Standard Level",
   },
   {
-    title: "Master Bath Shower Upgrades",
+    title: "Master Bathroom Shower Upgrades",
     description:
-      "Expand a small master shower into a double-entry or rain-head shower. Relocate the valve, add a bench, or convert a soaking tub alcove into a wet room. Popular in Chandler master suites built in the 2000s that have outdated tile and low ceilings.",
+      "A master bathroom improvement can completely change how the space feels and functions. Options may include expanding the bathing area, improving storage, adding built-in seating, updating fixtures, or creating a more open design. Our team works with homeowners to develop layouts that balance comfort, appearance, and everyday usability.",
     priceRange: "Luxury Custom Scope",
   },
 ];
 
-export default function ShowerTypes({ title = "Types of Shower Remodels We Do in Chandler, AZ", subtitle }: ShowerTypesProps) {
+export default function ShowerTypes({ title = "Shower Upgrade Options We Provide", subtitle }: ShowerTypesProps) {
   return (
     <section className="py-16 bg-background">
-      <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="text-center mb-12">
           <h2 className="font-serif text-4xl font-semibold mb-4 text-foreground">
             {title}

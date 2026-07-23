@@ -15,7 +15,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-[70vh] flex items-center overflow-hidden pt-24 md:pt-28 lg:pt-32" aria-label="Hero section">
+    <section className="relative min-h-[70vh] lg:min-h-[calc(100vh-184px)] flex items-center overflow-hidden pt-24 md:pt-28 lg:pt-32" aria-label="Hero section">
       <div className="absolute inset-0 z-0">
         <picture className="absolute inset-0 w-full h-full">
           <source srcSet={base64MobileHero || "/images/hero/luxury-shower-remodel-chandler-640.avif"} media="(max-width: 640px)" type="image/avif" />
@@ -32,16 +32,16 @@ export default function Hero() {
         <div className="absolute inset-0 bg-primary/75 lg:bg-primary/70 hero-overlay" aria-hidden="true" />
       </div>
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-2 pb-4 lg:pt-4 lg:pb-6 flex justify-center hero-container">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12 relative z-10 pt-2 pb-4 lg:pt-4 lg:pb-6 flex justify-center hero-container">
         <div className="max-w-5xl mx-auto text-center text-white flex flex-col items-center hero-content">
           {/* Title */}
-          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4 tracking-tight hero-title">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-4 tracking-tight hero-title">
             Bathroom Remodeling in Chandler, AZ
           </h1>
 
           {/* Subhead / Main Copy */}
           <p className="text-sm md:text-base lg:text-lg text-white/90 mb-6 leading-relaxed font-light max-w-4xl hero-description">
-            Your bathroom should be comfortable, functional, and built to fit your lifestyle. We provide custom bathroom remodeling in Chandler, AZ, including walk-in showers, tile installation, vanity upgrades, tub-to-shower conversions, and complete bathroom renovations. Let us help you create a space you'll enjoy for years to come with a free, no-obligation estimate.
+            Your bathroom should be comfortable, functional, and built to fit your lifestyle. We provide custom bathroom remodeling in Chandler, AZ, including walk-in showers, bathroom tile installation, bathroom vanity installation, tub-to-shower conversions, and complete bathroom renovations. Schedule your free consultation today.
           </p>
 
           {/* Action Buttons */}
@@ -50,10 +50,10 @@ export default function Hero() {
               asChild
               size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground text-base sm:text-lg px-6 py-5 sm:px-8 sm:py-6 font-bold rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 hero-btn-primary"
-              aria-label={`Call us at ${siteConfig.phone} for a free estimate`}
+              aria-label="Call now"
             >
               <a href={`tel:${siteConfig.phoneClean}`}>
-                Call {siteConfig.phone} - Free Estimate
+                Call Now
               </a>
             </Button>
             <Link 

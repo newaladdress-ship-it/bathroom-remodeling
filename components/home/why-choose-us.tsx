@@ -41,8 +41,8 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 lg:py-32 bg-background border-t border-border">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="py-12 lg:py-20 bg-background border-t border-border">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
           <span className="text-primary text-sm font-medium tracking-wider uppercase bg-primary/5 px-4 py-1.5 rounded-full">
             Why Choose Us

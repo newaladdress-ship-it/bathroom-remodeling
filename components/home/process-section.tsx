@@ -33,10 +33,12 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="py-20 lg:py-32 bg-foreground text-background">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="py-12 lg:py-20 bg-foreground text-background">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Process</span>
+          <span className="text-accent text-xs sm:text-sm font-extrabold uppercase tracking-[0.2em] mb-3 block">
+            Our Process
+          </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-6 text-background text-balance">
             Our Remodeling Process
           </h2>
@@ -45,18 +47,18 @@ export default function ProcessSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 items-stretch">
           {steps.map((step, index) => (
-            <div key={step.number} className="relative">
+            <div key={step.number} className="relative h-full">
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-10 left-1/2 w-full h-px bg-background/20" />
               )}
-              <div className="relative bg-background/5 border border-background/10 rounded-xl p-8 text-center">
+              <div className="relative bg-background/5 border border-background/10 rounded-xl p-8 text-center h-full flex flex-col items-center">
                 <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-sm font-bold px-4 py-1 rounded-full">
                   {step.number}
                 </span>
-                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6 mt-4">
-                  <step.icon className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6 mt-4">
+                  <step.icon className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold mb-3 text-background">{step.title}</h3>
                 <p className="text-background/60 text-sm leading-relaxed">{step.description}</p>

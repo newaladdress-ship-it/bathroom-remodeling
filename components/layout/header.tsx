@@ -61,7 +61,7 @@ export function Header() {
         }`}
         role="banner"
       >
-        <div className="container mx-auto px-4 lg:px-8">
+        <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
           <div className="flex items-center justify-between">
             <Link
               href="/"

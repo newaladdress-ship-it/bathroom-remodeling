@@ -4,7 +4,7 @@ import { homeFaqs } from "@/lib/home-faqs";
 export default function FAQ() {
   return (
     <section className="py-20 lg:py-32 bg-secondary" id="faq">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12 md:mb-16 lg:mb-20">
             <span className="text-primary text-sm font-medium tracking-wider uppercase">FAQ</span>

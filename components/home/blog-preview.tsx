@@ -10,7 +10,7 @@ export default async function BlogPreview() {
 
   return (
     <section className="py-20 lg:py-32 bg-background border-t border-border/50">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16 lg:mb-20 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <div className="max-w-2xl">

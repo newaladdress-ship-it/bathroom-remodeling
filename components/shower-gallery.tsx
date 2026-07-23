@@ -4,25 +4,25 @@ import { ArrowRight } from "lucide-react";
 const showerProjects = [
   {
     id: 1,
-    title: "Walk-In Tile Shower in Ocotillo",
+    title: "Modern Tile Shower Upgrade",
     neighborhood: "Ocotillo, Chandler",
-    category: "Walk-In Shower - Completed April 2025",
+    category: "A refreshed bathroom design featuring updated tile surfaces, improved functionality, and a cleaner modern appearance.",
     before: "/images/services/chandler-bathroom-remodel.avif",
     after: "/images/hero/luxury-shower-remodel-chandler.avif",
   },
   {
     id: 2,
-    title: "Frameless Glass Enclosure in Fulton Ranch",
+    title: "Frameless Glass Bathroom Upgrade",
     neighborhood: "Fulton Ranch, Chandler",
-    category: "Glass Enclosure - Completed March 2025",
+    category: "A contemporary update focused on creating an open feel with streamlined glass and coordinated finishes.",
     before: "/images/projects/luxury-bathtub-remodel-az.avif",
     after: "/images/services/chandler-bathroom-remodel.avif",
   },
   {
     id: 3,
-    title: "Curbless Shower Upgrade in Sun Lakes",
+    title: "Accessible Shower Improvement",
     neighborhood: "Sun Lakes, Chandler",
-    category: "Accessibility Remodel - Completed May 2025",
+    category: "A practical bathroom update designed around easier access, comfort, and everyday usability.",
     before: "/images/hero/luxury-shower-remodel-chandler.avif",
     after: "/images/projects/luxury-bathtub-remodel-az.avif",
   },
@@ -70,7 +70,7 @@ function ShowerBeforeAfterCard({ item }: { item: typeof showerProjects[0] }) {
       <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
         <h3 className="font-serif text-lg font-semibold text-background">{item.title}</h3>
         <p className="text-background/80 text-sm">{item.neighborhood}</p>
-        <p className="text-background/70 text-xs mt-1">{item.category}</p>
+        <p className="text-background/70 text-xs mt-1 leading-relaxed">{item.category}</p>
         <div className="flex items-center gap-2 mt-3 text-background/90 text-sm">
           <span>Hover to see after</span>
           <ArrowRight size={14} />
@@ -83,16 +83,13 @@ function ShowerBeforeAfterCard({ item }: { item: typeof showerProjects[0] }) {
 export default function ShowerGallery() {
   return (
     <section className="py-16 bg-secondary">
-      <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wide">Our Work</span>
+          <span className="text-primary font-semibold text-sm uppercase tracking-wide">Our Recent Shower Projects</span>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mt-2">
-            Recent Shower Remodels in Chandler
+            Completed Bathroom Transformations in Chandler Areas
           </h2>
-          <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Hover over each project to see the transformation. These real projects show our attention to detail, waterproofing expertise, and commitment to quality finishes.
-          </p>
         </div>
 
         {/* Gallery Grid */}

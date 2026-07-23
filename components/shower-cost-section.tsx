@@ -38,7 +38,7 @@ const costData: CostRow[] = [
 export default function ShowerCostSection() {
   return (
     <section className="py-16 bg-secondary">
-      <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="text-center mb-12">
           <h2 className="font-serif text-4xl font-semibold mb-4 text-foreground">
             How Much Does Shower Remodeling Cost in Chandler, AZ?

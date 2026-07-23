@@ -39,14 +39,14 @@ const projects: ProjectCaseStudy[] = [
 
 export default function ChandlerProjects() {
   return (
-    <section className="py-20 lg:py-32 bg-background border-t border-border" aria-label="Popular Bathroom Remodeling Services in Chandler">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="py-12 lg:py-20 bg-background border-t border-border" aria-label="Bathroom Remodeling Solutions for Chandler Homes">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
           <span className="text-primary text-sm font-semibold tracking-wider uppercase bg-primary/5 px-4 py-1.5 rounded-full">
             Local Proof
           </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-6 text-foreground text-balance">
-            Popular Bathroom Remodeling Services in Chandler
+            Bathroom Remodeling Solutions for Chandler Homes
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
             See how our bathroom remodeling services resolve common layout and design challenges for homeowners in Chandler's local communities.

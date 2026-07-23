@@ -10,7 +10,7 @@ export default function UspBar() {
 
   return (
     <section className="bg-primary text-primary-foreground py-6 border-b border-border" aria-label="Key Credentials">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {items.map((item, i) => (
             <div key={i} className="flex items-center justify-center gap-2.5">

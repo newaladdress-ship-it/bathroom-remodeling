@@ -31,7 +31,7 @@ export function Footer() {
   return (
     <footer className="bg-foreground text-background" role="contentinfo">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-20">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
@@ -59,7 +59,6 @@ export function Footer() {
               <p className="font-semibold text-background text-base">ARZ Home Remodeling</p>
               <p>6710 W Chicago St, Chandler, AZ 85226</p>
               <p>Phone: <a href={`tel:${siteConfig.phoneClean}`} className="text-background/80 hover:text-primary transition-colors no-underline">{siteConfig.phone}</a></p>
-              <p className="text-xs pt-1 text-background/60"> professional | License # | Arizona Registrar of Contractors</p>
             </div>
 
             <ul className="flex gap-3" role="list" aria-label="Social media links">
@@ -300,7 +299,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-background/10">
-        <div className="container mx-auto px-4 lg:px-8 py-6">
+        <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-background/70 text-sm">
               © 2026 {siteConfig.name}. All rights reserved.

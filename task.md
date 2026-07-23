@@ -1,8 +1,0 @@
-- [x] Write the automated scrubbing script `scratch/scrub-codebase.mjs`
-- [x] Run the automated scrubbing script to update all 79 files
-- [x] Update `components/home/local-trust.tsx` to return `null`
-- [x] Configure redirects in `app/team/page.tsx` and `app/team/alex-rivers/page.tsx`
-- [x] Update `components/seo/json-ld.tsx` to clean schemas
-- [x] Update `lib/site-config.ts` to clean global configuration
-- [x] Run the final trust audit scanner to verify zero remaining occurrences of forbidden terms
-- [x] Run a test build to ensure everything compiles correctly

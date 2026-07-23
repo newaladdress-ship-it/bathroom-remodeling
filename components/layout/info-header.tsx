@@ -15,21 +15,15 @@ export function InfoHeader({ scrolled = false }: InfoHeaderProps) {
       }`}
       aria-label="Top contact information"
     >
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="flex items-center justify-between w-full">
           {/* Address on the left */}
           <div className="flex items-center">
-            <a 
-              href={siteConfig.googleBusinessLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-primary transition-colors min-h-[48px] px-2 no-underline"
-              aria-label={`Visit our location at ${siteConfig.address.full}`}
-            >
-              <MapPin className="w-4 h-4" aria-hidden="true" />
+            <div className="flex items-center gap-2 min-h-[40px] px-2 text-background/90">
+              <MapPin className="w-4 h-4 text-accent shrink-0" aria-hidden="true" />
               <span className="hidden md:inline">{siteConfig.address.full}</span>
               <span className="inline md:hidden">{siteConfig.address.city}, {siteConfig.address.state}</span>
-            </a>
+            </div>
           </div>
 
           {/* Phone and Careers on the right */}

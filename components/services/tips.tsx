@@ -10,7 +10,7 @@ interface TipsProps {
 export default function Tips({ title, subtitle, description, tips }: TipsProps) {
   return (
     <section className="py-20 lg:py-32 bg-background">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 lg:mb-20 animate-in fade-in slide-in-from-bottom-4 duration-700">

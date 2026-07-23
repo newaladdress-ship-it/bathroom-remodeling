@@ -28,7 +28,7 @@ export default function ServiceHero({
   const heroImage = rawImage.endsWith('.webp') ? rawImage.replace(/\.webp$/, '.avif') : rawImage;
 
   return (
-    <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-24 md:pt-28 lg:pt-32" aria-label={title}>
+    <section className="relative flex items-center justify-center overflow-hidden pt-32 lg:pt-36 pb-12 lg:pb-16" aria-label={title}>
       {breadcrumbs && <BreadcrumbSchema items={breadcrumbs} />}
       {/* Background Image - LCP Optimized */}
       <div className="absolute inset-0 z-0">
@@ -48,25 +48,25 @@ export default function ServiceHero({
       </div>
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center pt-10 pb-12 lg:pt-14 lg:pb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-        <div className="max-w-4xl mx-auto">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-10 text-center animate-in fade-in slide-in-from-bottom-4 duration-700">
+        <div className="w-full max-w-[1300px] mx-auto">
           {subtitle && (
-            <p className="text-primary-foreground text-sm uppercase tracking-wider mb-4 font-medium">
+            <p className="text-primary-foreground text-xs sm:text-sm uppercase tracking-wider mb-2 font-medium">
               {subtitle}
             </p>
           )}
-          <h1 className={titleClassName || "font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"}>
+          <h1 className={titleClassName || "font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 leading-tight"}>
             {title}
           </h1>
-          <p className="text-white text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/90 text-sm sm:text-base md:text-lg mb-5 max-w-[1250px] mx-auto leading-relaxed">
             {description}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3.5 justify-center">
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground min-w-[200px]"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground min-w-[200px] font-bold shadow-lg"
               aria-label={`Call us at ${siteConfig.phone} to speak with our bathroom remodeling team`}
             >
               <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
@@ -78,7 +78,7 @@ export default function ServiceHero({
               asChild
               size="lg"
               variant="outline"
-              className="border-white bg-white text-primary hover:bg-white/90 hover:text-primary min-w-[200px]"
+              className="border-white bg-white text-primary hover:bg-white/90 hover:text-primary min-w-[200px] font-semibold shadow-lg"
               aria-label="Speak to a Project Supervisor"
             >
               <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">

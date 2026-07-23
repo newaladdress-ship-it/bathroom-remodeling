@@ -1,89 +1,70 @@
 import { Phone, Clock, ShieldCheck } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-secondary overflow-hidden">
-      <div className="container mx-auto px-4 lg:px-8">
-        {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-          <span className="text-primary text-sm font-semibold tracking-wider uppercase">
-            Get In Touch
-          </span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-6 text-foreground text-balance">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            Get in touch with our professional team to schedule your free in-home consultation. We&apos;ll discuss your vision, answer your questions, and provide a detailed estimate with no obligation.
-          </p>
-        </div>
-
-        {/* 3-Column Contact Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
-          {/* Card 1: Phone */}
-          <div className="bg-card border border-border rounded-2xl p-8 shadow-sm flex flex-col items-center text-center transition-all duration-300 hover:shadow-md hover:border-primary/20">
-            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 shrink-0">
-              <Phone className="w-7 h-7 text-primary" aria-hidden="true" />
-            </div>
-            <h3 className="font-serif text-xl font-semibold text-foreground mb-3">Call Us Directly</h3>
-            <p className="text-muted-foreground text-sm mb-8 leading-relaxed max-w-xs">
-              Speak with a project supervisor. We answer calls and return voicemails within 2 hours.
+    <section id="contact" className="py-12 lg:py-20 bg-secondary overflow-hidden">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
+          {/* Left Column: Contact Copy and Call Details */}
+          <div className="lg:col-span-6 flex flex-col justify-center">
+            <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-3 block">
+              Get In Touch
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-6 text-foreground leading-tight">
+              Ready to Start Your Project?
+            </h2>
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
+              Get in touch with our professional team to schedule your free in-home consultation. We&apos;ll discuss your vision, answer your questions, and provide a detailed estimate with no obligation.
             </p>
-            <Button
-              asChild
-              size="lg"
-              className="mt-auto w-full bg-primary hover:bg-primary/95 text-white font-bold h-12"
-            >
-              <a href={`tel:${siteConfig.phoneClean}`} aria-label={`Call us at ${siteConfig.phone}`}>
-                {siteConfig.phone}
+
+            <div className="space-y-6">
+              <a 
+                href={`tel:${siteConfig.phoneClean}`} 
+                className="flex items-center gap-4 bg-card border border-border p-4 rounded-xl shadow-sm hover:border-primary/50 transition-colors group"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-all duration-300">
+                  <Phone className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" aria-hidden="true" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-foreground text-sm mb-0.5">Call Us Directly</h4>
+                  <span className="text-primary hover:underline text-lg font-bold block leading-none">
+                    {siteConfig.phone}
+                  </span>
+                </div>
               </a>
-            </Button>
+
+              <div className="flex items-center gap-4 bg-card border border-border p-4 rounded-xl shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <Clock className="w-6 h-6 text-primary" aria-hidden="true" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-foreground text-sm">Business Hours</h4>
+                  <p className="text-muted-foreground text-sm">
+                    {siteConfig.hours.weekdays.includes("24/7") ? (
+                      "Open 24/7 (24 Hours / 7 Days)"
+                    ) : (
+                      `Mon-Sat: ${siteConfig.hours.weekdays}`
+                    )}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
           </div>
 
-          {/* Card 2: Speak to a Project Supervisor */}
-          <div className="bg-card border border-border rounded-2xl p-8 shadow-sm flex flex-col items-center text-center transition-all duration-300 hover:shadow-md hover:border-primary/20">
-            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 shrink-0">
-              <Phone className="w-7 h-7 text-primary" aria-hidden="true" />
-            </div>
-            <h3 className="font-serif text-xl font-semibold text-foreground mb-3">Speak to a Project Supervisor</h3>
-            <p className="text-muted-foreground text-sm mb-8 leading-relaxed max-w-xs">
-              Call us directly to discuss your project design, scheduling, or to get an estimate fast.
-            </p>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="mt-auto w-full border-primary hover:bg-primary/5 text-primary font-bold h-12"
-            >
-              <a href={`tel:${siteConfig.phoneClean}`} aria-label={`Speak to a supervisor at ${siteConfig.phone}`}>
-                {siteConfig.phone}
-              </a>
-            </Button>
-          </div>
-
-          {/* Card 3: Hours & Licensing */}
-          <div className="bg-card border border-border rounded-2xl p-8 shadow-sm flex flex-col items-center text-center transition-all duration-300 hover:shadow-md hover:border-primary/20">
-            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 shrink-0">
-              <Clock className="w-7 h-7 text-primary" aria-hidden="true" />
-            </div>
-            <h3 className="font-serif text-xl font-semibold text-foreground mb-3">Hours & Location</h3>
-            <p className="text-muted-foreground text-sm mb-4 leading-relaxed max-w-xs">
-              Serving Chandler, Gilbert, Mesa, Tempe, Phoenix, and surrounding East Valley communities.
-            </p>
-            <div className="text-sm font-semibold text-foreground space-y-1 mb-6">
-              {siteConfig.hours.weekdays.includes("24/7") ? (
-                <div>Open 24/7 (24 Hours / 7 Days)</div>
-              ) : (
-                <>
-                  <div>Mon-Fri: {siteConfig.hours.weekdays}</div>
-                  <div>Sat: {siteConfig.hours.saturday}</div>
-                </>
-              )}
-            </div>
-            <div className="mt-auto pt-4 border-t border-border w-full flex items-center justify-center gap-2 text-xs font-semibold text-primary">
-              <ShieldCheck className="w-4 h-4 text-accent" />
-              <span> professional #338304 · Bonded & Insured</span>
+          {/* Right Column: LeadSmart Iframe Embed Form */}
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="w-full max-w-[600px] bg-card border border-border rounded-2xl shadow-xl overflow-hidden p-2">
+              <iframe 
+                src="https://leads.leadsmartinc.com/?api_key=eccf565586cda416df8b89f66df641fee9a1bcb8&affiliate_source=momran1&funnel=4&category=23&step=1&buttons=btn-warning" 
+                width="100%" 
+                height="545" 
+                frameBorder="0"
+                title="Request Free Quotes Box"
+                className="w-full rounded-xl"
+              />
             </div>
           </div>
         </div>

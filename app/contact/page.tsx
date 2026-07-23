@@ -53,7 +53,7 @@ export default function ContactPage() {
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="pt-24 md:pt-28 lg:pt-32 pb-16 md:pb-20 bg-secondary">
-          <div className="container mx-auto px-4 mt-4">
+          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12 mt-4">
             <div className="max-w-3xl mx-auto text-center">
               <span className="text-sm font-medium tracking-widest text-primary uppercase">
                 Get In Touch
@@ -70,7 +70,7 @@ export default function ContactPage() {
 
         {/* Contact Info Cards */}
         <section className="py-16 pt-8">
-          <div className="container mx-auto px-4">
+          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
               <div className="bg-card p-6 rounded-xl shadow-sm border border-border text-center">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -136,7 +136,7 @@ export default function ContactPage() {
 
         {/* Google Maps Section */}
         <section className="py-20 md:py-28">
-          <div className="container mx-auto px-4">
+          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
                 <span className="text-sm font-medium tracking-widest text-primary uppercase">
@@ -194,7 +194,7 @@ export default function ContactPage() {
 
         {/* Service Area Zip Code List (Task 10C) */}
         <section className="py-16 bg-secondary border-t border-border">
-          <div className="container mx-auto px-4 max-w-4xl">
+          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
             <div className="text-center mb-10">
               <span className="text-sm font-medium tracking-widest text-primary uppercase">
                 Our Service Coverage

@@ -17,7 +17,7 @@ interface ServiceProcessProps {
 export default function ServiceProcess({ title, subtitle, description, steps }: ServiceProcessProps) {
   return (
     <section className="py-20 lg:py-32 bg-foreground text-background">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <span className="text-primary text-sm font-medium tracking-wider uppercase">
