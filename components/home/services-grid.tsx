@@ -124,7 +124,7 @@ export default function ServicesGrid() {
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
           <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Services</span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-6 text-foreground text-balance">
-            Our Bathroom Remodeling Services
+            Our Remodeling Services
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
             We provide professional bathroom design and remodeling services. Pick a service below or call for a whole-bath plan.

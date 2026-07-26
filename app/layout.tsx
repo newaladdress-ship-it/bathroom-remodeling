@@ -97,8 +97,8 @@ export default function RootLayout({
         <meta name="geo.placename" content="Chandler" />
         <meta name="geo.position" content={`${siteConfig.address.coordinates.lat};${siteConfig.address.coordinates.lng}`} />
         <meta name="ICBM" content={`${siteConfig.address.coordinates.lat}, ${siteConfig.address.coordinates.lng}`} />
-        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-
+        <link rel="preload" href="/images/hero/luxury-shower-remodel-chandler-640.avif" as="image" type="image/avif" media="(max-width: 640px)" fetchPriority="high" />
+        <link rel="preload" href="/images/hero/luxury-shower-remodel-chandler-828.avif" as="image" type="image/avif" media="(min-width: 641px) and (max-width: 828px)" fetchPriority="high" />
 
         {/* Google Fonts are optimized and self-hosted via next/font/google */}
 

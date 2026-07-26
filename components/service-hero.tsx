@@ -39,7 +39,7 @@ export default function ServiceHero({
           priority
           sizes="100vw"
           className="object-cover"
-          quality={90}
+          quality={75}
           fetchPriority="high"
           decoding="sync"
           loading="eager"

@@ -34,7 +34,8 @@ export default function ServiceHero({
           className="object-cover"
           priority
           fetchPriority="high"
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, 100vw"
+          quality={75}
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>
