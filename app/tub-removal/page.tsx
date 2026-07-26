@@ -1,3 +1,4 @@
+import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,17 +9,22 @@ import ServiceProcess from "@/components/service-process";
 import IssuesSolved from "@/components/issues-solved";
 import Benefits from "@/components/benefits";
 import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
-import { GoogleMap } from "@/components/services/google-map";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
+import SubServices from "@/components/sub-services";
+import { getRelatedServices } from "@/lib/bathroom-services";
 
-export const metadata: Metadata = {title: {
+export const metadata: Metadata = {
+  title: {
     absolute: "Tub Removal Services | Chandler AZ Bathroom Remodeling"
-  },description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore tub removal services, custom showers, tile, vanities, clear pricing, and free estimates.",
-  openGraph: {title: "Tub Removal Services | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore tub removal services, custom showers, tile, vanities, clear pricing, and free estimates.",
+  },
+  description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore tub removal services, custom showers, tile, vanities, clear pricing, and free estimates.",
+  openGraph: {
+    title: "Tub Removal Services | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore tub removal services, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/tub-removal`,
     type: "website",
     images: [
@@ -31,7 +37,9 @@ export const metadata: Metadata = {title: {
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Tub Removal Services | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore tub removal services, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Tub Removal Services | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore tub removal services, custom showers, tile, vanities, clear pricing, and free estimates.",
     images: [`${siteConfig.url}/images/tub-removal-hero.jpg`],
   },
   alternates: {
@@ -41,19 +49,14 @@ export const metadata: Metadata = {title: {
 };
 
 const faqs = serviceContent["tub-removal"].faqs;
-
-const chandlerLocation = {
-  lat: 33.3009334,
-  lng: -111.9605964,
-};
+const otherServices = getRelatedServices("/tub-removal/");
 
 export default function TubRemovalPage() {
   const serviceData = serviceContent["tub-removal"];
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Tub Removal", url: "https://arzhomeremodeling.com/tub-removal/" } ]} />
-<ServiceSchema
+      <ServiceSchema
         serviceName="Bathtub Removal in Chandler, Arizona"
         serviceDescription="Professional bathtub removal services in Chandler, Arizona. Safe removal, proper disposal, and floor preparation for bathroom renovations."
         serviceUrl={`${siteConfig.url}/tub-removal`}
@@ -70,6 +73,13 @@ export default function TubRemovalPage() {
             { name: "Home", url: siteConfig.url },
             { name: "Tub Removal", url: `${siteConfig.url}/tub-removal` },
           ]}
+        />
+
+        <SubServices 
+          title="Related Services in Chandler"
+          subtitle="More Solutions"
+          description="We provide comprehensive bathroom remodeling services designed for your needs."
+          services={otherServices.map(s => s.name)}
         />
 
         <ServiceProcess
@@ -123,40 +133,14 @@ export default function TubRemovalPage() {
           benefits={serviceData.benefits}
         />
 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground text-center">
-              Professional Tub Extraction and Subfloor Preparation
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Removing a heavy bathtub requires advanced tools and careful planning. Our experienced team handles the entire 
-              demolition process safely, ensuring your bathroom structural framework remains protected.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Certified Plumbing Disconnection</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  We turn off your water main and carefully remove all brass tub drain lines and overflow piping. We permanently cap 
-                  unused hot and cold supply lines behind the drywall with heavy copper caps.
-                </p>
-              </div>
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Subfloor Joist Preparation</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Bulky bathtubs often conceal hidden water leaks. Once extracted, we thoroughly inspect the floor joists, remove any 
-                  mold or dry rot, and reinforce your subfloor with clean plywood.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <Tips
           title="Tub Removal Planning Tips"
           subtitle="Before You Start"
           description="Important considerations before scheduling your bathtub removal service."
           tips={serviceData.tips}
         />
+
+        <ServiceAreas />
 
         <ServiceCTA 
           title="Ready for professional tub removal in Chandler?" 
@@ -165,14 +149,9 @@ export default function TubRemovalPage() {
 
         <ServiceFAQ faqs={faqs} />
 
-        <Testimonials category="tub-removal" />
-
         <ContactSection />
-
-        
       </main>
       <Footer />
     </>
   );
 }
-

@@ -1,20 +1,27 @@
+import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import ServiceCTA from "@/components/service-cta";
 import ServiceFAQ from "@/components/service-faq";
-import Testimonials from "@/components/home/testimonials";
+import ServiceProcess from "@/components/service-process";
+import IssuesSolved from "@/components/issues-solved";
+import Benefits from "@/components/benefits";
+import Tips from "@/components/tips";
 import ContactSection from "@/components/home/contact-section";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import SubServices from "@/components/sub-services";
-import { bathroomServices, getRelatedServices } from "@/lib/bathroom-services";
-import Link from "next/link";
-import { CheckCircle2, Clock, DollarSign, ArrowRight } from "lucide-react";
+import { getRelatedServices } from "@/lib/bathroom-services";
 
-export const metadata: Metadata = {title: "Handicap Accessible Bathrooms Chandler AZ | ADA Pros | ARZ",description: "Expert handicap accessible bathroom remodeling in Chandler, AZ. Zero-threshold roll-in showers, safety grab bars, and custom vanities. Free estimate!",
-  openGraph: {title: "Handicap Accessible | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore handicap accessible, custom showers, tile, vanities, clear pricing, and free estimates.",
+export const metadata: Metadata = {
+  title: "Handicap Accessible Bathrooms Chandler AZ | ADA Pros | ARZ",
+  description: "Expert handicap accessible bathroom remodeling in Chandler, AZ. Zero-threshold roll-in showers, safety grab bars, and custom vanities. Free estimate!",
+  openGraph: {
+    title: "Handicap Accessible | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore handicap accessible, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/handicap-accessible-bathroom/`,
     type: "website",
     images: [
@@ -27,7 +34,9 @@ export const metadata: Metadata = {title: "Handicap Accessible Bathrooms Chandle
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Handicap Accessible | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore handicap accessible, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Handicap Accessible | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore handicap accessible, custom showers, tile, vanities, clear pricing, and free estimates.",
     images: [`${siteConfig.url}/images/og-small-bath.png`],
   },
   alternates: {
@@ -38,48 +47,48 @@ export const metadata: Metadata = {title: "Handicap Accessible Bathrooms Chandle
 const faqs = [
   {
     question: "What makes a bathroom ADA compliant?",
-    answer:
-      "ADA-compliant bathrooms meet accessibility standards for wheelchair access, mobility, and safety. Key features include curbless walk-in showers, grab bars, accessible vanities with knee clearance, wider doorways (minimum 32 inches), non-slip flooring, and proper lighting. We design all bathrooms to exceed minimum requirements for comfort and safety."
+    answer: "ADA-compliant bathrooms meet accessibility standards for wheelchair access, mobility, and safety. Key features include curbless walk-in showers, grab bars, accessible vanities with knee clearance, wider doorways (minimum 32 inches), non-slip flooring, and proper lighting."
   },
   {
     question: "How much does an accessible bathroom remodel cost in Chandler?",
-    answer:
-      "ADA-compliant bathroom remodels in Chandler are customized depending on the scope and existing layout. Curbless showers with linear drains and grab bar installation add premium features. We provide detailed written estimates before beginning work."
+    answer: "ADA-compliant bathroom remodels in Chandler are customized depending on the scope and existing layout. Curbless showers with linear drains and grab bar installation add premium features. We provide detailed written estimates before beginning work."
   },
   {
     question: "Can we retrofit an existing bathroom for accessibility?",
-    answer:
-      "Yes. We can retrofit most bathrooms to be ADA-compliant by removing barriers and adding accessible features. This might include replacing a bathtub with a curbless shower, widening doorways, adjusting vanity heights, and installing grab bars. Our design process ensures safety without sacrificing style."
-  },
-  {
-    question: "Do you handle permits for accessible bathroom renovations?",
-    answer:
-      "Absolutely. Any accessibility modifications involving structural changes, plumbing, or electrical work require City of Chandler permits. We manage the entire permitting and inspection process to ensure full ADA compliance."
-  },
-  {
-    question: "What grab bar styles work best in modern bathrooms?",
-    answer:
-      "Modern grab bars are no longer medical-looking. We install sleek stainless steel or matte black bars that coordinate with your design while providing safety. We also integrate grab bars into tile niches and coordinate them with towel bars and fixtures for a cohesive look."
+    answer: "Yes. We can retrofit most bathrooms to be ADA-compliant by removing barriers and adding accessible features. This might include replacing a bathtub with a curbless shower, widening doorways, adjusting vanity heights, and installing grab bars."
   }
 ];
 
-const included = [
-  "Curbless shower with linear drain and sloped pan",
-  "Grab bars installed per ADA specifications",
-  "Accessible vanity with knee clearance space",
-  "Wider doorway and improved maneuvering space",
-  "Non-slip porcelain tile flooring",
-  "Lowered or adjusted mirrors and shelving",
-  "Proper lighting and task lighting",
-  "ADA-compliant toilet and fixtures",
-  "Permitting and ADA compliance review"
+const issues = [
+  { title: "High Threshold Step-Over Hazards", description: "Standard tub barriers create serious trip hazards. We install zero-threshold curbless roll-in showers for seamless entry." },
+  { title: "Slippery Surfaces & Lack of Support", description: "Unsecured walls lead to slips. We install structural backing for sleek ADA grab bars and non-slip porcelain tile flooring." },
+  { title: "Inaccessible Vanities & Tight Clearances", description: "Traditional vanity boxes block wheelchairs. We build floating vanities with knee clearance and lever handles." }
 ];
 
-const otherServices = getRelatedServices("/ada-bathroom-remodeling/");
+const benefitsList = [
+  { title: "Independence & Peace of Mind", description: "Self-reliant daily routines for seniors and individuals with mobility requirements." },
+  { title: "Future-Proof Aging-In-Place", description: "Allows homeowners to stay comfortably in their Chandler homes for decades." },
+  { title: "Stylish ADA Design", description: "Modern, luxury aesthetics with hidden safety engineering—never a clinical or medical look." }
+];
+
+const tipsList = [
+  { title: "Install In-Wall Structural Backing", description: "Always add 2x8 wood blocking behind drywall during framing so grab bars support up to 500 lbs." },
+  { title: "Choose High COF Tile", description: "Select porcelain floor tiles with a Dynamic Coefficient of Friction (DCOF) rating over 0.42 for slip resistance." },
+  { title: "Widen Entry Doorways", description: "Ensure bathroom entry doorways are at least 32 to 36 inches wide to comfortably clear wheelchairs and walkers." }
+];
+
+const otherServices = getRelatedServices("/handicap-accessible-bathroom/");
 
 export default function AccessibleBathroomPage() {
   return (
     <>
+      <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Accessible Bathrooms", url: "https://arzhomeremodeling.com/handicap-accessible-bathroom/" } ]} />
+      <ServiceSchema
+        serviceName="Handicap Accessible Bathroom Remodeling"
+        serviceDescription="ADA-compliant bathroom remodels with curbless showers, grab bars, and accessible design in Chandler, AZ"
+        serviceUrl={`${siteConfig.url}/handicap-accessible-bathroom/`}
+      />
+      <FAQSchema faqs={faqs} />
       <Header />
       <main>
         <ServiceHero
@@ -87,148 +96,61 @@ export default function AccessibleBathroomPage() {
           subtitle="Handicap Accessible Bathroom Remodeling"
           description="Create a safe, beautiful bathroom designed for accessibility and aging-in-place. ADA-compliant renovations with modern design and professional installation."
           image="/images/projects/handicap-accessible-shower.avif"
+          breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Accessible Bathrooms", url: `${siteConfig.url}/handicap-accessible-bathroom/` }]}
         />
 
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-5xl">
-            <div className="space-y-12">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">Why Choose Accessible Bathroom Design?</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Whether you are aging in place, recovering from an injury, or planning for long-term accessibility, an ADA-compliant bathroom provides safety, independence, and peace of mind. For detailed building codes, you can read our guide on [ADA bathroom requirements in Arizona](/blog/ada-bathroom-requirements-arizona/). If you are looking to upgrade your home with a custom walk-in shower or specialized safety features in Chandler, our experienced team provides the design-build expertise you need to ensure comfort and compliance.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  As trusted local contractors, we specialize in high-quality mobility modifications throughout the East Valley. We design and install curbless showers, structural grab bars, and senior-friendly layouts in Chandler, Mesa, Gilbert, and Queen Creek. We blend safety and premium style seamlessly into every home renovation.
-                </p>
-                <div className="grid md:grid-cols-3 gap-6 mt-8">
-                  <div className="flex gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-semibold mb-2">Safety First</h3>
-                      <p className="text-sm text-muted-foreground">Eliminate trip hazards and install grab bars positioned for maximum support and accessibility.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-semibold mb-2">Independence</h3>
-                      <p className="text-sm text-muted-foreground">Accessible features like curbless showers and lowered vanities support independence and daily living.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-semibold mb-2">Beautiful Design</h3>
-                      <p className="text-sm text-muted-foreground">Modern accessible bathrooms are stylish. No compromise between safety and aesthetics.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <SubServices 
+          title="Related Bathroom Services" 
+          subtitle="More Upgrades"
+          description="Explore other bathroom renovation options for your home."
+          services={otherServices.map(s => s.name)} 
+        />
 
-              <div>
-                <h2 className="text-3xl font-serif font-semibold mb-6">Accessible Features We Install</h2>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {included.map((feature, i) => (
-                    <div key={i} className="flex gap-3 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+        <ServiceProcess
+          title="Our Accessible Bathroom Process"
+          subtitle="ADA-Compliant & Safe"
+          description="We ensure every accessible bathroom remodel meets ADA standards and your personal needs."
+          steps={[
+            { number: "01", icon: "PhoneCall", title: "Accessibility Assessment", description: "We evaluate your current bathroom and identify accessibility barriers and opportunities." },
+            { number: "02", icon: "Ruler", title: "ADA-Compliant Design", description: "We design a bathroom that exceeds ADA requirements while reflecting your style preferences." },
+            { number: "03", icon: "ShieldCheck", title: "Permitting & Inspection", description: "We handle all Chandler city permits and manage the inspection process for compliance." },
+            { number: "04", icon: "Sparkles", title: "Expert Installation", description: "Professional contractors install grab bars, fixtures, and features to exact ADA specifications." }
+          ]}
+        />
 
-              <div>
-                <h2 className="text-3xl font-serif font-semibold mb-6">ADA Bathroom Standards We Follow</h2>
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="font-semibold text-lg mb-3">Curbless Shower Entry</h3>
-                    <p className="text-muted-foreground mb-3">Eliminates trip hazards and allows wheelchair access. We install linear drains and sloped pans to ensure proper water drainage.</p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-3">Grab Bars & Support Rails</h3>
-                    <p className="text-muted-foreground mb-3">Installed at proper heights and angles per ADA guidelines. Modern styles integrate seamlessly with your bathroom design.</p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-3">Accessible Vanities</h3>
-                    <p className="text-muted-foreground mb-3">Floating vanities with knee clearance allow wheelchair access. Faucets feature lever handles for easier operation.</p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-3">Wide Doorways & Maneuvering Space</h3>
-                    <p className="text-muted-foreground mb-3">Minimum 32-inch doorway openings and turn-around space for wheelchairs. We assess existing layouts and recommend modifications.</p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-3">Non-Slip Flooring</h3>
-                    <p className="text-muted-foreground mb-3">Textured porcelain tile or specialized flooring reduces fall risk in wet environments.</p>
-                  </div>
-                </div>
-              </div>
+        <IssuesSolved
+          title="Accessibility Challenges Fixed"
+          subtitle="Safety & Comfort Solutions"
+          description="We eliminate physical barriers to create safer, easy-to-use bathrooms for Chandler families."
+          issues={issues}
+        />
 
-              <Link href="/blog/ada-bathroom-requirements-arizona/" className="inline-flex items-center gap-2 text-primary hover:underline font-semibold">
-                Learn More About ADA Requirements <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </section>
+        <Benefits
+          title="Benefits of Accessible Bathroom Design"
+          subtitle="Safety Meets Luxury"
+          description="Discover how ADA-compliant updates protect independence and add home value."
+          benefits={benefitsList}
+        />
 
-        <ServiceFAQ faqs={faqs} />
+        <Tips
+          title="Accessible Remodeling Insights"
+          subtitle="Expert Best Practices"
+          description="Essential guidelines for designing a safe and beautiful handicap accessible bathroom."
+          tips={tipsList}
+        />
 
-        <section className="py-16 md:py-24 bg-muted">
-          <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-5xl">
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4">Our Accessible Bathroom Process</h2>
-            <p className="text-lg text-muted-foreground mb-12">We ensure every accessible bathroom remodel meets ADA standards and your personal needs.</p>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="space-y-3">
-                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold">1</div>
-                <h3 className="font-semibold">Accessibility Assessment</h3>
-                <p className="text-sm text-muted-foreground">We evaluate your current bathroom and identify accessibility barriers and opportunities.</p>
-              </div>
-              <div className="space-y-3">
-                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold">2</div>
-                <h3 className="font-semibold">ADA-Compliant Design</h3>
-                <p className="text-sm text-muted-foreground">We design a bathroom that exceeds ADA requirements while reflecting your style preferences.</p>
-              </div>
-              <div className="space-y-3">
-                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold">3</div>
-                <h3 className="font-semibold">Permitting & Inspection</h3>
-                <p className="text-sm text-muted-foreground">We handle all Chandler city permits and manage the inspection process for compliance.</p>
-              </div>
-              <div className="space-y-3">
-                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold">4</div>
-                <h3 className="font-semibold">Expert Installation</h3>
-                <p className="text-sm text-muted-foreground">professional contractors install grab bars, fixtures, and features to exact ADA specifications.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <SubServices title="Related Bathroom Services" services={otherServices} />
-
-        <Testimonials />
+        <ServiceAreas />
 
         <ServiceCTA
           title="Ready for an Accessible Bathroom?"
-          description="Get a free in-home ADA assessment and written estimate. No obligation. Our team specializes in creating beautiful, safe bathrooms for all abilities."
+          description="Get a free in-home ADA assessment and written estimate. Our team specializes in creating beautiful, safe bathrooms for all abilities."
         />
+
+        <ServiceFAQ faqs={faqs} />
 
         <ContactSection />
       </main>
       <Footer />
-
-      <ServiceSchema
-        serviceName="Handicap Accessible Bathroom Remodeling"
-        serviceDescription="ADA-compliant bathroom remodels with curbless showers, grab bars, and accessible design in Chandler, AZ"
-        serviceUrl={`${siteConfig.url}/handicap-accessible-bathroom/`}
-      />
-
-      <BreadcrumbSchema
-        items={[
-          { name: "Home", url: siteConfig.url },
-          { name: "Services", url: `${siteConfig.url}/services/` },
-          { name: "Accessible Bathrooms", url: `${siteConfig.url}/handicap-accessible-bathroom/` }
-        ]}
-      />
-
-      <FAQSchema faqs={faqs} />
     </>
   );
 }

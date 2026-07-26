@@ -204,7 +204,7 @@ export default function MesaPage() {
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call Now: {siteConfig.phone}
+                  Call Now
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">

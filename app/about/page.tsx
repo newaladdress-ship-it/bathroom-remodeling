@@ -92,7 +92,7 @@ export default function AboutPage() {
               <span className="text-sm font-medium tracking-widest text-primary uppercase">
                 Our Story
               </span>
-              <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground text-balance leading-tight">
                 Top-Rated Bathroom Remodeling Contractor in Chandler AZ
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -247,7 +247,7 @@ export default function AboutPage() {
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <a href={`tel:${siteConfig.phoneClean}`}>
-                    Call Now: {siteConfig.phone}
+                    Call Now
                   </a>
                 </Button>
               </div>

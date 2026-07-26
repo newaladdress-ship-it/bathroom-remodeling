@@ -1,3 +1,4 @@
+import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,16 +9,21 @@ import ServiceProcess from "@/components/service-process";
 import IssuesSolved from "@/components/issues-solved";
 import Benefits from "@/components/benefits";
 import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
-import { GoogleMap } from "@/components/services/google-map";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import SubServices from "@/components/sub-services";
+import { getRelatedServices } from "@/lib/bathroom-services";
 
-export const metadata: Metadata = {title: {
+export const metadata: Metadata = {
+  title: {
     absolute: "Shower Bathtub Upgrade | Chandler AZ Bathroom Remodeling"
-  },description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower bathtub upgrade, custom showers, tile, vanities, clear pricing, and free estimates.",
-  openGraph: {title: "Shower Bathtub Upgrade | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower bathtub upgrade, custom showers, tile, vanities, clear pricing, and free estimates.",
+  },
+  description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower bathtub upgrade, custom showers, tile, vanities, clear pricing, and free estimates.",
+  openGraph: {
+    title: "Shower Bathtub Upgrade | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower bathtub upgrade, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/shower-bathtub-upgrade`,
     type: "website",
     images: [
@@ -30,7 +36,9 @@ export const metadata: Metadata = {title: {
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Shower Bathtub Upgrade | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower bathtub upgrade, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Shower Bathtub Upgrade | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower bathtub upgrade, custom showers, tile, vanities, clear pricing, and free estimates.",
     images: [`${siteConfig.url}/images/shower-bathtub-upgrade-hero.jpg`],
   },
   alternates: {
@@ -58,17 +66,31 @@ const faqs = [
   }
 ];
 
-const chandlerLocation = {
-  lat: 33.3009334,
-  lng: -111.9605964,
-};
+const issues = [
+  { title: "Outdated Fixtures & Poor Water Pressure", description: "Modern fixtures with better water pressure and contemporary styling." },
+  { title: "Stained, Cracked, or Discolored Tile and Grout", description: "Fresh tile installation with properly sealed, mold-resistant grout." },
+  { title: "Old Shower Doors That Are Hard to Clean", description: "New frameless or semi-frameless glass enclosures for modern appeal." }
+];
+
+const benefitsList = [
+  { title: "Modern Style & Look", description: "Contemporary fixtures and finishes instantly update your bathroom." },
+  { title: "Better Daily Function", description: "Improved water pressure, temperature control, and drainage." },
+  { title: "Increased Home Value", description: "Updated bathrooms are a top priority for home buyers." }
+];
+
+const tipsList = [
+  { title: "Coordinate Fixture Finishes", description: "Match chrome, brushed nickel, or matte black across all hardware." },
+  { title: "Choose Rain Showerhead Combos", description: "Combine overhead rain nozzles with handheld wands for versatility." },
+  { title: "Select Large-Format Tile", description: "Minimize grout lines for easier cleaning and modern aesthetics." }
+];
+
+const otherServices = getRelatedServices("/shower-bathtub-upgrade/");
 
 export default function ShowerBathtubUpgradePage() {
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Shower Bathtub Upgrade", url: "https://arzhomeremodeling.com/shower-bathtub-upgrade/" } ]} />
-<ServiceSchema
+      <ServiceSchema
         serviceName="Shower & Bathtub Upgrade in Chandler, Arizona"
         serviceDescription="Professional shower and bathtub upgrade services in Chandler, Arizona. Modern fixtures, premium materials, and expert installation."
         serviceUrl={`${siteConfig.url}/shower-bathtub-upgrade`}
@@ -85,6 +107,13 @@ export default function ShowerBathtubUpgradePage() {
             { name: "Home", url: siteConfig.url },
             { name: "Shower & Bathtub Upgrade", url: `${siteConfig.url}/shower-bathtub-upgrade` },
           ]}
+        />
+
+        <SubServices 
+          title="Related Bathroom Services" 
+          subtitle="More Upgrades"
+          description="Explore other bathroom renovation options for your home."
+          services={otherServices.map(s => s.name)} 
         />
 
         <ServiceProcess
@@ -129,102 +158,23 @@ export default function ShowerBathtubUpgradePage() {
           title="Issues We Solve with Shower & Bathtub Upgrades"
           subtitle="Common Problems Fixed"
           description="We address common bathroom issues through professional upgrades and improvements."
-          issues={[
-            {
-              problem: "Outdated fixtures that look old and function poorly.",
-              solution: "Modern fixtures with better water pressure and contemporary styling.",
-            },
-            {
-              problem: "Stained, cracked, or discolored tile and grout.",
-              solution: "Fresh tile installation with properly sealed, mold-resistant grout.",
-            },
-            {
-              problem: "Old shower doors that are hard to clean and look dated.",
-              solution: "New frameless or semi-frameless glass enclosures for modern appeal.",
-            },
-            {
-              problem: "Poor water pressure and inconsistent temperature.",
-              solution: "Upgraded valves and showerheads for optimal performance.",
-            },
-            {
-              problem: "Lack of storage and organization in shower area.",
-              solution: "Built-in niches, corner shelves, and smart storage solutions.",
-            },
-          ]}
+          issues={issues}
         />
 
         <Benefits
           title="Benefits of Shower & Bathtub Upgrades in Chandler"
           subtitle="Why Upgrade"
-          benefits={[
-            {
-              icon: "Sparkles",
-              title: "Modern Look",
-              description: "Contemporary fixtures and finishes instantly update your bathroom.",
-            },
-            {
-              icon: "Droplets",
-              title: "Better Function",
-              description: "Improved water pressure, temperature control, and drainage.",
-            },
-            {
-              icon: "TrendingUp",
-              title: "Increased Value",
-              description: "Updated bathrooms are a top priority for home buyers.",
-            },
-            {
-              icon: "Timer",
-              title: "Quick Upgrade",
-              description: "Transform your bathroom in days, not weeks.",
-            },
-            {
-              icon: "ShieldCheck",
-              title: "Quality Materials",
-              description: "Durable fixtures and surfaces built to last.",
-            },
-          ]}
+          benefits={benefitsList}
         />
-
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground text-center">
-              Solid Brass Plumbing and Hard Water Defense in Chandler
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Our <strong>shower and bathtub upgrade in Chandler AZ</strong> protects your investment by engineering against our extremely 
-              hard municipal desert water. We focus on durable, commercial grade materials behind your tile walls.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Solid Brass Valve Upgrades</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Cheap zinc or plastic hardware fails quickly under local mineral loads. We install solid brass cartridge valve 
-                  bodies that resist calcium scaling and guarantee lifetime structural integrity.
-                </p>
-              </div>
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Schluter Kerdi Waterproofing</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  We install high performance Schluter Kerdi vapor tight membranes behind every new shower tub tile surround. This 
-                  creates an absolute water seal, preventing hidden mold or moisture damage.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <Tips
           title="Shower & Bathtub Upgrade Tips"
           subtitle="Maximize Your Upgrade"
           description="Expert tips to get the most from your shower and bathtub upgrade investment."
-          tips={[
-            "Coordinate all fixture finishes (chrome, brushed nickel, matte black) for a cohesive look.",
-            "Consider a rain showerhead and handheld combo for versatility and luxury.",
-            "Choose large-format tiles to minimize grout lines and simplify cleaning.",
-            "Add a built-in niche for shampoo storage to eliminate shower caddies.",
-            "Install a quality exhaust fan to protect your new surfaces from humidity damage.",
-          ]}
+          tips={tipsList}
         />
+
+        <ServiceAreas />
 
         <ServiceCTA 
           title="Ready for a shower and bathtub upgrade in Chandler?" 
@@ -233,14 +183,9 @@ export default function ShowerBathtubUpgradePage() {
 
         <ServiceFAQ faqs={faqs} />
 
-        <Testimonials category="shower-bathtub-upgrade" />
-
         <ContactSection />
-
-        
       </main>
       <Footer />
     </>
   );
 }
-

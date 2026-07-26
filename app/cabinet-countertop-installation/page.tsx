@@ -1,3 +1,4 @@
+import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,15 +9,20 @@ import ServiceProcess from "@/components/service-process";
 import IssuesSolved from "@/components/issues-solved";
 import Benefits from "@/components/benefits";
 import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
-import { GoogleMap } from "@/components/services/google-map";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
+import SubServices from "@/components/sub-services";
+import { getRelatedServices } from "@/lib/bathroom-services";
 
-export const metadata: Metadata = {title: "Vanity Cabinets & Countertops Chandler AZ | Install | ARZ",description: "Upgrade your bathroom with custom cabinets and quartz, granite, or marble countertops in Chandler, AZ.  professional installation. Get a free estimate!",
-  openGraph: {title: "Vanity Cabinet Installs | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore vanity cabinet installs, custom showers, tile, vanities, clear pricing, and free estimates.",
+export const metadata: Metadata = {
+  title: "Vanity Cabinets & Countertops Chandler AZ | Install | ARZ",
+  description: "Upgrade your bathroom with custom cabinets and quartz, granite, or marble countertops in Chandler, AZ. professional installation. Get a free estimate!",
+  openGraph: {
+    title: "Vanity Cabinet Installs | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore vanity cabinet installs, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/cabinet-countertop-installation/`,
     type: "website",
     images: [
@@ -29,7 +35,9 @@ export const metadata: Metadata = {title: "Vanity Cabinets & Countertops Chandle
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Vanity Cabinet Installs | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore vanity cabinet installs, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Vanity Cabinet Installs | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore vanity cabinet installs, custom showers, tile, vanities, clear pricing, and free estimates.",
     images: [`${siteConfig.url}/images/cabinet-countertop-hero.jpg`],
   },
   alternates: {
@@ -38,17 +46,12 @@ export const metadata: Metadata = {title: "Vanity Cabinets & Countertops Chandle
 };
 
 const faqs = serviceContent["cabinet-countertop-installation"].faqs;
-
-const chandlerLocation = {
-  lat: 33.3009334,
-  lng: -111.9605964,
-};
+const otherServices = getRelatedServices("/cabinet-countertop-installation");
 
 export default function CabinetCountertopInstallationPage() {
   const serviceData = serviceContent["cabinet-countertop-installation"];
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Cabinet Countertop Installation", url: "https://arzhomeremodeling.com/cabinet-countertop-installation/" } ]} />
       <ServiceSchema
         serviceName="Cabinet & Countertop Installation in Chandler, Arizona"
@@ -67,6 +70,13 @@ export default function CabinetCountertopInstallationPage() {
             { name: "Home", url: `${siteConfig.url}/` },
             { name: "Cabinet & Countertop Installation", url: `${siteConfig.url}/cabinet-countertop-installation/` },
           ]}
+        />
+
+        <SubServices 
+          title="Explore More Bathroom Services"
+          subtitle="More Solutions"
+          description="From showers to tile work, we provide complete bathroom remodeling solutions in Chandler."
+          services={otherServices.map(s => s.name)}
         />
 
         <ServiceProcess
@@ -120,40 +130,14 @@ export default function CabinetCountertopInstallationPage() {
           benefits={serviceData.benefits}
         />
 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground text-center">
-              Solid Wood Cabinetry and Precision Stone Fabrication
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A premium vanity upgrade requires meticulous attention to structural loads and moisture resistance. Our 
-              experienced team builds custom cabinetry and fabricates quartz countertops to guarantee lifetime durability.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">KCMA Standard Hardwood Cabinetry</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  We install premium, kiln-dried solid maple, oak, and birch cabinet frames that comply with strict KCMA 
-                  standards. Sourcing dry hardwoods prevents doors from warping or cracking in our dry desert air.
-                </p>
-              </div>
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Heavy-Duty Stud Wall Anchoring</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Stone countertops carry extreme weight loads. We secure every cabinet box directly into the original wall studs 
-                  using heavy-duty steel cabinet screws, ensuring the structural assembly never sags.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <Tips
           title="Cabinet & Countertop Tips"
           subtitle="Care & Maintenance"
           description="Expert tips to maintain your new cabinets and countertops for lasting beauty."
           tips={serviceData.tips}
         />
+
+        <ServiceAreas />
 
         <ServiceCTA 
           title="Ready for new cabinets and countertops in Chandler?" 
@@ -162,14 +146,9 @@ export default function CabinetCountertopInstallationPage() {
 
         <ServiceFAQ faqs={faqs} />
 
-        <Testimonials category="cabinet-countertop-installation" />
-
         <ContactSection />
-
-        
       </main>
       <Footer />
     </>
   );
 }
-

@@ -18,7 +18,7 @@ export function HeroSection({
   return (
     <section className={`${backgroundClass} text-white py-20 md:py-32`}>
       <div className="max-w-4xl mx-auto px-4 text-center">
-        <h1 className="font-poppins font-bold text-4xl md:text-5xl mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 leading-tight">
           {title}
         </h1>
 

@@ -50,7 +50,7 @@ export default function BlogContent({ initialPosts = [], initialCategories = [] 
               <span className="inline-block px-4 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-[0.2em] rounded-full mb-6">
                 Editorial & Insights
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-foreground leading-[1.1] mb-8 text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-8 text-balance leading-tight">
                 The Bathroom <br className="hidden md:block" /> Remodeling Journal
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">

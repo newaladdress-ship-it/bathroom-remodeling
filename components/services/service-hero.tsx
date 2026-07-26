@@ -66,7 +66,7 @@ export default function ServiceHero({
           </span>
 
           {/* Headline */}
-          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-3 leading-tight">
             {title}
           </h1>
 

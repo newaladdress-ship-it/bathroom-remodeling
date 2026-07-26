@@ -8,17 +8,13 @@ import ServiceProcess from "@/components/service-process";
 import IssuesSolved from "@/components/issues-solved";
 import Benefits from "@/components/benefits";
 import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
-import { GoogleMap } from "@/components/services/google-map";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
 import SubServices from "@/components/sub-services";
-import LocalTrust from "@/components/home/local-trust";
-import { bathroomServices, getRelatedServices } from "@/lib/bathroom-services";
-import Link from "next/link";
-
+import { getRelatedServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
   title: "Tub to Shower Conversion Chandler AZ | Free Estimate",
@@ -49,21 +45,16 @@ export const metadata: Metadata = {
 };
 
 const faqs = serviceContent["tub-to-shower-conversion"].faqs;
-
-const chandlerLocation = {
-  lat: 33.3009334,
-  lng: -111.9605964,
-};
-
 const otherServices = getRelatedServices("/tub-to-shower-conversion/");
+
+import Testimonials from "@/components/home/testimonials";
 
 export default function TubToShowerConversionPage() {
   const serviceData = serviceContent["tub-to-shower-conversion"];
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Tub To Shower Conversion", url: "https://arzhomeremodeling.com/tub-to-shower-conversion/" } ]} />
-<ServiceSchema
+      <ServiceSchema
         serviceName="Tub to Shower Conversion in Chandler, Arizona"
         serviceDescription="Professional tub to shower conversion in Chandler, Arizona. Convert your bathtub to a modern walk-in shower with expert installation."
         serviceUrl={`${siteConfig.url}/tub-to-shower-conversion`}
@@ -76,6 +67,7 @@ export default function TubToShowerConversionPage() {
       <FAQSchema faqs={faqs} />
       <Header />
       <main>
+        {/* 1. Hero */}
         <ServiceHero
           title="Walk-In Shower Conversions for Chandler Homes"
           subtitle="Replace Your Bathtub With a Spacious Walk-In Shower"
@@ -87,6 +79,7 @@ export default function TubToShowerConversionPage() {
           ]}
         />
 
+        {/* 2. Our Process */}
         <ServiceProcess
           title="From Bathtub to Modern Shower Space"
           subtitle="Our Process"
@@ -131,6 +124,15 @@ export default function TubToShowerConversionPage() {
           ]}
         />
 
+        {/* 3. Services Included / Sub Services */}
+        <SubServices 
+          title="Explore Other Services"
+          subtitle="More Solutions"
+          description="We provide a full suite of bathroom remodeling services in Chandler."
+          services={otherServices.map(s => s.name)}
+        />
+
+        {/* 4. Problems We Solve */}
         <IssuesSolved
           title="Creating Safer and More Functional Bathrooms"
           subtitle="Problems We Help Homeowners Solve"
@@ -155,6 +157,7 @@ export default function TubToShowerConversionPage() {
           ]}
         />
 
+        {/* 5. Benefits of This Service */}
         <Benefits
           title="Advantages of Replacing an Outdated Bathtub"
           subtitle="Why Homeowners Make the Switch"
@@ -182,30 +185,8 @@ export default function TubToShowerConversionPage() {
             },
           ]}
         />
-        <LocalTrust cityName="Chandler" />
 
-        <section className="py-12 lg:py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
-              Bathroom Upgrade Specialists Serving Chandler & the East Valley
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Homeowners across Chandler, Gilbert, Queen Creek, Mesa, and nearby East Valley communities trust ARZ Home Remodeling for professionally planned bathroom improvements that combine functionality with lasting quality. Every project is customized to match the home&apos;s layout, design preferences, and long-term goals.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              If you&apos;re looking for inspiration before starting your project, explore our <Link href="/blog/tub-to-shower-conversion-ideas-chandler/" className="text-primary underline font-medium hover:text-primary/80 transition-colors">Tub-to-Shower Conversion Ideas for Chandler</Link> guide to discover popular layouts, material options, accessibility features, and design trends.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Our team focuses on creating practical, attractive bathing spaces using durable materials, professional installation techniques, and carefully planned layouts that maximize comfort and everyday usability.
-            </p>
-            <div className="mt-10 p-8 bg-primary/5 rounded-3xl border border-primary/20 text-center">
-              <p className="text-foreground font-medium">
-                We also offer flexible financing options for qualifying remodeling projects. Learn more by visiting our <Link href="/financing/" className="text-primary underline font-semibold hover:text-primary/80 transition-colors">Bathroom Remodeling Financing</Link> page.
-              </p>
-            </div>
-          </div>
-        </section>
-
+        {/* 6. Tips to Prevent Future Issues */}
         <Tips
           title="Helpful Tips Before You Begin"
           subtitle="Planning Your Bathroom Upgrade"
@@ -229,23 +210,22 @@ export default function TubToShowerConversionPage() {
           ]}
         />
 
-        <SubServices 
-          title="Explore Other Services"
-          subtitle="More Solutions"
-          description="We provide a full suite of bathroom remodeling services in Chandler."
-          services={otherServices.map(s => s.name)}
+        {/* 7. Customer Reviews */}
+        <Testimonials />
+
+        {/* 8. Service Areas */}
+        <ServiceAreas />
+
+        {/* 9. Ready to Fix Your Problem? Contact Us Today */}
+        <ServiceCTA 
+          title="Ready to Fix Your Problem? Contact Us Today"
+          description="Get your free consultation today and discover how we can transform your bathroom space."
         />
 
-        <ServiceFAQ faqs={faqs} />
-
-        <Testimonials category="tub-to-shower-conversion" />
-
+        {/* 10. Contact Information */}
         <ContactSection />
-
-        
       </main>
       <Footer />
     </>
   );
 }
-

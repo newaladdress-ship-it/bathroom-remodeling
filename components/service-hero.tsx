@@ -55,7 +55,7 @@ export default function ServiceHero({
               {subtitle}
             </p>
           )}
-          <h1 className={titleClassName || "font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 leading-tight"}>
+          <h1 className={titleClassName || "font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight"}>
             {title}
           </h1>
           <p className="text-white/90 text-sm sm:text-base md:text-lg mb-5 max-w-[1250px] mx-auto leading-relaxed">
@@ -71,7 +71,7 @@ export default function ServiceHero({
             >
               <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                 <Phone className="w-5 h-5" aria-hidden="true" />
-                Call Now: {siteConfig.phone}
+                Call Now
               </a>
             </Button>
             <Button

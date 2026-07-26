@@ -35,7 +35,7 @@ export default function Hero() {
       <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12 relative z-10 pt-2 pb-4 lg:pt-4 lg:pb-6 flex justify-center hero-container">
         <div className="max-w-5xl mx-auto text-center text-white flex flex-col items-center hero-content">
           {/* Title */}
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-4 tracking-tight hero-title">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 tracking-tight leading-tight">
             Bathroom Remodeling in Chandler, AZ
           </h1>
 

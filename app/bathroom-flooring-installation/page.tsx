@@ -1,3 +1,4 @@
+import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,15 +9,20 @@ import ServiceProcess from "@/components/service-process";
 import IssuesSolved from "@/components/issues-solved";
 import Benefits from "@/components/benefits";
 import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
-import { GoogleMap } from "@/components/services/google-map";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
+import SubServices from "@/components/sub-services";
+import { getRelatedServices } from "@/lib/bathroom-services";
 
-export const metadata: Metadata = {title: "Bath Flooring Installation Chandler AZ | Custom Tile",description: "Expert bathroom flooring installation in Chandler, AZ. Specialized in waterproof tile, luxury vinyl plank, and slip-resistant floors. Call for a quote!",
-  openGraph: {title: "Bathroom Flooring Install | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bathroom flooring install, custom showers, tile, vanities, clear pricing, and free estimates.",
+export const metadata: Metadata = {
+  title: "Bath Flooring Installation Chandler AZ | Custom Tile",
+  description: "Expert bathroom flooring installation in Chandler, AZ. Specialized in waterproof tile, luxury vinyl plank, and slip-resistant floors. Call for a quote!",
+  openGraph: {
+    title: "Bathroom Flooring Install | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bathroom flooring install, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/bathroom-flooring-installation/`,
     type: "website",
   },
@@ -26,17 +32,15 @@ export const metadata: Metadata = {title: "Bath Flooring Installation Chandler A
 };
 
 const faqs = serviceContent["bathroom-flooring-installation"].faqs;
-
-const chandlerLocation = { lat: 33.3009334, lng: -111.9605964 };
+const otherServices = getRelatedServices("/bathroom-flooring-installation/");
 
 export default function BathroomFlooringInstallationPage() {
   const serviceData = serviceContent["bathroom-flooring-installation"];
 
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Flooring Installation", url: "https://arzhomeremodeling.com/bathroom-flooring-installation/" } ]} />
-<ServiceSchema 
+      <ServiceSchema 
         serviceName="Bathroom Flooring Installation in Chandler, Arizona" 
         serviceDescription="Professional bathroom flooring installation in Chandler, Arizona. Dense porcelain tile, natural stone, and slip resistant textured floors." 
         serviceUrl={`${siteConfig.url}/bathroom-flooring-installation/`} 
@@ -53,6 +57,13 @@ export default function BathroomFlooringInstallationPage() {
             { name: "Home", url: siteConfig.url },
             { name: "Bathroom Flooring", url: `${siteConfig.url}/bathroom-flooring-installation` },
           ]}
+        />
+
+        <SubServices 
+          title="Related Bathroom Services" 
+          subtitle="More Options"
+          description="Looking for something else? We offer a variety of renovation solutions."
+          services={otherServices.map(s => s.name)} 
         />
 
         <ServiceProcess
@@ -106,39 +117,14 @@ export default function BathroomFlooringInstallationPage() {
           benefits={serviceData.benefits}
         />
 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground text-center">
-              Professional Bathroom Flooring Installation & Foundation Prep
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              If you have been looking for an expert team to handle your bathroom tiling and floor updates, our crews provide flawless tile and stone work. Our flooring preparation process protects your tile from structural cracking. Clay soils in the East Valley expand and contract heavily between hot summers and monsoon seasons, causing concrete slabs to shift. We construct a floating subfloor membrane to absorb this movement and protect your joints.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Schluter Ditra Crack Isolation</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  If tiles are bonded straight to concrete slabs, settling slab cracks will immediately telegraph up and snap your porcelain. 
-                  We install specialized uncoupling membranes to absorb slab shear stress.
-                </p>
-              </div>
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Polymer-Modified Thinset Mortar</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  We use only high-performance modified mortar beds with elastic latex additives. This allows the tile mortar layer to 
-                  flex slightly under temperature shifts rather than breaking the bond.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <Tips
           title="Expert Bathroom Flooring Tips"
           subtitle="Care & Maintenance"
           description="Smart advice to maintain the beauty and durability of your newly tiled bathroom floors."
           tips={serviceData.tips}
         />
+
+        <ServiceAreas />
         
         <ServiceCTA 
           title="Ready for professional bathroom flooring in Chandler?" 
@@ -147,7 +133,6 @@ export default function BathroomFlooringInstallationPage() {
 
         <ServiceFAQ faqs={faqs} />
         
-        <Testimonials category="bathroom-flooring-installation" />
         <ContactSection />
       </main>
       <Footer />

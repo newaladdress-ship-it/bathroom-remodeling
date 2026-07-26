@@ -58,7 +58,7 @@ export default function ContactPage() {
               <span className="text-sm font-medium tracking-widest text-primary uppercase">
                 Get In Touch
               </span>
-              <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground text-balance leading-tight">
                 Speak to a Project Supervisor in Chandler, AZ
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">

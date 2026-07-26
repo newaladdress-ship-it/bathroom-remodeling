@@ -1,3 +1,4 @@
+import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,20 +9,22 @@ import ServiceProcess from "@/components/service-process";
 import IssuesSolved from "@/components/issues-solved";
 import Benefits from "@/components/benefits";
 import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
-import { GoogleMap } from "@/components/services/google-map";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
 import SubServices from "@/components/sub-services";
-import { bathroomServices, getRelatedServices } from "@/lib/bathroom-services";
-import Link from "next/link";
+import { getRelatedServices } from "@/lib/bathroom-services";
 
-export const metadata: Metadata = {title: {
+export const metadata: Metadata = {
+  title: {
     absolute: "Walk In Shower Designs | Chandler AZ Bathroom Remodeling"
-  },description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore walk in shower designs, custom showers, tile, vanities, clear pricing, and free estimates.",
-  openGraph: {title: "Walk In Shower Designs | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore walk in shower designs, custom showers, tile, vanities, clear pricing, and free estimates.",
+  },
+  description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore walk in shower designs, custom showers, tile, vanities, clear pricing, and free estimates.",
+  openGraph: {
+    title: "Walk In Shower Designs | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore walk in shower designs, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/walk-in-showers/`,
     type: "website",
     images: [
@@ -34,7 +37,9 @@ export const metadata: Metadata = {title: {
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Walk In Shower Designs | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore walk in shower designs, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Walk In Shower Designs | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore walk in shower designs, custom showers, tile, vanities, clear pricing, and free estimates.",
     images: [`${siteConfig.url}/images/og-shower.png`],
   },
   alternates: {
@@ -44,21 +49,14 @@ export const metadata: Metadata = {title: {
 };
 
 const faqs = serviceContent["walk-in-showers"].faqs;
-
-const chandlerLocation = {
-  lat: 33.3009334,
-  lng: -111.9605964,
-};
-
 const otherServices = getRelatedServices("/walk-in-showers/");
 
 export default function WalkInShowersPage() {
   const serviceData = serviceContent["walk-in-showers"];
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Walk In Showers", url: "https://arzhomeremodeling.com/walk-in-showers/" } ]} />
-<ServiceSchema
+      <ServiceSchema
         serviceName="Walk-In Shower Installation in Chandler, Arizona"
         serviceDescription="Professional walk-in shower installation in Chandler, Arizona. Barrier-free designs, frameless glass enclosures, and ADA-compliant options."
         serviceUrl={`${siteConfig.url}/walk-in-showers`}
@@ -80,6 +78,13 @@ export default function WalkInShowersPage() {
             { name: "Home", url: siteConfig.url },
             { name: "Walk-In Showers", url: `${siteConfig.url}/walk-in-showers` },
           ]}
+        />
+
+        <SubServices 
+          title="Related Services in Chandler"
+          subtitle="More Solutions"
+          description="We provide comprehensive bathroom remodeling services designed for your needs."
+          services={otherServices.map(s => s.name)}
         />
 
         <ServiceProcess
@@ -133,34 +138,6 @@ export default function WalkInShowersPage() {
           benefits={serviceData.benefits}
         />
 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground text-center">
-              Safe and Accessible Universal Shower Design in Chandler
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Home safety is important for everyone. Our <strong>walk-in shower company in Chandler AZ</strong> designs curbless, 
-              barrier-free showers that allow you to remain in your home comfortably and safely for years to come. If you're wondering what these modifications run, check our complete <Link href="/blog/walk-in-shower-cost-chandler-az/" className="text-primary hover:underline">walk-in shower cost Chandler</Link> guide. We specialize in accessible remodeling that blends high-end styling with safety.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Zero Threshold Curbless Design</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Traditional showers require stepping over a high threshold. We build zero-curb showers by recessing the subfloor 
-                  level, creating a completely flat entry that is wheelchair and walker friendly.
-                </p>
-              </div>
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Stud-Anchored Grab Bars</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  We never attach safety bars to thin drywall or tile backer alone. We anchor every safety grab bar directly into the 
-                  original wood wall studs to support full adult body weight securely.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <Tips
           title="Walk-In Shower Tips & Maintenance"
           subtitle="Keep It Looking New"
@@ -168,28 +145,18 @@ export default function WalkInShowersPage() {
           tips={serviceData.tips}
         />
 
+        <ServiceAreas />
+
         <ServiceCTA 
           title="Ready for a custom walk-in shower in Chandler?" 
           description="Get a free consultation with design options, material selections, and transparent pricing." 
         />
 
-        <SubServices 
-          title="Related Services in Chandler"
-          subtitle="More Solutions"
-          description="We provide comprehensive bathroom remodeling services designed for your needs."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceFAQ faqs={faqs} />
 
-        <Testimonials category="walk-in-showers" />
-
         <ContactSection />
-
-        
       </main>
       <Footer />
     </>
   );
 }
-

@@ -3,7 +3,8 @@ import { Card } from "@/components/ui/card";
 interface ShowerType {
   title: string;
   description: string;
-  priceRange: string;
+  perfectFor?: string;
+  priceRange?: string;
 }
 
 interface ShowerTypesProps {
@@ -14,39 +15,39 @@ interface ShowerTypesProps {
 const showerTypes: ShowerType[] = [
   {
     title: "Walk-In Tile Showers",
+    perfectFor: "Creating a durable, fully tiled shower space.",
     description:
-      "A tiled shower design provides a highly customizable option for homeowners replacing outdated fiberglass surrounds or improving an existing bathroom layout. We install durable tile surfaces with carefully planned features such as built-in niches, seating areas, and coordinated finishes. Each project includes proper preparation, moisture protection, and detailed installation techniques to help create a reliable and attractive bathing area.",
-    priceRange: "Mid-Range Scope",
+      "Transform your bathing area with premium tile finishes designed for long-lasting beauty and performance. Choose from decorative wall patterns, built-in storage niches, bench seating, and slip-resistant flooring to create a shower that complements your bathroom while improving everyday comfort.",
   },
   {
     title: "Frameless Glass Shower Enclosures",
+    perfectFor: "Bright, open, modern bathrooms.",
     description:
-      "Frameless glass creates a clean, open appearance while allowing surrounding tile work and bathroom features to stand out. Panels are measured and fitted to match the specific dimensions of your space, creating a modern finish without bulky framing. Available options include clear, low-iron, and privacy glass styles to match different design preferences.",
-    priceRange: "Standard to Custom Upgrade",
+      "Enhance your shower with custom-measured glass panels that maximise natural light and create a spacious appearance. Available in clear, frosted, rain, and low-iron finishes, each enclosure is precisely fitted to deliver clean lines and a sleek contemporary look.",
   },
   {
-    title: "Curbless / Zero-Threshold Designs",
+    title: "Curbless & Zero-Threshold Showers",
+    perfectFor: "Accessible and minimalist bathroom designs.",
     description:
-      "A zero-threshold layout removes the traditional raised entry, creating a smoother transition between the bathroom floor and bathing area. This style is popular among homeowners who want improved accessibility, a minimalist appearance, or a more spacious feel. Proper slope planning, drainage placement, and surface selection are essential parts of creating a functional design.",
-    priceRange: "Luxury Custom Scope",
+      "Remove traditional step-over barriers with a seamless entry shower that combines convenience with elegant styling. Carefully engineered drainage systems and precision floor grading ensure reliable water flow while maintaining a smooth, uninterrupted surface.",
   },
   {
-    title: "Tub-to-Shower Conversion",
+    title: "Tub-to-Shower Conversions",
+    perfectFor: "Replacing an unused bathtub with a functional shower.",
     description:
-      "Many homeowners replace unused bathtubs with more practical shower layouts that better fit their lifestyle. A conversion project typically involves removing the existing tub area, adjusting plumbing connections, preparing surfaces, and installing a complete upgraded bathing system in the available footprint. This option is especially popular in older Chandler homes where homeowners want better functionality without expanding the bathroom.",
-    priceRange: "Mid-Range Scope",
+      "Convert an outdated tub into a spacious walk-in shower that better suits your daily routine. This transformation improves accessibility, frees up usable space, and gives older bathrooms a cleaner, more practical design without changing the room's footprint.",
   },
   {
     title: "Shower Tile Replacement",
+    perfectFor: "Refreshing worn or outdated shower walls.",
     description:
-      "Damaged grout, outdated tile, and worn surfaces can make a bathroom feel aged. Our tile replacement process includes removing existing materials, evaluating the underlying structure, preparing the surface, and installing new finishes selected for durability and easy maintenance. We help homeowners choose materials and grout options that provide a cleaner appearance and longer-lasting results.",
-    priceRange: "Standard Level",
+      "Replace cracked, stained, or ageing tile with durable new materials selected for easy maintenance and long-term performance. Fresh grout lines, modern finishes, and professionally prepared surfaces help restore the appearance and integrity of your shower enclosure.",
   },
   {
-    title: "Master Bathroom Shower Upgrades",
+    title: "Master Bathroom Shower Renovations",
+    perfectFor: "Luxury ensuite transformations.",
     description:
-      "A master bathroom improvement can completely change how the space feels and functions. Options may include expanding the bathing area, improving storage, adding built-in seating, updating fixtures, or creating a more open design. Our team works with homeowners to develop layouts that balance comfort, appearance, and everyday usability.",
-    priceRange: "Luxury Custom Scope",
+      "Reimagine your primary bathroom with a spacious shower designed around your lifestyle. Popular enhancements include oversized shower areas, premium fixtures, integrated seating, recessed shelving, decorative accents, and high-end finishes that elevate both comfort and visual appeal.",
   },
 ];
 
@@ -70,9 +71,16 @@ export default function ShowerTypes({ title = "Shower Upgrade Options We Provide
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-2">
                   {showerType.title}
                 </h3>
-                <p className="text-sm font-medium text-primary mb-4">
-                  Project Scope: {showerType.priceRange}
-                </p>
+                {showerType.perfectFor && (
+                  <p className="text-sm font-medium text-primary mb-4">
+                    Perfect For: {showerType.perfectFor}
+                  </p>
+                )}
+                {showerType.priceRange && (
+                  <p className="text-sm font-medium text-primary mb-4">
+                    Project Scope: {showerType.priceRange}
+                  </p>
+                )}
               </div>
               <p className="text-foreground/90 leading-relaxed text-sm">
                 {showerType.description}
@@ -84,3 +92,4 @@ export default function ShowerTypes({ title = "Shower Upgrade Options We Provide
     </section>
   );
 }
+

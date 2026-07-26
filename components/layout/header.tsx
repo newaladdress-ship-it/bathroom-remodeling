@@ -140,17 +140,18 @@ export function Header() {
 
             <div className="hidden lg:flex items-center gap-4 xl:gap-6">
               <a href={`tel:${siteConfig.phoneClean}`} className={ctaClass}>
-                Call Now: {siteConfig.phone}
+                <Phone className="w-4 h-4 mr-2 shrink-0" aria-hidden="true" />
+                {siteConfig.phone}
               </a>
             </div>
 
             {/* Mobile Sticky Call Button (Top) */}
             <a
               href={`tel:${siteConfig.phoneClean}`}
-              className="lg:hidden flex items-center justify-center bg-emerald-600 hover:bg-emerald-500 text-white rounded-full p-2 h-10 w-10 shadow-[0_2px_8px_rgba(16,185,129,0.3)] active:scale-[0.95] transition-all ml-auto mr-2"
+              className="lg:hidden flex items-center justify-center bg-accent hover:bg-accent/90 text-accent-foreground rounded-full p-2 h-10 w-10 shadow-md active:scale-[0.95] transition-all ml-auto mr-2"
               aria-label={`Call local expert at ${siteConfig.phone}`}
             >
-              <Phone className="w-5 h-5 fill-current animate-pulse" aria-hidden="true" />
+              <Phone className="w-5 h-5 fill-current" aria-hidden="true" />
             </a>
 
             {/* Mobile Menu Toggle */}
@@ -232,7 +233,7 @@ export function Header() {
                     href={`tel:${siteConfig.phoneClean}`}
                     className="mt-4 inline-flex w-full items-center justify-center rounded-md bg-accent hover:bg-accent/90 text-accent-foreground font-bold py-4 px-6 transition-colors"
                   >
-                    Call Now: {siteConfig.phone}
+                    Call Now
                   </a>
                 </div>
               </nav>

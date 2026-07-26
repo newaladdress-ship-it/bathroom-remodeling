@@ -78,7 +78,7 @@ export default function CareersPage() {
         <section className="py-20 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="font-serif text-4xl md:text-5xl font-semibold mb-6">Join Our Team</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 leading-tight">Join Our Team</h1>
               <p className="text-lg text-muted-foreground">
                 We're looking for skilled professionals to join our growing bathroom remodeling team in Chandler, Arizona.
               </p>

@@ -1,3 +1,4 @@
+import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,15 +9,20 @@ import ServiceProcess from "@/components/service-process";
 import IssuesSolved from "@/components/issues-solved";
 import Benefits from "@/components/benefits";
 import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
-import { GoogleMap } from "@/components/services/google-map";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
+import SubServices from "@/components/sub-services";
+import { getRelatedServices } from "@/lib/bathroom-services";
 
-export const metadata: Metadata = {title: "Bath Lighting Pro Chandler AZ | LED Upgrades | ARZ Chandle",description: "Enhance your bath with custom lighting in Chandler, AZ. Recessed LEDs, vanity light fixtures, and safety-compliant GFCI circuits. Schedule a free quote!",
-  openGraph: {title: "Bathroom Lighting Install | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bathroom lighting install, custom showers, tile, vanities, clear pricing, and free estimates.",
+export const metadata: Metadata = {
+  title: "Bath Lighting Pro Chandler AZ | LED Upgrades | ARZ Chandle",
+  description: "Enhance your bath with custom lighting in Chandler, AZ. Recessed LEDs, vanity light fixtures, and safety-compliant GFCI circuits. Schedule a free quote!",
+  openGraph: {
+    title: "Bathroom Lighting Install | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bathroom lighting install, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/bathroom-lighting-installation/`,
     type: "website",
   },
@@ -26,17 +32,15 @@ export const metadata: Metadata = {title: "Bath Lighting Pro Chandler AZ | LED U
 };
 
 const faqs = serviceContent["bathroom-lighting-installation"].faqs;
-
-const chandlerLocation = { lat: 33.3009334, lng: -111.9605964 };
+const otherServices = getRelatedServices("/bathroom-lighting-installation/");
 
 export default function BathroomLightingInstallationPage() {
   const serviceData = serviceContent["bathroom-lighting-installation"];
 
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Lighting Installation", url: "https://arzhomeremodeling.com/bathroom-lighting-installation/" } ]} />
-<ServiceSchema 
+      <ServiceSchema 
         serviceName="Bathroom Lighting Installation in Chandler, Arizona" 
         serviceDescription="Professional bathroom lighting installation in Chandler, Arizona. Recessed LED layout, layered vanity lights, and GFCI shock safety." 
         serviceUrl={`${siteConfig.url}/bathroom-lighting-installation/`} 
@@ -53,6 +57,13 @@ export default function BathroomLightingInstallationPage() {
             { name: "Home", url: siteConfig.url },
             { name: "Bathroom Lighting", url: `${siteConfig.url}/bathroom-lighting-installation` },
           ]}
+        />
+
+        <SubServices 
+          title="Related Bathroom Services" 
+          subtitle="More Options"
+          description="Looking for something else? We offer a variety of renovation solutions."
+          services={otherServices.map(s => s.name)} 
         />
 
         <ServiceProcess
@@ -106,51 +117,23 @@ export default function BathroomLightingInstallationPage() {
           benefits={serviceData.benefits}
         />
 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground text-center">
-              Professional Bathroom Lighting Contractor & Upgrades
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              When searching for a qualified electrical contractor to manage your bathroom lighting upgrade, experience and precision are paramount. Our team provides high-quality installations that enhance both safety and visual appeal. We handle everything from running dedicated 20-amp circuits to installing modern recessed vanity lights, hanging decorative fixtures, and wiring moisture-proof shower cans. Our certified crews operate in strict compliance with current building codes, protecting your family and your home.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Dedicated 20-Amp GFCI Circuits</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Water and electricity represent a high shock hazard. We run dedicated circuits protected by advanced Ground Fault Circuit 
-                  Interrupters, guaranteeing that the circuit cuts power in milliseconds if moisture is detected.
-                </p>
-              </div>
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Wet-Zone Vapor-Proof Fixtures</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Standard trim rings and metal frames corrode quickly under heavy steam inside showers. We install fully sealed, vapor-proof 
-                  LED fixtures to prevent attic humidity leaks and short circuits inside wet zones.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <Tips
           title="Expert Bathroom Lighting Tips"
           subtitle="Care & Maintenance"
           description="Smart advice to maintain the efficiency and safety of your bathroom lighting fixtures."
           tips={serviceData.tips}
         />
-        
+
+        <ServiceAreas />
+
         <ServiceCTA 
           title="Ready for professional bathroom lighting in Chandler?" 
           description="Get a free consultation with premium lighting layout planning and upfront estimates." 
         />
 
         <ServiceFAQ faqs={faqs} />
-        
-        <Testimonials category="bathroom-lighting-installation" />
-        
-        <ContactSection />
 
+        <ContactSection />
       </main>
       <Footer />
     </>

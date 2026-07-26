@@ -103,7 +103,7 @@ export default function FinancingPage() {
               <span className="text-sm font-medium tracking-widest text-primary uppercase">
                 Financing Options
               </span>
-              <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground text-balance leading-tight">
                 Affordable Bathroom Remodeling Financing
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -285,7 +285,7 @@ export default function FinancingPage() {
                   <a href={`tel:${siteConfig.phoneClean}`}>Speak to a Project Supervisor</a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                  <a href={`tel:${siteConfig.phoneClean}`}>Call Now: {siteConfig.phone}</a>
+                  <a href={`tel:${siteConfig.phoneClean}`}>Call Now</a>
                 </Button>
               </div>
             </div>

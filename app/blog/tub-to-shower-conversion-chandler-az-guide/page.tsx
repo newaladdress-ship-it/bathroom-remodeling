@@ -92,7 +92,7 @@ export default function StandaloneBlogPost() {
                 </span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground leading-[1.1] mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-8 leading-tight">
                 Tub-to-Shower Conversion in Chandler, AZ: Everything You Need to Know Before You Start
               </h1>
               
@@ -181,7 +181,7 @@ export default function StandaloneBlogPost() {
                       professional experts serving Chandler, Ocotillo, and all East Valley communities.
                     </p>
                     <Button asChild variant="secondary" className="w-full bg-background text-primary hover:bg-background/90 relative z-10">
-                      <a href={`tel:${siteConfig.phoneClean}`}>Call Now: {siteConfig.phone}</a>
+                      <a href={`tel:${siteConfig.phoneClean}`}>Call Now</a>
                     </Button>
                   </div>
                 </div>
@@ -413,7 +413,7 @@ export default function StandaloneBlogPost() {
                         <a href={`tel:${siteConfig.phoneClean}`}>Speak to a Project Supervisor</a>
                       </Button>
                       <Button asChild variant="outline" size="lg" className="border-foreground/20 hover:bg-foreground/5 text-foreground font-bold px-10 h-14 rounded-full transition-all">
-                        <a href={`tel:${siteConfig.phoneClean}`}>Call Now: {siteConfig.phone}</a>
+                        <a href={`tel:${siteConfig.phoneClean}`}>Call Now</a>
                       </Button>
                     </div>
 
@@ -452,7 +452,7 @@ export default function StandaloneBlogPost() {
                   <a href={`tel:${siteConfig.phoneClean}`}>Speak to a Project Supervisor</a>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-background/20 hover:bg-background/10 text-background font-bold px-10 h-14 rounded-full transition-all">
-                  <a href={`tel:${siteConfig.phoneClean}`}>Call Now: {siteConfig.phone}</a>
+                  <a href={`tel:${siteConfig.phoneClean}`}>Call Now</a>
                 </Button>
               </div>
             </div>

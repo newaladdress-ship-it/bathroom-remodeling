@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
         <section className="py-24 md:py-32 bg-secondary">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground leading-tight">
                 Privacy Policy
               </h1>
               <p className="mt-4 text-muted-foreground">

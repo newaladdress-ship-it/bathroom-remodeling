@@ -1,3 +1,4 @@
+import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,17 +9,20 @@ import ServiceProcess from "@/components/service-process";
 import IssuesSolved from "@/components/issues-solved";
 import Benefits from "@/components/benefits";
 import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
-import { GoogleMap } from "@/components/services/google-map";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
 import SubServices from "@/components/sub-services";
-import { bathroomServices, getRelatedServices } from "@/lib/bathroom-services";
+import { getRelatedServices } from "@/lib/bathroom-services";
 
-export const metadata: Metadata = {title: "Bath Vanity Installation Chandler AZ | Custom Cabinets",description: "Custom vanity installation in Chandler, AZ. Single & double sink setups, quartz/granite countertops, and custom cabinet layouts. Call for a quote today!",
-  openGraph: {title: "Bathroom Vanity Install | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bathroom vanity install, custom showers, tile, vanities, clear pricing, and free estimates.",
+export const metadata: Metadata = {
+  title: "Bath Vanity Installation Chandler AZ | Custom Cabinets",
+  description: "Custom vanity installation in Chandler, AZ. Single & double sink setups, quartz/granite countertops, and custom cabinet layouts. Call for a quote today!",
+  openGraph: {
+    title: "Bathroom Vanity Install | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bathroom vanity install, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/bathroom-vanity-installation/`,
     type: "website",
     images: [
@@ -31,7 +35,9 @@ export const metadata: Metadata = {title: "Bath Vanity Installation Chandler AZ 
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Bathroom Vanity Install | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bathroom vanity install, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Bathroom Vanity Install | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bathroom vanity install, custom showers, tile, vanities, clear pricing, and free estimates.",
     images: [`${siteConfig.url}/images/og-vanity-install.png`],
   },
   alternates: {
@@ -40,9 +46,6 @@ export const metadata: Metadata = {title: "Bath Vanity Installation Chandler AZ 
 };
 
 const faqs = serviceContent["bathroom-vanity-installation"].faqs;
-
-const chandlerLocation = { lat: 33.3009334, lng: -111.9605964 };
-
 const otherServices = getRelatedServices("/bathroom-vanity-installation");
 
 export default function BathroomVanityInstallationPage() {
@@ -50,9 +53,8 @@ export default function BathroomVanityInstallationPage() {
   
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Vanity Installation", url: "https://arzhomeremodeling.com/bathroom-vanity-installation/" } ]} />
-<ServiceSchema
+      <ServiceSchema
         serviceName="Bathroom Vanity Installation in Chandler, Arizona"
         serviceDescription="Professional bathroom vanity installation in Chandler, Arizona. Custom designs, expert installation, and coordinated fixtures."
         serviceUrl={`${siteConfig.url}/bathroom-vanity-installation/`}
@@ -69,6 +71,13 @@ export default function BathroomVanityInstallationPage() {
             { name: "Home", url: siteConfig.url },
             { name: "Bathroom Vanity Installation", url: `${siteConfig.url}/bathroom-vanity-installation` },
           ]}
+        />
+
+        <SubServices 
+          title="Explore More Bathroom Services"
+          subtitle="More Solutions"
+          description="From showers to tile work, we provide complete bathroom remodeling solutions in Chandler."
+          services={otherServices.map(s => s.name)}
         />
 
         <ServiceProcess
@@ -98,39 +107,6 @@ export default function BathroomVanityInstallationPage() {
           benefits={vanityData.benefits}
         />
 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground text-center">
-              Premium Bathroom Cabinets, Countertops & Vanity Installations
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A professional bathroom vanity replacement requires advanced alignment, premium materials, and heavy weight support. At ARZ Home Remodeling, we offer custom bathroom cabinets and professional cabinet installation services. We specialize in luxury countertop installation, coordinating stunning quartz, marble, and durable composite slab selections. If you are shopping around local slab yards or a countertop showroom in the East Valley, we help you secure wholesale pricing and coordinate professional fabrication and delivery.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              While our primary focus is bathroom vanity and cabinetry upgrades, we also coordinate kitchen countertop replacements for complete home renovations. To complete the clean aesthetic of your space, we offer professional crown moulding installation and related storage updates like a custom closet remodel in Chandler or Gilbert. 
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Whether you need a custom vanity set up locally or require vanity installation services in neighboring Phoenix or Scottsdale, our team ensures precise leveling, secure wall anchoring, and leak-free plumbing connections.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Custom Drain Line Realignment</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Upgrading to double sinks or changing drawer layouts often requires shifting under-sink pipes. We re-route drain 
-                  lines and install premium brass angle stop valves to ensure a lifetime of trouble-free water flow.
-                </p>
-              </div>
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Precision Subfloor Cedar Shimming</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Installing a heavy quartz vanity on an uneven tile or concrete subfloor causes the frame to warp. We align the base 
-                  perfectly using heavy cedar shims before fastening, guaranteeing drawer tracks never stick.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <Tips
           title="Expert Vanity Installation Tips"
           subtitle="Professional Insights"
@@ -138,23 +114,15 @@ export default function BathroomVanityInstallationPage() {
           tips={vanityData.tips}
         />
 
+        <ServiceAreas />
+
         <ServiceCTA title="Ready for professional vanity installation in Chandler?" description="Get expert consultation, quality materials, and professional installation for your perfect bathroom vanity." />
 
-        <SubServices 
-          title="Explore More Bathroom Services"
-          subtitle="More Solutions"
-          description="From showers to tile work, we provide complete bathroom remodeling solutions in Chandler."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceFAQ faqs={faqs} />
-        <Testimonials category="bathroom-vanity-installation" />
-        <ContactSection />
 
-        
+        <ContactSection />
       </main>
       <Footer />
     </>
   );
 }
-

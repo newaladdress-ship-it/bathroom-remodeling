@@ -1,3 +1,4 @@
+import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,18 +9,20 @@ import ServiceProcess from "@/components/service-process";
 import IssuesSolved from "@/components/issues-solved";
 import Benefits from "@/components/benefits";
 import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
-import { GoogleMap } from "@/components/services/google-map";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
 import SubServices from "@/components/sub-services";
-import { bathroomServices, getRelatedServices } from "@/lib/bathroom-services";
-import Link from "next/link";
+import { getRelatedServices } from "@/lib/bathroom-services";
 
-export const metadata: Metadata = {title: "Small Bathroom Remodeling Chandler AZ | Space Savers | ARZ",description: "Maximize storage and style in your small guest or hall bathroom in Chandler, AZ. Smart floating vanities, pocket doors, and curbless layouts. Call now!",
-  openGraph: {title: "Small Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore small bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
+export const metadata: Metadata = {
+  title: "Small Bathroom Remodeling Chandler AZ | Space Savers | ARZ",
+  description: "Maximize storage and style in your small guest or hall bathroom in Chandler, AZ. Smart floating vanities, pocket doors, and curbless layouts. Call now!",
+  openGraph: {
+    title: "Small Bath Remodel | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore small bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/small-bathroom-remodeling/`,
     type: "website",
     images: [
@@ -32,7 +35,9 @@ export const metadata: Metadata = {title: "Small Bathroom Remodeling Chandler AZ
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Small Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore small bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Small Bath Remodel | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore small bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
     images: [`${siteConfig.url}/images/og-small-bath.png`],
   },
   alternates: {
@@ -41,9 +46,6 @@ export const metadata: Metadata = {title: "Small Bathroom Remodeling Chandler AZ
 };
 
 const faqs = serviceContent["small-bathroom-remodeling"].faqs;
-
-const chandlerLocation = { lat: 33.3009334, lng: -111.9605964 };
-
 const otherServices = getRelatedServices("/small-bathroom-remodeling/");
 
 export default function SmallBathroomRemodelingPage() {
@@ -51,9 +53,8 @@ export default function SmallBathroomRemodelingPage() {
   
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Small Bathroom Remodeling", url: "https://arzhomeremodeling.com/small-bathroom-remodeling/" } ]} />
-<ServiceSchema serviceName="Small Bathroom Remodeling in Chandler, Arizona" serviceDescription="Professional small bathroom remodeling in Chandler, Arizona. Space-saving designs, storage solutions, and modern fixtures." serviceUrl={`${siteConfig.url}/small-bathroom-remodeling`} />
+      <ServiceSchema serviceName="Small Bathroom Remodeling in Chandler, Arizona" serviceDescription="Professional small bathroom remodeling in Chandler, Arizona. Space-saving designs, storage solutions, and modern fixtures." serviceUrl={`${siteConfig.url}/small-bathroom-remodeling`} />
       <FAQSchema faqs={faqs} />
       <Header />
       <main>
@@ -64,6 +65,14 @@ export default function SmallBathroomRemodelingPage() {
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Small Bathroom Remodeling", url: `${siteConfig.url}/small-bathroom-remodeling` }]}
         />
+
+        <SubServices 
+          title="Other Space-Saving Solutions"
+          subtitle="More Upgrades"
+          description="From vanity updates to custom tile, we can maximize every inch of your bathroom."
+          services={otherServices.map(s => s.name)}
+        />
+
         <ServiceProcess
           title="Small Bathroom Remodeling Process"
           subtitle="Our Process"
@@ -76,12 +85,14 @@ export default function SmallBathroomRemodelingPage() {
             { number: "05", icon: "ShieldCheck", title: "Final Optimization", description: "Complete installation with space-maximizing details and quality finishing." }
           ]}
         />
+
         <IssuesSolved
           title="Issues We Solve with Small Bathroom Remodeling"
           subtitle="Common Problems Fixed"
           description="We address the most common small bathroom challenges Chandler homeowners face."
           issues={smallBathData.issues}
         />
+
         <Benefits
           title="Benefits of Small Bathroom Remodeling"
           subtitle="Why Remodel Your Small Bathroom"
@@ -89,65 +100,25 @@ export default function SmallBathroomRemodelingPage() {
           benefits={smallBathData.benefits}
         />
 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground text-center">
-              Chandler's Premier Small Bathroom Makeover Experts
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6 text-center">
-              Whether you live in a modern townhouse in <strong>Ocotillo</strong>, a family home in <strong>Fulton Ranch</strong>, or are updating a classic property in <strong>Sun Lakes</strong>, optimizing a small bathroom requires precise planning and expert craftsmanship. To get inspired, see our ultimate [small bathroom layout ideas for Chandler](/blog/small-bathroom-layout-ideas-chandler/) homes. As specialized <strong>small bathroom remodeling contractors in Chandler AZ</strong>, we understand that every square inch matters.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mt-8 mb-12">
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">In-Wall Recessed Storage Niches</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Standard shelving projects out into the room, blocking your shoulders and making the washroom feel narrower. 
-                  We cut directly into standard wall framing cavities to build deep recessed shelves and custom tiled niches, 
-                  delivering massive storage without taking up a single inch of floor clearance.
-                </p>
-              </div>
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Zero-Barrier Curbless Showers</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Standard shower tubs with thick high thresholds act like visual walls, chopping your bathroom into tiny pieces. 
-                  We install barrier free glass walk in showers, allowing your eyes to sweep uninterrupted across the entire 
-                  room to make a compact space feel twice as large.
-                </p>
-              </div>
-            </div>
-            <div className="p-8 bg-primary/5 rounded-3xl border border-primary/20 text-center">
-              <p className="text-foreground font-medium mb-4">
-                We offer competitive zero-percent financing options on qualifying projects:
-                <Link href="/financing/" className="text-primary hover:underline ml-1">
-                  see our bathroom remodeling financing options
-                </Link>.
-              </p>
-            </div>
-          </div>
-        </section>
-
         <Tips
           title="Expert Small Bathroom Remodeling Tips"
           subtitle="Professional Insights"
           description="Smart strategies to maintain and maximize your newly remodeled small bathroom."
           tips={smallBathData.tips}
         />
-        <ServiceCTA title="Ready for small bathroom remodeling in Chandler?" description="Get expert space-maximizing design, smart storage solutions, and professional installation for your small bathroom." />
 
-        <SubServices 
-          title="Other Space-Saving Solutions"
-          subtitle="More Upgrades"
-          description="From vanity updates to custom tile, we can maximize every inch of your bathroom."
-          services={otherServices.map(s => s.name)}
+        <ServiceAreas />
+
+        <ServiceCTA 
+          title="Ready for small bathroom remodeling in Chandler?" 
+          description="Get expert space-maximizing design, smart storage solutions, and professional installation for your small bathroom." 
         />
 
         <ServiceFAQ faqs={faqs} />
-        <Testimonials category="small-bathroom-remodeling" />
+
         <ContactSection />
-        
       </main>
       <Footer />
     </>
   );
 }
-

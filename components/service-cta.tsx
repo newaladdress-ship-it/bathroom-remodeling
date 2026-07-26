@@ -33,7 +33,7 @@ export default function ServiceCTA({
             >
               <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                 <Phone className="w-5 h-5" aria-hidden="true" />
-                Call Now: {siteConfig.phone}
+                Call Now
               </a>
             </Button>
             <Button

@@ -77,7 +77,7 @@ export default function GalleryPage() {
               <span className="text-sm font-medium tracking-widest text-primary uppercase">
                 Our Work
               </span>
-              <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground text-balance leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground text-balance leading-tight">
                 Project Gallery
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">

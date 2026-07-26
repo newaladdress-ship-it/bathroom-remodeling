@@ -1,3 +1,4 @@
+import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,19 +9,19 @@ import ServiceProcess from "@/components/service-process";
 import IssuesSolved from "@/components/issues-solved";
 import Benefits from "@/components/benefits";
 import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import SubServices from "@/components/sub-services";
-import { bathroomServices, getRelatedServices } from "@/lib/bathroom-services";
-import Link from "next/link";
-import { Users, Layout, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { GoogleMap } from "@/components/services/google-map";
+import { getRelatedServices } from "@/lib/bathroom-services";
 
-export const metadata: Metadata = {title: "Guest Bath Remodel Chandler AZ | Small Bath Pros | ARZ",description: "Transform your guest bathroom in Chandler, AZ. We specialize in space-saving vanities, curbless walk-in showers, and high-impact updates. Call today!",
-  openGraph: {title: "Guest Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore guest bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
+export const metadata: Metadata = {
+  title: "Guest Bath Remodel Chandler AZ | Small Bath Pros | ARZ",
+  description: "Transform your guest bathroom in Chandler, AZ. We specialize in space-saving vanities, curbless walk-in showers, and high-impact updates. Call today!",
+  openGraph: {
+    title: "Guest Bath Remodel | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore guest bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/guest-bathroom-remodeling/`,
     type: "website",
     images: [
@@ -33,7 +34,9 @@ export const metadata: Metadata = {title: "Guest Bath Remodel Chandler AZ | Smal
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Guest Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore guest bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Guest Bath Remodel | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore guest bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
     images: [`${siteConfig.url}/images/og-small-bath.png`],
   },
   alternates: {
@@ -57,9 +60,9 @@ const faqs = [
 ];
 
 const issues = [
-  { problem: "Dated Builder Grade Materials", solution: "We install modern wood vanities, porcelain floor tiles, and bright LED layouts that instantly refresh the space." },
-  { problem: "Poor Storage for Guests", solution: "We install custom recessed tile niches and floating wall hung vanities that maximize space without cluttering the room." },
-  { problem: "Inefficient Ventilation", solution: "We install high CFM quiet exhaust fans that quickly vent moisture out to prevent blistering wall paint and mold." }
+  { title: "Dated Builder Grade Materials", description: "We install modern wood vanities, porcelain floor tiles, and bright LED layouts that instantly refresh the space." },
+  { title: "Poor Storage for Guests", description: "We install custom recessed tile niches and floating wall hung vanities that maximize space without cluttering the room." },
+  { title: "Inefficient Ventilation", description: "We install high CFM quiet exhaust fans that quickly vent moisture out to prevent blistering wall paint and mold." }
 ];
 
 const benefitsList = [
@@ -79,9 +82,8 @@ const otherServices = getRelatedServices("/guest-bathroom-remodeling/");
 export default function GuestBathPage() {
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Guest Bathroom Remodeling", url: "https://arzhomeremodeling.com/guest-bathroom-remodeling/" } ]} />
-<ServiceSchema 
+      <ServiceSchema 
         serviceName="Guest Bathroom Remodeling in Chandler" 
         serviceDescription="Professional guest bathroom and powder room renovations in Chandler, AZ. Fast, high-impact updates for secondary bathrooms." 
         serviceUrl={`${siteConfig.url}/guest-bathroom-remodeling/`} 
@@ -97,31 +99,19 @@ export default function GuestBathPage() {
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Guest Bathroom", url: `${siteConfig.url}/guest-bathroom-remodeling/` }]}
         />
 
-        <section className="py-12 bg-primary/5 border-b border-primary/10">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12 text-primary font-medium">
-               <div className="flex items-center gap-2">
-                 <Users className="w-5 h-5" />
-                 <span>Guest-Ready Results</span>
-               </div>
-               <div className="flex items-center gap-2">
-                 <Layout className="w-5 h-5" />
-                 <span>Space Optimization</span>
-               </div>
-               <div className="flex items-center gap-2">
-                 <Sparkles className="w-5 h-5" />
-                 <span>Fast 10 to 14 Day Turnaround</span>
-               </div>
-            </div>
-          </div>
-        </section>
+        <SubServices 
+          title="Related Services"
+          subtitle="More Solutions"
+          description="Explore other bathroom renovation options for your home."
+          services={otherServices.map(s => s.name)}
+        />
 
         <ServiceProcess
           title="Efficient Guest Bath Process"
           subtitle="Quick & Clean"
           description="We specialize in minimizing downtime so your secondary bathroom is back in service as quickly as possible."
           steps={[
-            { number: "01", icon: "Layout", title: "Smart Planning", description: "We identify the most impactful changes to maximize your budget and space." },
+            { number: "01", icon: "PhoneCall", title: "Smart Planning", description: "We identify the most impactful changes to maximize your budget and space." },
             { number: "02", icon: "Ruler", title: "Selection", description: "Quick-ship material options that keep your project on a tight schedule." },
             { number: "03", icon: "ShieldCheck", title: "Rapid Install", description: "Focused construction phase with dedicated crews for smaller spaces." },
             { number: "04", icon: "Sparkles", title: "Finish & Style", description: "Final details and styling so the room is guest-ready from day one." }
@@ -142,34 +132,6 @@ export default function GuestBathPage() {
           benefits={benefitsList}
         />
 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground text-center">
-              Space-Saving Floating Vanities & High-CFM Quiet Ventilation
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Our <strong>guest bathroom remodeling in Chandler AZ</strong> delivers high impact spatial designs near McQueen Road. 
-              We utilize advanced wall-hung structures and high ventilation upgrades to engineer spacious, fresh environments.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground"><Link href="/blog/small-bathroom-layout-ideas-chandler/" className="hover:text-primary transition-colors">Wall-Hung Floating Vanities</Link></h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Floor mounted vanity cabinets block sightlines, making small spaces feel tight. We anchor premium floating vanities directly 
-                  to wall studs, exposing more floor tiling to create the optical illusion of extra square footage.
-                </p>
-              </div>
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">High-CFM Quiet Exhaust Fans</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Compact guest bathrooms trap steam quickly, creating blistering paint and mold hazards. We install ultra quiet exhaust fans 
-                  rated at 110 Cubic Feet per Minute to pull moist air out, sealing connections to prevent attic draft leaks.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <Tips
           title="Small Bath Best Practices"
           subtitle="Expert Advice"
@@ -177,23 +139,16 @@ export default function GuestBathPage() {
           tips={tipsList}
         />
 
+        <ServiceAreas />
+
         <ServiceCTA 
           title="Ready to refresh your guest bathroom?" 
           description="Get a fast, fixed-price quote for your guest bath or powder room update in Chandler." 
         />
 
-        <SubServices 
-          title="Related Services"
-          subtitle="More Solutions"
-          description="Explore other bathroom renovation options for your home."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceFAQ faqs={faqs} />
-        <Testimonials category="guest-bathroom-remodeling" />
+
         <ContactSection />
-        
-        
       </main>
       <Footer />
     </>

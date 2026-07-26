@@ -1323,31 +1323,7 @@ export async function ServicePageContent({
           ]}
         />
 
-        {/* SEO Content Section */}
-        {content.content && (
-          <section className="py-20 lg:py-32 bg-background">
-            <div className="container mx-auto px-4 lg:px-8">
-              <div className="max-w-4xl mx-auto">
-                <div className="prose prose-lg max-w-none">
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                    {content.content.intro}
-                  </p>
-                  {content.content.sections.map((section, index) => (
-                    <div key={index} className="mb-10">
-                      <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-4 text-foreground">
-                        {section.title}
-                      </h2>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {section.content}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
-
+        {/* 2. Our Process */}
         <ServiceProcess
           title={content.process.title}
           subtitle={content.process.subtitle}
@@ -1355,34 +1331,19 @@ export async function ServicePageContent({
           steps={content.process.steps}
         />
 
-        <IssuesSolved
-          title={`Issues We Solve with ${service.name}`}
-          subtitle="Common Problems Fixed"
-          description={`We address the most common ${service.name.toLowerCase()} challenges Chandler homeowners face.`}
-          issues={content.issues}
-        />
-
-        <Benefits
-          title={`Benefits of ${service.name} in Chandler`}
-          subtitle="Why It Matters"
-          benefits={content.benefits}
-        />
-
-        <LocalTrust cityName="Chandler" />
-
-        {/* Related Services Section */}
+        {/* 3. Services Included / Sub Services */}
         {content.relatedServices && (
-          <section className="py-20 lg:py-32 bg-secondary">
+          <section className="py-16 lg:py-24 bg-secondary">
             <div className="container mx-auto px-4 lg:px-8">
               <div className="text-center max-w-3xl mx-auto mb-12">
                 <span className="text-primary text-sm font-medium tracking-wider uppercase">
-                  More Services
+                  Services Included
                 </span>
                 <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 mb-4 text-foreground">
                   {content.relatedServices.title}
                 </h2>
                 <p className="text-muted-foreground text-lg">
-                  Explore our other bathroom remodeling services in Chandler, Arizona
+                  Explore specialized bathroom remodeling services included in our offerings
                 </p>
               </div>
               <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -1408,6 +1369,22 @@ export async function ServicePageContent({
           </section>
         )}
 
+        {/* 4. Problems We Solve */}
+        <IssuesSolved
+          title={`Issues We Solve with ${service.name}`}
+          subtitle="Common Problems Fixed"
+          description={`We address the most common ${service.name.toLowerCase()} challenges Chandler homeowners face.`}
+          issues={content.issues}
+        />
+
+        {/* 5. Benefits of This Service */}
+        <Benefits
+          title={`Benefits of ${service.name} in Chandler`}
+          subtitle="Why It Matters"
+          benefits={content.benefits}
+        />
+
+        {/* 6. Tips to Prevent Future Issues */}
         <Tips
           title={`${service.name} Tips & Maintenance`}
           subtitle="Keep It Looking New"
@@ -1415,16 +1392,14 @@ export async function ServicePageContent({
           tips={content.tips}
         />
 
-        <ServiceFAQ faqs={faqs} />
-
+        {/* 7. Customer Reviews */}
         <Testimonials />
 
-        <ContactSection />
-
-        <section className="py-20 lg:py-32 bg-secondary">
+        {/* 8. Service Areas */}
+        <section className="py-16 lg:py-24 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Chandler, AZ</span>
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Service Areas</span>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-4 text-foreground text-balance">
                 Service Area Map for {service.name} in Chandler, Arizona
               </h2>
@@ -1449,6 +1424,21 @@ export async function ServicePageContent({
             </div>
           </div>
         </section>
+
+        {/* 9. Ready to Fix Your Problem? Contact Us Today */}
+        <section className="py-16 bg-primary text-primary-foreground text-center">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+              Ready to Fix Your Problem? Contact Us Today
+            </h2>
+            <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
+              Get in touch with our team for a free, no-obligation estimate and consultation.
+            </p>
+          </div>
+        </section>
+
+        {/* 10. Contact Information */}
+        <ContactSection />
 
       </main>
       <Footer />

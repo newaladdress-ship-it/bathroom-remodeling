@@ -47,7 +47,7 @@ export default function WarrantyPage() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary-foreground text-xs font-semibold uppercase tracking-wider mb-6">
                 <Shield className="w-4 h-4 text-accent" /> Workmanship Warranty
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 leading-tight">
                 Our Guarantee of Craftsmanship
               </h1>
               <p className="text-slate-300 text-lg md:text-xl leading-relaxed">

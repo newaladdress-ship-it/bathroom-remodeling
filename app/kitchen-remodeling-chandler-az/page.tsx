@@ -30,7 +30,7 @@ export default function KitchenRemodelingChandlerPage() {
           <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
             <HelpCircle className="w-8 h-8 text-primary" />
           </div>
-          <h1 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 leading-tight">
             Specializing Exclusively in Premium Bathroom Remodeling
           </h1>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">

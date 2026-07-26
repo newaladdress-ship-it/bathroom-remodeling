@@ -1,3 +1,4 @@
+import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,17 +9,22 @@ import ServiceProcess from "@/components/service-process";
 import IssuesSolved from "@/components/issues-solved";
 import Benefits from "@/components/benefits";
 import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
-import { GoogleMap } from "@/components/services/google-map";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
+import SubServices from "@/components/sub-services";
+import { getRelatedServices } from "@/lib/bathroom-services";
 
-export const metadata: Metadata = {title: {
+export const metadata: Metadata = {
+  title: {
     absolute: "Shower Replacement | Chandler AZ Bathroom Remodeling"
-  },description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower replacement, custom showers, tile, vanities, clear pricing, and free estimates.",
-  openGraph: {title: "Shower Replacement | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower replacement, custom showers, tile, vanities, clear pricing, and free estimates.",
+  },
+  description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower replacement, custom showers, tile, vanities, clear pricing, and free estimates.",
+  openGraph: {
+    title: "Shower Replacement | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower replacement, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/shower-replacement`,
     type: "website",
     images: [
@@ -31,7 +37,9 @@ export const metadata: Metadata = {title: {
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Shower Replacement | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower replacement, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Shower Replacement | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore shower replacement, custom showers, tile, vanities, clear pricing, and free estimates.",
     images: [`${siteConfig.url}/images/shower-replacement-hero.jpg`],
   },
   alternates: {
@@ -41,19 +49,14 @@ export const metadata: Metadata = {title: {
 };
 
 const faqs = serviceContent["shower-replacement"].faqs;
-
-const chandlerLocation = {
-  lat: 33.3009334,
-  lng: -111.9605964,
-};
+const otherServices = getRelatedServices("/shower-replacement/");
 
 export default function ShowerReplacementPage() {
   const serviceData = serviceContent["shower-replacement"];
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Shower Replacement", url: "https://arzhomeremodeling.com/shower-replacement/" } ]} />
-<ServiceSchema
+      <ServiceSchema
         serviceName="Shower Replacement in Chandler, Arizona"
         serviceDescription="Professional shower replacement services in Chandler, Arizona. Quick installation, modern designs, and quality materials."
         serviceUrl={`${siteConfig.url}/shower-replacement`}
@@ -70,6 +73,13 @@ export default function ShowerReplacementPage() {
             { name: "Home", url: siteConfig.url },
             { name: "Shower Replacement", url: `${siteConfig.url}/shower-replacement` },
           ]}
+        />
+
+        <SubServices 
+          title="Related Services in Chandler"
+          subtitle="More Solutions"
+          description="We provide comprehensive bathroom remodeling services designed for your needs."
+          services={otherServices.map(s => s.name)}
         />
 
         <ServiceProcess
@@ -130,6 +140,8 @@ export default function ShowerReplacementPage() {
           tips={serviceData.tips}
         />
 
+        <ServiceAreas />
+
         <ServiceCTA 
           title="Ready to replace your old shower in Chandler?" 
           description="Get a free assessment and quote for your shower replacement project today." 
@@ -137,14 +149,9 @@ export default function ShowerReplacementPage() {
 
         <ServiceFAQ faqs={faqs} />
 
-        <Testimonials category="shower-replacement" />
-
         <ContactSection />
-
-        
       </main>
       <Footer />
     </>
   );
 }
-

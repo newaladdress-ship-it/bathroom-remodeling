@@ -1,3 +1,4 @@
+import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,18 +9,19 @@ import ServiceProcess from "@/components/service-process";
 import IssuesSolved from "@/components/issues-solved";
 import Benefits from "@/components/benefits";
 import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import SubServices from "@/components/sub-services";
-import { bathroomServices, getRelatedServices } from "@/lib/bathroom-services";
-import Link from "next/link";
-import { Crown, Sparkles, Gem } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { getRelatedServices } from "@/lib/bathroom-services";
 
-export const metadata: Metadata = {title: "Luxury Bathroom Remodeling Chandler AZ | Custom Spas | ARZ",description: "Experience premium luxury bathroom design in Chandler, AZ. High-end master suites, custom steam showers, marble tiling, and smart layouts. Call today!",
-  openGraph: {title: "Luxury Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore luxury bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
+export const metadata: Metadata = {
+  title: "Luxury Bathroom Remodeling Chandler AZ | Custom Spas | ARZ",
+  description: "Experience premium luxury bathroom design in Chandler, AZ. High-end master suites, custom steam showers, marble tiling, and smart layouts. Call today!",
+  openGraph: {
+    title: "Luxury Bath Remodel | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore luxury bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/luxury-bathroom-remodeling/`,
     type: "website",
     images: [
@@ -32,7 +34,9 @@ export const metadata: Metadata = {title: "Luxury Bathroom Remodeling Chandler A
     ],
   },
   twitter: {
-    card: "summary_large_image",title: "Luxury Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore luxury bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Luxury Bath Remodel | Chandler AZ Bathroom Remodeling",
+    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore luxury bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
     images: [`${siteConfig.url}/images/og-master-suite.png`],
   },
   alternates: {
@@ -56,9 +60,9 @@ const faqs = [
 ];
 
 const issues = [
-  { problem: "Generic Builder Grade Layouts", solution: "We reconfigure walls to expand walk in closet entries and optimize floor plans for a premium flow." },
-  { problem: "Cold Damp Floor Tiles", solution: "We install low voltage underfloor radiant heating mats to keep your feet warm during winter." },
-  { problem: "Poor Lighting and Dark Showers", solution: "We design custom recessed LED layouts with under cabinet lighting and vapor proof shower fixtures." }
+  { title: "Generic Builder Grade Layouts", description: "We reconfigure walls to expand walk in closet entries and optimize floor plans for a premium flow." },
+  { title: "Cold Damp Floor Tiles", description: "We install low voltage underfloor radiant heating mats to keep your feet warm during winter." },
+  { title: "Poor Lighting and Dark Showers", description: "We design custom recessed LED layouts with under cabinet lighting and vapor proof shower fixtures." }
 ];
 
 const benefitsList = [
@@ -78,9 +82,8 @@ const otherServices = getRelatedServices("/luxury-bathroom-remodeling/");
 export default function LuxuryPage() {
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Luxury Bathroom Remodeling", url: "https://arzhomeremodeling.com/luxury-bathroom-remodeling/" } ]} />
-<ServiceSchema 
+      <ServiceSchema 
         serviceName="Luxury Bathroom Remodeling in Chandler" 
         serviceDescription="Premium high end bathroom renovations in Chandler, AZ. Spa inspired master baths, custom tile, and luxury fixtures." 
         serviceUrl={`${siteConfig.url}/luxury-bathroom-remodeling/`} 
@@ -96,31 +99,19 @@ export default function LuxuryPage() {
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Luxury Remodeling", url: `${siteConfig.url}/luxury-bathroom-remodeling/` }]}
         />
 
-        <section className="py-12 bg-secondary border-b border-border">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12 text-foreground font-medium">
-               <div className="flex items-center gap-2">
-                 <Crown className="w-5 h-5 text-primary" />
-                 <span>Premium Material Selections</span>
-               </div>
-               <div className="flex items-center gap-2">
-                 <Sparkles className="w-5 h-5 text-primary" />
-                 <span>Spa-Inspired Design</span>
-               </div>
-               <div className="flex items-center gap-2">
-                 <Gem className="w-5 h-5 text-primary" />
-                 <span>Master Craftsmanship</span>
-               </div>
-            </div>
-          </div>
-        </section>
+        <SubServices 
+          title="Related Luxury Services"
+          subtitle="Complete Transformations"
+          description="We offer a full range of high end home renovation services."
+          services={otherServices.map(s => s.name)}
+        />
 
         <ServiceProcess
           title="The Luxury Remodeling Experience"
           subtitle="Bespoke Execution"
           description="Our process ensures every detail of your high end bathroom is executed with surgical precision."
           steps={[
-            { number: "01", icon: "Layout", title: "Design Discovery", description: "Deep dive into your style, goals, and material preferences with our lead designer." },
+            { number: "01", icon: "PhoneCall", title: "Design Discovery", description: "Deep dive into your style, goals, and material preferences with our lead designer." },
             { number: "02", icon: "Ruler", title: "3D Rendering", description: "Visualize your new master bath with photorealistic 3D models and layout plans." },
             { number: "03", icon: "ShieldCheck", title: "Precision Build", description: "Our most experienced tradesmen handle the install, ensuring museum-quality tile and trim work." },
             { number: "04", icon: "Sparkles", title: "Final Reveal", description: "A detailed walkthrough and finishing session to ensure your new space is flawless." }
@@ -141,34 +132,6 @@ export default function LuxuryPage() {
           benefits={benefitsList}
         />
 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground text-center">
-              Curbless Steam Showers & Double-Loop Plumbing Engineering
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Our <strong>luxury bathroom remodeling in Chandler AZ</strong> delivers high end master transformations near Fulton Ranch. 
-              To help budget for these high-end retreats, we provide a complete breakdown of features in our [master bathroom remodel cost Chandler](/blog/master-bathroom-remodel-cost-chandler/) guide. We utilize advanced waterproofing and professional mechanical design to engineer high performance personal spas.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Zero-Threshold Curbless Drainage</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  We build seamless walk in steam showers that sit completely flush with your bathroom floor. This requires professional 
-                  lowering of subfloor wood framing and installing linear drains to ensure a perfect water drainage slope.
-                </p>
-              </div>
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-medium mb-3 text-foreground">Double-Loop High-Volume Plumbing</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Spa systems utilizing body sprays and dual overhead rain cans demand steady water pressure. We run custom dedicated 
-                  supply loops with solid brass balance cartridge valves to ensure consistent, luxurious water flow.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <Tips
           title="Designer Insights"
           subtitle="Luxury Best Practices"
@@ -176,40 +139,16 @@ export default function LuxuryPage() {
           tips={tipsList}
         />
 
+        <ServiceAreas />
+
         <ServiceCTA 
           title="Ready to design your dream master bath?" 
           description="Schedule a private design consultation at your Chandler home to explore premium possibilities." 
         />
 
-        <SubServices 
-          title="Related Luxury Services"
-          subtitle="Complete Transformations"
-          description="We offer a full range of high end home renovation services."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceFAQ faqs={faqs} />
-        <Testimonials category="luxury-bathroom-remodeling" />
+
         <ContactSection />
-        
-        <section className="py-20 lg:py-32 bg-secondary text-center">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <span className="text-primary text-sm font-medium tracking-wider uppercase">East Valley Luxury</span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-6 text-foreground">Serving Ocotillo, Fulton Ranch & Sun Lakes</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              We specialize in luxury bathroom remodeling for Chandler's premier master-planned communities. 
-              Experience the quality that our neighbors trust.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-               <Button asChild size="lg">
-                  <a href={`tel:${siteConfig.phoneClean}`}>Start Your Design Consultation</a>
-               </Button>
-               <Button variant="outline" asChild size="lg">
-                  <Link href="tel:+15205693339">Call {siteConfig.phone}</Link>
-               </Button>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </>

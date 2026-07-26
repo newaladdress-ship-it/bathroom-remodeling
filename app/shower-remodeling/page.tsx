@@ -8,21 +8,12 @@ import ServiceProcess from "@/components/service-process";
 import IssuesSolved from "@/components/issues-solved";
 import Benefits from "@/components/benefits";
 import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
+import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
-import { serviceContent } from "@/lib/service-content-data";
-import SubServices from "@/components/sub-services";
-import LocalTrust from "@/components/home/local-trust";
-import { bathroomServices, getRelatedServices } from "@/lib/bathroom-services";
-import Link from "next/link";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import ShowerTypes from "@/components/shower-types";
-import ShowerCostSection from "@/components/shower-cost-section";
-import ChandlerShowerMaterials from "@/components/chandler-shower-materials";
-
 import ShowerGallery from "@/components/shower-gallery";
-
 
 export const metadata: Metadata = {
   title: "Custom Shower Remodeling Chandler AZ | Tile & Glass",
@@ -75,16 +66,13 @@ const faqs = [
   },
 ];
 
-const otherServices = getRelatedServices("/shower-remodeling/");
+import Testimonials from "@/components/home/testimonials";
 
 export default function ShowerRemodelingPage() {
-  const showerData = serviceContent["shower-remodeling"];
-  
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Shower Remodeling", url: "https://arzhomeremodeling.com/shower-remodeling/" } ]} />
-<ServiceSchema
+      <ServiceSchema
         serviceName="Shower Remodeling in Chandler, Arizona"
         serviceDescription="Professional shower upgrades in Chandler, Arizona. Custom tile, frameless glass enclosures, waterproof installations, and premium fixtures."
         serviceUrl={`${siteConfig.url}/shower-remodeling/`}
@@ -97,6 +85,7 @@ export default function ShowerRemodelingPage() {
       <FAQSchema faqs={faqs} />
       <Header />
       <main>
+        {/* 1. Hero */}
         <ServiceHero
           title="Shower Remodeling in Chandler, AZ"
           subtitle="Modern Design • Precision Craftsmanship • Lifetime Waterproof Protection"
@@ -108,41 +97,7 @@ export default function ShowerRemodelingPage() {
           ]}
         />
 
-        <LocalTrust cityName="Chandler" />
-
-        {/* REGIONAL SHOWER SERVICES COVERS */}
-        <section className="py-16 bg-background">
-          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground text-center">
-              East Valley Shower Renovation & Design Services
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Homeowners throughout Chandler and the surrounding East Valley trust ARZ Home Remodeling for thoughtfully planned bathroom improvements. We help transform outdated bathing areas into functional, modern spaces with carefully selected materials, improved layouts, and professional craftsmanship. From initial planning and preparation to final finishing details, our team manages each phase of the project with attention to quality and durability.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              If you are comparing upgrade options, explore our <Link href="/blog/walk-in-shower-cost-chandler-az/" className="text-primary hover:underline font-semibold">walk-in shower cost Chandler</Link> guide to understand common factors that influence project pricing, materials, and design choices.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mt-8 text-left">
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-semibold text-foreground mb-3 text-lg">Chandler Bathroom Shower Upgrades</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Every bathroom has unique requirements, which is why we create solutions based on your home&apos;s layout, style preferences, and everyday needs. Our team handles complete shower transformations including surface preparation, layout adjustments, drainage considerations, wall systems, and finishing work. Whether you prefer a modern tiled appearance, a low-maintenance design, or a more open bathroom layout, we focus on creating a finished space that combines comfort, functionality, and long-term performance.
-                </p>
-              </div>
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-semibold text-foreground mb-3 text-lg">Serving Mesa, Gilbert & Tempe Homeowners</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  ARZ Home Remodeling provides professional bathroom improvement services throughout Mesa, Gilbert, and Tempe. Homeowners choose our team for detailed planning, quality workmanship, and personalized designs that improve both the appearance and usability of their bathrooms. Our projects include updated shower layouts, upgraded surfaces, custom storage features, and modern finishing options designed around each homeowner&apos;s goals.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <ShowerTypes />
-
-        <ShowerCostSection />
-
+        {/* 2. Our Process */}
         <ServiceProcess
           title="A Detailed Approach to Your Shower Upgrade"
           subtitle="Our Process"
@@ -181,6 +136,10 @@ export default function ShowerRemodelingPage() {
           ]}
         />
 
+        {/* 3. Services Included / Sub Services */}
+        <ShowerTypes />
+
+        {/* 4. Problems We Solve */}
         <IssuesSolved
           title="Common Shower Problems We Help Solve"
           subtitle="Solutions for Outdated and Damaged Bathrooms"
@@ -205,6 +164,7 @@ export default function ShowerRemodelingPage() {
           ]}
         />
 
+        {/* 5. Benefits of This Service */}
         <Benefits
           title="Benefits of Updating Your Shower"
           subtitle="Why Homeowners Upgrade Their Bathrooms"
@@ -229,34 +189,7 @@ export default function ShowerRemodelingPage() {
           ]}
         />
 
-        <ShowerGallery />
-
-        <ChandlerShowerMaterials />
-
-        <LocalTrust cityName="Chandler" />
-
-        <section className="py-16 bg-background">
-          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <h2 className="font-serif text-3xl font-semibold mb-8 text-foreground text-center">
-              Professional Shower Services Available
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 text-left">
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-semibold text-foreground mb-2 text-lg">Tile Shower Upgrades</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Our tile-focused bathroom improvements include detailed surface preparation, quality materials, and carefully installed finishes designed for Chandler homes.
-                </p>
-              </div>
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-semibold text-foreground mb-2 text-lg">Accessible Bathroom Improvements</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  We create safer bathroom layouts with options such as easier-entry designs, seating solutions, and accessibility-focused features.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        {/* 6. Tips to Prevent Future Issues */}
         <Tips
           title="Expert Maintenance Tips"
           subtitle="Keep Your Updated Bathroom Looking Great"
@@ -281,74 +214,22 @@ export default function ShowerRemodelingPage() {
           ]}
         />
 
-        <ServiceFAQ faqs={faqs} />
+        {/* 7. Customer Reviews */}
+        <Testimonials />
 
-        {/* MORE BATHROOM SOLUTIONS */}
-        <section className="py-12 bg-secondary">
-          <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wide block text-center mb-1">More Bathroom Solutions</span>
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-center mb-8 text-foreground">
-              Explore Our Other Remodeling Services
-            </h2>
-            <div className="grid sm:grid-cols-3 gap-6">
-              <Link
-                href="/tub-to-shower-conversion/"
-                className="bg-background border border-border rounded-2xl p-6 hover:border-primary transition-all shadow-sm flex flex-col justify-between group"
-              >
-                <div>
-                  <h3 className="font-semibold text-foreground group-hover:text-primary text-base mb-2">
-                    Tub to Shower Conversion
-                  </h3>
-                  <p className="text-muted-foreground text-xs leading-relaxed mb-4">
-                    Convert an unused bathtub area into a more practical and comfortable bathing space with updated layouts and modern features.
-                  </p>
-                </div>
-                <span className="text-xs font-bold text-primary group-hover:underline mt-auto inline-flex items-center gap-1">
-                  Explore Tub to Shower Conversion →
-                </span>
-              </Link>
-              <Link
-                href="/ada-bathroom-remodeling/"
-                className="bg-background border border-border rounded-2xl p-6 hover:border-primary transition-all shadow-sm flex flex-col justify-between group"
-              >
-                <div>
-                  <h3 className="font-semibold text-foreground group-hover:text-primary text-base mb-2">
-                    Handicap Accessible Bathroom
-                  </h3>
-                  <p className="text-muted-foreground text-xs leading-relaxed mb-4">
-                    Create a safer bathroom environment with accessibility-focused improvements, comfortable layouts, and practical design features.
-                  </p>
-                </div>
-                <span className="text-xs font-bold text-primary group-hover:underline mt-auto inline-flex items-center gap-1">
-                  Explore Handicap Accessible Bathroom →
-                </span>
-              </Link>
-              <Link
-                href="/bathroom-tile-installation/"
-                className="bg-background border border-border rounded-2xl p-6 hover:border-primary transition-all shadow-sm flex flex-col justify-between group"
-              >
-                <div>
-                  <h3 className="font-semibold text-foreground group-hover:text-primary text-base mb-2">
-                    Bathroom Tile Installation
-                  </h3>
-                  <p className="text-muted-foreground text-xs leading-relaxed mb-4">
-                    Upgrade your bathroom surfaces with professionally installed tile options designed for durability, appearance, and easy maintenance.
-                  </p>
-                </div>
-                <span className="text-xs font-bold text-primary group-hover:underline mt-auto inline-flex items-center gap-1">
-                  Explore Bathroom Tile Installation →
-                </span>
-              </Link>
-            </div>
-          </div>
-        </section>
+        {/* 8. Service Areas */}
+        <ServiceAreas />
 
-        <Testimonials category="shower-remodeling" />
+        {/* 9. Ready to Fix Your Problem? Contact Us Today */}
+        <ServiceCTA
+          title="Ready to Fix Your Problem? Contact Us Today"
+          description="Get your free consultation today and discover how we can create the shower of your dreams."
+        />
 
+        {/* 10. Contact Information */}
         <ContactSection />
       </main>
       <Footer />
     </>
   );
 }
-

@@ -80,7 +80,7 @@ export default function ShowerCostSection() {
             href={`tel:${siteConfig.phoneClean}`}
             className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
           >
-            Call Now for a Written Estimate: {siteConfig.phone}
+            Call Now
           </a>
         </div>
       </div>
