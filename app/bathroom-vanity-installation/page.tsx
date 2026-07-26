@@ -73,13 +73,6 @@ export default function BathroomVanityInstallationPage() {
           ]}
         />
 
-        <SubServices 
-          title="Explore More Bathroom Services"
-          subtitle="More Solutions"
-          description="From showers to tile work, we provide complete bathroom remodeling solutions in Chandler."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceProcess
           title="Bathroom Vanity Installation Process"
           subtitle="Our Process"
@@ -91,6 +84,13 @@ export default function BathroomVanityInstallationPage() {
             { number: "04", icon: "Hammer", title: "Install & Level", description: "Professional vanity installation with precise leveling and secure mounting." },
             { number: "05", icon: "Sparkles", title: "Finish & Test", description: "Countertop installation, plumbing connections, and final testing for perfect operation." },
           ]}
+        />
+
+        <SubServices 
+          title="Explore More Bathroom Services"
+          subtitle="More Solutions"
+          description="From showers to tile work, we provide complete bathroom remodeling solutions in Chandler."
+          services={otherServices.map(s => s.name)}
         />
 
         <IssuesSolved
@@ -114,11 +114,11 @@ export default function BathroomVanityInstallationPage() {
           tips={vanityData.tips}
         />
 
+        <Testimonials />
+
         <ServiceAreas />
 
-        <ServiceCTA title="Ready for professional vanity installation in Chandler?" description="Get expert consultation, quality materials, and professional installation for your perfect bathroom vanity." />
-
-        <ServiceFAQ faqs={faqs} />
+        <ServiceCTA title="Ready to Fix Your Problem? Contact Us Today" description="Get expert consultation, quality materials, and professional installation for your perfect bathroom vanity." />
 
         <ContactSection />
       </main>

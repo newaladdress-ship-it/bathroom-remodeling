@@ -70,13 +70,6 @@ export default function BathroomTileInstallationPage() {
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Tile Installation", url: `${siteConfig.url}/bathroom-tile-installation` }]}
         />
 
-        <SubServices 
-          title="Explore More Washroom Upgrades"
-          subtitle="Complete Solutions"
-          description="Beyond tile, we offer full-service renovation options to transform your home."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceProcess
           title="Our Tiling Process"
           subtitle="How We Work"
@@ -88,6 +81,13 @@ export default function BathroomTileInstallationPage() {
             { number: "04", icon: "Paintbrush", title: "Grouting", description: "Professional application with consistent color and proper curing time." },
             { number: "05", icon: "Sparkles", title: "Sealing & Finishing", description: "Sealing against moisture, final cleanup, and a quality inspection for perfect results." }
           ]}
+        />
+
+        <SubServices 
+          title="Explore More Washroom Upgrades"
+          subtitle="Complete Solutions"
+          description="Beyond tile, we offer full-service renovation options to transform your home."
+          services={otherServices.map(s => s.name)}
         />
 
         <IssuesSolved
@@ -110,11 +110,11 @@ export default function BathroomTileInstallationPage() {
           tips={tileData.tips}
         />
 
+        <Testimonials />
+
         <ServiceAreas />
 
-        <ServiceCTA title="Ready for a stunning flooring upgrade?" description="Get expert design consultation, quality materials, and precision tiling for your dream home." />
-
-        <ServiceFAQ faqs={faqs} />
+        <ServiceCTA title="Ready to Fix Your Problem? Contact Us Today" description="Get expert design consultation, quality materials, and precision tiling for your dream home." />
 
         <ContactSection />
       </main>

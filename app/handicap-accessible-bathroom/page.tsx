@@ -99,13 +99,6 @@ export default function AccessibleBathroomPage() {
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Accessible Bathrooms", url: `${siteConfig.url}/handicap-accessible-bathroom/` }]}
         />
 
-        <SubServices 
-          title="Related Bathroom Services" 
-          subtitle="More Upgrades"
-          description="Explore other bathroom renovation options for your home."
-          services={otherServices.map(s => s.name)} 
-        />
-
         <ServiceProcess
           title="Our Accessible Bathroom Process"
           subtitle="ADA-Compliant & Safe"
@@ -116,6 +109,13 @@ export default function AccessibleBathroomPage() {
             { number: "03", icon: "ShieldCheck", title: "Permitting & Inspection", description: "We handle all Chandler city permits and manage the inspection process for compliance." },
             { number: "04", icon: "Sparkles", title: "Expert Installation", description: "Professional contractors install grab bars, fixtures, and features to exact ADA specifications." }
           ]}
+        />
+
+        <SubServices 
+          title="Related Bathroom Services" 
+          subtitle="More Upgrades"
+          description="Explore other bathroom renovation options for your home."
+          services={otherServices.map(s => s.name)} 
         />
 
         <IssuesSolved
@@ -139,14 +139,14 @@ export default function AccessibleBathroomPage() {
           tips={tipsList}
         />
 
+        <Testimonials />
+
         <ServiceAreas />
 
         <ServiceCTA
-          title="Ready for an Accessible Bathroom?"
+          title="Ready to Fix Your Problem? Contact Us Today"
           description="Get a free in-home ADA assessment and written estimate. Our team specializes in creating beautiful, safe bathrooms for all abilities."
         />
-
-        <ServiceFAQ faqs={faqs} />
 
         <ContactSection />
       </main>

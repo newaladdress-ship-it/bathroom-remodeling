@@ -63,13 +63,6 @@ export default function BathtubRemodelingPage() {
           ]}
         />
 
-        <SubServices 
-          title="Other Bathroom Services in Chandler"
-          subtitle="More Options"
-          description="Looking for something else? We offer a variety of renovation solutions."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceProcess
           title="Our Renovation Process"
           subtitle="How It Works"
@@ -108,6 +101,13 @@ export default function BathtubRemodelingPage() {
           ]}
         />
 
+        <SubServices 
+          title="Other Bathroom Services in Chandler"
+          subtitle="More Options"
+          description="Looking for something else? We offer a variety of renovation solutions."
+          services={otherServices.map(s => s.name)}
+        />
+
         <IssuesSolved
           title="Issues We Solve with Tub Replacements"
           subtitle="Common Problems Fixed"
@@ -128,14 +128,14 @@ export default function BathtubRemodelingPage() {
           tips={serviceData.tips}
         />
 
+        <Testimonials />
+
         <ServiceAreas />
 
         <ServiceCTA 
-          title="Ready for a new tub installation in Chandler?" 
+          title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get expert design consultation, quality materials, and professional installation for your dream bath." 
         />
-
-        <ServiceFAQ faqs={faqs} />
 
         <ContactSection />
       </main>

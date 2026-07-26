@@ -99,13 +99,6 @@ export default function LuxuryPage() {
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Luxury Remodeling", url: `${siteConfig.url}/luxury-bathroom-remodeling/` }]}
         />
 
-        <SubServices 
-          title="Related Luxury Services"
-          subtitle="Complete Transformations"
-          description="We offer a full range of high end home renovation services."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceProcess
           title="The Luxury Remodeling Experience"
           subtitle="Bespoke Execution"
@@ -116,6 +109,13 @@ export default function LuxuryPage() {
             { number: "03", icon: "ShieldCheck", title: "Precision Build", description: "Our most experienced tradesmen handle the install, ensuring museum-quality tile and trim work." },
             { number: "04", icon: "Sparkles", title: "Final Reveal", description: "A detailed walkthrough and finishing session to ensure your new space is flawless." }
           ]}
+        />
+
+        <SubServices 
+          title="Related Luxury Services"
+          subtitle="Complete Transformations"
+          description="We offer a full range of high end home renovation services."
+          services={otherServices.map(s => s.name)}
         />
 
         <IssuesSolved
@@ -139,14 +139,14 @@ export default function LuxuryPage() {
           tips={tipsList}
         />
 
+        <Testimonials />
+
         <ServiceAreas />
 
         <ServiceCTA 
-          title="Ready to design your dream master bath?" 
+          title="Ready to Fix Your Problem? Contact Us Today" 
           description="Schedule a private design consultation at your Chandler home to explore premium possibilities." 
         />
-
-        <ServiceFAQ faqs={faqs} />
 
         <ContactSection />
       </main>

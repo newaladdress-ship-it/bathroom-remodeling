@@ -66,13 +66,6 @@ export default function SmallBathroomRemodelingPage() {
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Small Bathroom Remodeling", url: `${siteConfig.url}/small-bathroom-remodeling` }]}
         />
 
-        <SubServices 
-          title="Other Space-Saving Solutions"
-          subtitle="More Upgrades"
-          description="From vanity updates to custom tile, we can maximize every inch of your bathroom."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceProcess
           title="Small Bathroom Remodeling Process"
           subtitle="Our Process"
@@ -84,6 +77,13 @@ export default function SmallBathroomRemodelingPage() {
             { number: "04", icon: "Sparkles", title: "Smart Installation", description: "Install space-saving fixtures, storage solutions, and modern finishes." },
             { number: "05", icon: "ShieldCheck", title: "Final Optimization", description: "Complete installation with space-maximizing details and quality finishing." }
           ]}
+        />
+
+        <SubServices 
+          title="Other Space-Saving Solutions"
+          subtitle="More Upgrades"
+          description="From vanity updates to custom tile, we can maximize every inch of your bathroom."
+          services={otherServices.map(s => s.name)}
         />
 
         <IssuesSolved
@@ -107,14 +107,14 @@ export default function SmallBathroomRemodelingPage() {
           tips={smallBathData.tips}
         />
 
+        <Testimonials />
+
         <ServiceAreas />
 
         <ServiceCTA 
-          title="Ready for small bathroom remodeling in Chandler?" 
+          title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get expert space-maximizing design, smart storage solutions, and professional installation for your small bathroom." 
         />
-
-        <ServiceFAQ faqs={faqs} />
 
         <ContactSection />
       </main>

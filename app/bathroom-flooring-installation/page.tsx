@@ -59,13 +59,6 @@ export default function BathroomFlooringInstallationPage() {
           ]}
         />
 
-        <SubServices 
-          title="Related Bathroom Services" 
-          subtitle="More Options"
-          description="Looking for something else? We offer a variety of renovation solutions."
-          services={otherServices.map(s => s.name)} 
-        />
-
         <ServiceProcess
           title="Bathroom Flooring Installation Process"
           subtitle="Our Process"
@@ -104,6 +97,13 @@ export default function BathroomFlooringInstallationPage() {
           ]}
         />
 
+        <SubServices 
+          title="Related Bathroom Services" 
+          subtitle="More Options"
+          description="Looking for something else? We offer a variety of renovation solutions."
+          services={otherServices.map(s => s.name)} 
+        />
+
         <IssuesSolved
           title="Issues We Solve with Professional Flooring"
           subtitle="Common Problems Fixed"
@@ -124,14 +124,14 @@ export default function BathroomFlooringInstallationPage() {
           tips={serviceData.tips}
         />
 
+        <Testimonials />
+
         <ServiceAreas />
         
         <ServiceCTA 
-          title="Ready for professional bathroom flooring in Chandler?" 
+          title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get a free consultation with premium material samples and upfront estimates." 
         />
-
-        <ServiceFAQ faqs={faqs} />
         
         <ContactSection />
       </main>

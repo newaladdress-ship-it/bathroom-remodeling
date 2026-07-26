@@ -80,13 +80,6 @@ export default function WalkInShowersPage() {
           ]}
         />
 
-        <SubServices 
-          title="Related Services in Chandler"
-          subtitle="More Solutions"
-          description="We provide comprehensive bathroom remodeling services designed for your needs."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceProcess
           title="Walk-In Shower Process"
           subtitle="Our Process"
@@ -125,6 +118,13 @@ export default function WalkInShowersPage() {
           ]}
         />
 
+        <SubServices 
+          title="Related Services in Chandler"
+          subtitle="More Solutions"
+          description="We provide comprehensive bathroom remodeling services designed for your needs."
+          services={otherServices.map(s => s.name)}
+        />
+
         <IssuesSolved
           title="Issues We Solve with Walk-In Showers"
           subtitle="Common Problems Fixed"
@@ -145,14 +145,14 @@ export default function WalkInShowersPage() {
           tips={serviceData.tips}
         />
 
+        <Testimonials />
+
         <ServiceAreas />
 
         <ServiceCTA 
-          title="Ready for a custom walk-in shower in Chandler?" 
+          title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get a free consultation with design options, material selections, and transparent pricing." 
         />
-
-        <ServiceFAQ faqs={faqs} />
 
         <ContactSection />
       </main>

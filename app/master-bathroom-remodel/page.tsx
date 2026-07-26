@@ -5,6 +5,10 @@ import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import ServiceCTA from "@/components/service-cta";
 import ServiceFAQ from "@/components/service-faq";
+import ServiceProcess from "@/components/service-process";
+import IssuesSolved from "@/components/issues-solved";
+import Benefits from "@/components/benefits";
+import Tips from "@/components/tips";
 import ContactSection from "@/components/home/contact-section";
 import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
@@ -68,6 +72,24 @@ const faqs = [
   }
 ];
 
+const masterIssues = [
+  { title: "Outdated Builder Layout", description: "We remove awkward garden tubs and restrictive walls to create open, spacious master retreats." },
+  { title: "Inadequate Storage & Sink Space", description: "We upgrade outdated single vanities into double-sink quartz counter setups with abundant storage." },
+  { title: "Hard Water Wear & Mold Stains", description: "We replace worn grout and aging acrylic pans with stain-resistant porcelain and epoxy grout systems." }
+];
+
+const masterBenefits = [
+  { title: "Personalized Daily Retreat", description: "Start and end your day in a spa-inspired sanctuary tailored specifically to your preferences." },
+  { title: "Significant Equity Boost", description: "Master suite upgrades deliver high returns on investment in the Chandler housing market." },
+  { title: "Improved Efficiency & Water Control", description: "Modern dual showerheads, thermostatic valves, and LED ambient lighting optimize energy and water use." }
+];
+
+const masterTips = [
+  { title: "Plan Ample Storage Early", description: "Integrate custom recessed medicine cabinets and double vanity drawers during the initial design phase." },
+  { title: "Opt for Epoxy Grout", description: "Protect your shower walls from Arizona's hard water scale with non-porous epoxy grout." },
+  { title: "Layer Electrical & Task Lighting", description: "Combine dimmable ceiling recessed lights with eye-level vanity sconces for optimal lighting." }
+];
+
 const otherServices = getRelatedServices("/master-bathroom-remodel/");
 
 export default function MasterBathPage() {
@@ -98,6 +120,19 @@ export default function MasterBathPage() {
           ]}
         />
 
+        <ServiceProcess
+          title="Master Bathroom Renovation Process"
+          subtitle="Our Process"
+          description="A systematic multi-stage approach designed to minimize disruption while delivering museum-quality craftsmanship."
+          steps={[
+            { number: "01", icon: "PhoneCall", title: "Design Consultation", description: "We assess your current master suite layout and clarify your goals, style, and budget." },
+            { number: "02", icon: "Ruler", title: "Custom Layout & Selection", description: "Choose custom cabinetry, stone slabs, tile patterns, and fixture finishes." },
+            { number: "03", icon: "ShieldCheck", title: "Demolition & Prep", description: "Careful tear-out, structural wall adjustments, and plumbing/electrical rough-ins." },
+            { number: "04", icon: "Wrench", title: "Waterproofing & Tile Setting", description: "Professional waterproofing installation followed by precision tile laying." },
+            { number: "05", icon: "Sparkles", title: "Fixtures & Walkthrough", description: "Glass enclosure mounting, vanity setting, trim details, and final walkthrough." }
+          ]}
+        />
+
         <SubServices
           title="Complementary Services"
           subtitle="Complete Transformations"
@@ -105,14 +140,35 @@ export default function MasterBathPage() {
           services={otherServices.map((s) => s.name)}
         />
 
+        <IssuesSolved
+          title="Issues We Solve in Master Bathrooms"
+          subtitle="Common Problems Fixed"
+          description="We overcome complex structural and aesthetic challenges in Chandler master suites."
+          issues={masterIssues}
+        />
+
+        <Benefits
+          title="Benefits of a Master Bathroom Remodel"
+          subtitle="Why Upgrade Your Master Bath"
+          description="Discover how upgrading your master suite enhances comfort and home value."
+          benefits={masterBenefits}
+        />
+
+        <Tips
+          title="Master Bath Remodeling Tips"
+          subtitle="Expert Best Practices"
+          description="Insights from our master craftsmen to make your primary suite renovation a success."
+          tips={masterTips}
+        />
+
+        <Testimonials />
+
         <ServiceAreas />
 
         <ServiceCTA 
-          title="Ready to Remodel Your Master Bathroom?"
+          title="Ready to Fix Your Problem? Contact Us Today"
           description="Schedule your free in-home consultation today to discuss your vision, materials, and layout options."
         />
-
-        <ServiceFAQ faqs={faqs} />
 
         <ContactSection />
       </main>

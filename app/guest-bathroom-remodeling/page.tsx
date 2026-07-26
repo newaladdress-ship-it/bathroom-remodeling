@@ -99,13 +99,6 @@ export default function GuestBathPage() {
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Guest Bathroom", url: `${siteConfig.url}/guest-bathroom-remodeling/` }]}
         />
 
-        <SubServices 
-          title="Related Services"
-          subtitle="More Solutions"
-          description="Explore other bathroom renovation options for your home."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceProcess
           title="Efficient Guest Bath Process"
           subtitle="Quick & Clean"
@@ -116,6 +109,13 @@ export default function GuestBathPage() {
             { number: "03", icon: "ShieldCheck", title: "Rapid Install", description: "Focused construction phase with dedicated crews for smaller spaces." },
             { number: "04", icon: "Sparkles", title: "Finish & Style", description: "Final details and styling so the room is guest-ready from day one." }
           ]}
+        />
+
+        <SubServices 
+          title="Related Services"
+          subtitle="More Solutions"
+          description="Explore other bathroom renovation options for your home."
+          services={otherServices.map(s => s.name)}
         />
 
         <IssuesSolved
@@ -139,14 +139,14 @@ export default function GuestBathPage() {
           tips={tipsList}
         />
 
+        <Testimonials />
+
         <ServiceAreas />
 
         <ServiceCTA 
-          title="Ready to refresh your guest bathroom?" 
+          title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get a fast, fixed-price quote for your guest bath or powder room update in Chandler." 
         />
-
-        <ServiceFAQ faqs={faqs} />
 
         <ContactSection />
       </main>

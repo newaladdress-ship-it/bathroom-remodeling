@@ -75,13 +75,6 @@ export default function ShowerReplacementPage() {
           ]}
         />
 
-        <SubServices 
-          title="Related Services in Chandler"
-          subtitle="More Solutions"
-          description="We provide comprehensive bathroom remodeling services designed for your needs."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceProcess
           title="Shower Replacement Process"
           subtitle="Our Process"
@@ -120,6 +113,13 @@ export default function ShowerReplacementPage() {
           ]}
         />
 
+        <SubServices 
+          title="Related Services in Chandler"
+          subtitle="More Solutions"
+          description="We provide comprehensive bathroom remodeling services designed for your needs."
+          services={otherServices.map(s => s.name)}
+        />
+
         <IssuesSolved
           title="Issues We Solve with Shower Replacement"
           subtitle="Common Problems Fixed"
@@ -140,14 +140,14 @@ export default function ShowerReplacementPage() {
           tips={serviceData.tips}
         />
 
+        <Testimonials />
+
         <ServiceAreas />
 
         <ServiceCTA 
-          title="Ready to replace your old shower in Chandler?" 
+          title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get a free assessment and quote for your shower replacement project today." 
         />
-
-        <ServiceFAQ faqs={faqs} />
 
         <ContactSection />
       </main>

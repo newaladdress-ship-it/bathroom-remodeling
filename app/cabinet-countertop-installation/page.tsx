@@ -72,13 +72,6 @@ export default function CabinetCountertopInstallationPage() {
           ]}
         />
 
-        <SubServices 
-          title="Explore More Bathroom Services"
-          subtitle="More Solutions"
-          description="From showers to tile work, we provide complete bathroom remodeling solutions in Chandler."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceProcess
           title="Cabinet & Countertop Installation Process"
           subtitle="Our Process"
@@ -117,6 +110,13 @@ export default function CabinetCountertopInstallationPage() {
           ]}
         />
 
+        <SubServices 
+          title="Explore More Bathroom Services"
+          subtitle="More Solutions"
+          description="From showers to tile work, we provide complete bathroom remodeling solutions in Chandler."
+          services={otherServices.map(s => s.name)}
+        />
+
         <IssuesSolved
           title="Issues We Solve with Cabinet & Countertop Installation"
           subtitle="Common Problems Fixed"
@@ -137,14 +137,14 @@ export default function CabinetCountertopInstallationPage() {
           tips={serviceData.tips}
         />
 
+        <Testimonials />
+
         <ServiceAreas />
 
         <ServiceCTA 
-          title="Ready for new cabinets and countertops in Chandler?" 
+          title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get a free consultation with material samples and transparent pricing." 
         />
-
-        <ServiceFAQ faqs={faqs} />
 
         <ContactSection />
       </main>

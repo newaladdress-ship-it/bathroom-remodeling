@@ -109,13 +109,6 @@ export default function ShowerBathtubUpgradePage() {
           ]}
         />
 
-        <SubServices 
-          title="Related Bathroom Services" 
-          subtitle="More Upgrades"
-          description="Explore other bathroom renovation options for your home."
-          services={otherServices.map(s => s.name)} 
-        />
-
         <ServiceProcess
           title="Shower & Bathtub Upgrade Process"
           subtitle="Our Process"
@@ -154,6 +147,13 @@ export default function ShowerBathtubUpgradePage() {
           ]}
         />
 
+        <SubServices 
+          title="Related Bathroom Services" 
+          subtitle="More Upgrades"
+          description="Explore other bathroom renovation options for your home."
+          services={otherServices.map(s => s.name)} 
+        />
+
         <IssuesSolved
           title="Issues We Solve with Shower & Bathtub Upgrades"
           subtitle="Common Problems Fixed"
@@ -174,14 +174,14 @@ export default function ShowerBathtubUpgradePage() {
           tips={tipsList}
         />
 
+        <Testimonials />
+
         <ServiceAreas />
 
         <ServiceCTA 
-          title="Ready for a shower and bathtub upgrade in Chandler?" 
+          title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get a free consultation and see how upgrades can transform your bathroom." 
         />
-
-        <ServiceFAQ faqs={faqs} />
 
         <ContactSection />
       </main>

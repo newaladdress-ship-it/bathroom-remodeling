@@ -75,13 +75,6 @@ export default function TubRemovalPage() {
           ]}
         />
 
-        <SubServices 
-          title="Related Services in Chandler"
-          subtitle="More Solutions"
-          description="We provide comprehensive bathroom remodeling services designed for your needs."
-          services={otherServices.map(s => s.name)}
-        />
-
         <ServiceProcess
           title="Bathtub Removal Process"
           subtitle="Our Process"
@@ -120,6 +113,13 @@ export default function TubRemovalPage() {
           ]}
         />
 
+        <SubServices 
+          title="Related Services in Chandler"
+          subtitle="More Solutions"
+          description="We provide comprehensive bathroom remodeling services designed for your needs."
+          services={otherServices.map(s => s.name)}
+        />
+
         <IssuesSolved
           title="Issues We Solve with Professional Tub Removal"
           subtitle="Common Problems Fixed"
@@ -140,14 +140,14 @@ export default function TubRemovalPage() {
           tips={serviceData.tips}
         />
 
+        <Testimonials />
+
         <ServiceAreas />
 
         <ServiceCTA 
-          title="Ready for professional tub removal in Chandler?" 
+          title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get a free quote for safe, efficient bathtub removal with proper disposal included." 
         />
-
-        <ServiceFAQ faqs={faqs} />
 
         <ContactSection />
       </main>
