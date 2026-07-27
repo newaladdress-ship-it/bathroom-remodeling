@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 const faqs = serviceContent["tub-to-shower-conversion"].faqs;
 const otherServices = getRelatedServices("/tub-to-shower-conversion/");
 
-import Testimonials from "@/components/home/testimonials";
+
 
 export default function TubToShowerConversionPage() {
   const serviceData = serviceContent["tub-to-shower-conversion"];
@@ -210,20 +210,17 @@ export default function TubToShowerConversionPage() {
           ]}
         />
 
-        {/* 7. Customer Reviews */}
-        <Testimonials />
-
-        {/* 8. Service Areas */}
+        {/* 7. Service Areas */}
         <ServiceAreas />
+
+        {/* 8. Contact Information */}
+        <ContactSection />
 
         {/* 9. Ready to Fix Your Problem? Contact Us Today */}
         <ServiceCTA 
           title="Ready to Fix Your Problem? Contact Us Today"
           description="Get your free consultation today and discover how we can transform your bathroom space."
         />
-
-        {/* 10. Contact Information */}
-        <ContactSection />
       </main>
       <Footer />
     </>

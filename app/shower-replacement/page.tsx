@@ -144,12 +144,12 @@ export default function ShowerReplacementPage() {
 
         <ServiceAreas />
 
+        <ContactSection />
+
         <ServiceCTA 
           title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get a free assessment and quote for your shower replacement project today." 
         />
-
-        <ContactSection />
       </main>
       <Footer />
     </>

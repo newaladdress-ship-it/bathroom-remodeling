@@ -220,14 +220,14 @@ export default function ShowerRemodelingPage() {
         {/* 8. Service Areas */}
         <ServiceAreas />
 
-        {/* 9. Ready to Fix Your Problem? Contact Us Today */}
+        {/* 9. Contact Information */}
+        <ContactSection />
+
+        {/* 10. Ready to Fix Your Problem? Contact Us Today */}
         <ServiceCTA
           title="Ready to Fix Your Problem? Contact Us Today"
           description="Get your free consultation today and discover how we can create the shower of your dreams."
         />
-
-        {/* 10. Contact Information */}
-        <ContactSection />
       </main>
       <Footer />
     </>

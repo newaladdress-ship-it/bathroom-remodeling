@@ -55,10 +55,6 @@ export default function ServiceCTA({
               <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/40" />
               Workmanship Warranty
             </div>
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/40" />
-              5-Star Local Reviews
-            </div>
           </div>
         </div>
       </div>

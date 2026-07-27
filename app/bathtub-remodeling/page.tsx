@@ -132,12 +132,12 @@ export default function BathtubRemodelingPage() {
 
         <ServiceAreas />
 
+        <ContactSection />
+
         <ServiceCTA 
           title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get expert design consultation, quality materials, and professional installation for your dream bath." 
         />
-
-        <ContactSection />
       </main>
       <Footer />
     </>

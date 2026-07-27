@@ -1,4 +1,4 @@
-import Testimonials from "@/components/home/testimonials";
+
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -107,16 +107,14 @@ export default function SmallBathroomRemodelingPage() {
           tips={smallBathData.tips}
         />
 
-        <Testimonials />
-
         <ServiceAreas />
+
+        <ContactSection />
 
         <ServiceCTA 
           title="Ready to Fix Your Problem? Contact Us Today" 
-          description="Get expert space-maximizing design, smart storage solutions, and professional installation for your small bathroom." 
+          description="Get your free consultation today and discover how we can transform your bathroom space." 
         />
-
-        <ContactSection />
       </main>
       <Footer />
     </>

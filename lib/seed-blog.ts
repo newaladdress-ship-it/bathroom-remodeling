@@ -1378,7 +1378,7 @@ At ARZ Home Remodeling, we are proud to be a trusted **local bathroom remodeling
 * **fully insured:** We operate under active residential license **#**, carrying full liability and workers' compensation insurance.
 * **Waterproofing Specialists:** We use the premium Schluter-KERDI system for all custom showers, ensuring your walls and subfloor stay dry.
 * **Transparent, Fixed-Price Quotes:** No surprise charges. We provide detailed, itemized estimates covering all labor, permits, and materials.
-* **Excellent Local Reputation:** We are proud of our verified 4.9-star rating with over 1,250 reviews from satisfied East Valley homeowners.
+* **Excellent Local Reputation:** We are proud to serve East Valley homeowners with high-quality craftsmanship and dedicated customer service.
 * **Water Hardness Solutions:** Because Chandler's municipal water is extremely hard (averaging 18+ grains per gallon), we specify materials like epoxy grout and brushed metal fixtures to resist mineral scaling and preserve your shower's beauty.
 
 ---

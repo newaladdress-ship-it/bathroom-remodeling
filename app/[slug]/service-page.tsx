@@ -1425,7 +1425,10 @@ export async function ServicePageContent({
           </div>
         </section>
 
-        {/* 9. Ready to Fix Your Problem? Contact Us Today */}
+        {/* 9. Contact Information */}
+        <ContactSection />
+
+        {/* 10. Ready to Fix Your Problem? Contact Us Today */}
         <section className="py-16 bg-primary text-primary-foreground text-center">
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
@@ -1436,9 +1439,6 @@ export async function ServicePageContent({
             </p>
           </div>
         </section>
-
-        {/* 10. Contact Information */}
-        <ContactSection />
 
       </main>
       <Footer />

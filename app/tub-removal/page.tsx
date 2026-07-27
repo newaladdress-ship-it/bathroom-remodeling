@@ -144,12 +144,12 @@ export default function TubRemovalPage() {
 
         <ServiceAreas />
 
+        <ContactSection />
+
         <ServiceCTA 
           title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get a free quote for safe, efficient bathtub removal with proper disposal included." 
         />
-
-        <ContactSection />
       </main>
       <Footer />
     </>

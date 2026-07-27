@@ -1,4 +1,4 @@
-import Testimonials from "@/components/home/testimonials";
+
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -101,7 +101,7 @@ export default function LuxuryPage() {
 
         <ServiceProcess
           title="The Luxury Remodeling Experience"
-          subtitle="Bespoke Execution"
+          subtitle="Our Process"
           description="Our process ensures every detail of your high end bathroom is executed with surgical precision."
           steps={[
             { number: "01", icon: "PhoneCall", title: "Design Discovery", description: "Deep dive into your style, goals, and material preferences with our lead designer." },
@@ -139,16 +139,14 @@ export default function LuxuryPage() {
           tips={tipsList}
         />
 
-        <Testimonials />
-
         <ServiceAreas />
+
+        <ContactSection />
 
         <ServiceCTA 
           title="Ready to Fix Your Problem? Contact Us Today" 
-          description="Schedule a private design consultation at your Chandler home to explore premium possibilities." 
+          description="Get your free consultation today and discover how we can transform your bathroom space." 
         />
-
-        <ContactSection />
       </main>
       <Footer />
     </>

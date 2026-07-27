@@ -165,12 +165,12 @@ export default function MasterBathPage() {
 
         <ServiceAreas />
 
+        <ContactSection />
+
         <ServiceCTA 
           title="Ready to Fix Your Problem? Contact Us Today"
           description="Schedule your free in-home consultation today to discuss your vision, materials, and layout options."
         />
-
-        <ContactSection />
       </main>
       <Footer />
     </>

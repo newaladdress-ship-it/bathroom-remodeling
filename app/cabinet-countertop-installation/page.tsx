@@ -141,12 +141,12 @@ export default function CabinetCountertopInstallationPage() {
 
         <ServiceAreas />
 
+        <ContactSection />
+
         <ServiceCTA 
           title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get a free consultation with material samples and transparent pricing." 
         />
-
-        <ContactSection />
       </main>
       <Footer />
     </>

@@ -149,12 +149,12 @@ export default function WalkInShowersPage() {
 
         <ServiceAreas />
 
+        <ContactSection />
+
         <ServiceCTA 
           title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get a free consultation with design options, material selections, and transparent pricing." 
         />
-
-        <ContactSection />
       </main>
       <Footer />
     </>

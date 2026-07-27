@@ -143,12 +143,12 @@ export default function AccessibleBathroomPage() {
 
         <ServiceAreas />
 
+        <ContactSection />
+
         <ServiceCTA
           title="Ready to Fix Your Problem? Contact Us Today"
           description="Get a free in-home ADA assessment and written estimate. Our team specializes in creating beautiful, safe bathrooms for all abilities."
         />
-
-        <ContactSection />
       </main>
       <Footer />
     </>

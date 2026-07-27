@@ -178,12 +178,12 @@ export default function ShowerBathtubUpgradePage() {
 
         <ServiceAreas />
 
+        <ContactSection />
+
         <ServiceCTA 
           title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get a free consultation and see how upgrades can transform your bathroom." 
         />
-
-        <ContactSection />
       </main>
       <Footer />
     </>

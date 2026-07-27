@@ -183,13 +183,15 @@ export function ServiceSchema({ serviceName, serviceDescription, serviceUrl, ser
     "serviceType": serviceType || serviceName,
     "name": serviceName,
     "description": serviceDescription,
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": siteConfig.googleRating.toString(),
-      "reviewCount": siteConfig.googleReviewsCount.toString(),
-      "bestRating": "5",
-      "worstRating": "1"
-    },
+    ...(siteConfig.googleRating > 0 && siteConfig.googleReviewsCount > 0 ? {
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": siteConfig.googleRating.toString(),
+        "reviewCount": siteConfig.googleReviewsCount.toString(),
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    } : {}),
     "provider": {
       "@type": "HomeAndConstructionBusiness",
       "@id": `${siteConfig.url}/#organization`,
@@ -458,13 +460,15 @@ export function PriceSchema({
       name: siteConfig.name,
     },
     offers: offerSchema,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: siteConfig.googleRating.toString(),
-      reviewCount: siteConfig.googleReviewsCount.toString(),
-      bestRating: "5",
-      worstRating: "1"
-    }
+    ...(siteConfig.googleRating > 0 && siteConfig.googleReviewsCount > 0 ? {
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: siteConfig.googleRating.toString(),
+        reviewCount: siteConfig.googleReviewsCount.toString(),
+        bestRating: "5",
+        worstRating: "1"
+      }
+    } : {})
   };
 
   return (

@@ -118,9 +118,9 @@ export default function BathroomVanityInstallationPage() {
 
         <ServiceAreas />
 
-        <ServiceCTA title="Ready to Fix Your Problem? Contact Us Today" description="Get expert consultation, quality materials, and professional installation for your perfect bathroom vanity." />
-
         <ContactSection />
+
+        <ServiceCTA title="Ready to Fix Your Problem? Contact Us Today" description="Get expert consultation, quality materials, and professional installation for your perfect bathroom vanity." />
       </main>
       <Footer />
     </>

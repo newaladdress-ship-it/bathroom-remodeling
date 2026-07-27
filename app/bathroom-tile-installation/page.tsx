@@ -114,9 +114,9 @@ export default function BathroomTileInstallationPage() {
 
         <ServiceAreas />
 
-        <ServiceCTA title="Ready to Fix Your Problem? Contact Us Today" description="Get expert design consultation, quality materials, and precision tiling for your dream home." />
-
         <ContactSection />
+
+        <ServiceCTA title="Ready to Fix Your Problem? Contact Us Today" description="Get expert design consultation, quality materials, and precision tiling for your dream home." />
       </main>
       <Footer />
     </>

@@ -143,12 +143,12 @@ export default function GuestBathPage() {
 
         <ServiceAreas />
 
+        <ContactSection />
+
         <ServiceCTA 
           title="Ready to Fix Your Problem? Contact Us Today" 
           description="Get a fast, fixed-price quote for your guest bath or powder room update in Chandler." 
         />
-
-        <ContactSection />
       </main>
       <Footer />
     </>
