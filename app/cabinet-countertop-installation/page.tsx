@@ -18,8 +18,8 @@ import SubServices from "@/components/sub-services";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Vanity Cabinets & Countertops Chandler AZ | Install | ARZ",
-  description: "Upgrade your bathroom with custom cabinets and quartz, granite, or marble countertops in Chandler, AZ. professional installation. Get a free estimate!",
+  title: "Cabinet & Countertop Installation Chandler, AZ | Free Quote",
+  description: "Expert cabinet & countertop installation in Chandler, AZ. Custom cabinetry, quartz, granite & marble with precision craftsmanship. Get a free quote!",
   openGraph: {
     title: "Vanity Cabinet Installs | Chandler AZ Bathroom Remodeling",
     description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore vanity cabinet installs, custom showers, tile, vanities, clear pricing, and free estimates.",
@@ -62,9 +62,9 @@ export default function CabinetCountertopInstallationPage() {
       <Header />
       <main>
         <ServiceHero
-          title="Cabinet & Countertop Installation in Chandler, Arizona"
-          subtitle="Professional Vanity & Countertop Services in Chandler AZ"
-          description="Upgrade your bathroom with custom cabinets and premium countertops in granite, quartz, or marble with expert installation."
+          title="Cabinet & Countertop Installation in Chandler, AZ"
+          subtitle="Custom Cabinetry, Quartz & Stone Vanity Solutions"
+          description="Refresh your bathroom with expertly crafted storage solutions and premium quartz, granite, marble, or solid-surface vanity tops. Our team delivers precise fitting, durable materials, and seamless finishes designed to enhance everyday functionality, style, and long-term value for Chandler homeowners."
           image="/images/projects/modern-double-vanity-chandler.webp"
           breadcrumbs={[
             { name: "Home", url: `${siteConfig.url}/` },
@@ -73,39 +73,39 @@ export default function CabinetCountertopInstallationPage() {
         />
 
         <ServiceProcess
-          title="Cabinet & Countertop Installation Process"
+          title="Precision Installation Process"
           subtitle="Our Process"
-          description="A precise installation process for perfect cabinet and countertop results every time."
+          description="Every project follows a detailed workflow focused on accurate measurements, premium materials, and expert craftsmanship to deliver a beautiful, functional bathroom that stands the test of time."
           steps={[
             {
               number: "01",
               icon: "Ruler",
-              title: "Measure & Template",
-              description: "Precise measurements and templating for perfect fit and alignment.",
+              title: "Consultation & Precision Measurements",
+              description: "We carefully measure your space, create detailed templates, and verify dimensions to ensure every component fits with exceptional accuracy.",
             },
             {
               number: "02",
               icon: "Layout",
-              title: "Material Selection",
-              description: "Choose cabinet style, countertop material, edge profile, and hardware.",
+              title: "Material & Finish Selection",
+              description: "Choose from custom cabinetry, quartz, granite, marble, solid-surface vanity tops, edge profiles, hardware, and designer finishes that complement your style.",
             },
             {
               number: "03",
               icon: "Hammer",
-              title: "Old Removal",
-              description: "Careful removal of existing cabinets and countertops with protection.",
+              title: "Existing Fixture Removal",
+              description: "Outdated storage units and vanity surfaces are removed with care while protecting surrounding walls, plumbing fixtures, and finished areas.",
             },
             {
               number: "04",
               icon: "Wrench",
-              title: "Installation",
-              description: "Level cabinet mounting, countertop setting, and plumbing connections.",
+              title: "Professional Fitting & Assembly",
+              description: "Each component is securely mounted, perfectly leveled, and precisely aligned before sinks, faucets, and plumbing connections are completed.",
             },
             {
               number: "05",
               icon: "Sparkles",
-              title: "Finishing",
-              description: "Sink cutout, faucet installation, sealing, and final inspection.",
+              title: "Final Detailing & Inspection",
+              description: "We complete edge finishing, seal exposed joints where needed, test all fixtures, and perform a comprehensive quality inspection before project completion.",
             },
           ]}
         />
@@ -118,23 +118,79 @@ export default function CabinetCountertopInstallationPage() {
         />
 
         <IssuesSolved
-          title="Issues We Solve with Cabinet & Countertop Installation"
-          subtitle="Common Problems Fixed"
-          description="We address the most common cabinet and countertop challenges Chandler homeowners face."
-          issues={serviceData.issues}
+          title="Common Storage & Vanity Problems We Resolve"
+          subtitle="Issues We Solve"
+          description="From moisture damage to worn-out surfaces and poor alignment, our solutions improve functionality, durability, and the overall appearance of your bathroom."
+          issues={[
+            {
+              title: "Moisture-Damaged Storage Units",
+              description: "We replace deteriorated cabinetry with durable, moisture-resistant materials and protective finishes designed for humid bathroom environments.",
+            },
+            {
+              title: "Worn or Stained Vanity Surfaces",
+              description: "Premium quartz, granite, marble, and engineered stone provide long-lasting beauty while resisting stains, scratches, and everyday wear.",
+            },
+            {
+              title: "Poor Alignment & Uneven Components",
+              description: "Careful leveling, structural support, and precision adjustments help doors, drawers, and hardware operate smoothly with a consistent appearance.",
+            },
+            {
+              title: "Loose or Leaking Sink Assemblies",
+              description: "Heavy-duty mounting systems, secure fastening methods, and properly sealed connections help create a reliable, leak-resistant installation.",
+            },
+          ]}
         />
 
         <Benefits
-          title="Benefits of Professional Cabinet & Countertop Installation"
+          title="Built for Style, Function & Lasting Performance"
           subtitle="Why Choose Us"
-          benefits={serviceData.benefits}
+          description="Our premium materials, precision craftsmanship, and attention to detail help create a bathroom that's both beautiful and built to perform for years."
+          benefits={[
+            {
+              icon: "Layout",
+              title: "Custom Storage Solutions",
+              description: "Thoughtfully designed wood cabinetry, soft-close hardware, and personalized layouts maximize organization while complementing your home's style.",
+            },
+            {
+              icon: "Sparkles",
+              title: "Premium Surface Materials",
+              description: "Quartz, granite, marble, and engineered stone provide exceptional durability, elegant finishes, and outstanding resistance to everyday wear.",
+            },
+            {
+              icon: "ShieldCheck",
+              title: "Secure Structural Support",
+              description: "Every vanity is carefully leveled and anchored to structural framing, providing dependable stability for heavy stone surfaces and integrated sinks.",
+            },
+            {
+              icon: "TrendingUp",
+              title: "Long-Term Investment",
+              description: "High-quality upgrades improve everyday functionality while enhancing your home's appeal and long-term resale value.",
+            },
+          ]}
         />
 
         <Tips
-          title="Cabinet & Countertop Tips"
+          title="Expert Care Tips for Lasting Beauty"
           subtitle="Care & Maintenance"
-          description="Expert tips to maintain your new cabinets and countertops for lasting beauty."
-          tips={serviceData.tips}
+          description="Simple maintenance habits help preserve the appearance, durability, and performance of your newly upgraded bathroom for years to come."
+          tips={[
+            {
+              title: "Select Low-Maintenance Quartz",
+              description: "Engineered quartz offers a non-porous surface that resists stains, moisture, and hard water buildup without requiring routine sealing.",
+            },
+            {
+              title: "Add Under-Vanity Lighting",
+              description: "Integrated LED lighting improves visibility, enhances everyday convenience, and creates a clean, modern atmosphere.",
+            },
+            {
+              title: "Choose Soft-Close Hardware",
+              description: "Premium hinges and drawer slides reduce impact, minimize wear, and help extend the lifespan of moving components.",
+            },
+            {
+              title: "Maximize Interior Organization",
+              description: "Built-in drawer organizers, pull-out storage, and space-saving accessories help keep everyday essentials neatly arranged while maintaining clutter-free vanity surfaces.",
+            },
+          ]}
         />
 
         <Testimonials />

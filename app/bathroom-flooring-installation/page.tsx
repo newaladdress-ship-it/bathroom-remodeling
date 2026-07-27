@@ -18,7 +18,7 @@ import SubServices from "@/components/sub-services";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Bath Flooring Installation Chandler AZ | Custom Tile",
+  title: "Bathroom Flooring Installation Chandler AZ | Custom Tile",
   description: "Expert bathroom flooring installation in Chandler, AZ. Specialized in waterproof tile, luxury vinyl plank, and slip-resistant floors. Call for a quote!",
   openGraph: {
     title: "Bathroom Flooring Install | Chandler AZ Bathroom Remodeling",
@@ -49,9 +49,9 @@ export default function BathroomFlooringInstallationPage() {
       <Header />
       <main>
         <ServiceHero
-          title="Bathroom Flooring Installation in Chandler, Arizona"
-          subtitle="Professional Tile & Stone Flooring in Chandler AZ"
-          description="Professional bathroom flooring installation with waterproof materials, expert craftsmanship, and durable finishes for your Chandler home."
+          title="Bathroom Flooring Installation in Chandler, AZ"
+          subtitle="Premium Tile, Stone & Waterproof Flooring Solutions"
+          description="Upgrade your bathroom with professionally installed tile, stone, porcelain, or luxury vinyl flooring designed to withstand daily moisture and wear. Our experienced team delivers precise installation, lasting durability, and clean, modern finishes that enhance comfort, style, and long-term value for homeowners throughout Chandler."
           image="/images/services/bathroom-flooring-chandler.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -60,39 +60,39 @@ export default function BathroomFlooringInstallationPage() {
         />
 
         <ServiceProcess
-          title="Bathroom Flooring Installation Process"
+          title="Precision Tile & Surface Installation Process"
           subtitle="Our Process"
-          description="A meticulous flooring installation process that guarantees flat, durable, and waterproof results."
+          description="A carefully planned installation workflow designed to create a level, moisture-resistant, and long-lasting foundation that performs beautifully in Chandler homes."
           steps={[
             {
               number: "01",
               icon: "Ruler",
-              title: "Demolition & Prep",
-              description: "We carefully remove old flooring and level the concrete slab to create a flat subfloor.",
+              title: "Existing Surface Removal & Subfloor Preparation",
+              description: "We remove worn materials, inspect the underlying surface, and level the subfloor to provide a stable base for the new finish.",
             },
             {
               number: "02",
               icon: "Shield",
-              title: "Crack Isolation",
-              description: "We install anti fracture membranes to isolate tiles from future concrete settling cracks.",
+              title: "Moisture Protection & Crack Isolation",
+              description: "Anti-fracture membranes and waterproofing components are installed to help protect tile surfaces from minor slab movement and moisture intrusion.",
             },
             {
               number: "03",
               icon: "Layout",
-              title: "Precision Layout",
-              description: "We dry lay and align all tiles to ensure balanced, aesthetically pleasing borders.",
+              title: "Custom Layout Planning",
+              description: "Every tile pattern is measured, dry-fitted, and aligned to create balanced spacing, clean edges, and an attractive finished appearance.",
             },
             {
               number: "04",
               icon: "Hammer",
-              title: "Tile Setting",
-              description: "We lay tiles with polymer modified mortar to ensure permanent, flexible bonding.",
+              title: "Premium Material Placement",
+              description: "Porcelain, ceramic, natural stone, or luxury vinyl planks are secured using high-performance polymer-modified adhesives for exceptional strength and durability.",
             },
             {
               number: "05",
               icon: "Sparkles",
-              title: "Epoxy Grouting",
-              description: "We apply non porous, mold resistant epoxy grout and clean the tile surface fully.",
+              title: "Grouting & Final Finishing",
+              description: "We complete the project with stain-resistant epoxy grout, detailed edge finishing, and a thorough cleanup to leave a polished, ready-to-use space.",
             },
           ]}
         />
@@ -105,23 +105,79 @@ export default function BathroomFlooringInstallationPage() {
         />
 
         <IssuesSolved
-          title="Issues We Solve with Professional Flooring"
-          subtitle="Common Problems Fixed"
-          description="We address the most common bathroom tile challenges Chandler homeowners face."
-          issues={serviceData.issues}
+          title="Common Surface Problems We Resolve"
+          subtitle="Issues We Solve"
+          description="From cracked tile to moisture-related damage, we provide lasting solutions that improve durability, safety, and everyday performance for Chandler homeowners."
+          issues={[
+            {
+              title: "Cracked Tile Surfaces",
+              description: "Flexible bonding systems and crack-isolation membranes help absorb minor structural movement, reducing the risk of future tile damage.",
+            },
+            {
+              title: "Loose Grout & Uneven Subfloors",
+              description: "Before installing new materials, we stabilize weak subfloors and reinforce the surface with cement backer boards to create a solid foundation.",
+            },
+            {
+              title: "Mold, Moisture & Discolored Joints",
+              description: "Non-porous epoxy grout resists water absorption, staining, mildew, and everyday wear while maintaining a cleaner appearance.",
+            },
+            {
+              title: "Slippery Walking Areas",
+              description: "High-traction porcelain, textured finishes, and mosaic patterns provide better grip to improve safety in wet environments.",
+            },
+          ]}
         />
 
         <Benefits
-          title="Benefits of Professional Flooring Installation"
+          title="Built for Long-Term Performance"
           subtitle="Why Choose Us"
-          benefits={serviceData.benefits}
+          description="Every installation is completed with premium materials and proven techniques that help your new surface stay attractive, durable, and easy to maintain for years."
+          benefits={[
+            {
+              icon: "Droplets",
+              title: "Advanced Moisture Protection",
+              description: "Dense porcelain, ceramic, and natural stone options help resist water penetration while supporting a healthier indoor environment.",
+            },
+            {
+              icon: "Accessibility",
+              title: "Safer Underfoot",
+              description: "Slip-resistant textures and carefully selected finishes improve traction without sacrificing style or comfort.",
+            },
+            {
+              icon: "Sparkles",
+              title: "Long-Lasting Grout Performance",
+              description: "Premium epoxy grout minimizes staining, resists cracking, and requires less maintenance than many traditional cement-based alternatives.",
+            },
+            {
+              icon: "ShieldCheck",
+              title: "Structural Stability",
+              description: "Crack-isolation underlayments help protect finished tile surfaces from minor slab movement, helping extend the lifespan of your investment.",
+            },
+          ]}
         />
 
         <Tips
-          title="Expert Bathroom Flooring Tips"
+          title="Expert Care Tips for Long-Lasting Tile & Stone Surfaces"
           subtitle="Care & Maintenance"
-          description="Smart advice to maintain the beauty and durability of your newly tiled bathroom floors."
-          tips={serviceData.tips}
+          description="Simple maintenance practices can help preserve the appearance, durability, and moisture resistance of your newly installed bathroom materials for years to come."
+          tips={[
+            {
+              title: "Choose Low-Absorption Materials",
+              description: "Porcelain and natural stone with low water absorption provide better resistance to stains, moisture, and everyday wear than many traditional surface options.",
+            },
+            {
+              title: "Protect the Foundation",
+              description: "Quality uncoupling membranes help accommodate minor structural movement beneath the finished surface, reducing the likelihood of cracks over time.",
+            },
+            {
+              title: "Use Premium Epoxy Grout",
+              description: "Epoxy grout creates a durable, non-porous seal that resists mildew, staining, and moisture while requiring less routine maintenance.",
+            },
+            {
+              title: "Prioritize Slip-Resistant Finishes",
+              description: "Select textured surfaces with reliable slip-resistance ratings to improve traction and enhance safety in areas exposed to frequent water.",
+            },
+          ]}
         />
 
         <Testimonials />

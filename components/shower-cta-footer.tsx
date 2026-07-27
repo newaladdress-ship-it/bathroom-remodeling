@@ -57,7 +57,7 @@ export default function ShowerCTAFooter() {
 
         <p className="text-center text-sm text-muted-foreground">
           <strong>Local Expertise, Fair Pricing, Zero Surprises</strong><br/>
-           15+ years serving the East Valley · many bathrooms completed · workmanship warranty
+           15+ years serving the East Valley · many bathrooms completed
         </p>
       </div>
     </section>

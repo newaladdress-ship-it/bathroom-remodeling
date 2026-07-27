@@ -6,7 +6,7 @@ export const siteConfig = {
   foundedYear: null,
   googleReviewsCount: 0,
   googleRating: 0,
-  warranty: "Workmanship Warranty",
+  warranty: "",
   url: "https://arzhomeremodeling.com",
   googleBusinessLink: "https://www.google.com/maps/search/?api=1&query=ARZ+Home+Remodeling+Chandler+AZ",
   phone: "(520) 569-3339",

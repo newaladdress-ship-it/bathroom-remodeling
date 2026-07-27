@@ -49,13 +49,6 @@ export default function ServiceCTA({
               </a>
             </Button>
           </div>
-          
-          <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-4 text-primary-foreground/80 text-sm font-medium">
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/40" />
-              Workmanship Warranty
-            </div>
-          </div>
         </div>
       </div>
     </section>

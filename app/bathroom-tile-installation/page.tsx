@@ -18,8 +18,8 @@ import SubServices from "@/components/sub-services";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Bath Tile Installer Chandler AZ | Custom Shower Tiling",
-  description: "Premium floor and shower wall tile setting in Chandler, AZ. Epoxy grout, porcelain, ceramic, and custom mosaics with expert installation. Free estimate!",
+  title: "Bathroom Tile Installation Chandler, AZ | Free Estimate",
+  description: "Transform your bathroom with custom ceramic, porcelain & stone tile in Chandler, AZ. Quality craftsmanship and durable results. Call today!",
   openGraph: {
     title: "Bathroom Tile Installation | Chandler AZ Bathroom Remodeling",
     description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bathroom tile installation, custom showers, tile, vanities, clear pricing, and free estimates.",
@@ -63,23 +63,23 @@ export default function BathroomTileInstallationPage() {
       <Header />
       <main>
         <ServiceHero
-          title="Premium Tile Installation in Chandler, Arizona"
-          subtitle="Expert Tile Installation Chandler AZ"
-          description="Elevate your space with flawless tiling work. From waterproof shower surrounds to stunning floor patterns, our precision craftsmanship ensures lasting beauty."
+          title="Bathroom Tile Installation in Chandler, AZ"
+          subtitle="Custom Ceramic, Porcelain & Natural Stone Solutions"
+          description="Transform your bathroom with expertly installed ceramic, porcelain, mosaic, and natural stone finishes designed for lasting beauty and everyday performance. Our skilled craftsmen create seamless layouts, waterproof surfaces, and precision detailing that enhance style, durability, and long-term value for Chandler homeowners."
           image="/images/services/bathroom-flooring-chandler.jpg"
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Tile Installation", url: `${siteConfig.url}/bathroom-tile-installation` }]}
         />
 
         <ServiceProcess
-          title="Our Tiling Process"
+          title="Our Precision Installation Process"
           subtitle="How We Work"
-          description="A professional approach to setting ceramics, porcelain, and stone with waterproof preparation and precision craftsmanship."
+          description="Every project follows a carefully planned workflow that combines moisture protection, accurate layout planning, and expert craftsmanship to deliver beautiful, long-lasting results."
           steps={[
-            { number: "01", icon: "Ruler", title: "Layout & Design", description: "Plan patterns, grout lines, and transitions that align perfectly with your space." },
-            { number: "02", icon: "ShieldCheck", title: "Surface Preparation", description: "Install backer board, waterproofing membranes, and level surfaces for longevity." },
-            { number: "03", icon: "Hammer", title: "Tile Setting", description: "Precision placement with proper spacing, alignment, and expert cuts around fixtures." },
-            { number: "04", icon: "Paintbrush", title: "Grouting", description: "Professional application with consistent color and proper curing time." },
-            { number: "05", icon: "Sparkles", title: "Sealing & Finishing", description: "Sealing against moisture, final cleanup, and a quality inspection for perfect results." }
+            { number: "01", icon: "Ruler", title: "Layout Planning", description: "We measure the space, map grout joints, and plan balanced patterns with clean transitions to create a seamless finished appearance." },
+            { number: "02", icon: "ShieldCheck", title: "Surface Preparation", description: "Backer boards, waterproof membranes, and substrate leveling provide a stable foundation that supports lasting performance and durability." },
+            { number: "03", icon: "Hammer", title: "Material Placement", description: "Ceramic, porcelain, mosaic, and natural stone pieces are carefully positioned with consistent spacing, precise alignment, and detailed cuts around fixtures and corners." },
+            { number: "04", icon: "Paintbrush", title: "Grout Application", description: "Premium grout is applied evenly to create clean joints, improve moisture resistance, and deliver a polished, uniform finish." },
+            { number: "05", icon: "Sparkles", title: "Final Protection & Quality Check", description: "After cleanup, we inspect every detail, apply sealers where appropriate, and verify the finished surface meets our quality standards before project completion." }
           ]}
         />
 
@@ -91,23 +91,75 @@ export default function BathroomTileInstallationPage() {
         />
 
         <IssuesSolved
-          title="Issues We Solve with Custom Tiling"
-          subtitle="Common Problems Fixed"
-          description="We address the most common flooring and shower wall challenges Chandler homeowners face."
-          issues={tileData.issues}
+          title="Common Surface Problems We Resolve"
+          subtitle="Issues We Solve"
+          description="Our solutions are designed to address moisture, structural movement, and everyday wear, helping Chandler homeowners enjoy durable, attractive bathroom finishes."
+          issues={[
+            {
+              title: "Moisture Behind Wall Surrounds",
+              description: "Advanced waterproof membrane systems create a protective barrier that helps keep moisture away from framing, reducing the risk of leaks and hidden damage.",
+            },
+            {
+              title: "Cracks Caused by Structural Movement",
+              description: "Flexible bonding materials and uncoupling membranes help absorb minor foundation movement, protecting finished surfaces from premature cracking.",
+            },
+            {
+              title: "Mineral Buildup & Discolored Joints",
+              description: "High-performance epoxy grout resists moisture, staining, and hard water deposits, making routine cleaning easier while maintaining a fresh appearance.",
+            },
+          ]}
         />
 
         <Benefits
-          title="Benefits of Professional Tile Work"
+          title="Advantages of Expert Craftsmanship"
           subtitle="Why It Matters"
-          benefits={tileData.benefits}
+          description="Quality materials, proven installation methods, and attention to detail create a finished space that's built to perform beautifully for years."
+          benefits={[
+            {
+              icon: "Layout",
+              title: "Custom Design Options",
+              description: "Subway, herringbone, basketweave, mosaic, and other decorative layouts provide a personalized look that complements your bathroom.",
+            },
+            {
+              icon: "Droplets",
+              title: "Reliable Moisture Protection",
+              description: "Professional waterproofing systems help defend wall assemblies against everyday humidity, reducing the potential for water-related damage.",
+            },
+            {
+              icon: "Sparkles",
+              title: "Premium Surface Materials",
+              description: "Dense porcelain, ceramic, and natural stone offer exceptional durability, low water absorption, and long-lasting visual appeal.",
+            },
+            {
+              icon: "ShieldCheck",
+              title: "Durable Joint Performance",
+              description: "Epoxy grout provides a stain-resistant, low-maintenance finish that helps preserve clean lines and lasting beauty without frequent upkeep.",
+            },
+          ]}
         />
 
         <Tips
-          title="Expert Maintenance Tips"
+          title="Expert Care & Maintenance Tips"
           subtitle="Professional Insights"
-          description="Smart strategies to maintain and maximize the life of your newly upgraded surfaces."
-          tips={tileData.tips}
+          description="Simple maintenance habits help preserve the appearance, durability, and performance of your newly finished bathroom surfaces."
+          tips={[
+            {
+              title: "Choose Low-Absorption Materials",
+              description: "Porcelain and other low-porosity materials resist moisture, stains, and everyday wear better than many traditional options.",
+            },
+            {
+              title: "Invest in Reliable Waterproofing",
+              description: "Quality waterproof membranes help shield wall assemblies and supporting structures from long-term moisture exposure.",
+            },
+            {
+              title: "Upgrade to Epoxy Grout",
+              description: "Epoxy grout offers outstanding resistance to mold, staining, and moisture while making routine cleaning much easier.",
+            },
+            {
+              title: "Protect Natural Stone",
+              description: "Materials such as marble and travertine should be sealed as recommended to help preserve their appearance and guard against moisture and staining.",
+            },
+          ]}
         />
 
         <Testimonials />

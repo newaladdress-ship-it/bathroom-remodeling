@@ -71,10 +71,6 @@ export default function InteractiveMap({
 
       {/* Top Credentials Row */}
       <div className="relative z-10 flex items-center justify-between w-full">
-        <div className="inline-flex items-center gap-1.5 bg-background/90 backdrop-blur-sm border border-border px-3 py-1 rounded-full text-xs font-bold shadow-sm">
-          <ShieldCheck className="w-3.5 h-3.5 text-primary" />
-          <span className="text-foreground">Workmanship Warranty</span>
-        </div>
         <div className="bg-red-500/10 border border-red-500/30 text-red-500 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
           
         </div>
