@@ -108,12 +108,16 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative">
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-md border border-border">
-                  <Image
-                    src="/images/hero-bathroom.jpg"
-                    alt="ARZ Home Remodeling Bathroom Project in Chandler, AZ"
-                    fill
-                    className="object-cover"
-                  />
+                  <picture>
+                    <source srcSet="/images/hero/luxury-shower-remodel-chandler-640.avif" type="image/avif" />
+                    <img
+                      src="/images/hero/luxury-shower-remodel-chandler-640.avif"
+                      alt="ARZ Home Remodeling Bathroom Project in Chandler, AZ"
+                      className="object-cover w-full h-full"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-xl shadow-lg border border-border">
                   <p className="text-xl font-serif font-bold text-primary">ARZ Home Remodeling</p>

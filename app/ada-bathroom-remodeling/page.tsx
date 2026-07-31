@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import ServiceProcess from "@/components/service-process";
-import IssuesSolved from "@/components/issues-solved";
-import Benefits from "@/components/benefits";
-import Tips from "@/components/tips";
-import Testimonials from "@/components/home/testimonials";
-import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
-import SubServices from "@/components/sub-services";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import { bathroomServices, getRelatedServices } from "@/lib/bathroom-services";
 import Link from "next/link";
 import { Shield, CheckCircle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { GoogleMap } from "@/components/services/google-map";
+
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const ServiceProcess = dynamic(() => import("@/components/service-process"));
+const IssuesSolved = dynamic(() => import("@/components/issues-solved"));
+const Benefits = dynamic(() => import("@/components/benefits"));
+const Tips = dynamic(() => import("@/components/tips"));
+const ContactSection = dynamic(() => import("@/components/home/contact-section"));
+const SubServices = dynamic(() => import("@/components/sub-services"));
 
 export const metadata: Metadata = {title: "ADA Bathroom Remodeling Chandler AZ | Senior Safety - ARZ",description: "Safe, beautiful walk-in showers in Chandler & Mesa. Certified ADA modifications, senior-safe tub conversions, & grab bars. Get a free estimate today!",
   openGraph: {title: "ADA Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore ada bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
@@ -77,7 +78,7 @@ export default function ADAPage() {
           title="ADA Bathroom Remodeling in Chandler, AZ"
           subtitle="Senior-Safe Design & Accessible Transformations"
           description="Maintain your independence with a bathroom designed for safety and comfort. We are Chandler's experts in ADA-compliant remodeling, senior-safe showers, and accessible master bath renovations."
-          image="/images/services/bathroom-tile-remodel-az.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "ADA Remodeling", url: `${siteConfig.url}/ada-bathroom-remodeling/` }]}
         />
 

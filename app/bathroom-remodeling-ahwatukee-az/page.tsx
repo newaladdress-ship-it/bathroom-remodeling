@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import Testimonials from "@/components/home/testimonials";
-import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
-import AreaBenefits from "@/components/area-benefits";
+import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
+const ContactSection = dynamic(() => import("@/components/home/contact-section"));
+const AreaBenefits = dynamic(() => import("@/components/area-benefits"));
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -196,7 +198,7 @@ export default function AhwatukeePage() {
           title="Ahwatukee’s Top-Rated Bathroom Remodeling Contractor"
           subtitle="Hire the Best Local Remodelers in Ahwatukee - Free Estimates"
           description="Bringing our high-quality bathroom remodeling services to homeowners in Ahwatukee, AZ. professional AZ contractors specializing in high-quality renovations, custom shower installs, and full bathroom transformations."
-          image="/images/services/chandler-bathroom-remodel.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
             { name: "Ahwatukee", url: `${siteConfig.url}/bathroom-remodeling-ahwatukee-az/` },

@@ -1,20 +1,22 @@
-import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import ServiceProcess from "@/components/service-process";
-import IssuesSolved from "@/components/issues-solved";
-import Benefits from "@/components/benefits";
-import Tips from "@/components/tips";
-import ContactSection from "@/components/home/contact-section";
-import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
-import SubServices from "@/components/sub-services";
 import { getRelatedServices } from "@/lib/bathroom-services";
+
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const ServiceProcess = dynamic(() => import("@/components/service-process"));
+const IssuesSolved = dynamic(() => import("@/components/issues-solved"));
+const Benefits = dynamic(() => import("@/components/benefits"));
+const Tips = dynamic(() => import("@/components/tips"));
+const ContactSection = dynamic(() => import("@/components/home/contact-section"));
+const ServiceAreas = dynamic(() => import("@/components/home/service-areas"));
+const SubServices = dynamic(() => import("@/components/sub-services"));
 
 export const metadata: Metadata = {
   title: "Guest Bath Remodel Chandler AZ | Small Bath Pros | ARZ",
@@ -95,7 +97,7 @@ export default function GuestBathPage() {
           title="Guest Bathroom Remodeling in Chandler, AZ"
           subtitle="High-Impact Updates for Small Bathrooms & Powder Rooms"
           description="Refresh your guest bathroom with custom remodeling solutions featuring stylish vanities, modern fixtures, durable flooring, updated lighting, and quality finishes that create a welcoming, functional space while adding comfort, convenience, and long-term value to your home."
-          image="/images/services/chandler-bathroom-remodel.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Guest Bathroom", url: `${siteConfig.url}/guest-bathroom-remodeling/` }]}
         />
 

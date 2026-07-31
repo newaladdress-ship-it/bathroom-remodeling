@@ -41,13 +41,13 @@ export function Footer() {
               className="inline-block mb-6 focus-visible:outline-2 focus-visible:outline-offset-2 rounded-lg"
               aria-label="ARZ Home Remodeling - Home"
             >
-              <div className="relative h-14 w-48 sm:h-16 sm:w-56">
+              <div className="relative h-14 w-14 sm:h-16 sm:w-16 rounded-full overflow-hidden shadow-md ring-2 ring-primary/20 bg-white">
                 <Image
-                  src="/images/web-logo-image.avif"
+                  src="/images/arzhomeremodeling-web-logo.webp"
                   alt="ARZ Home Remodeling"
                   fill
-                  sizes="(max-width: 1024px) 192px, 224px"
-                  className="object-contain object-left"
+                  sizes="64px"
+                  className="object-cover rounded-full"
                 />
               </div>
             </Link>

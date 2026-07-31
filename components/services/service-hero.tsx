@@ -25,18 +25,20 @@ export default function ServiceHero({
     <section className="relative flex items-center overflow-hidden pt-32 lg:pt-36 pb-12 lg:pb-16">
       <BreadcrumbSchema items={breadcrumbs} />
       
-      {/* Background Image */}
+      {/* Background Image - LCP Optimized for Mobile */}
       <div className="absolute inset-0 z-0 bg-primary/40">
-        <Image
-          src={heroImage}
-          alt={`${title} - Professional bathroom remodeling in Chandler Arizona`}
-          fill
-          className="object-cover"
-          priority
-          fetchPriority="high"
-          sizes="(max-width: 768px) 100vw, 100vw"
-          quality={75}
-        />
+        <picture className="absolute inset-0 w-full h-full">
+          <source srcSet="/images/hero/luxury-shower-remodel-chandler-640.avif" media="(max-width: 640px)" type="image/avif" />
+          <source srcSet="/images/hero/luxury-shower-remodel-chandler-828.avif" media="(min-width: 641px) and (max-width: 828px)" type="image/avif" />
+          <img
+            src={heroImage}
+            alt={`${title} - Professional bathroom remodeling in Chandler Arizona`}
+            className="absolute inset-0 w-full h-full object-cover"
+            fetchPriority="high"
+            decoding="sync"
+            loading="eager"
+          />
+        </picture>
         <div className="absolute inset-0 bg-black/60" />
       </div>
 

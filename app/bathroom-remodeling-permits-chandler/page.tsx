@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import Testimonials from "@/components/home/testimonials";
 import { siteConfig } from "@/lib/site-config";
 import { FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
 import { ArrowRight, FileText, CheckCircle2, AlertTriangle } from "lucide-react";
+
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
 
 export const metadata: Metadata = {title: "Bath Remodel Permits Chandler AZ | Local Guide | ARZ",description: "Do you need a permit for a bathroom remodel in Chandler, AZ? Learn city zoning rules, fees, and inspection schedules. We handle all filings!",
   openGraph: {title: "Permits Chandler Guide | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore permits chandler guide, custom showers, tile, vanities, clear pricing, and free estimates.",
@@ -95,7 +97,7 @@ export default function PermitsPage() {
           title="Bathroom Remodeling Permits in Chandler, AZ"
           subtitle="Navigating Municipal Building Codes"
           description="A complete guide on when you need a permit to remodel a bathroom in Chandler, what fees to expect, and how the city inspection process works."
-          image="/images/services/bathroom-flooring-chandler.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
             { name: "Chandler Bathroom Remodeling", url: `${siteConfig.url}/bathroom-remodeling-chandler-az/` },

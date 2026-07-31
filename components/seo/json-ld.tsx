@@ -711,7 +711,7 @@ export function ProductSchema({ name, description, image, priceRange = "Contact 
     "@type": "Product",
     "name": name,
     "description": description,
-    "image": image || `${siteConfig.url}/images/web-logo-image.avif`,
+    "image": image || `${siteConfig.url}/images/arzhomeremodeling-web-logo.webp`,
     "offers": {
       "@type": "AggregateOffer",
       "priceCurrency": "USD",

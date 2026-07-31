@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import Testimonials from "@/components/home/testimonials";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Info } from "lucide-react";
+
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
 
 export const metadata: Metadata = {title: "Master Bath Remodel Cost Chandler AZ | Pricing Guide | ARZ",description: "How much does a master bathroom remodel cost in Chandler, AZ? Compare pricing for custom double vanities, tile flooring, walk-in showers, and tubs.",
   openGraph: {title: "Master Bath Remodel Cost | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore master bath remodel cost, custom showers, tile, vanities, clear pricing, and free estimates.",
@@ -138,7 +140,7 @@ export default function MasterBathroomRemodelCostPage() {
           title="Master Bathroom Remodel Costs (2025 Pricing Guide)"
           subtitle="Transparent Master Suite Budgets"
           description="Detailed breakdown of the costs to remodel a master bathroom in Chandler, AZ. Mid-tier updates, custom layouts, and luxury home spa packages."
-          image="/images/services/bathroom-flooring-chandler.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
             { name: "Master Bathroom Remodeling", url: `${siteConfig.url}/master-bathroom-remodel/` },

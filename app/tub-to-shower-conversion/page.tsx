@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import ServiceProcess from "@/components/service-process";
-import IssuesSolved from "@/components/issues-solved";
-import Benefits from "@/components/benefits";
-import Tips from "@/components/tips";
-import ContactSection from "@/components/home/contact-section";
-import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
-import SubServices from "@/components/sub-services";
 import { getRelatedServices } from "@/lib/bathroom-services";
+
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const ServiceProcess = dynamic(() => import("@/components/service-process"));
+const IssuesSolved = dynamic(() => import("@/components/issues-solved"));
+const Benefits = dynamic(() => import("@/components/benefits"));
+const Tips = dynamic(() => import("@/components/tips"));
+const ContactSection = dynamic(() => import("@/components/home/contact-section"));
+const ServiceAreas = dynamic(() => import("@/components/home/service-areas"));
+const SubServices = dynamic(() => import("@/components/sub-services"));
 
 export const metadata: Metadata = {
   title: "Tub to Shower Conversion Chandler AZ | Free Estimate",
@@ -72,7 +74,7 @@ export default function TubToShowerConversionPage() {
           title="Walk-In Shower Conversions for Chandler Homes"
           subtitle="Replace Your Bathtub With a Spacious Walk-In Shower"
           description="Upgrade your bathroom by replacing an outdated bathtub with a modern walk-in shower designed for comfort, accessibility, and everyday convenience. ARZ Home Remodeling creates durable shower systems featuring premium tile, custom glass enclosures, advanced waterproofing, and professionally planned layouts that improve both functionality and style throughout Chandler and nearby East Valley communities."
-          image="/images/services/bathroom-tile-remodel-az.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
             { name: "Tub to Shower Conversion", url: `${siteConfig.url}/tub-to-shower-conversion` },

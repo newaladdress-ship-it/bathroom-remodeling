@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import Testimonials from "@/components/home/testimonials";
-import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
+const ContactSection = dynamic(() => import("@/components/home/contact-section"));
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -167,7 +169,7 @@ export default function GilbertPage() {
           title="expert bathroom remodeling in Gilbert, AZ"
           subtitle="Luxury Transformations & Quality Craftsmanship"
           description="Transform your Gilbert home with the East Valley's trusted remodeling experts. From custom walk-in showers in Power Ranch to master suite renovations in Morrison Ranch: we deliver stunning results with a fixed-price guarantee and  professional peace of mind."
-          image="/images/services/chandler-bathroom-remodel.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
             { name: "Bathroom Remodeling Gilbert AZ", url: `${siteConfig.url}/bathroom-remodeling-gilbert-az/` },

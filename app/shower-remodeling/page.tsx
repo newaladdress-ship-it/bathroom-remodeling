@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import ServiceProcess from "@/components/service-process";
-import IssuesSolved from "@/components/issues-solved";
-import Benefits from "@/components/benefits";
-import Tips from "@/components/tips";
-import ContactSection from "@/components/home/contact-section";
-import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
-import ShowerTypes from "@/components/shower-types";
-import ShowerGallery from "@/components/shower-gallery";
+
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const ServiceProcess = dynamic(() => import("@/components/service-process"));
+const IssuesSolved = dynamic(() => import("@/components/issues-solved"));
+const Benefits = dynamic(() => import("@/components/benefits"));
+const Tips = dynamic(() => import("@/components/tips"));
+const ContactSection = dynamic(() => import("@/components/home/contact-section"));
+const ServiceAreas = dynamic(() => import("@/components/home/service-areas"));
+const ShowerTypes = dynamic(() => import("@/components/shower-types"));
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
 
 export const metadata: Metadata = {
   title: "Custom Shower Remodeling Chandler AZ | Tile & Glass",
@@ -66,8 +68,6 @@ const faqs = [
   },
 ];
 
-import Testimonials from "@/components/home/testimonials";
-
 export default function ShowerRemodelingPage() {
   return (
     <>
@@ -90,7 +90,7 @@ export default function ShowerRemodelingPage() {
           title="Shower Remodeling in Chandler, AZ"
           subtitle="Modern Design • Precision Craftsmanship • Lifetime Waterproof Protection"
           description="Upgrade your bathroom with a professionally designed shower system built around your space, style, and daily needs. ARZ Home Remodeling combines advanced moisture protection, detailed tile craftsmanship, custom glass solutions, and durable finishes to create showers that look beautiful and perform reliably for years. From modern upgrades to complete bathroom transformations, our team delivers a seamless remodeling experience with clear pricing and expert installation. Call now!"
-          image="/images/services/chandler-bathroom-remodel.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[
             { name: "Home", url: `${siteConfig.url}/` },
             { name: "Shower Remodeling", url: `${siteConfig.url}/shower-remodeling/` },

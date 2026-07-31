@@ -1,21 +1,23 @@
-import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import ServiceProcess from "@/components/service-process";
-import IssuesSolved from "@/components/issues-solved";
-import Benefits from "@/components/benefits";
-import Tips from "@/components/tips";
-import ContactSection from "@/components/home/contact-section";
-import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
-import SubServices from "@/components/sub-services";
 import { getRelatedServices } from "@/lib/bathroom-services";
+
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const ServiceProcess = dynamic(() => import("@/components/service-process"));
+const IssuesSolved = dynamic(() => import("@/components/issues-solved"));
+const Benefits = dynamic(() => import("@/components/benefits"));
+const Tips = dynamic(() => import("@/components/tips"));
+const ContactSection = dynamic(() => import("@/components/home/contact-section"));
+const ServiceAreas = dynamic(() => import("@/components/home/service-areas"));
+const SubServices = dynamic(() => import("@/components/sub-services"));
 
 export const metadata: Metadata = {
   title: "Bathtub Remodeling Chandler AZ | Soaker Tub Upgrades | ARZ",
@@ -56,7 +58,7 @@ export default function BathtubRemodelingPage() {
           title="Bathtub Remodeling in Chandler, AZ"
           subtitle="Tub Replacement & Soaking Tub Upgrades"
           description="Replace outdated tubs, install luxurious soaking bathtubs, or enhance your bathing space with durable, professionally installed solutions designed for lasting comfort, improved functionality, and everyday convenience, all backed by expert craftsmanship, transparent pricing, and our 2-year workmanship warranty."
-          image="/images/projects/luxury-bathtub-remodel-az.webp"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[
             { name: "Home", url: `${siteConfig.url}/` },
             { name: "Bathtub Remodeling Chandler AZ", url: `${siteConfig.url}/bathtub-remodeling/` },

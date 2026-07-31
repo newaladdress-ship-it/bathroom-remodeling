@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import Testimonials from "@/components/home/testimonials";
-import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
+const ContactSection = dynamic(() => import("@/components/home/contact-section"));
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -170,7 +172,7 @@ export default function AduPage() {
           title="Premium ADU & Casita Construction in Chandler, AZ"
           subtitle="Custom Detached Guest Houses & Suite Additions"
           description="Expand your living space and maximize your property value with Chandler's leading design-build ADU team. From luxurious detached mother-in-law suites in Fulton Ranch to attached pool casitas in Ocotillo: we manage the complete zoning, engineering, permits, and premium construction pipeline."
-          image="/images/services/chandler-bathroom-remodel.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
             { name: "ADU & Casita Construction Chandler AZ", url: `${siteConfig.url}/adu-casita-construction-chandler/` },

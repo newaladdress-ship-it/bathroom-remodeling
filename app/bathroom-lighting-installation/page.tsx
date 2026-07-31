@@ -1,21 +1,23 @@
-import Testimonials from "@/components/home/testimonials";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import ServiceProcess from "@/components/service-process";
-import IssuesSolved from "@/components/issues-solved";
-import Benefits from "@/components/benefits";
-import Tips from "@/components/tips";
-import ContactSection from "@/components/home/contact-section";
-import ServiceAreas from "@/components/home/service-areas";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
-import SubServices from "@/components/sub-services";
 import { getRelatedServices } from "@/lib/bathroom-services";
+
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const ServiceProcess = dynamic(() => import("@/components/service-process"));
+const IssuesSolved = dynamic(() => import("@/components/issues-solved"));
+const Benefits = dynamic(() => import("@/components/benefits"));
+const Tips = dynamic(() => import("@/components/tips"));
+const ContactSection = dynamic(() => import("@/components/home/contact-section"));
+const ServiceAreas = dynamic(() => import("@/components/home/service-areas"));
+const SubServices = dynamic(() => import("@/components/sub-services"));
 
 export const metadata: Metadata = {
   title: "Bath Lighting Pro Chandler AZ | LED Upgrades | ARZ Chandle",
@@ -52,7 +54,7 @@ export default function BathroomLightingInstallationPage() {
           title="Bathroom Lighting Installation in Chandler, Arizona"
           subtitle="Professional LED & Vanity Lighting in Chandler AZ"
           description="Brighten your bathroom with professionally installed LED lighting, vanity lights, recessed fixtures, and modern illumination solutions designed to improve visibility, energy efficiency, and everyday comfort while enhancing the beauty and functionality of your remodeled space."
-          image="/images/services/bathroom-tile-remodel-az.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
             { name: "Bathroom Lighting", url: `${siteConfig.url}/bathroom-lighting-installation` },

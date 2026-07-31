@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import Testimonials from "@/components/home/testimonials";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Info } from "lucide-react";
+
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
 
 export const metadata: Metadata = {title: "Walk-In Shower Costs Chandler AZ | Custom Tile Pricing",description: "Detailed cost guide for custom walk-in showers in Chandler, AZ. See cost ranges for tile selection, frameless glass, and waterproofing packages.",
   openGraph: {title: "Walk In Shower Cost | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore walk in shower cost, custom showers, tile, vanities, clear pricing, and free estimates.",
@@ -135,7 +137,7 @@ export default function WalkInShowerCostPage() {
           title="Walk-In Shower Guide (Project Scopes)"
           subtitle="Transparent Shower Budgets"
           description="Detailed breakdown of the costs to build or convert a walk-in shower in Chandler, AZ. Prefabricated, custom tile, and curbless designs explained."
-          image="/images/services/bathroom-flooring-chandler.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
             { name: "Walk-In Showers", url: `${siteConfig.url}/walk-in-showers/` },

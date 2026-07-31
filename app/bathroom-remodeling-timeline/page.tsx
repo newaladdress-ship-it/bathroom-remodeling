@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import Testimonials from "@/components/home/testimonials";
 import { siteConfig } from "@/lib/site-config";
 import { FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
 import { ArrowRight, Clock, CheckCircle2, Calendar } from "lucide-react";
+
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
 
 export const metadata: Metadata = {title: "Bathroom Remodel Timeline | How Long Does It Take? | ARZ",description: "Planning a bathroom remodel in Chandler, AZ? Learn the step-by-step timeline, from demolition and plumbing inspections to final tile handoff.",
   openGraph: {title: "Timeline Guide Services | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore timeline guide services, custom showers, tile, vanities, clear pricing, and free estimates.",
@@ -116,7 +118,7 @@ export default function TimelinePage() {
           title="Bathroom Remodeling Timelines (Step-by-Step Guide)"
           subtitle="What to Expect from Demo to Final Handoff"
           description="Learn exactly how long it takes to remodel a bathroom in Chandler, AZ. Explore our daily schedules, permit inspection milestones, and project management timelines."
-          image="/images/services/bathroom-flooring-chandler.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
             { name: "Bathroom Remodeling Costs", url: `${siteConfig.url}/bathroom-remodeling-cost-chandler-az/` },

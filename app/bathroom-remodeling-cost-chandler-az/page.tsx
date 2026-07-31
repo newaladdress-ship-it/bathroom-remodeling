@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import Testimonials from "@/components/home/testimonials";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
-import SubServices from "@/components/sub-services";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
 import { bathroomServices, getRelatedServices } from "@/lib/bathroom-services";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Info } from "lucide-react";
+
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
+const SubServices = dynamic(() => import("@/components/sub-services"));
 
 export const metadata: Metadata = {
   title: "Bath Remodel Costs Chandler AZ | Pricing Guide | ARZ",
@@ -169,7 +171,7 @@ export default function CostPage() {
           title="How Much Does a Bathroom Remodel Cost in Chandler, AZ? (2025 Pricing Guide)"
           subtitle="Transparent 2025 Pricing"
           description="Straight answers on what bathroom remodeling costs in Chandler. Every tier broken down by line item - no guessing, no surprises."
-          image="/images/services/bathroom-flooring-chandler.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
             { name: "Bathroom Remodeling Chandler AZ", url: `${siteConfig.url}/bathroom-remodeling-chandler-az/` },

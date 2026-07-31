@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-import ServiceCTA from "@/components/service-cta";
-import ServiceFAQ from "@/components/service-faq";
-import Testimonials from "@/components/home/testimonials";
-import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+
+const ServiceCTA = dynamic(() => import("@/components/service-cta"));
+const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
+const ContactSection = dynamic(() => import("@/components/home/contact-section"));
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -170,7 +172,7 @@ export default function GarageConversionPage() {
           title="Premium Garage Conversion in Chandler, AZ"
           subtitle="Convert Underutilized Space Into Luxury Living Areas"
           description="Unlock the hidden square footage of your home. Specializing in turnkey garage conversions in Chandler, Arizona: converting uninsulated garages into beautiful master suites, guest apartments, or professional home offices with  professional expertise."
-          image="/images/services/chandler-bathroom-remodel.jpg"
+          image="/images/hero/luxury-shower-remodel-chandler.avif"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
             { name: "Garage Conversion Chandler AZ", url: `${siteConfig.url}/garage-conversion-chandler/` },
