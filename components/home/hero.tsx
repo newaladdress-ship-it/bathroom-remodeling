@@ -15,6 +15,7 @@ export default function Hero() {
             className="absolute inset-0 w-full h-full object-cover"
             fetchPriority="high"
             decoding="sync"
+            loading="eager"
           />
         </picture>
         {/* High-contrast overlay: centered layout utilizes a deep all-over navy tint overlay for peak readability */}

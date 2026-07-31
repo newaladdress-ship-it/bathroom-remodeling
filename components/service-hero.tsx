@@ -26,24 +26,34 @@ export default function ServiceHero({
 }: ServiceHeroProps) {
   const rawImage = image ?? backgroundImage;
   const heroImage = rawImage.endsWith('.webp') ? rawImage.replace(/\.webp$/, '.avif') : rawImage;
+  const hero640 = heroImage.endsWith('.avif') && !heroImage.includes('-640') && !heroImage.includes('-828')
+    ? heroImage.replace('.avif', '-640.avif')
+    : heroImage;
+  const hero828 = heroImage.endsWith('.avif') && !heroImage.includes('-640') && !heroImage.includes('-828')
+    ? heroImage.replace('.avif', '-828.avif')
+    : heroImage;
 
   return (
     <section className="relative flex items-center justify-center overflow-hidden pt-32 lg:pt-36 pb-12 lg:pb-16" aria-label={title}>
       {breadcrumbs && <BreadcrumbSchema items={breadcrumbs} />}
-      {/* Background Image - LCP Optimized */}
+      {/* Background Image - LCP Optimized with Mobile Responsive AVIF */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src={heroImage}
-          alt={title}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-          quality={75}
-          fetchPriority="high"
-          decoding="sync"
-          loading="eager"
-        />
+        <picture className="absolute inset-0 w-full h-full">
+          {hero640 !== heroImage && (
+            <source srcSet={hero640} media="(max-width: 640px)" type="image/avif" />
+          )}
+          {hero828 !== heroImage && (
+            <source srcSet={hero828} media="(min-width: 641px) and (max-width: 828px)" type="image/avif" />
+          )}
+          <img
+            src={heroImage}
+            alt={title}
+            className="absolute inset-0 w-full h-full object-cover"
+            fetchPriority="high"
+            decoding="sync"
+            loading="eager"
+          />
+        </picture>
         <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
       </div>
       
