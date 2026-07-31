@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: `${siteConfig.url}/images/og-homepage.png`,
         width: 1200,
         height: 630,
-        alt: 'ARZ Home Remodeling - Premier Bathroom Contractor - Chandler Arizona',
+        alt: 'ARZ Home Remodeling - Premier Bathroom Specialist - Chandler Arizona',
       },
     ],
   },

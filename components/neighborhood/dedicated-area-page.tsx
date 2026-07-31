@@ -133,7 +133,7 @@ export default function DedicatedAreaPage({ areaSlug, path }: DedicatedAreaPageP
               <MapPin className="w-4 h-4 inline mr-1 text-primary" />
               Also see our{" "}
               <Link href="/bathroom-remodeling-chandler-az/" className="text-primary hover:underline">
-                Chandler bathroom remodeling
+                Chandler bathroom renovation
               </Link>{" "}
               hub and{" "}
               <Link href="/shower-remodeling/" className="text-primary hover:underline">
@@ -149,7 +149,7 @@ export default function DedicatedAreaPage({ areaSlug, path }: DedicatedAreaPageP
         <ContactSection />
         <ServiceCTA
           title={`Schedule Your ${areaData.areaName} Bathroom Consultation`}
-          description="Free in-home visit, written estimate, and clear timeline. General Contractor."
+          description="Free in-home visit, written estimate, and clear timeline. Local Remodeling Experts."
         />
       </main>
       <Footer />

@@ -67,7 +67,7 @@ export default function ServiceHero({
               asChild
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground min-w-[200px] font-bold shadow-lg"
-              aria-label={`Call us at ${siteConfig.phone} to speak with our bathroom remodeling team`}
+              aria-label={`Call us at ${siteConfig.phone} to speak with our bathroom renovation team`}
             >
               <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                 <Phone className="w-5 h-5" aria-hidden="true" />

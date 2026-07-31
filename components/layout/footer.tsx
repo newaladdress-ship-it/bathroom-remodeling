@@ -1,6 +1,7 @@
 // ✅ SERVER COMPONENT - footer has no client-side state
 // GoogleMap is isolated in its own client wrapper below to avoid making the whole footer a client component
 import Link from "next/link";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { Phone, MapPin, Clock, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
@@ -35,13 +36,20 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-6 group no-underline">
-              <span className="font-serif text-3xl font-semibold text-background group-hover:text-primary transition-colors">
-                ARZ Home
-              </span>
-              <span className="block text-xs tracking-[0.2em] uppercase text-background/60 -mt-1">
-                Remodeling Contractors
-              </span>
+            <Link
+              href="/"
+              className="inline-block mb-6 focus-visible:outline-2 focus-visible:outline-offset-2 rounded-lg"
+              aria-label="ARZ Home Remodeling - Home"
+            >
+              <div className="relative h-14 w-48 sm:h-16 sm:w-56">
+                <Image
+                  src="/images/web-logo-image.avif"
+                  alt="ARZ Home Remodeling"
+                  fill
+                  sizes="(max-width: 1024px) 192px, 224px"
+                  className="object-contain object-left"
+                />
+              </div>
             </Link>
             {siteConfig.googleReviewsCount > 0 && (
               <div className="mb-6">

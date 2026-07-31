@@ -23,7 +23,7 @@ export default function PaintingPage() {
   return (
     <>
       
-      <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Painting Contractors Chandler", url: "https://arzhomeremodeling.com/painting-contractors-chandler/" } ]} />
+      <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Painting Services Chandler", url: "https://arzhomeremodeling.com/painting-contractors-chandler/" } ]} />
 <Header />
       <main className="min-h-[80vh] flex flex-col justify-center items-center py-24 bg-background">
         <div className="container mx-auto px-4 max-w-2xl text-center">

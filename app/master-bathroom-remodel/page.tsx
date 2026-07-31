@@ -98,7 +98,7 @@ export default function MasterBathPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Master Bathroom Remodel", url: "https://arzhomeremodeling.com/master-bathroom-remodel/" } ]} />
       <ServiceSchema
         serviceName="Master Bathroom Remodel in Chandler, Arizona"
-        serviceDescription="Full-scope master bathroom renovations in Chandler, AZ. Shower enclosures, vanity replacement, tile flooring, plumbing and lighting upgrades managed by one professional Arizona contractor."
+        serviceDescription="Full-scope master bathroom renovations in Chandler, AZ. Shower enclosures, vanity replacement, tile flooring, plumbing and lighting upgrades managed by one professional local team."
         serviceUrl={`${siteConfig.url}/master-bathroom-remodel`}
       />
       <FAQSchema faqs={faqs} />
@@ -110,9 +110,9 @@ export default function MasterBathPage() {
       <Header />
       <main>
         <ServiceHero
-          title="Luxury Master Bathroom Renovations for Chandler Homes"
+          title="Master Bathroom Remodeling in Chandler, AZ"
           subtitle="Luxury Transformations Managed by One Local Team"
-          description="Upgrade your primary bathroom into a comfortable, functional retreat with personalized layouts, premium tile, custom vanities, spacious showers, elegant lighting, and expertly crafted finishes. ARZ Home Remodeling designs beautiful spaces that improve everyday living while complementing the style of homes throughout Chandler and the surrounding East Valley."
+          description="Transform your primary bathroom with custom master bathroom remodeling that combines luxury showers, freestanding soaking tubs, premium tile, custom vanities, elegant lighting, and expert craftsmanship to create a stylish, functional retreat backed by our 2-year workmanship warranty"
           image="/images/projects/modern-double-vanity-chandler.webp"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -123,13 +123,13 @@ export default function MasterBathPage() {
         <ServiceProcess
           title="Master Bathroom Renovation Process"
           subtitle="Our Process"
-          description="A systematic multi-stage approach designed to minimize disruption while delivering museum-quality craftsmanship."
+          description="Every master bathroom renovation follows a carefully planned process that prioritizes efficient scheduling, quality craftsmanship, and attention to detail. From the initial consultation to the final walkthrough, we coordinate each stage to create a functional, personalized space that reflects your style while ensuring dependable performance and long-lasting durability."
           steps={[
-            { number: "01", icon: "PhoneCall", title: "Design Consultation", description: "We assess your current master suite layout and clarify your goals, style, and budget." },
-            { number: "02", icon: "Ruler", title: "Custom Layout & Selection", description: "Choose custom cabinetry, stone slabs, tile patterns, and fixture finishes." },
-            { number: "03", icon: "ShieldCheck", title: "Demolition & Prep", description: "Careful tear-out, structural wall adjustments, and plumbing/electrical rough-ins." },
-            { number: "04", icon: "Wrench", title: "Waterproofing & Tile Setting", description: "Professional waterproofing installation followed by precision tile laying." },
-            { number: "05", icon: "Sparkles", title: "Fixtures & Walkthrough", description: "Glass enclosure mounting, vanity setting, trim details, and final walkthrough." }
+            { number: "01", icon: "PhoneCall", title: "Design Consultation", description: "We evaluate your existing bathroom layout, discuss design preferences, functionality goals, and recommend solutions tailored to your lifestyle and available space." },
+            { number: "02", icon: "Ruler", title: "Custom Design & Material Selection", description: "Select custom cabinetry, quartz or stone countertops, luxury tile, premium fixtures, lighting, and finish options that complement your home's style." },
+            { number: "03", icon: "ShieldCheck", title: "Demolition & Preparation", description: "Our team carefully removes outdated materials, completes structural adjustments when needed, and prepares plumbing, electrical, and framing for the new installation." },
+            { number: "04", icon: "Wrench", title: "Waterproofing & Installation", description: "Advanced waterproofing systems, precision tile installation, and accurate fixture placement help create a durable, moisture-resistant bathroom built for everyday use." },
+            { number: "05", icon: "Sparkles", title: "Final Walkthrough", description: "We complete detailed finishing work, inspect every installation, verify functionality, and ensure your newly remodeled master bathroom meets our quality standards before project completion." }
           ]}
         />
 
@@ -143,22 +143,73 @@ export default function MasterBathPage() {
         <IssuesSolved
           title="Issues We Solve in Master Bathrooms"
           subtitle="Common Problems Fixed"
-          description="We overcome complex structural and aesthetic challenges in Chandler master suites."
-          issues={masterIssues}
+          description="Older master bathrooms often struggle with inefficient layouts, worn finishes, limited storage, and moisture-related concerns that reduce both comfort and functionality. Our remodeling solutions address these common challenges with thoughtful design, durable materials, and quality installation techniques that create a more practical and visually appealing primary bathroom."
+          issues={[
+            {
+              title: "Outdated Bathroom Layout",
+              description: "Replace oversized garden tubs, improve traffic flow, and reconfigure the space to create a more open, functional, and comfortable master suite.",
+            },
+            {
+              title: "Limited Storage & Vanity Space",
+              description: "Upgrade to custom double vanities, expanded cabinetry, and organized storage solutions that improve daily convenience while reducing countertop clutter.",
+            },
+            {
+              title: "Moisture Damage & Surface Wear",
+              description: "Modern waterproofing systems, porcelain tile, and durable grout materials help protect against mold, stains, and long-term water damage.",
+            },
+            {
+              title: "Aging Fixtures & Poor Lighting",
+              description: "Replace outdated fixtures with modern lighting, efficient plumbing components, and contemporary finishes that improve visibility, comfort, and everyday usability.",
+            },
+          ]}
         />
 
         <Benefits
           title="Benefits of a Master Bathroom Remodel"
           subtitle="Why Upgrade Your Master Bath"
-          description="Discover how upgrading your master suite enhances comfort and home value."
-          benefits={masterBenefits}
+          description="A professionally designed master bathroom enhances everyday comfort while improving functionality, storage, and long-term value. Thoughtful layouts, quality materials, and modern features create a relaxing environment that supports your lifestyle while making one of the most frequently used spaces in your home easier to enjoy and maintain."
+          benefits={[
+            {
+              icon: "Sparkles",
+              title: "Spa-Inspired Comfort",
+              description: "Create a peaceful retreat with spacious showers, premium finishes, and carefully selected features designed for everyday relaxation.",
+            },
+            {
+              icon: "TrendingUp",
+              title: "Increased Home Value",
+              description: "A modern master bathroom can enhance your property's appeal, improve resale potential, and provide lasting value through timeless design.",
+            },
+            {
+              icon: "Clock",
+              title: "Improved Efficiency",
+              description: "Energy-efficient lighting, water-saving fixtures, and updated plumbing systems help improve performance while reducing ongoing maintenance.",
+            },
+            {
+              icon: "Layout",
+              title: "Better Organization",
+              description: "Custom cabinetry, double vanities, and smart storage solutions keep daily essentials organized while maximizing available space.",
+            },
+          ]}
         />
 
         <Tips
-          title="Master Bath Remodeling Tips"
+          title="Master Bathroom Remodeling Tips"
           subtitle="Expert Best Practices"
-          description="Insights from our master craftsmen to make your primary suite renovation a success."
-          tips={masterTips}
+          description="Careful planning and quality materials help maximize the comfort, functionality, and longevity of your master bathroom. These practical recommendations can improve everyday usability, simplify maintenance, and ensure your remodeled space continues to perform beautifully for years to come."
+          tips={[
+            {
+              title: "Plan Storage Around Your Routine",
+              description: "Include custom cabinetry, recessed medicine cabinets, linen storage, and double vanity drawers during the design stage to keep everyday essentials organized without sacrificing valuable floor space.",
+            },
+            {
+              title: "Choose Durable, Low-Maintenance Materials",
+              description: "Select porcelain tile, quartz countertops, and moisture-resistant grout that withstand daily use, resist hard water buildup, and require less maintenance over time.",
+            },
+            {
+              title: "Prioritize Lighting & Ventilation",
+              description: "Combine layered LED lighting with a properly sized bathroom exhaust fan to improve visibility, reduce humidity, and help protect surfaces from mold and moisture-related issues.",
+            },
+          ]}
         />
 
         <Testimonials />

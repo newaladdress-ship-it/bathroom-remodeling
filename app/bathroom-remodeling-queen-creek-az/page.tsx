@@ -48,7 +48,7 @@ export default function QueenCreekPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Queen Creek Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-queen-creek-az/" } ]} />
 <ServiceSchema
         serviceName="Bathroom Remodeling in Queen Creek, Arizona"
-        serviceDescription="expert bathroom remodeling contractor serving Queen Creek, AZ. Custom showers, master bath renovations, and tub-to-shower conversions for local families."
+        serviceDescription="expert bathroom remodeling team serving Queen Creek, AZ. Custom showers, master bath renovations, and tub-to-shower conversions for local families."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-queen-creek-az/`}
       />
       <FAQSchema faqs={queenCreekFaqs} />
@@ -165,7 +165,7 @@ export default function QueenCreekPage() {
             "Modern Tub-to-Shower Conversions",
             "Family-Friendly Bathroom Design",
             "Durable Tile & Grout Systems",
-            "professional AZ Contractor Support",
+            "professional AZ Remodeling Support",
             "Fixed Pricing: No Hidden Fees"
           ]} 
           cityName="Queen Creek" 

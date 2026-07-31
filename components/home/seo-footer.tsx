@@ -11,7 +11,7 @@ export default function SEOFooter() {
     "shower remodeling services chandler",
     "tub to shower conversion chandler",
     "shower to tub conversions near me",
-    "bathroom remodeling contractor chandler",
+    "bathroom remodeling specialist chandler",
     "tub to shower conversion near me",
     "bathroom refinishers near me",
     "shower renovation near me",
@@ -31,13 +31,13 @@ export default function SEOFooter() {
     "bath remodel near me",
     "bathroom remodel chandler az prices",
     "bathroom remodelers chandler az",
-    "bathroom contractor chandler az",
+    "bathroom specialist chandler az",
     "bath remodeling services chandler az",
-    "bath remodeling contractor chandler az",
+    "bath remodeling specialist chandler az",
     "bathroom remodeler chandler az",
     "shower remodeling company chandler",
     "bath remodeler chandler az",
-    "bath remodeling contractors chandler az",
+    "bath remodeling specialists chandler az",
     "tub to shower conversion arizona",
     "chandler arizona bathroom remodeling",
     "chandler bathroom remodeling",
@@ -51,11 +51,11 @@ export default function SEOFooter() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl font-serif font-semibold mb-6 text-foreground/80">Local Bathroom Services in Chandler, AZ</h2>
           <p className="text-sm text-muted-foreground leading-relaxed mb-8">
-            As your premier choice for <strong>bathroom remodeling in chandler, AZ</strong>, we specialize in high-quality 
-            renovations tailored to your needs. From <strong>bathroom remodel chandler az</strong> to specialized 
-            <strong>shower remodeling services chandler</strong>, our team provides exceptional craftsmanship. 
-            Whether you are searching for <strong>bath remodel near me</strong> or need a 
-            <strong>bathroom contractor chandler az</strong>, we are here to help.
+            As your premier choice for <strong>bathroom remodeling in Chandler, AZ</strong>, we specialize in high-quality 
+            renovations tailored to your needs. From <strong>custom bath design in Chandler, AZ</strong> to specialized 
+            <strong>shower renovation services</strong>, our team provides exceptional craftsmanship. 
+            Whether you are searching for a <strong>bath remodel near me</strong> or need a local 
+            <strong>bath design expert in Chandler, AZ</strong>, we are here to help.
           </p>
           
           <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-muted-foreground/60 italic">

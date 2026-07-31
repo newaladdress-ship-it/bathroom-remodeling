@@ -30,7 +30,7 @@ export default function QuickAnswers() {
     <section className="py-12 lg:py-16 bg-background border-b border-border" aria-labelledby="quick-answers-heading">
       <div className="container mx-auto px-4 lg:px-8">
         <h2 id="quick-answers-heading" className="sr-only">
-          Quick answers about bathroom remodeling in Chandler AZ
+          Frequently asked questions about bathroom renovations in Chandler, AZ
         </h2>
         <p className="text-center text-sm font-medium tracking-wider uppercase text-primary mb-8">
           Quick Answers

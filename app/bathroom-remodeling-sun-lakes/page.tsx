@@ -50,7 +50,7 @@ const sunLakesFaqs = [
   {
     question: "Are you fully insured to work in Sun Lakes, AZ?",
     answer:
-      "Yes, we are a residential contractor with the Arizona Registrar of Contractors under license number . We carry full liability insurance and workers' compensation for your complete protection."
+      "Yes, we are a licensed remodeling firm with the Arizona Registrar of Contractors under license number . We carry full liability insurance and workers' compensation for your complete protection."
   },
   {
     question: "Can we install grab bars without remodeling the entire bathroom?",
@@ -131,7 +131,7 @@ export default function SunLakesPage() {
       ]} />
       <ServiceSchema
         serviceName="Bathroom Remodeling in Sun Lakes, AZ"
-        serviceDescription="professional contractor specializing in accessible, ADA-compliant bathroom renovations and tub-to-shower conversions in Sun Lakes, AZ."
+        serviceDescription="professional remodeling specialists specializing in accessible, ADA-compliant bathroom renovations and tub-to-shower conversions in Sun Lakes, AZ."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-sun-lakes/`}
       />
       <FAQSchema faqs={sunLakesFaqs} />
@@ -164,7 +164,7 @@ export default function SunLakesPage() {
               As we plan for long-term comfort and security in our homes, standard builder-grade bathrooms present significant hazards. In Sun Lakes, AZ, many properties built in the 1970s through the late 1990s feature high-sided cast iron or fiberglass bathtubs, narrow doorways, slick vinyl flooring, and cramped layouts. These elements create serious fall risks for seniors. Upgrading your space with professional, barrier-free walk-in showers and age-in-place layout reconfigurations improves daily utility, ensures safety, and provides peace of mind.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we specialize in design-build bathroom remodeling tailored to the requirements of active adult communities in Sun Lakes, AZ. From zero-threshold curbless roll-in showers and customized walk-in tubs to floating, wheelchair-accessible vanities and structural blocking for secure grab bars, we handle every detail. We carry full Arizona contractor licensing (), providing premium workmanship across ZIP codes **85248 and 85249**.
+              At ARZ Home Remodeling, we specialize in design-build bathroom remodeling tailored to the requirements of active adult communities in Sun Lakes, AZ. From zero-threshold curbless roll-in showers and customized walk-in tubs to floating, wheelchair-accessible vanities and structural blocking for secure grab bars, we handle every detail. We carry full Arizona licensing (), providing premium workmanship across ZIP codes **85248 and 85249**.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               To ensure full safety compliance, we adhere strictly to the <Link href="/blog/ada-bathroom-requirements-arizona/" className="text-primary hover:underline font-medium">ADA requirements for Arizona bathrooms</Link>. We reinforce the wall framing by installing solid wood blocking behind the drywall or tile backing. This allows our heavy-duty grab bars to support up to 250 pounds of downward force, preventing failure when under stress. We also select floor materials that feature high coefficient of friction (COF 0.60 or higher per ANSI A326.3 standards), utilizing small-format slip-resistant mosaic tiling that increases traction under wet conditions.

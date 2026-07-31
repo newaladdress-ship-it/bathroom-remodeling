@@ -131,7 +131,7 @@ export default function OcotilloPage() {
       ]} />
       <ServiceSchema
         serviceName="Bathroom Remodeling in Ocotillo, Chandler"
-        serviceDescription="expert bathroom remodeling contractor serving Ocotillo, Chandler, AZ (85248). Walk-in shower installation, tub-to-shower conversions, and luxury master bath design."
+        serviceDescription="expert bathroom remodeling team serving Ocotillo, Chandler, AZ (85248). Walk-in shower installation, tub-to-shower conversions, and luxury master bath design."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-ocotillo/`}
       />
       <FAQSchema faqs={ocotilloFaqs} />
@@ -146,7 +146,7 @@ export default function OcotilloPage() {
         <ServiceHero
           title="Premium Bathroom Remodeling in Ocotillo, Chandler"
           subtitle="Elevate Your Home with Custom Luxury Designs"
-          description="Transform your Ocotillo home with the East Valley's premier bathroom contractor. From Mediterranean-style tiled master baths near Ocotillo Golf Club to sleek curbless walk-in showers, we deliver elite craftsmanship and  professional peace of mind."
+          description="Transform your Ocotillo home with the East Valley's premier bathroom specialists. From Mediterranean-style tiled master baths near Ocotillo Golf Club to sleek curbless walk-in showers, we deliver elite craftsmanship and  professional peace of mind."
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -242,7 +242,7 @@ export default function OcotilloPage() {
             <div className="text-center mb-12">
               <span className="text-primary text-sm font-medium tracking-wider uppercase">Why Choose ARZ</span>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                The Ocotillo Contractor You Can Trust
+                The Ocotillo Remodeling Team You Can Trust
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

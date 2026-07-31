@@ -73,11 +73,11 @@ export function createSeoDescription(subject: string, customDesc?: string): stri
     
     // Pad if too short
     if (description.length < SEO_DESCRIPTION_MIN) {
-      const suffix = " professional contractors, free estimates, and clear pricing.";
+      const suffix = " professional specialists, free estimates, and clear pricing.";
       if (description.length + suffix.length <= SEO_DESCRIPTION_MAX) {
         description = `${description}${suffix}`;
       } else {
-        const shorterSuffix = " professional contractors.";
+        const shorterSuffix = " professional specialists.";
         if (description.length + shorterSuffix.length <= SEO_DESCRIPTION_MAX) {
           description = `${description}${shorterSuffix}`;
         }

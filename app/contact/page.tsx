@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config"
 import { Phone, MapPin, Clock, Star } from "lucide-react"
 import { BreadcrumbSchema, FAQSchema, ContactPageSchema } from "@/components/seo/json-ld"
 
-export const metadata: Metadata = {title: "Free Bathroom Remodeling Quotes | Contact ARZ in Chandler",description: "Contact Chandler's top-rated bathroom remodeling contractor. Fill out our form or call (520) 569-3339 to schedule a free in-home consultation today.",
+export const metadata: Metadata = {title: "Free Bathroom Remodeling Quotes | Contact ARZ in Chandler",description: "Contact Chandler's top-rated bathroom remodeling specialist. Fill out our form or call (520) 569-3339 to schedule a free in-home consultation today.",
   openGraph: {title: "Free Bathroom Estimate | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore free bathroom estimate, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/contact/`,
     type: "website",
@@ -62,7 +62,7 @@ export default function ContactPage() {
                 Speak to a Project Supervisor in Chandler, AZ
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                Ready to get started? If you are looking for highly recommended <strong>expert bathroom contractors near me</strong> to deliver an <strong>affordable bathroom remodel near me</strong>, give us a call. We typically answer immediately or return voicemails within 2 hours. We&apos;ll schedule a free in-home visit to measure your space, discuss your design vision, and provide a written estimate with no obligation.
+                Ready to get started? If you are looking for highly recommended <strong>expert bathroom specialists near me</strong> to deliver an <strong>affordable bathroom remodel near me</strong>, give us a call. We typically answer immediately or return voicemails within 2 hours. We&apos;ll schedule a free in-home visit to measure your space, discuss your design vision, and provide a written estimate with no obligation.
               </p>
             </div>
           </div>

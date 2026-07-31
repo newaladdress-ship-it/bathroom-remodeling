@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {title: "professional Garage Conversions Chandler AZ | Custom ADUs",description: "Convert your garage into a master suite, bedroom, or home office in Chandler, AZ.  professional design-build contractor. Get a free custom estimate!",
+export const metadata: Metadata = {title: "professional Garage Conversions Chandler AZ | Custom ADUs",description: "Convert your garage into a master suite, bedroom, or home office in Chandler, AZ.  professional design-build team. Get a free custom estimate!",
   openGraph: {title: "Garage Conversion Baths | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore garage conversion baths, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/garage-conversion-chandler/`,
     type: "website",
@@ -91,7 +91,7 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "General Contractor Contractor",
+    title: "Licensed Remodeling Experts",
     body: "Fully professional for residential additions and structural construction, verified with the Arizona .",
   },
   {
@@ -154,7 +154,7 @@ export default function GarageConversionPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Garage Conversion", url: "https://arzhomeremodeling.com/garage-conversion-chandler/" } ]} />
       <ServiceSchema
         serviceName="Garage Conversion in Chandler, Arizona"
-        serviceDescription="residential contractor specializing in premium garage conversions in Chandler, AZ. Turnkey conversions into master suites, guest apartments, and home offices."
+        serviceDescription="residential specialists specializing in premium garage conversions in Chandler, AZ. Turnkey conversions into master suites, guest apartments, and home offices."
         serviceUrl={`${siteConfig.url}/garage-conversion-chandler/`}
       />
       <FAQSchema faqs={conversionFaqs} />
@@ -181,10 +181,10 @@ export default function GarageConversionPage() {
         <section className="py-16 lg:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Garages represent some of the most underutilized square footage in Arizona homes. If your cars are parked in the driveway and you are feeling cramped inside, a professional garage room conversion is the most cost-effective way to add substantial living space without the massive cost of building a detached addition. Whether you own a beautiful master-planned home in **Ocotillo** or custom property in **Fulton Ranch**, converting a garage delivers incredible layout functionality. If you've been looking for an expert **garage conversion chandler**, a trusted **garage remodeler chandler**, or a professional **room addition contractor in chandler az**, ARZ Home Remodeling is your premier local partner.
+              Garages represent some of the most underutilized square footage in Arizona homes. If your cars are parked in the driveway and you are feeling cramped inside, a professional garage room conversion is the most cost-effective way to add substantial living space without the massive cost of building a detached addition. Whether you own a beautiful master-planned home in **Ocotillo** or custom property in **Fulton Ranch**, converting a garage delivers incredible layout functionality. If you've been looking for an expert **garage conversion chandler**, a trusted **garage remodeler chandler**, or a professional **room addition specialist in chandler az**, ARZ Home Remodeling is your premier local partner.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we specialize in high-end, turnkey **garage conversions in Chandler, AZ**. We are a residential contracting firm professional under ****, managing all slab saw-cutting, subfloor plumbing routing, wall framing, high-density thermal insulation, HVAC mini-split installation, drywall, custom bathroom tiling, and trim work.
+              At ARZ Home Remodeling, we specialize in high-end, turnkey **garage conversions in Chandler, AZ**. We are a residential remodeling firm professional under ****, managing all slab saw-cutting, subfloor plumbing routing, wall framing, high-density thermal insulation, HVAC mini-split installation, drywall, custom bathroom tiling, and trim work.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               **Master Suite & Attached Casita Specialties:** Adding a luxury master suite requires meticulous plumbing execution. We cut and trench the existing concrete slab to connect toilet and shower drains directly into your home's main sewer stack. We pack structural wall framing with high-performance R-19 fiberglass insulation and ceiling joists with R-38 thermal batts. To ensure perfect year-round comfort, we install high-efficiency ductless mini-split systems for zone-controlled cooling, preventing main AC strain.

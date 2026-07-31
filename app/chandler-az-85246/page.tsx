@@ -27,7 +27,7 @@ export default function Chandler85246Page() {
           "@type": "PostalCode",
           "postalCode": "85246"
         },
-        "description": "Fast, turnkey bathroom remodeling contractors serving the central Chandler 85246 district.",
+        "description": "Fast, turnkey bathroom remodeling specialists serving the central Chandler 85246 district.",
       },
       {
         "@type": "FAQPage",
@@ -79,7 +79,7 @@ export default function Chandler85246Page() {
               Expert Bathroom Remodeling for Central Chandler Homeowners
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              A failing shower pan, crumbling grout, or a bathroom that simply hasn't been touched since the 1990s is a real problem that needs a real solution. We are general contractors who specialize in completely rebuilding bathrooms from the ground up, with a relentless focus on watertight construction, project efficiency, and permanent results you can actually live with.
+              A failing shower pan, crumbling grout, or a bathroom that simply hasn't been touched since the 1990s is a real problem that needs a real solution. We are remodeling specialists who specialize in completely rebuilding bathrooms from the ground up, with a relentless focus on watertight construction, project efficiency, and permanent results you can actually live with.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone call-to-action bg-primary text-white px-8 py-4 rounded-xl hover:bg-primary/90 transition shadow-lg font-bold text-lg w-full sm:w-auto flex items-center justify-center gap-2">
@@ -91,7 +91,7 @@ export default function Chandler85246Page() {
               </a>
             </div>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground font-medium">
-              <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> general contractor ()</div>
+              <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> Licensed Remodeling Specialists</div>
               <div className="flex items-center gap-2"><Droplets className="w-5 h-5 text-primary" /> Advanced Waterproofing Systems</div>
               <div className="flex items-center gap-2"><Clock className="w-5 h-5 text-primary" /> On-Time Project Completion</div>
             </div>
@@ -126,7 +126,7 @@ export default function Chandler85246Page() {
               <div className="bg-background p-8 rounded-2xl shadow-sm border border-border">
                 <h3 className="font-semibold text-2xl mb-4 text-foreground border-b border-border pb-4">Why Turnkey Efficiency Matters in Chandler:</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Hiring a separate plumber, a separate tile setter, and a separate electrician for a single bathroom remodel is a recipe for miscommunication, scheduling conflicts, and wildly unpredictable final costs. As a general contractor, we directly employ or tightly manage every single trade involved in your project, from rough plumbing to final glass installation.
+                  Hiring a separate plumber, a separate tile setter, and a separate electrician for a single bathroom remodel is a recipe for miscommunication, scheduling conflicts, and wildly unpredictable final costs. As a full-service team, we directly employ or tightly manage every single trade involved in your project, from rough plumbing to final glass installation.
                 </p>
                 <ul className="space-y-5">
                   <li className="flex gap-4 items-start">
@@ -229,7 +229,7 @@ export default function Chandler85246Page() {
                 {
                   num: 2,
                   title: "Materials Ordered, Timeline Locked",
-                  body: "Once you approve the project, we immediately order all specified materials. Unlike contractors who order as they go, we wait until every piece of tile, every fixture, every panel of glass, and every plumbing supply has arrived at our warehouse before we schedule your demolition date. This simple but critical step means your bathroom will never sit half-torn apart for weeks while we wait on backordered products."
+                  body: "Once you approve the project, we immediately order all specified materials. Unlike teams who order as they go, we wait until every piece of tile, every fixture, every panel of glass, and every plumbing supply has arrived at our warehouse before we schedule your demolition date. This simple but critical step means your bathroom will never sit half-torn apart for weeks while we wait on backordered products."
                 },
                 {
                   num: 3,

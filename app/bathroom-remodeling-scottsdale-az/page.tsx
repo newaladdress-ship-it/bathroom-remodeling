@@ -58,7 +58,7 @@ export default function ScottsdalePage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Scottsdale Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-scottsdale-az/" } ]} />
 <ServiceSchema
         serviceName="Luxury Bathroom Remodeling in Scottsdale, Arizona"
-        serviceDescription="expert bathroom contractor specializing in high-end renovations in Scottsdale, AZ. Custom showers, luxury master baths, and premium stone installation."
+        serviceDescription="expert bathroom remodeling team specializing in high-end renovations in Scottsdale, AZ. Custom showers, luxury master baths, and premium stone installation."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-scottsdale-az/`}
       />
       <FAQSchema faqs={scottsdaleFaqs} />

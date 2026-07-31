@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   title: "Cabinet & Countertop Installation Chandler, AZ | Free Quote",
   description: "Expert cabinet & countertop installation in Chandler, AZ. Custom cabinetry, quartz, granite & marble with precision craftsmanship. Get a free quote!",
   openGraph: {
-    title: "Vanity Cabinet Installs | Chandler AZ Bathroom Remodeling",
-    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore vanity cabinet installs, custom showers, tile, vanities, clear pricing, and free estimates.",
+    title: "Vanity Cabinet Installs | Chandler AZ Bathroom Renovation",
+    description: "Bathroom renovation service in Chandler, AZ by ARZ. Explore vanity cabinet installs, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/cabinet-countertop-installation/`,
     type: "website",
     images: [
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vanity Cabinet Installs | Chandler AZ Bathroom Remodeling",
-    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore vanity cabinet installs, custom showers, tile, vanities, clear pricing, and free estimates.",
+    title: "Vanity Cabinet Installs | Chandler AZ Bathroom Renovation",
+    description: "Bathroom renovation service in Chandler, AZ by ARZ. Explore vanity cabinet installs, custom showers, tile, vanities, clear pricing, and free estimates.",
     images: [`${siteConfig.url}/images/cabinet-countertop-hero.jpg`],
   },
   alternates: {
@@ -64,7 +64,7 @@ export default function CabinetCountertopInstallationPage() {
         <ServiceHero
           title="Cabinet & Countertop Installation in Chandler, AZ"
           subtitle="Custom Cabinetry, Quartz & Stone Vanity Solutions"
-          description="Refresh your bathroom with expertly crafted storage solutions and premium quartz, granite, marble, or solid-surface vanity tops. Our team delivers precise fitting, durable materials, and seamless finishes designed to enhance everyday functionality, style, and long-term value for Chandler homeowners."
+          description="Refresh your bathroom with expertly crafted storage solutions and premium quartz, granite, marble, or solid-surface vanity tops. Our team delivers precise fitting, durable materials, and seamless finishes designed to enhance everyday functionality, style, and long-term value for your bathroom renovation in Chandler."
           image="/images/projects/modern-double-vanity-chandler.webp"
           breadcrumbs={[
             { name: "Home", url: `${siteConfig.url}/` },
@@ -113,7 +113,7 @@ export default function CabinetCountertopInstallationPage() {
         <SubServices 
           title="Explore More Bathroom Services"
           subtitle="More Solutions"
-          description="From showers to tile work, we provide complete bathroom remodeling solutions in Chandler."
+          description="From showers to tile work, we provide complete bathroom renovation solutions in Chandler."
           services={otherServices.map(s => s.name)}
         />
 

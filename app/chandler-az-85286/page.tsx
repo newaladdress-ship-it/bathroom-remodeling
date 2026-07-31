@@ -27,7 +27,7 @@ export default function Chandler85286Page() {
           "@type": "PostalCode",
           "postalCode": "85286"
         },
-        "description": "Expert bathroom remodeling contractors specializing in master suite updates and tub-to-shower conversions in South Chandler.",
+        "description": "Expert bathroom remodeling specialists specializing in master suite updates and tub-to-shower conversions in South Chandler.",
       },
       {
         "@type": "FAQPage",
@@ -83,7 +83,7 @@ export default function Chandler85286Page() {
             </div>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground font-medium">
-              <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> general contractor ()</div>
+              <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> Licensed Remodeling Specialists</div>
               <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> Strict Dust Mitigation</div>
             </div>
           </div>
@@ -189,7 +189,7 @@ export default function Chandler85286Page() {
                 <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
                 <div>
                   <h3 className="text-2xl font-semibold mb-2">In-Home Consultation & Design</h3>
-                  <p className="text-muted-foreground leading-relaxed">We begin by visiting your South Chandler home to measure the space and discuss your vision. We talk through material options, layout changes, and functionality. Following the meeting, we provide a detailed, fixed-price proposal. Unlike other contractors, we refuse to use allowances that unexpectedly drive up your final bill. The price we quote is the price you pay.</p>
+                  <p className="text-muted-foreground leading-relaxed">We begin by visiting your South Chandler home to measure the space and discuss your vision. We talk through material options, layout changes, and functionality. Following the meeting, we provide a detailed, fixed-price proposal. Unlike other companies, we refuse to use allowances that unexpectedly drive up your final bill. The price we quote is the price you pay.</p>
                 </div>
               </div>
               <div className="flex gap-6 items-start">
@@ -257,8 +257,8 @@ export default function Chandler85286Page() {
               </div>
 
               <div className="bg-secondary/40 p-8 rounded-xl border border-border">
-                <h3 className="font-semibold text-xl text-foreground mb-3">Can you fix a shower that was built incorrectly by another contractor?</h3>
-                <p className="text-muted-foreground leading-relaxed">Yes, unfortunately, a large portion of our business involves "rescue operations." Many un-professional contractors or DIY enthusiasts fail to properly waterproof the shower pan, leading to severe leaks, black mold, and rotting subfloors within just a few years. We can come in, completely demolish the failed shower, remediate the structural damage, and rebuild the shower using the proper Schluter-Kerdi waterproofing systems so it lasts for decades.</p>
+                <h3 className="font-semibold text-xl text-foreground mb-3">Can you fix a shower that was built incorrectly by another installer?</h3>
+                <p className="text-muted-foreground leading-relaxed">Yes, unfortunately, a large portion of our business involves "rescue operations." Many inexperienced installers or DIY enthusiasts fail to properly waterproof the shower pan, leading to severe leaks, black mold, and rotting subfloors within just a few years. We can come in, completely demolish the failed shower, remediate the structural damage, and rebuild the shower using the proper Schluter-Kerdi waterproofing systems so it lasts for decades.</p>
               </div>
             </div>
             
@@ -277,7 +277,7 @@ export default function Chandler85286Page() {
               Ready to Transform Your South Chandler Home?
             </h2>
             <p className="text-xl mb-10 opacity-90 leading-relaxed">
-              Don't leave your most important spaces to chance. Partner with a professional, highly experienced local contractor who guarantees flawless execution, strict dust mitigation, and transparent pricing. Let's build the bathroom you've always wanted.
+              Don't leave your most important spaces to chance. Partner with a professional, highly experienced local specialist who guarantees flawless execution, strict dust mitigation, and transparent pricing. Let's build the bathroom you've always wanted.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone bg-white text-primary px-10 py-5 rounded-xl hover:bg-gray-100 transition shadow-2xl font-bold text-xl w-full sm:w-auto">

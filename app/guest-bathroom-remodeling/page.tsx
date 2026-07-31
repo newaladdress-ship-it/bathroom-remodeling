@@ -94,20 +94,20 @@ export default function GuestBathPage() {
         <ServiceHero
           title="Guest Bathroom Remodeling in Chandler, AZ"
           subtitle="High-Impact Updates for Small Bathrooms & Powder Rooms"
-          description="Make a lasting impression on your guests. We provide efficient, professional guest bathroom remodeling that combines style with practicality for your Chandler home."
+          description="Refresh your guest bathroom with custom remodeling solutions featuring stylish vanities, modern fixtures, durable flooring, updated lighting, and quality finishes that create a welcoming, functional space while adding comfort, convenience, and long-term value to your home."
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Guest Bathroom", url: `${siteConfig.url}/guest-bathroom-remodeling/` }]}
         />
 
         <ServiceProcess
-          title="Efficient Guest Bath Process"
-          subtitle="Quick & Clean"
-          description="We specialize in minimizing downtime so your secondary bathroom is back in service as quickly as possible."
+          title="Guest Bathroom Remodeling Process"
+          subtitle="Our Process"
+          description="Every guest bathroom remodel is carefully planned to improve functionality, maximize available space, and create a welcoming environment for family and visitors. From design consultation and material selection to installation and final inspection, our streamlined process delivers quality results with minimal disruption to your home."
           steps={[
-            { number: "01", icon: "PhoneCall", title: "Smart Planning", description: "We identify the most impactful changes to maximize your budget and space." },
-            { number: "02", icon: "Ruler", title: "Selection", description: "Quick-ship material options that keep your project on a tight schedule." },
-            { number: "03", icon: "ShieldCheck", title: "Rapid Install", description: "Focused construction phase with dedicated crews for smaller spaces." },
-            { number: "04", icon: "Sparkles", title: "Finish & Style", description: "Final details and styling so the room is guest-ready from day one." }
+            { number: "01", icon: "PhoneCall", title: "Planning & Design", description: "We evaluate your bathroom layout, discuss your goals, and recommend practical remodeling solutions that suit your space, style, and budget." },
+            { number: "02", icon: "Layout", title: "Material Selection", description: "Choose durable flooring, quality vanities, premium fixtures, lighting, and finish options that complement the rest of your home." },
+            { number: "03", icon: "Wrench", title: "Preparation & Installation", description: "Our team removes outdated materials, prepares plumbing and electrical systems as needed, and completes every installation with careful attention to detail." },
+            { number: "04", icon: "Sparkles", title: "Final Inspection", description: "We complete finishing work, verify functionality, and inspect every detail to ensure your remodeled guest bathroom is ready for everyday use." }
           ]}
         />
 
@@ -119,24 +119,79 @@ export default function GuestBathPage() {
         />
 
         <IssuesSolved
-          title="Small Space Solutions"
-          subtitle="Refreshing Your Guest Bath"
-          description="We solve the specific challenges of secondary bathrooms and powder rooms in Chandler homes."
-          issues={issues}
+          title="Issues We Solve with Guest Bathroom Remodeling"
+          subtitle="Common Problems Fixed"
+          description="Older guest bathrooms often have outdated finishes, limited storage, poor lighting, and inefficient layouts that reduce both comfort and functionality. Our remodeling solutions modernize these spaces with durable materials, practical storage, and improved design features."
+          issues={[
+            {
+              title: "Outdated Fixtures & Finishes",
+              description: "Replace builder-grade materials with modern vanities, premium flooring, updated lighting, and attractive finishes that create a fresh appearance.",
+            },
+            {
+              title: "Limited Storage",
+              description: "Add space-saving cabinetry, shelving, and vanity storage to keep guest essentials organized without overcrowding the room.",
+            },
+            {
+              title: "Poor Lighting & Ventilation",
+              description: "Improve visibility with modern lighting while enhancing ventilation to reduce humidity and help protect against moisture-related issues.",
+            },
+            {
+              title: "Inefficient Layout",
+              description: "Reconfigure the space to improve movement, functionality, and everyday convenience while making the room feel more open.",
+            },
+          ]}
         />
 
         <Benefits
-          title="Why Update Your Guest Bath?"
-          subtitle="Small Changes, Big Impact"
-          description="Discover the value of modernizing your home's secondary bathrooms."
-          benefits={benefitsList}
+          title="Benefits of Guest Bathroom Remodeling"
+          subtitle="Why It Matters"
+          description="Updating a guest bathroom enhances your home's comfort, improves functionality, and creates a more inviting experience for family and visitors. Modern materials and thoughtful design also help increase durability while adding long-term value to your property."
+          benefits={[
+            {
+              icon: "Sparkles",
+              title: "Welcoming Space",
+              description: "Create a clean, comfortable bathroom that leaves a positive impression on overnight guests and visitors.",
+            },
+            {
+              icon: "Layout",
+              title: "Improved Functionality",
+              description: "Modern layouts, updated fixtures, and practical storage solutions make the space easier to use every day.",
+            },
+            {
+              icon: "TrendingUp",
+              title: "Increased Home Value",
+              description: "A professionally remodeled guest bathroom improves overall appeal and contributes to stronger resale potential.",
+            },
+            {
+              icon: "ShieldCheck",
+              title: "Durable Materials",
+              description: "Quality flooring, moisture-resistant finishes, and modern fixtures provide reliable performance with less maintenance.",
+            },
+          ]}
         />
 
         <Tips
-          title="Small Bath Best Practices"
+          title="Guest Bathroom Remodeling Tips"
           subtitle="Expert Advice"
-          description="Design tips specifically for maximizing the impact of guest bathroom renovations."
-          tips={tipsList}
+          description="Simple design choices and routine maintenance can help keep your guest bathroom attractive, functional, and easy to maintain while maximizing the available space."
+          tips={[
+            {
+              title: "Choose Space-Saving Fixtures",
+              description: "Compact vanities and efficient storage solutions help maximize floor space without sacrificing functionality.",
+            },
+            {
+              title: "Use Durable, Moisture-Resistant Materials",
+              description: "Select porcelain tile, waterproof flooring, and quality finishes designed to withstand daily use and humidity.",
+            },
+            {
+              title: "Improve Lighting",
+              description: "Layer vanity lighting with overhead fixtures to create a bright, welcoming atmosphere for guests.",
+            },
+            {
+              title: "Keep Storage Organized",
+              description: "Include cabinets, shelves, or recessed storage to keep toiletries and towels neatly organized and easily accessible.",
+            },
+          ]}
         />
 
         <Testimonials />

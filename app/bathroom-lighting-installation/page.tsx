@@ -51,7 +51,7 @@ export default function BathroomLightingInstallationPage() {
         <ServiceHero
           title="Bathroom Lighting Installation in Chandler, Arizona"
           subtitle="Professional LED & Vanity Lighting in Chandler AZ"
-          description="Professional lighting installation with modern LED fixtures, vanity lights, and expert electrical work for beautiful, functional bathrooms."
+          description="Brighten your bathroom with professionally installed LED lighting, vanity lights, recessed fixtures, and modern illumination solutions designed to improve visibility, energy efficiency, and everyday comfort while enhancing the beauty and functionality of your remodeled space."
           image="/images/services/bathroom-tile-remodel-az.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -62,37 +62,37 @@ export default function BathroomLightingInstallationPage() {
         <ServiceProcess
           title="Bathroom Lighting Installation Process"
           subtitle="Our Process"
-          description="A precise electrical and lighting installation process that guarantees safe, shadow free, and code compliant results."
+          description="Every lighting installation is carefully planned to deliver balanced illumination, dependable performance, and lasting quality. From evaluating your existing layout to installing modern fixtures and completing final testing, our process ensures every lighting upgrade enhances both functionality and the overall appearance of your bathroom."
           steps={[
             {
               number: "01",
-              icon: "Ruler",
-              title: "Electrical Audit",
-              description: "We audit your existing circuits and calculate electrical loads to prevent breaker overloads.",
+              icon: "PhoneCall",
+              title: "Lighting Consultation",
+              description: "We evaluate your bathroom layout, identify lighting needs, and recommend fixture placement that improves visibility and complements your remodeling plans.",
             },
             {
               number: "02",
-              icon: "Shield",
-              title: "GFCI Safety Hookup",
-              description: "We install dedicated twenty amp circuits protected by Ground Fault Circuit Interrupters.",
+              icon: "Layout",
+              title: "Fixture Selection",
+              description: "Choose from LED vanity lights, recessed ceiling fixtures, decorative sconces, and accent lighting that match your preferred style and brightness.",
             },
             {
               number: "03",
-              icon: "Layout",
-              title: "Layered Layout",
-              description: "We map out recessed ceiling lights, side mirror task lights, and shower wet zone locations.",
+              icon: "Ruler",
+              title: "Preparation & Electrical Planning",
+              description: "Our team prepares the installation area, verifies electrical compatibility, and plans wiring for safe, efficient fixture installation.",
             },
             {
               number: "04",
-              icon: "Hammer",
-              title: "Wiring & Junctions",
-              description: "We pull new insulated wiring through moisture sealed junction boxes behind the drywall.",
+              icon: "Wrench",
+              title: "Professional Installation",
+              description: "Lighting fixtures are securely installed, aligned, and connected to provide reliable performance, balanced illumination, and a clean finished appearance.",
             },
             {
               number: "05",
               icon: "Sparkles",
-              title: "Fixture Mounting",
-              description: "We mount side sconces at eye level, seal recessed trims, and install smart dimmers.",
+              title: "Final Testing",
+              description: "Every fixture is tested to confirm proper operation, consistent brightness, and dependable performance before your project is complete.",
             },
           ]}
         />
@@ -105,23 +105,79 @@ export default function BathroomLightingInstallationPage() {
         />
 
         <IssuesSolved
-          title="Issues We Solve with Professional Lighting"
+          title="Issues We Solve with Bathroom Lighting"
           subtitle="Common Problems Fixed"
-          description="We address the most common bathroom electrical challenges Chandler homeowners face."
-          issues={serviceData.issues}
+          description="Poor lighting can make a bathroom feel smaller, reduce visibility, and affect everyday comfort. Our lighting solutions improve brightness, eliminate shadows, and create a balanced environment that enhances both functionality and visual appeal."
+          issues={[
+            {
+              title: "Dim or Uneven Lighting",
+              description: "Upgrade outdated fixtures with modern lighting that delivers brighter, more consistent illumination throughout the bathroom.",
+            },
+            {
+              title: "Poor Mirror Visibility",
+              description: "Professionally positioned vanity lighting reduces facial shadows, making grooming, shaving, and makeup application easier.",
+            },
+            {
+              title: "Outdated Fixtures",
+              description: "Replace aging fixtures with energy-efficient lighting that complements modern bathroom designs and improves overall aesthetics.",
+            },
+            {
+              title: "Moisture-Related Fixture Wear",
+              description: "Install moisture-resistant lighting designed to perform reliably in humid bathroom environments while reducing maintenance requirements.",
+            },
+          ]}
         />
 
         <Benefits
-          title="Benefits of Professional Lighting Installation"
-          subtitle="Why Choose Us"
-          benefits={serviceData.benefits}
+          title="Benefits of Professional Bathroom Lighting"
+          subtitle="Why It Matters"
+          description="Well-designed lighting improves more than visibility. It enhances comfort, creates a welcoming atmosphere, and highlights the design features that make your remodeled bathroom both functional and visually appealing."
+          benefits={[
+            {
+              icon: "Sparkles",
+              title: "Balanced Illumination",
+              description: "Layered lighting creates even brightness that improves comfort while reducing dark areas and unwanted shadows.",
+            },
+            {
+              icon: "Zap",
+              title: "Energy Efficiency",
+              description: "LED fixtures consume less electricity, provide long-lasting performance, and require less frequent replacement than traditional bulbs.",
+            },
+            {
+              icon: "Layout",
+              title: "Modern Bathroom Design",
+              description: "Thoughtfully selected lighting enhances mirrors, tile, vanities, and architectural features to create a refined appearance.",
+            },
+            {
+              icon: "ShieldCheck",
+              title: "Reliable Performance",
+              description: "Professionally installed fixtures provide dependable operation, improved safety, and long-term durability for everyday use.",
+            },
+          ]}
         />
 
         <Tips
-          title="Expert Bathroom Lighting Tips"
-          subtitle="Care & Maintenance"
-          description="Smart advice to maintain the efficiency and safety of your bathroom lighting fixtures."
-          tips={serviceData.tips}
+          title="Lighting Maintenance Tips"
+          subtitle="Expert Bathroom Lighting Tips"
+          description="Routine care helps maintain consistent brightness, extend fixture lifespan, and preserve the appearance of your bathroom lighting. Simple maintenance practices can keep your lighting system operating efficiently for years."
+          tips={[
+            {
+              title: "Clean Fixtures Regularly",
+              description: "Remove dust and moisture buildup from light fixtures and shades to maintain maximum brightness and a polished appearance.",
+            },
+            {
+              title: "Choose Energy-Efficient LEDs",
+              description: "LED bulbs provide long-lasting illumination, lower energy consumption, and reduced maintenance compared with traditional lighting.",
+            },
+            {
+              title: "Check Switches & Controls",
+              description: "Inspect dimmers and switches periodically to ensure smooth operation and consistent lighting performance.",
+            },
+            {
+              title: "Replace Worn Components Promptly",
+              description: "Replace damaged bulbs or aging fixtures before they affect brightness or overall functionality.",
+            },
+          ]}
         />
 
         <Testimonials />

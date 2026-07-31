@@ -351,7 +351,7 @@ const serviceContent: Record<string, ServiceDetail> = {
     seo: {
       title: "Shower Remodeling Chandler AZ - Local Experts",
       description:
-        "Professional shower remodeling in Chandler. Custom tile, frameless glass, and waterproof installations from trusted local contractors.",
+        "Professional shower remodeling in Chandler. Custom tile, frameless glass, and waterproof installations from trusted local specialists.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
@@ -671,7 +671,7 @@ const serviceContent: Record<string, ServiceDetail> = {
     seo: {
       title: "Bathtub Replacement Chandler AZ - Modern Solutions",
       description:
-        "Bathtub replacement in Chandler. Clean removal, updated plumbing, level installs, and fresh finishes from top contractors. Get a fast quote.",
+        "Bathtub replacement in Chandler. Clean removal, updated plumbing, level installs, and fresh finishes from top local experts. Get a fast quote.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
@@ -991,7 +991,7 @@ const serviceContent: Record<string, ServiceDetail> = {
     seo: {
       title: "Bathroom Tile Installation Services Chandler AZ - Expert Service",
       description:
-        "Expert bathroom tile installation services in Chandler, Arizona. Layout planning, waterproofing, precision installs, and sealed grout for showers, floors, and backsplashes by certified contractors.",
+        "Expert bathroom tile installation services in Chandler, Arizona. Layout planning, waterproofing, precision installs, and sealed grout for showers, floors, and backsplashes by certified specialists.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
@@ -1151,7 +1151,7 @@ const serviceContent: Record<string, ServiceDetail> = {
     seo: {
       title: "Bathroom Vanity Installation Services Chandler AZ - Professional Installation",
       description:
-        "Professional bathroom vanity installation services in Chandler, Arizona. Measurements, leveling, countertop install, plumbing hook-ups, and storage planning by local contractors.",
+        "Professional bathroom vanity installation services in Chandler, Arizona. Measurements, leveling, countertop install, plumbing hook-ups, and storage planning by local specialists.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
@@ -1209,7 +1209,7 @@ const serviceContent: Record<string, ServiceDetail> = {
     },
     seo: {
       title: "Master Bathroom Remodeling Services Chandler AZ - Premium Design",
-      description: "Top-rated master bathroom remodeling in Chandler, AZ. Custom design, luxury showers, and premium finishes by professional contractors."
+      description: "Top-rated master bathroom remodeling in Chandler, AZ. Custom design, luxury showers, and premium finishes by professional remodeling specialists."
     }
   },
   "tub-to-shower-conversion": {

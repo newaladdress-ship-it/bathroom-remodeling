@@ -30,7 +30,7 @@ const services = [
   {
     name: "Master Bathroom Remodel",
     href: "/master-bathroom-remodel/",
-    description: "Transform your master bathroom remodel with double vanities, custom storage, premium finishes, and spacious layouts designed for comfort, organization, and everyday luxury.",
+    description: "Transform your primary bath with double vanities, custom storage, premium finishes, and spacious layouts designed for comfort, organization, and everyday luxury.",
     icon: Sparkles,
     image: "/images/services/master-bathroom-remodel.jpg",
     alt: "Luxury master bathroom remodel with double vanity and soaking tub",
@@ -38,7 +38,7 @@ const services = [
   {
     name: "Small Bathroom Remodeling",
     href: "/small-bathroom-remodeling/",
-    description: "Make every inch count with small bathroom remodeling, featuring smart layouts, compact storage, space-saving fixtures, and practical designs that maximize functionality.",
+    description: "Make every inch count with compact bathroom renovation solutions, featuring smart layouts, compact storage, space-saving fixtures, and practical designs that maximize functionality.",
     icon: LayoutGrid,
     image: "/images/services/small-bathroom-remodel.jpg",
     alt: "Small bathroom remodel with space-saving floating vanity and modern tile",
@@ -46,7 +46,7 @@ const services = [
   {
     name: "Guest Bathroom Remodeling",
     href: "/guest-bathroom-remodeling/",
-    description: "Upgrade your guest bathroom remodeling project with stylish fixtures, elegant finishes, functional layouts, and welcoming designs that leave a lasting impression on visitors.",
+    description: "Upgrade your guest bath with stylish fixtures, elegant finishes, functional layouts, and welcoming designs that leave a lasting impression on visitors.",
     icon: Users,
     image: "/images/services/guest-bathroom-remodeling.jpg",
     alt: "Remodeled guest bathroom with fresh tile, new vanity, and modern fixtures",
@@ -54,7 +54,7 @@ const services = [
   {
     name: "Luxury Bathroom Remodeling",
     href: "/luxury-bathroom-remodeling/",
-    description: "Experience luxury bathroom remodeling with premium materials, quartz countertops, designer fixtures, custom cabinetry, and spa-inspired features tailored to your lifestyle.",
+    description: "Experience luxury bath design with premium materials, quartz countertops, designer fixtures, custom cabinetry, and spa-inspired features tailored to your lifestyle.",
     icon: Sparkles,
     image: "/images/services/luxury-bathroom-remodeling.jpg",
     alt: "Luxury bathroom remodel with spa shower, freestanding tub, and designer tile",
@@ -62,7 +62,7 @@ const services = [
   {
     name: "ADA Bathroom Remodeling",
     href: "/ada-bathroom-remodeling/",
-    description: "Improve safety with ADA bathroom remodeling that includes barrier-free layouts, universal design features, accessible fixtures, and practical solutions for comfortable everyday living.",
+    description: "Improve safety with accessible bathroom renovations that include barrier-free layouts, universal design features, accessible fixtures, and practical solutions for comfortable everyday living.",
     icon: Accessibility,
     image: "/images/services/ada-bathroom-remodeling.jpg",
     alt: "ADA accessible bathroom with grab bars, curbless shower, and safety features",
@@ -78,7 +78,7 @@ const services = [
   {
     name: "Bathroom Flooring Installation",
     href: "/bathroom-flooring-installation/",
-    description: "Upgrade your bathroom with bathroom flooring installation using waterproof flooring, porcelain tile, and durable surfaces designed for moisture resistance and everyday performance.",
+    description: "Upgrade your space with professional waterproof flooring installation, using porcelain tile, luxury plank, and durable surfaces designed for moisture resistance.",
     icon: ArrowUpDown,
     image: "/images/services/bathroom-flooring-installation.jpg",
     alt: "Bathroom flooring installation with large format porcelain tiles in modern bathroom",

@@ -17,10 +17,10 @@ import SubServices from "@/components/sub-services";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Luxury Bathroom Remodeling Chandler AZ | Custom Spas | ARZ",
+  title: "Luxury Bathroom Renovation Chandler AZ | Custom Spas | ARZ",
   description: "Experience premium luxury bathroom design in Chandler, AZ. High-end master suites, custom steam showers, marble tiling, and smart layouts. Call today!",
   openGraph: {
-    title: "Luxury Bath Remodel | Chandler AZ Bathroom Remodeling",
+    title: "Luxury Bath Remodel | Chandler AZ Bathroom Renovation",
     description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore luxury bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/luxury-bathroom-remodeling/`,
     type: "website",
@@ -29,13 +29,13 @@ export const metadata: Metadata = {
         url: `${siteConfig.url}/images/og-master-suite.png`,
         width: 1200,
         height: 630,
-        alt: "ARZ Home Remodeling - High-End Luxury Bathroom Remodeling in Chandler, AZ",
+        alt: "ARZ Home Remodeling - High-End Luxury Bathroom Renovation in Chandler, AZ",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxury Bath Remodel | Chandler AZ Bathroom Remodeling",
+    title: "Luxury Bath Remodel | Chandler AZ Bathroom Renovation",
     description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore luxury bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
     images: [`${siteConfig.url}/images/og-master-suite.png`],
   },
@@ -84,7 +84,7 @@ export default function LuxuryPage() {
     <>
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Luxury Bathroom Remodeling", url: "https://arzhomeremodeling.com/luxury-bathroom-remodeling/" } ]} />
       <ServiceSchema 
-        serviceName="Luxury Bathroom Remodeling in Chandler" 
+        serviceName="Luxury Bathroom Renovation in Chandler" 
         serviceDescription="Premium high end bathroom renovations in Chandler, AZ. Spa inspired master baths, custom tile, and luxury fixtures." 
         serviceUrl={`${siteConfig.url}/luxury-bathroom-remodeling/`} 
       />
@@ -92,7 +92,7 @@ export default function LuxuryPage() {
       <Header />
       <main>
         <ServiceHero
-          title="Luxury Bathroom Remodeling in Chandler, AZ"
+          title="Luxury Bathroom Renovation in Chandler, AZ"
           subtitle="Bespoke Design & Master Suite Transformations"
           description="Elevate your home with a custom-designed luxury bathroom. We specialize in high-end materials, spa-inspired features, and master craftsmanship for Chandler's most prestigious communities."
           image="/images/hero/luxury-shower-remodel-chandler.webp"
@@ -100,7 +100,7 @@ export default function LuxuryPage() {
         />
 
         <ServiceProcess
-          title="The Luxury Remodeling Experience"
+          title="The Luxury Renovation Experience"
           subtitle="Our Process"
           description="Our process ensures every detail of your high end bathroom is executed with surgical precision."
           steps={[

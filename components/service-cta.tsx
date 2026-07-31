@@ -29,7 +29,7 @@ export default function ServiceCTA({
               size="lg"
               variant="secondary"
               className="bg-background text-foreground hover:bg-background/90 min-w-[180px]"
-              aria-label="Call our bathroom remodeling experts now"
+              aria-label="Call our bathroom renovation experts now"
             >
               <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                 <Phone className="w-5 h-5" aria-hidden="true" />

@@ -23,7 +23,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Home Remodeling Contractors The Islands AZ | ARZ Home",
+  title: "Home Remodeling Services The Islands AZ | ARZ Home",
   description: "Professional home, kitchen, and bathroom remodeling in The Islands, AZ. Get your custom renovation with a 2-year warranty. Call today!",
   openGraph: {
     title: "Home & Bath Remodeling The Islands AZ | ARZ",
@@ -137,7 +137,7 @@ export default function TheIslandsPage() {
       ]} />
       <ServiceSchema
         serviceName="Home & Bathroom Remodeling in The Islands, AZ"
-        serviceDescription="professional general remodeling contractor serving The Islands, Chandler, AZ. Custom walk-in showers, open-concept kitchens, custom cabinets, and full home remodeling."
+        serviceDescription="professional general remodeling team serving The Islands, Chandler, AZ. Custom walk-in showers, open-concept kitchens, custom cabinets, and full home remodeling."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-the-islands/`}
       />
       <FAQSchema faqs={faqData} />
@@ -152,7 +152,7 @@ export default function TheIslandsPage() {
         <ServiceHero
           title="Premium Home & Bathroom Remodeling in The Islands, AZ"
           subtitle="Exceptional Craftsmanship for Stunning Lakefront Properties"
-          description="Elevate your living space with the East Valley's premier remodeling contractor. Serving The Islands with high-end bathroom remodels, custom walk-in showers, open-concept kitchens, and complete home renovations."
+          description="Elevate your living space with the East Valley's premier remodeling specialists. Serving The Islands with high-end bathroom remodels, custom walk-in showers, open-concept kitchens, and complete home renovations."
           image="/images/services/chandler-bathroom-remodel.jpg"
           titleClassName="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight"
           breadcrumbs={[
@@ -197,7 +197,7 @@ export default function TheIslandsPage() {
               Remodeling Custom Homes in The Islands Area
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Home renovations in The Islands require a contractor with deep local knowledge of the community's unique home designs, HOA architectural guidelines, and construction styles. Properties near McQueen Road, Warner Road, and Elliot Road feature Mediterranean-style architecture, custom contemporary builds, and waterfront townhomes. Upgrading these properties requires a careful, professional approach, particularly when addressing aging plumbing lines, slab foundations, and structural framing.
+              Home renovations in The Islands require a remodeling team with deep local knowledge of the community's unique home designs, HOA architectural guidelines, and construction styles. Properties near McQueen Road, Warner Road, and Elliot Road feature Mediterranean-style architecture, custom contemporary builds, and waterfront townhomes. Upgrading these properties requires a careful, professional approach, particularly when addressing aging plumbing lines, slab foundations, and structural framing.
             </p>
             
             <h3 className="font-serif text-xl font-semibold mb-4 text-foreground">
@@ -283,7 +283,7 @@ export default function TheIslandsPage() {
             <div className="text-center mb-12">
               <span className="text-primary text-sm font-medium tracking-wider uppercase">Why Choose ARZ</span>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Your Trusted The Islands Contractor
+                Your Trusted The Islands Remodeling Experts
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

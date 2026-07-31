@@ -26,7 +26,7 @@ export default function AboutPreview() {
               About Us
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight mb-6">
-              Our Local <span className="text-primary">Bathroom Remodeling</span> Team in Chandler, AZ
+              Our Local <span className="text-primary">Bathroom Renovation</span> Team in Chandler, AZ
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
               We help Chandler homeowners transform outdated bathrooms into modern, functional spaces designed for everyday living. Every project is completed with meticulous attention to detail, clear communication, and quality workmanship.

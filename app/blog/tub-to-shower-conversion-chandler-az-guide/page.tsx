@@ -35,7 +35,7 @@ const headings = [
   { id: "costs", text: "Real Cost Ranges for Tub-to-Shower Conversions in Chandler, AZ", level: 2 },
   { id: "technical", text: "Technical and Code Requirements for Chandler Conversions", level: 2 },
   { id: "hard-water", text: "Designing for Chandler's Hard Water Challenges", level: 2 },
-  { id: "vetting", text: "Contractor Vetting Checklist", level: 2 },
+  { id: "vetting", text: "Remodeling Team Vetting Checklist", level: 2 },
   { id: "faqs", text: "5 Frequently Asked Questions (People Also Ask)", level: 2 },
   { id: "estimate", text: "Schedule Your Free In-Home Estimate", level: 2 }
 ]
@@ -50,7 +50,7 @@ export default function StandaloneBlogPost() {
     <>
       <BlogArticleJsonLd
         title="Tub-to-Shower Conversion in Chandler, AZ: Everything You Need to Know Before You Start"
-        description="Thinking about converting your bathtub to a walk-in shower? Read our complete Chandler guide covering design choices, waterproofing, permits, costs, and contractor vetting."
+        description="Thinking about converting your bathtub to a walk-in shower? Read our complete Chandler guide covering design choices, waterproofing, permits, costs, and remodeling team vetting."
         url={`${siteConfig.url}/blog/tub-to-shower-conversion-chandler-az-guide/`}
         image="/images/services/chandler-bathroom-remodel.jpg"
         datePublished="2026-06-07T08:00:00Z"
@@ -293,7 +293,7 @@ export default function StandaloneBlogPost() {
 
                     <h3>1. Expanding the Drain Line (The 2-Inch Rule)</h3>
                     <p>
-                      Under the International Residential Code (IRC) enforced by the City of Chandler, a bathtub is allowed to drain through a 1.5-inch pipe. However, a shower requires a minimum <strong>2-inch drain pipe</strong> to prevent water from backing up and overflowing. During demolition, a professional contractor must saw-cut the concrete slab (or access the subfloor) to expand the drain line and trap to 2 inches. Attempting to drain a shower through a 1.5-inch tub drain is a code violation and a recipe for standing water.
+                      Under the International Residential Code (IRC) enforced by the City of Chandler, a bathtub is allowed to drain through a 1.5-inch pipe. However, a shower requires a minimum <strong>2-inch drain pipe</strong> to prevent water from backing up and overflowing. During demolition, a professional specialist must saw-cut the concrete slab (or access the subfloor) to expand the drain line and trap to 2 inches. Attempting to drain a shower through a 1.5-inch tub drain is a code violation and a recipe for standing water.
                     </p>
 
                     <h3>2. Relocating and Upgrading Valves</h3>
@@ -326,15 +326,15 @@ export default function StandaloneBlogPost() {
 
                     <hr />
 
-                    <h2 id="vetting">Contractor Vetting Checklist</h2>
+                    <h2 id="vetting">Remodeling Team Vetting Checklist</h2>
                     <p>
-                      Hiring the right team is the single most important decision you will make for your project. A poorly installed shower pan can leak behind your walls, causing thousands of dollars in structural damage before you notice it. Use this checklist to vet your remodeling contractors:
+                      Hiring the right team is the single most important decision you will make for your project. A poorly installed shower pan can leak behind your walls, causing thousands of dollars in structural damage before you notice it. Use this checklist to vet your remodeling specialists:
                     </p>
                     <ul className="space-y-4 list-none pl-0">
                       <li className="flex items-start gap-3">
                         <span className="inline-flex items-center justify-center w-5 h-5 border-2 border-primary rounded text-primary font-bold text-xs shrink-0 mt-1">✓</span>
                         <div>
-                          <strong>Active Arizona  License:</strong> Ensure the contractor holds an active license with the Arizona Registrar of Contractors. Unlicensed handymen cannot legally perform plumbing modifications or pull city permits. ARZ Home Remodeling is professional under <strong></strong>. You can verify any contractor at the <a href="https://roc.az.gov" target="_blank" rel="noopener noreferrer">Arizona  Website</a>.
+                          <strong>Active Arizona License:</strong> Ensure the team holds an active license with the Arizona Registrar of Contractors. Unlicensed handymen cannot legally perform plumbing modifications or pull city permits. ARZ Home Remodeling is professional under <strong></strong>. You can verify any firm at the <a href="https://roc.az.gov" target="_blank" rel="noopener noreferrer">Arizona ROC Website</a>.
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
@@ -346,7 +346,7 @@ export default function StandaloneBlogPost() {
                       <li className="flex items-start gap-3">
                         <span className="inline-flex items-center justify-center w-5 h-5 border-2 border-primary rounded text-primary font-bold text-xs shrink-0 mt-1">✓</span>
                         <div>
-                          <strong>City Permits and Inspections:</strong> Verify that the contractor will submit plans and pull the required plumbing and building permits through the <strong>City of Chandler Development Services Dept</strong> (located at 215 E Buffalo St). Never pull permits yourself as an &quot;owner-builder.&quot;
+                          <strong>City Permits and Inspections:</strong> Verify that the team will submit plans and pull the required plumbing and building permits through the <strong>City of Chandler Development Services Dept</strong> (located at 215 E Buffalo St). Never pull permits yourself as an &quot;owner-builder.&quot;
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
@@ -364,7 +364,7 @@ export default function StandaloneBlogPost() {
                       <li className="flex items-start gap-3">
                         <span className="inline-flex items-center justify-center w-5 h-5 border-2 border-primary rounded text-primary font-bold text-xs shrink-0 mt-1">✓</span>
                         <div>
-                          <strong>Written Workmanship Warranty:</strong> Choose a contractor who stands behind their work. We back all of our custom bathroom renovations with a <strong>2-year written workmanship warranty</strong>.
+                          <strong>Written Workmanship Warranty:</strong> Choose a remodeling team who stands behind their work. We back all of our custom bathroom renovations with a <strong>2-year written workmanship warranty</strong>.
                         </div>
                       </li>
                     </ul>
@@ -395,7 +395,7 @@ export default function StandaloneBlogPost() {
 
                     <h3 className="font-bold text-foreground">5. Do I need to get HOA approval for a bathroom remodel in Chandler?</h3>
                     <p>
-                      If you are only remodeling the interior of your home, you do not need architectural approval from your Homeowners Association (HOA). However, many master-planned communities in Chandler (like Fulton Ranch, Ocotillo, and Warner Ranch) have strict regulations regarding construction dumpsters, working hours, and contractor parking. Your contractor must coordinate with these rules to avoid fines.
+                      If you are only remodeling the interior of your home, you do not need architectural approval from your Homeowners Association (HOA). However, many master-planned communities in Chandler (like Fulton Ranch, Ocotillo, and Warner Ranch) have strict regulations regarding construction dumpsters, working hours, and crew parking. Your remodeling team must coordinate with these rules to avoid fines.
                     </p>
 
                     <hr />

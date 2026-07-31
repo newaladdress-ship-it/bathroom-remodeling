@@ -92,22 +92,22 @@ export default function AccessibleBathroomPage() {
       <Header />
       <main>
         <ServiceHero
-          title="Handicap Accessible Bathroom Remodels in Chandler, AZ"
+          title="Handicap Accessible Bathroom Remodeling in Chandler, AZ"
           subtitle="Handicap Accessible Bathroom Remodeling"
-          description="Create a safe, beautiful bathroom designed for accessibility and aging-in-place. ADA-compliant renovations with modern design and professional installation."
+          description="Create a safer, more comfortable bathroom with accessible remodeling solutions featuring barrier-free showers, walk-in tubs, grab bars, slip-resistant flooring, and thoughtful layouts designed to support independent living while maintaining modern style and lasting functionality."
           image="/images/projects/handicap-accessible-shower.avif"
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Accessible Bathrooms", url: `${siteConfig.url}/handicap-accessible-bathroom/` }]}
         />
 
         <ServiceProcess
-          title="Our Accessible Bathroom Process"
-          subtitle="ADA-Compliant & Safe"
-          description="We ensure every accessible bathroom remodel meets ADA standards and your personal needs."
+          title="Accessible Bathroom Remodeling Process"
+          subtitle="Our Process"
+          description="Every accessible bathroom remodel begins with understanding your mobility needs, daily routine, and long-term goals. Our structured process combines thoughtful planning, accessible design, quality materials, and professional installation to create a safe, functional bathroom that supports independence while complementing the style of your home."
           steps={[
-            { number: "01", icon: "PhoneCall", title: "Accessibility Assessment", description: "We evaluate your current bathroom and identify accessibility barriers and opportunities." },
-            { number: "02", icon: "Ruler", title: "ADA-Compliant Design", description: "We design a bathroom that exceeds ADA requirements while reflecting your style preferences." },
-            { number: "03", icon: "ShieldCheck", title: "Permitting & Inspection", description: "We handle all Chandler city permits and manage the inspection process for compliance." },
-            { number: "04", icon: "Sparkles", title: "Expert Installation", description: "Professional contractors install grab bars, fixtures, and features to exact ADA specifications." }
+            { number: "01", icon: "PhoneCall", title: "Accessibility Consultation", description: "We evaluate your existing bathroom, discuss mobility requirements, and recommend practical accessibility improvements tailored to your space and lifestyle." },
+            { number: "02", icon: "Layout", title: "Accessible Design Planning", description: "Select barrier-free showers, walk-in tubs, grab bars, comfort-height fixtures, accessible vanities, and slip-resistant flooring that improve safety without sacrificing appearance." },
+            { number: "03", icon: "Wrench", title: "Preparation & Installation", description: "Our team prepares the space, completes plumbing and structural modifications when needed, and installs every feature with precision and attention to detail." },
+            { number: "04", icon: "Sparkles", title: "Final Inspection", description: "We verify functionality, safety, and finish quality to ensure your newly remodeled accessible bathroom is ready for comfortable everyday use." }
           ]}
         />
 
@@ -119,24 +119,79 @@ export default function AccessibleBathroomPage() {
         />
 
         <IssuesSolved
-          title="Accessibility Challenges Fixed"
-          subtitle="Safety & Comfort Solutions"
-          description="We eliminate physical barriers to create safer, easy-to-use bathrooms for Chandler families."
-          issues={issues}
+          title="Accessibility Challenges We Solve"
+          subtitle="Common Problems Fixed"
+          description="Bathrooms with outdated layouts or limited accessibility can make everyday routines difficult and increase the risk of slips and falls. Our remodeling solutions improve safety, mobility, and convenience while creating a welcoming environment that supports independent living."
+          issues={[
+            {
+              title: "Difficult Tub Access",
+              description: "Replace traditional bathtubs with barrier-free showers or walk-in tubs that provide safer entry and greater accessibility.",
+            },
+            {
+              title: "Slippery Flooring",
+              description: "Install slip-resistant flooring and secure grab bars to improve stability and reduce the risk of falls.",
+            },
+            {
+              title: "Limited Mobility Space",
+              description: "Reconfigure bathroom layouts with wider clearances and accessible fixtures that improve movement for wheelchairs and mobility aids.",
+            },
+            {
+              title: "Hard-to-Reach Fixtures",
+              description: "Upgrade to comfort-height toilets, accessible vanities, and easy-to-operate faucets that simplify daily routines.",
+            },
+          ]}
         />
 
         <Benefits
-          title="Benefits of Accessible Bathroom Design"
-          subtitle="Safety Meets Luxury"
-          description="Discover how ADA-compliant updates protect independence and add home value."
-          benefits={benefitsList}
+          title="Benefits of Accessible Bathroom Remodeling"
+          subtitle="Why It Matters"
+          description="A professionally designed accessible bathroom improves safety, comfort, and independence while making everyday tasks easier for individuals of all ages and mobility levels. Modern accessibility features also provide long-term value and greater confidence at home."
+          benefits={[
+            {
+              icon: "Accessibility",
+              title: "Greater Independence",
+              description: "Thoughtfully designed layouts support safer daily routines while reducing reliance on assistance.",
+            },
+            {
+              icon: "ShieldCheck",
+              title: "Improved Safety",
+              description: "Slip-resistant surfaces, grab bars, and accessible fixtures help reduce fall risks throughout the bathroom.",
+            },
+            {
+              icon: "Clock",
+              title: "Aging-in-Place Comfort",
+              description: "Accessible upgrades allow homeowners to remain comfortable in their homes as their needs change over time.",
+            },
+            {
+              icon: "Sparkles",
+              title: "Modern Design",
+              description: "Today's accessibility features blend seamlessly with contemporary finishes to create a bathroom that's both functional and visually appealing.",
+            },
+          ]}
         />
 
         <Tips
-          title="Accessible Remodeling Insights"
+          title="Accessible Bathroom Remodeling Tips"
           subtitle="Expert Best Practices"
-          description="Essential guidelines for designing a safe and beautiful handicap accessible bathroom."
-          tips={tipsList}
+          description="Planning ahead and selecting the right accessibility features can improve comfort, simplify daily routines, and help your remodeled bathroom continue meeting your needs well into the future."
+          tips={[
+            {
+              title: "Choose Barrier-Free Entry",
+              description: "Curbless showers provide easier access for wheelchairs, walkers, and anyone with limited mobility.",
+            },
+            {
+              title: "Install Slip-Resistant Flooring",
+              description: "Textured porcelain tile or other slip-resistant surfaces improve stability while maintaining a clean, modern appearance.",
+            },
+            {
+              title: "Plan for Future Accessibility",
+              description: "Include reinforced wall blocking during remodeling so grab bars can be installed or repositioned if needs change later.",
+            },
+            {
+              title: "Improve Lighting & Visibility",
+              description: "Bright LED lighting and well-placed fixtures increase visibility and make the bathroom safer for everyday use.",
+            },
+          ]}
         />
 
         <Testimonials />

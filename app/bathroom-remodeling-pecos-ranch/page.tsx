@@ -23,7 +23,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Home Remodeling Contractors Pecos Ranch AZ | ARZ Home",
+  title: "Home Remodeling Services Pecos Ranch AZ | ARZ Home",
   description: "Professional home, kitchen, and bathroom remodeling in Pecos Ranch, AZ. Get your custom renovation with a 2-year warranty. Call today!",
   openGraph: {
     title: "Home & Bath Remodeling Pecos Ranch AZ | ARZ",
@@ -137,7 +137,7 @@ export default function PecosRanchPage() {
       ]} />
       <ServiceSchema
         serviceName="Home & Bathroom Remodeling in Pecos Ranch, AZ"
-        serviceDescription="professional general remodeling contractor serving Pecos Ranch, Chandler, AZ. Custom walk-in showers, open-concept kitchens, custom cabinets, and full home remodeling."
+        serviceDescription="professional general remodeling team serving Pecos Ranch, Chandler, AZ. Custom walk-in showers, open-concept kitchens, custom cabinets, and full home remodeling."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-pecos-ranch/`}
       />
       <FAQSchema faqs={faqData} />
@@ -152,7 +152,7 @@ export default function PecosRanchPage() {
         <ServiceHero
           title="Premium Home & Bathroom Remodeling in Pecos Ranch, AZ"
           subtitle="Exceptional Craftsmanship for Beautiful Master-Planned Properties"
-          description="Elevate your living space with the East Valley's premier remodeling contractor. Serving Pecos Ranch with high-end bathroom remodels, custom walk-in showers, open-concept kitchens, and complete home renovations."
+          description="Elevate your living space with the East Valley's premier remodeling specialists. Serving Pecos Ranch with high-end bathroom remodels, custom walk-in showers, open-concept kitchens, and complete home renovations."
           image="/images/services/chandler-bathroom-remodel.jpg"
           titleClassName="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight"
           breadcrumbs={[
@@ -197,7 +197,7 @@ export default function PecosRanchPage() {
               Remodeling Custom Homes in the Pecos Ranch Area
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Home renovation projects in Pecos Ranch require a contractor who understands the local geography, home styles, and structural layouts. Properties near Dobson Road, Pecos Road, and the Price Road Corridor feature classic Mediterranean-style architecture, stucco finishes, and concrete tile roofs. Upgrading these properties requires a careful, professional approach, particularly when addressing aging plumbing lines, slab foundations, and structural framing.
+              Home renovation projects in Pecos Ranch require a remodeling team who understands the local geography, home styles, and structural layouts. Properties near Dobson Road, Pecos Road, and the Price Road Corridor feature classic Mediterranean-style architecture, stucco finishes, and concrete tile roofs. Upgrading these properties requires a careful, professional approach, particularly when addressing aging plumbing lines, slab foundations, and structural framing.
             </p>
             
             <h3 className="font-serif text-xl font-semibold mb-4 text-foreground">
@@ -283,7 +283,7 @@ export default function PecosRanchPage() {
             <div className="text-center mb-12">
               <span className="text-primary text-sm font-medium tracking-wider uppercase">Why Choose ARZ</span>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Your Trusted Pecos Ranch Contractor
+                Your Trusted Pecos Ranch Remodeling Experts
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   title: "Bathroom Flooring Installation Chandler AZ | Custom Tile",
   description: "Expert bathroom flooring installation in Chandler, AZ. Specialized in waterproof tile, luxury vinyl plank, and slip-resistant floors. Call for a quote!",
   openGraph: {
-    title: "Bathroom Flooring Install | Chandler AZ Bathroom Remodeling",
-    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bathroom flooring install, custom showers, tile, vanities, clear pricing, and free estimates.",
+    title: "Bathroom Flooring Install | Chandler AZ Bathroom Renovation",
+    description: "Bathroom renovation service in Chandler, AZ by ARZ. Explore bathroom flooring install, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/bathroom-flooring-installation/`,
     type: "website",
   },
@@ -51,7 +51,7 @@ export default function BathroomFlooringInstallationPage() {
         <ServiceHero
           title="Bathroom Flooring Installation in Chandler, AZ"
           subtitle="Premium Tile, Stone & Waterproof Flooring Solutions"
-          description="Upgrade your bathroom with professionally installed tile, stone, porcelain, or luxury vinyl flooring designed to withstand daily moisture and wear. Our experienced team delivers precise installation, lasting durability, and clean, modern finishes that enhance comfort, style, and long-term value for homeowners throughout Chandler."
+          description="Upgrade your bathroom with professionally installed tile, stone, porcelain, or luxury vinyl flooring designed to withstand daily moisture and wear. Our experienced team delivers precise installation, lasting durability, and clean, modern finishes that enhance comfort, style, and long-term value for your bathroom renovation project in Chandler."
           image="/images/services/bathroom-flooring-chandler.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -62,7 +62,7 @@ export default function BathroomFlooringInstallationPage() {
         <ServiceProcess
           title="Precision Tile & Surface Installation Process"
           subtitle="Our Process"
-          description="A carefully planned installation workflow designed to create a level, moisture-resistant, and long-lasting foundation that performs beautifully in Chandler homes."
+          description="A carefully planned installation workflow designed to create a level, moisture-resistant, and long-lasting foundation for your bathroom renovation that performs beautifully in Chandler homes."
           steps={[
             {
               number: "01",
@@ -100,14 +100,14 @@ export default function BathroomFlooringInstallationPage() {
         <SubServices 
           title="Related Bathroom Services" 
           subtitle="More Options"
-          description="Looking for something else? We offer a variety of renovation solutions."
+          description="Looking for something else? We offer a variety of bathroom renovation solutions."
           services={otherServices.map(s => s.name)} 
         />
 
         <IssuesSolved
           title="Common Surface Problems We Resolve"
           subtitle="Issues We Solve"
-          description="From cracked tile to moisture-related damage, we provide lasting solutions that improve durability, safety, and everyday performance for Chandler homeowners."
+          description="From cracked tile to moisture-related damage, our bathroom renovation experts provide lasting solutions that improve durability, safety, and everyday performance for Chandler homeowners."
           issues={[
             {
               title: "Cracked Tile Surfaces",
@@ -131,7 +131,7 @@ export default function BathroomFlooringInstallationPage() {
         <Benefits
           title="Built for Long-Term Performance"
           subtitle="Why Choose Us"
-          description="Every installation is completed with premium materials and proven techniques that help your new surface stay attractive, durable, and easy to maintain for years."
+          description="Every installation is completed with premium materials and proven techniques that help your new bathroom renovation stay attractive, durable, and easy to maintain for years."
           benefits={[
             {
               icon: "Droplets",
@@ -159,7 +159,7 @@ export default function BathroomFlooringInstallationPage() {
         <Tips
           title="Expert Care Tips for Long-Lasting Tile & Stone Surfaces"
           subtitle="Care & Maintenance"
-          description="Simple maintenance practices can help preserve the appearance, durability, and moisture resistance of your newly installed bathroom materials for years to come."
+          description="Simple maintenance practices can help preserve the appearance, durability, and moisture resistance of your newly installed bathroom renovation materials for years to come."
           tips={[
             {
               title: "Choose Low-Absorption Materials",

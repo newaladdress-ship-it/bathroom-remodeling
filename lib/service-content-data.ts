@@ -174,74 +174,74 @@ export const serviceContent: Record<string, ServiceContentData> = {
     benefits: [
       {
         title: "Maximum Space Efficiency",
-        description: "Custom designs that maximize storage and functionality in tight layouts with clever organization solutions.",
+        description: "Custom designs with floating vanities and space-saving layouts that maximize functional storage in tight layouts.",
         icon: "Box",
       },
       {
         title: "Brighter Visuals",
-        description: "Strategic lighting, high output recessed LEDs, and large mirror placement create the illusion of extra space.",
+        description: "Strategic LED vanity lighting, large-format tile, and large mirror placement create the illusion of extra space.",
         icon: "Lightbulb",
       },
       {
         title: "Affordable Transformation",
-        description: "Smaller square footage means lower material costs while delivering significant structural style upgrades.",
+        description: "Smaller square footage means lower material costs while delivering significant compact bathroom renovation upgrades.",
         icon: "DollarSign",
       },
       {
         title: "Improved Traffic Flow",
-        description: "Optimized floor plans ensure better physical flow and more comfortable use in compact spaces.",
+        description: "An optimized floor plan ensures better physical movement and comfortable use in compact spaces.",
         icon: "Wind",
       },
     ],
     issues: [
       {
-        problem: "Cramped and claustrophobic small bathrooms",
-        solution: "We install wall mounted floating vanities and custom corner sinks to open up empty floor space.",
+        problem: "Cramped and claustrophobic compact bathrooms",
+        solution: "We install wall-mounted floating vanities and custom quartz vanity tops to open up empty floor space.",
       },
       {
         problem: "Zero linen or toiletries storage space",
-        solution: "We cut into the wall studs to build custom recessed medicine cabinets and tiled shelving niches.",
+        solution: "We cut into the wall studs to build custom recessed storage cabinets and tiled shower niches.",
       },
       {
         problem: "Dark, gloomy environment with dim bulbs",
-        solution: "We design high output recessed LED ceiling systems and vapor proof shower lighting.",
+        solution: "We design high-output recessed LED vanity lighting systems and vapor-proof shower lighting.",
       },
       {
         problem: "Trapped steam causing blistering drywall paint",
-        solution: "We size and install high CFM quiet exhaust fans that quickly vent moisture out of the space.",
+        solution: "We size and install high CFM quiet exhaust fans with moisture-resistant materials that quickly vent humidity.",
       },
     ],
     tips: [
-      "Build Recessed Wall Shelving: We cut into wall stud cavities to build custom tiled niches that store toiletries without blocking shoulders.",
-      "Install Floating Vanities: Exposing more floor tiling creates the visual optical illusion of a much larger room.",
-      "Select Large Format Tiles: Laying large floor tiles with fewer grout lines makes small bathrooms feel wider.",
-      "Replace Shower Curtains with Glass: Seamless glass panels allow light to flow uninterrupted across the entire washroom.",
+      "Build Recessed Storage Niches: We cut into wall stud cavities to build a custom tiled shower niche that stores toiletries without blocking shoulders.",
+      "Install Floating Vanities: Exposing more waterproof flooring creates the visual illusion of an optimized floor plan.",
+      "Select Large-Format Tiles: Laying large-format tile with fewer grout lines makes compact bathrooms feel wider.",
+      "Replace Shower Curtains with Glass: Seamless glass panels allow light to flow uninterrupted across your walk-in shower.",
     ],
     faqs: [
       {
         question: "What is the average small bathroom remodel cost in Chandler?",
         answer:
-          "The average small bathroom remodel cost in Chandler is customized to your project scope, covering options from a cosmetic upgrade (new floating vanity, plumbing fixtures, floor tiling) to a complete layout reconfiguration. We provide a written, fixed-price quote under  after our in-home consultation. Call Us at (520) 569-3339.",
+          "The average small bathroom remodel cost in Chandler is customized to your project scope, covering options from a cosmetic upgrade (new floating vanity, quartz vanity top, waterproof flooring) to a complete compact bathroom renovation. We provide a written, fixed-price quote after our in-home consultation. Call Us at (520) 569-3339.",
       },
       {
         question: "What is the minimum size bathroom you can remodel?",
         answer:
-          "We successfully remodel guest bathrooms and powder rooms as small as five by five feet. Even tiny half baths can be transformed into highly functional spaces using corner vanities, wall mounted toilets, and narrow profile sinks designed specifically for tight floor clearances.",
+          "We successfully renovate guest bathrooms and powder rooms as small as five by five feet. Even tiny half baths can be transformed into highly functional spaces using corner vanities, wall mounted toilets, and narrow profile sinks designed specifically for tight floor clearances.",
       },
       {
-        question: "How do you make a tiny bathroom look and feel larger?",
+        question: "How do you make a compact bathroom look and feel larger?",
         answer:
-          "To make a small bathroom feel spacious, we utilize light color palettes, install large mirrors to reflect natural light, hang floating vanities to expose more flooring, use large format floor tiles to reduce grout lines, and replace heavy shower curtains with seamless glass panels.",
+          "To make a compact bathroom feel spacious, we utilize light color palettes, install large mirrors to reflect natural light, hang floating vanities to expose more flooring, use large-format tile to reduce grout lines, and replace heavy shower curtains with seamless glass panels.",
       },
       {
-        question: "What ventilation options work best in small bathrooms?",
+        question: "What ventilation options work best in compact bathrooms?",
         answer:
-          "We size and install high CFM quiet exhaust fans that quickly vent moisture out of the space, sealing all ceiling joints to prevent hot desert attic air leaks.",
+          "We size and install high CFM quiet exhaust fans that quickly vent moisture out of the space, using moisture-resistant materials and sealing all ceiling joints to prevent hot desert attic air leaks.",
       },
       {
-        question: "Can you add a custom walk in shower to a half bath?",
+        question: "Can you add a custom walk-in shower to a half bath?",
         answer:
-          "Yes, we frequently convert small half baths into full bathrooms by reconfiguring adjacent closet spaces to add a modern curbless walk in shower. This smart layout change adds significant value to your Chandler property.",
+          "Yes, we frequently convert small half baths into full bathrooms by reconfiguring adjacent closet spaces to add a modern curbless walk-in shower. This smart space-saving layout change adds significant value to your Chandler property.",
       },
     ],
   },
@@ -437,7 +437,7 @@ export const serviceContent: Record<string, ServiceContentData> = {
     ],
     tips: [
       "Freestanding Tubs Add Luxury: Modern freestanding soaking tubs create a beautiful focal point and offer deeper water soaking.",
-      "Hire professional contractors for Jet Tubs: Air and water jets need specialized electrical wiring and plumbing lines; hire professional contractors.",
+      "Hire professional specialists for Jet Tubs: Air and water jets need specialized electrical wiring and plumbing lines; hire professional specialists.",
       "Acrylic Tubs Resist Minerals: Acrylic reinforced with fiberglass is stain resistant, easy to clean, and resists local hard water minerals.",
       "Anchor Safety Grab Bars to Studs: Install secure safety grab bars directly into wood wall studs during your tub remodel to prevent falls.",
     ],
@@ -944,7 +944,7 @@ export const serviceContent: Record<string, ServiceContentData> = {
     ],
     tips: [
       "Plan Replacement Design Early: Decide exactly what features will replace the tub before beginning demolition.",
-      "Inspect Wall Framing: Have your contractor inspect the wood studs for moisture damage as soon as the tub is out.",
+      "Inspect Wall Framing: Have your remodeling team inspect the wood studs for moisture damage as soon as the tub is out.",
       "Upgrade Sewer Lines: Take advantage of the open subfloor to replace old cast iron plumbing with durable PVC.",
       "Keep One Bath in the House: Maintain at least one functional tub in the home to preserve resale appeal for families.",
     ],
@@ -1019,7 +1019,7 @@ export const serviceContent: Record<string, ServiceContentData> = {
     ],
     tips: [
       "Plan for Temporary Living: Whole-home renovations are invasive. We help you plan for a temporary kitchen or living area during construction.",
-      "Invest in Structural Integrity: If you're removing walls, always work with professional contractors who understand East Valley load-bearing requirements.",
+      "Invest in Structural Integrity: If you're removing walls, always work with professional specialists who understand East Valley load-bearing requirements.",
       "Stay Consistent with Finishes: Choosing a unified palette for flooring and paint makes your home feel larger and more intentional.",
       "Don't Skip the Permitting: Proper permits protect your investment and ensure your home remains easy to sell in the future.",
     ],

@@ -490,7 +490,7 @@ interface PersonSchemaProps {
 
 export function PersonSchema({
   name = siteConfig.owner,
-  jobTitle = "Founder & Owner, professional contractor",
+  jobTitle = "Founder & Owner, professional remodeling specialist",
   affiliation = "ARZ Home Remodeling",
   url = siteConfig.url,
   credentials = "Arizona Registrar of Contractors License",
@@ -627,7 +627,7 @@ export function ContactPageSchema({ url = `${siteConfig.url}/contact/` }: Contac
     "@id": `${url}#webpage`,
     "url": url,
     "name": "Contact ARZ Home Remodeling",
-    "description": "Contact Chandler's top-rated bathroom remodeling contractor. Get a free written estimate for your master bath or shower remodel.",
+    "description": "Contact Chandler's top-rated bathroom remodeling specialist. Get a free written estimate for your master bath or shower remodel.",
     "mainEntity": {
       "@type": "HomeAndConstructionBusiness",
       "@id": `${siteConfig.url}/#organization`,

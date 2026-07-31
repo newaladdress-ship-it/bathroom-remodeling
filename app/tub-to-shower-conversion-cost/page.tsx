@@ -158,7 +158,7 @@ export default function TubToShowerConversionCostPage() {
             <div className="flex items-start gap-3 bg-secondary border border-border rounded-xl p-5 mt-6">
               <Info className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
               <p className="text-sm text-muted-foreground">
-                We provide <strong className="text-foreground">free, itemized written quotes</strong> with zero hidden fees. Call us at <a href="tel:+15205693339" className="text-primary hover:underline font-medium">(520) 569-3339</a> to speak with a contractor today.
+                We provide <strong className="text-foreground">free, itemized written quotes</strong> with zero hidden fees. Call us at <a href="tel:+15205693339" className="text-primary hover:underline font-medium">(520) 569-3339</a> to speak with a specialist today.
               </p>
             </div>
           </div>
@@ -235,7 +235,7 @@ export default function TubToShowerConversionCostPage() {
               What Drives Tub Conversion Costs?
             </h2>
             <p className="text-muted-foreground text-lg mb-10">
-              Bathtub removals can reveal unexpected issues. Make sure your contractor addresses these key items.
+              Bathtub removals can reveal unexpected issues. Make sure your remodeling team addresses these key items.
             </p>
             <div className="grid sm:grid-cols-2 gap-6">
               {costFactors.map((f) => (

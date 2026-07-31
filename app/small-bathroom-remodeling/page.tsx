@@ -60,8 +60,8 @@ export default function SmallBathroomRemodelingPage() {
       <main>
         <ServiceHero
           title="Affordable Small Bathroom Remodel Cost Chandler AZ"
-          subtitle="Professional Small Bathroom Remodeling Services in Chandler AZ"
-          description="Get a professional small bathroom remodel in Chandler AZ. Our professional small bathroom remodeling contractors deliver space-saving designs and professional bathroom renovation services."
+          subtitle="Compact Bathroom Renovation Specialists in Chandler AZ"
+          description="Get a custom small bathroom remodel in Chandler, AZ. Our compact bathroom renovation specialists deliver space-saving layouts, floating vanities, and custom bath renovation services."
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Small Bathroom Remodeling", url: `${siteConfig.url}/small-bathroom-remodeling` }]}
         />
@@ -69,12 +69,12 @@ export default function SmallBathroomRemodelingPage() {
         <ServiceProcess
           title="Small Bathroom Remodeling Process"
           subtitle="Our Process"
-          description="Space-maximizing remodeling with smart design solutions and efficient layouts."
+          description="Space-maximizing renovation with smart design solutions and efficient layouts."
           steps={[
             { number: "01", icon: "Layout", title: "Space Analysis", description: "Evaluate current layout and identify opportunities to maximize space and functionality." },
-            { number: "02", icon: "Ruler", title: "Design Planning", description: "Create space-saving design with optimal fixture placement and storage solutions." },
+            { number: "02", icon: "Ruler", title: "Design Planning", description: "Create space-saving design with optimal fixture placement and functional storage solutions." },
             { number: "03", icon: "Hammer", title: "Efficient Demolition", description: "Careful demolition in tight spaces with protection for surrounding areas." },
-            { number: "04", icon: "Sparkles", title: "Smart Installation", description: "Install space-saving fixtures, storage solutions, and modern finishes." },
+            { number: "04", icon: "Sparkles", title: "Smart Installation", description: "Install wall-mounted vanities, recessed storage solutions, and modern finishes." },
             { number: "05", icon: "ShieldCheck", title: "Final Optimization", description: "Complete installation with space-maximizing details and quality finishing." }
           ]}
         />
@@ -82,12 +82,12 @@ export default function SmallBathroomRemodelingPage() {
         <SubServices 
           title="Other Space-Saving Solutions"
           subtitle="More Upgrades"
-          description="From vanity updates to custom tile, we can maximize every inch of your bathroom."
+          description="From vanity updates to custom tile, we can maximize every inch of your compact bathroom."
           services={otherServices.map(s => s.name)}
         />
 
         <IssuesSolved
-          title="Issues We Solve with Small Bathroom Remodeling"
+          title="Problems We Solve in Compact Bathrooms"
           subtitle="Common Problems Fixed"
           description="We address the most common small bathroom challenges Chandler homeowners face."
           issues={smallBathData.issues}
@@ -96,14 +96,14 @@ export default function SmallBathroomRemodelingPage() {
         <Benefits
           title="Benefits of Small Bathroom Remodeling"
           subtitle="Why Remodel Your Small Bathroom"
-          description="Discover how professional small bathroom remodeling maximizes space and adds value to your home."
+          description="Discover how a custom bathroom renovation maximizes every inch and adds value to your home."
           benefits={smallBathData.benefits}
         />
 
         <Tips
-          title="Expert Small Bathroom Remodeling Tips"
+          title="Expert Space-Saving Bathroom Tips"
           subtitle="Professional Insights"
-          description="Smart strategies to maintain and maximize your newly remodeled small bathroom."
+          description="Smart strategies to maintain and maximize your newly renovated compact bathroom."
           tips={smallBathData.tips}
         />
 

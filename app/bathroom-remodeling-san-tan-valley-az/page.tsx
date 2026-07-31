@@ -55,7 +55,7 @@ const sanTanValleyFaqs = [
   {
     question: "How do you coordinate with local HOAs in Encanterra or Johnson Ranch?",
     answer:
-      "Master-planned developments have strict architectural rules regarding contractor check-ins, heavy vehicle parking, and work schedules (typically 7:00 AM to 6:00 PM on weekdays). ARZ Home Remodeling coordinates directly with your ARC/HOA manager to submit required paperwork, set up gate codes, and maintain community compliance throughout the remodel."
+      "Master-planned developments have strict architectural rules regarding worker check-ins, heavy vehicle parking, and work schedules (typically 7:00 AM to 6:00 PM on weekdays). ARZ Home Remodeling coordinates directly with your ARC/HOA manager to submit required paperwork, set up gate codes, and maintain community compliance throughout the remodel."
   },
   {
     question: "How does San Tan Valley's water hardness affect custom showers?",
@@ -91,7 +91,7 @@ const services = [
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "AZ General Contractor",
+    title: "AZ Licensed Remodelers",
     body: "Fully professional residential contracting firm, verified with the Arizona Registrar of Contractors.",
   },
   {
@@ -164,7 +164,7 @@ export default function SanTanValleyPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling San Tan Valley Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-san-tan-valley-az/" } ]} />
       <ServiceSchema
         serviceName="Bathroom Remodeling in San Tan Valley, Arizona"
-        serviceDescription="expert bathroom remodeling contractor serving San Tan Valley, AZ. High-end master suite overhauls, zero-threshold tile walk-in showers, and tub-to-shower conversions in Encanterra and Johnson Ranch."
+        serviceDescription="expert bathroom remodeling team serving San Tan Valley, AZ. High-end master suite overhauls, zero-threshold tile walk-in showers, and tub-to-shower conversions in Encanterra and Johnson Ranch."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-san-tan-valley-az/`}
       />
       <FAQSchema faqs={sanTanValleyFaqs} />
@@ -194,10 +194,10 @@ export default function SanTanValleyPage() {
               San Tan Valley homes feature spacious, modern floor plans that deserve matching custom interiors. Whether you own a beautiful resort property in the gated **Encanterra** community or a spacious family home in **Johnson Ranch**, a custom bathroom remodel is one of the most reliable ways to improve comfort, safety, and home equity. If you are seeking an expert **bathroom remodel san tan valley**, a trusted **bathroom remodeling san tan valley**, or a premium **bath remodeler in san tan valley**, ARZ Home Remodeling is at your service.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we specialize in high-end **bathroom remodeling in San Tan Valley, AZ**: delivering custom walk-in tiled showers, zero-threshold safety entryways, and premium master bathroom transformations across **85140 and 85143**. We are a residential contracting firm professional under ****, ensuring expert craftsmanship, code-compliant plumbing, and fixed-price contracts.
+              At ARZ Home Remodeling, we specialize in high-end **bathroom remodeling in San Tan Valley, AZ**: delivering custom walk-in tiled showers, zero-threshold safety entryways, and premium master bathroom transformations across **85140 and 85143**. We are a residential remodeling firm professional under ****, ensuring expert craftsmanship, code-compliant plumbing, and fixed-price contracts.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              **Resort-Style Upgrades in Encanterra:** Resort homes require a high degree of luxury and clean finishing. We specialize in retrofitting master baths with premium zero-threshold linear drain showers, custom wood double vanities with natural stone countertops, freestanding soaking tubs, and custom smart ambient LED backlit mirrors. We ensure complete HOA compliance regarding contractor registration, gate codes, and dumpster placements.
+              **Resort-Style Upgrades in Encanterra:** Resort homes require a high degree of luxury and clean finishing. We specialize in retrofitting master baths with premium zero-threshold linear drain showers, custom wood double vanities with natural stone countertops, freestanding soaking tubs, and custom smart ambient LED backlit mirrors. We ensure complete HOA compliance regarding company registration, gate codes, and dumpster placements.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               **Pinal County Permitting & Building Safety:** Any structural framing modifications (like removing a wall) or mechanical relocations (like moving a toilet plumbing stack) require a permit through the **Pinal County Planning & Development Department** (located in Florence, AZ). ARZ Home Remodeling manages the entire drafting, engineering, permit submission, and county inspections pipeline, ensuring absolute safety and structural code compliance.

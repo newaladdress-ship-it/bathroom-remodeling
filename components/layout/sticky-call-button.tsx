@@ -8,7 +8,7 @@ export function StickyCallButton() {
         <a
           href={`tel:${siteConfig.phoneClean}`}
           className="w-full flex items-center justify-center gap-3 bg-accent text-accent-foreground font-extrabold rounded-xl py-3.5 px-4 shadow-md hover:bg-accent/90 active:scale-[0.97] transition-all duration-200 no-underline text-base tracking-wide"
-          aria-label={`Call local remodeling contractor at ${siteConfig.phone}`}
+          aria-label={`Call local remodeling specialist at ${siteConfig.phone}`}
         >
           <Phone className="w-5 h-5 fill-current" aria-hidden="true" />
           <span>CALL LOCAL EXPERT: {siteConfig.phone}</span>

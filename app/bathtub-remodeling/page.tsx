@@ -21,15 +21,15 @@ export const metadata: Metadata = {
   title: "Bathtub Remodeling Chandler AZ | Soaker Tub Upgrades | ARZ",
   description: "Upgrade your bathroom with custom bathtub remodeling in Chandler, AZ. Soaking tubs, freestanding tub installations, & custom surrounds. Call today!",
   openGraph: {
-    title: "Bathtub Remodel Services | Chandler AZ Bathroom Remodeling",
-    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bathtub remodel services, custom showers, tile, vanities, clear pricing, and free estimates.",
+    title: "Bathtub Remodel Services | Chandler AZ Bathroom Renovation",
+    description: "Bathroom renovation service in Chandler, AZ by ARZ. Explore bathtub remodel services, custom showers, tile, vanities, clear pricing, and free estimates.",
     url: `${siteConfig.url}/bathtub-remodeling/`,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bathtub Remodel Services | Chandler AZ Bathroom Remodeling",
-    description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore bathtub remodel services, custom showers, tile, vanities, clear pricing, and free estimates.",
+    title: "Bathtub Remodel Services | Chandler AZ Bathroom Renovation",
+    description: "Bathroom renovation service in Chandler, AZ by ARZ. Explore bathtub remodel services, custom showers, tile, vanities, clear pricing, and free estimates.",
   },
   alternates: {
     canonical: `${siteConfig.url}/bathtub-remodeling/`,
@@ -54,8 +54,8 @@ export default function BathtubRemodelingPage() {
       <main>
         <ServiceHero
           title="Bathtub Remodeling in Chandler, AZ"
-          subtitle="Tub Replacement, Bathtub-to-Shower Conversion & Soaking Tubs"
-          description="Ready to replace your outdated bathtub or convert that unused garden tub into a walk-in shower? Our professional Chandler contractors handle tub removal, tub replacement, soaking tub installation, and tub-to-shower conversions with a fixed price and 2-year warranty."
+          subtitle="Tub Replacement & Soaking Tub Upgrades"
+          description="Replace outdated tubs, install luxurious soaking bathtubs, or enhance your bathing space with durable, professionally installed solutions designed for lasting comfort, improved functionality, and everyday convenience, all backed by expert craftsmanship, transparent pricing, and our 2-year workmanship warranty."
           image="/images/projects/luxury-bathtub-remodel-az.webp"
           breadcrumbs={[
             { name: "Home", url: `${siteConfig.url}/` },
@@ -66,37 +66,37 @@ export default function BathtubRemodelingPage() {
         <ServiceProcess
           title="Our Renovation Process"
           subtitle="How It Works"
-          description="A streamlined approach to upgrading your bathing space with precise planning and quality installation for Chandler homeowners."
+          description="Every bathtub remodeling project follows a carefully planned process to ensure lasting quality, dependable performance, and a smooth experience from start to finish. We evaluate your existing space, recommend suitable bathtub options, prepare the area, complete the installation with attention to detail, and perform a final inspection to ensure everything meets our quality standards."
           steps={[
             {
               number: "01",
               icon: "PhoneCall",
               title: "Design Consultation",
-              description: "We assess your space, discuss tub options, and plan the perfect upgrade solution.",
+              description: "We assess your bathroom layout, discuss your remodeling goals, and recommend the most suitable bathtub style based on your space, budget, and lifestyle.",
             },
             {
               number: "02",
-              icon: "Bath",
-              title: "Tub Selection",
-              description: "Choose from alcove, freestanding, or soaking tubs with coordinated fixtures and finishes.",
+              icon: "Home",
+              title: "Product Selection",
+              description: "Choose from acrylic, freestanding, alcove, or deep soaking bathtubs, along with coordinated fixtures, wall surrounds, and finish options to complement your bathroom.",
             },
             {
               number: "03",
               icon: "Hammer",
-              title: "Removal & Prep",
-              description: "Careful removal of the old tub, plumbing updates, and surface preparation for installation.",
+              title: "Removal & Preparation",
+              description: "Our team safely removes the existing bathtub, inspects plumbing connections, and prepares the area with proper waterproofing before installation begins.",
             },
             {
               number: "04",
               icon: "Wrench",
-              title: "Installation",
-              description: "Professional tub installation with proper leveling, plumbing connections, and waterproofing.",
+              title: "Professional Installation",
+              description: "We install your new bathtub using precise leveling, secure plumbing connections, and proven installation techniques for reliable, long-lasting performance.",
             },
             {
               number: "05",
-              icon: "Sparkles",
-              title: "Finishing Touches",
-              description: "Surround installation, trim work, and final testing to complete your new tub installation.",
+              icon: "ClipboardCheck",
+              title: "Final Inspection",
+              description: "Every project concludes with detailed testing, finishing work, and a complete quality inspection to ensure your remodeled bathing space is ready for everyday use.",
             },
           ]}
         />
@@ -104,15 +104,32 @@ export default function BathtubRemodelingPage() {
         <SubServices 
           title="Other Bathroom Services in Chandler"
           subtitle="More Options"
-          description="Looking for something else? We offer a variety of renovation solutions."
+          description="Looking for something else? We offer a variety of bathroom renovation solutions."
           services={otherServices.map(s => s.name)}
         />
 
         <IssuesSolved
-          title="Issues We Solve with Tub Replacements"
+          title="Issues We Solve with Bathtub Remodeling"
           subtitle="Common Problems Fixed"
-          description="We address the most common bathing area challenges Chandler homeowners face."
-          issues={serviceData.issues}
+          description="An aging bathtub can reduce comfort, create maintenance concerns, and affect the overall appearance of your bathroom. Our remodeling solutions address structural wear, outdated designs, moisture-related issues, and inefficient layouts to create a safer, more functional bathing space with durable materials and modern installation methods."
+          issues={[
+            {
+              title: "Cracked or Worn Surfaces",
+              description: "Replace damaged finishes, chips, and discoloration with durable bathtub materials that resist everyday wear, stains, and scratches.",
+            },
+            {
+              title: "Slow Drainage",
+              description: "Correct drainage issues by upgrading drain assemblies, improving water flow, and replacing aging plumbing components when necessary.",
+            },
+            {
+              title: "Limited Bathroom Functionality",
+              description: "Improve space efficiency with better bathtub configurations that enhance comfort while complementing your existing bathroom layout.",
+            },
+            {
+              title: "Moisture & Water Damage",
+              description: "Proper waterproofing, sealed wall surrounds, and professional installation help reduce moisture intrusion and protect surrounding walls and subfloor from long-term damage.",
+            },
+          ]}
         />
 
         <Benefits
@@ -122,10 +139,27 @@ export default function BathtubRemodelingPage() {
         />
 
         <Tips
-          title="Tub Maintenance Tips"
+          title="Bathtub Maintenance Tips"
           subtitle="Keep It Looking New"
-          description="Expert advice to maintain your newly installed tub and extend its lifespan."
-          tips={serviceData.tips}
+          description="Proper care helps preserve your bathtub's appearance, maintain reliable performance, and extend its lifespan. Following a few simple maintenance practices can reduce wear, prevent moisture-related issues, and keep your bathing area clean, safe, and looking its best for years to come."
+          tips={[
+            {
+              title: "Clean with Non-Abrasive Products",
+              description: "Use gentle, non-abrasive cleaners and a soft cloth to remove soap residue and hard water buildup without damaging acrylic, composite, or porcelain finishes.",
+            },
+            {
+              title: "Check Caulk & Seals Regularly",
+              description: "Inspect caulking around the bathtub and wall surrounds for cracks or gaps. Resealing worn areas helps prevent moisture intrusion and protects surrounding surfaces.",
+            },
+            {
+              title: "Maintain Proper Ventilation",
+              description: "Run your bathroom exhaust fan or open a window after bathing to reduce humidity, minimize condensation, and help prevent mold and mildew growth.",
+            },
+            {
+              title: "Monitor Drains & Fixtures",
+              description: "Keep drains free from debris and periodically inspect faucets, drains, and plumbing connections for leaks to maintain efficient water flow and avoid unnecessary repairs.",
+            },
+          ]}
         />
 
         <Testimonials />

@@ -43,7 +43,7 @@ export default function ChandlerExpertise() {
                     Planned Community HOA Coordination
                   </h3>
                   <p className="text-sm text-primary-foreground/85 leading-relaxed">
-                    In master-planned communities like <strong>Ocotillo</strong>, <strong>Fulton Ranch</strong>, and <strong>Cooper Commons</strong>, HOA rules govern contractor working hours, parking, and dumpster placement. We manage the entire HOA architectural approval submission process, protecting your driveway with wood backing boards and complying with all community rules.
+                    In master-planned communities like <strong>Ocotillo</strong>, <strong>Fulton Ranch</strong>, and <strong>Cooper Commons</strong>, HOA rules govern remodeling work hours, parking, and dumpster placement. We manage the entire HOA architectural approval submission process, protecting your driveway with wood backing boards and complying with all community rules.
                   </p>
                 </div>
 
@@ -93,7 +93,7 @@ export default function ChandlerExpertise() {
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
           <span className="text-primary text-sm font-medium tracking-wider uppercase">Accessible Baths</span>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-2 mb-6 text-foreground">
-            ADA and Aging-in-Place Bathroom Remodeling
+            ADA & Aging-in-Place Bathroom Renovations
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
             Safe bathrooms do not have to look like hospitals. We build curbless showers, comfort-height toilets, and accessible layouts. These meet the official [ADA design standards](https://www.ada.gov/law-and-regs/design-standards/). They are highly popular near <strong>Chandler Regional Medical Center</strong> on Dobson Road and in active senior communities like <strong>Sun Lakes</strong>, <strong>Solera</strong>, and <strong>Springfield</strong>.
@@ -113,7 +113,7 @@ export default function ChandlerExpertise() {
             </li>
           </ul>
           <Link href="/ada-bathroom-remodeling/" className="text-primary font-medium hover:underline">
-            View ADA bathroom remodeling services
+            View ADA bathroom renovation services
           </Link>
         </div>
       </section>

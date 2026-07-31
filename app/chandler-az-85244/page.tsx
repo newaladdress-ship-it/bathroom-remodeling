@@ -27,7 +27,7 @@ export default function Chandler85244Page() {
           "@type": "PostalCode",
           "postalCode": "85244"
         },
-        "description": "professional contractors specializing in updating aging bathrooms and historic plumbing in the Chandler 85244 area.",
+        "description": "licensed remodeling specialists specializing in updating aging bathrooms and historic plumbing in the Chandler 85244 area.",
       },
       {
         "@type": "FAQPage",
@@ -76,7 +76,7 @@ export default function Chandler85244Page() {
               Restoring & Modernizing Bathrooms in Older Chandler Properties
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Older homes near the downtown Chandler district require contractors who genuinely understand structural complexity. We are professional professionals experienced in diagnosing failing plumbing, leveling shifted concrete slabs, treating hidden mold, and building stunning, watertight custom showers that stand the test of time.
+              Older homes near the downtown Chandler district require remodeling specialists who genuinely understand structural complexity. We are professional professionals experienced in diagnosing failing plumbing, leveling shifted concrete slabs, treating hidden mold, and building stunning, watertight custom showers that stand the test of time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <a href={`tel:${siteConfig.phoneClean}`} className="trackable-phone call-to-action bg-primary text-white px-8 py-4 rounded-xl hover:bg-primary/90 transition shadow-lg font-bold text-lg w-full sm:w-auto flex items-center justify-center gap-2">
@@ -88,7 +88,7 @@ export default function Chandler85244Page() {
               </a>
             </div>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground font-medium">
-              <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> general contractor ()</div>
+              <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-primary" /> Licensed Remodeling Specialists</div>
               <div className="flex items-center gap-2"><Wrench className="w-5 h-5 text-primary" /> Structural & Plumbing Experts</div>
               <div className="flex items-center gap-2"><MapPin className="w-5 h-5 text-primary" /> Downtown Chandler District</div>
             </div>
@@ -105,7 +105,7 @@ export default function Chandler85244Page() {
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Remodeling a bathroom in a home that was built several decades ago is an entirely different discipline than working on a newer construction property. The older neighborhoods surrounding the 85244 postal district are filled with homes that have tremendous character and craftsmanship. But behind their walls, you often find a different story altogether. Decades of minor plumbing leaks, shifting foundation slabs, outdated electrical wiring, and aging galvanized pipes create a hidden layer of complexity that standard contractors are simply not prepared to handle.
+                    Remodeling a bathroom in a home that was built several decades ago is an entirely different discipline than working on a newer construction property. The older neighborhoods surrounding the 85244 postal district are filled with homes that have tremendous character and craftsmanship. But behind their walls, you often find a different story altogether. Decades of minor plumbing leaks, shifting foundation slabs, outdated electrical wiring, and aging galvanized pipes create a hidden layer of complexity that inexperienced crews are simply not prepared to handle.
                   </p>
                   <p>
                     At <Link href="/" className="text-primary hover:underline font-medium">ARZ Home Remodeling</Link>, we view a complete demolition as an investigation as much as a construction project. When we strip your bathroom down to the bare studs, we are looking for the root causes of your current problems, not just the visible symptoms. We have encountered everything from cast-iron drain pipes that were installed slightly out of level decades ago — causing chronic slow drains — to entire subfloor sections that are so rotten from a slow, long-term toilet flange leak that they need complete replacement before a single tile can be set.
@@ -278,7 +278,7 @@ export default function Chandler85244Page() {
                 },
                 {
                   q: "Do I have to handle the city permits myself?",
-                  a: "Absolutely not. Remodeling an older home almost always requires permits, particularly when we are moving drain locations, upgrading electrical panels, or making structural changes to framing. As general contractors under , we draft and submit all plans directly to the City of Chandler Building Division and coordinate all on-site inspections from start to finish."
+                  a: "Absolutely not. Remodeling an older home almost always requires permits, particularly when we are moving drain locations, upgrading electrical panels, or making structural changes to framing. As licensed professionals, we draft and submit all plans directly to the City of Chandler Building Division and coordinate all on-site inspections from start to finish."
                 },
                 {
                   q: "My bathroom floor seems very uneven. Can you still install large-format tile?",
@@ -321,7 +321,7 @@ export default function Chandler85244Page() {
         <section className="py-24 bg-primary text-white">
           <div className="container mx-auto px-4 text-center max-w-4xl">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-              Your Older Home Deserves the Right Contractor
+              Your Older Home Deserves the Right Remodeling Experts
             </h2>
             <p className="text-xl mb-10 opacity-90 leading-relaxed">
               Don't trust your older property to a crew that lacks the experience to deal with aging plumbing, shifted slabs, and historic construction. Our professional team has the expertise to handle the complexity and deliver a stunning, lasting result.

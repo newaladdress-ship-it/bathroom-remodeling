@@ -33,7 +33,7 @@ const phoenixFaqs = [
   {
     question: "Are you professional to work in Phoenix?",
     answer:
-      "Yes. We are a fully professional Arizona contractor operating under license professional contractor -  and carry comprehensive insurance for all Phoenix area residential remodeling projects."
+      "Yes. We are a fully professional Arizona remodeling firm operating under license professional contractor -  and carry comprehensive insurance for all Phoenix area residential remodeling projects."
   },
   {
     question: "Do you handle the entire project from start to finish?",
@@ -49,7 +49,7 @@ export default function PhoenixPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Phoenix Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-phoenix-az/" } ]} />
 <ServiceSchema
         serviceName="Bathroom Remodeling in Phoenix, Arizona"
-        serviceDescription="expert bathroom remodeling contractor serving the greater Phoenix area. Custom showers, master bath renovations, and professional bathroom makeovers."
+        serviceDescription="expert bathroom remodeling team serving the greater Phoenix area. Custom showers, master bath renovations, and professional bathroom makeovers."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-phoenix-az/`}
       />
       <FAQSchema faqs={phoenixFaqs} />
@@ -62,7 +62,7 @@ export default function PhoenixPage() {
       <main>
         <ServiceHero
           title="Phoenix’s Top Choice for Bathroom Remodeling"
-          subtitle="professional contractors - High-Quality Results"
+          subtitle="Licensed Specialists - High-Quality Results"
           description="Transform your Phoenix home with a professionally remodeled bathroom. We bring years of expertise, transparent pricing, and superior craftsmanship to every project in the Valley of the Sun."
           image="/images/hero/luxury-shower-remodel-chandler.webp"
           breadcrumbs={[

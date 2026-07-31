@@ -29,7 +29,7 @@ interface ServiceFAQProps {
 
 export default function ServiceFAQ({
   title = "Frequently Asked Questions",
-  description = "Get answers to common questions about our bathroom remodeling services.",
+  description = "Get answers to common questions about our bathroom renovation services.",
   faqs: customFaqs,
 }: ServiceFAQProps) {
   const faqsToRender = customFaqs ?? faqs;

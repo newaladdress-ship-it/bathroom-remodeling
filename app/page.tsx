@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "bathroom remodeling in chandler, AZ",
     "bathroom remodeling chandler",
     "bathroom remodel chandler az",
-    "bathroom remodeling contractor chandler"
+    "bathroom remodeling specialist chandler"
   ],
   openGraph: {
     title: "Bathroom Remodeling in Chandler, AZ | Custom Showers & Tile",

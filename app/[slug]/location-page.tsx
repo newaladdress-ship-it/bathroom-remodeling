@@ -77,7 +77,7 @@ function getDynamicLocationFaqs(displayName: string, isZip: boolean, zipCode: st
       answer: `A standard guest bathroom renovation in ${displayName} typically takes ten to fourteen days of active construction. Larger master suite remodels or custom renovations in upscale developments can take three to four weeks. We provide a complete itemized schedule before any demolition starts.`
     },
     {
-      question: `Do I need a permit for bathroom remodeling in ${displayName}?`,
+      question: `Do I need a permit for a bathroom renovation in ${displayName}?`,
       answer: `Yes, the City of Chandler requires permits for structural updates, major plumbing changes, or new electrical circuits. We coordinate directly with the City of Chandler Building Division to secure all required permits and schedule inspections, ensuring your project is fully compliant with local safety codes.`
     },
     {
@@ -188,7 +188,7 @@ export async function LocationPageContent({
             <div className="container mx-auto px-4">
               <div className="max-w-3xl">
                 <h2 className="text-3xl font-serif font-semibold mb-6 text-foreground">
-                  {neighborhood.name} Bathroom Remodeling Contractor
+                  {neighborhood.name} Bath Renovation Specialist
                 </h2>
 
                 {/* Market Insights */}
@@ -243,7 +243,7 @@ export async function LocationPageContent({
                 Premium Neighborhoods We Serve in {zipData.zip}
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                We provide premium, custom bathroom remodeling services across all communities in the {zipData.zip} area. 
+                We provide premium, custom bath renovation services across all communities in the {zipData.zip} area. 
                 Each neighborhood features unique home designs, varying family needs, and distinct architectural guidelines:
               </p>
               <div className="grid gap-6">
@@ -262,7 +262,7 @@ export async function LocationPageContent({
                       ))}
                     </div>
                     <Link href={getCanonicalNeighborhoodLink(n.slug)} className="text-primary text-sm font-semibold hover:underline flex items-center gap-1.5">
-                      View {n.name} bathroom remodeling <ArrowRight className="w-4 h-4" />
+                      View {n.name} bath renovation <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 ))}
@@ -280,7 +280,7 @@ export async function LocationPageContent({
             <div className="grid sm:grid-cols-3 gap-6">
               <div className="bg-secondary p-6 rounded-xl border border-border text-center">
                 <ShieldCheck className="w-8 h-8 text-primary mx-auto mb-4" />
-                <h3 className="font-semibold text-foreground mb-2">professional contractor - </h3>
+                <h3 className="font-semibold text-foreground mb-2">Licensed Remodeling Specialist</h3>
                 <p className="text-muted-foreground text-xs leading-relaxed">Fully bonded and insured for complete residential renovations in Arizona.</p>
               </div>
               <div className="bg-secondary p-6 rounded-xl border border-border text-center">
@@ -318,7 +318,7 @@ export async function LocationPageContent({
                 {
                   step: "03",
                   title: "Permitting & Prep",
-                  desc: "Our contractor team handles all local permits with the City of Chandler Building Division safely.",
+                  desc: "Our local team handles all local permits with the City of Chandler Building Division safely.",
                 },
                 {
                   step: "04",
@@ -414,7 +414,7 @@ export async function LocationPageContent({
               Ready to remodel your {displayName} bathroom?
             </h2>
             <p className="text-lg mb-8 opacity-90">
-              Contact our local remodeling contractors for a free consultation and detailed estimate.
+              Contact our local remodeling specialists for a free consultation and detailed estimate.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={`tel:${siteConfig.phoneClean}`} className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold text-center">
