@@ -20,6 +20,12 @@ export default function ServiceHero({
   breadcrumbs,
 }: ServiceHeroProps) {
   const heroImage = image.endsWith('.webp') ? image.replace(/\.webp$/, '.avif') : image;
+  const hero640 = heroImage.endsWith('.avif') && !heroImage.includes('-640') && !heroImage.includes('-828')
+    ? heroImage.replace('.avif', '-640.avif')
+    : heroImage;
+  const hero828 = heroImage.endsWith('.avif') && !heroImage.includes('-640') && !heroImage.includes('-828')
+    ? heroImage.replace('.avif', '-828.avif')
+    : heroImage;
 
   return (
     <section className="relative flex items-center overflow-hidden pt-32 lg:pt-36 pb-12 lg:pb-16">
@@ -28,8 +34,12 @@ export default function ServiceHero({
       {/* Background Image - LCP Optimized for Mobile */}
       <div className="absolute inset-0 z-0 bg-primary/40">
         <picture className="absolute inset-0 w-full h-full">
-          <source srcSet="/images/hero/luxury-shower-remodel-chandler-640.avif" media="(max-width: 640px)" type="image/avif" />
-          <source srcSet="/images/hero/luxury-shower-remodel-chandler-828.avif" media="(min-width: 641px) and (max-width: 828px)" type="image/avif" />
+          {hero640 !== heroImage && (
+            <source srcSet={hero640} media="(max-width: 640px)" type="image/avif" />
+          )}
+          {hero828 !== heroImage && (
+            <source srcSet={hero828} media="(min-width: 641px) and (max-width: 828px)" type="image/avif" />
+          )}
           <img
             src={heroImage}
             alt={`${title} - Professional bathroom remodeling in Chandler Arizona`}

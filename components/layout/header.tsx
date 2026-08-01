@@ -70,7 +70,7 @@ export function Header() {
             >
               <div className="relative h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 rounded-full overflow-hidden shadow-md ring-2 ring-primary/20 bg-white">
                 <Image
-                  src="/images/arzhomeremodeling-web-logo.webp"
+                  src="/images/arzhomeremodeling-web-logo-opt.webp"
                   alt="ARZ Home Remodeling - Bathroom Remodeling Chandler AZ"
                   fill
                   sizes="(max-width: 1024px) 56px, 64px"
