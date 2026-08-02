@@ -1,9 +1,32 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import { Phone, Clock, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 export default function ContactSection() {
+  const [loadIframe, setLoadIframe] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (loadIframe) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setLoadIframe(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+    return () => observer.disconnect();
+  }, [loadIframe]);
+
   return (
-    <section id="contact" className="py-12 lg:py-20 bg-secondary overflow-hidden">
+    <section id="contact" className="py-12 lg:py-20 bg-secondary overflow-hidden" ref={containerRef}>
       <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
           {/* Left Column: Contact Copy and Call Details */}
@@ -50,21 +73,27 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-
-
           </div>
 
           {/* Right Column: LeadSmart Iframe Embed Form */}
           <div className="lg:col-span-6 flex justify-center">
-            <div className="w-full max-w-[600px] bg-card border border-border rounded-2xl shadow-xl overflow-hidden p-2">
-              <iframe 
-                src="https://leads.leadsmartinc.com/?api_key=eccf565586cda416df8b89f66df641fee9a1bcb8&affiliate_source=momran1&funnel=4&category=23&step=1&buttons=btn-warning" 
-                width="100%" 
-                height="545" 
-                frameBorder="0"
-                title="Request Free Quotes Box"
-                className="w-full rounded-xl"
-              />
+            <div className="w-full max-w-[600px] bg-card border border-border rounded-2xl shadow-xl overflow-hidden p-2 min-h-[545px] flex items-center justify-center">
+              {loadIframe ? (
+                <iframe 
+                  src="https://leads.leadsmartinc.com/?api_key=eccf565586cda416df8b89f66df641fee9a1bcb8&affiliate_source=momran1&funnel=4&category=23&step=1&buttons=btn-warning" 
+                  width="100%" 
+                  height="545" 
+                  frameBorder="0"
+                  loading="lazy"
+                  title="Request Free Quotes Box"
+                  className="w-full rounded-xl"
+                />
+              ) : (
+                <div className="text-center p-8 text-muted-foreground">
+                  <p className="text-sm font-semibold mb-2">Request Your Free Estimate</p>
+                  <p className="text-xs">Form will load as you view this section</p>
+                </div>
+              )}
             </div>
           </div>
         </div>

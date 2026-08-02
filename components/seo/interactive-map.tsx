@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { MapPin, Phone, ShieldCheck, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -15,15 +15,33 @@ export default function InteractiveMap({
   height = 400, 
   title = "ARZ Home Remodeling Location" 
 }: InteractiveMapProps) {
-  const [isLoaded, setIsLoaded] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isLoaded) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsLoaded(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+    return () => observer.disconnect();
+  }, [isLoaded]);
 
   const handleLoadMap = () => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoaded(true);
       setIsLoading(false);
-    }, 450);
+    }, 200);
   };
 
   if (isLoaded) {
@@ -49,6 +67,7 @@ export default function InteractiveMap({
 
   return (
     <div 
+      ref={containerRef}
       className={`relative rounded-xl overflow-hidden border border-border shadow-md bg-slate-50 group select-none flex flex-col justify-between p-6 transition-all duration-500 hover:border-primary/50 ${height ? "" : "h-full min-h-[450px]"}`}
       style={height ? { height: `${height}px` } : undefined}
     >

@@ -7,6 +7,7 @@ export default function Hero() {
     <section className="relative min-h-[70vh] lg:min-h-[calc(100vh-184px)] flex items-center overflow-hidden pt-24 md:pt-28 lg:pt-32" aria-label="Hero section">
       <div className="absolute inset-0 z-0">
         <picture className="absolute inset-0 w-full h-full">
+          <source srcSet="/images/hero/luxury-shower-remodel-chandler-480.avif" media="(max-width: 480px)" type="image/avif" />
           <source srcSet="/images/hero/luxury-shower-remodel-chandler-640.avif" media="(max-width: 640px)" type="image/avif" />
           <source srcSet="/images/hero/luxury-shower-remodel-chandler-828.avif" media="(max-width: 828px)" type="image/avif" />
           <img

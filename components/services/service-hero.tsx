@@ -20,10 +20,13 @@ export default function ServiceHero({
   breadcrumbs,
 }: ServiceHeroProps) {
   const heroImage = image.endsWith('.webp') ? image.replace(/\.webp$/, '.avif') : image;
-  const hero640 = heroImage.endsWith('.avif') && !heroImage.includes('-640') && !heroImage.includes('-828')
+  const hero480 = heroImage.endsWith('.avif') && !heroImage.includes('-480') && !heroImage.includes('-640') && !heroImage.includes('-828')
+    ? heroImage.replace('.avif', '-480.avif')
+    : heroImage;
+  const hero640 = heroImage.endsWith('.avif') && !heroImage.includes('-480') && !heroImage.includes('-640') && !heroImage.includes('-828')
     ? heroImage.replace('.avif', '-640.avif')
     : heroImage;
-  const hero828 = heroImage.endsWith('.avif') && !heroImage.includes('-640') && !heroImage.includes('-828')
+  const hero828 = heroImage.endsWith('.avif') && !heroImage.includes('-480') && !heroImage.includes('-640') && !heroImage.includes('-828')
     ? heroImage.replace('.avif', '-828.avif')
     : heroImage;
 
@@ -34,8 +37,11 @@ export default function ServiceHero({
       {/* Background Image - LCP Optimized for Mobile */}
       <div className="absolute inset-0 z-0 bg-primary/40">
         <picture className="absolute inset-0 w-full h-full">
+          {hero480 !== heroImage && (
+            <source srcSet={hero480} media="(max-width: 480px)" type="image/avif" />
+          )}
           {hero640 !== heroImage && (
-            <source srcSet={hero640} media="(max-width: 640px)" type="image/avif" />
+            <source srcSet={hero640} media="(min-width: 481px) and (max-width: 640px)" type="image/avif" />
           )}
           {hero828 !== heroImage && (
             <source srcSet={hero828} media="(min-width: 641px) and (max-width: 828px)" type="image/avif" />
