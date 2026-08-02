@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
 const Testimonials = dynamic(() => import("@/components/home/testimonials"));
@@ -96,6 +96,11 @@ export default function ShowerBathtubUpgradePage() {
         serviceName="Shower & Bathtub Upgrade in Chandler, Arizona"
         serviceDescription="Professional shower and bathtub upgrade services in Chandler, Arizona. Modern fixtures, premium materials, and expert installation."
         serviceUrl={`${siteConfig.url}/shower-bathtub-upgrade`}
+      />
+      <PriceSchema
+        serviceName="Shower & Bathtub Upgrade in Chandler, Arizona"
+        priceRange="Free Custom Estimate"
+        url={`${siteConfig.url}/shower-bathtub-upgrade`}
       />
       <FAQSchema faqs={faqs} />
       <Header />

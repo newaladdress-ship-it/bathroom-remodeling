@@ -7,7 +7,7 @@ import ServiceFAQ from "@/components/service-faq";
 import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -140,6 +140,7 @@ export default function ChandlerHeightsPage() {
         serviceDescription="professional general remodeling contractor serving Chandler Heights, AZ. Walk-in shower installation, open-concept kitchen renovations, custom cabinets, and full home remodeling."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-chandler-heights/`}
       />
+      <LocalBusinessSchema />
       <FAQSchema faqs={faqData} />
       <PriceSchema
         serviceName="Chandler Heights Remodeling Services"

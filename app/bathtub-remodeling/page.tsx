@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
@@ -50,6 +50,11 @@ export default function BathtubRemodelingPage() {
         serviceName="Bathtub Remodeling in Chandler, Arizona"
         serviceDescription="Expert tub replacements in Chandler, Arizona. Modern installations, luxury upgrades, and professional renovations."
         serviceUrl={`${siteConfig.url}/bathtub-remodeling/`}
+      />
+      <PriceSchema
+        serviceName="Bathtub Remodeling"
+        priceRange="Free Custom Estimate"
+        url={`${siteConfig.url}/bathtub-remodeling/`}
       />
       <FAQSchema faqs={faqs} />
       <Header />

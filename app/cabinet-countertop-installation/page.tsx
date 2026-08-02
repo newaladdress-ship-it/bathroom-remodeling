@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
@@ -59,6 +59,11 @@ export default function CabinetCountertopInstallationPage() {
         serviceName="Cabinet & Countertop Installation in Chandler, Arizona"
         serviceDescription="Professional cabinet and countertop installation in Chandler, Arizona. Granite, quartz, marble countertops and custom cabinetry with expert installation."
         serviceUrl={`${siteConfig.url}/cabinet-countertop-installation/`}
+      />
+      <PriceSchema
+        serviceName="Cabinet & Countertop Installation"
+        priceRange="Free Custom Estimate"
+        url={`${siteConfig.url}/cabinet-countertop-installation/`}
       />
       <FAQSchema faqs={faqs} />
       <Header />

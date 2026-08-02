@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Info } from "lucide-react";
 
@@ -132,6 +132,11 @@ export default function MasterBathroomRemodelCostPage() {
         serviceName="Master Bathroom Remodel Cost Guide"
         serviceDescription="Detailed cost and pricing analysis for custom master bathroom remodeling, vanities, and soaking tubs in Chandler, AZ."
         serviceUrl={`${siteConfig.url}/master-bathroom-remodel-cost/`}
+      />
+      <PriceSchema
+        serviceName="Master Bathroom Remodel Cost Guide"
+        priceRange="Free Custom Estimate"
+        url={`${siteConfig.url}/master-bathroom-remodel-cost/`}
       />
       <FAQSchema faqs={masterFaqs} />
       <Header />

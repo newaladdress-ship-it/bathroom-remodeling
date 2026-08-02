@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
 const Testimonials = dynamic(() => import("@/components/home/testimonials"));
@@ -86,9 +86,14 @@ export default function AccessibleBathroomPage() {
     <>
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Accessible Bathrooms", url: "https://arzhomeremodeling.com/handicap-accessible-bathroom/" } ]} />
       <ServiceSchema
-        serviceName="Handicap Accessible Bathroom Remodeling"
-        serviceDescription="ADA-compliant bathroom remodels with curbless showers, grab bars, and accessible design in Chandler, AZ"
+        serviceName="Handicap Accessible Bathroom Remodeling in Chandler, Arizona"
+        serviceDescription="Professional ADA handicap accessible bathroom remodeling in Chandler, Arizona. Roll-in curbless showers, grab bars, and wheelchair-accessible vanities."
         serviceUrl={`${siteConfig.url}/handicap-accessible-bathroom/`}
+      />
+      <PriceSchema
+        serviceName="Handicap Accessible Bathroom Remodeling"
+        priceRange="Free Custom Estimate"
+        url={`${siteConfig.url}/handicap-accessible-bathroom/`}
       />
       <FAQSchema faqs={faqs} />
       <Header />

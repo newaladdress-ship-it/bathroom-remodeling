@@ -7,7 +7,7 @@ import ServiceFAQ from "@/components/service-faq";
 import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import AreaBenefits from "@/components/area-benefits";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -52,6 +52,7 @@ export default function PhoenixPage() {
         serviceDescription="expert bathroom remodeling team serving the greater Phoenix area. Custom showers, master bath renovations, and professional bathroom makeovers."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-phoenix-az/`}
       />
+      <LocalBusinessSchema />
       <FAQSchema faqs={phoenixFaqs} />
       <PriceSchema
         serviceName="Bathroom Remodeling Phoenix"

@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
 const Testimonials = dynamic(() => import("@/components/home/testimonials"));
@@ -85,10 +85,15 @@ export default function GuestBathPage() {
   return (
     <>
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Guest Bathroom Remodeling", url: "https://arzhomeremodeling.com/guest-bathroom-remodeling/" } ]} />
-      <ServiceSchema 
-        serviceName="Guest Bathroom Remodeling in Chandler" 
-        serviceDescription="Professional guest bathroom and powder room renovations in Chandler, AZ. Fast, high-impact updates for secondary bathrooms." 
-        serviceUrl={`${siteConfig.url}/guest-bathroom-remodeling/`} 
+      <ServiceSchema
+        serviceName="Guest Bathroom Remodeling in Chandler, Arizona"
+        serviceDescription="Professional guest bathroom and powder room remodeling in Chandler, Arizona. Custom vanities, space-saving layouts, and modern finishes."
+        serviceUrl={`${siteConfig.url}/guest-bathroom-remodeling/`}
+      />
+      <PriceSchema
+        serviceName="Guest Bathroom Remodeling"
+        priceRange="Free Custom Estimate"
+        url={`${siteConfig.url}/guest-bathroom-remodeling/`}
       />
       <FAQSchema faqs={faqs} />
       <Header />

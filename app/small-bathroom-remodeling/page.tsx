@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
@@ -58,6 +58,11 @@ export default function SmallBathroomRemodelingPage() {
     <>
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Small Bathroom Remodeling", url: "https://arzhomeremodeling.com/small-bathroom-remodeling/" } ]} />
       <ServiceSchema serviceName="Small Bathroom Remodeling in Chandler, Arizona" serviceDescription="Professional small bathroom remodeling in Chandler, Arizona. Space-saving designs, storage solutions, and modern fixtures." serviceUrl={`${siteConfig.url}/small-bathroom-remodeling`} />
+      <PriceSchema
+        serviceName="Small Bathroom Remodeling in Chandler, Arizona"
+        priceRange="Free Custom Estimate"
+        url={`${siteConfig.url}/small-bathroom-remodeling`}
+      />
       <FAQSchema faqs={faqs} />
       <Header />
       <main>

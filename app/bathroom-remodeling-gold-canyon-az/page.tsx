@@ -7,7 +7,7 @@ import ServiceFAQ from "@/components/service-faq";
 import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -167,6 +167,7 @@ export default function GoldCanyonPage() {
         serviceDescription="expert bathroom remodeling contractor serving Gold Canyon, AZ. Specializing in luxury master suite renovations, zero-threshold tiled walk-in showers, and custom tile installations in Superstition Mountain and Mountainbrook Village."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-gold-canyon-az/`}
       />
+      <LocalBusinessSchema />
       <FAQSchema faqs={goldCanyonFaqs} />
       <PriceSchema
         serviceName="Bathroom Remodeling in Gold Canyon AZ"

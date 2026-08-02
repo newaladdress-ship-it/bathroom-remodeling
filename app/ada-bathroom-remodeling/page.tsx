@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { bathroomServices, getRelatedServices } from "@/lib/bathroom-services";
 import Link from "next/link";
 import { Shield, CheckCircle, Clock } from "lucide-react";
@@ -66,10 +66,15 @@ export default function ADAPage() {
     <>
       
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Ada Bathroom Remodeling", url: "https://arzhomeremodeling.com/ada-bathroom-remodeling/" } ]} />
-      <ServiceSchema 
-        serviceName="ADA Bathroom Remodeling in Chandler" 
-        serviceDescription="Professional senior-safe and handicap accessible bathroom modifications in Chandler, AZ. Curbless showers, grab bars, and roll-in entries." 
-        serviceUrl={`${siteConfig.url}/ada-bathroom-remodeling/`} 
+      <ServiceSchema
+        serviceName="ADA Bathroom Remodeling in Chandler, Arizona"
+        serviceDescription="Certified ADA compliant bathroom remodeling in Chandler, Arizona. Roll-in curbless showers, grab bar installations, and senior safety solutions."
+        serviceUrl={`${siteConfig.url}/ada-bathroom-remodeling/`}
+      />
+      <PriceSchema
+        serviceName="ADA Bathroom Remodeling"
+        priceRange="Free Custom Estimate"
+        url={`${siteConfig.url}/ada-bathroom-remodeling/`}
       />
       <FAQSchema faqs={faqs} />
       <Header />

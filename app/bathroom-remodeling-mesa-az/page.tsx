@@ -7,7 +7,7 @@ import ServiceFAQ from "@/components/service-faq";
 import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -154,6 +154,7 @@ export default function MesaPage() {
         serviceDescription="expert bathroom remodeling contractor serving Mesa, AZ. Custom shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving Dobson Ranch, Las Sendas, Eastmark, and all of Mesa."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-mesa-az/`}
       />
+      <LocalBusinessSchema />
       <FAQSchema faqs={mesaFaqs} />
       <PriceSchema
         serviceName="Bathroom Remodeling in Mesa AZ"

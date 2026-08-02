@@ -7,7 +7,7 @@ import ServiceFAQ from "@/components/service-faq";
 import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -134,6 +134,7 @@ export default function DobsonRanchPage() {
         serviceDescription="expert bathroom contractor specializing in layout renovations, small bathroom solutions, and custom walk-in showers in Dobson Ranch, Mesa/Chandler AZ."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-dobson-ranch/`}
       />
+      <LocalBusinessSchema />
       <FAQSchema faqs={dobsonRanchFaqs} />
       <PriceSchema
         serviceName="Dobson Ranch Bathroom Remodeling"

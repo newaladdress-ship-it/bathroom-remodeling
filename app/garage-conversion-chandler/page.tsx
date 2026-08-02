@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 
 const ServiceCTA = dynamic(() => import("@/components/service-cta"));
 const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
@@ -159,6 +159,7 @@ export default function GarageConversionPage() {
         serviceDescription="residential specialists specializing in premium garage conversions in Chandler, AZ. Turnkey conversions into master suites, guest apartments, and home offices."
         serviceUrl={`${siteConfig.url}/garage-conversion-chandler/`}
       />
+      <LocalBusinessSchema />
       <FAQSchema faqs={conversionFaqs} />
       <PriceSchema
         serviceName="Garage Conversion in Chandler AZ"

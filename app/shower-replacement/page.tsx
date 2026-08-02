@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
@@ -62,6 +62,11 @@ export default function ShowerReplacementPage() {
         serviceName="Shower Replacement in Chandler, Arizona"
         serviceDescription="Professional shower replacement services in Chandler, Arizona. Quick installation, modern designs, and quality materials."
         serviceUrl={`${siteConfig.url}/shower-replacement`}
+      />
+      <PriceSchema
+        serviceName="Shower Replacement in Chandler, Arizona"
+        priceRange="Free Custom Estimate"
+        url={`${siteConfig.url}/shower-replacement`}
       />
       <FAQSchema faqs={faqs} />
       <Header />

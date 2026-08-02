@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
@@ -58,8 +58,13 @@ export default function BathroomVanityInstallationPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Vanity Installation", url: "https://arzhomeremodeling.com/bathroom-vanity-installation/" } ]} />
       <ServiceSchema
         serviceName="Bathroom Vanity Installation in Chandler, Arizona"
-        serviceDescription="Professional bathroom vanity installation in Chandler, Arizona. Custom designs, expert installation, and coordinated fixtures."
+        serviceDescription="Professional bathroom vanity installation in Chandler, Arizona. Custom double vanities, floating vanities, quartz tops, and plumbing hookups."
         serviceUrl={`${siteConfig.url}/bathroom-vanity-installation/`}
+      />
+      <PriceSchema
+        serviceName="Bathroom Vanity Installation"
+        priceRange="Free Custom Estimate"
+        url={`${siteConfig.url}/bathroom-vanity-installation/`}
       />
       <FAQSchema faqs={faqs} />
       <Header />

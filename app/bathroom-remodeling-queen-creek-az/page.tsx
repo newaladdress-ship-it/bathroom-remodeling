@@ -7,7 +7,7 @@ import ServiceFAQ from "@/components/service-faq";
 import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import AreaBenefits from "@/components/area-benefits";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -51,6 +51,7 @@ export default function QueenCreekPage() {
         serviceDescription="expert bathroom remodeling team serving Queen Creek, AZ. Custom showers, master bath renovations, and tub-to-shower conversions for local families."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-queen-creek-az/`}
       />
+      <LocalBusinessSchema />
       <FAQSchema faqs={queenCreekFaqs} />
       <PriceSchema
         serviceName="Bathroom Remodeling Queen Creek"

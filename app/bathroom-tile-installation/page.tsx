@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
@@ -58,8 +58,13 @@ export default function BathroomTileInstallationPage() {
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Tile Installation", url: "https://arzhomeremodeling.com/bathroom-tile-installation/" } ]} />
       <ServiceSchema 
         serviceName="Bathroom Tile Installation in Chandler, Arizona" 
-        serviceDescription="Expert bathroom tile setting in Chandler, Arizona. Custom flooring, waterproof shower walls, and premium ceramics." 
+        serviceDescription="Professional bathroom tile installation in Chandler, Arizona. Custom wall tiles, floor tiling, accent niches, and waterproof backer board preparation." 
         serviceUrl={`${siteConfig.url}/bathroom-tile-installation/`} 
+      />
+      <PriceSchema
+        serviceName="Bathroom Tile Installation"
+        priceRange="Free Custom Estimate"
+        url={`${siteConfig.url}/bathroom-tile-installation/`}
       />
       <FAQSchema faqs={faqs} />
       <Header />

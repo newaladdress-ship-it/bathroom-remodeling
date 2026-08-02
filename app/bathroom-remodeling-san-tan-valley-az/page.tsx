@@ -7,7 +7,7 @@ import ServiceFAQ from "@/components/service-faq";
 import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -167,6 +167,7 @@ export default function SanTanValleyPage() {
         serviceDescription="expert bathroom remodeling team serving San Tan Valley, AZ. High-end master suite overhauls, zero-threshold tile walk-in showers, and tub-to-shower conversions in Encanterra and Johnson Ranch."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-san-tan-valley-az/`}
       />
+      <LocalBusinessSchema />
       <FAQSchema faqs={sanTanValleyFaqs} />
       <PriceSchema
         serviceName="Bathroom Remodeling in San Tan Valley AZ"

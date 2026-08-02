@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema } from "@/components/seo/json-ld";
 import { getRelatedServices } from "@/lib/bathroom-services";
 
 const Testimonials = dynamic(() => import("@/components/home/testimonials"));
@@ -90,6 +90,11 @@ export default function LuxuryPage() {
         serviceName="Luxury Bathroom Renovation in Chandler" 
         serviceDescription="Premium high end bathroom renovations in Chandler, AZ. Spa inspired master baths, custom tile, and luxury fixtures." 
         serviceUrl={`${siteConfig.url}/luxury-bathroom-remodeling/`} 
+      />
+      <PriceSchema
+        serviceName="Luxury Bathroom Renovation in Chandler"
+        priceRange="Free Custom Estimate"
+        url={`${siteConfig.url}/luxury-bathroom-remodeling/`}
       />
       <FAQSchema faqs={faqs} />
       <Header />

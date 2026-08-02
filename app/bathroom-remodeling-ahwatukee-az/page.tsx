@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 
 const ServiceCTA = dynamic(() => import("@/components/service-cta"));
 const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
@@ -185,6 +185,7 @@ export default function AhwatukeePage() {
         serviceDescription="expert bathroom remodeling contractor serving Ahwatukee, AZ. Custom shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving The Foothills, Club West, and Lakewood."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-ahwatukee-az/`}
       />
+      <LocalBusinessSchema />
       <FAQSchema faqs={ahwatukeeFaqs} />
       <PriceSchema
         serviceName="Bathroom Remodeling in Ahwatukee AZ"

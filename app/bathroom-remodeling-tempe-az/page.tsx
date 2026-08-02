@@ -7,7 +7,7 @@ import ServiceFAQ from "@/components/service-faq";
 import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import {  ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -174,6 +174,7 @@ export default function TempePage() {
         serviceDescription="expert bathroom remodeling team serving Tempe, AZ. Custom shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving South Tempe, Warner Ranch, and all university-area neighborhoods."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-tempe-az/`}
       />
+      <LocalBusinessSchema />
       <FAQSchema faqs={tempeFaqs} />
       <PriceSchema
         serviceName="Bathroom Remodeling in Tempe AZ"

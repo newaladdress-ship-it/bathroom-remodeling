@@ -7,7 +7,7 @@ import ServiceFAQ from "@/components/service-faq";
 import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -134,6 +134,7 @@ export default function OcotilloPage() {
         serviceDescription="expert bathroom remodeling team serving Ocotillo, Chandler, AZ (85248). Walk-in shower installation, tub-to-shower conversions, and luxury master bath design."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-ocotillo/`}
       />
+      <LocalBusinessSchema />
       <FAQSchema faqs={ocotilloFaqs} />
       <PriceSchema
         serviceName="Ocotillo Bathroom Remodeling"

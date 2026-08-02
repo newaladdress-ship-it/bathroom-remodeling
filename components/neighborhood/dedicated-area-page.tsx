@@ -9,7 +9,7 @@ import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
 import { getAreaData, type AreaData } from "@/lib/bathroom-remodeling-areas";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, BreadcrumbSchema, PriceSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import { ShieldCheck, MapPin, Phone, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -44,10 +44,16 @@ export default function DedicatedAreaPage({ areaSlug, path }: DedicatedAreaPageP
           { name: areaData.areaName, url: pageUrl },
         ]}
       />
+      <LocalBusinessSchema />
       <ServiceSchema
         serviceName={areaData.fullName}
         serviceDescription={areaData.heroDescription}
         serviceUrl={pageUrl}
+      />
+      <PriceSchema
+        serviceName={areaData.fullName}
+        priceRange="Free Custom Estimate"
+        url={pageUrl}
       />
       <FAQSchema faqs={areaData.areaFaqs} />
       <Header />
