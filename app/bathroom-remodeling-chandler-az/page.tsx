@@ -211,6 +211,9 @@ export default function ChandlerBathroomRemodelingPage() {
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               At ARZ Home Remodeling, we specialize in providing comprehensive design-build remodeling solutions tailored to the needs of Chandler homeowners. From luxury master bathroom overhauls featuring freestanding tubs and curbless entry walk-in showers to space-optimizing guest bathroom updates and expert <Link href='/tub-to-shower-conversion/' className='text-primary hover:underline font-medium'>tub-to-shower conversions</Link>, our in-house crew manages every phase. As an Arizona Registrar of Contractors () bonded and insured team (), we proudly serve communities across the East Valley, including ZIP codes <span className="text-primary font-semibold">85224, 85225, 85226, and 85249</span>.
             </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              In addition to Chandler, our team regularly serves neighboring East Valley cities. If you live in nearby communities, check out our tailored services for <Link href="/bathroom-remodeling-gilbert-az/" className="text-primary hover:underline font-medium">bathroom remodeling in Gilbert, AZ</Link> as well as our specialized rural plumbing and hard water solutions for <Link href="/bathroom-remodeling-apache-junction-az/" className="text-primary hover:underline font-medium">bathroom remodeling in Apache Junction, AZ</Link>.
+            </p>
             <h2 className="font-serif text-2xl font-semibold mt-8 mb-3 text-foreground">
               Navigating Chandler Building Codes and Permitting
             </h2>

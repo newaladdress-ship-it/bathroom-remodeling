@@ -11,7 +11,7 @@ export const siteConfig = {
   googleBusinessLink: "https://www.google.com/maps/search/?api=1&query=ARZ+Home+Remodeling+Chandler+AZ",
   phone: "(520) 569-3339",
   phoneClean: "+15205693339",
-  email: "estimates@arzhomeremodeling.com",
+  email: "sales@arzhomeremodeling.com",
   license: "",
   address: {
     street: "6710 W Chicago St",

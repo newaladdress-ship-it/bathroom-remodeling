@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/footer"
 import ContactSection from "@/components/home/contact-section"
 import { GoogleMap } from "@/components/services/google-map";
 import { siteConfig } from "@/lib/site-config"
-import { Phone, MapPin, Clock, Star } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, Star } from "lucide-react"
 import { BreadcrumbSchema, FAQSchema, ContactPageSchema } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = {title: "Free Bathroom Remodeling Quotes | Contact ARZ in Chandler",description: "Contact Chandler's top-rated bathroom remodeling specialist. Fill out our form or call (520) 569-3339 to schedule a free in-home consultation today.",
@@ -87,14 +87,14 @@ export default function ContactPage() {
 
               <div className="bg-card p-6 rounded-xl shadow-sm border border-border text-center">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="h-6 w-6 text-primary" />
+                  <Mail className="h-6 w-6 text-primary" />
                 </div>
-                <h2 className="font-serif font-semibold text-foreground text-lg mb-2">Speak to a Supervisor</h2>
+                <h2 className="font-serif font-semibold text-foreground text-lg mb-2">Email</h2>
                 <a 
-                  href={`tel:${siteConfig.phoneClean}`} 
+                  href={`mailto:${siteConfig.email}`} 
                   className="text-muted-foreground hover:text-primary transition-colors block text-sm leading-snug font-semibold"
                 >
-                  {siteConfig.phone}
+                  {siteConfig.email}
                 </a>
               </div>
 
@@ -150,7 +150,7 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <MapPin className="w-6 h-6 text-primary" />
@@ -166,6 +166,16 @@ export default function ContactPage() {
                   <h3 className="font-serif font-semibold text-foreground mb-2">Phone</h3>
                   <a href={`tel:${siteConfig.phoneClean}`} className="text-muted-foreground hover:text-primary transition-colors text-sm">
                     {siteConfig.phone}
+                  </a>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Mail className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-serif font-semibold text-foreground mb-2">Email</h3>
+                  <a href={`mailto:${siteConfig.email}`} className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    {siteConfig.email}
                   </a>
                 </div>
 

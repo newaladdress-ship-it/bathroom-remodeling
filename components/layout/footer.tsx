@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { Phone, MapPin, Clock, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 // Only the map is client-side
@@ -69,6 +69,7 @@ export function Footer() {
               <p className="font-semibold text-background text-base">ARZ Home Remodeling</p>
               <p>6710 W Chicago St, Chandler, AZ 85226</p>
               <p>Phone: <a href={`tel:${siteConfig.phoneClean}`} className="text-background/80 hover:text-primary transition-colors no-underline">{siteConfig.phone}</a></p>
+              <p>Email: <a href={`mailto:${siteConfig.email}`} className="text-background/80 hover:text-primary transition-colors no-underline">{siteConfig.email}</a></p>
             </div>
 
             <ul className="flex gap-3" role="list" aria-label="Social media links">
@@ -236,6 +237,16 @@ export function Footer() {
                     aria-label={`Call us at ${siteConfig.phone}`}
                   >
                     {siteConfig.phone}
+                  </a>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Mail className="w-5 h-5 text-primary shrink-0" aria-hidden="true" />
+                  <a
+                    href={`mailto:${siteConfig.email}`}
+                    className="text-background/80 hover:text-primary transition-colors text-sm no-underline"
+                    aria-label={`Email us at ${siteConfig.email}`}
+                  >
+                    {siteConfig.email}
                   </a>
                 </li>
 

@@ -8,7 +8,7 @@ interface ObscuredEmailProps {
 }
 
 export function ObscuredEmail({ className = "", children }: ObscuredEmailProps) {
-  const emailStr = siteConfig.email || "estimates@arzhomeremodeling.com";
+  const emailStr = siteConfig.email || "sales@arzhomeremodeling.com";
 
   return (
     <a 

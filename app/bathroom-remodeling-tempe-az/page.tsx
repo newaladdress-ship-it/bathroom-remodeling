@@ -207,6 +207,9 @@ export default function TempePage() {
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Our comprehensive services cover everything from full luxury layouts to custom safety additions, ensuring structural integrity and precise finishes on every single project.
             </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Our services extend beyond Tempe to surrounding East Valley communities. Learn more about our custom master bath renovations for <Link href="/bathroom-remodeling-gilbert-az/" className="text-primary hover:underline font-medium">bathroom remodeling in Gilbert, AZ</Link> and our desert-ready solutions for <Link href="/bathroom-remodeling-apache-junction-az/" className="text-primary hover:underline font-medium">bathroom remodeling in Apache Junction, AZ</Link>.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
