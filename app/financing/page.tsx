@@ -108,7 +108,7 @@ export default function FinancingPage() {
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
                 Don&apos;t let budget constraints hold you back. Get affordable bathroom remodeling with flexible 
-                financing options and **specialized home improvement loans arizona** homeowners trust. Low monthly payments and 0% APR available for Chandler homeowners.
+                financing options and <strong className="font-semibold text-foreground">specialized home improvement loans arizona</strong> homeowners trust. Low monthly payments and 0% APR available for Chandler homeowners.
               </p>
               <div className="mt-8">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">

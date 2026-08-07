@@ -9,6 +9,7 @@ import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
+import GalleryPreview from "@/components/home/gallery-preview";
 import {
   ShieldCheck,
   Star,
@@ -19,22 +20,53 @@ import {
   CheckCircle2,
   ArrowRight,
   Phone,
+  Check,
+  Layers,
+  UtensilsCrossed,
+  Home,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import LocalTrust from "@/components/home/local-trust";
 
 export const metadata: Metadata = {
-  title: "Home Remodeling Contractors Layton Lakes AZ | ARZ Home",
-  description: "Professional home, kitchen, and bathroom remodeling in Layton Lakes, AZ. Get your custom renovation with a 2-year warranty. Call today!",
+  title: "Bathroom Remodeling Layton Lakes | Chandler AZ",
+  description:
+    "Bathroom remodeling in Layton Lakes, AZ for walk-in showers, tub conversions, tile, vanities, and complete renovations.",
+  keywords: [
+    "bathroom remodeling Layton Lakes",
+    "bathroom remodel Layton Lakes",
+    "bathroom renovation Layton Lakes",
+    "Layton Lakes bathroom remodeling",
+    "master bathroom remodel Layton Lakes",
+    "walk-in shower Layton Lakes",
+    "tub-to-shower conversion Layton Lakes",
+    "bathroom tile installation Layton Lakes",
+    "small bathroom remodeling Layton Lakes",
+    "accessible bathroom remodeling Layton Lakes",
+    "bathroom remodel cost Layton Lakes",
+    "bathroom remodeling Chandler AZ",
+    "bathroom remodeling Gilbert AZ"
+  ],
   openGraph: {
-    title: "Home & Bath Remodeling Layton Lakes AZ | ARZ",
-    description: "professional home, kitchen, and bathroom remodeling services in Layton Lakes, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
+    title: "Bathroom Remodeling Layton Lakes | Chandler AZ",
+    description:
+      "Bathroom remodeling in Layton Lakes, AZ for walk-in showers, tub conversions, tile, vanities, and complete renovations.",
     url: `${siteConfig.url}/bathroom-remodeling-layton-lakes/`,
     type: "website",
+    images: [
+      {
+        url: `${siteConfig.url}/images/services/chandler-bathroom-remodel.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Bathroom Remodeling Layton Lakes Chandler & Gilbert AZ - ARZ Home Remodeling",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Home & Bath Remodeling Layton Lakes AZ | ARZ",
-    description: "professional home, kitchen, and bathroom remodeling services in Layton Lakes, AZ. Custom walk-in showers, quartz countertops, and full home updates.",
+    title: "Bathroom Remodeling Layton Lakes | Chandler AZ",
+    description:
+      "Bathroom remodeling in Layton Lakes, AZ for walk-in showers, tub conversions, tile, vanities, and complete renovations.",
     images: [`${siteConfig.url}/images/services/chandler-bathroom-remodel.jpg`],
   },
   alternates: {
@@ -42,203 +74,335 @@ export const metadata: Metadata = {
   },
 };
 
-const faqData = [
+const laytonLakesFaqs = [
   {
-    question: "Do I need a building permit for remodeling my home in Layton Lakes?",
+    question: "How much does a bathroom remodel cost in Layton Lakes?",
     answer:
-      "Yes. If your Layton Lakes home is in the Chandler portion, the City of Chandler requires permits for structural modifications, plumbing rerouting, and new electrical circuits. If it lies within the Gilbert boundaries, the Town of Gilbert manages approvals. We identify the correct municipality and manage the entire permitting and inspection process for you."
+      "The cost depends on the bathroom size, existing conditions, materials, shower or tub configuration, tile, flooring, vanity, fixtures, glass, demolition, plumbing changes, and overall project scope.",
   },
   {
-    question: "How long does a kitchen or bathroom remodel typically take?",
+    question: "How long does a bathroom remodel take?",
     answer:
-      "A standard guest bathroom update or tub-to-shower conversion takes two to three weeks. A comprehensive master bathroom suite renovation takes four to six weeks. Full kitchen remodeling projects generally take five to eight weeks depending on cabinet manufacturing and structural wall modifications."
+      "The timeline varies depending on the size and complexity of the project. Demolition, material availability, tile work, plumbing, electrical work, inspections, and other requirements can affect the schedule.",
   },
   {
-    question: "How do you protect tiled showers from hard water stains in Layton Lakes?",
+    question: "Can you convert a bathtub into a walk-in shower?",
     answer:
-      "Layton Lakes has mineral-heavy tap water (often over 18 grains of hardness) that easily stains standard cement-based grout. We use premium non-porous porcelain tiles and high-performance, stain-resistant epoxy grout that prevents mineral absorption. We also apply a hydrophobic protective coating to frameless glass shower doors to repel water and prevent white calcium scale buildup."
+      "Yes. A tub-to-shower conversion can replace an existing bathtub with a walk-in shower when the existing space and project scope allow.",
   },
   {
-    question: "Can you remove kitchen walls to create an open-concept layout?",
+    question: "Do you remodel primary bathrooms in Layton Lakes?",
     answer:
-      "Yes. We specialize in open-concept kitchen transformations. Our team identifies load-bearing walls, installs engineered support headers (such as LVL beams), and safely reconfigures plumbing and electrical lines to merge your kitchen and family room into a seamless, bright layout."
+      "Yes. Primary bathroom remodeling can include showers, vanities, countertops, flooring, tile, lighting, fixtures, storage, and other improvements.",
   },
   {
-    question: "What is your warranty policy for custom home renovations?",
+    question: "Do you remodel guest bathrooms?",
     answer:
-      "We stand behind all of our construction work with a comprehensive workmanship warranty. If any structural, plumbing, or installation issue arises due to our craftsmanship within two years of completing your project, our team will return and repair it at absolutely no cost to you."
+      "Yes. Guest bathroom renovations can include tubs, showers, vanities, flooring, tile, fixtures, lighting, and other finishes.",
+  },
+  {
+    question: "Can you remodel a small bathroom?",
+    answer:
+      "Yes. Small bathroom remodeling can focus on efficient fixture placement, storage, shower configuration, vanity size, lighting, and other space-conscious improvements.",
+  },
+  {
+    question: "Can you make a bathroom more accessible?",
+    answer:
+      "Yes. Depending on the existing space, accessibility-focused improvements can include low-threshold showers, curbless entries, shower seating, handheld fixtures, and other practical features.",
+  },
+  {
+    question: "Do bathroom remodels in Layton Lakes require permits?",
+    answer:
+      "Permit requirements depend on the property and the type of work being performed. Plumbing, electrical, structural, and other regulated modifications may have different requirements from cosmetic updates.",
+  },
+  {
+    question: "Do you also remodel kitchens in Layton Lakes?",
+    answer:
+      "Yes. Kitchen remodeling is available as a separate service and can include cabinets, countertops, backsplashes, islands, storage, lighting, flooring, and other improvements.",
+  },
+  {
+    question: "Do you provide whole-home remodeling?",
+    answer:
+      "Home renovation services are also available for homeowners who want to update multiple interior areas.",
   },
 ];
 
-const services = [
+const mainServices = [
   {
-    title: "Bathroom Remodeling",
-    href: "/bathroom-remodeling-chandler-az/",
+    title: "Primary Bathroom Remodeling",
+    href: "/master-bathroom-remodel/",
     description:
-      "Transform your bathroom into a luxury retreat. We specialize in curbless walk-in showers, custom tile design, double vanities with quartz tops, freestanding soaking tubs, and modern LED lighting layouts.",
-    price: "Free Estimate",
+      "Transform your primary bathroom into a more comfortable and functional space.",
+    detail:
+      "A primary bathroom remodel in Layton Lakes can focus on a few key improvements or combine several upgrades into one coordinated renovation, including a redesigned shower, vanity, countertop, flooring, tile, lighting, fixtures, and storage.",
+    cta: "Explore Primary Bathroom Remodeling →",
   },
   {
-    title: "Kitchen Remodeling",
-    href: "/kitchen-remodeling-chandler-az/",
+    title: "Walk-In Shower Remodeling",
+    href: "/walk-in-showers/",
     description:
-      "Create a functional and beautiful culinary space. We offer custom solid wood cabinets, massive kitchen islands, professional tile backsplashes, built-in pantries, and open-concept structural wall removals.",
-    price: "Free Estimate",
+      "A walk-in shower can make a bathroom feel more open while providing a practical alternative to an outdated tub.",
+    detail:
+      "Our walk-in shower remodeling options can include custom shower tile, low-threshold entries, curbless shower designs, built-in niches, shower seating, handheld fixtures, fixed showerheads, and glass shower enclosures.",
+    cta: "Explore Walk-In Shower Remodeling →",
   },
   {
-    title: "Home Renovation",
-    href: "/home-renovation-chandler-az/",
+    title: "Tub-to-Shower Conversions",
+    href: "/tub-to-shower-conversion/",
     description:
-      "Complete home updates designed for modern living. We install premium luxury vinyl plank (LVP) flooring, renovate custom fireplace surrounds, expand walk-in closets, and handle complete interior updates.",
-    price: "Free Estimate",
+      "If your bathtub is rarely used, converting it into a shower can make better use of the available space.",
+    detail:
+      "A tub-to-shower conversion in Layton Lakes may include tub removal, shower preparation, waterproofing, tile, fixtures, storage, flooring, and glass. When the existing layout allows, the new shower can be designed within or around the current footprint.",
+    cta: "Explore Tub-to-Shower Conversion →",
+  },
+  {
+    title: "Guest Bathroom Remodeling",
+    href: "/guest-bathroom-remodeling/",
+    description:
+      "Guest bathrooms often need to balance appearance, storage, and efficient use of space.",
+    detail:
+      "A guest bathroom remodel in Layton Lakes can include a new tub or shower, vanity, countertop, flooring, tile, lighting, fixtures, and other finishes.",
+    cta: "Explore Guest Bathroom Remodeling →",
+  },
+  {
+    title: "Small Bathroom Remodeling",
+    href: "/small-bathroom-remodeling/",
+    description:
+      "A smaller bathroom benefits from careful planning.",
+    detail:
+      "Space-conscious solutions can include compact vanities, walk-in showers, recessed shower niches, efficient storage, appropriate tile sizes, better fixture placement, and improved lighting.",
+    cta: "Explore Small Bathroom Remodeling →",
+  },
+  {
+    title: "Accessible Bathroom Remodeling",
+    href: "/handicap-accessible-bathroom/",
+    description:
+      "A bathroom can also be redesigned to make everyday bathing easier.",
+    detail:
+      "Depending on the space and project requirements, accessibility-focused improvements can include low-threshold or curbless showers, shower seating, handheld fixtures, grab-bar preparation, improved lighting, and practical bathroom clearances.",
+    cta: "Explore Accessible Bathroom Remodeling →",
   },
 ];
 
-const trustPoints = [
+const processSteps = [
   {
-    icon: ShieldCheck,
-    title: " bonded",
-    body: "Fully professional by the state of Arizona () and fully insured for your ultimate safety and peace of mind.",
+    step: "1",
+    title: "Consultation",
+    body: "We discuss what you want to change, how the bathroom is currently used, and what type of renovation you're considering.",
   },
   {
-    icon: Star,
-    title: "workmanship warranty",
-    body: "We stand firmly behind our work. If any installation issues occur within two years, we resolve them completely free.",
+    step: "2",
+    title: "Bathroom Evaluation",
+    body: "We review the existing shower or tub, vanity, flooring, storage, fixtures, layout, and other conditions that may affect the project.",
   },
   {
-    icon: MapPin,
-    title: "Layton Lakes Experts",
-    body: "We are deeply familiar with Layton Lakes home designs, HOA design guidelines, and local permit regulations.",
+    step: "3",
+    title: "Remodeling Plan",
+    body: "The project scope is organized around your priorities, available space, design preferences, and desired improvements.",
   },
   {
-    icon: DollarSign,
-    title: "Fixed-Price Guarantee",
-    body: "The price on your signed contract is exactly what you pay. No unexpected fees, markup surprises, or change order games.",
+    step: "4",
+    title: "Material Selection",
+    body: "Tile, flooring, vanity, countertop, fixtures, glass, hardware, and other finishes are selected for the planned design.",
   },
   {
-    icon: Droplets,
-    title: "Hard Water Engineering",
-    body: "We utilize premium epoxy grouts, solid surfaces, and protective glass treatments to repel local mineral scale.",
+    step: "5",
+    title: "Remodeling",
+    body: "Existing materials are removed as needed, the bathroom is prepared, and the planned improvements are installed.",
   },
   {
-    icon: Clock,
-    title: "On-Time Project Delivery",
-    body: "We provide clear, written construction schedules and supervise the worksite daily to ensure clean, prompt completion.",
+    step: "6",
+    title: "Final Walkthrough",
+    body: "The completed bathroom is reviewed after the remodeling work is finished.",
   },
 ];
 
-export default function LaytonLakesPage() {
+const whyChooseUsPoints = [
+  {
+    title: "Bathroom-Focused Remodeling",
+    body: "We provide bathroom remodeling solutions ranging from focused shower upgrades to complete bathroom renovations.",
+  },
+  {
+    title: "Practical Design",
+    body: "We consider how the bathroom will actually be used when planning showers, storage, vanities, flooring, fixtures, and other improvements.",
+  },
+  {
+    title: "Clear Project Scope",
+    body: "The remodeling plan is organized around the work you want completed and the existing conditions of the bathroom.",
+  },
+  {
+    title: "Local East Valley Service",
+    body: "Layton Lakes is part of our local service area, allowing us to work with homeowners throughout the surrounding communities.",
+  },
+  {
+    title: "Attention to Finishing Details",
+    body: "Tile layout, shower transitions, storage, vanities, fixtures, glass, and other finishing details all contribute to the completed bathroom.",
+  },
+];
+
+const projectExamples = [
+  {
+    title: "Walk-In Shower Transformation",
+    description: "An existing bathing area redesigned around a more open shower configuration with updated tile, storage, fixtures, and glass.",
+  },
+  {
+    title: "Primary Bathroom Update",
+    description: "A primary bathroom refreshed with coordinated improvements to the shower, vanity, countertop, flooring, lighting, and finishes.",
+  },
+  {
+    title: "Bathroom Finish Update",
+    description: "An existing bathroom updated with new tile, flooring, vanity, fixtures, and other coordinated finishes.",
+  },
+];
+
+const laytonLakesChanges = [
+  {
+    title: "Replace an Unused Bathtub",
+    desc: "Convert an underused tub into a walk-in shower that better fits your daily routine.",
+  },
+  {
+    title: "Update Builder-Grade Finishes",
+    desc: "Replace outdated tile, flooring, vanity, fixtures, and other finishes with a coordinated design.",
+  },
+  {
+    title: "Improve Bathroom Storage",
+    desc: "Add vanity storage, recessed niches, and other practical storage solutions.",
+  },
+  {
+    title: "Create a More Open Shower",
+    desc: "A walk-in or curbless shower can visually open up the bathing area.",
+  },
+  {
+    title: "Modernize a Primary Bathroom",
+    desc: "Combine a new shower, vanity, flooring, tile, lighting, fixtures, and storage into one coordinated renovation.",
+  },
+  {
+    title: "Improve Accessibility",
+    desc: "Consider a low-threshold shower, seating, handheld fixtures, and other features designed around easier bathroom use.",
+  },
+];
+
+export default function LaytonLakesBathroomRemodelingPage() {
   return (
     <>
-      <BreadcrumbSchema items={[
-        { name: "Home", url: "https://arzhomeremodeling.com/" },
-        { name: "Services", url: "https://arzhomeremodeling.com/services/" },
-        { name: "Home Remodeling Layton Lakes", url: "https://arzhomeremodeling.com/bathroom-remodeling-layton-lakes/" }
-      ]} />
+      <LocalBusinessSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://arzhomeremodeling.com/" },
+          { name: "Services", url: "https://arzhomeremodeling.com/services/" },
+          {
+            name: "Bathroom Remodeling Layton Lakes",
+            url: "https://arzhomeremodeling.com/bathroom-remodeling-layton-lakes/",
+          },
+        ]}
+      />
       <ServiceSchema
-        serviceName="Home & Bathroom Remodeling in Layton Lakes, AZ"
-        serviceDescription="professional general remodeling contractor serving Layton Lakes, Chandler, AZ. Custom walk-in showers, open-concept kitchens, custom cabinets, and full home remodeling."
+        serviceName="Bathroom Remodeling Layton Lakes"
+        serviceDescription="Bathroom remodeling in Layton Lakes, AZ for walk-in showers, tub conversions, tile, vanities, and complete renovations."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-layton-lakes/`}
       />
-      <LocalBusinessSchema />
-      <FAQSchema faqs={faqData} />
+      <FAQSchema faqs={laytonLakesFaqs} />
       <PriceSchema
-        serviceName="Layton Lakes Remodeling Services"
+        serviceName="Bathroom Remodeling Layton Lakes"
         priceRange="Free Custom Estimate"
         url={`${siteConfig.url}/bathroom-remodeling-layton-lakes/`}
       />
       <Header />
       <main>
-        {/* HERO */}
+        {/* SECTION 2: HERO */}
         <ServiceHero
-          title="Premium Home & Bathroom Remodeling in Layton Lakes, AZ"
-          subtitle="Exceptional Craftsmanship for Modern Master-Planned Communities"
-          description="Elevate your living space with the East Valley's premier remodeling contractor. Serving Layton Lakes with high-end bathroom remodels, custom walk-in showers, open-concept kitchens, and complete home renovations."
+          title="Bathroom Remodeling in Layton Lakes"
+          subtitle="Bathroom Remodeling in Layton Lakes, AZ"
+          description="Create a bathroom that fits the way you live. ARZ Home Remodeling helps homeowners in Layton Lakes update bathrooms with walk-in showers, tub-to-shower conversions, custom tile, vanities, flooring, storage, and complete bathroom renovations. Whether you're updating a primary bathroom, refreshing a guest bath, or replacing an outdated tub, we plan the remodeling work around your existing space and your goals."
           image="/images/services/chandler-bathroom-remodel.jpg"
-          titleClassName="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
-            { name: "Layton Lakes Remodeling", url: `${siteConfig.url}/bathroom-remodeling-layton-lakes/` },
+            { name: "Layton Lakes", url: `${siteConfig.url}/bathroom-remodeling-layton-lakes/` },
           ]}
         />
 
-        {/* OPENING CONTENT */}
+        {/* SECTION 3: INTRODUCTION */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
-              Your Local Remodeling Partner in Layton Lakes
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling for Layton Lakes Homes
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Layton Lakes is one of the premier master-planned communities in the East Valley, featuring gorgeous community lakes, streams, walking paths, and parks that span the borders of southeast Chandler and southwest Gilbert. Built from the mid-2000s onward, these properties boast modern floor plans and excellent structural integrity. However, many homes still feature standard builder-grade finishes, dark cabinetry, and basic bathroom layouts. As styles shift toward bright, open-concept designs and custom features, upgrading your home's interior is a highly effective way to match your living space with the upscale feel of the neighborhood.
+              A bathroom can look outdated even when the rest of the home still works well.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At <Link href="/" className="text-primary hover:underline font-medium">ARZ Home Remodeling</Link>, we specialize in converting standard developer layouts into premium, custom spaces. Whether you want to replace an old master bath tub-and-shower combo with a massive walk-in tiled shower, install custom double vanities with quartz tops, or open up kitchen walls to construct a massive culinary island, we deliver  professional craftsmanship. We use advanced materials like <Link href="/blog/schluter-kerdi-vs-redgard-arizona/" className="text-primary hover:underline font-medium">Schluter-KERDI waterproofing systems</Link> and stain-resistant epoxy grouts to ensure that your new kitchen, bath, or full home update is built to last.
+              Builder-grade finishes, underused bathtubs, limited storage, older tile, or an inefficient shower configuration can make an otherwise comfortable bathroom feel less practical.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              A <strong className="font-semibold text-foreground">Layton Lakes bathroom remodel</strong> gives you the opportunity to improve the parts of the room that matter most.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Some homeowners want a new walk-in shower or tub-to-shower conversion. Others need a larger vanity, better storage, updated flooring, new tile, or a complete bathroom renovation.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              At ARZ Home Remodeling, we approach each project according to the existing bathroom layout, the available space, and the improvements you want to make.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call Now for a Free In-Home Consultation!
+                  Get a Free Bathroom Remodeling Estimate
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="tel:+15205693339" className="flex items-center gap-2">
+                <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  (520) 569-3339
-                </Link>
+                  Call {siteConfig.phone}
+                </a>
               </Button>
             </div>
           </div>
         </section>
 
-        {/* LOCAL COMMUNITY & PERMIT HIGHLIGHTS */}
-        <section className="py-16 lg:py-24 bg-background border-t border-border">
+        {/* SECTION 4: LOCAL SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
-              Remodeling Custom Homes in the Layton Lakes Area
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Renovations in Layton Lakes
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Remodeling in Layton Lakes requires a contractor who understands the community's unique boundary system, local HOA architectural guidelines, and construction layouts. Properties near Queen Creek Road, Germann Road, and Lindsay Road feature beautiful Modern Desert, Transitional Family, and Southwestern designs. Upgrading these properties requires a professional team that can coordinate design-build details with HOA committees to ensure quick approvals.
+              Layton Lakes includes homes with different layouts, bathroom sizes, finishes, and remodeling requirements.
             </p>
-            
-            <h3 className="font-serif text-xl font-semibold mb-4 text-foreground">
-              Recent Layton Lakes Home Renovation Project:
-            </h3>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A recent project we completed in the Layton Lakes community involved updating a builder-grade master suite. The bathroom had a basic acrylic corner tub and a small glass shower pan. We removed the tub to build a massive walk-in double shower with a zero-threshold curbless entry. We installed large-format porcelain wall tiles, slip-resistant mosaic floor tiles, a built-in bench, dual rainfall shower heads, and new custom double vanities with backlit LED mirrors. To combat hard water mineral scale, we utilized high-performance epoxy grout and treated the glass enclosure with EnduroShield coating.
+              That means there isn&apos;t one bathroom design that works for every property.
             </p>
-
-            <h3 className="font-serif text-xl font-semibold mb-4 text-foreground">
-              Navigating Building Permits & Inspections:
-            </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              A primary bathroom may need a more functional shower and additional storage, while a guest bathroom may benefit from a compact vanity and updated tile. A homeowner who rarely uses a bathtub may prefer converting it into a walk-in shower.
+            </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Because Layton Lakes spans across the municipal limits of both the City of Chandler and the Town of Gilbert, determining the correct permit jurisdiction is the first step in any structural, plumbing, or electrical remodel. ARZ Home Remodeling manages the entire permitting process on your behalf. We prepare detailed layouts, submit them to the correct building division (whether the City of Chandler or the Town of Gilbert), and coordinate all structural, plumbing, and electrical inspections to ensure your remodel is fully safe and code-compliant.
+              Our approach is to identify what isn&apos;t working in the existing bathroom and build the remodeling plan around those priorities.
             </p>
           </div>
         </section>
 
-        {/* SERVICES */}
-        <section className="py-16 lg:py-24 bg-secondary">
-          <div className="container mx-auto px-4 lg:px-8">
+        {/* SECTION 5: MAIN SERVICES */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
             <div className="text-center mb-12">
               <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Services</span>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Our Remodeling Services in Layton Lakes
+                Our Layton Lakes Bathroom Remodeling Services
               </h2>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {services.map((svc) => (
-                <div key={svc.title} className="bg-background rounded-2xl p-8 border border-border flex flex-col">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold uppercase tracking-widest text-primary">{svc.price}</span>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mainServices.map((svc) => (
+                <div key={svc.title} className="bg-secondary rounded-2xl p-8 border border-border flex flex-col justify-between shadow-sm hover:border-primary/50 transition-all">
+                  <div>
+                    <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{svc.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{svc.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">{svc.detail}</p>
                   </div>
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{svc.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-6">{svc.description}</p>
                   <Link
                     href={svc.href}
-                    className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline mt-auto"
+                    className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline mt-auto pt-4 border-t border-border/60"
                   >
-                    Learn more <ArrowRight className="w-4 h-4" />
+                    {svc.cta}
                   </Link>
                 </div>
               ))}
@@ -246,53 +410,378 @@ export default function LaytonLakesPage() {
           </div>
         </section>
 
-        {/* DETAILED SERVICE AREAS FOCUS */}
-        <section className="py-16 lg:py-24 bg-background">
+        {/* SECTION 6: TILE & FLOORING */}
+        <section className="py-16 lg:py-24 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
-              High-End Kitchen and Bath Remodeling Services
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Tile & Flooring in Layton Lakes
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Upgrading the kitchen and bathrooms in your Layton Lakes home is the most effective way to add lasting comfort, modern utility, and real property value.
-            </p>
-            
-            <h3 className="font-serif text-2xl font-semibold mb-4 text-foreground">
-              Custom Bathroom Remodeling & Tub-to-Shower Conversions
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Our bathroom remodeling team specializes in turning builder-grade spaces into beautiful, functional home spas. The most requested update in Layton Lakes is a tub-to-shower conversion, where we remove the large, unused tub deck and build a massive, walk-in tiled shower. This conversion instantly opens up the bathroom layout, making the space feel twice as large while improving safety with low or zero-threshold curbless entry options. We construct walk-in showers with built-in tile benches, linear drains, niches, and frameless heavy glass panels.
+              Tile and flooring can completely change the appearance of a bathroom.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              To protect your subfloors and wall cavities from moisture damage, we use the Schluter-KERDI waterproofing system exclusively. This vapor-tight waterproofing membrane is applied directly to the walls and shower pan, ensuring that your custom tile shower is completely leak-proof and mold-free for life. We complete the remodel with custom double vanities, quartz countertops, comfort-height toilets, and premium plumbing fixtures.
-            </p>
-
-            <h3 className="font-serif text-2xl font-semibold mb-4 text-foreground">
-              Gourmet Kitchen Remodeling & Open-Concept layouts
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              If your current kitchen feels isolated from the rest of the house, our kitchen remodeling services can transform it into a bright, open culinary space. We specialize in removing interior dividing walls to open up the kitchen directly to the living and dining areas. We identify load-bearing walls, install engineered support headers (such as LVL beams), and safely reconfigure the plumbing and electrical lines.
+              We can coordinate tile across shower walls, bathroom floors, niches, backsplashes, and accent areas to create a consistent design.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Our kitchen remodels are designed to fit your unique lifestyle, featuring custom solid wood cabinetry, massive center islands with dual-waterfall quartz countertops, and designer tile backsplashes. We also install under-cabinet LED task lighting, professional-grade gas ranges, slide-out pantry shelving, and high-efficiency ventilation hoods, creating a space that is as functional as it is beautiful.
+              Bathroom flooring can also be selected to complement the shower, vanity, walls, fixtures, and other finishes.
             </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Whether you prefer a simple, clean design or a more distinctive tile pattern, material selection should consider both appearance and everyday maintenance.
+            </p>
+            <div className="flex flex-wrap gap-6">
+              <Link href="/bathroom-tile-installation/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Explore Bathroom Tile Installation →
+              </Link>
+              <Link href="/bathroom-flooring-installation/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Explore Bathroom Flooring →
+              </Link>
+            </div>
           </div>
         </section>
 
-        {/* TRUST SIGNALS */}
-        <section className="py-16 lg:py-24 bg-background border-t border-border">
-          <div className="container mx-auto px-4 lg:px-8">
+        {/* SECTION 7: VANITY & STORAGE */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Vanities, Countertops & Storage
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Changing the vanity can improve both the appearance and functionality of a bathroom.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              A new vanity can provide additional cabinet storage, countertop space, updated hardware, and a better fit for the room.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              For primary bathrooms, homeowners may prefer larger vanities with additional storage and countertop space. Smaller bathrooms may benefit from compact designs that leave more room around the shower and other fixtures.
+            </p>
+            <div>
+              <Link href="/cabinet-countertop-installation/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Explore Bathroom Vanity Installation →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 8: PROBLEM → SOLUTION SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Why Choose ARZ</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Your Trusted Layton Lakes Contractor
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">User Intent</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                What Can You Change With a Layton Lakes Bathroom Remodel?
               </h2>
             </div>
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {trustPoints.map((pt) => (
-                <div key={pt.title} className="flex gap-4 p-6 bg-secondary rounded-2xl border border-border">
-                  <pt.icon className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+              {laytonLakesChanges.map((item) => (
+                <div key={item.title} className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 9: DESIGN IDEAS */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Design Ideas</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Bathroom Remodeling Ideas for Layton Lakes Homes
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                The best design depends on the existing bathroom and how you use it.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-secondary p-6 rounded-2xl border border-border">
+                <h3 className="font-semibold text-foreground mb-2">Walk-In Shower Instead of a Tub</h3>
+                <p className="text-muted-foreground text-sm">An underused bathtub can be replaced with a more practical shower configuration.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-2xl border border-border">
+                <h3 className="font-semibold text-foreground mb-2">Double Vanity Upgrade</h3>
+                <p className="text-muted-foreground text-sm">A larger primary bathroom may benefit from additional counter and storage space.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-2xl border border-border">
+                <h3 className="font-semibold text-foreground mb-2">Built-In Shower Niche</h3>
+                <p className="text-muted-foreground text-sm">A recessed niche keeps everyday shower products organized without taking up floor space.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-2xl border border-border">
+                <h3 className="font-semibold text-foreground mb-2">Coordinated Tile Design</h3>
+                <p className="text-muted-foreground text-sm">Wall and floor tile can be selected together to create a more cohesive appearance.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-2xl border border-border">
+                <h3 className="font-semibold text-foreground mb-2">Updated Bathroom Lighting</h3>
+                <p className="text-muted-foreground text-sm">Improved vanity and bathroom lighting can make the room more functional and change its overall appearance.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-2xl border border-border">
+                <h3 className="font-semibold text-foreground mb-2">Better Bathroom Storage</h3>
+                <p className="text-muted-foreground text-sm">A combination of vanity cabinetry, recessed niches, and carefully planned storage can help keep the bathroom organized.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 10: COST SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Project Budgeting</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                How Much Does a Bathroom Remodel Cost in Layton Lakes?
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                The cost of a <strong className="font-semibold text-foreground">bathroom remodel in Layton Lakes</strong> depends on the bathroom size, existing conditions, materials, shower or tub configuration, tile, flooring, vanity, fixtures, glass, demolition, plumbing changes, and overall project scope.
+              </p>
+              <p className="text-muted-foreground text-sm mt-2">
+                A focused shower renovation will have different requirements from a complete primary bathroom remodel.
+              </p>
+            </div>
+
+            <div className="space-y-4 mb-8">
+              <div className="bg-background p-6 rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Walk-In Shower Remodel</h3>
+                <p className="text-muted-foreground text-sm">May include shower preparation, waterproofing, tile, fixtures, storage, and glass.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Tub-to-Shower Conversion</h3>
+                <p className="text-muted-foreground text-sm">May include tub removal, shower preparation, tile, fixtures, flooring, storage, and an enclosure.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Primary Bathroom Remodel</h3>
+                <p className="text-muted-foreground text-sm">Can combine shower, vanity, countertop, tile, flooring, fixtures, lighting, and storage improvements.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Complete Bathroom Renovation</h3>
+                <p className="text-muted-foreground text-sm">May address multiple areas of the bathroom at once, including surfaces, fixtures, storage, and layout.</p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link
+                href="/bathroom-remodeling-cost-chandler-az/"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg"
+              >
+                View Our Bathroom Remodeling Cost Guide →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 11: PROCESS */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Process</span>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
+                Our Layton Lakes Bathroom Remodeling Process
+              </h2>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {processSteps.map((step) => (
+                <div key={step.step} className="bg-secondary rounded-2xl p-6 border border-border flex flex-col justify-between">
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">{pt.title}</h3>
+                    <span className="text-4xl font-bold text-primary/25 font-mono">0{step.step}</span>
+                    <h3 className="font-semibold text-foreground mt-2 mb-2 text-lg">{step.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{step.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 12: TECHNICAL SHOWER SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground text-center">
+              Shower Waterproofing & Proper Preparation
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6 text-center max-w-2xl mx-auto">
+              The tile you see on the finished shower is only part of the shower system. Before the visible tile is installed, the shower area needs appropriate substrate preparation, moisture protection, drainage, and installation of the selected shower system.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center max-w-2xl mx-auto">
+              Depending on the project, the work can involve:
+            </p>
+
+            <div className="bg-background p-8 rounded-2xl border border-border mb-8 shadow-sm">
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Substrate preparation</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shower waterproofing</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Drainage preparation</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shower niches</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Seating</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Tile-setting materials</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Fixture installation</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Grout and sealant</span>
+                </div>
+                <div className="flex items-center gap-2.5 sm:col-span-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Glass enclosure installation</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center">
+              The specific installation approach depends on the shower design and existing conditions.
+            </p>
+
+            <div className="text-center">
+              <Link href="/shower-remodeling/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Learn More About Shower Waterproofing →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 13: KITCHEN & HOME REMODELING */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Additional Services</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Other Remodeling Services in Layton Lakes
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                Bathroom remodeling is one part of the services available to homeowners in Layton Lakes.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-secondary p-8 rounded-2xl border border-border flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                    <UtensilsCrossed className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3">Kitchen Remodeling</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    Kitchen renovations can include cabinets, countertops, backsplashes, islands, lighting, storage, flooring, and other improvements.
+                  </p>
+                </div>
+                <Link href="/kitchen-remodeling-chandler-az/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
+                  Explore Kitchen Remodeling →
+                </Link>
+              </div>
+
+              <div className="bg-secondary p-8 rounded-2xl border border-border flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                    <Home className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3">Home Renovation</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    Home renovation projects can address multiple interior spaces and may include flooring, room updates, storage improvements, and other interior improvements.
+                  </p>
+                </div>
+                <Link href="/home-renovation-chandler-az/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
+                  Explore Home Renovation →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 14: LOCAL SERVICE AREA */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling Throughout Layton Lakes
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              ARZ Home Remodeling serves homeowners in <strong className="font-semibold text-foreground">Layton Lakes and surrounding East Valley communities</strong> for bathroom renovation projects ranging from focused updates to complete bathroom transformations.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Whether you&apos;re looking to replace an outdated bathtub, redesign a primary bathroom, update a guest bathroom, or improve the functionality of a smaller space, the project can be planned around your existing bathroom.
+            </p>
+            <div>
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                <a href={`tel:${siteConfig.phoneClean}`} className="inline-flex items-center gap-2 text-lg">
+                  <Phone className="w-5 h-5" />
+                  Get a Free Bathroom Remodeling Estimate →
+                </a>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 15: PERMIT SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling Permits in Layton Lakes
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Layton Lakes is associated with both Chandler and Gilbert areas, so the applicable permitting requirements depend on the <strong className="font-semibold text-foreground">specific property and scope of work</strong>.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Cosmetic bathroom updates can have different requirements from projects involving plumbing, electrical work, structural modifications, or other regulated changes.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Before beginning work, the applicable requirements should be confirmed for the specific property and remodeling scope.
+            </p>
+            <div>
+              <Link
+                href="/bathroom-remodeling-permits-chandler/"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg"
+              >
+                Learn More About Local Bathroom Remodeling Requirements →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Local Trust Badge */}
+        <LocalTrust cityName="Layton Lakes" />
+
+        {/* SECTION 16: WHY ARZ */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Why Choose ARZ</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Why Layton Lakes Homeowners Choose ARZ Home Remodeling
+              </h2>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {whyChooseUsPoints.map((pt) => (
+                <div key={pt.title} className="p-6 bg-background rounded-2xl border border-border flex flex-col justify-between shadow-sm">
+                  <div>
+                    <h3 className="font-semibold text-foreground text-lg mb-2">{pt.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{pt.body}</p>
                   </div>
                 </div>
@@ -301,50 +790,52 @@ export default function LaytonLakesPage() {
           </div>
         </section>
 
-        {/* HARD WATER SECTION */}
-        <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <div className="flex items-start gap-4">
-              <Droplets className="w-10 h-10 flex-shrink-0 mt-1 opacity-80" />
-              <div>
-                <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6">
-                  Combating Hard Water in Layton Lakes
-                </h2>
-                <p className="text-primary-foreground/85 text-lg leading-relaxed mb-4">
-                  The tap water in Layton Lakes carries a high concentration of dissolved minerals, often measuring over 18 grains of hardness. This hard water leads to rapid calcium and magnesium scaling, which can destroy plumbing fixtures, clog aerators, and cause unsightly white stains on tile grout and shower glass.
-                </p>
-                <p className="text-primary-foreground/85 text-lg leading-relaxed mb-4">
-                  To ensure that your newly remodeled bathroom or kitchen stands the test of time, we integrate specialized hard water defenses into our construction methods:
-                </p>
-                <ul className="space-y-3 text-primary-foreground/85">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>Stain-Resistant Epoxy Grout:</strong> Unlike standard porous cement-based grout, epoxy grout is completely non-porous and waterproof. It resists mineral staining, ignores hard water scale, and will not mold or crumble over time.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>EnduroShield Glass Protection:</strong> We treat all custom glass panels with a permanent hydrophobic nano-coating. This treatment repels water and prevents calcium mineral scale from bonding to the glass surface, keeping it crystal clear.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>Quartz & Solid Surfaces:</strong> We install solid-surface materials and quartz countertops that lack pores, ensuring they won't absorb minerals or discolor near sink faucets and shower pans.</span>
-                  </li>
-                </ul>
-              </div>
+        {/* SECTION 17: PROJECTS */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Work</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Bathroom Remodeling Projects in Layton Lakes
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                Every bathroom has different dimensions, layouts, finishes, and remodeling requirements. Our project work can include shower transformations, tub-to-shower conversions, vanity updates, tile installation, flooring, storage improvements, and complete bathroom renovations.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-3 gap-6 mb-8">
+              {projectExamples.map((proj) => (
+                <div key={proj.title} className="bg-secondary p-6 rounded-2xl border border-border shadow-sm">
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{proj.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{proj.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Link href="/gallery/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                View Our Bathroom Remodeling Projects →
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* FAQS */}
-        <ServiceFAQ faqs={faqData} />
-        
-        {/* TESTIMONIALS & CONTACT */}
+        {/* PORTFOLIO SHOWCASE PREVIEW */}
+        <GalleryPreview />
+
+        {/* SECTION 18: FAQ */}
+        <ServiceFAQ faqs={laytonLakesFaqs} />
+
+        {/* TESTIMONIALS */}
         <Testimonials />
+
+        {/* CONTACT */}
         <ContactSection />
-        
+
+        {/* SECTION 19: FINAL CTA */}
         <ServiceCTA
-          title="Ready to Transform Your Layton Lakes Property?"
-          description="Contact us today to schedule your complimentary, detailed in-home evaluation. We will review layouts, material options, permitting requirements, and provide a fixed-price estimate."
+          title="Ready to Remodel Your Layton Lakes Bathroom?"
+          description="Whether you're replacing an outdated tub, creating a walk-in shower, updating your primary bathroom, or planning a complete renovation, the first step is understanding what your existing space needs. Tell us what you'd like to change and we'll discuss your remodeling options and next steps."
         />
       </main>
       <Footer />

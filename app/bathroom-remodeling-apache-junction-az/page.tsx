@@ -44,9 +44,8 @@ const apacheJunctionFaqs = [
 export default function ApacheJunctionPage() {
   return (
     <>
-      
       <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Apache Junction Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-apache-junction-az/" } ]} />
-<ServiceSchema
+      <ServiceSchema
         serviceName="Bathroom Remodeling in Apache Junction, Arizona"
         serviceDescription="expert bathroom remodeling contractor serving Apache Junction, AZ. Custom walk-in showers, master bath upgrades, and tub-to-shower conversions for local families."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-apache-junction-az/`}
@@ -87,10 +86,10 @@ export default function ApacheJunctionPage() {
               highly mineralized municipal water. We serve all local zip codes including <strong>85119 and 85120</strong>.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              **Superstition Foothills & Gold Canyon Custom Styling:** For homeowners in Gold Canyon and the Superstition Foothills, we design custom bathrooms that highlight the surrounding natural desert beauty. Our popular 'desert-modern' design packages utilize premium travertine-look porcelain tiles, copper or warm oil-rubbed bronze plumbing hardware, and window layouts configured to maximize views of the Superstition Mountains while maintaining absolute privacy.
+              <strong className="font-semibold text-foreground">Superstition Foothills & Gold Canyon Custom Styling:</strong> For homeowners in Gold Canyon and the Superstition Foothills, we design custom bathrooms that highlight the surrounding natural desert beauty. Our popular 'desert-modern' design packages utilize premium travertine-look porcelain tiles, copper or warm oil-rubbed bronze plumbing hardware, and window layouts configured to maximize views of the Superstition Mountains while maintaining absolute privacy.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              **Septic & Rural Plumbing Customizations:** Rural properties in Apache Junction often run on private septic systems and well-water supplies. We make sure all fixture installations are fully compatible, incorporating high-efficiency low-flow showerheads and Comfort Height toilets that conserve water without sacrificing pressure. We also integrate custom water-softener loops to defend your brand-new plumbing and tiles from mineral scale.
+              <strong className="font-semibold text-foreground">Septic & Rural Plumbing Customizations:</strong> Rural properties in Apache Junction often run on private septic systems and well-water supplies. We make sure all fixture installations are fully compatible, incorporating high-efficiency low-flow showerheads and Comfort Height toilets that conserve water without sacrificing pressure. We also integrate custom water-softener loops to defend your brand-new plumbing and tiles from mineral scale.
             </p>
             <div className="flex flex-wrap gap-4 mt-8">
               <Button asChild size="lg">
@@ -159,7 +158,7 @@ export default function ApacheJunctionPage() {
                   1. Waterproofing & Moisture Control (TCNA Standards)
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  We build all custom tiled showers in compliance with the **Tile Council of North America (TCNA) B421 and B422** standards. Instead of traditional cement boards and PVC liners which degrade and leak, we install the **Schluter-KERDI waterproofing system**.
+                  We build all custom tiled showers in compliance with the <strong className="font-semibold text-foreground">Tile Council of North America (TCNA) B421 and B422</strong> standards. Instead of traditional cement boards and PVC liners which degrade and leak, we install the <strong className="font-semibold text-foreground">Schluter-KERDI waterproofing system</strong>.
                 </p>
                 <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground text-sm">
                   <li><strong>Vapor Permeance:</strong> The KERDI membrane features a water vapor permeance rating of <strong>&lt; 0.5 perms</strong> (tested under ASTM E96 Procedure E), making it completely vapor-tight and preventing steam from rotting your wood framing.</li>

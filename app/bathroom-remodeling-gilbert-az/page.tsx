@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
+import ServiceCTA from "@/components/service-cta";
+import ServiceFAQ from "@/components/service-faq";
+import Testimonials from "@/components/home/testimonials";
+import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
-
-const ServiceCTA = dynamic(() => import("@/components/service-cta"));
-const ServiceFAQ = dynamic(() => import("@/components/service-faq"));
-const Testimonials = dynamic(() => import("@/components/home/testimonials"));
-const ContactSection = dynamic(() => import("@/components/home/contact-section"));
 import Link from "next/link";
+import GalleryPreview from "@/components/home/gallery-preview";
 import {
   ShieldCheck,
   Star,
@@ -21,16 +20,50 @@ import {
   CheckCircle2,
   ArrowRight,
   Phone,
+  Check,
+  Layers,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import LocalTrust from "@/components/home/local-trust";
 
-export const metadata: Metadata = {title: "professional Bath Renovations Gilbert | Custom Tile | ARZ",description: "Beautiful bathroom renovations in Gilbert, AZ. High-quality curbless showers, tile installation, and vanity updates. Schedule a free quote today!",
-  openGraph: {title: "Bathroom Remodeling Gilbert AZ | Free Estimate",description: "Quality bathroom remodeling in Gilbert, AZ. Walk-in showers, tile work & full bath renovations. General Contractor & 2-year warranty. Call (520) 569-3339.",
+export const metadata: Metadata = {
+  title: "Bathroom Remodeling Gilbert AZ | ARZ Home Remodeling",
+  description:
+    "Bathroom remodeling in Gilbert, AZ for walk-in showers, tub conversions, primary baths, guest baths, tile, and vanities.",
+  keywords: [
+    "bathroom remodeling Gilbert AZ",
+    "bathroom remodel Gilbert AZ",
+    "bathroom renovation Gilbert",
+    "Gilbert bathroom remodeling",
+    "walk-in shower remodeling Gilbert",
+    "tub-to-shower conversion Gilbert",
+    "primary bathroom remodel Gilbert",
+    "guest bathroom remodel Gilbert",
+    "small bathroom remodeling Gilbert",
+    "accessible bathroom remodeling Gilbert",
+    "bathroom tile installation Gilbert",
+    "bathroom flooring Gilbert"
+  ],
+  openGraph: {
+    title: "Bathroom Remodeling Gilbert AZ | ARZ Home Remodeling",
+    description:
+      "Bathroom remodeling in Gilbert, AZ for walk-in showers, tub conversions, primary baths, guest baths, tile, and vanities.",
     url: `${siteConfig.url}/bathroom-remodeling-gilbert-az/`,
     type: "website",
+    images: [
+      {
+        url: `${siteConfig.url}/images/bathroom-remodeling-gilbert.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Bathroom Remodeling Gilbert Arizona - ARZ Home Remodeling",
+      },
+    ],
   },
   twitter: {
-    card: "summary_large_image",title: "Bathroom Remodeling Gilbert AZ | Free Estimate",description: "Quality bathroom remodeling in Gilbert, AZ. Walk-in showers, tile work & full bath renovations. General Contractor & 2-year warranty. Call (520) 569-3339.",
+    card: "summary_large_image",
+    title: "Bathroom Remodeling Gilbert AZ | ARZ Home Remodeling",
+    description:
+      "Bathroom remodeling in Gilbert, AZ for walk-in showers, tub conversions, primary baths, guest baths, tile, and vanities.",
     images: [`${siteConfig.url}/images/bathroom-remodeling-gilbert.jpg`],
   },
   alternates: {
@@ -40,123 +73,266 @@ export const metadata: Metadata = {title: "professional Bath Renovations Gilbert
 
 const gilbertFaqs = [
   {
-    question: "Do I need a permit for a bathroom remodel in Gilbert, AZ?",
+    question: "How much does a bathroom remodel cost in Gilbert, AZ?",
     answer:
-      "Yes, the Town of Gilbert requires a building permit for residential bathroom remodels that alter structural walls, relocate drain systems, or run new electrical circuits. Cosmetic work like replacing a mirror or installing a new faucet does not require building permits. ARZ Home Remodeling submits all plans directly to the Gilbert Building Permits department on Civic Center Drive. We guarantee our work passes all town inspections."
+      "The cost depends on the bathroom size, existing conditions, materials, shower or tub configuration, tile, flooring, vanity, fixtures, glass, demolition, plumbing, electrical work, and overall project scope.",
   },
   {
-    question: "What are the safety requirements for an ADA bathroom remodel in Gilbert?",
+    question: "How long does a bathroom remodel take?",
     answer:
-      "An ADA compliant bathroom remodel focuses on safety and ease of use. The Americans with Disabilities Act standards require grab bars that support up to 250 pounds of force. We install grab bars directly into structural wall studs, not just drywall. Walk in showers must have a slip resistant floor rating. We use mosaic tiles because the extra grout lines provide traction. Toilets must have a seat height of 17 to 19 inches from the floor, which makes sitting and standing much easier."
-  }
+      "The timeline varies according to the project's size and complexity. Demolition, material availability, tile work, plumbing, electrical work, inspections, and other requirements can affect the schedule.",
+  },
+  {
+    question: "Can you convert a bathtub into a walk-in shower?",
+    answer:
+      "Yes. A tub-to-shower conversion can replace an existing bathtub with a walk-in shower when the existing layout and project scope allow.",
+  },
+  {
+    question: "Do you remodel primary bathrooms in Gilbert?",
+    answer:
+      "Yes. Primary bathroom remodeling can include showers, vanities, countertops, tile, flooring, fixtures, lighting, storage, and other improvements.",
+  },
+  {
+    question: "Do you remodel guest bathrooms?",
+    answer:
+      "Yes. Guest bathroom renovations can include tubs, showers, vanities, flooring, tile, fixtures, lighting, storage, and finishing updates.",
+  },
+  {
+    question: "Do you remodel small bathrooms?",
+    answer:
+      "Yes. Small bathroom remodeling focuses on efficient use of space through appropriate shower configurations, vanity sizes, storage, lighting, and fixture placement.",
+  },
+  {
+    question: "Can you make my bathroom more accessible?",
+    answer:
+      "Depending on the existing space, accessibility-focused improvements may include low-threshold showers, curbless entries, shower seating, handheld fixtures, improved lighting, and other practical features.",
+  },
+  {
+    question: "Do bathroom remodels in Gilbert require permits?",
+    answer:
+      "Permit requirements depend on the specific work being performed. Plumbing, electrical, structural, and other regulated modifications may have different requirements from cosmetic updates.",
+  },
+  {
+    question: "What areas of Gilbert do you serve?",
+    answer:
+      "We serve homeowners throughout Gilbert, including communities such as Power Ranch, Morrison Ranch, Val Vista Lakes, Agritopia, Seville, Adora Trails, Lyons Gate, and Finley Farms.",
+  },
+  {
+    question: "Do you also remodel kitchens?",
+    answer:
+      "Yes. Kitchen remodeling is available as a separate service for homeowners who want to update cabinets, countertops, backsplashes, islands, storage, lighting, flooring, and other kitchen features.",
+  },
 ];
 
-const services = [
+const mainServices = [
   {
-    title: "Walk-In Shower Installation",
+    title: "Walk-In Shower Remodeling",
     href: "/shower-remodeling/",
     description:
-      "We convert outdated tub and shower combos into open, curbless walk-in showers with frameless glass enclosures, custom tile work, and rainfall showerheads. We use the Schluter waterproofing system for a leak-proof installation rated for Arizona's temperature swings.",
-    price: "Free Custom Estimate",
+      "Replace an outdated tub or enclosed shower with a more open and practical bathing area.",
+    detail:
+      "A walk-in shower remodel in Gilbert can include custom wall tile, shower niches, seating, low-threshold or curbless entry, modern fixtures, and glass enclosures. The shower is planned around the available space and the way you want to use it.",
+    cta: "Explore Walk-In Shower Remodeling →",
   },
   {
     title: "Tub-to-Shower Conversion",
     href: "/tub-to-shower-conversion/",
     description:
-      "One of the most requested services in Gilbert. We remove existing tubs, properly waterproof the substrate, and install a custom walk-in shower tailored to your layout. Adds usable space and strong ROI at resale.",
-    price: "Free Custom Estimate",
+      "If you rarely use your bathtub, converting it into a shower can make better use of the existing bathroom footprint.",
+    detail:
+      "A tub-to-shower conversion in Gilbert, AZ may include tub removal, shower preparation, waterproofing, tile, fixtures, storage, flooring, and glass. When the layout allows, the new shower can be designed around the existing tub area.",
+    cta: "Explore Tub-to-Shower Conversion →",
   },
   {
-    title: "Complete Master Bathroom Remodel",
+    title: "Primary Bathroom Remodeling",
     href: "/master-bathroom-remodel/",
     description:
-      "Our master bath remodels typically include: new shower enclosure, vanity replacement, tile flooring, updated lighting, and fixture upgrades. Timeline: three to five weeks. We handle all plumbing and electrical coordination.",
-    price: "Free Custom Estimate",
+      "Your primary bathroom should provide comfortable bathing space, practical storage, and finishes that fit your home.",
+    detail:
+      "A primary bathroom remodel in Gilbert can include a walk-in shower, double vanity, countertop, bathroom flooring, custom tile, shower storage, lighting, plumbing fixtures, glass enclosure, and freestanding tub. The scope can be focused on specific areas or expanded into a complete primary bathroom renovation.",
+    cta: "Explore Primary Bathroom Remodeling →",
+  },
+  {
+    title: "Guest Bathroom Remodeling",
+    href: "/guest-bathroom-remodeling/",
+    description:
+      "A guest bathroom often needs to make efficient use of limited space while remaining comfortable and attractive.",
+    detail:
+      "A guest bathroom remodel in Gilbert can include a new vanity, shower or tub, tile, flooring, fixtures, lighting, storage, and other finishes.",
+    cta: "Explore Guest Bathroom Remodeling →",
+  },
+  {
+    title: "Small Bathroom Remodeling",
+    href: "/small-bathroom-remodeling/",
+    description:
+      "Small bathrooms require careful planning because every fixture and storage element affects the available space.",
+    detail:
+      "Our small bathroom remodeling options can include compact vanities, walk-in showers, recessed niches, space-conscious storage, better fixture placement, coordinated tile, and improved lighting.",
+    cta: "Explore Small Bathroom Remodeling →",
+  },
+  {
+    title: "Accessible Bathroom Remodeling",
+    href: "/handicap-accessible-bathroom/",
+    description:
+      "If entering or using your shower has become difficult, the bathroom can be redesigned around easier everyday use.",
+    detail:
+      "Depending on the existing space, accessibility-focused improvements can include low-threshold showers, curbless shower entries, shower seating, handheld fixtures, grab-bar preparation, slip-conscious flooring, improved lighting, and practical bathroom clearances.",
+    cta: "Explore Accessible Bathroom Remodeling →",
   },
 ];
 
-const trustPoints = [
+const processSteps = [
   {
-    icon: ShieldCheck,
-    title: "AZ fully insured",
-    body: "Every project fully covered. We carry all required Arizona contractor licensing.",
+    step: "1",
+    title: "Consultation",
+    body: "We discuss your bathroom, the problems you want to solve, your preferred design, and the type of renovation you're considering.",
   },
   {
-    icon: Star,
-    title: "workmanship warranty",
-    body: "We stand behind every tile and seam. If it fails within two years, we fix it at no charge.",
+    step: "2",
+    title: "In-Home Evaluation",
+    body: "The existing bathroom layout, shower or tub, vanity, flooring, storage, fixtures, and other relevant conditions are reviewed.",
   },
   {
-    icon: MapPin,
-    title: "Gilbert Local",
-    body: "We have remodeled bathrooms in Morrison Ranch, Power Ranch, Val Vista Lakes, and Seville.",
+    step: "3",
+    title: "Remodeling Plan",
+    body: "We organize the project around your priorities, available space, desired improvements, and selected design direction.",
   },
   {
-    icon: DollarSign,
-    title: "Fixed Pricing",
-    body: "You receive a written quote before any work starts. No surprises, no change-order games.",
+    step: "4",
+    title: "Material Selection",
+    body: "Tile, flooring, vanity, countertop, fixtures, glass, hardware, and other finishes are selected for the planned renovation.",
   },
   {
-    icon: Droplets,
-    title: "Hard Water Expertise",
-    body: "We specify tile and grout systems that resist Gilbert's mineral-heavy water supply.",
+    step: "5",
+    title: "Remodeling",
+    body: "The existing materials are removed as needed, the space is prepared, and the planned improvements are installed.",
   },
   {
-    icon: Clock,
-    title: "On-Time Completion",
-    body: "Every project gets a firm written schedule. We show up when we say we will.",
-  },
-];
-
-const pricingTiers = [
-  {
-    label: "Guest Bathroom Update",
-    detail: "Vanity, toilet, fixtures, paint",
-    range: "Free Custom Estimate",
-  },
-  {
-    label: "Guest Bathroom Full Remodel",
-    detail: "Tile, shower, vanity, flooring",
-    range: "Free Custom Estimate",
-  },
-  {
-    label: "Tub-to-Shower Conversion",
-    detail: "Demo, waterproofing, custom shower build",
-    range: "Free Custom Estimate",
-  },
-  {
-    label: "Master Bathroom Remodel",
-    detail: "Full scope: shower, vanity, tile, lighting",
-    range: "Free Custom Estimate",
+    step: "6",
+    title: "Final Walkthrough",
+    body: "The completed bathroom is reviewed after the remodeling work is finished.",
   },
 ];
 
-const process = [
-  { step: "01", title: "Free Phone Consultation", body: "We discuss your goals, budget, and timeline. No pressure, just answers." },
-  { step: "02", title: "In-Home Evaluation", body: "We measure, assess plumbing, and review your selections on-site in Gilbert." },
-  { step: "03", title: "Fixed Written Proposal", body: "You see the complete price before we start. No hidden costs." },
-  { step: "04", title: "Design & Material Selection", body: "Tile, fixtures, glass, and finishes chosen together to match your style." },
-  { step: "05", title: "Construction", body: "Our in-house team handles demo, waterproofing, tile, plumbing, and finishing." },
-  { step: "06", title: "Final Walkthrough", body: "You inspect every detail before we close the job. 100% satisfaction required." },
+const whyChooseUsPoints = [
+  {
+    title: "Bathroom-Focused Remodeling",
+    body: "We specialize in bathroom renovation projects ranging from focused shower updates to complete bathroom transformations.",
+  },
+  {
+    title: "Practical Design",
+    body: "We consider how the bathroom will actually be used when planning showers, storage, vanities, flooring, fixtures, and other improvements.",
+  },
+  {
+    title: "Clear Project Scope",
+    body: "The remodeling plan is organized around the work you want completed and the existing conditions of the bathroom.",
+  },
+  {
+    title: "Local Gilbert Service",
+    body: "We serve homeowners throughout Gilbert and surrounding East Valley communities.",
+  },
+  {
+    title: "Attention to Details",
+    body: "Tile layout, shower transitions, storage, vanities, fixtures, glass, and finishing details all contribute to the completed bathroom.",
+  },
 ];
 
-const neighborhoods = [
-  "Morrison Ranch", "Power Ranch", "Val Vista Lakes", "Agritopia",
-  "Seville", "Lyons Gate", "Adora Trails", "Finley Farms",
-  "85233", "85234", "85295", "85296", "85297", "85298",
+const projectExamples = [
+  {
+    title: "Walk-In Shower Transformation",
+    description: "Replacing an outdated bathing area with a more open shower configuration, updated tile, storage, fixtures, and glass.",
+  },
+  {
+    title: "Tub-to-Shower Conversion",
+    description: "Removing an existing tub and creating a new shower designed around the available bathroom space.",
+  },
+  {
+    title: "Primary Bathroom Update",
+    description: "Combining improvements to the shower, vanity, flooring, tile, fixtures, lighting, and storage.",
+  },
+  {
+    title: "Guest Bathroom Refresh",
+    description: "Updating the vanity, tile, flooring, fixtures, shower or tub, and other finishes.",
+  },
 ];
 
-export default function GilbertPage() {
+const gilbertProblems = [
+  {
+    title: "An Unused Bathtub",
+    desc: "Convert an underused tub into a walk-in shower that better matches your daily routine.",
+  },
+  {
+    title: "An Outdated Shower",
+    desc: "Replace an old shower with updated tile, storage, fixtures, and glass.",
+  },
+  {
+    title: "Limited Bathroom Storage",
+    desc: "Add vanity storage, recessed niches, and other practical organization solutions.",
+  },
+  {
+    title: "An Old Vanity",
+    desc: "Replace an outdated vanity with a configuration that provides better counter and storage space.",
+  },
+  {
+    title: "Dated Tile & Flooring",
+    desc: "Refresh the room with coordinated wall tile, shower tile, flooring, and finishes.",
+  },
+  {
+    title: "Poor Use of Space",
+    desc: "Reconsider the shower, vanity, storage, and fixture arrangement to make better use of the existing bathroom.",
+  },
+  {
+    title: "Difficult Bathroom Access",
+    desc: "Consider low-threshold showers, seating, handheld fixtures, and other accessibility-focused improvements.",
+  },
+];
+
+const gilbertNeighborhoods = [
+  {
+    name: "Power Ranch",
+    desc: "Bathroom renovations can focus on practical upgrades such as walk-in showers, tub-to-shower conversions, vanities, tile, and storage.",
+  },
+  {
+    name: "Morrison Ranch",
+    desc: "Larger bathrooms can accommodate upgrades such as expanded vanities, custom showers, tile features, and additional storage.",
+  },
+  {
+    name: "Val Vista Lakes",
+    desc: "Bathroom renovations can combine updated finishes with practical improvements to showers, vanities, flooring, and storage.",
+  },
+  {
+    name: "Agritopia",
+    desc: "Smaller or efficiently planned bathrooms can benefit from space-conscious vanities, showers, storage, and coordinated finishes.",
+  },
+  {
+    name: "Seville",
+    desc: "Bathroom renovations can incorporate updated showers, tile, vanities, flooring, fixtures, and other contemporary finishes.",
+  },
+  {
+    name: "Adora Trails",
+    desc: "Homeowners can update primary and guest bathrooms with modern showers, tile, flooring, vanities, and storage.",
+  },
+];
+
+export default function GilbertBathroomRemodelingPage() {
   return (
     <>
-      
-      <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Gilbert Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-gilbert-az/" } ]} />
-<ServiceSchema
+      <LocalBusinessSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://arzhomeremodeling.com/" },
+          { name: "Services", url: "https://arzhomeremodeling.com/services/" },
+          {
+            name: "Bathroom Remodeling Gilbert AZ",
+            url: "https://arzhomeremodeling.com/bathroom-remodeling-gilbert-az/",
+          },
+        ]}
+      />
+      <ServiceSchema
         serviceName="Bathroom Remodeling in Gilbert, Arizona"
-        serviceDescription="expert bathroom remodeling contractor serving Gilbert, AZ. Walk-in shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving Morrison Ranch, Power Ranch, Val Vista Lakes, and all of Gilbert."
+        serviceDescription="Bathroom remodeling in Gilbert, AZ for walk-in showers, tub conversions, primary baths, guest baths, tile, and vanities."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-gilbert-az/`}
       />
-      <LocalBusinessSchema />
       <FAQSchema faqs={gilbertFaqs} />
       <PriceSchema
         serviceName="Bathroom Remodeling in Gilbert AZ"
@@ -165,108 +341,140 @@ export default function GilbertPage() {
       />
       <Header />
       <main>
-        {/* HERO */}
+        {/* SECTION 2: HERO */}
         <ServiceHero
-          title="expert bathroom remodeling in Gilbert, AZ"
-          subtitle="Luxury Transformations & Quality Craftsmanship"
-          description="Transform your Gilbert home with the East Valley's trusted remodeling experts. From custom walk-in showers in Power Ranch to master suite renovations in Morrison Ranch: we deliver stunning results with a fixed-price guarantee and  professional peace of mind."
-          image="/images/hero/luxury-shower-remodel-chandler.avif"
+          title="Bathroom Remodeling in Gilbert, AZ"
+          subtitle="Bathroom Remodeling in Gilbert, AZ"
+          description="Upgrade your bathroom with a layout, finishes, and features designed around the way you use the space. ARZ Home Remodeling provides bathroom remodeling in Gilbert including walk-in showers, tub-to-shower conversions, primary bathroom renovations, guest bathrooms, tile, flooring, vanities, and complete bathroom updates. Whether your bathroom needs a focused upgrade or a complete transformation, we can help you plan the remodeling work around your existing space."
+          image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
-            { name: "Bathroom Remodeling Gilbert AZ", url: `${siteConfig.url}/bathroom-remodeling-gilbert-az/` },
+            { name: "Gilbert", url: `${siteConfig.url}/bathroom-remodeling-gilbert-az/` },
           ]}
         />
 
-        {/* OPENING CONTENT */}
+        {/* SECTION 3: MAIN INTRODUCTION */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling for Gilbert Homeowners
+            </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Your bathroom is a sanctuary where you begin and end your day, yet many Gilbert homes built during the rapid expansions of the 1990s and early 2000s are showing significant wear. Builder-grade acrylic surrounds yellow and crack, structural subfloors leak from age, and massive garden tubs sit unused, consuming valuable footprint. Furthermore, Gilbert's mineral-rich water supply accelerates white calcium scale buildup, clogging fixtures and staining porous stone. If you are planning to update your space, our specialized team delivers durable, high-density craftsmanship designed for Arizona's unique environment.
+              An outdated bathroom can affect much more than appearance.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we specialize in delivering comprehensive, custom bathroom remodeling in Gilbert, AZ. From zero-threshold, curbless walk-in showers in Power Ranch to high-end master suite makeovers in Morrison Ranch and Val Vista Lakes, we handle the entire project under a single, fixed-price contract. We are actively professional with the Arizona Registrar of Contractors (), providing services across communities in the <span className="text-primary font-semibold">85233, 85234, 85295, 85296, 85297, and 85298</span> ZIP codes.
+              An oversized bathtub may take up space you rarely use. An older shower may have limited storage. A small vanity can leave you without enough counter space, while dated flooring and tile can make the entire room feel old.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Building codes and municipal oversight are critical for safety and home resale value. In the Town of Gilbert, shifting plumbing fixtures, removing load-bearing partitions, or adding dedicated electrical circuits requires formal permit submittals and code inspections. We handle all design planning and permit filings directly with the **Town of Gilbert Development Services Department** (located at the civic center complex on Civic Center Drive). We ensure that every wall modification, drain line slope, and ASSE 1016 anti-scald valve replacement complies with local residential code guidelines.
+              A <strong className="font-semibold text-foreground">bathroom remodel in Gilbert, AZ</strong> gives you the opportunity to address those problems while creating a bathroom that better fits your daily routine.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              We customize our design-build workflow to match the architectural profiles across Gilbert's master-planned developments:
+              ARZ Home Remodeling works with homeowners on projects ranging from focused shower upgrades and tub-to-shower conversions to primary bathroom renovations and complete bathroom remodels.
             </p>
-            <ul className="space-y-4 mb-6">
-              <li className="text-muted-foreground text-lg leading-relaxed">
-                <strong className="text-foreground">Morrison Ranch & Val Vista Lakes:</strong> Known for large estate homes with spacious layouts. We specialize in custom double vanity expansions (rerouting plumbing for dual sinks), building large curbless tile showers with integrated benches, and mounting custom frameless glass enclosures.
-              </li>
-              <li className="text-muted-foreground text-lg leading-relaxed">
-                <strong className="text-foreground">Power Ranch & Agritopia:</strong> Characterized by suburban residences with high-traffic guest and hall bathrooms. We focus on low-maintenance porcelain tile installations (ANSI A118.15 thin-sets) and solid wood storage vanities that resist swelling.
-              </li>
-              <li className="text-muted-foreground text-lg leading-relaxed">
-                <strong className="text-foreground">Seville & Adora Trails:</strong> We deliver modern luxury transformations, integrating freestanding soaking tubs, linear floor drains, and moisture-resistant LED lighting.
-              </li>
-            </ul>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              The remodeling plan is based on the existing bathroom, the available space, and the improvements you want to make.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call Now
+                  Get a Free Bathroom Remodeling Estimate
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
                 <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Speak to a Project Supervisor: {siteConfig.phone}
+                  Call {siteConfig.phone}
                 </a>
               </Button>
             </div>
           </div>
         </section>
 
-        {/* LOCAL COMMUNITY & PERMIT HIGHLIGHTS */}
-        <section className="py-16 lg:py-24 bg-background border-t border-border">
+        {/* SECTION 4: LOCAL GILBERT SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
-              Gilbert Community Landmarks & Local Bathroom Projects
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Renovations Throughout Gilbert, AZ
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Gilbert is an incredibly popular family community characterized by the lush <strong>Riparian Preserve at Water Ranch</strong>, the iconic <strong>Gilbert Water Tower Plaza</strong>, and the bustling <strong>Heritage District</strong>. When we execute bathroom renovations in Gilbert, we design spaces that support dynamic family lifestyles. In communities like <strong>Power Ranch</strong> or <strong>Val Vista Lakes</strong>, we specialize in high durability materials and modern aesthetic choices that add long term property value.
+              Gilbert includes a wide range of established neighborhoods and residential communities, with bathrooms that vary in size, layout, age, and design.
             </p>
-            <h3 className="font-serif text-xl font-semibold mb-4 text-foreground">
-              Recent Gilbert Remodeling Example:
-            </h3>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A recent project completed on a spacious family home in <strong>Morrison Ranch</strong> involved converting a dated 2000s guest bathroom. We removed the old fiberglass tub alcove and installed a custom walk in tile shower with Schluter Kerdi waterproofing, a frameless heavy glass enclosure, non porous porcelain tile with high performance epoxy grout, and a beautiful double vanity topped with stain resistant quartz.
+              Some homeowners are looking to modernize a primary bathroom. Others want to replace an unused bathtub, update a guest bathroom, improve storage, or make a smaller bathroom more functional.
             </p>
-            <h3 className="font-serif text-xl font-semibold mb-4 text-foreground">
-              Gilbert Permitting and Building Safety Guidelines:
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              For any structural changes, partition wall removals, or major plumbing reroutes in Gilbert, our team coordinates directly with the <strong>Town of Gilbert Planning and Development Department</strong> (located at 90 E Civic Center Dr). We handle all permit submissions and coordinate city inspections, ensuring that your home's structural framing and plumbing are fully compliant with local safety guidelines.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Our approach is simple: identify what isn&apos;t working in your existing bathroom and build the renovation around those priorities.
             </p>
+
+            <div className="bg-background p-8 rounded-2xl border border-border shadow-sm">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                We serve homeowners throughout Gilbert, including areas such as:
+              </h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-muted-foreground text-sm font-medium">
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Power Ranch</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Morrison Ranch</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Val Vista Lakes</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Agritopia</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Seville</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Adora Trails</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Lyons Gate</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Finley Farms</span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* SERVICES */}
-        <section className="py-16 lg:py-24 bg-secondary">
-          <div className="container mx-auto px-4 lg:px-8">
+        {/* SECTION 5: MAIN SERVICES */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">What We Do</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground text-balance">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Services</span>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
                 Our Gilbert Bathroom Remodeling Services
               </h2>
-              <p className="text-muted-foreground text-lg mt-4">Professional bathroom remodeling services in Gilbert including shower remodeling, tile installation, and accessible shower remodeling for families throughout the community.</p>
+              <p className="text-muted-foreground text-lg mt-4 max-w-3xl mx-auto">
+                From individual bathroom improvements to complete renovations, we provide remodeling options for different spaces and budgets.
+              </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {services.map((svc) => (
-                <div key={svc.title} className="bg-background rounded-2xl p-8 border border-border flex flex-col">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold uppercase tracking-widest text-primary">{svc.price}</span>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mainServices.map((svc) => (
+                <div key={svc.title} className="bg-secondary rounded-2xl p-8 border border-border flex flex-col justify-between shadow-sm hover:border-primary/50 transition-all">
+                  <div>
+                    <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{svc.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{svc.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">{svc.detail}</p>
                   </div>
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{svc.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-6">{svc.description}</p>
                   <Link
                     href={svc.href}
-                    className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline mt-auto"
+                    className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline mt-auto pt-4 border-t border-border/60"
                   >
-                    Learn more <ArrowRight className="w-4 h-4" />
+                    {svc.cta}
                   </Link>
                 </div>
               ))}
@@ -274,21 +482,439 @@ export default function GilbertPage() {
           </div>
         </section>
 
-        {/* TRUST SIGNALS */}
+        {/* SECTION 6: TILE SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Tile Installation in Gilbert
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Tile is one of the most visible parts of a bathroom remodel and can completely change the character of the space.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              We can use tile throughout shower walls, floors, niches, backsplashes, and accent areas. Homeowners can choose from different tile sizes, patterns, textures, and finishes depending on the look and maintenance level they want.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              A coordinated tile plan can also help connect the shower, floor, vanity, and other bathroom elements.
+            </p>
+            <div>
+              <Link href="/bathroom-tile-installation/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Explore Bathroom Tile Installation →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 7: FLOORING SECTION */}
         <section className="py-16 lg:py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Flooring in Gilbert
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Bathroom flooring needs to work with the rest of the room while providing a practical surface for everyday use.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Flooring options can be coordinated with shower tile, wall finishes, vanity colors, countertops, and fixtures.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Depending on the design, bathroom flooring can become a subtle background element or a major visual feature of the renovation.
+            </p>
+            <div>
+              <Link href="/bathroom-flooring-installation/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Explore Bathroom Flooring Installation →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 8: VANITY SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Vanity & Countertop Installation
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              A vanity affects storage, counter space, and the overall appearance of the bathroom.
+            </p>
+
+            <div className="bg-background p-8 rounded-2xl border border-border mb-6 shadow-sm">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                Replacing an outdated vanity can provide:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Additional cabinet storage</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>More usable counter space</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Updated sinks</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>New hardware</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>A better fit for the bathroom</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>A refreshed overall appearance</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Primary bathrooms may benefit from larger double-vanity configurations, while smaller bathrooms often require more compact designs.
+            </p>
+            <div>
+              <Link href="/cabinet-countertop-installation/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Explore Bathroom Vanity Installation →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 9: PROBLEM → SOLUTION SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Promise</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Why Gilbert Homeowners Choose Us
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">User Intent</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                What Can a Gilbert Bathroom Remodel Solve?
               </h2>
             </div>
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {trustPoints.map((pt) => (
-                <div key={pt.title} className="flex gap-4 p-6 bg-secondary rounded-2xl border border-border">
-                  <pt.icon className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+              {gilbertProblems.map((item) => (
+                <div key={item.title} className="bg-secondary p-6 rounded-2xl border border-border shadow-sm">
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 10: BATHROOM DESIGN IDEAS */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Design Ideas</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Bathroom Remodeling Ideas for Gilbert Homes
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                A successful bathroom renovation doesn&apos;t necessarily require changing everything.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Convert the Tub to a Walk-In Shower</h3>
+                <p className="text-muted-foreground text-sm">An unused tub can be replaced with a shower designed around the existing footprint.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Add a Shower Niche</h3>
+                <p className="text-muted-foreground text-sm">Built-in shower storage keeps everyday products organized without taking up floor space.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Upgrade the Vanity</h3>
+                <p className="text-muted-foreground text-sm">A new vanity can dramatically change the appearance while improving storage and counter space.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Use Large-Format Tile</h3>
+                <p className="text-muted-foreground text-sm">Larger tiles can create a clean, contemporary appearance and reduce the number of visible grout joints.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Create a Coordinated Tile Design</h3>
+                <p className="text-muted-foreground text-sm">Wall, shower, and floor tile can be selected together to give the bathroom a cohesive appearance.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Improve Lighting</h3>
+                <p className="text-muted-foreground text-sm">Updated vanity, ceiling, and shower-area lighting can make the bathroom more comfortable to use.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 11: COST SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Project Budgeting</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                How Much Does a Bathroom Remodel Cost in Gilbert, AZ?
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                The cost of a <strong className="font-semibold text-foreground">bathroom remodel in Gilbert</strong> depends on several factors, including bathroom size, existing condition, material choices, shower layout, vanity, plumbing, and electrical scope.
+              </p>
+              <p className="text-muted-foreground text-sm mt-2">
+                A focused shower renovation will have different requirements from a complete primary bathroom remodel.
+              </p>
+            </div>
+
+            <div className="space-y-4 mb-8">
+              <div className="bg-secondary p-6 rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Walk-In Shower Remodel</h3>
+                <p className="text-muted-foreground text-sm">Shower preparation, waterproofing, tile, fixtures, storage, and glass.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Tub-to-Shower Conversion</h3>
+                <p className="text-muted-foreground text-sm">Tub removal, shower preparation, tile, fixtures, storage, flooring, and enclosure.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Guest Bathroom Remodel</h3>
+                <p className="text-muted-foreground text-sm">Vanity, shower or tub, flooring, tile, fixtures, and finishing updates.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Primary Bathroom Remodel</h3>
+                <p className="text-muted-foreground text-sm">A larger renovation combining shower, vanity, flooring, tile, fixtures, lighting, and storage improvements.</p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link
+                href="/bathroom-remodeling-cost-chandler-az/"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg"
+              >
+                Get a Custom Bathroom Remodeling Estimate →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 12: PROCESS */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Process</span>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
+                Our Gilbert Bathroom Remodeling Process
+              </h2>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {processSteps.map((step) => (
+                <div key={step.step} className="bg-background rounded-2xl p-6 border border-border flex flex-col justify-between shadow-sm">
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">{pt.title}</h3>
+                    <span className="text-4xl font-bold text-primary/25 font-mono">0{step.step}</span>
+                    <h3 className="font-semibold text-foreground mt-2 mb-2 text-lg">{step.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{step.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 13: TECHNICAL AUTHORITY */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground text-center">
+              Shower Waterproofing & Bathroom Preparation
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6 text-center max-w-2xl mx-auto">
+              A finished tiled shower depends on more than the visible tile. Before tile installation, the shower area needs appropriate substrate preparation, waterproofing, drainage, and installation of the selected shower system.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center max-w-2xl mx-auto">
+              Depending on the project, bathroom remodeling can involve:
+            </p>
+
+            <div className="bg-secondary p-8 rounded-2xl border border-border mb-8 shadow-sm">
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Substrate preparation</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shower waterproofing</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Drainage preparation</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shower niches</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shower seating</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Tile-setting materials</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Grout and sealant</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Fixture installation</span>
+                </div>
+                <div className="flex items-center gap-2.5 sm:col-span-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Glass enclosure installation</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center">
+              The exact installation method depends on the shower design, selected materials, and existing bathroom conditions.
+            </p>
+
+            <div className="text-center">
+              <Link href="/shower-remodeling/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Learn More About Shower Waterproofing →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 14: GILBERT HARD-WATER SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <div className="flex items-start gap-4 mb-6">
+              <Droplets className="w-10 h-10 text-primary flex-shrink-0 mt-1" />
+              <div>
+                <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
+                  Choosing Bathroom Materials for Gilbert Homes
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                  Bathroom materials should be selected according to the appearance, maintenance preferences, and everyday use of the space.
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                  For shower areas, homeowners can consider tile, grout, glass, fixtures, and countertop materials based on how easy they are to clean and maintain.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-background rounded-2xl p-8 border border-border shadow-sm mb-6">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                Practical considerations include:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Easy-to-clean shower surfaces</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Appropriate grout selection</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Durable flooring</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Suitable shower glass</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Practical countertop materials</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Convenient storage</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground text-sm sm:col-span-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Fixtures that fit the bathroom&apos;s intended use</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              The right material combination depends on your bathroom design and maintenance preferences.
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 15: LOCAL COMMUNITY SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Local Communities</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Bathroom Remodeling in Gilbert Neighborhoods
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                Different Gilbert communities can have different home layouts and bathroom configurations.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {gilbertNeighborhoods.map((n) => (
+                <div key={n.name} className="bg-secondary p-6 rounded-2xl border border-border">
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{n.name}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{n.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 16: PERMIT SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling Permits in Gilbert
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Permit requirements depend on the type of bathroom work being performed.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Cosmetic updates can have different requirements from projects involving plumbing, electrical work, structural changes, or other regulated modifications.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              For a specific remodeling project, the applicable requirements should be confirmed based on the property and proposed scope of work.
+            </p>
+            <div>
+              <Link
+                href="/bathroom-remodeling-permits-chandler/"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg"
+              >
+                Learn More About Gilbert Bathroom Remodeling Requirements →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Local Trust Badge */}
+        <LocalTrust cityName="Gilbert" />
+
+        {/* SECTION 17: WHY ARZ */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Why Choose ARZ</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Why Gilbert Homeowners Choose ARZ Home Remodeling
+              </h2>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {whyChooseUsPoints.map((pt) => (
+                <div key={pt.title} className="p-6 bg-secondary rounded-2xl border border-border flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-semibold text-foreground text-lg mb-2">{pt.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{pt.body}</p>
                   </div>
                 </div>
@@ -297,173 +923,84 @@ export default function GilbertPage() {
           </div>
         </section>
 
-        {/* HARD WATER EXPERTISE */}
-        <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <div className="flex items-start gap-4 mb-8">
-              <Droplets className="w-10 h-10 flex-shrink-0 mt-1 opacity-80" />
-              <div>
-                <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6">
-                  Solving Gilbert's Hard Water Challenges
-                </h2>
-                <p className="text-primary-foreground/85 text-lg leading-relaxed mb-4">
-                  Gilbert's water supply is notorious for its high mineral content, leading to rapid calcium buildup and 
-                  grout discoloration. A standard bathroom remodel is not enough for the East Valley.
-                </p>
-                <p className="text-primary-foreground/85 text-lg leading-relaxed mb-4">
-                  We use specialized materials designed to withstand Gilbert's environment:
-                </p>
-                <ul className="space-y-3 text-primary-foreground/85 mb-6">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>Epoxy Grout:</strong> Waterproof and stain-resistant, preventing mineral absorption.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>Nano-Coated Glass:</strong> Repels water and prevents calcium spotting on shower doors.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>Schluter Waterproofing:</strong> Ensuring a leak-proof foundation for decades.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* COST GUIDE */}
-        <section className="py-16 lg:py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Transparent Pricing</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Gilbert Bathroom Remodel Cost Guide
-              </h2>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              {pricingTiers.map((tier) => (
-                <div key={tier.label} className="bg-secondary rounded-2xl p-6 border border-border flex justify-between items-center gap-4">
-                  <div>
-                    <p className="font-semibold text-foreground">{tier.label}</p>
-                    <p className="text-muted-foreground text-sm">{tier.detail}</p>
-                  </div>
-                  <span className="text-primary font-bold text-lg whitespace-nowrap">{tier.range}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* PROCESS */}
+        {/* SECTION 18: PROJECT SECTION */}
         <section className="py-16 lg:py-24 bg-secondary">
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">How It Works</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Our Remodeling Process
-              </h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {process.map((step) => (
-                <div key={step.step} className="bg-background rounded-2xl p-6 border border-border">
-                  <span className="text-4xl font-bold text-primary/20">{step.step}</span>
-                  <h3 className="font-semibold text-foreground mt-2 mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{step.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* SERVICE AREAS */}
-        <section className="py-16 lg:py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
-            <span className="text-primary text-sm font-medium tracking-wider uppercase">Service Area</span>
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 mb-6 text-foreground">
-              Serving All of Gilbert, AZ
-            </h2>
-            <div className="flex flex-wrap justify-center gap-3">
-              {neighborhoods.map((n) => (
-                <span key={n} className="bg-secondary border border-border rounded-full px-4 py-2 text-sm font-medium text-foreground">
-                  {n}
-                </span>
-              ))}
-            </div>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-              <Link href="/bathroom-remodeling-chandler-az/" className="hover:text-primary transition-colors">Bathroom Remodeling Chandler AZ →</Link>
-              <Link href="/bathroom-remodeling-mesa-az/" className="hover:text-primary transition-colors">Bathroom Remodeling Mesa AZ →</Link>
-              <Link href="/bathroom-remodeling-tempe-az/" className="hover:text-primary transition-colors">Bathroom Remodeling Tempe AZ →</Link>
-            </div>
-          </div>
-        </section>
-
-        {/* TECHNICAL SPECIFICATIONS SECTION */}
-        <section className="py-16 lg:py-24 bg-background border-t border-border">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Engineering & Design Standards</span>
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Work</span>
               <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
-                Technical Remodeling Specifications & Building Codes
+                Gilbert Bathroom Remodeling Projects
               </h2>
-              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                We build bathrooms to last decades, matching rigorous technical standards to combat Gilbert's hard water and desert framing movement.
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                Every bathroom has different dimensions, layouts, materials, and remodeling requirements.
               </p>
             </div>
-            
-            <div className="space-y-8">
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <ShieldCheck className="w-6 h-6 text-primary" />
-                  1. Waterproofing & Moisture Control (TCNA Standards)
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  We build all custom tiled showers in compliance with the **Tile Council of North America (TCNA) B421 and B422** standards. Instead of traditional cement boards and PVC liners which degrade and leak, we install the **Schluter-KERDI waterproofing system**.
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground text-sm">
-                  <li><strong>Vapor Permeance:</strong> The KERDI membrane features a water vapor permeance rating of <strong>&lt; 0.5 perms</strong> (tested under ASTM E96 Procedure E), making it completely vapor-tight and preventing steam from rotting your wood framing.</li>
-                  <li><strong>Decoupling & Crack Isolation:</strong> The bonded sheet membrane decouples the tile layer from the subfloor, absorbing the natural expansion and contraction of desert framing, preventing grout joints from cracking.</li>
-                </ul>
-              </div>
 
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <Droplets className="w-6 h-6 text-primary" />
-                  2. Hard Water Mitigation & Tile Standards (ANSI A118)
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  The municipal water supply in Gilbert averages <strong>over 300 mg/L (18+ grains per gallon) of dissolved calcium and magnesium</strong>. This hard water destroys standard cement grout and stone. We resolve this by strictly adhering to ANSI material guidelines:
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground text-sm">
-                  <li><strong>Epoxy Grout (ANSI A118.3):</strong> We upgrade our grout to 100% solid epoxy resins. Unlike porous cement grouts, epoxy grout is completely non-porous and chemically inert, resisting staining, scale buildup, and acid cleaning.</li>
-                  <li><strong>Thin-Set Mortar (ANSI A118.15):</strong> We use improved modified dry-set cement mortar to bond dense, large-format porcelain tiles (water absorption rate <strong>&lt; 0.5%</strong> per ASTM C373), preventing tiles from releasing due to slab movement or moisture cycles.</li>
-                </ul>
-              </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              {projectExamples.map((proj) => (
+                <div key={proj.title} className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{proj.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{proj.description}</p>
+                </div>
+              ))}
+            </div>
 
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <Clock className="w-6 h-6 text-primary" />
-                  3. Advanced Plumbing & Scald Prevention (ASSE 1016)
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  Modern mechanical systems are essential to safety and system longevity. We upgrade and secure every in-wall plumbing component:
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground text-sm">
-                  <li><strong>Anti-Scald Mixing Valves:</strong> We install pressure-balancing and thermostatic mixing valves certified to <strong>ASSE 1016 / ASME A112.18.1</strong> standards. This maintains water temperature within &plusmn;3.6&deg;F (&plusmn;2&deg;C) despite pressure drops elsewhere in the home.</li>
-                  <li><strong>PEX-a Piping Systems:</strong> We utilize PEX-a (expansion-fitting) piping for supply lines. PEX-a resists hard water scaling, eliminates the risk of pinhole leaks common in aging copper pipes, and absorbs thermal expansion without stress.</li>
-                  <li><strong>Drain Expansion:</strong> In all tub-to-shower conversions, we expand the original 1.5-inch waste line to a code-compliant <strong>2-inch waste and vent line</strong> to handle high-flow modern shower heads without back-ponding.</li>
-                </ul>
-              </div>
+            <div className="text-center">
+              <Link href="/gallery/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                View Our Bathroom Remodeling Projects →
+              </Link>
             </div>
           </div>
         </section>
 
+        {/* PORTFOLIO SHOWCASE PREVIEW */}
+        <GalleryPreview />
+
+        {/* SECTION 19: SERVICE AREA */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Serving Homeowners Throughout Gilbert, AZ
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              ARZ Home Remodeling provides bathroom remodeling services throughout Gilbert, including:
+            </p>
+
+            <p className="font-semibold text-foreground text-lg mb-8">
+              Morrison Ranch · Power Ranch · Val Vista Lakes · Agritopia · Seville · Lyons Gate · Adora Trails · Finley Farms
+            </p>
+
+            <p className="text-muted-foreground text-sm mb-6">
+              We also serve surrounding East Valley communities, including Chandler, Mesa, and Tempe.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link href="/bathroom-remodeling-chandler-az/" className="text-primary font-semibold hover:underline text-sm">
+                Explore Chandler Bathroom Remodeling →
+              </Link>
+              <Link href="/bathroom-remodeling-mesa-az/" className="text-primary font-semibold hover:underline text-sm">
+                Explore Mesa Bathroom Remodeling →
+              </Link>
+              <Link href="/bathroom-remodeling-tempe-az/" className="text-primary font-semibold hover:underline text-sm">
+                Explore Tempe Bathroom Remodeling →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 20: FAQ */}
         <ServiceFAQ faqs={gilbertFaqs} />
+
+        {/* TESTIMONIALS */}
         <Testimonials />
+
+        {/* CONTACT */}
         <ContactSection />
+
+        {/* SECTION 21: FINAL CTA */}
         <ServiceCTA
-          title="Ready for a Free Estimate in Gilbert, AZ?"
-          description="Call us directly to speak with a project supervisor. We will discuss your project, provide a phone estimate, and schedule your free in-home evaluation within forty-eight hours."
+          title="Ready to Remodel Your Gilbert Bathroom?"
+          description="Whether you want to replace an outdated tub, create a walk-in shower, update a primary bathroom, improve a guest bathroom, or complete a full renovation, the first step is understanding what your existing space needs. Tell us what you'd like to change and we'll discuss your remodeling options and next steps."
         />
       </main>
       <Footer />

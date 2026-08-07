@@ -396,7 +396,7 @@ export default function AdminSeoPage() {
                 className="h-10"
               />
               <p className="text-[11px] text-muted-foreground">
-                Ideal length is **50 to 60 characters** for search engine results.
+                Ideal length is <strong className="font-semibold text-foreground">50 to 60 characters</strong> for search engine results.
               </p>
             </div>
 
@@ -430,7 +430,7 @@ export default function AdminSeoPage() {
                 className="resize-none"
               />
               <p className="text-[11px] text-muted-foreground">
-                Ideal length is **120 to 160 characters** to encourage user clicks.
+                Ideal length is <strong className="font-semibold text-foreground">120 to 160 characters</strong> to encourage user clicks.
               </p>
             </div>
 

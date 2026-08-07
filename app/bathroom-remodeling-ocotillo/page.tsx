@@ -9,6 +9,7 @@ import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
+import GalleryPreview from "@/components/home/gallery-preview";
 import {
   ShieldCheck,
   Star,
@@ -19,16 +20,50 @@ import {
   CheckCircle2,
   ArrowRight,
   Phone,
+  Check,
+  Home,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import LocalTrust from "@/components/home/local-trust";
 
-export const metadata: Metadata = {title: "professional Bath Renovations Ocotillo | Custom Tile | ARZ",description: "Beautiful bathroom renovations in Ocotillo, Chandler. High-quality curbless showers, tile installation, and vanity updates. Schedule a free quote today!",
-  openGraph: {title: "Ocotillo Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore ocotillo bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
+export const metadata: Metadata = {
+  title: "Bathroom Remodeling Ocotillo | Chandler AZ",
+  description:
+    "Bathroom remodeling in Ocotillo, Chandler, AZ for walk-in showers, tub conversions, tile, vanities, and custom bathroom renovations.",
+  keywords: [
+    "bathroom remodeling Ocotillo",
+    "bathroom remodel Ocotillo",
+    "bathroom renovation Ocotillo",
+    "Ocotillo bathroom remodeling",
+    "master bathroom remodel Ocotillo",
+    "walk-in shower Ocotillo",
+    "tub-to-shower conversion Ocotillo",
+    "bathroom tile installation Ocotillo",
+    "small bathroom remodeling Ocotillo",
+    "accessible bathroom remodeling Ocotillo",
+    "bathroom remodel cost Ocotillo",
+    "bathroom remodeling Chandler AZ"
+  ],
+  openGraph: {
+    title: "Bathroom Remodeling Ocotillo | Chandler AZ",
+    description:
+      "Bathroom remodeling in Ocotillo, Chandler, AZ for walk-in showers, tub conversions, tile, vanities, and custom bathroom renovations.",
     url: `${siteConfig.url}/bathroom-remodeling-ocotillo/`,
     type: "website",
+    images: [
+      {
+        url: `${siteConfig.url}/images/services/chandler-bathroom-remodel.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Bathroom Remodeling Ocotillo Chandler AZ - ARZ Home Remodeling",
+      },
+    ],
   },
   twitter: {
-    card: "summary_large_image",title: "Ocotillo Bath Remodel | Chandler AZ Bathroom Remodeling",description: "Bathroom remodeling service in Chandler, AZ by ARZ. Explore ocotillo bath remodel, custom showers, tile, vanities, clear pricing, and free estimates.",
+    card: "summary_large_image",
+    title: "Bathroom Remodeling Ocotillo | Chandler AZ",
+    description:
+      "Bathroom remodeling in Ocotillo, Chandler, AZ for walk-in showers, tub conversions, tile, vanities, and custom bathroom renovations.",
     images: [`${siteConfig.url}/images/services/chandler-bathroom-remodel.jpg`],
   },
   alternates: {
@@ -38,198 +73,470 @@ export const metadata: Metadata = {title: "professional Bath Renovations Ocotill
 
 const ocotilloFaqs = [
   {
-    question: "How long does a master bathroom remodel take in Ocotillo?",
+    question: "How much does a bathroom remodel cost in Ocotillo?",
     answer:
-      "A complete master bathroom renovation in Ocotillo typically takes four to six weeks. This timeline includes demolition, plumbing relocation, electrical framing, custom tile installation, and final fixture fittings. Guest bathrooms can be completed in two to three weeks."
+      "The cost depends on the bathroom size, materials, plumbing changes, shower or tub configuration, cabinetry, tile, fixtures, and overall project scope. We evaluate the existing bathroom before preparing an estimate.",
   },
   {
-    question: "Do you handle HOA approvals in Ocotillo communities?",
+    question: "How long does a bathroom remodel take in Ocotillo?",
     answer:
-      "Yes. We coordinate directly with Ocotillo HOAs to submit required material sheets, architectural drawings, and certificate of insurance documents. We ensure full compliance with Ocotillo's design guidelines so you face zero delays."
+      "Project duration depends on the scope of work. A focused shower or vanity update can require less work than a complete bathroom renovation involving multiple trades and layout changes.",
   },
   {
-    question: "What waterproofing system do you use for tiled showers?",
+    question: "Can you convert my bathtub into a walk-in shower?",
     answer:
-      "We use the Schluter-KERDI waterproofing system exclusively. Ocotillo homes feature high-end finishes, and a hidden leak can cause tens of thousands in damage. This vapor-tight membrane prevents mold and ensures a lifetime leak-proof shower."
+      "Yes. A tub-to-shower conversion can replace an underused bathtub with a walk-in shower designed around the existing bathroom footprint.",
   },
   {
-    question: "How much does a custom bathroom remodel cost in Ocotillo, Chandler?",
+    question: "Can you remodel only my shower?",
     answer:
-      "Ocotillo bathroom renovations vary based on project scope, layout adjustments, and material selections. Standard guest bath updates are highly customizable, while luxury master suite transformations featuring premium freestanding tubs, walk-in tiled showers, and custom double vanities are designed to your specifications. We provide free, detailed itemized quotes."
+      "Yes. A bathroom renovation does not necessarily require replacing every part of the room. A shower can be remodeled independently when the rest of the bathroom is still in good condition.",
   },
   {
-    question: "Can you design a curbless walk-in shower?",
+    question: "Do you install bathroom tile in Ocotillo?",
     answer:
-      "Yes. We specialize in curbless walk-in showers with linear drains, frameless glass panels, and built-in tiled benches. These barrier-free designs offer both a modern spa aesthetic and long-term accessibility."
+      "Yes. Bathroom tile can be installed on shower walls, shower floors, bathroom floors, backsplashes, and other suitable surfaces.",
+  },
+  {
+    question: "Can you replace my bathroom vanity?",
+    answer:
+      "Yes. Vanity replacement can be part of a larger bathroom renovation or a focused update. Options can include single vanities, double vanities, quartz countertops, and additional storage.",
+  },
+  {
+    question: "Do bathroom remodels in Chandler require permits?",
+    answer:
+      "Permit requirements depend on the scope of work. Projects involving certain plumbing, electrical, structural, or layout changes may require municipal approval. The project scope should be reviewed before construction begins.",
   },
 ];
 
-const services = [
+const mainServices = [
   {
-    title: "Custom Walk-In Showers",
+    title: "Walk-In Shower Remodeling",
     href: "/walk-in-showers/",
     description:
-      "We build modern, curbless walk-in showers featuring frameless glass, custom benches, and dual rainfall showerheads. Every shower is built with Schluter-KERDI waterproofing to guarantee long-term protection.",
-    price: "Free Estimate",
+      "Replace an outdated tub or enclosed shower with a more open bathing area designed around your available space.",
+    detail:
+      "Walk-in showers can include custom tile, built-in niches, seating, modern shower controls, and glass enclosures.",
+    cta: "Learn More →",
   },
   {
     title: "Tub-to-Shower Conversions",
     href: "/tub-to-shower-conversion/",
     description:
-      "Convert your unused garden tub into a spacious tiled walk-in shower. This is the #1 home ROI project in Chandler, opening up physical space and upgrading your home's resale value.",
-    price: "Free Estimate",
+      "If your bathtub is rarely used, converting it into a shower can make better use of the existing bathroom footprint.",
+    detail:
+      "We can design the new shower around the room's dimensions, plumbing, storage requirements, and preferred finishes.",
+    cta: "Learn More →",
   },
   {
-    title: "Luxury Master Bath Remodeling",
+    title: "Primary Bathroom Remodeling",
     href: "/master-bathroom-remodel/",
     description:
-      "Complete gut-and-rebuild transformations. We install premium double vanities, freestanding soaking tubs, custom ambient lighting, and high-end porcelain tile flooring.",
-    price: "Free Estimate",
+      "Update your primary bathroom with a combination of shower improvements, vanity replacement, flooring, lighting, fixtures, and storage.",
+    detail:
+      "Layout changes can also be considered when the existing arrangement limits how the room functions.",
+    cta: "Learn More →",
+  },
+  {
+    title: "Bathroom Tile Installation",
+    href: "/bathroom-tile-installation/",
+    description:
+      "New tile can change both the appearance and maintenance requirements of a bathroom.",
+    detail:
+      "We install tile for shower walls, shower floors, bathroom floors, backsplashes, and other surfaces using materials selected for the specific application.",
+    cta: "Learn More →",
+  },
+  {
+    title: "Bathroom Vanity Installation",
+    href: "/cabinet-countertop-installation/",
+    description:
+      "Replace an outdated vanity with a configuration that provides the storage and counter space your household actually needs.",
+    detail:
+      "Options can include single or double vanities, quartz countertops, wall-mounted designs, and additional bathroom storage.",
+    cta: "Learn More →",
   },
 ];
 
-const trustPoints = [
+const processSteps = [
   {
-    icon: ShieldCheck,
-    title: " bonded",
-    body: "Fully professional by the state of Arizona () and insured for your protection.",
+    step: "1",
+    title: "Initial Consultation",
+    body: "We discuss what you want to change, what isn't working with the existing bathroom, and what you would like the finished space to accomplish.",
   },
   {
-    icon: Star,
-    title: "workmanship warranty",
-    body: "We stand behind our work. If any installation issue arises within two years, we fix it for free.",
+    step: "2",
+    title: "In-Home Evaluation",
+    body: "We review the existing layout, measurements, plumbing locations, surfaces, storage, and other conditions that can affect the remodel.",
   },
   {
-    icon: MapPin,
-    title: "Ocotillo Neighborhood Experts",
-    body: "Familiar with Ocotillo architectural standards, HOA guidelines, and local permits.",
+    step: "3",
+    title: "Project Scope & Estimate",
+    body: "We outline the proposed work, materials, and project scope so you can understand what is included before making decisions.",
   },
   {
-    icon: DollarSign,
-    title: "Fixed-Price Guarantee",
-    body: "The price we quote is the price you pay. No hidden costs or surprise change orders.",
+    step: "4",
+    title: "Design & Material Selection",
+    body: "Choose the tile, vanity, countertop, fixtures, shower glass, colors, and other finishes that will make up the finished bathroom.",
   },
   {
-    icon: Droplets,
-    title: "Hard Water Solutions",
-    body: "We use epoxy grout and nano-coated glass to resist Chandler's mineral-heavy water supply.",
+    step: "5",
+    title: "Remodeling",
+    body: "The existing finishes are removed as needed, followed by preparation, plumbing or electrical work, waterproofing, tile installation, cabinetry, fixtures, and finishing work.",
   },
   {
-    icon: Clock,
-    title: "Dedicated Project Supervisor",
-    body: "Your project gets daily supervision to keep construction on-schedule and clean.",
+    step: "6",
+    title: "Final Walkthrough",
+    body: "We review the completed bathroom with you and address remaining details before the project is considered complete.",
   },
 ];
 
-export default function OcotilloPage() {
+const whyChooseUsPoints = [
+  {
+    title: "Local Service",
+    body: "We work with homeowners throughout Ocotillo and surrounding Chandler communities.",
+  },
+  {
+    title: "Clear Project Scope",
+    body: "Before work begins, we discuss the proposed improvements, materials, layout changes, and expected project scope.",
+  },
+  {
+    title: "Detailed Planning",
+    body: "We evaluate the existing bathroom before demolition so potential plumbing, layout, and installation considerations can be identified early.",
+  },
+  {
+    title: "Quality-Focused Installation",
+    body: "From surface preparation and waterproofing to tile and finish installation, each stage is handled with attention to details.",
+  },
+  {
+    title: "Material Guidance",
+    body: "We help homeowners compare tile, vanities, countertops, fixtures, glass, and other finishes based on appearance, maintenance, and intended use.",
+  },
+  {
+    title: "Organized Communication",
+    body: "You should know what is happening throughout the project, from the initial evaluation through the final walkthrough.",
+  },
+];
+
+const ocotilloProblems = [
+  {
+    title: "Unused Garden Tub",
+    desc: "Large tubs can take up substantial floor area without providing much practical value.",
+    sol: "Convert the tub area into a larger walk-in shower or redesign the surrounding space for better functionality.",
+  },
+  {
+    title: "Limited Storage",
+    desc: "A small vanity or poorly organized bathroom can leave everyday items without a convenient place.",
+    sol: "Increase cabinet storage, add recessed shower niches, or redesign the vanity configuration.",
+  },
+  {
+    title: "Outdated Shower",
+    desc: "Older surrounds, worn grout, dated fixtures, and difficult-to-clean surfaces can make a bathroom feel old.",
+    sol: "Replace the shower finishes with new tile, waterproofing, fixtures, and glass.",
+  },
+  {
+    title: "Difficult-to-Use Layout",
+    desc: "A bathroom can have enough square footage but still feel cramped because fixtures are poorly positioned.",
+    sol: "Review the existing layout and determine whether moving selected fixtures would create a more functional arrangement.",
+  },
+  {
+    title: "Worn Flooring and Finishes",
+    desc: "Old flooring, countertops, vanities, and fixtures can make the entire room feel dated.",
+    sol: "Combine targeted finish upgrades with new tile, vanity, countertop, lighting, and plumbing fixtures.",
+  },
+];
+
+export default function OcotilloBathroomRemodelingPage() {
   return (
     <>
-      <BreadcrumbSchema items={[
-        { name: "Home", url: "https://arzhomeremodeling.com/" },
-        { name: "Services", url: "https://arzhomeremodeling.com/services/" },
-        { name: "Bathroom Remodeling Ocotillo", url: "https://arzhomeremodeling.com/bathroom-remodeling-ocotillo/" }
-      ]} />
+      <LocalBusinessSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://arzhomeremodeling.com/" },
+          { name: "Services", url: "https://arzhomeremodeling.com/services/" },
+          {
+            name: "Bathroom Remodeling Ocotillo",
+            url: "https://arzhomeremodeling.com/bathroom-remodeling-ocotillo/",
+          },
+        ]}
+      />
       <ServiceSchema
-        serviceName="Bathroom Remodeling in Ocotillo, Chandler"
-        serviceDescription="expert bathroom remodeling team serving Ocotillo, Chandler, AZ (85248). Walk-in shower installation, tub-to-shower conversions, and luxury master bath design."
+        serviceName="Bathroom Remodeling Ocotillo"
+        serviceDescription="Bathroom remodeling in Ocotillo, Chandler, AZ for walk-in showers, tub conversions, tile, vanities, and custom bathroom renovations."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-ocotillo/`}
       />
-      <LocalBusinessSchema />
       <FAQSchema faqs={ocotilloFaqs} />
       <PriceSchema
-        serviceName="Ocotillo Bathroom Remodeling"
+        serviceName="Bathroom Remodeling Ocotillo"
         priceRange="Free Custom Estimate"
         url={`${siteConfig.url}/bathroom-remodeling-ocotillo/`}
       />
       <Header />
       <main>
-        {/* HERO */}
+        {/* SECTION 2: HERO SECTION */}
         <ServiceHero
-          title="Premium Bathroom Remodeling in Ocotillo, Chandler"
-          subtitle="Elevate Your Home with Custom Luxury Designs"
-          description="Transform your Ocotillo home with the East Valley's premier bathroom specialists. From Mediterranean-style tiled master baths near Ocotillo Golf Club to sleek curbless walk-in showers, we deliver elite craftsmanship and  professional peace of mind."
+          title="Bathroom Remodeling in Ocotillo, Chandler AZ"
+          subtitle="Bathroom Updates Designed Around Your Ocotillo Home"
+          description="Refresh an outdated bathroom with a layout and finishes that fit the way you use your home. We provide walk-in showers, tub-to-shower conversions, tile installation, vanity updates, and complete bathroom renovations in Ocotillo."
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
-            { name: "Ocotillo Bathroom Remodeling", url: `${siteConfig.url}/bathroom-remodeling-ocotillo/` },
+            { name: "Ocotillo", url: `${siteConfig.url}/bathroom-remodeling-ocotillo/` },
           ]}
         />
 
-        {/* OPENING CONTENT */}
+        {/* SECTION 3: INTRODUCTION / LOCAL PROBLEM */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
-              Custom Bathroom Renovations in Ocotillo (85248)
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling for Ocotillo Homes
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Ocotillo is famous for its gorgeous water features, upscale estates, and Spanish-style architecture. However, many master baths in these homes are still outfitted with outdated garden tubs, dark vanity alcoves, and vulnerable grout systems. Ripping out these eyesores and designing a modern, light-filled bathroom increases both daily enjoyment and property values.
+              Bathrooms in Ocotillo homes can have very different needs depending on the property&apos;s age, layout, and existing finishes. Some homeowners want to replace an unused garden tub, while others need better storage, a more accessible shower, updated tile, or a complete change to the bathroom layout.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we specialize in high-end bathroom remodeling in Ocotillo. We utilize advanced materials like <Link href="/blog/schluter-kerdi-vs-redgard-arizona/" className="text-primary hover:underline font-medium">Schluter-KERDI waterproofing systems</Link> and stain-resistant epoxy grouts to ensure your new bathroom resists mold and stands up to Arizona's harsh temperatures.
+              At ARZ Home Remodeling, we approach each bathroom as an individual project rather than applying the same design to every home. We look at the existing layout, plumbing locations, available space, storage needs, lighting, materials, and the way your household uses the room before recommending improvements.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+
+            <div className="bg-secondary p-8 rounded-2xl border border-border mb-8 shadow-sm">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                Common Ocotillo bathroom updates include:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Replacing outdated tub and shower combinations</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Converting a bathtub into a walk-in shower</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Installing new shower tile and waterproofing</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Replacing bathroom vanities and countertops</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Updating bathroom flooring</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Improving storage with niches and built-in features</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Creating larger or more functional primary bathrooms</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Refreshing guest and hall bathrooms</span>
+                </div>
+                <div className="flex items-center gap-2.5 sm:col-span-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Updating lighting, plumbing fixtures, and finishes</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Whether you need one focused improvement or a complete bathroom renovation, the goal is to create a space that is easier to use, easier to maintain, and better suited to your home.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call Now for a Free In-Home Consultation!
+                  Request a Bathroom Remodeling Consultation
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="tel:+15205693339" className="flex items-center gap-2">
+                <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  (520) 569-3339
-                </Link>
+                  Call {siteConfig.phone}
+                </a>
               </Button>
             </div>
           </div>
         </section>
 
-        {/* LOCAL COMMUNITY & PERMIT HIGHLIGHTS */}
-        <section className="py-16 lg:py-24 bg-background border-t border-border">
+        {/* SECTION 4: LOCAL AREA SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
-              Ocotillo Landmarks & Local Remodeling Projects
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling in Ocotillo, Chandler
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Ocotillo is an upscale desert community famed for the stunning <strong>Ocotillo Golf Club</strong>, extensive water canals, and gorgeous luxury estates. When we remodel master suites in Ocotillo, we implement high-end details that reflect the neighborhood's resort-style aesthetic. For homes situated near Dobson Road and Queen Creek Road, we deliver customized layouts that provide absolute luxury and comfort.
+              Ocotillo is a well-established Chandler community recognized for its golf course, lakes, landscaped streets, and mix of residential properties. Homes in the area can feature spacious primary bathrooms, separate tubs and showers, large vanity areas, and layouts that were designed around earlier preferences.
             </p>
-            <h3 className="font-serif text-xl font-semibold mb-4 text-foreground">
-              Recent Ocotillo Remodeling Example:
-            </h3>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A recent project completed near the Ocotillo Golf Course involved converting a dark builder-grade bath into a modern oasis. We installed high-performance non-porous porcelain tile on the walls and shower pan, secure stain-resistant epoxy grout, and end-to-end frameless heavy glass shower panels treated with protective hydrophobic nano-coatings to combat Chandler's mineral-heavy water.
+              That gives homeowners several opportunities when updating an existing bathroom.
             </p>
-            <h3 className="font-serif text-xl font-semibold mb-4 text-foreground">
-              Chandler Permitting & Inspections for Ocotillo:
-            </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              An unused bathtub can become additional shower space. A dated vanity can be replaced with a configuration that provides better storage. Dark or heavily patterned finishes can be replaced with lighter tile and simpler surfaces. A poorly arranged bathroom can also be redesigned around the existing footprint when a full layout change isn&apos;t necessary.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Our bathroom remodeling work in Ocotillo can include properties around <strong className="font-semibold text-foreground">Ocotillo Road, Queen Creek Road, Dobson Road, and the surrounding residential areas of Chandler</strong>.
+            </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Because Ocotillo lies within Chandler city limits, structural framing modifications, plumbing line relocations, or electrical circuit updates require a building permit from the <strong>Chandler Development Services Department</strong> (located at 175 S Arizona Ave). We manage all design drawings, permit submittals, and structural inspections directly, ensuring that your home's luxury upgrades comply fully with all safety guidelines.
+              The design should ultimately reflect the individual home rather than simply trying to copy a trend.
             </p>
           </div>
         </section>
 
-        {/* SERVICES */}
+        {/* SECTION 5: LOCAL PROJECT / EXAMPLE SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Updates for Different Ocotillo Layouts
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Every bathroom remodel starts with the existing space.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              For example, a homeowner with a large but rarely used bathtub may benefit more from a tub-to-shower conversion than from replacing the entire bathroom. Another homeowner may need additional vanity storage, better lighting, new flooring, and an updated shower while keeping the current plumbing locations.
+            </p>
+
+            <div className="bg-secondary p-8 rounded-2xl border border-border mb-8 shadow-sm">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                A typical shower-focused renovation can include:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Removal of the existing shower or tub surround</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Preparation of the wall and floor surfaces</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Waterproofing before tile installation</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>New wall and floor tile</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Built-in shower niches</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Optional shower seating</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Updated plumbing fixtures</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Frameless or semi-frameless glass</span>
+                </div>
+                <div className="flex items-center gap-2.5 sm:col-span-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>New shower controls and accessories</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Keeping useful portions of the existing layout can sometimes reduce unnecessary work while still producing a major visual and functional improvement.
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 6: PERMITS / LOCAL PROCESS */}
         <section className="py-16 lg:py-24 bg-secondary">
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling Permits in Chandler
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Some bathroom improvements are primarily finish updates, while others involve plumbing, electrical, structural, or layout changes. Permit requirements can therefore depend on the actual scope of the project.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              If your Ocotillo bathroom renovation involves changes that require municipal approval, the project should be reviewed according to applicable <strong className="font-semibold text-foreground">City of Chandler</strong> requirements before construction begins.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              We can help identify the project requirements and coordinate the appropriate work so the remodeling process is organized from planning through completion.
+            </p>
+
+            <div className="bg-background p-8 rounded-2xl border border-border mb-8 shadow-sm">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                For homeowners considering a layout change, we review important details such as:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Existing plumbing locations</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Drain and supply-line requirements</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Electrical changes</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Wall modifications</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shower and tub configurations</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Ventilation</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Waterproofing</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Tile installation requirements</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              This planning stage helps identify potential issues before demolition begins.
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 7: SERVICES SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
             <div className="text-center mb-12">
               <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Services</span>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Ocotillo Bathroom Services
+                Bathroom Remodeling Services in Ocotillo
               </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-3xl mx-auto">
+                Different bathrooms require different solutions. Some projects involve one specific upgrade, while others combine several improvements into a complete renovation.
+              </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {services.map((svc) => (
-                <div key={svc.title} className="bg-background rounded-2xl p-8 border border-border flex flex-col">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold uppercase tracking-widest text-primary">{svc.price}</span>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mainServices.map((svc) => (
+                <div key={svc.title} className="bg-secondary rounded-2xl p-8 border border-border flex flex-col justify-between shadow-sm hover:border-primary/50 transition-all">
+                  <div>
+                    <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{svc.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{svc.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">{svc.detail}</p>
                   </div>
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{svc.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-6">{svc.description}</p>
                   <Link
                     href={svc.href}
-                    className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline mt-auto"
+                    className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline mt-auto pt-4 border-t border-border/60"
                   >
-                    Learn more <ArrowRight className="w-4 h-4" />
+                    {svc.cta}
                   </Link>
                 </div>
               ))}
@@ -237,21 +544,169 @@ export default function OcotilloPage() {
           </div>
         </section>
 
-        {/* TRUST SIGNALS */}
+        {/* SECTION 8: PROBLEM → SOLUTION SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">User Intent</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Common Bathroom Problems We Solve in Ocotillo
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                A bathroom doesn&apos;t always need a complete gut renovation to become significantly better.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {ocotilloProblems.map((item) => (
+                <div key={item.title} className="bg-background p-6 rounded-2xl border border-border shadow-sm flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{item.desc}</p>
+                  </div>
+                  <div className="pt-3 border-t border-border/60">
+                    <span className="text-xs font-bold uppercase text-primary tracking-wider">Possible solution:</span>
+                    <p className="text-muted-foreground text-xs leading-relaxed mt-1">{item.sol}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 9: WATERPROOFING SECTION */}
         <section className="py-16 lg:py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground text-center">
+              Shower Waterproofing for Long-Term Performance
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6 text-center max-w-2xl mx-auto">
+              A beautiful tiled shower needs more than attractive tile. Water management behind the finished surface is an important part of the installation.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center max-w-2xl mx-auto">
+              For tiled shower projects, we use a dedicated waterproofing approach appropriate to the shower design. Where specified, systems such as <strong className="font-semibold text-foreground">Schluter-KERDI</strong> can provide a continuous waterproofing layer behind the tile.
+            </p>
+
+            <div className="bg-secondary p-8 rounded-2xl border border-border mb-8 shadow-sm">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                The shower installation can include:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Waterproofed shower walls</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Waterproofed shower floors</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Proper treatment around corners and transitions</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Sealed penetrations</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Properly prepared tile surfaces</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Appropriate shower drainage</span>
+                </div>
+                <div className="flex items-center gap-2.5 sm:col-span-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Tile and grout selected for the application</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center">
+              The objective is simple: the visible tile should look good, while the underlying shower assembly is properly prepared to manage moisture.
+            </p>
+
+            <div className="text-center">
+              <Link href="/shower-remodeling/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Learn More About Shower Waterproofing →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 10: HARD-WATER SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <div className="flex items-start gap-4 mb-6">
+              <Droplets className="w-10 h-10 text-primary flex-shrink-0 mt-1" />
+              <div>
+                <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
+                  Designing Around Chandler&apos;s Hard Water
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                  Mineral deposits can become noticeable on shower glass, fixtures, tile, and grout over time. That makes material selection and maintenance considerations particularly important for bathroom renovations in the Chandler area.
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                  Depending on the application, we can recommend materials and finishes that are easier to maintain.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-6 mb-8">
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground text-lg mb-2">Tile and Grout</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Porcelain tile and appropriately selected grout can provide durable surfaces that are easier to clean than heavily porous materials.
+                </p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground text-lg mb-2">Shower Glass</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Glass treatments may help reduce water spotting and make routine cleaning easier.
+                </p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground text-lg mb-2">Countertops</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Quartz and other low-maintenance countertop materials can provide a practical surface around bathroom vanities.
+                </p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground text-lg mb-2">Fixtures</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Finish selection can also affect how noticeable water spots and mineral deposits become during everyday use.
+                </p>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed text-center">
+              The right combination depends on your bathroom, cleaning routine, design preferences, and budget.
+            </p>
+          </div>
+        </section>
+
+        {/* Local Trust Badge */}
+        <LocalTrust cityName="Ocotillo" />
+
+        {/* SECTION 11: WHY CHOOSE ARZ */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
             <div className="text-center mb-12">
               <span className="text-primary text-sm font-medium tracking-wider uppercase">Why Choose ARZ</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                The Ocotillo Remodeling Team You Can Trust
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                A Practical Remodeling Process for Ocotillo Homeowners
               </h2>
             </div>
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {trustPoints.map((pt) => (
-                <div key={pt.title} className="flex gap-4 p-6 bg-secondary rounded-2xl border border-border">
-                  <pt.icon className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+              {whyChooseUsPoints.map((pt) => (
+                <div key={pt.title} className="p-6 bg-secondary rounded-2xl border border-border flex flex-col justify-between">
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">{pt.title}</h3>
+                    <h3 className="font-semibold text-foreground text-lg mb-2">{pt.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{pt.body}</p>
                   </div>
                 </div>
@@ -260,46 +715,149 @@ export default function OcotilloPage() {
           </div>
         </section>
 
-        {/* HARD WATER SECTION */}
-        <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
+        {/* SECTION 12: COST SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <div className="flex items-start gap-4">
-              <Droplets className="w-10 h-10 flex-shrink-0 mt-1 opacity-80" />
-              <div>
-                <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6">
-                  Combating Ocotillo's Hard Water
-                </h2>
-                <p className="text-primary-foreground/85 text-lg leading-relaxed mb-4">
-                  Ocotillo's water supply carries a high concentration of dissolved minerals, which causes scale build-up and discolors traditional cement grouts. 
-                </p>
-                <p className="text-primary-foreground/85 text-lg leading-relaxed mb-4">
-                  To protect your luxury investment, we employ advanced tile installation methods:
-                </p>
-                <ul className="space-y-3 text-primary-foreground/85">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>Stain-Resistant Epoxy Grout:</strong> Waterproof and impervious to mineral absorption.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>EnduroShield Glass Treatment:</strong> Repels hard water to prevent white spots.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>Solid Surface Thresholds:</strong> Eliminate grout joints on curbs where water pools.</span>
-                  </li>
-                </ul>
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Project Budgeting</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                How Much Does Bathroom Remodeling Cost in Ocotillo?
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                The cost of a bathroom renovation depends heavily on the size of the room and the scope of work. A focused shower renovation will generally require a different budget than a complete primary bathroom remodel.
+              </p>
+            </div>
+
+            <div className="bg-background p-8 rounded-2xl border border-border mb-8 shadow-sm">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                Factors that influence the total project cost include:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Bathroom size</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Demolition requirements</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Plumbing changes</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Electrical work</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shower or tub configuration</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Tile selection</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Vanity and countertop selection</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Glass enclosure</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Flooring & fixtures</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Custom features & layout changes</span>
+                </div>
               </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center">
+              Instead of using one generic price for every bathroom, we evaluate the existing space and the work you actually want completed before preparing the project estimate.
+            </p>
+
+            <div className="text-center">
+              <Link
+                href="/bathroom-remodeling-cost-chandler-az/"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg"
+              >
+                Request an Ocotillo Bathroom Remodeling Estimate →
+              </Link>
             </div>
           </div>
         </section>
 
+        {/* SECTION 13: PROCESS SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Process</span>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
+                Our Bathroom Remodeling Process
+              </h2>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {processSteps.map((step) => (
+                <div key={step.step} className="bg-secondary rounded-2xl p-6 border border-border flex flex-col justify-between">
+                  <div>
+                    <span className="text-4xl font-bold text-primary/25 font-mono">0{step.step}</span>
+                    <h3 className="font-semibold text-foreground mt-2 mb-2 text-lg">{step.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{step.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* PORTFOLIO SHOWCASE PREVIEW */}
+        <GalleryPreview />
+
+        {/* SECTION 14: SERVICE AREA */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling Near Ocotillo
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              ARZ Home Remodeling serves homeowners in Ocotillo and nearby Chandler communities, including:
+            </p>
+
+            <p className="font-semibold text-foreground text-lg mb-8">
+              Ocotillo · Fulton Ranch · Chandler · Sun Lakes · Layton Lakes · Chandler Heights · Andersen Springs · The Islands · Pecos Ranch
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link href="/bathroom-remodeling-chandler-az/" className="text-primary font-semibold hover:underline text-sm">
+                Bathroom Remodeling Chandler AZ →
+              </Link>
+              <Link href="/bathroom-remodeling-fulton-ranch/" className="text-primary font-semibold hover:underline text-sm">
+                Bathroom Remodeling Fulton Ranch →
+              </Link>
+              <Link href="/bathroom-remodeling-layton-lakes/" className="text-primary font-semibold hover:underline text-sm">
+                Bathroom Remodeling Layton Lakes →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 15: FAQ SECTION */}
         <ServiceFAQ faqs={ocotilloFaqs} />
+
+        {/* TESTIMONIALS */}
         <Testimonials />
+
+        {/* CONTACT */}
         <ContactSection />
+
+        {/* FINAL CTA */}
         <ServiceCTA
-          title="Ready to Design Your Dream Ocotillo Bathroom?"
-          description="Call us today to schedule your free, detailed in-home evaluation. We will review layout options, budgets, and timelines."
+          title="Ready to Remodel Your Ocotillo Bathroom?"
+          description="Refresh an outdated bathroom with a layout and finishes that fit the way you use your home. Tell us what you'd like to change and we'll discuss your remodeling options and next steps."
         />
       </main>
       <Footer />

@@ -7,7 +7,7 @@ import ServiceFAQ from "@/components/service-faq";
 import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
 import GalleryPreview from "@/components/home/gallery-preview";
 import {
@@ -20,22 +20,28 @@ import {
   CheckCircle2,
   ArrowRight,
   Phone,
+  Check,
+  Layers,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LocalTrust from "@/components/home/local-trust";
 
 export const metadata: Metadata = {
-  title: "Bathroom Remodeling in Chandler, AZ | professional contractors - ARZ",
-  description: "Need expert bathroom remodeling in chandler, AZ? Our professional crew () builds custom walk-in showers & tub-to-shower conversions. Free estimate!",
+  title: "Bathroom Remodeling Chandler AZ | ARZ Home Remodeling",
+  description:
+    "Bathroom remodeling in Chandler, AZ for walk-in showers, tub conversions, tile, vanities, and complete bathroom renovations.",
   keywords: [
     "bathroom remodeling in chandler, AZ",
     "bathroom remodeling chandler",
     "bathroom remodel chandler az",
-    "bathroom remodeling contractor chandler"
+    "bathroom renovation chandler",
+    "walk-in shower remodeling chandler",
+    "tub-to-shower conversion chandler"
   ],
   openGraph: {
-    title: "Bathroom Remodeling in Chandler, AZ | Free Estimate",
-    description: "Expert bathroom remodeling in Chandler, AZ. Walk-in showers, tub-to-shower conversions & custom tile. General Contractor. Call (520) 569-3339 for a free quote.",
+    title: "Bathroom Remodeling Chandler AZ | ARZ Home Remodeling",
+    description:
+      "Bathroom remodeling in Chandler, AZ for walk-in showers, tub conversions, tile, vanities, and complete bathroom renovations.",
     url: `${siteConfig.url}/bathroom-remodeling-chandler-az/`,
     type: "website",
     images: [
@@ -49,8 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bathroom Remodeling in Chandler, AZ | Free Estimate",
-    description: "Expert bathroom remodeling in Chandler, AZ. Walk-in showers, tub-to-shower conversions & custom tile. General Contractor. Call (520) 569-3339 for a free quote.",
+    title: "Bathroom Remodeling Chandler AZ | ARZ Home Remodeling",
+    description:
+      "Bathroom remodeling in Chandler, AZ for walk-in showers, tub conversions, tile, vanities, and complete bathroom renovations.",
     images: [`${siteConfig.url}/images/bathroom-remodeling-chandler.jpg`],
   },
   alternates: {
@@ -60,126 +67,253 @@ export const metadata: Metadata = {
 
 const chandlerFaqs = [
   {
-    question: "Do I need a permit to remodel a bathroom in Chandler, AZ?",
+    question: "How much does a bathroom remodel cost in Chandler, AZ?",
     answer:
-      "Yes, the City of Chandler requires a building permit for any project that changes the layout of your bathroom, relocates plumbing pipes, or updates electrical wiring. Cosmetic updates like replacing cabinets, swapping a sink vanity, or installing new flooring in the same position do not require a permit. ARZ Home Remodeling manages the full permitting process directly with the Chandler Development Services Department located on Arizona Avenue."
+      "Bathroom remodeling costs vary according to the size of the bathroom, materials, fixtures, shower configuration, demolition, plumbing changes, tile, cabinetry, glass, and overall project scope. A focused update will generally have a different budget from a complete bathroom renovation.",
   },
   {
-    question: "What is the average cost of a bathroom remodel in Chandler?",
+    question: "How long does a bathroom remodel take?",
     answer:
-      "Bathroom remodeling costs are highly customized, depending on the size of the room, layout changes, tile choices, and fixture selections. Because every space is unique, we provide free on-site inspections and prepare a detailed, line-item written estimate before any work begins, ensuring a fixed-price guarantee. Contact us today to schedule your free design consultation."
+      "The timeline depends on the size and complexity of the project, the amount of demolition, plumbing or electrical changes, tile work, material availability, and other project-specific factors.",
   },
   {
-    question: "How does Chandler water hardness affect bathroom tile and glass?",
+    question: "Can I convert my bathtub into a walk-in shower?",
     answer:
-      "Chandler has exceptionally hard water with high levels of calcium. This mineral content causes white scale buildup on traditional porous stone and standard glass doors. We recommend installing large format porcelain tiles with epoxy grout instead of natural stone. Porcelain does not absorb water, and epoxy grout resists staining. For shower doors, we use low iron glass treated with a protective hydrophobic coating."
-  }
+      "Yes. A tub-to-shower conversion can replace an underused bathtub with a walk-in shower designed around the available space.",
+  },
+  {
+    question: "Do you remodel small bathrooms?",
+    answer:
+      "Yes. Small bathroom remodeling can focus on better fixture placement, storage, shower configuration, lighting, and material selection.",
+  },
+  {
+    question: "Do you remodel primary bathrooms?",
+    answer:
+      "Yes. Primary bathroom renovations can include shower redesigns, vanities, countertops, flooring, tile, lighting, fixtures, storage, and other improvements.",
+  },
+  {
+    question: "Can you remodel a guest bathroom?",
+    answer:
+      "Yes. Guest bathroom remodeling can include the tub or shower, vanity, flooring, tile, lighting, fixtures, and other finishes.",
+  },
+  {
+    question: "Can a bathroom be remodeled without changing the layout?",
+    answer:
+      "In many cases, yes. Keeping the existing layout can sometimes simplify the project, although the best approach depends on the condition and functionality of the current bathroom.",
+  },
+  {
+    question: "What should I choose: a bathtub or walk-in shower?",
+    answer:
+      "That depends on how you use the bathroom. A walk-in shower may make sense when accessibility and everyday convenience are priorities, while a bathtub can remain useful for households that regularly need or prefer one.",
+  },
+  {
+    question: "Can you make a bathroom easier to use?",
+    answer:
+      "Yes. Depending on the space, options can include low-threshold showers, curbless entries, shower seating, handheld fixtures, grab-bar preparation, improved lighting, and other accessibility-focused features.",
+  },
+  {
+    question: "Do bathroom remodels in Chandler require permits?",
+    answer:
+      "It depends on the scope of work. Projects involving plumbing, electrical, structural changes, or other regulated work may have different requirements from cosmetic updates. The specific project should be reviewed for applicable Chandler requirements.",
+  },
+  {
+    question: "What areas of Chandler do you serve?",
+    answer:
+      "We serve homeowners throughout Chandler, including areas such as Dobson Ranch, Warner Ranch, Ocotillo, Fulton Ranch, Sun Lakes, Chandler Heights, Gila Springs, Fox Crossing, Cooper Commons, and Downtown Chandler, subject to your actual service coverage.",
+  },
 ];
 
-const services = [
+const mainServices = [
   {
-    title: "Walk-In Shower Installation",
+    title: "Walk-In Shower Remodeling",
     href: "/shower-remodeling/",
     description:
-      "We convert outdated tub and shower combos into open, curbless walk-in showers with frameless glass enclosures, custom tile work, and rainfall showerheads. We use the Schluter waterproofing system for a leak-proof installation rated for Arizona's temperature swings.",
-    price: "Free Custom Estimate",
+      "Replace an outdated tub or enclosed shower with a more open and practical walk-in shower designed around your bathroom's available space.",
+    detail:
+      "Depending on the project, your new shower can include custom tile, built-in niches, seating, glass enclosures, modern shower fixtures, low-threshold entry, or a curbless design.",
+    cta: "Learn More About Shower Remodeling →",
   },
   {
     title: "Tub-to-Shower Conversion",
     href: "/tub-to-shower-conversion/",
     description:
-      "One of the most requested services in Chandler, especially in homes with unused garden tubs. We remove the existing tub, properly waterproof the substrate, and install a custom walk-in shower tailored to your layout. Adds usable space and strong ROI at resale.",
-    price: "Free Custom Estimate",
+      "If you rarely use your bathtub, converting it into a shower can make better use of the available space.",
+    detail:
+      "A tub-to-shower conversion in Chandler can include removal of the existing tub, shower waterproofing, wall and floor tile, shower fixtures, storage niches, and a new glass enclosure. The finished design can be planned around the existing footprint while giving the bathroom a more open and functional feel.",
+    cta: "Explore Tub-to-Shower Conversions →",
   },
   {
-    title: "Complete Master Bathroom Remodel",
+    title: "Primary Bathroom Remodeling",
     href: "/master-bathroom-remodel/",
     description:
-      "Our master bath remodels typically include: new shower enclosure, vanity replacement, tile flooring, updated lighting, and fixture upgrades. Timeline: three to five weeks. We handle all plumbing and electrical coordination without managing multiple contractors.",
-    price: "Free Custom Estimate",
+      "Your primary bathroom should work for your daily routine while reflecting your preferred style.",
+    detail:
+      "A primary bathroom remodel in Chandler can include a redesigned shower, new vanity and countertop, bathroom flooring, custom tile, lighting, fixtures, storage, and other improvements. Whether you're looking for a clean modern design or a more detailed spa-inspired bathroom, we can help organize the project around your priorities.",
+    cta: "Explore Primary Bathroom Remodeling →",
+  },
+  {
+    title: "Guest Bathroom Remodeling",
+    href: "/guest-bathroom-remodeling/",
+    description:
+      "Guest and hall bathrooms often need to serve multiple purposes while making efficient use of limited space.",
+    detail:
+      "A guest bathroom remodel can include a new tub or shower, vanity, countertop, flooring, wall tile, lighting, fixtures, and updated finishes. We focus on practical layouts and durable materials that make the bathroom easier to use and maintain.",
+    cta: "Explore Guest Bathroom Remodeling →",
+  },
+  {
+    title: "Small Bathroom Remodeling",
+    href: "/small-bathroom-remodeling/",
+    description:
+      "A small bathroom does not necessarily need more square footage to feel better.",
+    detail:
+      "The right layout, shower configuration, vanity size, storage, lighting, and material selection can make a compact bathroom feel more organized and functional. Our small bathroom remodeling solutions can include space-saving vanities, walk-in showers, recessed niches, larger-format tile, improved lighting, and more efficient fixture placement.",
+    cta: "Explore Small Bathroom Remodeling →",
+  },
+  {
+    title: "Accessible Bathroom Remodeling",
+    href: "/handicap-accessible-bathroom/",
+    description:
+      "If your bathroom needs to be easier to enter and use, accessibility-focused remodeling can make everyday routines more comfortable.",
+    detail:
+      "Options may include: low-threshold showers, curbless shower entries, shower seating, grab-bar preparation, handheld shower fixtures, slip-conscious flooring, improved lighting, and more usable clearances.",
+    cta: "Explore Accessible Bathroom Remodeling →",
   },
 ];
 
-const trustPoints = [
+const supportingServices = [
   {
-    icon: ShieldCheck,
-    title: "AZ fully insured",
-    body: "Every project fully covered. We carry all required Arizona contractor licensing.",
+    title: "Bathroom Tile Installation",
+    href: "/bathroom-tile-installation/",
+    description:
+      "Update shower walls, bathroom floors, backsplashes, niches, and accent areas with tile selected to complement the overall design. We can help coordinate tile size, pattern, texture, and finish so the different surfaces work together.",
   },
   {
-    icon: Star,
-    title: "workmanship warranty",
-    body: "We stand behind every tile and seam. If it fails within two years, we fix it at no charge.",
+    title: "Bathroom Flooring",
+    href: "/bathroom-flooring-installation/",
+    description:
+      "Bathroom flooring needs to suit a moisture-prone environment while providing the appearance and everyday practicality you want. Options can include different tile sizes, patterns, textures, and finishes depending on the room and design.",
   },
   {
-    icon: MapPin,
-    title: "Chandler Local",
-    body: "We have remodeled bathrooms in Sun Lakes, Fulton Ranch, Ocotillo, and Chandler Heights.",
+    title: "Bathroom Vanity Installation",
+    href: "/cabinet-countertop-installation/",
+    description:
+      "A new vanity can improve both storage and the appearance of the bathroom. We can coordinate cabinet configuration, countertop, sink, hardware, and finish with the rest of the renovation.",
   },
   {
-    icon: DollarSign,
-    title: "Fixed Pricing",
-    body: "You receive a written quote before any work starts. No surprises, no change-order games.",
-  },
-  {
-    icon: Droplets,
-    title: "Hard Water Expertise",
-    body: "We specify tile and grout systems that resist Chandler's 18+ grain mineral-heavy water supply.",
-  },
-  {
-    icon: Clock,
-    title: "On-Time Completion",
-    body: "Every project gets a firm written schedule. We show up when we say we will.",
+    title: "Shower Glass & Enclosures",
+    href: "/shower-remodeling/",
+    description:
+      "The right glass enclosure can make a shower feel more open while providing a clean finished appearance. Depending on the layout, options can include frameless and semi-frameless configurations.",
   },
 ];
 
-const pricingTiers = [
+const processSteps = [
   {
-    label: "Guest Bathroom Update",
-    detail: "Vanity, toilet, fixtures, paint",
-    range: "Free Custom Estimate",
+    step: "01",
+    title: "Initial Consultation",
+    body: "We discuss what you want to change, what isn't working in the current bathroom, your preferred style, and the goals for the project.",
   },
   {
-    label: "Guest Bathroom Full Remodel",
-    detail: "Tile, shower, vanity, flooring",
-    range: "Free Custom Estimate",
+    step: "02",
+    title: "Bathroom Evaluation",
+    body: "We review the existing layout and identify the areas that may affect the renovation, including the shower, tub, vanity, flooring, plumbing, lighting, and available space.",
   },
   {
-    label: "Tub-to-Shower Conversion",
-    detail: "Demo, waterproofing, custom shower build",
-    range: "Free Custom Estimate",
+    step: "03",
+    title: "Project Planning",
+    body: "We organize the remodeling scope and discuss the major changes, materials, fixtures, finishes, and design priorities.",
   },
   {
-    label: "Master Bathroom Remodel",
-    detail: "Full scope: shower, vanity, tile, lighting",
-    range: "Free Custom Estimate",
+    step: "04",
+    title: "Material Selection",
+    body: "Tile, flooring, vanities, countertops, shower fixtures, glass, hardware, and other finishes are selected according to the planned design.",
+  },
+  {
+    step: "05",
+    title: "Remodeling",
+    body: "The existing materials are removed as needed, the space is prepared, and the new bathroom components are installed according to the agreed project scope.",
+  },
+  {
+    step: "06",
+    title: "Final Walkthrough",
+    body: "Once the work is complete, we review the finished bathroom and the completed project scope with you.",
   },
 ];
 
-const process = [
-  { step: "01", title: "Free Phone Consultation", body: "We discuss your goals, budget, and timeline. No pressure, just answers." },
-  { step: "02", title: "In-Home Evaluation", body: "We measure, assess plumbing, and review your selections on-site in Chandler." },
-  { step: "03", title: "Fixed Written Proposal", body: "You see the complete price before we start. No hidden costs." },
-  { step: "04", title: "Design & Material Selection", body: "Tile, fixtures, glass, and finishes chosen together to match your style." },
-  { step: "05", title: "Construction", body: "Our in-house team handles demo, waterproofing, tile, plumbing, and finishing." },
-  { step: "06", title: "Final Walkthrough", body: "You inspect every detail before we close the job. 100% satisfaction required." },
+const whyChooseUsPoints = [
+  {
+    title: "Clear Project Scope",
+    body: "We explain the planned work so you can understand what is included in your bathroom renovation.",
+  },
+  {
+    title: "Design Guidance",
+    body: "We help you think through shower layouts, tile, vanities, storage, fixtures, finishes, and other design decisions.",
+  },
+  {
+    title: "Practical Solutions",
+    body: "The goal is to create a bathroom that looks good while still working well for everyday use.",
+  },
+  {
+    title: "Local Chandler Service",
+    body: "We work with homeowners throughout Chandler and surrounding East Valley communities.",
+  },
+  {
+    title: "Attention to the Finished Details",
+    body: "Tile layout, shower transitions, storage niches, vanities, glass, fixtures, and finishing details all contribute to the final result.",
+  },
 ];
 
-const neighborhoods = [
-  "Dobson Ranch", "Sun Lakes", "Ocotillo", "Fulton Ranch",
-  "Chandler Heights", "Gila Springs", "Fox Crossing", "Cooper Commons",
-  "85224", "85225", "85226", "85249",
+const projectExamples = [
+  {
+    title: "Master Bathroom Remodel — Dobson Ranch, Chandler",
+    description: "Bathroom renovation focused on updating the shower area, finishes, and overall functionality.",
+  },
+  {
+    title: "Primary Bathroom Update — Ocotillo",
+    description: "Updated vanity and surface finishes designed around the existing bathroom layout.",
+  },
+  {
+    title: "Guest Bathroom Update — Sun Lakes",
+    description: "Updated tile, tub/shower area, and bathroom finishes for a cleaner and more practical space.",
+  },
+  {
+    title: "Bathroom Renovation — Fulton Ranch",
+    description: "Updated bathroom elements with attention to shower design, finishes, storage, and everyday usability.",
+  },
 ];
+
+const chandlerNeighborhoods = [
+  "Dobson Ranch",
+  "Warner Ranch",
+  "Ocotillo",
+  "Fulton Ranch",
+  "Sun Lakes",
+  "Chandler Heights",
+  "Gila Springs",
+  "Fox Crossing",
+  "Cooper Commons",
+  "Downtown Chandler",
+];
+
+const chandlerZipCodes = ["85224", "85225", "85226", "85248", "85249", "85286"];
 
 export default function ChandlerBathroomRemodelingPage() {
   return (
     <>
-      
       <LocalBusinessSchema />
-      <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Chandler Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-chandler-az/" } ]} />
-<ServiceSchema
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://arzhomeremodeling.com/" },
+          { name: "Services", url: "https://arzhomeremodeling.com/services/" },
+          {
+            name: "Bathroom Remodeling Chandler AZ",
+            url: "https://arzhomeremodeling.com/bathroom-remodeling-chandler-az/",
+          },
+        ]}
+      />
+      <ServiceSchema
         serviceName="Bathroom Remodeling in Chandler, Arizona"
-        serviceDescription="expert bathroom remodeling contractor serving Chandler, AZ. Walk-in shower installation, tub-to-shower conversions, master bath renovations, vanity replacement, and complete bathroom remodels. Serving Dobson Ranch, Sun Lakes, Ocotillo, Fulton Ranch, and all of Chandler."
+        serviceDescription="Bathroom remodeling in Chandler, AZ for walk-in showers, tub conversions, tile, vanities, and complete bathroom renovations."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-chandler-az/`}
       />
       <FAQSchema faqs={chandlerFaqs} />
@@ -190,11 +324,11 @@ export default function ChandlerBathroomRemodelingPage() {
       />
       <Header />
       <main>
-        {/* HERO */}
+        {/* SECTION 2: HERO SECTION */}
         <ServiceHero
-          title="Bathroom Remodeling Chandler AZ"
-          subtitle="Chandler’s Top-Rated Bathroom Remodeling Contractor"
-          description="From tub-to-shower conversions in Dobson Ranch to full master bath transformations in Ocotillo: ARZ Home Remodeling is the professional choice for Chandler homeowners. professional AZ contractor, 2-year warranty, fixed pricing."
+          title="Bathroom Remodeling in Chandler, AZ"
+          subtitle="Custom Bathroom Renovations for Chandler Homes"
+          description="Transform an outdated bathroom into a space that feels more comfortable, functional, and suited to your everyday routine. ARZ Home Remodeling helps Chandler homeowners with bathroom remodels, walk-in showers, tub-to-shower conversions, bathroom tile, flooring, vanities, accessibility upgrades, and complete bathroom renovations. Whether you're updating a small guest bathroom or planning a complete primary bathroom remodel, we'll help you choose improvements that fit your space, style, and project goals."
           image="/images/hero/luxury-shower-remodel-chandler.webp"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -202,147 +336,67 @@ export default function ChandlerBathroomRemodelingPage() {
           ]}
         />
 
-        {/* OPENING CONTENT */}
+        {/* SECTION 3: INTRODUCTION */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Your bathroom is one of the most frequently used spaces in your home, serving as the start and end to your daily routine. However, many Chandler properties built between the 1980s and early 2000s feature outdated, cramped layouts and builder-grade fixtures that fail to meet modern standards of luxury or utility. Yellowing fiberglass tub surrounds, water-damaged particle board vanities, and mildewed tile grout are common issues that detract from both your daily comfort and your home’s resale value. Upgrading your space with professional **bathroom remodeling in Chandler, AZ** is a high-return investment that transforms outdated spaces into modern, functional retreats.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we specialize in providing comprehensive design-build remodeling solutions tailored to the needs of Chandler homeowners. From luxury master bathroom overhauls featuring freestanding tubs and curbless entry walk-in showers to space-optimizing guest bathroom updates and expert <Link href='/tub-to-shower-conversion/' className='text-primary hover:underline font-medium'>tub-to-shower conversions</Link>, our in-house crew manages every phase. As an Arizona Registrar of Contractors () bonded and insured team (), we proudly serve communities across the East Valley, including ZIP codes <span className="text-primary font-semibold">85224, 85225, 85226, and 85249</span>.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              In addition to Chandler, our team regularly serves neighboring East Valley cities. If you live in nearby communities, check out our tailored services for <Link href="/bathroom-remodeling-gilbert-az/" className="text-primary hover:underline font-medium">bathroom remodeling in Gilbert, AZ</Link> as well as our specialized rural plumbing and hard water solutions for <Link href="/bathroom-remodeling-apache-junction-az/" className="text-primary hover:underline font-medium">bathroom remodeling in Apache Junction, AZ</Link>.
-            </p>
-            <h2 className="font-serif text-2xl font-semibold mt-8 mb-3 text-foreground">
-              Navigating Chandler Building Codes and Permitting
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling Designed Around Your Home
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Navigating structural modifications, drainage relocations, or electrical circuit expansion requires strict compliance with local building codes. In Chandler, major bathroom renovations require building permit filing and official inspections through the **Chandler Development Services Department** (located at the municipal complex on Arizona Avenue in Downtown Chandler). Our team manages the entire permitting pipeline, drafting and submitting all floor plans, framing details, and plumbing layout designs. We handle structural wall removals, coordinate inspections for wet-area rough-ins, and ensure that every outlet, exhaust fan, and mixing valve meets current safety guidelines.
-            </p>
-            
-            <h2 className="font-serif text-2xl font-semibold mt-8 mb-3 text-foreground">
-              Combating Chandler's Hard Water
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              East Valley municipal water is notorious for its exceptionally high mineral content, frequently measuring between 18 to 22 grains of hardness (well over 300 mg/L of dissolved calcium and magnesium). This high-mineral supply leaves heavy white scale buildup on traditional porous natural stone and standard cement grout, leading to discoloration, cracking, and water penetration. To combat this, we install vapor-tight **Schluter-KERDI waterproofing systems** on all shower substrates. We use large-format, non-porous porcelain tile (with water absorption ratings below 0.5% per ASTM C373) and upgrade all joints to 100% solid **epoxy resin grout** that repels minerals, resists staining, and remains easy to clean.
-            </p>
-
-            <div className="my-8 overflow-x-auto rounded-xl border border-border shadow-sm">
-              <table className="w-full text-left text-sm">
-                <thead className="bg-secondary text-foreground font-semibold">
-                  <tr>
-                    <th className="p-4 border-b border-border">Water Quality Metric</th>
-                    <th className="p-4 border-b border-border">Chandler Municipal Level</th>
-                    <th className="p-4 border-b border-border">Remodeling Recommendation</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-border text-muted-foreground bg-background">
-                  <tr>
-                    <td className="p-4 font-medium text-foreground">Grains per Gallon (GPG)</td>
-                    <td className="p-4">18 to 22+ GPG (Extremely Hard)</td>
-                    <td className="p-4 font-medium text-primary">Resin Epoxy Grout (ANSI A118.3)</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 font-medium text-foreground">Total Dissolved Solids (TDS)</td>
-                    <td className="p-4">300+ mg/L (High Mineralization)</td>
-                    <td className="p-4">Large-Format Porcelain Tile (ASTM C373)</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 font-medium text-foreground">pH Level Range</td>
-                    <td className="p-4">7.4 to 7.9 (Slightly Alkaline)</td>
-                    <td className="p-4">Hydrophobic treated shower glass</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div className="my-8 p-6 bg-secondary/80 border-l-4 border-primary rounded-r-xl shadow-sm italic text-foreground">
-              <p className="text-lg leading-relaxed mb-3">
-                &ldquo;When remodeling a bathroom in Chandler, you aren't just updating fixtures; you are designing a system to withstand some of the hardest water in the nation. We strictly specify epoxy grout and non-porous porcelain to ensure your investment stays pristine without hours of scrubbing.&rdquo;
-              </p>
-              <cite className="not-italic text-sm font-semibold text-primary block">
-                our team, Lead Contractor at ARZ Home Remodeling
-              </cite>
-            </div>
-
-            <h3 className="font-serif text-2xl font-semibold mt-8 mb-3 text-foreground">
-              Neighborhood Specific Remodeling and ZIP Code Topical Depth
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              We customize our design-build process to match the unique structural profiles and architectural eras across Chandler's master-planned developments and subdivisions:
-            </p>
-            <ul className="space-y-4 mb-6">
-              <li className="text-muted-foreground text-lg leading-relaxed">
-                <strong className="text-foreground">North and West Chandler (ZIPs 85224 & 85226 serving Dobson Ranch, Warner Ranch, Kyrene Corridor):</strong> Homes built during the 1980s and 1990s in these neighborhoods often feature low-profile vanities, aging copper pipes, and outdated fiberglass shower enclosures. We specialize in retrofitting these spaces, updating in-wall plumbing to flexible PEX-a piping, raising vanity heights, and executing space-maximizing tub-to-shower conversions that add immediate ROI.
-              </li>
-              <li className="text-muted-foreground text-lg leading-relaxed">
-                <strong className="text-foreground">Downtown and Central Chandler (ZIP 85225 serving Clemente Ranch, Cooper Commons, and Historic Districts):</strong> Subdivisions in this corridor frequently feature standard guest and hall bathrooms with high-traffic demands. We focus on durable, low-maintenance materials, installing comfort-height toilets, solid quartz countertops, and slip-resistant custom tiling designed for active families.
-              </li>
-              <li className="text-muted-foreground text-lg leading-relaxed">
-                <strong className="text-foreground">South Chandler (ZIPs 85249 & 85248 serving Ocotillo, Fulton Ranch, Sun Lakes):</strong> This luxury corridor features custom executive estates and active adult communities. In Ocotillo and Fulton Ranch, we deliver high-end master suites with linear shower drains, custom accent niches, and double floating vanities. In Sun Lakes, we specialize in senior-friendly aging-in-place updates, building zero-threshold curbless roll-in showers, installing structural stud backing for grab bars, and laying high-traction mosaic tile flooring.
-              </li>
-            </ul>
-            <h3 className="font-serif text-2xl font-semibold mt-8 mb-3 text-foreground">
-              Serving Communities Near Chandler Landmarks, Schools, and Main Corridors
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Our service crews work daily throughout the city. We coordinate projects near major local institutions. If you live near **Hamilton High School** off Arizona Avenue, **Basha High School** on Val Vista Drive, or **Chandler High School** near the historic downtown, we handle all logistics. We pull municipal permits directly through the city office near the **Downtown Chandler Historic District** and coordinate dumpster drops that meet strict HOA guidelines in Fulton Ranch and Ocotillo.
+              An outdated bathroom can affect more than the appearance of your home. An inefficient layout, limited storage, worn tile, an old bathtub, or a difficult-to-use shower can make an everyday space frustrating to use.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Whether you reside near **Chandler-Gilbert Community College** in the south, **Tumbleweed Park** off Germann Road, or shop at the **Chandler Fashion Center** near the Loop 101, our trucks are in your neighborhood. We also specialize in senior-friendly walk-in showers and accessibility updates for homes surrounding the **Chandler Regional Medical Center** on Dobson Road. We utilize local material suppliers along **Ray Road**, **Alma School Road**, and **McQueen Road** to keep schedules running on time.
-            </p>
-
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              From top-tier walk-in showers to precise custom tile work, we deliver results that blend long-term durability with modern aesthetics. We offer transparent, itemized scopes of work to ensure you get exceptional value for your investment. If you have been searching for a reliable local bathroom contractor, our dedicated team is here to help. You can also view our <Link href='/bathroom-remodeling-cost-chandler-az/' className='text-primary hover:underline font-medium'>detailed pricing guide</Link> for current 2026 rates and local bathroom remodeling costs.
+              A <strong className="font-semibold text-foreground">bathroom remodel in Chandler, AZ</strong> gives you the opportunity to improve the way the room works while updating its appearance.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              We understand that every project is unique. Our team of expert remodelers is skilled in handling everything from simple cosmetic updates to complex structural changes, ensuring your project is completed on time and meets your expectations.
+              Some homeowners want a focused renovation, such as replacing a bathtub with a walk-in shower or installing a new vanity. Others want to completely transform the bathroom with new tile, flooring, lighting, fixtures, storage, and a redesigned shower area.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we focus on premium workmanship, transparent communication, and stunning results. We handle all elements of your project, from planning and permitting to the final tile sealing, making us the premier choice for bathroom renovations in the East Valley.
+              At ARZ Home Remodeling, we approach each project around the existing bathroom and the homeowner&apos;s goals. We help you determine what should change, what can remain, and which improvements will make the biggest difference to the finished space.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call Now for Your Free No-Obligation Bathroom Quote!
+                  Get a Free Bathroom Remodeling Estimate
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="tel:+15205693339" className="flex items-center gap-2">
+                <Link href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  {siteConfig.phone}
+                  Call {siteConfig.phone}
                 </Link>
               </Button>
             </div>
           </div>
         </section>
 
-        {/* SERVICES */}
+        {/* SECTION 4: MAIN SERVICE SECTION */}
         <section className="py-16 lg:py-24 bg-secondary">
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">What We Do</span>
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Services</span>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Our Chandler Bathroom Remodeling Services
+                Chandler Bathroom Remodeling Services
               </h2>
-              <p className="text-muted-foreground text-lg mt-4">Professional bathroom remodeling contractor services including walk-in showers, accessible shower remodeling, and tile shower installation in Chandler.</p>
+              <p className="text-muted-foreground text-lg mt-4 max-w-3xl mx-auto">
+                Bathroom remodeling can range from a targeted shower upgrade to a complete renovation. We provide several remodeling solutions so you can choose the scope that makes sense for your home.
+              </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {services.map((svc) => (
-                <div key={svc.title} className="bg-background rounded-2xl p-8 border border-border flex flex-col">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold uppercase tracking-widest text-primary">{svc.price}</span>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mainServices.map((svc) => (
+                <div key={svc.title} className="bg-background rounded-2xl p-8 border border-border flex flex-col justify-between shadow-sm hover:border-primary/50 transition-all">
+                  <div>
+                    <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{svc.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{svc.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">{svc.detail}</p>
                   </div>
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{svc.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-6">{svc.description}</p>
                   <Link
                     href={svc.href}
-                    className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline mt-auto"
+                    className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline mt-auto pt-4 border-t border-border/60"
                   >
-                    Learn more <ArrowRight className="w-4 h-4" />
+                    {svc.cta}
                   </Link>
                 </div>
               ))}
@@ -350,23 +404,374 @@ export default function ChandlerBathroomRemodelingPage() {
           </div>
         </section>
 
-        <LocalTrust cityName="Chandler" />
-
-        {/* TRUST SIGNALS */}
+        {/* SECTION 5: SUPPORTING SERVICES */}
         <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Quality Finishes</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Tile, Flooring, Vanities & Bathroom Finishes
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                A bathroom renovation is about more than the shower or bathtub. The materials throughout the room determine how the finished space looks, feels, and functions.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-6">
+              {supportingServices.map((sup) => (
+                <div key={sup.title} className="bg-secondary/60 rounded-xl p-6 border border-border flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{sup.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{sup.description}</p>
+                  </div>
+                  <Link
+                    href={sup.href}
+                    className="inline-flex items-center gap-1 text-primary text-sm font-medium hover:underline mt-auto"
+                  >
+                    Explore {sup.title} <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 6: NEW USER-INTENT SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Project Scope</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                What Type of Bathroom Remodel Does Your Home Need?
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                Not every bathroom requires a complete renovation. Sometimes the best solution is a focused upgrade. Other bathrooms benefit from a larger redesign.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="bg-background rounded-2xl p-8 border border-border shadow-sm">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0" />
+                  A Focused Bathroom Update May Make Sense If:
+                </h3>
+                <ul className="space-y-3 text-muted-foreground text-sm">
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>The existing layout works well</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Your main concern is an outdated shower or tub</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>The vanity needs replacement</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>You want new tile or flooring</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>The plumbing locations are suitable</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>You mainly want to refresh the appearance</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-background rounded-2xl p-8 border border-border shadow-sm">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+                  <Layers className="w-6 h-6 text-primary flex-shrink-0" />
+                  A Complete Bathroom Renovation May Make Sense If:
+                </h3>
+                <ul className="space-y-3 text-muted-foreground text-sm">
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>The existing layout no longer works</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Multiple major components are outdated</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>The shower and vanity both need replacement</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Storage is inadequate</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>The bathroom needs accessibility improvements</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>You want to change the overall design</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Plumbing or electrical changes are part of the project</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p className="text-center text-muted-foreground text-sm italic">
+              The right approach depends on the condition of the bathroom, your goals, and the scope of changes you want to make.
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 7: CHANDLER-SPECIFIC SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling Considerations for Chandler Homes
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Chandler includes a wide range of homes and neighborhoods, so bathroom remodeling projects can vary considerably from one property to another.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              An older bathroom may need attention to existing finishes, shower construction, plumbing, storage, or an inefficient layout. A newer bathroom may require fewer structural changes and focus more heavily on tile, vanities, shower upgrades, lighting, and design.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Arizona&apos;s dry climate and mineral-heavy water conditions can also influence how homeowners think about bathroom materials and maintenance.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              For that reason, we don&apos;t recommend the same bathroom design for every home. The existing space should be evaluated first so the remodeling plan fits the room rather than forcing the room into a predetermined design.
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 8: HARD-WATER SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <div className="flex items-start gap-4 mb-6">
+              <Droplets className="w-10 h-10 text-primary flex-shrink-0 mt-1" />
+              <div>
+                <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
+                  Choosing Bathroom Materials for Chandler
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                  Mineral buildup can affect shower glass, fixtures, tile surfaces, and grout over time. Material selection and routine maintenance therefore matter when planning a bathroom renovation in Chandler.
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                  For shower areas, we can help you select surfaces and finishes that are practical for everyday cleaning and suitable for the way the bathroom will be used.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-background rounded-2xl p-8 border border-border shadow-sm">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                Depending on the design, options may include:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Porcelain or ceramic tile</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Carefully selected grout systems</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Glass shower enclosures</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Low-maintenance wall surfaces</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Easy-to-clean flooring</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Recessed shower storage</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mt-6">
+              The goal is not simply to choose attractive materials. It is to create a bathroom that remains practical to maintain after the remodeling project is complete.
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 9: COST SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Project Budgeting</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                How Much Does a Bathroom Remodel Cost in Chandler, AZ?
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                The cost of a <strong className="font-semibold text-foreground">bathroom remodel in Chandler</strong> depends on the size of the room, the condition of the existing space, material selections, fixtures, shower configuration, demolition, plumbing changes, tile, cabinetry, glass, and the overall project scope.
+              </p>
+              <p className="text-muted-foreground text-sm mt-2">
+                A focused update can have a very different cost from a complete bathroom renovation.
+              </p>
+            </div>
+
+            <div className="space-y-4 mb-8">
+              <div className="bg-secondary p-6 rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Guest Bathroom Update</h3>
+                <p className="text-muted-foreground text-sm">A focused update may include a vanity, fixtures, flooring, paint, or other selected improvements.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Guest Bathroom Remodel</h3>
+                <p className="text-muted-foreground text-sm">A larger project may include the tub or shower, tile, vanity, flooring, fixtures, and other finishes.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Tub-to-Shower Conversion</h3>
+                <p className="text-muted-foreground text-sm">The scope can include tub removal, shower preparation, waterproofing, tile, fixtures, storage, and glass.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Primary Bathroom Remodel</h3>
+                <p className="text-muted-foreground text-sm">A larger renovation may combine a new shower, vanity, flooring, tile, lighting, fixtures, storage, and other improvements.</p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link
+                href="/bathroom-remodeling-cost-chandler-az/"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg"
+              >
+                View the Chandler Bathroom Remodeling Cost Guide →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 10: PROCESS SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Promise</span>
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Step-by-Step</span>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Why Chandler Homeowners Choose Us
+                Our Bathroom Remodeling Process
               </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                A clear process helps you understand what happens before, during, and after your bathroom renovation.
+              </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {trustPoints.map((pt) => (
-                <div key={pt.title} className="flex gap-4 p-6 bg-secondary rounded-2xl border border-border">
-                  <pt.icon className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {processSteps.map((step) => (
+                <div key={step.step} className="bg-background rounded-2xl p-6 border border-border flex flex-col justify-between">
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">{pt.title}</h3>
+                    <span className="text-4xl font-bold text-primary/25 font-mono">{step.step}</span>
+                    <h3 className="font-semibold text-foreground mt-2 mb-2 text-lg">{step.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{step.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 11 & 12: LOCAL SERVICE AREA & NEIGHBORHOODS */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
+            <span className="text-primary text-sm font-medium tracking-wider uppercase">Service Area</span>
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 mb-6 text-foreground">
+              Bathroom Remodeling Throughout Chandler, AZ
+            </h2>
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+              ARZ Home Remodeling serves homeowners throughout Chandler and nearby communities.
+            </p>
+
+            <h3 className="font-serif text-2xl font-semibold mt-10 mb-4 text-foreground">
+              Serving Chandler Neighborhoods With Local Remodeling Services
+            </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6 max-w-3xl mx-auto">
+              Bathroom remodeling projects can look very different depending on the home, existing layout, and homeowner&apos;s goals.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
+              Whether you&apos;re updating a bathroom in <strong className="font-semibold text-foreground">Dobson Ranch, Warner Ranch, Ocotillo, Fulton Ranch, Sun Lakes, Chandler Heights, or another Chandler neighborhood</strong>, we begin with the existing space and plan the renovation around what you want to accomplish.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              {chandlerNeighborhoods.map((n) => (
+                <span key={n} className="bg-secondary border border-border rounded-full px-4 py-2 text-sm font-medium text-foreground">
+                  {n}
+                </span>
+              ))}
+            </div>
+
+            <p className="text-muted-foreground text-sm mb-4">
+              We also serve homeowners across Chandler ZIP codes including{" "}
+              <span className="text-primary font-semibold">
+                {chandlerZipCodes.join(", ")}
+              </span>
+              , where applicable to your actual service coverage.
+            </p>
+
+            <p className="text-muted-foreground text-sm italic">
+              If you&apos;re unsure whether your address is within our service area, contact us and we&apos;ll confirm.
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 13: PERMIT SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
+              Do You Need a Permit for a Bathroom Remodel in Chandler?
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Permit requirements can depend on the type and scope of work being performed.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Cosmetic changes can have different requirements from projects involving plumbing, electrical work, structural modifications, or other regulated construction activities.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Before beginning a project, the required local requirements should be confirmed for the specific scope of work.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              For Chandler homeowners, the City&apos;s Development Services resources provide information about permitting, plan review, and inspections.
+            </p>
+            <div>
+              <Link
+                href="/bathroom-remodeling-permits-chandler/"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg"
+              >
+                Learn More About Chandler Permits →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Local Trust Badge */}
+        <LocalTrust cityName="Chandler" />
+
+        {/* SECTION 14: WHY ARZ SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Why Work With Us</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                What You Can Expect From ARZ Home Remodeling
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                Choosing a remodeling company is about more than selecting materials. You also want to understand how the project will be planned and communicated.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {whyChooseUsPoints.map((pt) => (
+                <div key={pt.title} className="p-6 bg-secondary rounded-2xl border border-border flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-semibold text-foreground text-lg mb-2">{pt.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{pt.body}</p>
                   </div>
                 </div>
@@ -375,258 +780,153 @@ export default function ChandlerBathroomRemodelingPage() {
           </div>
         </section>
 
-        {/* HARD WATER EXPERTISE */}
-        <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <div className="flex items-start gap-4 mb-8">
-              <Droplets className="w-10 h-10 flex-shrink-0 mt-1 opacity-80" />
-              <div>
-                <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6">
-                  Understanding Chandler's Bathroom Remodel Challenges
-                </h2>
-                <p className="text-primary-foreground/85 text-lg leading-relaxed mb-4">
-                  Chandler sits in one of Arizona's hardest water zones: the East Valley water supply averages over{" "}
-                  <strong>300 mg/L of dissolved minerals</strong>. This creates three specific problems in bathrooms:
-                </p>
-                <ul className="space-y-3 text-primary-foreground/85 mb-6">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span>Calcium buildup on glass enclosures and fixtures within six to twelve months</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span>Grout staining from mineral deposits within twelve to eighteen months of standard grouting</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span>Yellowing and discoloration of low-grade acrylic surrounds</span>
-                  </li>
-                </ul>
-                <p className="text-primary-foreground/85 text-lg leading-relaxed">
-                  Our solution: we specify <strong>epoxy grout</strong>, <strong>nano-coated glass enclosures</strong>, and tile
-                  materials rated for high-mineral environments. This is something national chains do not customize: and it is why
-                  homeowners who have used generic contractors call us to fix failed showers three years later.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* COST GUIDE */}
-        <section className="py-16 lg:py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+        {/* SECTION 15: PROJECT PORTFOLIO */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Transparent Pricing</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Chandler Bathroom Remodel Cost Guide
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Work</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Bathroom Remodeling Projects in Chandler
               </h2>
-              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                Pricing varies based on tile selection, plumbing relocation, and fixture grade. We offer written fixed-price
-                quotes and financing for qualified homeowners.
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                Seeing completed work can help you understand the type of remodeling we provide. Our portfolio can include bathroom transformations involving showers, vanities, tile, flooring, storage, and complete renovations.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              {pricingTiers.map((tier) => (
-                <div key={tier.label} className="bg-secondary rounded-2xl p-6 border border-border flex justify-between items-center gap-4">
-                  <div>
-                    <p className="font-semibold text-foreground">{tier.label}</p>
-                    <p className="text-muted-foreground text-sm">{tier.detail}</p>
-                  </div>
-                  <span className="text-primary font-bold text-lg whitespace-nowrap">{tier.range}</span>
+
+            <div className="grid sm:grid-cols-2 gap-6 mb-8">
+              {projectExamples.map((proj) => (
+                <div key={proj.title} className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                  <span className="text-xs font-semibold text-primary uppercase tracking-wider mb-1 block">Project Example</span>
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{proj.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{proj.description}</p>
                 </div>
               ))}
             </div>
+
             <div className="text-center">
-              <Link href="/bathroom-remodeling-cost-chandler-az/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
-                View our full Chandler cost guide <ArrowRight className="w-4 h-4" />
+              <Link href="/gallery/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                View the Full Bathroom Remodeling Gallery →
               </Link>
             </div>
           </div>
         </section>
 
-        {/* PROCESS */}
-        <section className="py-16 lg:py-24 bg-secondary">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">How It Works</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Our Remodeling Process - No Surprises
-              </h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {process.map((step) => (
-                <div key={step.step} className="bg-background rounded-2xl p-6 border border-border">
-                  <span className="text-4xl font-bold text-primary/20">{step.step}</span>
-                  <h3 className="font-semibold text-foreground mt-2 mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{step.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* SERVICE AREAS */}
-        <section className="py-16 lg:py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
-            <span className="text-primary text-sm font-medium tracking-wider uppercase">Service Area</span>
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 mb-6 text-foreground">
-              Serving All of Chandler, AZ
-            </h2>
-            <p className="text-muted-foreground mb-8 leading-relaxed">
-              We are a local team dedicated to providing top-quality bathroom and shower remodeling services across the city.
-              Whether you need a full master bath transformation, a new walk-in shower, or a senior-safe renovation, we have the experience to get the job done right.
-              Here are some of the areas we cover most:
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {neighborhoods.map((n) => (
-                <span key={n} className="bg-secondary border border-border rounded-full px-4 py-2 text-sm font-medium text-foreground">
-                  {n}
-                </span>
-              ))}
-            </div>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-              <Link href="/bathroom-remodeling-gilbert-az/" className="hover:text-primary transition-colors">Bathroom Remodeling Gilbert AZ →</Link>
-              <Link href="/bathroom-remodeling-mesa-az/" className="hover:text-primary transition-colors">Bathroom Remodeling Mesa AZ →</Link>
-              <Link href="/bathroom-remodeling-ocotillo/" className="hover:text-primary transition-colors">Ocotillo Bathroom Remodeling →</Link>
-              <Link href="/bathroom-remodeling-sun-lakes/" className="hover:text-primary transition-colors">Sun Lakes Bathroom Remodeling →</Link>
-            </div>
-          </div>
-        </section>
-
-        {/* INTERNAL LINK SECTION */}
-        <section className="py-16 bg-secondary">
-          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
-            <h2 className="font-serif text-3xl font-semibold text-foreground text-center mb-4">Explore Our Sub-Services & Remodeling Solutions</h2>
-            <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto text-lg">
-              We specialize in target bathroom renovation projects, from senior-safe upgrades to complete luxury master suite transformations.
-            </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link href="/shower-remodeling/" className="bg-background border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-md group">
-                <p className="font-semibold text-foreground group-hover:text-primary transition-colors text-lg">Shower Remodeling</p>
-                <p className="text-muted-foreground text-sm mt-2">Custom tiled walks, frameless glass door installations, and high-quality rainfall shower heads.</p>
-              </Link>
-              <Link href="/tub-to-shower-conversion/" className="bg-background border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-md group">
-                <p className="font-semibold text-foreground group-hover:text-primary transition-colors text-lg">Tub-to-Shower Conversion</p>
-                <p className="text-muted-foreground text-sm mt-2">Remove an unused garden tub or old alcove bathtub and gain a modern, spacious walk-in shower.</p>
-              </Link>
-              <Link href="/master-bathroom-remodel/" className="bg-background border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-md group">
-                <p className="font-semibold text-foreground group-hover:text-primary transition-colors text-lg">Master Bathroom Remodeling</p>
-                <p className="text-muted-foreground text-sm mt-2">Full-scope conversions: custom double vanities, stand-alone soaking tubs, and premium quartz surfaces.</p>
-              </Link>
-              <Link href="/guest-bathroom-remodeling/" className="bg-background border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-md group">
-                <p className="font-semibold text-foreground group-hover:text-primary transition-colors text-lg">Guest Bathroom Remodels</p>
-                <p className="text-muted-foreground text-sm mt-2">Durable, beautiful updates that increase your home value and offer clean, modern convenience for guests.</p>
-              </Link>
-              <Link href="/handicap-accessible-bathroom/" className="bg-background border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-md group">
-                <p className="font-semibold text-foreground group-hover:text-primary transition-colors text-lg">Accessible & ADA Bathrooms</p>
-                <p className="text-muted-foreground text-sm mt-2">Senior-safe curbless roll-in showers, certified grab bar placement, comfort-height toilets, and ADA compliance.</p>
-              </Link>
-              <Link href="/small-bathroom-remodeling/" className="bg-background border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-md group">
-                <p className="font-semibold text-foreground group-hover:text-primary transition-colors text-lg">Small Bathroom Remodeling</p>
-                <p className="text-muted-foreground text-sm mt-2">Smart layout optimizations, custom-built space-saving vanities, and bright tiling to open up small spaces.</p>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* PORTFOLIO SHOWCASE */}
+        {/* PORTFOLIO SHOWCASE PREVIEW */}
         <GalleryPreview />
 
-        {/* TIMELINE & 3D DESIGN PROCESS */}
+        {/* SECTION 16: TECHNICAL QUALITY SECTION */}
         <section className="py-16 lg:py-24 bg-background border-t border-border">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
             <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground text-center">
-              Our Professional Project Timeline & 3D Design Process
+              How We Approach Shower Construction
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-12 text-center">
-              We believe in transparency and absolute preparation. Unlike other contractors, we combine advanced 3D visual renderings with a structured day-by-day timeline so you know exactly what to expect.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center max-w-2xl mx-auto">
+              A beautiful shower also needs to be properly prepared underneath the visible tile and glass.
             </p>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* 3D Design */}
-              <div className="bg-secondary p-8 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-4">3D Design & Rendering Phase</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Before a single tile is removed, our design team builds a highly detailed 3D color rendering of your new bathroom layout. You can preview exactly how different tile selections, custom niches, vanity finishes, and quartz countertops will look in your physical space. This eliminates guesswork and ensures you love the final results.
-                </p>
+
+            <div className="bg-secondary p-8 rounded-2xl border border-border mb-8">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                Depending on the project, the shower assembly may involve:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Proper substrate preparation</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Waterproofing</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Correct shower drainage</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Appropriate tile-setting materials</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Carefully planned transitions</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shower niches and seating</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Properly installed fixtures</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Suitable grout and sealant systems</span>
+                </div>
               </div>
-              
-              {/* Timeline */}
-              <div className="bg-secondary p-8 rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-4">Typical 10-Day Remodel Timeline</h3>
-                <ul className="space-y-3 text-muted-foreground text-sm">
-                  <li className="flex gap-2"><strong>Days 1-2:</strong> Demolition and safe removal of builder-grade materials.</li>
-                  <li className="flex gap-2"><strong>Days 3-4:</strong> Plumbing rough-ins, valve replacements, and electrical wiring.</li>
-                  <li className="flex gap-2"><strong>Days 5-6:</strong> Substrate preparation & Schluter-Kerdi waterproofing system installation.</li>
-                  <li className="flex gap-2"><strong>Days 7-8:</strong> Precision tile setting and durable epoxy grout application.</li>
-                  <li className="flex gap-2"><strong>Days 9-10:</strong> Vanity, quartz countertops, shower fixtures, glass install & final walkthrough.</li>
-                </ul>
-              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              The exact materials and construction methods depend on the project design and existing conditions.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              For homeowners, the important point is that the finished tile is only one part of a properly built shower. The layers beneath it need to be planned correctly as well.
+            </p>
+
+            <div className="text-center">
+              <Link href="/shower-remodeling/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Explore Our Shower Remodeling Process →
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* TECHNICAL SPECIFICATIONS SECTION */}
-        <section className="py-16 lg:py-24 bg-background border-t border-border">
+        {/* SECTION 17: DESIGN SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Engineering & Design Standards</span>
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Design Ideas</span>
               <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
-                Technical Remodeling Specifications & Building Codes
+                Bathroom Design Ideas for Chandler Homes
               </h2>
-              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                We build bathrooms to last decades, matching rigorous technical standards to combat Chandler's hard water and structural shifting.
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                The best bathroom design isn&apos;t necessarily the most expensive one. It should solve the problems you actually have with the existing space.
               </p>
             </div>
-            
-            <div className="space-y-8">
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <ShieldCheck className="w-6 h-6 text-primary" />
-                  1. Waterproofing & Moisture Control (TCNA Standards)
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  We build all custom tiled showers in compliance with the **Tile Council of North America (TCNA) B421 and B422** standards. Instead of traditional cement boards and PVC liners which degrade and leak, we install the **Schluter-KERDI waterproofing system**.
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground text-sm">
-                  <li><strong>Vapor Permeance:</strong> The KERDI membrane features a water vapor permeance rating of <strong>&lt; 0.5 perms</strong> (tested under ASTM E96 Procedure E), making it completely vapor-tight and preventing steam from rotting your wood framing.</li>
-                  <li><strong>Decoupling & Crack Isolation:</strong> The bonded sheet membrane decouples the tile layer from the subfloor, absorbing the natural expansion and contraction of desert framing, preventing grout joints from cracking.</li>
-                </ul>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Larger Walk-In Showers</h3>
+                <p className="text-muted-foreground text-sm">Replacing an underused tub can create a more open shower area.</p>
               </div>
 
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <Droplets className="w-6 h-6 text-primary" />
-                  2. Hard Water Mitigation & Tile Standards (ANSI A118)
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  The municipal water supply in Chandler averages <strong>over 300 mg/L (18+ grains per gallon) of dissolved calcium and magnesium</strong>. This hard water destroys standard cement grout and stone. We resolve this by strictly adhering to ANSI material guidelines:
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground text-sm">
-                  <li><strong>Epoxy Grout (ANSI A118.3):</strong> We upgrade our grout to 100% solid epoxy resins. Unlike porous cement grouts, epoxy grout is completely non-porous and chemically inert, resisting staining, scale buildup, and acid cleaning.</li>
-                  <li><strong>Thin-Set Mortar (ANSI A118.15):</strong> We use improved modified dry-set cement mortar to bond dense, large-format porcelain tiles (water absorption rate <strong>&lt; 0.5%</strong> per ASTM C373), preventing tiles from releasing due to slab movement or moisture cycles.</li>
-                </ul>
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Built-In Shower Storage</h3>
+                <p className="text-muted-foreground text-sm">Niches can keep shampoo, soap, and other daily items organized without adding freestanding storage.</p>
               </div>
 
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <Clock className="w-6 h-6 text-primary" />
-                  3. Advanced Plumbing & Scald Prevention (ASSE 1016)
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  Modern mechanical systems are essential to safety and system longevity. We upgrade and secure every in-wall plumbing component:
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground text-sm">
-                  <li><strong>Anti-Scald Mixing Valves:</strong> We install pressure-balancing and thermostatic mixing valves certified to <strong>ASSE 1016 / ASME A112.18.1</strong> standards. This maintains water temperature within &plusmn;3.6&deg;F (&plusmn;2&deg;C) despite pressure drops elsewhere in the home.</li>
-                  <li><strong>PEX-a Piping Systems:</strong> We utilize PEX-a (expansion-fitting) piping for supply lines. PEX-a resists hard water scaling, eliminates the risk of pinhole leaks common in aging copper pipes, and absorbs thermal expansion without stress.</li>
-                  <li><strong>Drain Expansion:</strong> In all tub-to-shower conversions, we expand the original 1.5-inch waste line to a code-compliant <strong>2-inch waste and vent line</strong> to handle high-flow modern shower heads without back-ponding.</li>
-                </ul>
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Modern Vanities</h3>
+                <p className="text-muted-foreground text-sm">A properly sized vanity can improve both storage and countertop space.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Larger-Format Tile</h3>
+                <p className="text-muted-foreground text-sm">Larger tile can create a cleaner visual appearance while reducing the number of grout joints.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Better Lighting</h3>
+                <p className="text-muted-foreground text-sm">Layered bathroom lighting can improve visibility around mirrors, vanities, and shower areas.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Easy-to-Use Shower Features</h3>
+                <p className="text-muted-foreground text-sm">Handheld fixtures, seating, low-threshold entries, and carefully planned controls can improve everyday convenience.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* FAQ */}
+        {/* SECTION 18: FAQ SECTION */}
         <ServiceFAQ faqs={chandlerFaqs} />
 
         {/* TESTIMONIALS */}
@@ -635,9 +935,10 @@ export default function ChandlerBathroomRemodelingPage() {
         {/* CONTACT */}
         <ContactSection />
 
+        {/* SECTION 19: FINAL CTA */}
         <ServiceCTA
-          title="Ready for a Free Estimate in Chandler, AZ?"
-          description="Call us directly to speak with a project supervisor. We will discuss your project, give you a ballpark estimate over the phone, and schedule your free in-home evaluation within forty-eight hours."
+          title="Ready to Remodel Your Chandler Bathroom?"
+          description="Whether you're replacing an outdated bathtub, planning a new walk-in shower, updating a guest bathroom, or completely redesigning your primary bathroom, the first step is understanding what your existing space needs. Tell us what you'd like to change and we'll discuss your project, possible solutions, materials, and next steps."
         />
       </main>
       <Footer />

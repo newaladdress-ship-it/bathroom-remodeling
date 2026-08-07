@@ -81,7 +81,7 @@ export default function AnalyticsPage() {
                   Configure Public Share URL
                 </h3>
                 <p className="text-muted-foreground text-sm pl-8">
-                  Go to your website's settings inside Umami, enable **Share URL**, and copy the generated public share URL (looks like <code className="bg-muted px-1.5 py-0.5 rounded text-xs">https://cloud.umami.is/share/...</code>).
+                  Go to your website's settings inside Umami, enable <strong className="font-semibold text-foreground">Share URL</strong>, and copy the generated public share URL (looks like <code className="bg-muted px-1.5 py-0.5 rounded text-xs">https://cloud.umami.is/share/...</code>).
                 </p>
               </div>
 

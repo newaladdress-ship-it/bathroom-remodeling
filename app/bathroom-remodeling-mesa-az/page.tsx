@@ -7,8 +7,9 @@ import ServiceFAQ from "@/components/service-faq";
 import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
+import GalleryPreview from "@/components/home/gallery-preview";
 import {
   ShieldCheck,
   Star,
@@ -19,16 +20,51 @@ import {
   CheckCircle2,
   ArrowRight,
   Phone,
+  Check,
+  Home,
+  UtensilsCrossed,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import LocalTrust from "@/components/home/local-trust";
 
-export const metadata: Metadata = {title: "Mesa Bathroom Remodeling | Free Estimates | ARZ",description: "Looking for a professional bath remodeler in Mesa, AZ? ARZ specializes in custom tile showers, layouts, & fixtures. Call for your free consultation!",
-  openGraph: {title: "Bathroom Remodeling Mesa AZ | professional contractor",description: "Professional bathroom remodeling in Mesa, AZ. Custom showers, vanities & tile. Fixed pricing, 2-year warranty. Call ARZ today: (520) 569-3339. Free estimate.",
+export const metadata: Metadata = {
+  title: "Bathroom Remodeling Mesa AZ | Custom Bathroom Remodels",
+  description:
+    "Bathroom remodeling in Mesa, AZ for walk-in showers, tub conversions, tile, vanities, and complete bathroom renovations.",
+  keywords: [
+    "bathroom remodeling Mesa AZ",
+    "bathroom remodel Mesa AZ",
+    "bathroom renovation Mesa",
+    "Mesa bathroom remodeling",
+    "walk-in shower remodeling Mesa",
+    "tub-to-shower conversion Mesa",
+    "primary bathroom remodel Mesa",
+    "guest bathroom remodel Mesa",
+    "small bathroom remodeling Mesa",
+    "accessible bathroom remodeling Mesa",
+    "bathroom tile installation Mesa",
+    "bathroom flooring Mesa"
+  ],
+  openGraph: {
+    title: "Bathroom Remodeling Mesa AZ | Custom Bathroom Remodels",
+    description:
+      "Bathroom remodeling in Mesa, AZ for walk-in showers, tub conversions, tile, vanities, and complete bathroom renovations.",
     url: `${siteConfig.url}/bathroom-remodeling-mesa-az/`,
     type: "website",
+    images: [
+      {
+        url: `${siteConfig.url}/images/bathroom-remodeling-mesa.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Bathroom Remodeling Mesa Arizona - ARZ Home Remodeling",
+      },
+    ],
   },
   twitter: {
-    card: "summary_large_image",title: "Bathroom Remodeling Mesa AZ | professional contractor",description: "Professional bathroom remodeling in Mesa, AZ. Custom showers, vanities & tile. Fixed pricing, 2-year warranty. Call ARZ today: (520) 569-3339. Free estimate.",
+    card: "summary_large_image",
+    title: "Bathroom Remodeling Mesa AZ | Custom Bathroom Remodels",
+    description:
+      "Bathroom remodeling in Mesa, AZ for walk-in showers, tub conversions, tile, vanities, and complete bathroom renovations.",
     images: [`${siteConfig.url}/images/bathroom-remodeling-mesa.jpg`],
   },
   alternates: {
@@ -40,121 +76,215 @@ const mesaFaqs = [
   {
     question: "Do you need a permit for a bathroom remodel in Mesa, AZ?",
     answer:
-      "Yes, you must obtain a permit from the City of Mesa Building Safety Division if your remodel involves structural changes, moving a toilet, or adding new electrical outlets. If you are only replacing a vanity or putting in new tile shower walls without changing the layout, you do not need a permit. Our team handles the application and inspection process with the Mesa Development Services office on Center Street."
+      "Permit requirements depend on the scope of the renovation. Plumbing, electrical, structural, and other substantial modifications may require permits and inspections. We can help determine the requirements for your project.",
   },
   {
-    question: "How much does a tub to shower conversion cost in Mesa?",
+    question: "How much does a tub-to-shower conversion cost in Mesa?",
     answer:
-      "Tub-to-shower conversion costs in Mesa depend on layout changes, tile choices, and valve configurations. Converting a tub to a walk-in shower helps prevent slips and makes the room feel much larger. We provide free on-site inspections and prepare a detailed, line-item written estimate before any work begins, ensuring a fixed-price guarantee. Contact us today to schedule your quote."
-  }
+      "The price depends on the existing tub, shower dimensions, plumbing requirements, tile selection, waterproofing, glass, fixtures, and other project details. A consultation is the best way to establish an accurate project price.",
+  },
+  {
+    question: "How long does a bathroom remodel take in Mesa?",
+    answer:
+      "The timeline depends on the size and complexity of the project. A focused shower renovation will generally require less time than a complete bathroom gut remodel involving multiple trades.",
+  },
+  {
+    question: "Can you remodel only my shower?",
+    answer:
+      "Yes. A bathroom renovation does not necessarily require replacing the entire room. We can focus the project on the shower area when that best fits your goals and budget.",
+  },
+  {
+    question: "Do you install curbless walk-in showers?",
+    answer:
+      "Yes. Where the existing structure and drainage conditions allow, we can design low-threshold or curbless shower configurations.",
+  },
+  {
+    question: "Do you serve Dobson Ranch and East Mesa?",
+    answer:
+      "Yes. Our Mesa service area includes Dobson Ranch, Las Sendas, Eastmark, Red Mountain Ranch, Alta Mesa, Augusta Ranch, and surrounding areas.",
+  },
 ];
 
-const services = [
+const mainServices = [
   {
     title: "Walk-In Shower Installation",
-    href: "/shower-remodeling/",
+    href: "/walk-in-showers/",
     description:
-      "We convert outdated tub and shower combos into open, curbless walk-in showers with frameless glass enclosures, custom tile work, and rainfall showerheads. We use the Schluter waterproofing system for a leak-proof installation.",
-    price: "Free Custom Estimate",
+      "Replace an outdated tub or enclosed shower with a more open and functional walk-in shower.",
+    detail:
+      "Options include custom tile walls, frameless glass enclosures, built-in niches, shower benches, handheld fixtures, and low-threshold entries.",
+    cta: "Learn More →",
   },
   {
     title: "Tub-to-Shower Conversion",
     href: "/tub-to-shower-conversion/",
     description:
-      "One of the most requested services in Mesa. We remove existing tubs, properly waterproof the substrate, and install a custom walk-in shower tailored to your layout. Adds usable space and strong ROI at resale.",
-    price: "Free Custom Estimate",
+      "A tub-to-shower conversion can make better use of an underused bathroom footprint.",
+    detail:
+      "We remove the existing tub, prepare and waterproof the shower area, install the selected tile and fixtures, and finish the space with a custom enclosure.",
+    cta: "Learn More →",
   },
   {
-    title: "Complete Master Bathroom Remodel",
+    title: "Complete Primary Bathroom Remodel",
     href: "/master-bathroom-remodel/",
     description:
-      "Our master bath remodels typically include: new shower enclosure, vanity replacement, tile flooring, updated lighting, and fixture upgrades. Timeline: three to five weeks. We handle all plumbing and electrical coordination.",
-    price: "Free Custom Estimate",
+      "Upgrade multiple elements of your primary bathroom through one coordinated renovation.",
+    detail:
+      "Depending on the project, this can include the shower, vanity, flooring, lighting, plumbing fixtures, storage, and other finishes.",
+    cta: "Learn More →",
+  },
+  {
+    title: "Bathroom Tile Installation",
+    href: "/bathroom-tile-installation/",
+    description:
+      "Refresh your bathroom with porcelain, ceramic, or other suitable tile materials.",
+    detail:
+      "We install wall tile, shower tile, floor tile, and decorative features according to the project's layout and design.",
+    cta: "Learn More →",
+  },
+  {
+    title: "Bathroom Vanity & Countertop Upgrades",
+    href: "/cabinet-countertop-installation/",
+    description:
+      "Improve storage and functionality with a new vanity and countertop.",
+    detail:
+      "Options can include single or double-sink configurations, quartz surfaces, modern cabinetry, and upgraded hardware.",
+    cta: "Learn More →",
+  },
+  {
+    title: "Accessible Bathroom Remodeling",
+    href: "/handicap-accessible-bathroom/",
+    description:
+      "For homeowners who want improved accessibility, we can incorporate features designed around comfort and safety.",
+    detail:
+      "Includes low-threshold showers, handheld shower fixtures, shower seating, grab-bar preparation, and easier-to-navigate layouts.",
+    cta: "Learn More →",
   },
 ];
 
-const trustPoints = [
+const processSteps = [
   {
-    icon: ShieldCheck,
-    title: "AZ fully insured",
-    body: "Every project fully covered. We carry all required Arizona contractor licensing.",
+    step: "1",
+    title: "Free Phone Consultation",
+    body: "Tell us about your bathroom, what you want to change, and the type of renovation you have in mind.",
   },
   {
-    icon: Star,
-    title: "workmanship warranty",
-    body: "We stand behind every tile and seam. If it fails within two years, we fix it at no charge.",
+    step: "2",
+    title: "In-Home Evaluation",
+    body: "We evaluate the existing bathroom, take measurements, discuss layout options, and review your project requirements.",
   },
   {
-    icon: MapPin,
-    title: "Mesa Local",
-    body: "We have remodeled bathrooms in Dobson Ranch, Las Sendas, Eastmark, and Red Mountain Ranch.",
+    step: "3",
+    title: "Written Project Proposal",
+    body: "You receive a detailed proposal based on the agreed scope of work.",
   },
   {
-    icon: DollarSign,
-    title: "Fixed Pricing",
-    body: "You receive a written quote before any work starts. No surprises, no change-order games.",
+    step: "4",
+    title: "Design & Material Selection",
+    body: "Choose tile, cabinetry, countertops, fixtures, glass, lighting, and other finishes for your renovation.",
   },
   {
-    icon: Droplets,
-    title: "Hard Water Expertise",
-    body: "We specify tile and grout systems that resist Mesa's mineral-heavy water supply.",
+    step: "5",
+    title: "Construction",
+    body: "The project moves through demolition, preparation, plumbing and electrical coordination, waterproofing, installation, and finishing.",
   },
   {
-    icon: Clock,
-    title: "On-Time Completion",
-    body: "Every project gets a firm written schedule. We show up when we say we will.",
-  },
-];
-
-const pricingTiers = [
-  {
-    label: "Guest Bathroom Update",
-    detail: "Vanity, toilet, fixtures, paint",
-    range: "Free Custom Estimate",
-  },
-  {
-    label: "Guest Bathroom Full Remodel",
-    detail: "Tile, shower, vanity, flooring",
-    range: "Free Custom Estimate",
-  },
-  {
-    label: "Tub-to-Shower Conversion",
-    detail: "Demo, waterproofing, custom shower build",
-    range: "Free Custom Estimate",
-  },
-  {
-    label: "Master Bathroom Remodel",
-    detail: "Full scope: shower, vanity, tile, lighting",
-    range: "Free Custom Estimate",
+    step: "6",
+    title: "Final Walkthrough",
+    body: "We review the completed work with you and address any remaining project details.",
   },
 ];
 
-const process = [
-  { step: "01", title: "Free Phone Consultation", body: "We discuss your goals, budget, and timeline. No pressure, just answers." },
-  { step: "02", title: "In-Home Evaluation", body: "We measure, assess plumbing, and review your selections on-site in Mesa." },
-  { step: "03", title: "Fixed Written Proposal", body: "You see the complete price before we start. No hidden costs." },
-  { step: "04", title: "Design & Material Selection", body: "Tile, fixtures, glass, and finishes chosen together to match your style." },
-  { step: "05", title: "Construction", body: "Our in-house team handles demo, waterproofing, tile, plumbing, and finishing." },
-  { step: "06", title: "Final Walkthrough", body: "You inspect every detail before we close the job. 100% satisfaction required." },
+const whyChooseUsPoints = [
+  {
+    title: "Local Mesa Remodeling Experience",
+    body: "Our service area includes established and newer Mesa communities, allowing us to work with a variety of home layouts.",
+  },
+  {
+    title: "Detailed Written Proposals",
+    body: "Before construction begins, we provide a written project proposal outlining the planned scope so you understand what is included.",
+  },
+  {
+    title: "Dedicated Project Oversight",
+    body: "Your project is coordinated throughout the remodeling process, from initial planning through installation and final walkthrough.",
+  },
+  {
+    title: "Durable Materials",
+    body: "We help homeowners select materials suited to bathroom environments, including porcelain tile, quartz surfaces, and quality fixtures.",
+  },
+  {
+    title: "Custom Design",
+    body: "Every bathroom has different dimensions and priorities. We design the project around your available space.",
+  },
+  {
+    title: "Clean, Organized Construction",
+    body: "We take steps to protect surrounding areas and maintain an organized work environment throughout the renovation.",
+  },
 ];
 
-const neighborhoods = [
-  "Dobson Ranch", "Las Sendas", "Eastmark", "Red Mountain Ranch",
-  "Mulberry", "Alta Mesa", "Augusta Ranch", "Falcon Field",
-  "85201", "85202", "85204", "85208", "85210", "85212",
+const mesaNeighborhoods = [
+  {
+    name: "Dobson Ranch & Established Mesa",
+    desc: "Older homes may have dated bathroom layouts, aging fixtures, smaller shower areas, or worn tile surfaces. We can update these spaces while working within the home's existing structure and plumbing where practical.",
+  },
+  {
+    name: "Las Sendas & Red Mountain Ranch",
+    desc: "Homes in these communities often feature larger layouts and more contemporary finishes. Popular upgrades include spacious walk-in showers, large-format porcelain tile, double vanities, frameless glass, and improved storage.",
+  },
+  {
+    name: "Eastmark & Cadence",
+    desc: "Newer homes can still benefit from personalized upgrades. Homeowners may choose to replace builder-grade finishes with upgraded tile, custom vanities, quartz countertops, modern lighting, and more functional shower layouts.",
+  },
 ];
 
-export default function MesaPage() {
+const costTypes = [
+  {
+    title: "Guest Bathroom Update",
+    desc: "A focused update may include a vanity, fixtures, paint, lighting, and other cosmetic improvements.",
+    est: "Free Custom Estimate",
+  },
+  {
+    title: "Full Guest Bathroom Remodel",
+    desc: "A larger renovation may include shower or tub work, tile, flooring, vanity, fixtures, and lighting.",
+    est: "Free Custom Estimate",
+  },
+  {
+    title: "Tub-to-Shower Conversion",
+    desc: "Includes tub removal, shower preparation, waterproofing, tile, fixtures, and enclosure options.",
+    est: "Free Custom Estimate",
+  },
+  {
+    title: "Primary Bathroom Remodel",
+    desc: "A complete renovation can combine shower construction, vanity replacement, flooring, lighting, fixtures, and other improvements.",
+    est: "Free Custom Estimate",
+  },
+];
+
+const mesaAreasList = [
+  "Dobson Ranch", "Las Sendas", "Eastmark", "Red Mountain Ranch", "Alta Mesa", "Augusta Ranch", "Mulberry", "Falcon Field", "Central Mesa", "East Mesa", "West Mesa"
+];
+
+const mesaZipCodes = ["85201", "85202", "85203", "85204", "85205", "85206", "85207", "85208", "85212", "85213"];
+
+export default function MesaBathroomRemodelingPage() {
   return (
     <>
-      
-      <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Mesa Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-mesa-az/" } ]} />
-<ServiceSchema
+      <LocalBusinessSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://arzhomeremodeling.com/" },
+          { name: "Services", url: "https://arzhomeremodeling.com/services/" },
+          {
+            name: "Bathroom Remodeling Mesa AZ",
+            url: "https://arzhomeremodeling.com/bathroom-remodeling-mesa-az/",
+          },
+        ]}
+      />
+      <ServiceSchema
         serviceName="Bathroom Remodeling in Mesa, Arizona"
-        serviceDescription="expert bathroom remodeling contractor serving Mesa, AZ. Custom shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving Dobson Ranch, Las Sendas, Eastmark, and all of Mesa."
+        serviceDescription="Bathroom remodeling in Mesa, AZ for walk-in showers, tub conversions, tile, vanities, and complete bathroom renovations."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-mesa-az/`}
       />
-      <LocalBusinessSchema />
       <FAQSchema faqs={mesaFaqs} />
       <PriceSchema
         serviceName="Bathroom Remodeling in Mesa AZ"
@@ -163,152 +293,97 @@ export default function MesaPage() {
       />
       <Header />
       <main>
-        {/* HERO */}
+        {/* SECTION 2: HERO SECTION */}
         <ServiceHero
-          title="expert bathroom remodeling in Mesa, AZ"
-          subtitle="Expert Transformations & Custom Shower Designs"
-          description="Build the bathroom you've always wanted with Mesa's trusted remodeling team. From custom walk-in showers in Las Sendas to master suite renovations in Eastmark: we deliver high-end results with  professional expertise and fixed-price guarantees."
-          image="/images/services/chandler-bathroom-remodel.jpg"
+          title="Expert Bathroom Remodeling in Mesa, AZ"
+          subtitle="Custom Bathroom Remodeling for Mesa Homes"
+          description="Create a bathroom that fits your home, lifestyle, and everyday needs. ARZ Home Remodeling provides custom bathroom renovations in Mesa, AZ, including walk-in showers, tub-to-shower conversions, tile installation, vanity upgrades, and complete bathroom remodels."
+          image="/images/bathroom-remodeling-mesa.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
-            { name: "Bathroom Remodeling Mesa AZ", url: `${siteConfig.url}/bathroom-remodeling-mesa-az/` },
+            { name: "Mesa", url: `${siteConfig.url}/bathroom-remodeling-mesa-az/` },
           ]}
         />
 
-        {/* OPENING CONTENT */}
+        {/* SECTION 3: INTRODUCTION */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling Designed Around Your Mesa Home
+            </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Your bathroom is a primary living space that directly influences your daily comfort and your home’s value. In Mesa, AZ, homes built from the mid-20th century to the early 2000s are often ready for significant updates. Outdated layout designs, leaky fiberglass enclosures, and plumbing systems damaged by heavy hard water scale are common problems. Expanding a shower enclosure, upgrading a vanity layout, or executing a modern tub-to-shower conversion are key updates that improve utility. If you are searching for custom **bathroom remodeling in Mesa, AZ**, our local design-build team is here to deliver high-density, leak-proof craftsmanship.
+              Mesa has a wide range of homes, from established properties in Dobson Ranch and central Mesa to newer communities such as Eastmark and Cadence. As homes age or families&apos; needs change, bathrooms often become one of the first areas homeowners want to improve.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we provide end-to-end design and construction services tailored to the unique architectural profiles of Mesa neighborhoods. Whether you want to modernize a hall bathroom in Dobson Ranch, convert a garden tub to a walk-in shower in Las Sendas, or design a luxury master suite retreat in Eastmark, we handle the entire project. We hold active contracting license  and serve homeowners across ZIP codes **85201, 85202, 85203, 85204, 85205, 85206, 85207, 85208, 85212, and 85213**.
+              Outdated tubs, worn flooring, inefficient layouts, aging fixtures, and limited storage can make an otherwise comfortable home feel dated. A well-planned renovation can improve the appearance of the room while making it easier and more comfortable to use every day.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Beyond Mesa, our service area spans the broader East Valley region. If you are looking for custom walk-in shower installations in nearby communities, explore our full-service <Link href="/bathroom-remodeling-gilbert-az/" className="text-primary hover:underline font-medium">bathroom remodeling in Gilbert, AZ</Link> as well as specialized rural plumbing and hard water solutions for <Link href="/bathroom-remodeling-apache-junction-az/" className="text-primary hover:underline font-medium">bathroom remodeling in Apache Junction, AZ</Link>.
+              At <strong className="font-semibold text-foreground">ARZ Home Remodeling</strong>, we provide complete bathroom remodeling services tailored to the existing layout and goals of each Mesa home. Whether you are replacing a dated hall bathroom, converting a rarely used tub into a walk-in shower, or creating a larger primary bathroom, we coordinate the project from planning through installation.
             </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Relocating plumbing lines, expanding shower framing, or running new electrical circuits in Mesa requires strict code compliance. The **City of Mesa Building Safety Division** (located at 55 N Center Street) requires formal building permits and field inspections for these structural and mechanical changes. Our team handles the entire permit administration process, drafting code-compliant plans, coordinating inspections for in-wall rough-ins, and ensuring that all PEX supply lines, ASSE-certified anti-scald valves, and GFCI circuits meet current residential safety standards.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Our approach focuses on practical layouts, durable materials, careful waterproofing, and clean finishing details.
             </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              We adapt our craftsmanship to match the distinct community profiles across Mesa:
-            </p>
-            <ul className="space-y-4 mb-6">
-              <li className="text-muted-foreground text-lg leading-relaxed">
-                <strong className="text-foreground">Historic Mesa Districts (Robson & Temple Districts):</strong> Many historic homes feature plaster walls, aging cast-iron drains, and unique spatial limitations. We specialize in retrofitting these bathrooms, removing framing decay, reinforcing joists, and installing vintage-styled clawfoot tubs or subway tiling that preserves the historic character while utilizing modern Schluter-KERDI waterproofing substrates.
-              </li>
-              <li className="text-muted-foreground text-lg leading-relaxed">
-                <strong className="text-foreground">Las Sendas & Red Mountain Ranch:</strong> Built on sloped terrain, homes here feature concrete slab foundations. Shifting drains requires precise concrete trenching and sewer line layout adjustments. We handle slab cutting, stack re-routing, and coordinate with HOA guidelines regarding contractor parking and dumpster management.
-              </li>
-              <li className="text-muted-foreground text-lg leading-relaxed">
-                <strong className="text-foreground">Eastmark & Cadence:</strong> These newer developments feature contemporary framing layouts. We focus on modern floating vanities, quartz surfaces, large-format tile (reducing grout joints), and high-efficiency ventilation setups.
-              </li>
-            </ul>
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call Now
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  Speak to a Project Supervisor: {siteConfig.phone}
+                  Call for a Free In-Home Consultation — {siteConfig.phone}
                 </a>
               </Button>
             </div>
           </div>
         </section>
 
-        {/* LOCAL COMMUNITY & PERMIT HIGHLIGHTS */}
-        <section className="py-16 lg:py-24 bg-background border-t border-border">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
-              Mesa Community Landmarks & Local Bathroom Projects
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Mesa is a vast and historic city featuring spectacular desert landmarks like the <strong>Las Sendas Golf Club</strong>, the scenic <strong>Red Mountain Park</strong>, and the bustling <strong>Mesa Arts Center</strong>. When we execute bathroom upgrades in Mesa, we tailor our designs to the local neighborhood contexts. For properties in the master planned <strong>Eastmark</strong> development or established estates near the foothills, we construct layouts that optimize comfort and modern elegance.
-            </p>
-            <h3 className="font-serif text-xl font-semibold mb-4 text-foreground">
-              Recent Mesa Remodeling Example:
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A recent project completed on a custom desert modern property near the <strong>Red Mountain Ranch</strong> area involved a complete master bathroom overhaul. We replaced a massive builder grade garden tub with a gorgeous, curb free tiled walk in shower with linear drains, integrated heated floor systems, solid wood double sink vanities, and a luxury freestanding soaking tub.
-            </p>
-            <h3 className="font-serif text-xl font-semibold mb-4 text-foreground">
-              Mesa Permitting and Inspections Guidelines:
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              If your Mesa bathroom renovation involves moving load bearing partition walls, expanding your plumbing footprint, or upgrading electrical sub panels, we coordinate the complete permitting process with the <strong>City of Mesa Building Safety Division</strong> (located at 55 N Center St). We manage all drafting submissions and city inspections, ensuring complete code compliance and long term peace of mind.
-            </p>
-          </div>
-        </section>
-        {/* MESA DESIGN & HOA GUIDES */}
-        <section className="py-16 lg:py-24 bg-background border-t border-border">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
-              Mesa Bathroom Remodeling & Design Resources
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Planning a remodel in Mesa requires navigating both design styles and local regulations. Read our expert guides to prepare for your project:
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                  Mesa Bathroom Design Trends
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  From Las Sendas' custom golf-course estates to Eastmark's newest master-planned developments, explore how styles differ and what's trending.
-                </p>
-                <Link
-                  href="/blog/bathroom-design-trends-mesa-az/"
-                  className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline"
-                >
-                  Read Trends Guide <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                  HOA Remodeling Rules in Mesa
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  Navigating architectural reviews and guidelines for master-planned communities like Eastmark and Las Sendas before your remodel.
-                </p>
-                <Link
-                  href="/blog/hoa-bathroom-remodeling-mesa-az/"
-                  className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline"
-                >
-                  Read HOA Guide <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* SERVICES */}
+        {/* SECTION 4: LOCAL AREAS & NEIGHBORHOODS */}
         <section className="py-16 lg:py-24 bg-secondary">
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">What We Do</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Our Mesa Bathroom Remodeling Services
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Local Communities</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Local Bathroom Remodeling Throughout Mesa
               </h2>
-              <p className="text-muted-foreground text-lg mt-4">Expert bathroom remodeling contractor services in Mesa including tile shower installations, accessible shower remodeling, and complete bathroom renovations for families throughout the city.</p>
+              <p className="text-muted-foreground text-lg mt-4 max-w-3xl mx-auto">
+                Mesa covers a large and diverse area, so remodeling requirements can vary depending on the home&apos;s age, neighborhood, existing plumbing, and planned improvements. We work with homeowners throughout communities such as Dobson Ranch, Las Sendas, Eastmark, Red Mountain Ranch, Alta Mesa, Augusta Ranch, and surrounding Mesa neighborhoods.
+              </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {services.map((svc) => (
-                <div key={svc.title} className="bg-background rounded-2xl p-8 border border-border flex flex-col">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold uppercase tracking-widest text-primary">{svc.price}</span>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {mesaNeighborhoods.map((nh) => (
+                <div key={nh.name} className="bg-background p-6 rounded-2xl border border-border shadow-sm flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{nh.name}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{nh.desc}</p>
                   </div>
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{svc.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-6">{svc.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 5: SERVICES SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Services</span>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
+                Mesa Bathroom Remodeling Services
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mainServices.map((svc) => (
+                <div key={svc.title} className="bg-secondary rounded-2xl p-8 border border-border flex flex-col justify-between shadow-sm hover:border-primary/50 transition-all">
+                  <div>
+                    <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{svc.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{svc.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">{svc.detail}</p>
+                  </div>
                   <Link
                     href={svc.href}
-                    className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline mt-auto"
+                    className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline mt-auto pt-4 border-t border-border/60"
                   >
-                    Learn more <ArrowRight className="w-4 h-4" />
+                    {svc.cta}
                   </Link>
                 </div>
               ))}
@@ -316,21 +391,155 @@ export default function MesaPage() {
           </div>
         </section>
 
-        {/* TRUST SIGNALS */}
+        {/* SECTION 6: PROJECTS SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <div className="text-center mb-8">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Project Showcase</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Mesa Bathroom Remodeling Projects
+              </h2>
+              <h3 className="text-lg font-medium text-muted-foreground mt-2">
+                From Outdated Bathrooms to Functional Modern Spaces
+              </h3>
+            </div>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              A bathroom renovation can range from a focused shower upgrade to a complete gut remodel. The right scope depends on the home&apos;s existing condition, layout, plumbing, and your goals for the space.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              For example, a typical primary bathroom transformation may replace a large unused tub with a spacious walk-in shower, update the shower and bathroom flooring, install a double vanity, and improve lighting and storage.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              For homeowners who want a more substantial transformation, we can coordinate demolition, plumbing adjustments, waterproofing, tile installation, cabinetry, countertops, fixtures, glass, and finishing work as part of one remodeling project.
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 7: WATERPROOFING & SHOWER CONSTRUCTION */}
         <section className="py-16 lg:py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground text-center">
+              Waterproofing & Shower Construction
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6 text-center max-w-2xl mx-auto">
+              A beautiful tiled shower also needs a properly prepared waterproofing system behind the finished surfaces.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center max-w-2xl mx-auto">
+              For applicable tiled shower projects, we use established waterproofing methods and products such as <strong className="font-semibold text-foreground">Schluter-KERDI systems</strong> to help protect the shower assembly from moisture intrusion.
+            </p>
+
+            <div className="bg-secondary p-8 rounded-2xl border border-border mb-8 shadow-sm">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                Our shower installations can include:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Waterproofed shower walls and floors</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Properly prepared shower substrates</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Custom shower niches</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Built-in seating</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Linear or traditional drains</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Large-format porcelain tile</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Slip-resistant shower flooring</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Frameless glass enclosures</span>
+                </div>
+                <div className="flex items-center gap-2.5 sm:col-span-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Handheld and overhead shower fixtures</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed text-center">
+              The exact materials and construction method are selected according to the project&apos;s design, substrate, and installation requirements.
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 8: KITCHEN & HOME REMODELING */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Promise</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Why Mesa Homeowners Choose Us
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Beyond Bathrooms</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Mesa Kitchen & Home Remodeling
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                Although bathroom renovations are a major part of our work, homeowners sometimes want to coordinate several interior improvements during the same project.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-background p-8 rounded-2xl border border-border flex flex-col justify-between shadow-sm">
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center gap-2 justify-center mb-4 text-primary">
+                    <UtensilsCrossed className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-serif text-2xl font-semibold text-foreground mb-3">Kitchen Remodeling</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    Upgrade an outdated kitchen with new cabinetry, countertops, backsplashes, lighting, storage, and other improvements designed around the existing space.
+                  </p>
+                </div>
+                <Link href="/kitchen-remodeling-chandler-az/" className="text-primary font-semibold hover:underline text-sm inline-flex items-center gap-1.5">
+                  Explore Kitchen Remodeling →
+                </Link>
+              </div>
+
+              <div className="bg-background p-8 rounded-2xl border border-border flex flex-col justify-between shadow-sm">
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center gap-2 justify-center mb-4 text-primary">
+                    <Home className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-serif text-2xl font-semibold text-foreground mb-3">Home Renovation</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    For larger interior projects, we can coordinate improvements such as flooring, interior finishes, fireplace updates, storage improvements, and other remodeling work.
+                  </p>
+                </div>
+                <Link href="/home-renovation-chandler-az/" className="text-primary font-semibold hover:underline text-sm inline-flex items-center gap-1.5">
+                  Explore Whole Home Remodeling →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 9: WHY CHOOSE ARZ */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Why Choose ARZ</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Why Mesa Homeowners Choose ARZ Home Remodeling
               </h2>
             </div>
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {trustPoints.map((pt) => (
-                <div key={pt.title} className="flex gap-4 p-6 bg-secondary rounded-2xl border border-border">
-                  <pt.icon className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+              {whyChooseUsPoints.map((pt) => (
+                <div key={pt.title} className="p-6 bg-secondary rounded-2xl border border-border flex flex-col justify-between">
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">{pt.title}</h3>
+                    <h3 className="font-semibold text-foreground text-lg mb-2">{pt.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{pt.body}</p>
                   </div>
                 </div>
@@ -339,170 +548,258 @@ export default function MesaPage() {
           </div>
         </section>
 
-        {/* HARD WATER EXPERTISE */}
-        <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
+        {/* SECTION 10: DESERT ENVIRONMENT & HARD WATER */}
+        <section className="py-16 lg:py-24 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <div className="flex items-start gap-4 mb-8">
-              <Droplets className="w-10 h-10 flex-shrink-0 mt-1 opacity-80" />
+            <div className="flex items-start gap-4 mb-6">
+              <Droplets className="w-10 h-10 text-primary flex-shrink-0 mt-1" />
               <div>
-                <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6">
-                  Solving Mesa's Hard Water Challenges
+                <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
+                  Designing Bathrooms for Mesa&apos;s Desert Environment
                 </h2>
-                <p className="text-primary-foreground/85 text-lg leading-relaxed mb-4">
-                  Like much of the East Valley, Mesa's water is incredibly hard, leading to scale buildup and grout damage. 
-                  We specify materials that thrive in this environment.
+                <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                  Arizona homes have their own considerations when selecting bathroom materials and finishes. Mineral deposits, frequent water exposure, strong sunlight, and everyday wear can affect how surfaces look and perform over time.
                 </p>
-                <ul className="space-y-3 text-primary-foreground/85 mb-6">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>Epoxy Grout:</strong> Non-porous and resistant to mineral staining.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>Nano-Coated Glass:</strong> Ensuring your shower doors stay clear of calcium spots.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>Custom Tile:</strong> Carefully selected for low maintenance and longevity.</span>
-                  </li>
-                </ul>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                  We can recommend materials that are easier to maintain and appropriate for the conditions found in Mesa homes.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-6 mb-8">
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground text-lg mb-2">Epoxy Grout Options</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Where appropriate for the project, epoxy grout can provide a less porous alternative to traditional cement-based grout and can help simplify maintenance.
+                </p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground text-lg mb-2">Easy-Care Shower Surfaces</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Large-format porcelain tile can reduce the number of grout joints compared with smaller tile formats, creating a clean appearance while reducing routine cleaning.
+                </p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground text-lg mb-2">Glass Protection</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Homeowners can also consider protective treatments for shower glass to make routine cleaning easier and reduce water spotting.
+                </p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground text-lg mb-2">Quartz Countertops</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Quartz is a popular choice for bathroom vanities because it provides a durable, low-maintenance countertop surface with a wide range of available designs.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* COST GUIDE */}
+        {/* Local Trust Badge */}
+        <LocalTrust cityName="Mesa" />
+
+        {/* SECTION 11: COST SECTION */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Transparent Pricing</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Mesa Bathroom Remodel Cost Guide
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Project Budgeting</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Mesa Bathroom Remodel Cost
               </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                Every bathroom renovation is different, so the total project price depends on the scope rather than a single standard rate.
+              </p>
             </div>
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              {pricingTiers.map((tier) => (
-                <div key={tier.label} className="bg-secondary rounded-2xl p-6 border border-border flex justify-between items-center gap-4">
+
+            <div className="grid sm:grid-cols-2 gap-6 mb-8">
+              {costTypes.map((c) => (
+                <div key={c.title} className="bg-secondary p-6 rounded-2xl border border-border shadow-sm flex flex-col justify-between">
                   <div>
-                    <p className="font-semibold text-foreground">{tier.label}</p>
-                    <p className="text-muted-foreground text-sm">{tier.detail}</p>
+                    <h3 className="font-serif text-xl font-semibold text-foreground mb-2">{c.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{c.desc}</p>
                   </div>
-                  <span className="text-primary font-bold text-lg whitespace-nowrap">{tier.range}</span>
+                  <span className="text-primary font-semibold text-sm pt-3 border-t border-border/60">{c.est}</span>
                 </div>
               ))}
+            </div>
+
+            <div className="bg-secondary p-8 rounded-2xl border border-border mb-8 shadow-sm">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                Factors that can influence the cost include:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Bathroom size</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shower or tub configuration</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Amount of demolition</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Plumbing relocation</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Electrical work</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Tile selection</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Vanity and countertop selection</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Glass enclosure</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Accessibility modifications</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Waterproofing requirements & custom storage</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link
+                href="/bathroom-remodeling-cost-chandler-az/"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg"
+              >
+                Request a Mesa Bathroom Remodeling Estimate →
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* PROCESS */}
+        {/* SECTION 12: PROCESS SECTION */}
         <section className="py-16 lg:py-24 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">How It Works</span>
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Process</span>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Our Remodeling Process
+                Our Mesa Bathroom Remodeling Process
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {process.map((step) => (
-                <div key={step.step} className="bg-background rounded-2xl p-6 border border-border">
-                  <span className="text-4xl font-bold text-primary/20">{step.step}</span>
-                  <h3 className="font-semibold text-foreground mt-2 mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{step.body}</p>
+              {processSteps.map((step) => (
+                <div key={step.step} className="bg-background rounded-2xl p-6 border border-border flex flex-col justify-between">
+                  <div>
+                    <span className="text-4xl font-bold text-primary/25 font-mono">0{step.step}</span>
+                    <h3 className="font-semibold text-foreground mt-2 mb-2 text-lg">{step.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{step.body}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* SERVICE AREAS */}
+        {/* PORTFOLIO SHOWCASE PREVIEW */}
+        <GalleryPreview />
+
+        {/* SECTION 13: SERVICE AREA */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
-            <span className="text-primary text-sm font-medium tracking-wider uppercase">Service Area</span>
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 mb-6 text-foreground">
-              Serving All of Mesa, AZ
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Serving Mesa, AZ
             </h2>
-            <div className="flex flex-wrap justify-center gap-3">
-              {neighborhoods.map((n) => (
-                <span key={n} className="bg-secondary border border-border rounded-full px-4 py-2 text-sm font-medium text-foreground">
-                  {n}
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              ARZ Home Remodeling serves homeowners throughout Mesa, including:
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-2 text-muted-foreground text-sm mb-6 max-w-2xl mx-auto">
+              {mesaAreasList.map((area) => (
+                <span key={area} className="bg-secondary px-3 py-1 rounded-full border border-border font-medium text-foreground">
+                  {area}
                 </span>
               ))}
             </div>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-              <Link href="/bathroom-remodeling-chandler-az/" className="hover:text-primary transition-colors">Bathroom Remodeling Chandler AZ →</Link>
-              <Link href="/bathroom-remodeling-gilbert-az/" className="hover:text-primary transition-colors">Bathroom Remodeling Gilbert AZ →</Link>
-              <Link href="/bathroom-remodeling-tempe-az/" className="hover:text-primary transition-colors">Bathroom Remodeling Tempe AZ →</Link>
+
+            <div className="flex flex-wrap justify-center gap-2 text-muted-foreground text-xs mb-8">
+              {mesaZipCodes.map((zip) => (
+                <span key={zip} className="bg-secondary/60 px-2.5 py-0.5 rounded text-muted-foreground">
+                  {zip}
+                </span>
+              ))}
+            </div>
+
+            <p className="text-muted-foreground text-sm mb-6">
+              We also serve nearby communities through our broader East Valley service area.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link href="/bathroom-remodeling-chandler-az/" className="text-primary font-semibold hover:underline text-sm">
+                Bathroom Remodeling Chandler AZ →
+              </Link>
+              <Link href="/bathroom-remodeling-gilbert-az/" className="text-primary font-semibold hover:underline text-sm">
+                Bathroom Remodeling Gilbert AZ →
+              </Link>
+              <Link href="/bathroom-remodeling-tempe-az/" className="text-primary font-semibold hover:underline text-sm">
+                Bathroom Remodeling Tempe AZ →
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* TECHNICAL SPECIFICATIONS SECTION */}
-        <section className="py-16 lg:py-24 bg-background border-t border-border">
+        {/* SECTION 14: TECHNICAL CONSIDERATIONS */}
+        <section className="py-16 lg:py-24 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Engineering & Design Standards</span>
-              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
-                Technical Remodeling Specifications & Building Codes
-              </h2>
-              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                We build bathrooms to last decades, matching rigorous technical standards to combat Mesa's hard water and desert framing movement.
-              </p>
-            </div>
-            
-            <div className="space-y-8">
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <ShieldCheck className="w-6 h-6 text-primary" />
-                  1. Waterproofing & Moisture Control (TCNA Standards)
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  We build all custom tiled showers in compliance with the **Tile Council of North America (TCNA) B421 and B422** standards. Instead of traditional cement boards and PVC liners which degrade and leak, we install the **Schluter-KERDI waterproofing system**.
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-8 text-foreground text-center">
+              Technical Remodeling Considerations
+            </h2>
+
+            <div className="space-y-6">
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-2">Waterproofing & Moisture Management</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Tiled shower installations require proper substrate preparation, waterproofing, drainage, and tile installation. For applicable projects, we use waterproofing systems such as Schluter-KERDI and follow the manufacturer&apos;s installation requirements. The specific waterproofing assembly depends on the shower design and existing construction.
                 </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground text-sm">
-                  <li><strong>Vapor Permeance:</strong> The KERDI membrane features a water vapor permeance rating of <strong>&lt; 0.5 perms</strong> (tested under ASTM E96 Procedure E), making it completely vapor-tight and preventing steam from rotting your wood framing.</li>
-                  <li><strong>Decoupling & Crack Isolation:</strong> The bonded sheet membrane decouples the tile layer from the subfloor, absorbing the natural expansion and contraction of desert framing, preventing grout joints from cracking.</li>
-                </ul>
               </div>
 
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <Droplets className="w-6 h-6 text-primary" />
-                  2. Hard Water Mitigation & Tile Standards (ANSI A118)
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  The municipal water supply in Mesa averages <strong>over 300 mg/L (18+ grains per gallon) of dissolved calcium and magnesium</strong>. This hard water destroys standard cement grout and stone. We resolve this by strictly adhering to ANSI material guidelines:
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-2">Tile & Grout Selection</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Porcelain and ceramic tile can provide durable surfaces for bathroom floors and walls. Tile size, slip resistance, grout selection, and installation method are considered according to the location where each material will be installed.
                 </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground text-sm">
-                  <li><strong>Epoxy Grout (ANSI A118.3):</strong> We upgrade our grout to 100% solid epoxy resins. Unlike porous cement grouts, epoxy grout is completely non-porous and chemically inert, resisting staining, scale buildup, and acid cleaning.</li>
-                  <li><strong>Thin-Set Mortar (ANSI A118.15):</strong> We use improved modified dry-set cement mortar to bond dense, large-format porcelain tiles (water absorption rate <strong>&lt; 0.5%</strong> per ASTM C373), preventing tiles from releasing due to slab movement or moisture cycles.</li>
-                </ul>
               </div>
 
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <Clock className="w-6 h-6 text-primary" />
-                  3. Advanced Plumbing & Scald Prevention (ASSE 1016)
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  Modern mechanical systems are essential to safety and system longevity. We upgrade and secure every in-wall plumbing component:
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-2">Plumbing & Electrical</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Bathroom renovations may require plumbing or electrical modifications when fixtures, lighting, outlets, or shower configurations are changed. Where permits or inspections are required, the project is planned around the applicable requirements for the property and scope of work.
                 </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground text-sm">
-                  <li><strong>Anti-Scald Mixing Valves:</strong> We install pressure-balancing and thermostatic mixing valves certified to <strong>ASSE 1016 / ASME A112.18.1</strong> standards. This maintains water temperature within &plusmn;3.6&deg;F (&plusmn;2&deg;C) despite pressure drops elsewhere in the home.</li>
-                  <li><strong>PEX-a Piping Systems:</strong> We utilize PEX-a (expansion-fitting) piping for supply lines. PEX-a resists hard water scaling, eliminates the risk of pinhole leaks common in aging copper pipes, and absorbs thermal expansion without stress.</li>
-                  <li><strong>Drain Expansion:</strong> In all tub-to-shower conversions, we expand the original 1.5-inch waste line to a code-compliant <strong>2-inch waste and vent line</strong> to handle high-flow modern shower heads without back-ponding.</li>
-                </ul>
               </div>
             </div>
           </div>
         </section>
 
+        {/* SECTION 15: FAQ SECTION */}
         <ServiceFAQ faqs={mesaFaqs} />
+
+        {/* TESTIMONIALS */}
         <Testimonials />
+
+        {/* CONTACT */}
         <ContactSection />
+
+        {/* FINAL CTA */}
         <ServiceCTA
-          title="Ready for a Free Estimate in Mesa, AZ?"
-          description="Call us directly to speak with a project supervisor. We will discuss your project, provide a phone estimate, and schedule your free in-home evaluation within forty-eight hours."
+          title="Ready to Remodel Your Mesa Bathroom?"
+          description="Create a bathroom that fits your home, lifestyle, and everyday needs. Tell us what you'd like to change and we'll discuss your remodeling options and next steps."
         />
       </main>
       <Footer />

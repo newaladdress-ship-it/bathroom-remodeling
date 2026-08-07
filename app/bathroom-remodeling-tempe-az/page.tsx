@@ -7,8 +7,9 @@ import ServiceFAQ from "@/components/service-faq";
 import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema, FAQSchema, PriceSchema , BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema, PriceSchema, BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import Link from "next/link";
+import GalleryPreview from "@/components/home/gallery-preview";
 import {
   ShieldCheck,
   Star,
@@ -19,16 +20,50 @@ import {
   CheckCircle2,
   ArrowRight,
   Phone,
+  Check,
+  GraduationCap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import LocalTrust from "@/components/home/local-trust";
 
-export const metadata: Metadata = {title: "Bathroom Remodeling Tempe | professional specialists | ARZ",description: "Top-rated bathroom remodeling in Tempe, AZ by ARZ. Specialized in custom walk-in showers, tub conversions, & tile work. Call for a free quote!",
-  openGraph: {title: "Bathroom Remodeling Tempe AZ | ARZ Home Remodeling",description: "Trusted bathroom remodeling in Tempe, AZ. Tub-to-shower conversions, walk-in showers & custom tile. fully insured. Free estimate: (520) 569-3339.",
+export const metadata: Metadata = {
+  title: "Bathroom Remodeling Tempe AZ | ARZ Home Remodeling",
+  description:
+    "Bathroom remodeling in Tempe, AZ for walk-in showers, tub conversions, primary baths, guest baths, tile, and vanities.",
+  keywords: [
+    "bathroom remodeling Tempe AZ",
+    "bathroom remodel Tempe AZ",
+    "bathroom renovation Tempe",
+    "Tempe bathroom remodeling",
+    "walk-in shower remodeling Tempe",
+    "tub-to-shower conversion Tempe",
+    "primary bathroom remodel Tempe",
+    "guest bathroom remodel Tempe",
+    "small bathroom remodeling Tempe",
+    "accessible bathroom remodeling Tempe",
+    "bathroom tile installation Tempe",
+    "bathroom flooring Tempe"
+  ],
+  openGraph: {
+    title: "Bathroom Remodeling Tempe AZ | ARZ Home Remodeling",
+    description:
+      "Bathroom remodeling in Tempe, AZ for walk-in showers, tub conversions, primary baths, guest baths, tile, and vanities.",
     url: `${siteConfig.url}/bathroom-remodeling-tempe-az/`,
     type: "website",
+    images: [
+      {
+        url: `${siteConfig.url}/images/bathroom-remodeling-tempe.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Bathroom Remodeling Tempe Arizona - ARZ Home Remodeling",
+      },
+    ],
   },
   twitter: {
-    card: "summary_large_image",title: "Bathroom Remodeling Tempe AZ | ARZ Home Remodeling",description: "Trusted bathroom remodeling in Tempe, AZ. Tub-to-shower conversions, walk-in showers & custom tile. fully insured. Free estimate: (520) 569-3339.",
+    card: "summary_large_image",
+    title: "Bathroom Remodeling Tempe AZ | ARZ Home Remodeling",
+    description:
+      "Bathroom remodeling in Tempe, AZ for walk-in showers, tub conversions, primary baths, guest baths, tile, and vanities.",
     images: [`${siteConfig.url}/images/bathroom-remodeling-tempe.jpg`],
   },
   alternates: {
@@ -38,143 +73,261 @@ export const metadata: Metadata = {title: "Bathroom Remodeling Tempe | professio
 
 const tempeFaqs = [
   {
-    question: "How long does a bathroom remodel take in Tempe, AZ?",
-    answer:
-      "A standard guest bathroom remodel in Tempe typically takes two to three weeks of active construction. Larger master bathroom renovations in areas like South Tempe or Warner Ranch run four to six weeks depending on scope. We provide a firm timeline in your written proposal."
-  },
-  {
-    question: "Do you need a permit for bathroom remodeling in Tempe?",
-    answer:
-      "Cosmetic upgrades like new tile or vanities generally do not require permits. Structural changes, moving plumbing lines, or major electrical work require a City of Tempe permit. We handle all permitting and inspections for you."
-  },
-  {
     question: "How much does a bathroom remodel cost in Tempe, AZ?",
     answer:
-      "Bathroom remodeling costs in Tempe vary widely depending on layout changes, square footage, tile selections, and plumbing modifications. We provide free on-site inspections and prepare a detailed, line-item written estimate before any work begins, ensuring a fixed-price guarantee. Contact us today to schedule your quote."
+      "The cost depends on the size and condition of the bathroom, demolition, shower or tub configuration, tile, flooring, vanity, fixtures, glass, plumbing, electrical work, and overall project scope.",
   },
   {
-    question: "Can you remodel my shower without replacing the whole bathroom?",
+    question: "How long does a bathroom remodel take in Tempe?",
     answer:
-      "Yes. We specialize in shower-only replacements and tub-to-shower conversions. This is a popular way for Tempe homeowners to modernize their space without the cost of a full gut remodel."
+      "The timeline varies according to the project's size, complexity, materials, demolition, installation requirements, and other project conditions.",
   },
   {
-    question: "Are you professional to do bathroom remodeling in Tempe?",
+    question: "Can you convert my bathtub into a walk-in shower?",
     answer:
-      "Yes. We are a professional Arizona remodeling company, fully insured, operating under license professional contractor - . We provide a two year workmanship warranty on every project. We are experienced with Tempe's specific building codes and requirements."
+      "Yes. A tub-to-shower conversion can replace an existing bathtub with a walk-in shower when the existing layout and project requirements allow.",
   },
   {
-    question: "Do you serve neighborhoods near ASU and Downtown Tempe?",
+    question: "Can you remodel only my shower?",
     answer:
-      "We serve all of Tempe, including Downtown, North Tempe, South Tempe, Warner Ranch, Shalimar, and the areas surrounding ASU, plus neighboring cities like Chandler, Mesa, and Gilbert."
+      "Yes. A bathroom renovation does not always require a complete remodel. A project can focus specifically on the shower, including tile, waterproofing, fixtures, storage, and glass.",
+  },
+  {
+    question: "Do you remodel primary bathrooms in Tempe?",
+    answer:
+      "Yes. Primary bathroom remodeling can include showers, vanities, countertops, tile, flooring, fixtures, lighting, storage, and other improvements.",
+  },
+  {
+    question: "Do you remodel small bathrooms?",
+    answer:
+      "Yes. Small bathroom renovations focus on making the most of available floor space through appropriate shower, vanity, storage, fixture, and lighting choices.",
+  },
+  {
+    question: "Can you remodel bathrooms near ASU?",
+    answer:
+      "Yes. Bathroom remodeling can be planned for homes and properties near Arizona State University, depending on the property and the desired scope of work.",
+  },
+  {
+    question: "Do bathroom remodels in Tempe require permits?",
+    answer:
+      "Permit requirements depend on the type of work being performed. Plumbing, electrical, structural, and other regulated modifications may have different requirements from cosmetic updates.",
+  },
+  {
+    question: "What Tempe areas do you serve?",
+    answer:
+      "We serve homeowners throughout Tempe, including South Tempe, Warner Ranch, Shalimar, Downtown Tempe, North Tempe, Alta Mira, Optimist Park, and Tally Ho.",
   },
 ];
 
-const services = [
+const mainServices = [
   {
-    title: "Walk-In Shower Installation",
+    title: "Walk-In Shower Remodeling",
     href: "/shower-remodeling/",
     description:
-      "We convert outdated tub and shower combos into open, curbless walk-in showers with frameless glass, custom tile, and rainfall showerheads. We use the Schluter waterproofing system for a leak-proof result.",
-    price: "Free Custom Estimate",
+      "Replace an outdated tub or enclosed shower with a more open bathing area designed around your available space.",
+    detail:
+      "A walk-in shower remodel in Tempe can include custom tile, shower niches, seating, low-threshold or curbless entry, modern fixtures, and glass enclosures. The design can be adapted to the existing bathroom layout and the way you use the shower.",
+    cta: "Explore Walk-In Shower Remodeling →",
   },
   {
     title: "Tub-to-Shower Conversion",
     href: "/tub-to-shower-conversion/",
     description:
-      "A top request in Tempe. We remove your old tub, waterproof the substrate, and install a custom walk-in shower tailored to your layout. Adds space and ROI to your Tempe home.",
-    price: "Free Custom Estimate",
+      "If you rarely use your bathtub, converting it into a shower can make the existing bathroom footprint more useful.",
+    detail:
+      "A tub-to-shower conversion in Tempe, AZ can include tub removal, shower preparation, waterproofing, tile, fixtures, storage, flooring, and a glass enclosure. When the existing layout allows, the new shower can be designed around the former tub area.",
+    cta: "Explore Tub-to-Shower Conversion →",
   },
   {
-    title: "Complete Master Bathroom Remodel",
+    title: "Primary Bathroom Remodeling",
     href: "/master-bathroom-remodel/",
     description:
-      "Our master bath remodels include: new shower enclosure, vanity replacement, tile flooring, updated lighting, and fixture upgrades. Timeline: three to five weeks. We manage all trades and coordination.",
-    price: "Free Custom Estimate",
+      "A primary bathroom should provide comfortable bathing space, useful storage, and finishes that fit your home.",
+    detail:
+      "A primary bathroom remodel in Tempe can include a walk-in shower, double vanity, countertop, bathroom flooring, custom tile, shower niche, shower seating, glass enclosure, lighting, plumbing fixtures, and freestanding tub. The project can focus on one area or combine several improvements into a complete renovation.",
+    cta: "Explore Primary Bathroom Remodeling →",
+  },
+  {
+    title: "Guest Bathroom Remodeling",
+    href: "/guest-bathroom-remodeling/",
+    description:
+      "Guest bathrooms often benefit from practical improvements that make the most of the available space.",
+    detail:
+      "A guest bathroom remodel in Tempe can include a new vanity, shower or tub, tile, flooring, fixtures, lighting, storage, and updated finishes.",
+    cta: "Explore Guest Bathroom Remodeling →",
+  },
+  {
+    title: "Small Bathroom Remodeling",
+    href: "/small-bathroom-remodeling/",
+    description:
+      "A smaller bathroom needs careful planning because fixture placement, storage, and clear floor space all matter.",
+    detail:
+      "Our small bathroom remodeling options can include compact vanities, walk-in showers, recessed niches, space-efficient storage, updated fixtures, coordinated tile, and improved lighting. The goal is to make the existing room more functional without making unnecessary changes.",
+    cta: "Explore Small Bathroom Remodeling →",
+  },
+  {
+    title: "Accessible Bathroom Remodeling",
+    href: "/handicap-accessible-bathroom/",
+    description:
+      "Bathroom access can become an important consideration for homeowners who want easier and more comfortable everyday use.",
+    detail:
+      "Depending on the space, accessibility-focused improvements can include low-threshold shower entries, curbless showers, shower seating, handheld fixtures, grab-bar preparation, slip-conscious flooring, improved lighting, and practical bathroom clearances.",
+    cta: "Explore Accessible Bathroom Remodeling →",
   },
 ];
 
-const trustPoints = [
+const processSteps = [
   {
-    icon: ShieldCheck,
-    title: "AZ fully insured",
-    body: "Every project fully covered. We carry all required Arizona licensing.",
+    step: "1",
+    title: "Consultation",
+    body: "We discuss what you want to change, how you use the bathroom, your preferred style, and the type of renovation you're considering.",
   },
   {
-    icon: Star,
-    title: "workmanship warranty",
-    body: "We stand behind our work. If it fails within two years, we fix it at no cost to you.",
+    step: "2",
+    title: "In-Home Evaluation",
+    body: "The existing bathroom layout, shower or tub, vanity, flooring, storage, fixtures, and other relevant conditions are reviewed.",
   },
   {
-    icon: MapPin,
-    title: "Tempe Local",
-    body: "We have remodeled bathrooms in Warner Ranch, South Tempe, and near the ASU area.",
+    step: "3",
+    title: "Remodeling Plan",
+    body: "We organize the project around your priorities, existing space, and desired improvements.",
   },
   {
-    icon: DollarSign,
-    title: "Fixed Pricing",
-    body: "No hidden fees. You get a written quote before any work starts. No change-order games.",
+    step: "4",
+    title: "Material Selection",
+    body: "Tile, flooring, vanity, countertop, fixtures, glass, hardware, and other finishes are selected for the planned design.",
   },
   {
-    icon: Droplets,
-    title: "Hard Water Expertise",
-    body: "We use tile and grout systems designed to resist Tempe's mineral-heavy water supply.",
+    step: "5",
+    title: "Remodeling",
+    body: "The existing materials are removed as needed, the space is prepared, and the planned improvements are installed.",
   },
   {
-    icon: Clock,
-    title: "On-Time Completion",
-    body: "We provide a firm schedule and stick to it. We show up when we say we will.",
-  },
-];
-
-const pricingTiers = [
-  {
-    label: "Guest Bathroom Update",
-    detail: "Vanity, toilet, fixtures, paint",
-    range: "Free Custom Estimate",
-  },
-  {
-    label: "Guest Bathroom Full Remodel",
-    detail: "Tile, shower, vanity, flooring",
-    range: "Free Custom Estimate",
-  },
-  {
-    label: "Tub-to-Shower Conversion",
-    detail: "Demo, waterproofing, custom shower build",
-    range: "Free Custom Estimate",
-  },
-  {
-    label: "Master Bathroom Remodel",
-    detail: "Full scope: shower, vanity, tile, lighting",
-    range: "Free Custom Estimate",
+    step: "6",
+    title: "Final Walkthrough",
+    body: "The finished bathroom is reviewed after the remodeling work is completed.",
   },
 ];
 
-const process = [
-  { step: "01", title: "Free Phone Consultation", body: "We discuss your goals, budget, and timeline to ensure we are the right fit." },
-  { step: "02", title: "In-Home Evaluation", body: "We measure, assess plumbing, and review your selections on-site in Tempe." },
-  { step: "03", title: "Fixed Written Proposal", body: "You see the complete price before we start. No hidden costs or surprises." },
-  { step: "04", title: "Design & Material Selection", body: "Tile, fixtures, and finishes chosen together to match your unique style." },
-  { step: "05", title: "Construction", body: "Our in-house team handles demo, waterproofing, tile, plumbing, and finishing." },
-  { step: "06", title: "Final Walkthrough", body: "You inspect every detail before we close the job. 100% satisfaction required." },
+const whyChooseUsPoints = [
+  {
+    title: "Bathroom-Focused Remodeling",
+    body: "We specialize in bathroom renovation projects ranging from shower upgrades to complete bathroom transformations.",
+  },
+  {
+    title: "Practical Design",
+    body: "We plan bathrooms around everyday use, available space, storage needs, and the improvements that matter most to the homeowner.",
+  },
+  {
+    title: "Clear Project Scope",
+    body: "The remodeling plan is organized around the work you want completed and the existing conditions of the bathroom.",
+  },
+  {
+    title: "Local Tempe Service",
+    body: "We serve homeowners throughout Tempe and surrounding East Valley communities.",
+  },
+  {
+    title: "Attention to Details",
+    body: "Tile layout, shower transitions, storage, vanity installation, fixtures, glass, and finishing details all contribute to the completed bathroom.",
+  },
 ];
 
-const neighborhoods = [
-  "South Tempe", "Warner Ranch", "Shalimar", "Downtown Tempe",
-  "North Tempe", "Alta Mira", "Optimist Park", "Tally Ho",
-  "85281", "85282", "85283", "85284",
+const projectExamples = [
+  {
+    title: "Walk-In Shower Transformation",
+    description: "Updating an outdated bathing area with a new shower configuration, tile, storage, fixtures, and glass.",
+  },
+  {
+    title: "Tub-to-Shower Conversion",
+    description: "Replacing an existing bathtub with a shower designed around the available bathroom footprint.",
+  },
+  {
+    title: "Primary Bathroom Update",
+    description: "Combining improvements to the shower, vanity, tile, flooring, fixtures, lighting, and storage.",
+  },
+  {
+    title: "Guest Bathroom Refresh",
+    description: "Updating the vanity, shower or tub, tile, flooring, fixtures, lighting, and finishes.",
+  },
 ];
 
-export default function TempePage() {
+const tempeProblems = [
+  {
+    title: "An Unused Bathtub",
+    desc: "Replace an underused bathtub with a walk-in shower that better suits your daily routine.",
+  },
+  {
+    title: "An Outdated Shower",
+    desc: "Update the shower with new tile, storage, fixtures, waterproofing, and glass.",
+  },
+  {
+    title: "Limited Storage",
+    desc: "Add vanity storage, shower niches, and other practical organization features.",
+  },
+  {
+    title: "An Old Vanity",
+    desc: "Replace an outdated vanity with a configuration that provides better storage and counter space.",
+  },
+  {
+    title: "Dated Tile",
+    desc: "Refresh shower walls, flooring, backsplashes, and accent areas with coordinated tile.",
+  },
+  {
+    title: "Poor Bathroom Layout",
+    desc: "Review the positioning of the shower, vanity, storage, and fixtures to make better use of the available room.",
+  },
+  {
+    title: "Difficult Shower Access",
+    desc: "Consider a low-threshold or curbless shower, seating, handheld fixtures, and other accessibility-focused improvements.",
+  },
+];
+
+const tempeNeighborhoods = [
+  {
+    name: "South Tempe",
+    desc: "Bathroom updates can include walk-in showers, tub-to-shower conversions, primary bathroom renovations, tile, flooring, and vanities.",
+  },
+  {
+    name: "Warner Ranch",
+    desc: "Homeowners can modernize existing bathrooms with updated showers, tile, vanities, storage, fixtures, and flooring.",
+  },
+  {
+    name: "Downtown Tempe",
+    desc: "Bathrooms in established properties may benefit from practical updates that improve both appearance and everyday functionality.",
+  },
+  {
+    name: "North Tempe",
+    desc: "Bathroom renovations can range from focused shower and vanity upgrades to larger remodeling projects.",
+  },
+  {
+    name: "Alta Mira",
+    desc: "Homeowners can update older bathroom finishes, improve storage, and create more functional shower and vanity areas.",
+  },
+  {
+    name: "Shalimar",
+    desc: "Bathroom remodeling can focus on improving the layout, finishes, storage, shower, vanity, and overall appearance.",
+  },
+];
+
+export default function TempeBathroomRemodelingPage() {
   return (
     <>
-      
-      <BreadcrumbSchema items={[ { name: "Home", url: "https://arzhomeremodeling.com/" }, { name: "Services", url: "https://arzhomeremodeling.com/services/" }, { name: "Bathroom Remodeling Tempe Az", url: "https://arzhomeremodeling.com/bathroom-remodeling-tempe-az/" } ]} />
-<ServiceSchema
+      <LocalBusinessSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://arzhomeremodeling.com/" },
+          { name: "Services", url: "https://arzhomeremodeling.com/services/" },
+          {
+            name: "Bathroom Remodeling Tempe AZ",
+            url: "https://arzhomeremodeling.com/bathroom-remodeling-tempe-az/",
+          },
+        ]}
+      />
+      <ServiceSchema
         serviceName="Bathroom Remodeling in Tempe, Arizona"
-        serviceDescription="expert bathroom remodeling team serving Tempe, AZ. Custom shower installation, tub-to-shower conversions, master bath renovations, and complete bathroom remodels. Serving South Tempe, Warner Ranch, and all university-area neighborhoods."
+        serviceDescription="Bathroom remodeling in Tempe, AZ for walk-in showers, tub conversions, primary baths, guest baths, tile, and vanities."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling-tempe-az/`}
       />
-      <LocalBusinessSchema />
       <FAQSchema faqs={tempeFaqs} />
       <PriceSchema
         serviceName="Bathroom Remodeling in Tempe AZ"
@@ -183,96 +336,140 @@ export default function TempePage() {
       />
       <Header />
       <main>
-        {/* HERO */}
+        {/* SECTION 2: HERO SECTION */}
         <ServiceHero
-          title="expert bathroom remodeling in Tempe, AZ"
-          subtitle="Modern Transformations & Expert Local Remodelers"
-          description="Elevate your Tempe home with professional remodeling services tailored to your lifestyle. From custom walk-in showers near ASU to master suite renovations in South Tempe: we deliver high-end results with  professional expertise and fixed-price guarantees."
+          title="Bathroom Remodeling in Tempe, AZ"
+          subtitle="Bathroom Remodeling in Tempe, AZ"
+          description="Create a bathroom that works better for your everyday routine. ARZ Home Remodeling provides bathroom remodeling in Tempe including walk-in showers, tub-to-shower conversions, primary bathroom renovations, guest bathrooms, tile, flooring, vanities, and complete bathroom updates. Whether you are updating one part of the room or planning a complete renovation, we can help you determine the right improvements for your existing bathroom."
           image="/images/services/chandler-bathroom-remodel.jpg"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
-            { name: "Bathroom Remodeling Tempe AZ", url: `${siteConfig.url}/bathroom-remodeling-tempe-az/` },
+            { name: "Tempe", url: `${siteConfig.url}/bathroom-remodeling-tempe-az/` },
           ]}
         />
 
-        {/* OPENING CONTENT */}
+        {/* SECTION 3: INTRODUCTION */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling for Tempe Homeowners
+            </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Tempe homeowners value both style and functionality. Whether you live in a classic home in South Tempe or a modern space near Downtown, your bathroom should be a reflection of your lifestyle. If you have been searching for a professional team to update your space, our experts provide the high-end craftsmanship you need.
+              An outdated bathroom can make an otherwise comfortable home feel less functional.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              At ARZ Home Remodeling, we specialize in high-quality bathroom remodeling in Tempe, AZ: from custom walk-in showers in Warner Ranch to full master bath transformations near ASU, as well as focused updates for university rentals. We are a professional Arizona remodeling company, serving homeowners across the <span className="text-primary font-semibold">85281, 85282, 85283, and 85284</span> ZIP codes.
+              Maybe the bathtub takes up space you rarely use. Perhaps the shower needs better storage, the vanity no longer provides enough room, or the flooring and tile are ready for an update.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Our comprehensive services cover everything from full luxury layouts to custom safety additions, ensuring structural integrity and precise finishes on every single project.
+              A <strong className="font-semibold text-foreground">bathroom remodel in Tempe, AZ</strong> gives you an opportunity to improve the way the room looks and, more importantly, how it works.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Our services extend beyond Tempe to surrounding East Valley communities. Learn more about our custom master bath renovations for <Link href="/bathroom-remodeling-gilbert-az/" className="text-primary hover:underline font-medium">bathroom remodeling in Gilbert, AZ</Link> and our desert-ready solutions for <Link href="/bathroom-remodeling-apache-junction-az/" className="text-primary hover:underline font-medium">bathroom remodeling in Apache Junction, AZ</Link>.
+              ARZ Home Remodeling works with homeowners on focused bathroom improvements as well as complete renovations. Depending on your goals, a project can include a new walk-in shower, tub-to-shower conversion, vanity, tile, flooring, fixtures, storage, lighting, or a combination of these improvements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call Now
+                  Get a Free Bathroom Remodeling Estimate
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
                 <a href={`tel:${siteConfig.phoneClean}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Speak to a Project Supervisor: {siteConfig.phone}
+                  Call {siteConfig.phone}
                 </a>
               </Button>
             </div>
           </div>
         </section>
 
-        {/* LOCAL COMMUNITY & PERMIT HIGHLIGHTS */}
-        <section className="py-16 lg:py-24 bg-background border-t border-border">
+        {/* SECTION 4: LOCAL TEMPE SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
-              Tempe Community Landmarks & Local Bathroom Projects
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Renovations Throughout Tempe, AZ
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Tempe is a vibrant community with beautiful regional features like <strong>Tempe Town Lake</strong>, the historic <strong>Mill Avenue District</strong>, and the bustling <strong>ASU Campus</strong>. When we perform bathroom renovations in Tempe, we draw inspiration from the city's active lifestyle. For instance, in <strong>South Tempe</strong> homes near <strong>Kiwanis Park</strong>, we often design spacious family bathrooms with modern layouts and low-maintenance tiled surfaces.
+              Tempe has a mix of established residential neighborhoods, older homes, newer properties, and homes located close to major areas such as Downtown Tempe and Arizona State University.
             </p>
-            <h3 className="font-serif text-xl font-semibold mb-4 text-foreground">
-              Recent Tempe Remodeling Example:
-            </h3>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A recent project completed near <strong>Warner Ranch</strong> involved converting a dated 1990s guest bathroom. We removed the old fiberglass tub alcove and installed a custom, space-saving curbless walk-in shower with large-format porcelain tile and a sleek matte black frameless glass enclosure, along with a modern floating double-sink vanity.
+              That means bathroom remodeling needs can vary significantly from one property to another.
             </p>
-            <h3 className="font-serif text-xl font-semibold mb-4 text-foreground">
-              Tempe Permitting & Building Safety Guidelines:
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              For any structural changes, wall removals, or major plumbing reconfigurations, our team coordinates directly with the <strong>City of Tempe Community Development Department</strong> (located at 31 E 5th St). We handle all permit submissions and schedule the necessary municipal inspections to ensure that your home's upgrades comply fully with Tempe's strict local safety codes.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Some homeowners want to modernize an older bathroom without changing its entire layout. Others want to replace an unused bathtub with a walk-in shower or completely redesign a primary bathroom.
             </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Our remodeling approach starts with the existing bathroom and the improvements that matter most to you.
+            </p>
+
+            <div className="bg-background p-8 rounded-2xl border border-border shadow-sm">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                We serve homeowners throughout Tempe, including:
+              </h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-muted-foreground text-sm font-medium">
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>South Tempe</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Warner Ranch</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shalimar</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Downtown Tempe</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>North Tempe</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Alta Mira</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Optimist Park</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Tally Ho</span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* SERVICES */}
-        <section className="py-16 lg:py-24 bg-secondary">
-          <div className="container mx-auto px-4 lg:px-8">
+        {/* SECTION 5: MAIN SERVICES */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">What We Do</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground text-balance">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Services</span>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
                 Our Tempe Bathroom Remodeling Services
               </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-3xl mx-auto">
+                We provide bathroom remodeling options for primary bathrooms, guest bathrooms, smaller spaces, and individual shower or vanity upgrades.
+              </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {services.map((svc) => (
-                <div key={svc.title} className="bg-background rounded-2xl p-8 border border-border flex flex-col">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold uppercase tracking-widest text-primary">{svc.price}</span>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mainServices.map((svc) => (
+                <div key={svc.title} className="bg-secondary rounded-2xl p-8 border border-border flex flex-col justify-between shadow-sm hover:border-primary/50 transition-all">
+                  <div>
+                    <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{svc.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{svc.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">{svc.detail}</p>
                   </div>
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{svc.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-6">{svc.description}</p>
                   <Link
                     href={svc.href}
-                    className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline mt-auto"
+                    className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline mt-auto pt-4 border-t border-border/60"
                   >
-                    Learn more <ArrowRight className="w-4 h-4" />
+                    {svc.cta}
                   </Link>
                 </div>
               ))}
@@ -280,21 +477,533 @@ export default function TempePage() {
           </div>
         </section>
 
-        {/* TRUST SIGNALS */}
+        {/* SECTION 6: SHOWER SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Shower Features</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Shower Remodeling for Tempe Bathrooms
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                The shower is often the centerpiece of a bathroom renovation. An outdated shower can be redesigned with new tile, improved storage, modern fixtures, seating, and a glass enclosure.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Curbless Walk-In Showers</h3>
+                <p className="text-muted-foreground text-sm">A low or zero-threshold entry creates a more open appearance and can make shower access easier.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Custom-Tiled Showers</h3>
+                <p className="text-muted-foreground text-sm">Tile allows you to create different patterns, textures, sizes, and accent designs.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Shower Niches</h3>
+                <p className="text-muted-foreground text-sm">Built-in niches provide convenient storage without adding a separate shelf to the shower floor.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground mb-2">Shower Seating</h3>
+                <p className="text-muted-foreground text-sm">A built-in bench or seat can provide additional comfort and practical functionality.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-2xl border border-border shadow-sm sm:col-span-2 lg:col-span-2">
+                <h3 className="font-semibold text-foreground mb-2">Frameless Glass Enclosures</h3>
+                <p className="text-muted-foreground text-sm">Glass can visually open the shower area while allowing the tile design to remain visible.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 7: TILE SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Tile Installation in Tempe
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Tile can change the appearance of the entire bathroom.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              We can coordinate tile across shower walls, floors, niches, backsplashes, and accent areas.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Depending on the design, homeowners can choose different tile sizes, patterns, textures, and finishes to create anything from a clean contemporary bathroom to a more traditional space.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              A coordinated tile selection can also connect the shower, flooring, vanity, and other finishes.
+            </p>
+            <div>
+              <Link href="/bathroom-tile-installation/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Explore Bathroom Tile Installation →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 8: FLOORING SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Flooring in Tempe
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Bathroom flooring should complement the rest of the space while providing a practical surface for everyday use.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Flooring can be selected alongside shower tile, vanity finishes, countertops, fixtures, and wall colors.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Whether you want a subtle floor that allows the shower design to stand out or a more distinctive tile pattern, the flooring should work as part of the overall bathroom design.
+            </p>
+            <div>
+              <Link href="/bathroom-flooring-installation/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Explore Bathroom Flooring Installation →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 9: VANITY SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Bathroom Vanity & Countertop Installation
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              The vanity influences both storage and the appearance of your bathroom.
+            </p>
+
+            <div className="bg-secondary p-8 rounded-2xl border border-border mb-6 shadow-sm">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                Replacing an outdated vanity can provide:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>More cabinet storage</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Additional counter space</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Updated sinks</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>New hardware</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>A better fit for the room</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>A refreshed bathroom design</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Larger primary bathrooms may accommodate double vanities, while smaller Tempe bathrooms can benefit from compact configurations that preserve usable floor space.
+            </p>
+            <div>
+              <Link href="/cabinet-countertop-installation/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Explore Bathroom Vanity Installation →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 10: PROBLEM/SOLUTION SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">User Intent</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                What Can a Tempe Bathroom Remodel Improve?
+              </h2>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {tempeProblems.map((item) => (
+                <div key={item.title} className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 11: DESIGN IDEAS */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Design Ideas</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Bathroom Remodeling Ideas for Tempe Homes
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                You don&apos;t always need to completely change the bathroom to make a noticeable improvement.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-secondary p-6 rounded-2xl border border-border">
+                <h3 className="font-semibold text-foreground mb-2">Replace the Tub With a Walk-In Shower</h3>
+                <p className="text-muted-foreground text-sm">A tub that rarely gets used can become a practical shower area.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-2xl border border-border">
+                <h3 className="font-semibold text-foreground mb-2">Add Built-In Shower Storage</h3>
+                <p className="text-muted-foreground text-sm">A recessed niche keeps everyday products organized without taking up floor space.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-2xl border border-border">
+                <h3 className="font-semibold text-foreground mb-2">Upgrade the Vanity</h3>
+                <p className="text-muted-foreground text-sm">A new vanity can change the appearance of the bathroom while improving storage.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-2xl border border-border">
+                <h3 className="font-semibold text-foreground mb-2">Coordinate Shower and Floor Tile</h3>
+                <p className="text-muted-foreground text-sm">Matching or complementary tile selections can make the bathroom feel more cohesive.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-2xl border border-border">
+                <h3 className="font-semibold text-foreground mb-2">Improve Bathroom Lighting</h3>
+                <p className="text-muted-foreground text-sm">Updated vanity, ceiling, and shower-area lighting can make the room more comfortable and functional.</p>
+              </div>
+
+              <div className="bg-secondary p-6 rounded-2xl border border-border">
+                <h3 className="font-semibold text-foreground mb-2">Add a Frameless Glass Enclosure</h3>
+                <p className="text-muted-foreground text-sm">Glass can create a more open visual connection between the shower and the rest of the bathroom.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 12: COST SECTION */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Project Budgeting</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                How Much Does a Bathroom Remodel Cost in Tempe, AZ?
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                The cost of a <strong className="font-semibold text-foreground">bathroom remodel in Tempe</strong> depends on the size and condition of the existing bathroom and the scope of the renovation.
+              </p>
+              <p className="text-muted-foreground text-sm mt-2">
+                A tub-to-shower conversion will have different requirements from a complete primary bathroom renovation.
+              </p>
+            </div>
+
+            <div className="space-y-4 mb-8">
+              <div className="bg-background p-6 rounded-xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Walk-In Shower Remodel</h3>
+                <p className="text-muted-foreground text-sm">Shower preparation, waterproofing, tile, fixtures, storage, and glass.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Tub-to-Shower Conversion</h3>
+                <p className="text-muted-foreground text-sm">Tub removal, shower preparation, tile, fixtures, storage, flooring, and enclosure.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Guest Bathroom Remodel</h3>
+                <p className="text-muted-foreground text-sm">Vanity, shower or tub, tile, flooring, fixtures, and finishing updates.</p>
+              </div>
+
+              <div className="bg-background p-6 rounded-xl border border-border shadow-sm">
+                <h3 className="font-semibold text-foreground text-lg mb-1">Primary Bathroom Remodel</h3>
+                <p className="text-muted-foreground text-sm">A broader renovation combining shower, vanity, flooring, tile, lighting, fixtures, and storage improvements.</p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link
+                href="/bathroom-remodeling-cost-chandler-az/"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg"
+              >
+                Get a Custom Bathroom Remodeling Estimate →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 13: PROCESS */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Promise</span>
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Process</span>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Why Tempe Homeowners Choose Us
+                Our Tempe Bathroom Remodeling Process
               </h2>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {trustPoints.map((pt) => (
-                <div key={pt.title} className="flex gap-4 p-6 bg-secondary rounded-2xl border border-border">
-                  <pt.icon className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {processSteps.map((step) => (
+                <div key={step.step} className="bg-secondary rounded-2xl p-6 border border-border flex flex-col justify-between">
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">{pt.title}</h3>
+                    <span className="text-4xl font-bold text-primary/25 font-mono">0{step.step}</span>
+                    <h3 className="font-semibold text-foreground mt-2 mb-2 text-lg">{step.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{step.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 14: WATERPROOFING / TECHNICAL AUTHORITY */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground text-center">
+              Shower Waterproofing & Bathroom Preparation
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6 text-center max-w-2xl mx-auto">
+              The visible tile is only one part of a properly planned shower. Before tile installation, the shower area needs appropriate preparation, waterproofing, drainage, and installation of the selected shower system.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center max-w-2xl mx-auto">
+              Depending on the design, a bathroom remodeling project may involve:
+            </p>
+
+            <div className="bg-background p-8 rounded-2xl border border-border mb-8 shadow-sm">
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shower substrate preparation</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Waterproofing</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Drainage preparation</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shower niches</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shower seating</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Tile installation</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Grout and sealant</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Fixture installation</span>
+                </div>
+                <div className="flex items-center gap-2.5 sm:col-span-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Glass enclosure installation</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center">
+              The appropriate installation method depends on the existing bathroom, selected materials, and planned shower design.
+            </p>
+
+            <div className="text-center">
+              <Link href="/shower-remodeling/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                Learn More About Shower Waterproofing →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 15: TEMPE MATERIAL SECTION */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
+              Choosing Bathroom Materials for Tempe Homes
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Bathroom materials should be selected according to the design, maintenance preferences, and everyday use of the space.
+            </p>
+
+            <div className="bg-secondary rounded-2xl p-8 border border-border mb-6">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                For shower and bathroom areas, homeowners can consider:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-4 text-muted-foreground text-sm">
+                <div className="flex items-center gap-3">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Easy-to-clean tile surfaces</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Appropriate grout options</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Durable flooring</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Practical shower glass</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Suitable countertop materials</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Easy-access storage</span>
+                </div>
+                <div className="flex items-center gap-3 sm:col-span-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Fixtures that fit the intended use</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Material selection is part of the overall design process, so the finishes work together rather than being chosen individually.
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 16: LOCAL TEMPE NEIGHBORHOODS */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Local Communities</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Bathroom Remodeling in Tempe Neighborhoods
+              </h2>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                Tempe&apos;s residential areas include different home styles, layouts, and remodeling needs.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {tempeNeighborhoods.map((n) => (
+                <div key={n.name} className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{n.name}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{n.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 17: ASU / UNIVERSITY AREA */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <div className="flex items-start gap-4 mb-6">
+              <GraduationCap className="w-10 h-10 text-primary flex-shrink-0 mt-1" />
+              <div>
+                <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
+                  Bathroom Remodeling Near ASU & Downtown Tempe
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                  Homes and properties near Arizona State University and Downtown Tempe can have different remodeling priorities from larger suburban properties.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-secondary rounded-2xl p-8 border border-border mb-6">
+              <h3 className="font-semibold text-foreground text-lg mb-4">
+                For smaller bathrooms and rental properties, practical improvements may include:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Updated vanities</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Shower upgrades</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Durable flooring</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Easy-to-maintain tile</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Improved storage</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Updated fixtures</span>
+                </div>
+                <div className="flex items-center gap-2.5 sm:col-span-2">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Better lighting</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              The remodeling scope depends on the property and the owner&apos;s goals.
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 18: PERMITS */}
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <h2 className="font-serif text-3xl font-semibold mb-6 text-foreground">
+              Bathroom Remodeling Permits in Tempe
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Permit requirements depend on the work being performed.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Cosmetic updates can have different requirements from projects involving plumbing, electrical work, structural modifications, or other regulated changes.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              For a specific project, applicable requirements should be confirmed according to the property and proposed scope of work.
+            </p>
+            <div>
+              <Link
+                href="/bathroom-remodeling-permits-chandler/"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg"
+              >
+                Learn More About Bathroom Remodeling Requirements →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Local Trust Badge */}
+        <LocalTrust cityName="Tempe" />
+
+        {/* SECTION 19: WHY ARZ */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Why Choose ARZ</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
+                Why Tempe Homeowners Choose ARZ Home Remodeling
+              </h2>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {whyChooseUsPoints.map((pt) => (
+                <div key={pt.title} className="p-6 bg-secondary rounded-2xl border border-border flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-semibold text-foreground text-lg mb-2">{pt.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{pt.body}</p>
                   </div>
                 </div>
@@ -303,170 +1012,84 @@ export default function TempePage() {
           </div>
         </section>
 
-        {/* HARD WATER EXPERTISE */}
-        <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <div className="flex items-start gap-4 mb-8">
-              <Droplets className="w-10 h-10 flex-shrink-0 mt-1 opacity-80" />
-              <div>
-                <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6">
-                  Solving Tempe's Hard Water Challenges
-                </h2>
-                <p className="text-primary-foreground/85 text-lg leading-relaxed mb-4">
-                  Tempe's water supply is known for high mineral content, which can ruin a new bathroom if not properly planned 
-                  for. We use specialized materials that stand up to the local environment.
-                </p>
-                <ul className="space-y-3 text-primary-foreground/85 mb-6">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>Epoxy Grout:</strong> Waterproof and resistant to staining from mineral buildup.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>Nano-Coated Glass:</strong> Keeps your shower doors clear of calcium and water spots.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span><strong>Schluter Systems:</strong> Ensuring your shower remains leak-proof for years.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* COST GUIDE */}
-        <section className="py-16 lg:py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Transparent Pricing</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Tempe Bathroom Remodel Cost Guide
-              </h2>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              {pricingTiers.map((tier) => (
-                <div key={tier.label} className="bg-secondary rounded-2xl p-6 border border-border flex justify-between items-center gap-4">
-                  <div>
-                    <p className="font-semibold text-foreground">{tier.label}</p>
-                    <p className="text-muted-foreground text-sm">{tier.detail}</p>
-                  </div>
-                  <span className="text-primary font-bold text-lg whitespace-nowrap">{tier.range}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* PROCESS */}
+        {/* SECTION 20: PROJECTS */}
         <section className="py-16 lg:py-24 bg-secondary">
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
             <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">How It Works</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-foreground">
-                Our Remodeling Process
-              </h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {process.map((step) => (
-                <div key={step.step} className="bg-background rounded-2xl p-6 border border-border">
-                  <span className="text-4xl font-bold text-primary/20">{step.step}</span>
-                  <h3 className="font-semibold text-foreground mt-2 mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{step.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* SERVICE AREAS */}
-        <section className="py-16 lg:py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
-            <span className="text-primary text-sm font-medium tracking-wider uppercase">Service Area</span>
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 mb-6 text-foreground">
-              Serving All of Tempe, AZ
-            </h2>
-            <div className="flex flex-wrap justify-center gap-3">
-              {neighborhoods.map((n) => (
-                <span key={n} className="bg-secondary border border-border rounded-full px-4 py-2 text-sm font-medium text-foreground">
-                  {n}
-                </span>
-              ))}
-            </div>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-              <Link href="/bathroom-remodeling-chandler-az/" className="hover:text-primary transition-colors">Bathroom Remodeling Chandler AZ →</Link>
-              <Link href="/bathroom-remodeling-gilbert-az/" className="hover:text-primary transition-colors">Bathroom Remodeling Gilbert AZ →</Link>
-              <Link href="/bathroom-remodeling-mesa-az/" className="hover:text-primary transition-colors">Bathroom Remodeling Mesa AZ →</Link>
-            </div>
-          </div>
-        </section>
-
-        {/* TECHNICAL SPECIFICATIONS SECTION */}
-        <section className="py-16 lg:py-24 bg-background border-t border-border">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <div className="text-center mb-12">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Engineering & Design Standards</span>
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Work</span>
               <h2 className="font-serif text-3xl md:text-4xl font-semibold mt-4 text-foreground">
-                Technical Remodeling Specifications & Building Codes
+                Tempe Bathroom Remodeling Projects
               </h2>
-              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                We build bathrooms to last decades, matching rigorous technical standards to combat Tempe's hard water and desert framing movement.
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+                Every bathroom has different dimensions, layouts, materials, and remodeling requirements.
               </p>
             </div>
-            
-            <div className="space-y-8">
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <ShieldCheck className="w-6 h-6 text-primary" />
-                  1. Waterproofing & Moisture Control (TCNA Standards)
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  We build all custom tiled showers in compliance with the **Tile Council of North America (TCNA) B421 and B422** standards. Instead of traditional cement boards and PVC liners which degrade and leak, we install the **Schluter-KERDI waterproofing system**.
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground text-sm">
-                  <li><strong>Vapor Permeance:</strong> The KERDI membrane features a water vapor permeance rating of <strong>&lt; 0.5 perms</strong> (tested under ASTM E96 Procedure E), making it completely vapor-tight and preventing steam from rotting your wood framing.</li>
-                  <li><strong>Decoupling & Crack Isolation:</strong> The bonded sheet membrane decouples the tile layer from the subfloor, absorbing the natural expansion and contraction of desert framing, preventing grout joints from cracking.</li>
-                </ul>
-              </div>
 
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <Droplets className="w-6 h-6 text-primary" />
-                  2. Hard Water Mitigation & Tile Standards (ANSI A118)
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  The municipal water supply in Tempe averages <strong>over 300 mg/L (18+ grains per gallon) of dissolved calcium and magnesium</strong>. This hard water destroys standard cement grout and stone. We resolve this by strictly adhering to ANSI material guidelines:
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground text-sm">
-                  <li><strong>Epoxy Grout (ANSI A118.3):</strong> We upgrade our grout to 100% solid epoxy resins. Unlike porous cement grouts, epoxy grout is completely non-porous and chemically inert, resisting staining, scale buildup, and acid cleaning.</li>
-                  <li><strong>Thin-Set Mortar (ANSI A118.15):</strong> We use improved modified dry-set cement mortar to bond dense, large-format porcelain tiles (water absorption rate <strong>&lt; 0.5%</strong> per ASTM C373), preventing tiles from releasing due to slab movement or moisture cycles.</li>
-                </ul>
-              </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              {projectExamples.map((proj) => (
+                <div key={proj.title} className="bg-background p-6 rounded-2xl border border-border shadow-sm">
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{proj.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{proj.description}</p>
+                </div>
+              ))}
+            </div>
 
-              <div className="p-6 bg-secondary rounded-2xl border border-border">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <Clock className="w-6 h-6 text-primary" />
-                  3. Advanced Plumbing & Scald Prevention (ASSE 1016)
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  Modern mechanical systems are essential to safety and system longevity. We upgrade and secure every in-wall plumbing component:
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground text-sm">
-                  <li><strong>Anti-Scald Mixing Valves:</strong> We install pressure-balancing and thermostatic mixing valves certified to <strong>ASSE 1016 / ASME A112.18.1</strong> standards. This maintains water temperature within &plusmn;3.6&deg;F (&plusmn;2&deg;C) despite pressure drops elsewhere in the home.</li>
-                  <li><strong>PEX-a Piping Systems:</strong> We utilize PEX-a (expansion-fitting) piping for supply lines. PEX-a resists hard water scaling, eliminates the risk of pinhole leaks common in aging copper pipes, and absorbs thermal expansion without stress.</li>
-                  <li><strong>Drain Expansion:</strong> In all tub-to-shower conversions, we expand the original 1.5-inch waste line to a code-compliant <strong>2-inch waste and vent line</strong> to handle high-flow modern shower heads without back-ponding.</li>
-                </ul>
-              </div>
+            <div className="text-center">
+              <Link href="/gallery/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-lg">
+                View Bathroom Remodeling Projects →
+              </Link>
             </div>
           </div>
         </section>
 
+        {/* PORTFOLIO SHOWCASE PREVIEW */}
+        <GalleryPreview />
+
+        {/* SECTION 21: SERVICE AREA */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Serving Homeowners Throughout Tempe, AZ
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              ARZ Home Remodeling serves homeowners throughout Tempe, including:
+            </p>
+
+            <p className="font-semibold text-foreground text-lg mb-8">
+              South Tempe · Warner Ranch · Shalimar · Downtown Tempe · North Tempe · Alta Mira · Optimist Park · Tally Ho
+            </p>
+
+            <p className="text-muted-foreground text-sm mb-6">
+              We also serve surrounding East Valley communities, including Chandler, Gilbert, Mesa, Ahwatukee, and Apache Junction.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link href="/bathroom-remodeling-chandler-az/" className="text-primary font-semibold hover:underline text-sm">
+                Explore Chandler Bathroom Remodeling →
+              </Link>
+              <Link href="/bathroom-remodeling-gilbert-az/" className="text-primary font-semibold hover:underline text-sm">
+                Explore Gilbert Bathroom Remodeling →
+              </Link>
+              <Link href="/bathroom-remodeling-mesa-az/" className="text-primary font-semibold hover:underline text-sm">
+                Explore Mesa Bathroom Remodeling →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 22: FAQ */}
         <ServiceFAQ faqs={tempeFaqs} />
+
+        {/* TESTIMONIALS */}
         <Testimonials />
+
+        {/* CONTACT */}
         <ContactSection />
+
+        {/* SECTION 23: FINAL CTA */}
         <ServiceCTA
-          title="Ready for a Free Estimate in Tempe, AZ?"
-          description="Call us directly to speak with a project supervisor. We will discuss your project, provide a phone estimate, and schedule your free in-home evaluation within forty-eight hours."
+          title="Ready to Remodel Your Tempe Bathroom?"
+          description="Whether you want to replace an outdated tub, create a walk-in shower, update a primary bathroom, improve a guest bathroom, or complete a full renovation, the first step is understanding what your existing space needs. Tell us what you'd like to change and we'll discuss your remodeling options and next steps."
         />
       </main>
       <Footer />
