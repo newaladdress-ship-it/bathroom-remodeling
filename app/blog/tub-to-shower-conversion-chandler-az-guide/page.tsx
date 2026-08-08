@@ -334,7 +334,7 @@ export default function StandaloneBlogPost() {
                       <li className="flex items-start gap-3">
                         <span className="inline-flex items-center justify-center w-5 h-5 border-2 border-primary rounded text-primary font-bold text-xs shrink-0 mt-1">✓</span>
                         <div>
-                          <strong>Active Arizona License:</strong> Ensure the team holds an active license with the Arizona Registrar of Contractors. Unlicensed handymen cannot legally perform plumbing modifications or pull city permits. ARZ Home Remodeling is professional under <strong></strong>. You can verify any firm at the <a href="https://roc.az.gov" target="_blank" rel="noopener noreferrer">Arizona ROC Website</a>.
+                          <strong>Active Arizona License:</strong> Ensure the team holds an active license with the Arizona Registrar of Contractors. Unlicensed handymen cannot legally perform plumbing modifications or pull city permits. ARZ Home Remodeling is professional under <strong></strong>.
                         </div>
                       </li>
                       <li className="flex items-start gap-3">

@@ -270,34 +270,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     </div>
                   )}
 
-                  {/* Author Bio Section */}
-                  <div className="mt-16 bg-card border border-border/50 rounded-2xl p-8 shadow-sm flex flex-col md:flex-row gap-6 items-start">
-                    <div className="w-20 h-20 rounded-full bg-primary/10 shrink-0 flex items-center justify-center border-2 border-background shadow-md">
-                      <User className="h-10 w-10 text-primary" />
-                    </div>
-                    <div>
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="font-serif font-bold text-xl text-foreground">About the Author: {post.author}</h3>
-                      </div>
-                      <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                        {post.author} is a bathroom design specialist with over a decade of experience helping Chandler homeowners transform their spaces. 
-                        With a deep understanding of Arizona&apos;s unique remodeling needs, {post.author} focuses on blending style with practical, long-lasting solutions.
-                      </p>
-                      <div className="flex gap-4">
-                        <Link href="/team/alex-rivers/" className="text-primary text-xs font-bold hover:underline">
-                          View Verified Profile
-                        </Link>
-                        <a 
-                          href="https://www.linkedin.com/in/alex-rivers-arz" 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-primary text-xs font-bold hover:underline flex items-center gap-1"
-                        >
-                          Connect on LinkedIn
-                        </a>
-                      </div>
-                    </div>
-                  </div>
                 </article>
               </div>
             </div>
